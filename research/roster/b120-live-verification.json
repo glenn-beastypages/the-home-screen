@@ -1,0 +1,168 @@
+{
+  "release": {
+    "commit": "23f8bf5eb61a26b2354008185497178b855e6e4c",
+    "entry": "/assets/index-D77lDSAO.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-15T22:22:04.884564+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/petaluma-pie-company-v120.webp",
+      "sha256": "f02393adc68b1e65010d6b19148c58a621351fbd3f70c17baba9b4416ad6b153"
+    },
+    "deploy": "dep-dbt2s2p5efls73fchnug",
+    "finishedAt": "2026-11-15T22:21:51.111449Z"
+  },
+  "through": "2026-11-15T11:56:07.262018-08:00",
+  "messages": 8,
+  "listings": 1,
+  "keptSeats": 2330,
+  "newSeats": 5,
+  "playedSilentlyPerBrowser": 2,
+  "watchFilesRangeChecked": 943,
+  "iphoneEntryChecks": 16,
+  "checks": {
+    "archive-live": 0,
+    "assets-live": 0,
+    "goods-live": 0,
+    "iphone-entry-live": 0,
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "full-live": 0
+  },
+  "archive": {
+    "at": "2026-11-15T22:22:16.831Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-D77lDSAO.js",
+    "chunks": 10,
+    "messages": 7732,
+    "uniqueInstagramIds": 1041,
+    "matched": 989,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through120": 314,
+    "exactIconHashes": 247,
+    "exactPosterHashes": 314
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "assets": [
+    {
+      "path": "/icons/petaluma-pie-company-v120.webp",
+      "sha256": "f02393adc68b1e65010d6b19148c58a621351fbd3f70c17baba9b4416ad6b153",
+      "bytes": 28966
+    },
+    {
+      "path": "/icons/foodie-girasoljanexis-v120.webp",
+      "sha256": "b676c037fc94350f64eda2237d5bf0ca76da998115747d7dc3c2181d5e369e35",
+      "bytes": 29544
+    },
+    {
+      "path": "/clips/b120-dfxbd7jxatl.mp4",
+      "sha256": "3ed93ad026d962a2d9466f8e2048dc409c4b8484362386f168a4c03d5386e1b6",
+      "bytes": 2313611
+    },
+    {
+      "path": "/clips/b120-dfxbd7jxatl-poster.webp",
+      "sha256": "7931bce1ce94dbd8099bff62d83f2756b8b41c6eb334480850e879dd3635bdd9",
+      "bytes": 42248
+    },
+    {
+      "path": "/clips/review-DbTtoXbTuBL.mp4",
+      "sha256": "7799d0583026cbb53d17f1081d747b0f89f28a81b68fd3bb2a33425c4f471152",
+      "bytes": 3440319
+    },
+    {
+      "path": "/clips/review-DbTtoXbTuBL-poster.webp",
+      "sha256": "54a8ad0678018023c4226a634f9b3222a51c45221f1e8448ed04a47b7efda145",
+      "bytes": 60158
+    }
+  ],
+  "visibleChrome": {
+    "pieCategory": true,
+    "listingVisible": true,
+    "bundle": "/assets/index-D77lDSAO.js",
+    "widths": [
+      393,
+      320
+    ],
+    "menuRows": 60,
+    "janexisReviewMuted": true,
+    "noHorizontalOverflow": true
+  }
+}
