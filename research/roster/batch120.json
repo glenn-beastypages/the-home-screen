@@ -1,0 +1,509 @@
+{
+  "cutoff": "2026-11-15T11:56:07.262018-08:00",
+  "listings": [
+    {
+      "slug": "petaluma-pie-company",
+      "name": "Petaluma Pie Company",
+      "label": "Petaluma Pie",
+      "cuisine": "Sweet and savory pie bakery",
+      "tagline": "Seasonal fruit pies, cream pies and savory hand pies in downtown Petaluma.",
+      "color": "#c6dfbf",
+      "icon": "petaluma-pie-company-v120",
+      "category": "Pie",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "Savory hand pies",
+          "items": [
+            [
+              "Cheeseburger Pie · Baked",
+              "",
+              1050
+            ],
+            [
+              "Cheeseburger Pie · Take and Bake",
+              "",
+              945
+            ],
+            [
+              "Mushroom and Goat Gouda Pie · Baked",
+              "",
+              875
+            ],
+            [
+              "Mushroom and Goat Gouda Pie · Take and Bake",
+              "",
+              787
+            ],
+            [
+              "Jamaican Beef Patty · Baked",
+              "",
+              1050
+            ],
+            [
+              "Jamaican Beef Patty · Take and Bake",
+              "",
+              945
+            ],
+            [
+              "Spinach and Feta Pie · Baked",
+              "",
+              875
+            ],
+            [
+              "Spinach and Feta Pie · Take and Bake",
+              "",
+              787
+            ],
+            [
+              "Chicken Tinga Pie · Baked",
+              "",
+              1050
+            ],
+            [
+              "Chicken Tinga Pie · Take and Bake",
+              "",
+              945
+            ],
+            [
+              "Japanese Curry with Chicken Pie · Baked",
+              "",
+              975
+            ],
+            [
+              "Japanese Curry with Chicken Pie · Take and Bake",
+              "",
+              878
+            ],
+            [
+              "Saag Aloo Pie · Baked",
+              "",
+              875
+            ],
+            [
+              "Saag Aloo Pie · Take and Bake",
+              "",
+              787
+            ],
+            [
+              "Japanese Curry Pie · Baked",
+              "",
+              800
+            ],
+            [
+              "Japanese Curry Pie · Take and Bake",
+              "",
+              720
+            ],
+            [
+              "Potato and Pea Samosa Pie · Baked",
+              "",
+              800
+            ],
+            [
+              "Potato and Pea Samosa Pie · Take and Bake",
+              "",
+              720
+            ],
+            [
+              "Italian Butter Bean Pie · Baked",
+              "",
+              875
+            ],
+            [
+              "Italian Butter Bean Pie · Take and Bake",
+              "",
+              787
+            ]
+          ]
+        },
+        {
+          "name": "Seasonal fruit and nut pies",
+          "items": [
+            [
+              "Classic Apple Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Classic Apple Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Strawberry Rhubarb Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Strawberry Rhubarb Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Mixed Berry Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Mixed Berry Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Black and Blueberry Crumble · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Black and Blueberry Crumble · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Apple Pecan Crumble With Salted Caramel · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Apple Pecan Crumble With Salted Caramel · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Blackberry Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Blackberry Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Old Fashioned Pecan Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Old Fashioned Pecan Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Pear Ginger Cardamom Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Pear Ginger Cardamom Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Blueberry Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Blueberry Pie · 5-inch",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Cream and custard pies",
+          "items": [
+            [
+              "Maple Pumpkin Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Maple Pumpkin Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Banana Cream Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Banana Cream Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Chocolate Cream Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Chocolate Cream Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Lemon Meringue Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Lemon Meringue Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Elvis Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Elvis Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Butterscotch Banana Cream Pie with Salted Caramel · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Butterscotch Banana Cream Pie with Salted Caramel · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Coconut Cream Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Coconut Cream Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Lime Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Lime Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Chocolate Coconut Cream Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Chocolate Coconut Cream Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "My Little Sweet Potato Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "My Little Sweet Potato Pie · 5-inch",
+              "",
+              1000
+            ],
+            [
+              "Butterscotch Cream Pie · 9-inch",
+              "",
+              5000
+            ],
+            [
+              "Butterscotch Cream Pie · 5-inch",
+              "",
+              1000
+            ]
+          ]
+        }
+      ],
+      "address": "125 Petaluma Blvd N, Suite B, Petaluma, CA 94952",
+      "phone": "(707) 766-6743",
+      "email": "pie@petalumapie.com",
+      "hours": "Mon–Tue and Thu–Sun 10am–6pm, Wed 10am–4pm",
+      "site": "https://petalumapiecompany.com/",
+      "orderUrl": "https://petalumapiecompany.com/",
+      "siteCta": "Order online",
+      "siteNote": "Flavors and holiday availability change. Check the shop’s current ordering menu before visiting.",
+      "panels": [
+        {
+          "head": "Current ordering menus",
+          "body": [
+            "Check the shop’s menus for current flavors, pickup and availability."
+          ],
+          "links": [
+            {
+              "label": "Savory pies",
+              "href": "https://petalumapiecompany.com/collections/frontpage"
+            },
+            {
+              "label": "Seasonal sweet pies",
+              "href": "https://petalumapiecompany.com/collections/seasonal-fruit-and-nut-pies"
+            },
+            {
+              "label": "Cream pies",
+              "href": "https://petalumapiecompany.com/collections/cold-pie-1"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b120-dfxbd7jxatl.mp4",
+        "poster": "/clips/b120-dfxbd7jxatl-poster.webp",
+        "href": "https://www.instagram.com/reel/DfxBD7jxAtL/",
+        "credit": "Posted by @petalumapie. The shop features its Chicken Tinga hand pie.",
+        "platform": "Instagram"
+      }
+    }
+  ],
+  "placements": {
+    "petaluma-goods2-1": "b_petalumapiecompany",
+    "beasty-pie-0": "b_petalumapiecompany",
+    "beasty-sweets2-3": "b_petalumapiecompany",
+    "beasty-foodies2-345": "b_foodiegirasoljanexis"
+  },
+  "posts": [
+    {
+      "code": "DfxBD7jxAtL",
+      "slug": "b120-dfxbd7jxatl",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.508,
+      "audio": true,
+      "batch": 120,
+      "source": "https://www.instagram.com/reel/DfxBD7jxAtL/",
+      "brand": "b_petalumapiecompany",
+      "by": "petalumapie",
+      "postedBy": "petalumapie",
+      "postedDate": "20261115",
+      "credit": "Posted by @petalumapie. The shop features its Chicken Tinga hand pie.",
+      "disposition": "Shop film and Watch.",
+      "request": [
+        {
+          "rowId": 252596,
+          "at": "2026-11-15T11:55:34.077671-08:00",
+          "request": "Watch this video clip"
+        }
+      ]
+    },
+    {
+      "code": "DbTtoXbTuBL",
+      "slug": "review-DbTtoXbTuBL",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 123.1,
+      "audio": true,
+      "batch": 120,
+      "source": "https://www.instagram.com/reel/DbTtoXbTuBL/",
+      "brand": "b_petalumapiecompany",
+      "by": "girasoljanexis",
+      "postedBy": "girasoljanexis",
+      "postedDate": "20260727",
+      "credit": "Review by @girasoljanexis at Petaluma Pie Company.",
+      "disposition": "Review on the shop and creator pages, and in Watch.",
+      "request": [
+        {
+          "rowId": 252599,
+          "at": "2026-11-15T11:56:07.262018-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ]
+    }
+  ],
+  "updatedIcons": [
+    "/icons/petaluma-pie-company-v120.webp",
+    "/icons/foodie-girasoljanexis-v120.webp"
+  ],
+  "updatedBrands": [],
+  "categoryOnly": [],
+  "artworkDispositions": [
+    {
+      "source": "https://petalumapiecompany.com/cdn/shop/files/logo_72dpi_2000x.jpg?v=1613516440",
+      "submitted": "IMG_0632.png",
+      "path": "/icons/petaluma-pie-company-v120.webp",
+      "disposition": "Original matching 500-pixel mark from the business website. The full ring and lettering fit the phone tile."
+    },
+    {
+      "source": "IMG_0630.png",
+      "disposition": "Confirms the shop’s public contact number and email."
+    },
+    {
+      "source": "IMG_0631.png",
+      "disposition": "Matches the shop’s official Instagram profile and current address."
+    },
+    {
+      "source": "IMG_0634.png",
+      "path": "/icons/foodie-girasoljanexis-v120.webp",
+      "disposition": "Public portrait supplied for the review author. Cropped to remove surrounding controls."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252592,
+      "at": "2026-11-15T11:52:52.786516-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0630.png",
+        "IMG_0631.png",
+        "IMG_0632.png"
+      ]
+    },
+    {
+      "rowId": 252593,
+      "at": "2026-11-15T11:52:52.897822-08:00",
+      "text": "https://petalumapiecompany.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252594,
+      "at": "2026-11-15T11:52:52.972620-08:00",
+      "text": "Petaluma • Sweets \nBEASTY • Pie\nNew Category",
+      "attachments": []
+    },
+    {
+      "rowId": 252595,
+      "at": "2026-11-15T11:55:33.985389-08:00",
+      "text": "https://www.instagram.com/reel/DfxBD7jxAtL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252596,
+      "at": "2026-11-15T11:55:34.077671-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252597,
+      "at": "2026-11-15T11:56:06.765011-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0634.png"
+      ]
+    },
+    {
+      "rowId": 252598,
+      "at": "2026-11-15T11:56:07.161713-08:00",
+      "text": "https://www.instagram.com/reel/DbTtoXbTuBL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252599,
+      "at": "2026-11-15T11:56:07.262018-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    }
+  ],
+  "held": []
+}

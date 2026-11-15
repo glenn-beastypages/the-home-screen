@@ -149,6 +149,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   // Glenn, November 7: each requested cuisine gets its own searchable category.
   { kind: 'poke', heading: 'Poke', about: 'Poke bowls and poke shops', wall: wall('sushi'), test: /pok[eé]|pok[eé] bowls/i },
   { kind: 'cupcakes', heading: 'Cupcakes', about: 'Cupcake shops and custom cupcakes', wall: wall('bakery'), test: /cupcakes?|cupcakery/i },
+  { kind: 'pie', heading: 'Pie', about: 'Pie bakeries and shops with sweet or savory pies', wall: wall('sweets'), test: /\bpies?\b/i },
   { kind: 'burritos', heading: 'Burritos', about: 'Taquerias and shops for burritos', wall: wall('diner'), test: /\bburritos?\b/i },
   { kind: 'popupcatering', heading: 'Pop-up/Catering', about: 'Food and drink pop-ups available for events', wall: wall('catering'), test: /pop[ -]?up/i },
   { kind: 'elsalvadoran', heading: 'El Salvadoran', about: 'Salvadoran food and pupuserías', wall: wall('diner'), test: /salvadoran|pupuser[ií]a/i },

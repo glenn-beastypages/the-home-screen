@@ -846,3 +846,7 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-valinthebay-v119.webp` | IMG_0618.png | Cropped the matching public profile artwork and checked the phone tile. |
 | `foodie-firstdatedude-v119.webp` | IMG_0619.png | Cropped the matching public profile artwork and checked the phone tile. |
 | `foodie-sydneymlee-v119.webp` | IMG_0620.png | Cropped the matching public profile artwork and checked the phone tile. |
+
+<!-- Batch 120 — Petaluma Pie Company and Janexis. -->
+| `petaluma-pie-company-v120.webp` | https://petalumapiecompany.com/cdn/shop/files/logo_72dpi_2000x.jpg?v=1613516440 | Original matching 500-pixel mark from the business website. The full ring and lettering fit the phone tile. |
+| `foodie-girasoljanexis-v120.webp` | IMG_0634.png | Public portrait supplied for the review author. Cropped to remove surrounding controls. |

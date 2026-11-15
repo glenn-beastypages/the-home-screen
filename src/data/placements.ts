@@ -2784,4 +2784,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   "beasty-foodies2-342": "b_foodievalinthebay",
   "beasty-foodies2-343": "b_foodiefirstdatedude",
   "beasty-foodies2-344": "b_foodiesydneymlee",
+
+  // Batch 120 — Petaluma, Pie, More sweets and More foodies.
+  "petaluma-goods2-1": "b_petalumapiecompany",
+  "beasty-pie-0": "b_petalumapiecompany",
+  "beasty-sweets2-3": "b_petalumapiecompany",
+  "beasty-foodies2-345": "b_foodiegirasoljanexis",
 }

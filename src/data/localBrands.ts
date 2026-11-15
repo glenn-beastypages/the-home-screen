@@ -95197,4 +95197,372 @@ export const LOCAL_SEED: LocalSeed[] = [
     }
   ]
 },
+
+  // Batch 120 — Petaluma Pie Company.
+{
+  "slug": "petaluma-pie-company",
+  "name": "Petaluma Pie Company",
+  "label": "Petaluma Pie",
+  "cuisine": "Sweet and savory pie bakery",
+  "tagline": "Seasonal fruit pies, cream pies and savory hand pies in downtown Petaluma.",
+  "color": "#c6dfbf",
+  "icon": "petaluma-pie-company-v120",
+  "category": "Pie",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "Savory hand pies",
+      "items": [
+        [
+          "Cheeseburger Pie · Baked",
+          "",
+          1050
+        ],
+        [
+          "Cheeseburger Pie · Take and Bake",
+          "",
+          945
+        ],
+        [
+          "Mushroom and Goat Gouda Pie · Baked",
+          "",
+          875
+        ],
+        [
+          "Mushroom and Goat Gouda Pie · Take and Bake",
+          "",
+          787
+        ],
+        [
+          "Jamaican Beef Patty · Baked",
+          "",
+          1050
+        ],
+        [
+          "Jamaican Beef Patty · Take and Bake",
+          "",
+          945
+        ],
+        [
+          "Spinach and Feta Pie · Baked",
+          "",
+          875
+        ],
+        [
+          "Spinach and Feta Pie · Take and Bake",
+          "",
+          787
+        ],
+        [
+          "Chicken Tinga Pie · Baked",
+          "",
+          1050
+        ],
+        [
+          "Chicken Tinga Pie · Take and Bake",
+          "",
+          945
+        ],
+        [
+          "Japanese Curry with Chicken Pie · Baked",
+          "",
+          975
+        ],
+        [
+          "Japanese Curry with Chicken Pie · Take and Bake",
+          "",
+          878
+        ],
+        [
+          "Saag Aloo Pie · Baked",
+          "",
+          875
+        ],
+        [
+          "Saag Aloo Pie · Take and Bake",
+          "",
+          787
+        ],
+        [
+          "Japanese Curry Pie · Baked",
+          "",
+          800
+        ],
+        [
+          "Japanese Curry Pie · Take and Bake",
+          "",
+          720
+        ],
+        [
+          "Potato and Pea Samosa Pie · Baked",
+          "",
+          800
+        ],
+        [
+          "Potato and Pea Samosa Pie · Take and Bake",
+          "",
+          720
+        ],
+        [
+          "Italian Butter Bean Pie · Baked",
+          "",
+          875
+        ],
+        [
+          "Italian Butter Bean Pie · Take and Bake",
+          "",
+          787
+        ]
+      ]
+    },
+    {
+      "name": "Seasonal fruit and nut pies",
+      "items": [
+        [
+          "Classic Apple Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Classic Apple Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Strawberry Rhubarb Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Strawberry Rhubarb Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Mixed Berry Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Mixed Berry Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Black and Blueberry Crumble · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Black and Blueberry Crumble · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Apple Pecan Crumble With Salted Caramel · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Apple Pecan Crumble With Salted Caramel · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Blackberry Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Blackberry Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Old Fashioned Pecan Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Old Fashioned Pecan Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Pear Ginger Cardamom Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Pear Ginger Cardamom Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Blueberry Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Blueberry Pie · 5-inch",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "Cream and custard pies",
+      "items": [
+        [
+          "Maple Pumpkin Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Maple Pumpkin Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Banana Cream Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Banana Cream Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Chocolate Cream Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Chocolate Cream Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Lemon Meringue Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Lemon Meringue Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Elvis Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Elvis Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Butterscotch Banana Cream Pie with Salted Caramel · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Butterscotch Banana Cream Pie with Salted Caramel · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Coconut Cream Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Coconut Cream Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Lime Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Lime Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Chocolate Coconut Cream Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Chocolate Coconut Cream Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "My Little Sweet Potato Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "My Little Sweet Potato Pie · 5-inch",
+          "",
+          1000
+        ],
+        [
+          "Butterscotch Cream Pie · 9-inch",
+          "",
+          5000
+        ],
+        [
+          "Butterscotch Cream Pie · 5-inch",
+          "",
+          1000
+        ]
+      ]
+    }
+  ],
+  "address": "125 Petaluma Blvd N, Suite B, Petaluma, CA 94952",
+  "phone": "(707) 766-6743",
+  "email": "pie@petalumapie.com",
+  "hours": "Mon–Tue and Thu–Sun 10am–6pm, Wed 10am–4pm",
+  "site": "https://petalumapiecompany.com/",
+  "orderUrl": "https://petalumapiecompany.com/",
+  "siteCta": "Order online",
+  "siteNote": "Flavors and holiday availability change. Check the shop’s current ordering menu before visiting.",
+  "panels": [
+    {
+      "head": "Current ordering menus",
+      "body": [
+        "Check the shop’s menus for current flavors, pickup and availability."
+      ],
+      "links": [
+        {
+          "label": "Savory pies",
+          "href": "https://petalumapiecompany.com/collections/frontpage"
+        },
+        {
+          "label": "Seasonal sweet pies",
+          "href": "https://petalumapiecompany.com/collections/seasonal-fruit-and-nut-pies"
+        },
+        {
+          "label": "Cream pies",
+          "href": "https://petalumapiecompany.com/collections/cold-pie-1"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b120-dfxbd7jxatl.mp4",
+    "poster": "/clips/b120-dfxbd7jxatl-poster.webp",
+    "href": "https://www.instagram.com/reel/DfxBD7jxAtL/",
+    "credit": "Posted by @petalumapie. The shop features its Chicken Tinga hand pie.",
+    "platform": "Instagram"
+  }
+},
 ]

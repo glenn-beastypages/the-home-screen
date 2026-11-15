@@ -209,6 +209,12 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 120) {
+      await category('Pie', 'Petaluma Pie Company')
+      await icon('Petaluma Pie Company').click()
+      await page.getByRole('heading', { name: 'Petaluma Pie Company', exact: true }).waitFor()
+      assert.equal((await page.locator('.brand-hours').innerText()).trim(), batch.listings[0].hours)
+      assert(reviewsOf('b_petalumapiecompany').some(r => r.by === 'girasoljanexis' && r.src))
     } else if (number === 119) {
       await category('Burritos', 'La Taqueria')
       await category('Pop-up/Catering', 'Latte Syndrome')

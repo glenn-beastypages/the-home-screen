@@ -1206,3 +1206,7 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DeC817Xy2qR.mp4` | [Original](https://www.instagram.com/reel/DeC817Xy2qR/) | Review by @valinthebay_ at Valley Goat, Sunnyvale. 3–18s |
 | `review-Dc1XlX5IJUU.mp4` | [Original](https://www.instagram.com/reel/Dc1XlX5IJUU/) | Review by @firstdatedude at Valley Goat, Sunnyvale. 3–18s |
 | `review-DcuM4YhhZqe.mp4` | [Original](https://www.instagram.com/reel/DcuM4YhhZqe/) | Review by @sydneymlee_ at Valley Goat, Sunnyvale. 3–18s |
+
+<!-- Batch 120 — Petaluma Pie Company excerpts. -->
+| `b120-dfxbd7jxatl.mp4` | [Original](https://www.instagram.com/reel/DfxBD7jxAtL/) | Posted by @petalumapie. The shop features its Chicken Tinga hand pie. 3–18s |
+| `review-DbTtoXbTuBL.mp4` | [Original](https://www.instagram.com/reel/DbTtoXbTuBL/) | Review by @girasoljanexis at Petaluma Pie Company. 3–18s |

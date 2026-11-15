@@ -2078,6 +2078,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "firstdatedude", "name": "@firstdatedude", "label": "firstdatedude", "icon": "foodie-firstdatedude-v119"},
   {"handle": "sydneymlee_", "name": "@sydneymlee_", "label": "sydneymlee_", "icon": "foodie-sydneymlee-v119"},
 
+  {"handle": "girasoljanexis", "name": "Janexis", "label": "Janexis", "icon": "foodie-girasoljanexis-v120"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2918,6 +2919,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "firstdatedude", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/Dc1XlX5IJUU/", "brand": "b_valleygoat", "credit": "Review by @firstdatedude at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
   {"by": "sydneymlee_", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DcuM4YhhZqe/", "brand": "b_valleygoat", "credit": "Review by @sydneymlee_ at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
 
+  {"by": "girasoljanexis", "place": "Petaluma Pie Company", "city": "Petaluma", "brand": "b_petalumapiecompany", "reel": "https://www.instagram.com/reel/DbTtoXbTuBL/", "clip": true, "credit": "Review by @girasoljanexis at Petaluma Pie Company."},
 ]
 
 /*
