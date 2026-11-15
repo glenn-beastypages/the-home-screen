@@ -1,0 +1,126 @@
+{
+  "release": {
+    "commit": "74c224f7bc4923dc71d2617f1e759df4c974df2c",
+    "entry": "/assets/index-DIfG42dz.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-14T03:42:26.729853+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/heads-and-tails-barbecue.webp",
+      "sha256": "920c7823cb0a680151dc23b14a4302de4b6b143fda0e776ec495227072867e03"
+    },
+    "deploy": "dep-dbrnosjm8hqs739o14qg",
+    "finishedAt": "2026-11-13T21:20:10.446487Z"
+  },
+  "chrome": true,
+  "iphoneWebKit": true,
+  "iphoneEntryChecks": 16,
+  "watchFilesRangeChecked": 877,
+  "keptSeats": 2256,
+  "newSeats": 0,
+  "fullAudit": {
+    "passed": true,
+    "note": "Same suite assertions. Used DOMContentLoaded for navigation after networkidle timed out."
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "archive": {
+    "at": "2026-11-14T03:43:37.353Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-DIfG42dz.js",
+    "chunks": 10,
+    "messages": 7522,
+    "uniqueInstagramIds": 975,
+    "matched": 923,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through118": 248,
+    "exactIconHashes": 204,
+    "exactPosterHashes": 248
+  },
+  "visibleChrome": {
+    "widths": [
+      393,
+      320
+    ],
+    "updatedHours": true,
+    "watchMuted": true,
+    "enteredHome": true
+  }
+}
