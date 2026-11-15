@@ -10,3 +10,14 @@
 MT Pop’s profile and dancer page are included. The separate “Watch this video clip” message has no post or playable attachment. One unlabeled portrait was held because its neighboring link repeats a reel already paired with another portrait. The Wing Bros Heavy Hitter film from Batch 117 still has no identifiable source.
 
 Private messages, material about a separate product, and the unrelated screenshot are excluded from the public ledger.
+
+## Live verification
+
+Render served `372864d` on BEASTY Pages. The site and hosted Goods passed health checks.
+
+- In Chrome and iPhone WebKit, all 13 new pages rendered and all 64 excerpts played muted. The iPhone entry audit passed all 16 checks.
+- The full site audit passed. All 941 Watch files returned valid MP4 byte ranges. The 169 new or updated files matched production, including 41 icons, 64 films, and 64 posters.
+- The historical source check found 987 of 1039 unique Instagram sources. The other 52 are previously documented exceptions or withdrawals.
+- Hosted Goods and shared sign-in rendered on both browsers. Signed-out requests to private resale endpoints returned 401.
+
+[Release evidence](../research/roster/b119-live-verification.json)

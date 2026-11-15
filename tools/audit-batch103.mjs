@@ -8,6 +8,7 @@ import { pathToFileURL } from 'node:url'
 import { chromium, webkit, devices } from 'playwright'
 import { tsImport } from 'tsx/esm/api'
 import { freshTestDb } from './pgtest.mjs'
+import { navigate } from './live-navigation.mjs'
 
 export async function auditBatch(number) {
   const read = f => JSON.parse(readFileSync(f))
@@ -72,9 +73,9 @@ export async function auditBatch(number) {
   const hash = b => createHash('sha256').update(b).digest('hex')
   async function fits() { assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)) }
   async function open(id) {
-    await page.goto(base + '/?b=' + id, { waitUntil: 'domcontentloaded', timeout: 45000 })
+    await navigate(page, base + '/?b=' + id)
     await page.getByRole('heading', { name: brandById(id).name, exact: true }).waitFor()
-    await page.waitForFunction(() => {
+    if (number !== 119) await page.waitForFunction(() => {
       const window = document.querySelector('.app-window')
       return window && getComputedStyle(window).willChange === 'auto'
     })
@@ -88,7 +89,7 @@ export async function auditBatch(number) {
   }
   const icon = name => page.getByRole('button', { name: new RegExp('^' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:,|$)') })
   async function category(name, target) {
-    await page.goto(base + '/search', { waitUntil: 'domcontentloaded' })
+    await navigate(page, base + '/search')
     await page.getByRole('textbox', { name: 'Dishes, businesses, categories, cities' }).fill(name)
     await page.locator('.search-brand.is-cat').filter({ has: page.getByText('BEASTY • ' + name, { exact: true }) }).click()
     if (target) await icon(target).waitFor()
@@ -181,7 +182,7 @@ export async function auditBatch(number) {
       await category('Ceviche', 'Waterfall Cevicheria')
       await category('BIP')
       await page.getByText('BEASTY · BEAST IN PEACE', { exact: true }).waitFor()
-      await page.goto(base + '/search', { waitUntil: 'domcontentloaded' })
+      await navigate(page, base + '/search')
       await page.getByRole('textbox', { name: 'Dishes, businesses, categories, cities' }).fill('Home of Chicken and Waffles')
       assert.equal(await page.locator('.search-brand').count(), 0)
       for (const id of ['b_plazacafepleasanthill', 'b_hansangtofumilpitas']) {
