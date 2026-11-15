@@ -93308,4 +93308,1893 @@ export const LOCAL_SEED: LocalSeed[] = [
     "platform": "Instagram"
   }
 },
+
+  // Batch 119 businesses and dancers.
+{
+  "slug": "dough-bottega",
+  "name": "Dough Bottega",
+  "label": "Dough Bottega",
+  "cuisine": "Artisanal pizza",
+  "category": "Pizza",
+  "color": "#eae6e1",
+  "tagline": "Handmade 12-inch New York-style thin-crust pizzas from a Vallejo home kitchen.",
+  "site": "https://www.doughbottega.com/",
+  "icon": "dough-bottega-v119",
+  "prep": 0,
+  "items": [],
+  "hours": "Fri–Sat 3–7pm; events by arrangement",
+  "phone": "(707) 654-3242",
+  "email": "doughbottega@gmail.com",
+  "orderUrl": "https://www.doughbottega.com/",
+  "siteCta": "Order online",
+  "siteNote": "Order ahead and choose a curbside pickup time. Check seasonal pizzas and event availability on their website.",
+  "sections": [
+    {
+      "name": "Thin-crust pizza",
+      "items": [
+        [
+          "Pepperoni Pizza",
+          "",
+          2400
+        ],
+        [
+          "Aloha Pizza",
+          "",
+          2500
+        ],
+        [
+          "Margherita Pizza",
+          "",
+          2100
+        ],
+        [
+          "5 Cheese Pizza",
+          "",
+          2300
+        ],
+        [
+          "Artichoke Spinach Pizza",
+          "",
+          2500
+        ],
+        [
+          "Vegetarian Pizza",
+          "",
+          2300
+        ],
+        [
+          "Prosciutto Pizza",
+          "",
+          2400
+        ],
+        [
+          "Sausage Jalapeño Pizza",
+          "",
+          2500
+        ],
+        [
+          "Suprema",
+          "",
+          2700
+        ],
+        [
+          "Vallejo Chocolate Pizza",
+          "",
+          2400
+        ]
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b119-dnb3-q1swmg.mp4",
+    "poster": "/clips/b119-dnb3-q1swmg-poster.webp",
+    "href": "https://www.instagram.com/reel/DNB3-q1SWmg/",
+    "credit": "Posted by @doughbottega.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "cereal-bar-san-rafael",
+  "name": "Cereal Bar",
+  "label": "Cereal Bar",
+  "cuisine": "Cereal desserts and crêpes",
+  "category": "Sweets",
+  "color": "#ffffff",
+  "tagline": "Cereal bowls, milkshakes, matcha and sweet or savory crêpes on Grand Avenue.",
+  "site": "https://cerealbarsanrafael.com/",
+  "icon": "cereal-bar-san-rafael-v119",
+  "prep": 0,
+  "items": [],
+  "address": "975 Grand Ave, San Rafael, CA 94901",
+  "hours": "Daily noon–8:30pm",
+  "phone": "(415) 785-4348",
+  "orderUrl": "https://cerealbarsanrafael.com/#menu",
+  "siteCta": "Order online",
+  "siteNote": "Visit their menu for current prices and toppings.",
+  "sections": [
+    {
+      "name": "Fresas con Crema (Fruity Creamy)",
+      "items": [
+        [
+          "Creamy Banana strawberry",
+          "",
+          1200
+        ],
+        [
+          "Create Your Own Fruity Creamy",
+          "",
+          1200
+        ],
+        [
+          "Creamy Strawberry",
+          "",
+          1200
+        ]
+      ]
+    },
+    {
+      "name": "Matcha Series (Served Cold & hot)",
+      "items": [
+        [
+          "Mango Matcha Latte",
+          "",
+          800
+        ],
+        [
+          "Coconut Matcha Latte",
+          "",
+          800
+        ],
+        [
+          "Matcha Latte",
+          "",
+          750
+        ],
+        [
+          "Strawberry Matcha Latte",
+          "",
+          550
+        ]
+      ]
+    },
+    {
+      "name": "Cereal bowls",
+      "items": [
+        [
+          "Create Your Own Bowl 16oz (Small Bowl)",
+          "",
+          900
+        ],
+        [
+          "Create Your Own Bowl 20oz (Big Bowl)",
+          "",
+          1100
+        ],
+        [
+          "Chocolate Bowl",
+          "",
+          1000
+        ],
+        [
+          "Honey Nut Paradise Bowl",
+          "",
+          1000
+        ],
+        [
+          "Golden Loop Bowl",
+          "",
+          1100
+        ],
+        [
+          "The Rainbow Bowl",
+          "",
+          1000
+        ],
+        [
+          "Banana Berry Charm Bowl",
+          "",
+          1100
+        ]
+      ]
+    },
+    {
+      "name": "Sweet Crêpes",
+      "items": [
+        [
+          "Banana & Peanuts",
+          "",
+          1200
+        ],
+        [
+          "The Tropical (Served Cold)",
+          "",
+          1200
+        ],
+        [
+          "Raisin Marshmallow (Served Cold)",
+          "",
+          1200
+        ],
+        [
+          "Nutella",
+          "",
+          800
+        ],
+        [
+          "Dulce de Leche & Peach",
+          "",
+          1050
+        ],
+        [
+          "Banana and Peanuts",
+          "",
+          1200
+        ],
+        [
+          "Fruity Crunchy",
+          "",
+          1200
+        ],
+        [
+          "S'mores",
+          "",
+          1000
+        ],
+        [
+          "Cheesecake",
+          "",
+          1200
+        ]
+      ]
+    },
+    {
+      "name": "Savory Crêpes",
+      "items": [
+        [
+          "The Hawaiian",
+          "",
+          1100
+        ],
+        [
+          "Avocado",
+          "",
+          1100
+        ],
+        [
+          "Ham & Cheese",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "Shakes",
+      "items": [
+        [
+          "Choco Mallow Crunch",
+          "",
+          700
+        ],
+        [
+          "Vanilla Nutty Bliss",
+          "",
+          700
+        ],
+        [
+          "Appletini",
+          "",
+          750
+        ],
+        [
+          "Banana-nia",
+          "",
+          750
+        ],
+        [
+          "Wake Me Up",
+          "",
+          750
+        ],
+        [
+          "Triple Delight",
+          "",
+          700
+        ],
+        [
+          "Morir Sonando",
+          "",
+          700
+        ]
+      ]
+    },
+    {
+      "name": "Coffee & Matcha Latte",
+      "items": [
+        [
+          "Dbl Shoot Espresso",
+          "",
+          325
+        ],
+        [
+          "Americano",
+          "",
+          350
+        ],
+        [
+          "Macchiato",
+          "",
+          350
+        ],
+        [
+          "Cappuccino",
+          "",
+          625
+        ],
+        [
+          "Latte",
+          "",
+          525
+        ],
+        [
+          "Mocha Latte",
+          "",
+          500
+        ],
+        [
+          "Chai Latte",
+          "",
+          500
+        ],
+        [
+          "Hot Teas",
+          "",
+          350
+        ],
+        [
+          "Hot Chocolate",
+          "",
+          450
+        ],
+        [
+          "Strawberry Matcha",
+          "",
+          800
+        ],
+        [
+          "Mango Matcha",
+          "",
+          800
+        ],
+        [
+          "Coconut Matcha",
+          "",
+          800
+        ],
+        [
+          "Watermelon Matcha",
+          "",
+          800
+        ],
+        [
+          "Banana Matcha",
+          "",
+          800
+        ]
+      ]
+    },
+    {
+      "name": "Ice Cream & Dessert",
+      "items": [
+        [
+          "Vanilla Ice Cream 1 Scoop",
+          "",
+          250
+        ],
+        [
+          "Strawberry Ice Cream 1 Scoop",
+          "",
+          250
+        ],
+        [
+          "Chocolate Ice Cream 1 Scoop",
+          "",
+          250
+        ],
+        [
+          "Neapolitan Ice Cream 1 Scoop",
+          "",
+          250
+        ],
+        [
+          "Creamy Strawberry Banana",
+          "",
+          1000
+        ],
+        [
+          "Ice Cream Bowl 16oz",
+          "",
+          800
+        ],
+        [
+          "Banana Split",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "Other Drinks",
+      "items": [
+        [
+          "Extra Scoop Ice Cream",
+          "",
+          100
+        ],
+        [
+          "Vanilla Shake",
+          "",
+          700
+        ],
+        [
+          "Chocolate Shake",
+          "",
+          700
+        ],
+        [
+          "Strawberry Shake",
+          "",
+          700
+        ],
+        [
+          "Chocolate-Vanilla Shake",
+          "",
+          700
+        ],
+        [
+          "Latte (16 oz.)",
+          "",
+          575
+        ],
+        [
+          "Iced Latte (16 oz.)",
+          "",
+          475
+        ],
+        [
+          "Chai Latte (16 oz.)",
+          "",
+          625
+        ],
+        [
+          "Iced Chai Latte (16 oz.)",
+          "",
+          525
+        ],
+        [
+          "Hot Chocolate (16 oz.)",
+          "",
+          450
+        ],
+        [
+          "Custom Your Crepe",
+          "",
+          1200
+        ],
+        [
+          "Water Bottle",
+          "",
+          100
+        ],
+        [
+          "Coke bottle",
+          "",
+          350
+        ],
+        [
+          "Cream Cheese",
+          "",
+          150
+        ],
+        [
+          "Yerba Mate",
+          "",
+          350
+        ],
+        [
+          "Apple Juice",
+          "",
+          300
+        ],
+        [
+          "Fanta Bottle",
+          "",
+          350
+        ],
+        [
+          "Sprite Bottle",
+          "",
+          350
+        ]
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b119-dfsupregatd.mp4",
+    "poster": "/clips/b119-dfsupregatd-poster.webp",
+    "href": "https://www.instagram.com/p/DfsUpregaTd/",
+    "credit": "Posted by @cereal_bar001.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "mt-pop",
+  "name": "MT Pop",
+  "label": "MT Pop",
+  "cuisine": "Popping dancer",
+  "category": "Dancers",
+  "color": "#181818",
+  "tagline": "Vietnamese popping dancer and the 2024 Red Bull Dance Your Style world champion.",
+  "site": "https://www.instagram.com/mtpop.vn/",
+  "icon": "mt-pop-v119",
+  "prep": 0,
+  "items": [],
+  "contactOnly": "Follow MT Pop’s official profile for popping, freestyle and performance footage.",
+  "panels": [
+    {
+      "head": "Dance Your Style",
+      "body": ["See MT Pop’s 2024 final battle and the event recap."],
+      "links": [
+        {
+          "label": "2024 world final",
+          "href": "https://www.redbull.com/ca-en/red-bull-dance-your-style-world-final-2024-recap"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "babyslow",
+  "name": "Babyslow",
+  "label": "Babyslow",
+  "cuisine": "Popping dancer",
+  "category": "Dancers",
+  "color": "#181818",
+  "tagline": "Popping, robotic footwork and dance performances by Babyslow.",
+  "site": "https://www.instagram.com/babyslow_official/",
+  "icon": "babyslow-v119",
+  "prep": 0,
+  "items": [],
+  "contactOnly": "Follow the official profile for new performances.",
+  "clip": {
+    "src": "/clips/b119-dfsjdeojkyi.mp4",
+    "poster": "/clips/b119-dfsjdeojkyi-poster.webp",
+    "href": "https://www.instagram.com/reel/DfSJdeoJkYi/",
+    "credit": "Posted by @babyslow_official.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "la-taqueria-sf",
+  "name": "La Taqueria",
+  "label": "La Taqueria",
+  "cuisine": "Mexican tacos and burritos",
+  "category": "Burritos",
+  "color": "#071b0f",
+  "tagline": "The Mission Street counter serves no-rice burritos and crisped tacos dorados.",
+  "site": "https://lataqueriasf.net/",
+  "icon": "la-taqueria-sf-v119",
+  "prep": 0,
+  "items": [],
+  "address": "2889 Mission St, San Francisco, CA 94110",
+  "phone": "(415) 285-7117",
+  "hours": "Wed–Thu 11am–8:45pm, Fri–Sat 11am–8:15pm, Sun 11am–7:15pm; Mon–Tue closed",
+  "contactOnly": "Call for takeout. See the restaurant’s menu for burritos, tacos and quesadillas.",
+  "panels": [
+    {
+      "head": "Menu",
+      "body": ["See the menu published by La Taqueria."],
+      "links": [
+        {
+          "label": "See the menu",
+          "href": "https://lataqueriasf.net/menu"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "latte-syndrome",
+  "name": "Latte Syndrome",
+  "label": "Latte Syndrome",
+  "cuisine": "Vietnamese coffee and matcha pop-up",
+  "category": "Pop-up/Catering",
+  "color": "#d7d6d2",
+  "tagline": "Vietnamese coffee, matcha and rotating specials from an Oakland-based pop-up.",
+  "site": "https://www.instagram.com/latte.syndrome/",
+  "icon": "latte-syndrome-v119",
+  "prep": 0,
+  "items": [],
+  "contactOnly": "Check the profile for the next Bay Area pop-up. Message the business on Instagram for event bookings.",
+  "clip": {
+    "src": "/clips/b119-dehs7dkptub.mp4",
+    "poster": "/clips/b119-dehs7dkptub-poster.webp",
+    "href": "https://www.instagram.com/reel/Dehs7DKPTUb/",
+    "credit": "Posted by @latte.syndrome.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "krispy-joes-oakland",
+  "name": "Krispy Joe’s Coffee House",
+  "label": "Krispy Joe’s",
+  "cuisine": "Coffee house and pastrami sandwiches",
+  "category": "Café",
+  "color": "#082424",
+  "tagline": "Oakland coffee shop with griddled pastrami sandwiches, breakfast burritos and espresso.",
+  "site": "https://www.krispyjoes.com/",
+  "icon": "krispy-joes-oakland-v119",
+  "prep": 0,
+  "items": [],
+  "address": "5512 San Pablo Ave, Oakland, CA 94608",
+  "phone": "(669) 233-6769",
+  "email": "cash@krispyjoes.com",
+  "orderUrl": "https://krispyjoes.square.site/",
+  "siteCta": "Order online",
+  "siteNote": "Order pickup online. The listed number is for catering and orders of more than 15 sandwiches. Check current opening times before visiting.",
+  "sections": [
+    {
+      "name": "Breakfast",
+      "items": [
+        [
+          "Griddled PEC",
+          "Pastrami, egg and cheese on rye",
+          1550
+        ],
+        [
+          "French Toast PEC",
+          "Pastrami, egg and American cheese",
+          1650
+        ],
+        [
+          "Egg & Cheese",
+          "",
+          1275
+        ],
+        [
+          "Pastrami Hash Breakfast Burrito",
+          "",
+          1775
+        ],
+        [
+          "Vegan Tofu Scramble Burrito",
+          "",
+          1650
+        ],
+        [
+          "Veg Breakfast Burrito",
+          "",
+          1750
+        ],
+        [
+          "Egg on Toast",
+          "",
+          900
+        ]
+      ]
+    },
+    {
+      "name": "Pastrami and lunch",
+      "items": [
+        [
+          "The OG",
+          "Pastrami, slaw, Swiss and dressing on rye",
+          1600
+        ],
+        [
+          "Pyro’s Reuben",
+          "",
+          1675
+        ],
+        [
+          "The Mama",
+          "",
+          1675
+        ],
+        [
+          "Dad’s Mustard",
+          "",
+          1500
+        ],
+        [
+          "Pastrami Chopped Cheese",
+          "",
+          2500
+        ],
+        [
+          "Krispy Inferno",
+          "",
+          2400
+        ],
+        [
+          "Kimchi Baja Pastrami Taco",
+          "",
+          1000
+        ],
+        [
+          "Krispy Tuna Melt",
+          "",
+          1600
+        ],
+        [
+          "Turkey Reuben",
+          "",
+          1800
+        ],
+        [
+          "California Turkey",
+          "",
+          1900
+        ],
+        [
+          "House Hummus Krispy Toast",
+          "",
+          975
+        ],
+        [
+          "Tuna Sub",
+          "",
+          1750
+        ]
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b119-dcwh8sypfig.mp4",
+    "poster": "/clips/b119-dcwh8sypfig-poster.webp",
+    "href": "https://www.instagram.com/reel/DcwH8SYpfIg/",
+    "credit": "Posted by @krispyjoes.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "popoca-oakland",
+  "name": "Popoca",
+  "label": "Popoca",
+  "cuisine": "Salvadoran live-fire cooking",
+  "category": "El Salvadoran",
+  "color": "#e8ac20",
+  "tagline": "Chef Anthony Salguero serves Salvadoran pupusas and live-fire dishes in Old Oakland.",
+  "site": "https://www.popocaoakland.com/",
+  "icon": "popoca-oakland-v119",
+  "prep": 0,
+  "items": [],
+  "address": "906 Washington St, Oakland, CA 94607",
+  "hours": "Tue–Thu 5–9:30pm, Fri–Sat 5–10pm",
+  "email": "info@popocaoakland.com",
+  "panels": [
+    {
+      "head": "Dinner menu",
+      "body": ["The dinner menu changes with the season."],
+      "links": [
+        {
+          "label": "See current menu",
+          "href": "https://www.popocaoakland.com/menu"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "Con Alma",
+      "items": [
+        [
+          "Ciruelas y Pepino con Alguashte",
+          "",
+          2300
+        ],
+        [
+          "Mackerel Salpicón",
+          "",
+          2500
+        ],
+        [
+          "Guaca-Mol",
+          "",
+          1700
+        ],
+        [
+          "Yuca con Anchoa",
+          "",
+          1600
+        ],
+        [
+          "Veranito Loco",
+          "",
+          1900
+        ],
+        [
+          "Tamal Pisques",
+          "",
+          1800
+        ],
+        [
+          "Pollo Campero",
+          "",
+          1700
+        ]
+      ]
+    },
+    {
+      "name": "Pupusas",
+      "items": [
+        [
+          "Pupusa de Loroco",
+          "",
+          900
+        ],
+        [
+          "Pupusa de Lengua",
+          "",
+          1100
+        ],
+        [
+          "Pupusa de Elote",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "Platos grandes",
+      "items": [
+        [
+          "Pollo en Chicha",
+          "",
+          3600
+        ],
+        [
+          "Salvi Chow Mien de Mariscos",
+          "",
+          3800
+        ],
+        [
+          "Bistic Encebollado",
+          "",
+          6300
+        ],
+        [
+          "Trucha en Alguashte",
+          "",
+          4800
+        ],
+        [
+          "Salvi Side",
+          "",
+          1700
+        ],
+        [
+          "Estilo Popoca",
+          "Per person",
+          8000
+        ]
+      ]
+    }
+  ]
+},
+{
+  "slug": "el-mono-el-cerrito",
+  "name": "El Mono",
+  "label": "El Mono",
+  "cuisine": "Peruvian restaurant",
+  "category": "Peruvian",
+  "color": "#ffffff",
+  "tagline": "The El Cerrito branch serves lomo saltado, ceviche and Peruvian fried rice.",
+  "site": "https://www.elmonofresh.com/",
+  "icon": "el-mono-v119",
+  "prep": 0,
+  "items": [],
+  "address": "11720 San Pablo Ave, Suite B, El Cerrito, CA 94530",
+  "hours": "Daily noon–2:45pm; Sun–Thu 5–7:45pm, Fri–Sat 5–8:45pm",
+  "phone": "(510) 680-2910",
+  "email": "elmonofresh@gmail.com",
+  "orderUrl": "https://el-mono.square.site/",
+  "siteCta": "Order online",
+  "sections": [
+    {
+      "name": "Appetizers and Salads",
+      "items": [
+        [
+          "Ensalada Isabella (Lunch)",
+          "",
+          1399
+        ],
+        [
+          "Papa a la Huancaina",
+          "",
+          1999
+        ],
+        [
+          "Dirty Tuna Plantain Bites",
+          "",
+          1899
+        ],
+        [
+          "Tiradito",
+          "",
+          1999
+        ],
+        [
+          "Frito Sampler",
+          "",
+          2099
+        ],
+        [
+          "Trio de Mar",
+          "",
+          2699
+        ],
+        [
+          "Pulpo al Olivo",
+          "",
+          2399
+        ],
+        [
+          "Pulpo Parrillero",
+          "",
+          2699
+        ]
+      ]
+    },
+    {
+      "name": "Beef",
+      "items": [
+        [
+          "Lomo Saltado (Lunch)",
+          "",
+          2399
+        ],
+        [
+          "Chaufa de Carne (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Tallarin de Carne (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Lomo Saltado",
+          "",
+          2699
+        ],
+        [
+          "Seco de Res",
+          "",
+          2599
+        ],
+        [
+          "Tapado A Lo Pobre",
+          "",
+          2399
+        ],
+        [
+          "Tallarin Verde con Lomo",
+          "",
+          2799
+        ]
+      ]
+    },
+    {
+      "name": "Poultry",
+      "items": [
+        [
+          "Aji de Gallina (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Pollo Saltado (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Tallarin de Pollo (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Chaufa de Pollo (Lunch)",
+          "",
+          2099
+        ],
+        [
+          "Arroz con Pollo (Lunch)",
+          "",
+          2099
+        ],
+        [
+          "Aji De Gallina",
+          "",
+          2399
+        ],
+        [
+          "Pollo Saltado",
+          "",
+          2399
+        ],
+        [
+          "Estofado de Pollo",
+          "",
+          2299
+        ],
+        [
+          "Tallarin Verde con Pollo",
+          "",
+          2499
+        ]
+      ]
+    },
+    {
+      "name": "Seafood",
+      "items": [
+        [
+          "Personal Paella (Lunch)",
+          "",
+          2899
+        ],
+        [
+          "Camarone Saltado (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Chaufa de Camarones (Lunch)",
+          "",
+          2399
+        ],
+        [
+          "Fish-N-Onions (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Tallarin de Camarones (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Pescado Frito",
+          "",
+          2299
+        ],
+        [
+          "Fish N' Onions",
+          "",
+          2399
+        ],
+        [
+          "Chupe de Camarones",
+          "",
+          2799
+        ],
+        [
+          "Camarones Saltado",
+          "",
+          2599
+        ],
+        [
+          "Tallarin Verde con Camarones",
+          "",
+          2699
+        ],
+        [
+          "Mariscos Saltados",
+          "",
+          2999
+        ],
+        [
+          "Tallarin Verde con Mariscos",
+          "",
+          3099
+        ]
+      ]
+    },
+    {
+      "name": "Vegetarian",
+      "items": [
+        [
+          "Champiñones Saltado (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Pesto Pasta (Lunch)",
+          "",
+          1899
+        ],
+        [
+          "Tallarin de Champiñones (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Veggie Chaufa (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Rice-N-Beans (Lunch)",
+          "",
+          1999
+        ]
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        [
+          "Ensalada Isabella",
+          "",
+          1499
+        ],
+        [
+          "Peruvian Cobb Salad",
+          "",
+          2199
+        ]
+      ]
+    },
+    {
+      "name": "Vegetarian/Vegan",
+      "items": [
+        [
+          "Vainitas Saltadas",
+          "",
+          1999
+        ],
+        [
+          "Rice-N-Beans a lo Pobre",
+          "",
+          2199
+        ],
+        [
+          "Huevo a lo Pobre",
+          "",
+          1999
+        ],
+        [
+          "Champiñones Saltado",
+          "",
+          2299
+        ]
+      ]
+    },
+    {
+      "name": "Homemade Drinks",
+      "items": [
+        [
+          "Lime Arnold Palmer",
+          "",
+          699
+        ],
+        [
+          "Strawberry Iced Tea",
+          "",
+          499
+        ],
+        [
+          "Passion Fruit Iced Tea",
+          "",
+          499
+        ],
+        [
+          "Virgin Mojito",
+          "",
+          999
+        ],
+        [
+          "Virgin Pina Colada",
+          "",
+          899
+        ],
+        [
+          "Virgin Peruvian Michelada",
+          "",
+          1299
+        ]
+      ]
+    },
+    {
+      "name": "Imports and Classics",
+      "items": [
+        [
+          "Pellegrino",
+          "",
+          399
+        ]
+      ]
+    },
+    {
+      "name": "Coffee & Tea",
+      "items": [
+        [
+          "Americano",
+          "",
+          499
+        ],
+        [
+          "Hot Latte",
+          "",
+          699
+        ],
+        [
+          "Cappuccino",
+          "",
+          599
+        ]
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "head": "Other location",
+      "body": ["El Mono also has a Berkeley dining room."],
+      "links": [
+        {
+          "label": "El Mono in Berkeley",
+          "href": "https://beastypages.com/?b=b_elmonoberkeley"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "el-mono-berkeley",
+  "name": "El Mono",
+  "label": "El Mono",
+  "cuisine": "Peruvian restaurant",
+  "category": "Peruvian",
+  "color": "#ffffff",
+  "tagline": "El Mono’s Fourth Street branch serves Peruvian classics in Berkeley.",
+  "site": "https://www.elmonofresh.com/",
+  "icon": "el-mono-v119",
+  "prep": 0,
+  "items": [],
+  "address": "1300 4th St, Berkeley, CA 94710",
+  "hours": "Daily noon–2:45pm; Sun–Thu 5–7:45pm, Fri–Sat 5–8:45pm",
+  "phone": "(510) 280-7660",
+  "email": "elmonofresh@gmail.com",
+  "orderUrl": "https://el-mono.square.site/",
+  "siteCta": "Order online",
+  "sections": [
+    {
+      "name": "Appetizers and Salads",
+      "items": [
+        [
+          "Ensalada Isabella (Lunch)",
+          "",
+          1399
+        ],
+        [
+          "Papa a la Huancaina",
+          "",
+          1999
+        ],
+        [
+          "Dirty Tuna Plantain Bites",
+          "",
+          1899
+        ],
+        [
+          "Tiradito",
+          "",
+          1999
+        ],
+        [
+          "Frito Sampler",
+          "",
+          2099
+        ],
+        [
+          "Trio de Mar",
+          "",
+          2699
+        ],
+        [
+          "Pulpo al Olivo",
+          "",
+          2399
+        ],
+        [
+          "Pulpo Parrillero",
+          "",
+          2699
+        ]
+      ]
+    },
+    {
+      "name": "Beef",
+      "items": [
+        [
+          "Lomo Saltado (Lunch)",
+          "",
+          2399
+        ],
+        [
+          "Chaufa de Carne (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Tallarin de Carne (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Lomo Saltado",
+          "",
+          2699
+        ],
+        [
+          "Seco de Res",
+          "",
+          2599
+        ],
+        [
+          "Tapado A Lo Pobre",
+          "",
+          2399
+        ],
+        [
+          "Tallarin Verde con Lomo",
+          "",
+          2799
+        ]
+      ]
+    },
+    {
+      "name": "Poultry",
+      "items": [
+        [
+          "Aji de Gallina (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Pollo Saltado (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Tallarin de Pollo (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Chaufa de Pollo (Lunch)",
+          "",
+          2099
+        ],
+        [
+          "Arroz con Pollo (Lunch)",
+          "",
+          2099
+        ],
+        [
+          "Aji De Gallina",
+          "",
+          2399
+        ],
+        [
+          "Pollo Saltado",
+          "",
+          2399
+        ],
+        [
+          "Estofado de Pollo",
+          "",
+          2299
+        ],
+        [
+          "Tallarin Verde con Pollo",
+          "",
+          2499
+        ]
+      ]
+    },
+    {
+      "name": "Seafood",
+      "items": [
+        [
+          "Personal Paella (Lunch)",
+          "",
+          2899
+        ],
+        [
+          "Camarone Saltado (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Chaufa de Camarones (Lunch)",
+          "",
+          2399
+        ],
+        [
+          "Fish-N-Onions (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Tallarin de Camarones (Lunch)",
+          "",
+          2299
+        ],
+        [
+          "Pescado Frito",
+          "",
+          2299
+        ],
+        [
+          "Fish N' Onions",
+          "",
+          2399
+        ],
+        [
+          "Chupe de Camarones",
+          "",
+          2799
+        ],
+        [
+          "Camarones Saltado",
+          "",
+          2599
+        ],
+        [
+          "Tallarin Verde con Camarones",
+          "",
+          2699
+        ],
+        [
+          "Mariscos Saltados",
+          "",
+          2999
+        ],
+        [
+          "Tallarin Verde con Mariscos",
+          "",
+          3099
+        ]
+      ]
+    },
+    {
+      "name": "Vegetarian",
+      "items": [
+        [
+          "Champiñones Saltado (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Pesto Pasta (Lunch)",
+          "",
+          1899
+        ],
+        [
+          "Tallarin de Champiñones (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Veggie Chaufa (Lunch)",
+          "",
+          1999
+        ],
+        [
+          "Rice-N-Beans (Lunch)",
+          "",
+          1999
+        ]
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        [
+          "Ensalada Isabella",
+          "",
+          1499
+        ],
+        [
+          "Peruvian Cobb Salad",
+          "",
+          2199
+        ]
+      ]
+    },
+    {
+      "name": "Vegetarian/Vegan",
+      "items": [
+        [
+          "Vainitas Saltadas",
+          "",
+          1999
+        ],
+        [
+          "Rice-N-Beans a lo Pobre",
+          "",
+          2199
+        ],
+        [
+          "Huevo a lo Pobre",
+          "",
+          1999
+        ],
+        [
+          "Champiñones Saltado",
+          "",
+          2299
+        ]
+      ]
+    },
+    {
+      "name": "Homemade Drinks",
+      "items": [
+        [
+          "Lime Arnold Palmer",
+          "",
+          699
+        ],
+        [
+          "Strawberry Iced Tea",
+          "",
+          499
+        ],
+        [
+          "Passion Fruit Iced Tea",
+          "",
+          499
+        ],
+        [
+          "Virgin Mojito",
+          "",
+          999
+        ],
+        [
+          "Virgin Pina Colada",
+          "",
+          899
+        ],
+        [
+          "Virgin Peruvian Michelada",
+          "",
+          1299
+        ]
+      ]
+    },
+    {
+      "name": "Imports and Classics",
+      "items": [
+        [
+          "Pellegrino",
+          "",
+          399
+        ]
+      ]
+    },
+    {
+      "name": "Coffee & Tea",
+      "items": [
+        [
+          "Americano",
+          "",
+          499
+        ],
+        [
+          "Hot Latte",
+          "",
+          699
+        ],
+        [
+          "Cappuccino",
+          "",
+          599
+        ]
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "head": "Other location",
+      "body": ["El Mono also has its original dining room in El Cerrito."],
+      "links": [
+        {
+          "label": "El Mono in El Cerrito",
+          "href": "https://beastypages.com/?b=b_elmonoelcerrito"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "garden-creamery",
+  "name": "Garden Creamery",
+  "label": "Garden Creamery",
+  "cuisine": "Small-batch ice cream",
+  "category": "Ice Cream",
+  "color": "#e83a60",
+  "tagline": "A Mission District scoop shop with rotating dairy and vegan flavors made in-house.",
+  "site": "https://gardencreamery.com/",
+  "icon": "garden-creamery-v119",
+  "prep": 0,
+  "items": [],
+  "address": "3566 20th St, San Francisco, CA 94110",
+  "email": "erin@gardencreamery.com",
+  "hours": "Wed–Thu 6–10pm, Fri 6–11pm, Sat noon–11pm, Sun noon–9pm; Mon–Tue closed",
+  "contactOnly": "Flavors change weekly. See the shop’s Instagram for the current scoop case.",
+  "panels": [
+    {
+      "head": "Current flavors",
+      "body": ["See which dairy and vegan scoops the shop is serving."],
+      "links": [
+        {
+          "label": "Garden Creamery on Instagram",
+          "href": "https://www.instagram.com/gardencreamery/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "dumpling-house-sf",
+  "name": "Dumpling House",
+  "label": "Dumpling House",
+  "cuisine": "Hong Kong dim sum and dumplings",
+  "category": "Dumplings",
+  "color": "#ffffff",
+  "tagline": "Handmade dumplings, Hong Kong-style dim sum and soup buns on Noe Street in the Castro.",
+  "site": "https://dumplinghouse-sf.com/",
+  "icon": "dumpling-house-sf-v119",
+  "prep": 0,
+  "items": [],
+  "address": "335 Noe St, San Francisco, CA 94114",
+  "phone": "(415) 829-2789",
+  "email": "dumplinghouse928@gmail.com",
+  "hours": "Mon–Fri 11am–2:30pm and 5–9pm, Sat–Sun 11am–9pm",
+  "orderUrl": "https://takeout.minitable.net/v2/#/welcome/s6d0d351dc50ee66a5275c83faf17804f",
+  "siteCta": "Order online",
+  "contactOnly": "Dumplings and dim sum are made to order. Prices and pickup availability are on the restaurant’s ordering page.",
+  "panels": [
+    {
+      "head": "Menu and pickup",
+      "body": ["Browse soup dumplings, shrimp toast and other dim sum."],
+      "links": [
+        {
+          "label": "Current pickup menu",
+          "href": "https://takeout.minitable.net/v2/#/welcome/s6d0d351dc50ee66a5275c83faf17804f"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "valley-goat",
+  "name": "Valley Goat",
+  "label": "Valley Goat",
+  "cuisine": "Seasonal Californian restaurant",
+  "category": "Eats",
+  "color": "#571c49",
+  "tagline": "Chef Stephanie Izard’s shareable plates and cocktails at Treehouse Silicon Valley.",
+  "site": "https://www.valleygoatsv.com/",
+  "icon": "valley-goat-v119",
+  "prep": 0,
+  "items": [],
+  "address": "1100 N Mathilda Ave, Sunnyvale, CA 94089",
+  "phone": "(408) 900-9470",
+  "hours": "Lunch Mon–Fri 11am–2pm, brunch Sat–Sun 10am–2pm, bar daily 2–4pm, dinner daily 4–10pm",
+  "panels": [
+    {
+      "head": "Menus and reservations",
+      "body": ["See the hotel’s current menus or reserve through the restaurant."],
+      "links": [
+        {
+          "label": "View menus",
+          "href": "https://www.treehousehotels.com/silicon-valley/eat-drink/valley-goat"
+        },
+        {
+          "label": "Reservations",
+          "href": "https://www.valleygoatsv.com/"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "Dinner snacks",
+      "items": [
+        [
+          "Pita and Dips",
+          "",
+          2100
+        ],
+        [
+          "Avocado Dip",
+          "",
+          1700
+        ],
+        [
+          "Goat Empanadas",
+          "",
+          2000
+        ],
+        [
+          "Vegetable Empanadas",
+          "",
+          2000
+        ],
+        [
+          "Spiced Fries",
+          "",
+          1300
+        ],
+        [
+          "Scallion Focaccia",
+          "",
+          2200
+        ],
+        [
+          "Roasted Oysters",
+          "",
+          2000
+        ],
+        [
+          "Spicy Handroll Dip",
+          "",
+          2500
+        ]
+      ]
+    },
+    {
+      "name": "Dinner plates",
+      "items": [
+        [
+          "Disco Fries",
+          "",
+          2500
+        ],
+        [
+          "Shrimp Salad",
+          "",
+          2900
+        ],
+        [
+          "Crispy Quinoa and Tuna Poke Salad",
+          "",
+          2900
+        ],
+        [
+          "Hamachi Aguachile",
+          "",
+          2800
+        ],
+        [
+          "Chicken Skewers",
+          "",
+          2400
+        ],
+        [
+          "Skirt Steak",
+          "",
+          4500
+        ],
+        [
+          "Skuna Bay Salmon",
+          "",
+          3800
+        ],
+        [
+          "Sautéed Green Beans",
+          "",
+          2000
+        ],
+        [
+          "Summer Tomatoes",
+          "",
+          2000
+        ],
+        [
+          "Wood-fired Sprouted Cauliflower",
+          "",
+          2000
+        ],
+        [
+          "Grilled Corn",
+          "",
+          1600
+        ],
+        [
+          "Chickpea Fritters",
+          "",
+          2100
+        ]
+      ]
+    },
+    {
+      "name": "Bigger plates",
+      "items": [
+        [
+          "Wood-fired Mary’s Chicken",
+          "",
+          5400
+        ],
+        [
+          "Wood-fired Eggplant",
+          "",
+          3400
+        ],
+        [
+          "Sticky Pork Shank",
+          "",
+          5900
+        ],
+        [
+          "Wood-fired Branzino",
+          "",
+          4900
+        ]
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        [
+          "Olive Oil Semifreddo",
+          "",
+          1800
+        ],
+        [
+          "Pandan Flan",
+          "",
+          1800
+        ],
+        [
+          "Fruity Sundae Funday",
+          "",
+          1600
+        ],
+        [
+          "Mango Sticky Rice",
+          "",
+          1800
+        ],
+        [
+          "Mango Tamarind Sorbet",
+          "",
+          600
+        ],
+        [
+          "Blood Orange Sorbet",
+          "",
+          600
+        ],
+        [
+          "Raspberry Sorbet",
+          "",
+          600
+        ],
+        [
+          "Coffee Gelato",
+          "",
+          600
+        ],
+        [
+          "Vanilla Gelato",
+          "",
+          600
+        ]
+      ]
+    }
+  ]
+},
 ]

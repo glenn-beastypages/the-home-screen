@@ -228,10 +228,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-andrew-v92"
   },
   {
-    "handle": "eatswithkath",
-    "name": "@eatswithkath",
-    "label": "eatswithkath"
-  },
+  "handle": "eatswithkath",
+  "name": "@eatswithkath",
+  "label": "eatswithkath",
+  "icon": "foodie-eatswithkath-v119"
+},
   {
     "handle": "cestalmoco",
     "name": "@cestalmoco",
@@ -250,11 +251,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "fedoramaelle"
   },
   {
-    "handle": "pastrywithjenn",
-    "name": "Jenn Yee",
-    "label": "Jenn",
-    "icon": "foodie-pastrywithjenn-v86"
-  },
+  "handle": "pastrywithjenn",
+  "name": "Jenn Yee",
+  "label": "Jenn",
+  "icon": "foodie-pastrywithjenn-v119"
+},
   {
     "handle": "travelwtiff",
     "name": "@travelwtiff",
@@ -669,10 +670,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-lifebyvivien-v107"
   },
   {
-    "handle": "andre___lucas",
-    "name": "@andre___lucas",
-    "label": "andre___lucas"
-  },
+  "handle": "andre___lucas",
+  "name": "@andre___lucas",
+  "label": "andre___lucas",
+  "icon": "foodie-andrelucas-v119"
+},
   {
     "handle": "shrimpfriedroice",
     "name": "@shrimpfriedroice",
@@ -770,10 +772,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "ivkicks"
   },
   {
-    "handle": "itsslydiia",
-    "name": "@itsslydiia",
-    "label": "itsslydiia"
-  },
+  "handle": "itsslydiia",
+  "name": "@itsslydiia",
+  "label": "itsslydiia",
+  "icon": "foodie-itsslydiia-v119"
+},
   {
   "handle": "startingfiresevrywhere",
   "name": "@startingfiresevrywhere",
@@ -1055,10 +1058,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "jensintec"
   },
   {
-    "handle": "snackateriansf",
-    "name": "@snackateriansf",
-    "label": "snackateriansf"
-  },
+  "handle": "snackateriansf",
+  "name": "@snackateriansf",
+  "label": "snackateriansf",
+  "icon": "foodie-snackateriansf-v119"
+},
   {
     "handle": "apoorva_sharma1",
     "name": "@apoorva_sharma1",
@@ -1229,7 +1233,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "handle": "tundemodupee",
   "name": "Tunde Modupe",
   "label": "Tunde",
-  "icon": "foodie-tundemodupee-v115"
+  "icon": "foodie-tundemodupee-v119"
 },
   {
     "handle": "wafflebam",
@@ -1417,12 +1421,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-sulli-eats-v92"
   },
   {
-    "handle": "phamamiii",
-    "instagram": "phamamiii",
-    "name": "Diane Pham",
-    "label": "Diane",
-    "icon": "foodie-phamamiii-v92"
-  },
+  "handle": "phamamiii",
+  "instagram": "phamamiii",
+  "name": "Diane Pham",
+  "label": "Diane",
+  "icon": "foodie-phamamiii-v119"
+},
   {
     "handle": "tastewith.rach",
     "instagram": "tastewith.rach",
@@ -2049,6 +2053,31 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "meenaaqureshi", "name": "@meenaaqureshi", "label": "meenaaqureshi", "icon": "foodie-meenaaqureshi-v116"},
   {"handle": "masstache_", "name": "@masstache_", "label": "masstache_", "icon": "foodie-masstache-v116"},
   {"handle": "diorabelle", "name": "@diorabelle", "label": "diorabelle", "icon": "foodie-diorabelle-v116"},
+  // Batch 119 creator profiles.
+  {"handle": "andoperdidatraveling", "name": "@andoperdidatraveling", "label": "andoperdidatravelin", "icon": "foodie-andoperdidatraveling-v119"},
+  {"handle": "foodiemompickyfam", "name": "@foodiemompickyfam", "label": "foodiemompickyfam", "icon": "foodie-foodiemompickyfam-v119"},
+  {"handle": "bayareajessbling", "name": "@bayareajessbling", "label": "bayareajessbling", "icon": "foodie-bayareajessbling-v119"},
+  {"handle": "cheycheyfromthebay", "name": "@cheycheyfromthebay", "label": "cheycheyfromthebay", "icon": "foodie-cheycheyfromthebay-v119"},
+  {"handle": "nomnom_nori", "name": "@nomnom_nori", "label": "nomnom_nori", "icon": "foodie-nomnomnori-v119"},
+  {"handle": "thefoodiesergio", "name": "@thefoodiesergio", "label": "thefoodiesergio", "icon": "foodie-thefoodiesergio-v119"},
+  {"handle": "munchingwmunches", "name": "@munchingwmunches", "label": "munchingwmunches", "icon": "foodie-munchingwmunches-v119"},
+  {"handle": "matt_2o9", "name": "@matt_2o9", "label": "matt_2o9", "icon": "foodie-matt2o9-v119"},
+  {"handle": "cinemundollc", "name": "@cinemundollc", "label": "cinemundollc"},
+  {"handle": "hididyoueatyet", "name": "@hididyoueatyet", "label": "hididyoueatyet", "icon": "foodie-hididyoueatyet-v119"},
+  {"handle": "carynkramerhomes", "name": "@carynkramerhomes", "label": "carynkramerhomes"},
+  {"handle": "yetiornot", "name": "@yetiornot", "label": "yetiornot", "icon": "foodie-yetiornot-v119"},
+  {"handle": "internationalkee", "name": "@internationalkee", "label": "internationalkee", "icon": "foodie-internationalkee-v119"},
+  {"handle": "beaut.eats", "name": "@beaut.eats", "label": "beaut.eats", "icon": "foodie-beauteats-v119"},
+  {"handle": "apachegoddess1122", "name": "@apachegoddess1122", "label": "apachegoddess1122", "icon": "foodie-apachegoddess1122-v119"},
+  {"handle": "somedinggood", "name": "@somedinggood", "label": "somedinggood", "icon": "foodie-somedinggood-v119"},
+  {"handle": "luckybitez_", "name": "@luckybitez_", "label": "luckybitez_", "icon": "foodie-luckybitez-v119"},
+  {"handle": "foodiejudy_sf", "name": "@foodiejudy_sf", "label": "foodiejudy_sf", "icon": "foodie-foodiejudysf-v119"},
+  {"handle": "curatedby.natalie", "name": "@curatedby.natalie", "label": "curatedby.natalie", "icon": "foodie-curatedbynatalie-v119"},
+  {"handle": "girl_being_crazy", "name": "@girl_being_crazy", "label": "girl_being_crazy", "icon": "foodie-girlbeingcrazy-v119"},
+  {"handle": "valinthebay_", "name": "@valinthebay_", "label": "valinthebay_", "icon": "foodie-valinthebay-v119"},
+  {"handle": "firstdatedude", "name": "@firstdatedude", "label": "firstdatedude", "icon": "foodie-firstdatedude-v119"},
+  {"handle": "sydneymlee_", "name": "@sydneymlee_", "label": "sydneymlee_", "icon": "foodie-sydneymlee-v119"},
+
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2065,7 +2094,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'chefmelissaking', place: 'Ruby King', city: 'Oakland', reel: reel('DdFgh8TvwdA'), clip: true },
   { by: 'chefmelissaking', place: 'Lana’s', city: 'Oakland', reel: reel('DdU9R3Myj9x'), clip: true },
   { by: 'celineeats', place: 'Souled Out Pastries at Signal Coffee Roasters', reel: reel('Dc2abz8C7CU'), clip: true },
-  { by: 'celineeats', place: 'Froyo Park, Krispy Joe’s and Kingpin Donuts', city: 'Berkeley', reel: reel('DdXmljSpM-M'), clip: true },
+  { by: 'celineeats', place: 'Froyo Park, Krispy Joe’s and Kingpin Donuts', city: 'East Bay', brand: 'b_krispyjoesoakland', reel: reel('DdXmljSpM-M'), clip: true, credit: 'Review by @celineeats featuring Krispy Joe’s, Froyo Park and Kingpin Donuts.' },
   { by: 'grubwitmike', place: 'Donut Savant', city: 'Oakland', reel: reel('DdIUO2Jxj1s'), clip: true },
   { by: 'singlecatm0m', place: 'El 2 Carnales Taqueria and Pizzeria', city: 'Stockton', reel: reel('DWwiNxYCSiI'), clip: true },
   /* Glenn, 2026-10-12, "Add to BEASTY • AYCE", with @foodieberrie's reel at Hungry Cow: its
@@ -2829,6 +2858,66 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "imadoniseats", "place": "Ox & Tiger", "city": "San Francisco", "brand": "b_oxandtiger", "reel": "https://www.instagram.com/reel/DXNwbJGDewl/", "clip": true, "credit": "Review by @imadoniseats at Ox & Tiger, San Francisco."},
   {"by": "bennyeats.bayarea", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/Dfpv2bEBM3y/", "clip": true, "credit": "Review by @bennyeats.bayarea at Bun Appétit Donuts, Fremont."},
   {"by": "diorabelle", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/De9mwbPT5us/", "clip": true, "credit": "Review by @diorabelle at Bun Appétit Donuts, Fremont. Featured flavors are seasonal."},
+  // Batch 119 reviews, including films available on the creator page and Watch.
+  {"by": "bayarea_fooddreamz", "place": "Crabby Crabby Newark", "reel": "https://www.instagram.com/reel/DftFcjahjEZ/", "brand": "b_crabbycrabbynewark", "credit": "Review by @bayarea_fooddreamz at Crabby Crabby Newark, Newark.", "clip": true, "city": "Newark"},
+  {"by": "andoperdidatraveling", "place": "Dough Bottega", "reel": "https://www.instagram.com/reel/DSbWNVIDp29/", "brand": "b_doughbottega", "credit": "Review by @andoperdidatraveling at Dough Bottega, Vallejo.", "clip": true, "city": "Vallejo"},
+  {"by": "foodiemompickyfam", "place": "Dough Bottega", "reel": "https://www.instagram.com/reel/DOoIy6CiTBG/", "brand": "b_doughbottega", "credit": "Review by @foodiemompickyfam at Dough Bottega, Vallejo.", "clip": true, "city": "Vallejo"},
+  {"by": "bestinthegamme", "place": "Cereal Bar", "reel": "https://www.instagram.com/reel/Ddxh6UmvbHV/", "brand": "b_cerealbarsanrafael", "credit": "Review by @bestinthegamme at Cereal Bar, San Rafael.", "clip": true, "city": "San Rafael"},
+  {"by": "bayareajessbling", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/Ddg8VnQJhrI/", "brand": "b_lataqueriasf", "credit": "Review by @bayareajessbling at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "festusfeasts", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DLB396oOniD/", "brand": "b_lataqueriasf", "credit": "Review by @festusfeasts at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "grubwitmike", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DBSQ1XEyS56/", "brand": "b_lataqueriasf", "credit": "Review by @grubwitmike at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "eatswithkath", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DAphOOjRL_3/", "brand": "b_lataqueriasf", "credit": "Review by @eatswithkath at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "cheycheyfromthebay", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/C17W4xgrKrS/", "brand": "b_lataqueriasf", "credit": "Review by @cheycheyfromthebay at La Taqueria, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "hungry4munchies", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DNPGM6Ivssb/", "brand": "b_lataqueriasf", "credit": "Review by @hungry4munchies at La Taqueria, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "snackateriansf", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/CoFbH5dDcJR/", "brand": "b_lataqueriasf", "credit": "Review by @snackateriansf at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "foodgiveness", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DW9x1DBkot7/", "brand": "b_lataqueriasf", "credit": "Review by @foodgiveness at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "nomnom_nori", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DPAY-3kD1Sj/", "brand": "b_lataqueriasf", "credit": "Review by @nomnom_nori at La Taqueria, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "thefoodiesergio", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DUjY5EHkpKw/", "brand": "b_lataqueriasf", "credit": "Review by @thefoodiesergio at La Taqueria, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "charlikestoeat", "place": "La Taqueria", "reel": "https://www.instagram.com/reel/DLG-uTcO-nZ/", "brand": "b_lataqueriasf", "credit": "Review by @charlikestoeat at La Taqueria, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "munchingwmunches", "place": "Latte Syndrome", "reel": "https://www.instagram.com/reel/DfaWa1oimCO/", "brand": "b_lattesyndrome", "credit": "Review by @munchingwmunches at Latte Syndrome, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "tundemodupee", "place": "Latte Syndrome", "reel": "https://www.instagram.com/reel/DfQPpzpSxya/", "brand": "b_lattesyndrome", "credit": "Review by @tundemodupee at Latte Syndrome, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "eatswithglory", "place": "Latte Syndrome", "reel": "https://www.instagram.com/reel/DeSOVYDPWup/", "brand": "b_lattesyndrome", "credit": "Review by @eatswithglory at Latte Syndrome, Oakland.", "clip": "creator", "city": "Oakland"},
+  {"by": "phamamiii", "place": "Latte Syndrome", "reel": "https://www.instagram.com/reel/DeQpaMGMsyx/", "brand": "b_lattesyndrome", "credit": "Review by @phamamiii at Latte Syndrome, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "thesnacksensei", "place": "Inda + Mely", "reel": "https://www.instagram.com/reel/DfvBbm5z_Ia/", "brand": "b_indaandmely", "credit": "Review by @thesnacksensei at Inda + Mely, San Bruno.", "clip": true, "city": "San Bruno"},
+  {"by": "matt_2o9", "place": "Inda + Mely", "reel": "https://www.instagram.com/reel/DYDtODXgVsl/", "brand": "b_indaandmely", "credit": "Review by @matt_2o9 at Inda + Mely, San Bruno.", "clip": true, "city": "San Bruno"},
+  {"by": "grubwitmike", "place": "Krispy Joe’s Coffee House", "reel": "https://www.instagram.com/reel/DfvmlgfR8oG/", "brand": "b_krispyjoesoakland", "credit": "Review by @grubwitmike at Krispy Joe’s Coffee House, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "mukbangyourmama", "place": "Krispy Joe’s Coffee House", "reel": "https://www.instagram.com/reel/DdZdCxjT6Nz/", "brand": "b_krispyjoesoakland", "credit": "Review by @mukbangyourmama at Krispy Joe’s Coffee House, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "cinemundollc", "place": "Popoca", "reel": "https://www.instagram.com/reel/DPFhDWgDwAo/", "brand": "b_popocaoakland", "credit": "Filmed and posted by @cinemundollc for Salvi Food Tour at Popoca.", "clip": true, "city": "Oakland"},
+  {"by": "hididyoueatyet", "place": "Popoca", "reel": "https://www.instagram.com/reel/DBCBsowS4SH/", "brand": "b_popocaoakland", "credit": "Review by @hididyoueatyet at Popoca, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "snackateriansf", "place": "Popoca", "reel": "https://www.instagram.com/reel/C4qnJRlvHRU/", "brand": "b_popocaoakland", "credit": "Filmed by @snackateriansf. Posted by @visitoakland for Oakland Restaurant Week 2024.", "clip": true, "city": "Oakland"},
+  {"by": "carynkramerhomes", "place": "Lovely's Burgers", "reel": "https://www.instagram.com/reel/Dft0hkfCIAL/", "brand": "b_lovelysburgersoakland", "credit": "Review by @carynkramerhomes at Lovely's Burgers, Oakland.", "clip": true, "city": "Oakland"},
+  {"by": "yetiornot", "place": "El Mono", "reel": "https://www.instagram.com/reel/DfvDr-2T4Uo/", "brand": "b_elmonoberkeley", "credit": "Review by @yetiornot at El Mono, Berkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "internationalkee", "place": "Garden Creamery", "reel": "https://www.instagram.com/reel/DfLXK8GP2jF/", "brand": "b_gardencreamery", "credit": "Review by @internationalkee at Garden Creamery, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "hungere.for.diy", "place": "Garden Creamery", "reel": "https://www.instagram.com/reel/DWB2bXLFJsg/", "brand": "b_gardencreamery", "credit": "Review by @hungere.for.diy at Garden Creamery, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "imadoniseats", "place": "Garden Creamery", "reel": "https://www.instagram.com/reel/CzaFXLNRfcA/", "brand": "b_gardencreamery", "credit": "Review by @imadoniseats at Garden Creamery, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "pastrywithjenn", "place": "Garden Creamery", "reel": "https://www.instagram.com/reel/C3cB1lguRJY/", "brand": "b_gardencreamery", "credit": "Review by @pastrywithjenn at Garden Creamery, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "beaut.eats", "place": "Garden Creamery", "reel": "https://www.instagram.com/reel/C5L8JKrRyEi/", "brand": "b_gardencreamery", "credit": "Review by @beaut.eats at Garden Creamery, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "aliasharrief", "place": "My O My Berkeley", "reel": "https://www.instagram.com/reel/DfveyMhvgj5/", "brand": "b_myomyberkeley", "credit": "Review by @aliasharrief at My O My Berkeley, Berkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "internationalkee", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/Dfv8_iktUhb/", "brand": "b_dumplinghousesf", "credit": "Review by @internationalkee at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "apachegoddess1122", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DQ47uHxkuwf/", "brand": "b_dumplinghousesf", "credit": "Review by @apachegoddess1122 at Dumpling House, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "thesnacksensei", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DKxaUoVSlRo/", "brand": "b_dumplinghousesf", "credit": "Review by @thesnacksensei at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "thesauceboss_", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DQ7asl1EgjR/", "brand": "b_dumplinghousesf", "credit": "Review by @thesauceboss_ at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "somedinggood", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DfBP_W1pxZL/", "brand": "b_dumplinghousesf", "credit": "Review by @somedinggood at Dumpling House, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "phoebe8food", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DdhVJARSWb2/", "brand": "b_dumplinghousesf", "credit": "Review by @phoebe8food at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "luckybitez_", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DdKDX7fRA8z/", "brand": "b_dumplinghousesf", "credit": "Review by @luckybitez_ at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "baeareafo0die", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DaVgEH3xQ2G/", "brand": "b_dumplinghousesf", "credit": "Review by @baeareafo0die at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "foodgiveness", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DZBj92lphmU/", "brand": "b_dumplinghousesf", "credit": "Review by @foodgiveness at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "itsslydiia", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DX7HKHnScZz/", "brand": "b_dumplinghousesf", "credit": "Review by @itsslydiia at Dumpling House, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "andre___lucas", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DSWDJPfgVlg/", "brand": "b_dumplinghousesf", "credit": "Review by @andre___lucas at Dumpling House, San Francisco.", "clip": true, "city": "San Francisco"},
+  {"by": "realtorandreviewer", "place": "Dumpling House", "reel": "https://www.instagram.com/reel/DSVo5Cskk3J/", "brand": "b_dumplinghousesf", "credit": "Review by @realtorandreviewer at Dumpling House, San Francisco.", "clip": "creator", "city": "San Francisco"},
+  {"by": "_whatarethechances_", "place": "Thai Table", "reel": "https://www.instagram.com/reel/DJiexR5RHAJ/", "brand": "b_thaitableberkeley", "credit": "Review by @_whatarethechances_ at Thai Table, Berkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "foodiejudy_sf", "place": "Thai Table", "reel": "https://www.instagram.com/reel/DMb9jmdRty7/", "brand": "b_thaitableberkeley", "credit": "Review by @foodiejudy_sf at Thai Table, Berkeley.", "clip": "creator", "city": "Berkeley"},
+  {"by": "thaitableberkeley", "place": "Thai Table", "reel": "https://www.instagram.com/reel/DeCeAp6iLkh/", "brand": "b_thaitableberkeley", "credit": "Posted by @thaitableberkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "jetsetjanine", "place": "Thai Table", "reel": "https://www.instagram.com/reel/Ddtw8_oCRBH/", "brand": "b_thaitableberkeley", "credit": "Review by @jetsetjanine at Thai Table, Berkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "mayakay.official", "place": "Thai Table", "reel": "https://www.instagram.com/reel/DY2kDouAQIW/", "brand": "b_thaitableberkeley", "credit": "Review by @mayakay.official at Thai Table, Berkeley.", "clip": true, "city": "Berkeley"},
+  {"by": "curatedby.natalie", "place": "Urban Matcha — Castro Valley", "reel": "https://www.instagram.com/reel/DdnE_C-ByVu/", "brand": "b_urbanmatchacastrovalley", "credit": "Review by @curatedby.natalie at Urban Matcha — Castro Valley, Castro Valley.", "clip": "creator", "city": "Castro Valley"},
+  {"by": "girl_being_crazy", "place": "Urban Matcha — Castro Valley", "reel": "https://www.instagram.com/reel/Dce7WAGO1iG/", "brand": "b_urbanmatchacastrovalley", "credit": "Review by @girl_being_crazy at Urban Matcha — Castro Valley, Castro Valley.", "clip": "creator", "city": "Castro Valley"},
+  {"by": "celineeats", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DfqfFHGJp9d/", "brand": "b_valleygoat", "credit": "Review by @celineeats at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
+  {"by": "naeemahtravels", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DeU5oazSgdR/", "brand": "b_valleygoat", "credit": "Review by @naeemahtravels at Valley Goat, Sunnyvale.", "clip": "creator", "city": "Sunnyvale"},
+  {"by": "valinthebay_", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DeC817Xy2qR/", "brand": "b_valleygoat", "credit": "Review by @valinthebay_ at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
+  {"by": "firstdatedude", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/Dc1XlX5IJUU/", "brand": "b_valleygoat", "credit": "Review by @firstdatedude at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
+  {"by": "sydneymlee_", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DcuM4YhhZqe/", "brand": "b_valleygoat", "credit": "Review by @sydneymlee_ at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
+
 ]
 
 /*

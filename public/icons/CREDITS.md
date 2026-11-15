@@ -803,3 +803,46 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 <!-- Batch 117 — creator portrait and Antioch mark. -->
 | `mysteryskool-ai-v117.webp` | IMG_0437.PNG | Original creator profile artwork cropped inside the image circle. Phone controls excluded. |
 | `wing-bros-antioch-v117.webp` | IMG_0440.PNG | Supplied Antioch logo. Preserved all lettering and the full outer ring in the phone tile. |
+
+<!-- Batch 119 artwork. -->
+| `dough-bottega-v119.webp` | IMG_0482.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `cereal-bar-san-rafael-v119.webp` | [Official original](https://cerealbarsanrafael.com/Logo_CerealBar.png) | Used the matching original wordmark from the business website. |
+| `mt-pop-v119.webp` | IMG_0490.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `la-taqueria-sf-v119.webp` | IMG_0496.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `babyslow-v119.webp` | IMG_0505.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `latte-syndrome-v119.webp` | IMG_0507.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `krispy-joes-oakland-v119.webp` | IMG_0561.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `popoca-oakland-v119.webp` | IMG_0567.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `el-mono-v119.webp` | IMG_0571.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `garden-creamery-v119.webp` | IMG_0582.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `dumpling-house-sf-v119.webp` | IMG_0600.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `thai-table-berkeley-v119.webp` | IMG_0611.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `valley-goat-v119.webp` | [Official original](https://cdn.prod.website-files.com/6799674546712950cab502f8/67ae5e01e99dfbaee62b5d99_valley_goat.svg) | Used the matching original wordmark from the business website. |
+| `foodie-andoperdidatraveling-v119.webp` | IMG_0483.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-foodiemompickyfam-v119.webp` | IMG_0484.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-bayareajessbling-v119.webp` | IMG_0497.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-eatswithkath-v119.webp` | IMG_0498.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-cheycheyfromthebay-v119.webp` | IMG_0499.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-snackateriansf-v119.webp` | IMG_0500.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-nomnomnori-v119.webp` | IMG_0502.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-thefoodiesergio-v119.webp` | IMG_0503.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-munchingwmunches-v119.webp` | IMG_0510.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-tundemodupee-v119.webp` | IMG_0513.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-phamamiii-v119.webp` | IMG_0514.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-matt2o9-v119.webp` | IMG_0537.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-hididyoueatyet-v119.webp` | IMG_0568.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-yetiornot-v119.webp` | IMG_0576.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-internationalkee-v119.webp` | IMG_0584.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-pastrywithjenn-v119.webp` | IMG_0585.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-beauteats-v119.webp` | IMG_0586.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-apachegoddess1122-v119.webp` | IMG_0601.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-somedinggood-v119.webp` | IMG_0602.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-luckybitez-v119.webp` | IMG_0603.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-itsslydiia-v119.webp` | IMG_0605.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-andrelucas-v119.webp` | IMG_0606.PNG | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-foodiejudysf-v119.webp` | IMG_0612.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-curatedbynatalie-v119.webp` | IMG_0613.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-girlbeingcrazy-v119.webp` | IMG_0614.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-valinthebay-v119.webp` | IMG_0618.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-firstdatedude-v119.webp` | IMG_0619.png | Cropped the matching public profile artwork and checked the phone tile. |
+| `foodie-sydneymlee-v119.webp` | IMG_0620.png | Cropped the matching public profile artwork and checked the phone tile. |

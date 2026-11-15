@@ -1,0 +1,5254 @@
+{
+  "cutoff": "2026-11-15T08:50:31.290737-08:00",
+  "listings": [
+    {
+      "slug": "dough-bottega",
+      "name": "Dough Bottega",
+      "label": "Dough Bottega",
+      "cuisine": "Artisanal pizza",
+      "category": "Pizza",
+      "color": "#eae6e1",
+      "tagline": "Handmade 12-inch New York-style thin-crust pizzas from a Vallejo home kitchen.",
+      "site": "https://www.doughbottega.com/",
+      "icon": "dough-bottega-v119",
+      "prep": 0,
+      "items": [],
+      "hours": "Fri–Sat 3–7pm; events by arrangement",
+      "phone": "(707) 654-3242",
+      "email": "doughbottega@gmail.com",
+      "orderUrl": "https://www.doughbottega.com/",
+      "siteCta": "Order online",
+      "siteNote": "Order ahead and choose a curbside pickup time. Check seasonal pizzas and event availability on their website.",
+      "sections": [
+        {
+          "name": "Thin-crust pizza",
+          "items": [
+            [
+              "Pepperoni Pizza",
+              "",
+              2400
+            ],
+            [
+              "Aloha Pizza",
+              "",
+              2500
+            ],
+            [
+              "Margherita Pizza",
+              "",
+              2100
+            ],
+            [
+              "5 Cheese Pizza",
+              "",
+              2300
+            ],
+            [
+              "Artichoke Spinach Pizza",
+              "",
+              2500
+            ],
+            [
+              "Vegetarian Pizza",
+              "",
+              2300
+            ],
+            [
+              "Prosciutto Pizza",
+              "",
+              2400
+            ],
+            [
+              "Sausage Jalapeño Pizza",
+              "",
+              2500
+            ],
+            [
+              "Suprema",
+              "",
+              2700
+            ],
+            [
+              "Vallejo Chocolate Pizza",
+              "",
+              2400
+            ]
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b119-dnb3-q1swmg.mp4",
+        "poster": "/clips/b119-dnb3-q1swmg-poster.webp",
+        "href": "https://www.instagram.com/reel/DNB3-q1SWmg/",
+        "credit": "Posted by @doughbottega.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "cereal-bar-san-rafael",
+      "name": "Cereal Bar",
+      "label": "Cereal Bar",
+      "cuisine": "Cereal desserts and crêpes",
+      "category": "Sweets",
+      "color": "#ffffff",
+      "tagline": "Cereal bowls, milkshakes, matcha and sweet or savory crêpes on Grand Avenue.",
+      "site": "https://cerealbarsanrafael.com/",
+      "icon": "cereal-bar-san-rafael-v119",
+      "prep": 0,
+      "items": [],
+      "address": "975 Grand Ave, San Rafael, CA 94901",
+      "hours": "Daily noon–8:30pm",
+      "phone": "(415) 785-4348",
+      "orderUrl": "https://cerealbarsanrafael.com/#menu",
+      "siteCta": "Order online",
+      "siteNote": "Visit their menu for current prices and toppings.",
+      "sections": [
+        {
+          "name": "Fresas con Crema (Fruity Creamy)",
+          "items": [
+            [
+              "Creamy Banana strawberry",
+              "",
+              1200
+            ],
+            [
+              "Create Your Own Fruity Creamy",
+              "",
+              1200
+            ],
+            [
+              "Creamy Strawberry",
+              "",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Matcha Series (Served Cold & hot)",
+          "items": [
+            [
+              "Mango Matcha Latte",
+              "",
+              800
+            ],
+            [
+              "Coconut Matcha Latte",
+              "",
+              800
+            ],
+            [
+              "Matcha Latte",
+              "",
+              750
+            ],
+            [
+              "Strawberry Matcha Latte",
+              "",
+              550
+            ]
+          ]
+        },
+        {
+          "name": "Cereal bowls",
+          "items": [
+            [
+              "Create Your Own Bowl 16oz (Small Bowl)",
+              "",
+              900
+            ],
+            [
+              "Create Your Own Bowl 20oz (Big Bowl)",
+              "",
+              1100
+            ],
+            [
+              "Chocolate Bowl",
+              "",
+              1000
+            ],
+            [
+              "Honey Nut Paradise Bowl",
+              "",
+              1000
+            ],
+            [
+              "Golden Loop Bowl",
+              "",
+              1100
+            ],
+            [
+              "The Rainbow Bowl",
+              "",
+              1000
+            ],
+            [
+              "Banana Berry Charm Bowl",
+              "",
+              1100
+            ]
+          ]
+        },
+        {
+          "name": "Sweet Crêpes",
+          "items": [
+            [
+              "Banana & Peanuts",
+              "",
+              1200
+            ],
+            [
+              "The Tropical (Served Cold)",
+              "",
+              1200
+            ],
+            [
+              "Raisin Marshmallow (Served Cold)",
+              "",
+              1200
+            ],
+            [
+              "Nutella",
+              "",
+              800
+            ],
+            [
+              "Dulce de Leche & Peach",
+              "",
+              1050
+            ],
+            [
+              "Banana and Peanuts",
+              "",
+              1200
+            ],
+            [
+              "Fruity Crunchy",
+              "",
+              1200
+            ],
+            [
+              "S'mores",
+              "",
+              1000
+            ],
+            [
+              "Cheesecake",
+              "",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Savory Crêpes",
+          "items": [
+            [
+              "The Hawaiian",
+              "",
+              1100
+            ],
+            [
+              "Avocado",
+              "",
+              1100
+            ],
+            [
+              "Ham & Cheese",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Shakes",
+          "items": [
+            [
+              "Choco Mallow Crunch",
+              "",
+              700
+            ],
+            [
+              "Vanilla Nutty Bliss",
+              "",
+              700
+            ],
+            [
+              "Appletini",
+              "",
+              750
+            ],
+            [
+              "Banana-nia",
+              "",
+              750
+            ],
+            [
+              "Wake Me Up",
+              "",
+              750
+            ],
+            [
+              "Triple Delight",
+              "",
+              700
+            ],
+            [
+              "Morir Sonando",
+              "",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Coffee & Matcha Latte",
+          "items": [
+            [
+              "Dbl Shoot Espresso",
+              "",
+              325
+            ],
+            [
+              "Americano",
+              "",
+              350
+            ],
+            [
+              "Macchiato",
+              "",
+              350
+            ],
+            [
+              "Cappuccino",
+              "",
+              625
+            ],
+            [
+              "Latte",
+              "",
+              525
+            ],
+            [
+              "Mocha Latte",
+              "",
+              500
+            ],
+            [
+              "Chai Latte",
+              "",
+              500
+            ],
+            [
+              "Hot Teas",
+              "",
+              350
+            ],
+            [
+              "Hot Chocolate",
+              "",
+              450
+            ],
+            [
+              "Strawberry Matcha",
+              "",
+              800
+            ],
+            [
+              "Mango Matcha",
+              "",
+              800
+            ],
+            [
+              "Coconut Matcha",
+              "",
+              800
+            ],
+            [
+              "Watermelon Matcha",
+              "",
+              800
+            ],
+            [
+              "Banana Matcha",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Ice Cream & Dessert",
+          "items": [
+            [
+              "Vanilla Ice Cream 1 Scoop",
+              "",
+              250
+            ],
+            [
+              "Strawberry Ice Cream 1 Scoop",
+              "",
+              250
+            ],
+            [
+              "Chocolate Ice Cream 1 Scoop",
+              "",
+              250
+            ],
+            [
+              "Neapolitan Ice Cream 1 Scoop",
+              "",
+              250
+            ],
+            [
+              "Creamy Strawberry Banana",
+              "",
+              1000
+            ],
+            [
+              "Ice Cream Bowl 16oz",
+              "",
+              800
+            ],
+            [
+              "Banana Split",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Other Drinks",
+          "items": [
+            [
+              "Extra Scoop Ice Cream",
+              "",
+              100
+            ],
+            [
+              "Vanilla Shake",
+              "",
+              700
+            ],
+            [
+              "Chocolate Shake",
+              "",
+              700
+            ],
+            [
+              "Strawberry Shake",
+              "",
+              700
+            ],
+            [
+              "Chocolate-Vanilla Shake",
+              "",
+              700
+            ],
+            [
+              "Latte (16 oz.)",
+              "",
+              575
+            ],
+            [
+              "Iced Latte (16 oz.)",
+              "",
+              475
+            ],
+            [
+              "Chai Latte (16 oz.)",
+              "",
+              625
+            ],
+            [
+              "Iced Chai Latte (16 oz.)",
+              "",
+              525
+            ],
+            [
+              "Hot Chocolate (16 oz.)",
+              "",
+              450
+            ],
+            [
+              "Custom Your Crepe",
+              "",
+              1200
+            ],
+            [
+              "Water Bottle",
+              "",
+              100
+            ],
+            [
+              "Coke bottle",
+              "",
+              350
+            ],
+            [
+              "Cream Cheese",
+              "",
+              150
+            ],
+            [
+              "Yerba Mate",
+              "",
+              350
+            ],
+            [
+              "Apple Juice",
+              "",
+              300
+            ],
+            [
+              "Fanta Bottle",
+              "",
+              350
+            ],
+            [
+              "Sprite Bottle",
+              "",
+              350
+            ]
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b119-dfsupregatd.mp4",
+        "poster": "/clips/b119-dfsupregatd-poster.webp",
+        "href": "https://www.instagram.com/p/DfsUpregaTd/",
+        "credit": "Posted by @cereal_bar001.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "mt-pop",
+      "name": "MT Pop",
+      "label": "MT Pop",
+      "cuisine": "Popping dancer",
+      "category": "Dancers",
+      "color": "#181818",
+      "tagline": "Vietnamese popping dancer and the 2024 Red Bull Dance Your Style world champion.",
+      "site": "https://www.instagram.com/mtpop.vn/",
+      "icon": "mt-pop-v119",
+      "prep": 0,
+      "items": [],
+      "contactOnly": "Follow MT Pop’s official profile for popping, freestyle and performance footage.",
+      "panels": [
+        {
+          "head": "Dance Your Style",
+          "body": [
+            "See MT Pop’s 2024 final battle and the event recap."
+          ],
+          "links": [
+            {
+              "label": "2024 world final",
+              "href": "https://www.redbull.com/ca-en/red-bull-dance-your-style-world-final-2024-recap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "babyslow",
+      "name": "Babyslow",
+      "label": "Babyslow",
+      "cuisine": "Popping dancer",
+      "category": "Dancers",
+      "color": "#181818",
+      "tagline": "Popping, robotic footwork and dance performances by Babyslow.",
+      "site": "https://www.instagram.com/babyslow_official/",
+      "icon": "babyslow-v119",
+      "prep": 0,
+      "items": [],
+      "contactOnly": "Follow the official profile for new performances.",
+      "clip": {
+        "src": "/clips/b119-dfsjdeojkyi.mp4",
+        "poster": "/clips/b119-dfsjdeojkyi-poster.webp",
+        "href": "https://www.instagram.com/reel/DfSJdeoJkYi/",
+        "credit": "Posted by @babyslow_official.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "la-taqueria-sf",
+      "name": "La Taqueria",
+      "label": "La Taqueria",
+      "cuisine": "Mexican tacos and burritos",
+      "category": "Burritos",
+      "color": "#071b0f",
+      "tagline": "The Mission Street counter serves no-rice burritos and crisped tacos dorados.",
+      "site": "https://lataqueriasf.net/",
+      "icon": "la-taqueria-sf-v119",
+      "prep": 0,
+      "items": [],
+      "address": "2889 Mission St, San Francisco, CA 94110",
+      "phone": "(415) 285-7117",
+      "hours": "Wed–Thu 11am–8:45pm, Fri–Sat 11am–8:15pm, Sun 11am–7:15pm; Mon–Tue closed",
+      "contactOnly": "Call for takeout. See the restaurant’s menu for burritos, tacos and quesadillas.",
+      "panels": [
+        {
+          "head": "Menu",
+          "body": [
+            "See the menu published by La Taqueria."
+          ],
+          "links": [
+            {
+              "label": "See the menu",
+              "href": "https://lataqueriasf.net/menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "latte-syndrome",
+      "name": "Latte Syndrome",
+      "label": "Latte Syndrome",
+      "cuisine": "Vietnamese coffee and matcha pop-up",
+      "category": "Pop-up/Catering",
+      "color": "#d7d6d2",
+      "tagline": "Vietnamese coffee, matcha and rotating specials from an Oakland-based pop-up.",
+      "site": "https://www.instagram.com/latte.syndrome/",
+      "icon": "latte-syndrome-v119",
+      "prep": 0,
+      "items": [],
+      "contactOnly": "Check the profile for the next Bay Area pop-up. Message the business on Instagram for event bookings.",
+      "clip": {
+        "src": "/clips/b119-dehs7dkptub.mp4",
+        "poster": "/clips/b119-dehs7dkptub-poster.webp",
+        "href": "https://www.instagram.com/reel/Dehs7DKPTUb/",
+        "credit": "Posted by @latte.syndrome.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "krispy-joes-oakland",
+      "name": "Krispy Joe’s Coffee House",
+      "label": "Krispy Joe’s",
+      "cuisine": "Coffee house and pastrami sandwiches",
+      "category": "Café",
+      "color": "#082424",
+      "tagline": "Oakland coffee shop with griddled pastrami sandwiches, breakfast burritos and espresso.",
+      "site": "https://www.krispyjoes.com/",
+      "icon": "krispy-joes-oakland-v119",
+      "prep": 0,
+      "items": [],
+      "address": "5512 San Pablo Ave, Oakland, CA 94608",
+      "phone": "(669) 233-6769",
+      "email": "cash@krispyjoes.com",
+      "orderUrl": "https://krispyjoes.square.site/",
+      "siteCta": "Order online",
+      "siteNote": "Order pickup online. The listed number is for catering and orders of more than 15 sandwiches. Check current opening times before visiting.",
+      "sections": [
+        {
+          "name": "Breakfast",
+          "items": [
+            [
+              "Griddled PEC",
+              "Pastrami, egg and cheese on rye",
+              1550
+            ],
+            [
+              "French Toast PEC",
+              "Pastrami, egg and American cheese",
+              1650
+            ],
+            [
+              "Egg & Cheese",
+              "",
+              1275
+            ],
+            [
+              "Pastrami Hash Breakfast Burrito",
+              "",
+              1775
+            ],
+            [
+              "Vegan Tofu Scramble Burrito",
+              "",
+              1650
+            ],
+            [
+              "Veg Breakfast Burrito",
+              "",
+              1750
+            ],
+            [
+              "Egg on Toast",
+              "",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Pastrami and lunch",
+          "items": [
+            [
+              "The OG",
+              "Pastrami, slaw, Swiss and dressing on rye",
+              1600
+            ],
+            [
+              "Pyro’s Reuben",
+              "",
+              1675
+            ],
+            [
+              "The Mama",
+              "",
+              1675
+            ],
+            [
+              "Dad’s Mustard",
+              "",
+              1500
+            ],
+            [
+              "Pastrami Chopped Cheese",
+              "",
+              2500
+            ],
+            [
+              "Krispy Inferno",
+              "",
+              2400
+            ],
+            [
+              "Kimchi Baja Pastrami Taco",
+              "",
+              1000
+            ],
+            [
+              "Krispy Tuna Melt",
+              "",
+              1600
+            ],
+            [
+              "Turkey Reuben",
+              "",
+              1800
+            ],
+            [
+              "California Turkey",
+              "",
+              1900
+            ],
+            [
+              "House Hummus Krispy Toast",
+              "",
+              975
+            ],
+            [
+              "Tuna Sub",
+              "",
+              1750
+            ]
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b119-dcwh8sypfig.mp4",
+        "poster": "/clips/b119-dcwh8sypfig-poster.webp",
+        "href": "https://www.instagram.com/reel/DcwH8SYpfIg/",
+        "credit": "Posted by @krispyjoes.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "popoca-oakland",
+      "name": "Popoca",
+      "label": "Popoca",
+      "cuisine": "Salvadoran live-fire cooking",
+      "category": "El Salvadoran",
+      "color": "#e8ac20",
+      "tagline": "Chef Anthony Salguero serves Salvadoran pupusas and live-fire dishes in Old Oakland.",
+      "site": "https://www.popocaoakland.com/",
+      "icon": "popoca-oakland-v119",
+      "prep": 0,
+      "items": [],
+      "address": "906 Washington St, Oakland, CA 94607",
+      "hours": "Tue–Thu 5–9:30pm, Fri–Sat 5–10pm",
+      "email": "info@popocaoakland.com",
+      "panels": [
+        {
+          "head": "Dinner menu",
+          "body": [
+            "The dinner menu changes with the season."
+          ],
+          "links": [
+            {
+              "label": "See current menu",
+              "href": "https://www.popocaoakland.com/menu"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Con Alma",
+          "items": [
+            [
+              "Ciruelas y Pepino con Alguashte",
+              "",
+              2300
+            ],
+            [
+              "Mackerel Salpicón",
+              "",
+              2500
+            ],
+            [
+              "Guaca-Mol",
+              "",
+              1700
+            ],
+            [
+              "Yuca con Anchoa",
+              "",
+              1600
+            ],
+            [
+              "Veranito Loco",
+              "",
+              1900
+            ],
+            [
+              "Tamal Pisques",
+              "",
+              1800
+            ],
+            [
+              "Pollo Campero",
+              "",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Pupusas",
+          "items": [
+            [
+              "Pupusa de Loroco",
+              "",
+              900
+            ],
+            [
+              "Pupusa de Lengua",
+              "",
+              1100
+            ],
+            [
+              "Pupusa de Elote",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Platos grandes",
+          "items": [
+            [
+              "Pollo en Chicha",
+              "",
+              3600
+            ],
+            [
+              "Salvi Chow Mien de Mariscos",
+              "",
+              3800
+            ],
+            [
+              "Bistic Encebollado",
+              "",
+              6300
+            ],
+            [
+              "Trucha en Alguashte",
+              "",
+              4800
+            ],
+            [
+              "Salvi Side",
+              "",
+              1700
+            ],
+            [
+              "Estilo Popoca",
+              "Per person",
+              8000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "el-mono-el-cerrito",
+      "name": "El Mono",
+      "label": "El Mono",
+      "cuisine": "Peruvian restaurant",
+      "category": "Peruvian",
+      "color": "#ffffff",
+      "tagline": "The El Cerrito branch serves lomo saltado, ceviche and Peruvian fried rice.",
+      "site": "https://www.elmonofresh.com/",
+      "icon": "el-mono-v119",
+      "prep": 0,
+      "items": [],
+      "address": "11720 San Pablo Ave, Suite B, El Cerrito, CA 94530",
+      "hours": "Daily noon–2:45pm; Sun–Thu 5–7:45pm, Fri–Sat 5–8:45pm",
+      "phone": "(510) 680-2910",
+      "email": "elmonofresh@gmail.com",
+      "orderUrl": "https://el-mono.square.site/",
+      "siteCta": "Order online",
+      "sections": [
+        {
+          "name": "Appetizers and Salads",
+          "items": [
+            [
+              "Ensalada Isabella (Lunch)",
+              "",
+              1399
+            ],
+            [
+              "Papa a la Huancaina",
+              "",
+              1999
+            ],
+            [
+              "Dirty Tuna Plantain Bites",
+              "",
+              1899
+            ],
+            [
+              "Tiradito",
+              "",
+              1999
+            ],
+            [
+              "Frito Sampler",
+              "",
+              2099
+            ],
+            [
+              "Trio de Mar",
+              "",
+              2699
+            ],
+            [
+              "Pulpo al Olivo",
+              "",
+              2399
+            ],
+            [
+              "Pulpo Parrillero",
+              "",
+              2699
+            ]
+          ]
+        },
+        {
+          "name": "Beef",
+          "items": [
+            [
+              "Lomo Saltado (Lunch)",
+              "",
+              2399
+            ],
+            [
+              "Chaufa de Carne (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Tallarin de Carne (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Lomo Saltado",
+              "",
+              2699
+            ],
+            [
+              "Seco de Res",
+              "",
+              2599
+            ],
+            [
+              "Tapado A Lo Pobre",
+              "",
+              2399
+            ],
+            [
+              "Tallarin Verde con Lomo",
+              "",
+              2799
+            ]
+          ]
+        },
+        {
+          "name": "Poultry",
+          "items": [
+            [
+              "Aji de Gallina (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Pollo Saltado (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Tallarin de Pollo (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Chaufa de Pollo (Lunch)",
+              "",
+              2099
+            ],
+            [
+              "Arroz con Pollo (Lunch)",
+              "",
+              2099
+            ],
+            [
+              "Aji De Gallina",
+              "",
+              2399
+            ],
+            [
+              "Pollo Saltado",
+              "",
+              2399
+            ],
+            [
+              "Estofado de Pollo",
+              "",
+              2299
+            ],
+            [
+              "Tallarin Verde con Pollo",
+              "",
+              2499
+            ]
+          ]
+        },
+        {
+          "name": "Seafood",
+          "items": [
+            [
+              "Personal Paella (Lunch)",
+              "",
+              2899
+            ],
+            [
+              "Camarone Saltado (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Chaufa de Camarones (Lunch)",
+              "",
+              2399
+            ],
+            [
+              "Fish-N-Onions (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Tallarin de Camarones (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Pescado Frito",
+              "",
+              2299
+            ],
+            [
+              "Fish N' Onions",
+              "",
+              2399
+            ],
+            [
+              "Chupe de Camarones",
+              "",
+              2799
+            ],
+            [
+              "Camarones Saltado",
+              "",
+              2599
+            ],
+            [
+              "Tallarin Verde con Camarones",
+              "",
+              2699
+            ],
+            [
+              "Mariscos Saltados",
+              "",
+              2999
+            ],
+            [
+              "Tallarin Verde con Mariscos",
+              "",
+              3099
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian",
+          "items": [
+            [
+              "Champiñones Saltado (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Pesto Pasta (Lunch)",
+              "",
+              1899
+            ],
+            [
+              "Tallarin de Champiñones (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Veggie Chaufa (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Rice-N-Beans (Lunch)",
+              "",
+              1999
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Ensalada Isabella",
+              "",
+              1499
+            ],
+            [
+              "Peruvian Cobb Salad",
+              "",
+              2199
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian/Vegan",
+          "items": [
+            [
+              "Vainitas Saltadas",
+              "",
+              1999
+            ],
+            [
+              "Rice-N-Beans a lo Pobre",
+              "",
+              2199
+            ],
+            [
+              "Huevo a lo Pobre",
+              "",
+              1999
+            ],
+            [
+              "Champiñones Saltado",
+              "",
+              2299
+            ]
+          ]
+        },
+        {
+          "name": "Homemade Drinks",
+          "items": [
+            [
+              "Lime Arnold Palmer",
+              "",
+              699
+            ],
+            [
+              "Strawberry Iced Tea",
+              "",
+              499
+            ],
+            [
+              "Passion Fruit Iced Tea",
+              "",
+              499
+            ],
+            [
+              "Virgin Mojito",
+              "",
+              999
+            ],
+            [
+              "Virgin Pina Colada",
+              "",
+              899
+            ],
+            [
+              "Virgin Peruvian Michelada",
+              "",
+              1299
+            ]
+          ]
+        },
+        {
+          "name": "Imports and Classics",
+          "items": [
+            [
+              "Pellegrino",
+              "",
+              399
+            ]
+          ]
+        },
+        {
+          "name": "Coffee & Tea",
+          "items": [
+            [
+              "Americano",
+              "",
+              499
+            ],
+            [
+              "Hot Latte",
+              "",
+              699
+            ],
+            [
+              "Cappuccino",
+              "",
+              599
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Other location",
+          "body": [
+            "El Mono also has a Berkeley dining room."
+          ],
+          "links": [
+            {
+              "label": "El Mono in Berkeley",
+              "href": "https://beastypages.com/?b=b_elmonoberkeley"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "el-mono-berkeley",
+      "name": "El Mono",
+      "label": "El Mono",
+      "cuisine": "Peruvian restaurant",
+      "category": "Peruvian",
+      "color": "#ffffff",
+      "tagline": "El Mono’s Fourth Street branch serves Peruvian classics in Berkeley.",
+      "site": "https://www.elmonofresh.com/",
+      "icon": "el-mono-v119",
+      "prep": 0,
+      "items": [],
+      "address": "1300 4th St, Berkeley, CA 94710",
+      "hours": "Daily noon–2:45pm; Sun–Thu 5–7:45pm, Fri–Sat 5–8:45pm",
+      "phone": "(510) 280-7660",
+      "email": "elmonofresh@gmail.com",
+      "orderUrl": "https://el-mono.square.site/",
+      "siteCta": "Order online",
+      "sections": [
+        {
+          "name": "Appetizers and Salads",
+          "items": [
+            [
+              "Ensalada Isabella (Lunch)",
+              "",
+              1399
+            ],
+            [
+              "Papa a la Huancaina",
+              "",
+              1999
+            ],
+            [
+              "Dirty Tuna Plantain Bites",
+              "",
+              1899
+            ],
+            [
+              "Tiradito",
+              "",
+              1999
+            ],
+            [
+              "Frito Sampler",
+              "",
+              2099
+            ],
+            [
+              "Trio de Mar",
+              "",
+              2699
+            ],
+            [
+              "Pulpo al Olivo",
+              "",
+              2399
+            ],
+            [
+              "Pulpo Parrillero",
+              "",
+              2699
+            ]
+          ]
+        },
+        {
+          "name": "Beef",
+          "items": [
+            [
+              "Lomo Saltado (Lunch)",
+              "",
+              2399
+            ],
+            [
+              "Chaufa de Carne (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Tallarin de Carne (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Lomo Saltado",
+              "",
+              2699
+            ],
+            [
+              "Seco de Res",
+              "",
+              2599
+            ],
+            [
+              "Tapado A Lo Pobre",
+              "",
+              2399
+            ],
+            [
+              "Tallarin Verde con Lomo",
+              "",
+              2799
+            ]
+          ]
+        },
+        {
+          "name": "Poultry",
+          "items": [
+            [
+              "Aji de Gallina (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Pollo Saltado (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Tallarin de Pollo (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Chaufa de Pollo (Lunch)",
+              "",
+              2099
+            ],
+            [
+              "Arroz con Pollo (Lunch)",
+              "",
+              2099
+            ],
+            [
+              "Aji De Gallina",
+              "",
+              2399
+            ],
+            [
+              "Pollo Saltado",
+              "",
+              2399
+            ],
+            [
+              "Estofado de Pollo",
+              "",
+              2299
+            ],
+            [
+              "Tallarin Verde con Pollo",
+              "",
+              2499
+            ]
+          ]
+        },
+        {
+          "name": "Seafood",
+          "items": [
+            [
+              "Personal Paella (Lunch)",
+              "",
+              2899
+            ],
+            [
+              "Camarone Saltado (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Chaufa de Camarones (Lunch)",
+              "",
+              2399
+            ],
+            [
+              "Fish-N-Onions (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Tallarin de Camarones (Lunch)",
+              "",
+              2299
+            ],
+            [
+              "Pescado Frito",
+              "",
+              2299
+            ],
+            [
+              "Fish N' Onions",
+              "",
+              2399
+            ],
+            [
+              "Chupe de Camarones",
+              "",
+              2799
+            ],
+            [
+              "Camarones Saltado",
+              "",
+              2599
+            ],
+            [
+              "Tallarin Verde con Camarones",
+              "",
+              2699
+            ],
+            [
+              "Mariscos Saltados",
+              "",
+              2999
+            ],
+            [
+              "Tallarin Verde con Mariscos",
+              "",
+              3099
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian",
+          "items": [
+            [
+              "Champiñones Saltado (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Pesto Pasta (Lunch)",
+              "",
+              1899
+            ],
+            [
+              "Tallarin de Champiñones (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Veggie Chaufa (Lunch)",
+              "",
+              1999
+            ],
+            [
+              "Rice-N-Beans (Lunch)",
+              "",
+              1999
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Ensalada Isabella",
+              "",
+              1499
+            ],
+            [
+              "Peruvian Cobb Salad",
+              "",
+              2199
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian/Vegan",
+          "items": [
+            [
+              "Vainitas Saltadas",
+              "",
+              1999
+            ],
+            [
+              "Rice-N-Beans a lo Pobre",
+              "",
+              2199
+            ],
+            [
+              "Huevo a lo Pobre",
+              "",
+              1999
+            ],
+            [
+              "Champiñones Saltado",
+              "",
+              2299
+            ]
+          ]
+        },
+        {
+          "name": "Homemade Drinks",
+          "items": [
+            [
+              "Lime Arnold Palmer",
+              "",
+              699
+            ],
+            [
+              "Strawberry Iced Tea",
+              "",
+              499
+            ],
+            [
+              "Passion Fruit Iced Tea",
+              "",
+              499
+            ],
+            [
+              "Virgin Mojito",
+              "",
+              999
+            ],
+            [
+              "Virgin Pina Colada",
+              "",
+              899
+            ],
+            [
+              "Virgin Peruvian Michelada",
+              "",
+              1299
+            ]
+          ]
+        },
+        {
+          "name": "Imports and Classics",
+          "items": [
+            [
+              "Pellegrino",
+              "",
+              399
+            ]
+          ]
+        },
+        {
+          "name": "Coffee & Tea",
+          "items": [
+            [
+              "Americano",
+              "",
+              499
+            ],
+            [
+              "Hot Latte",
+              "",
+              699
+            ],
+            [
+              "Cappuccino",
+              "",
+              599
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Other location",
+          "body": [
+            "El Mono also has its original dining room in El Cerrito."
+          ],
+          "links": [
+            {
+              "label": "El Mono in El Cerrito",
+              "href": "https://beastypages.com/?b=b_elmonoelcerrito"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "garden-creamery",
+      "name": "Garden Creamery",
+      "label": "Garden Creamery",
+      "cuisine": "Small-batch ice cream",
+      "category": "Ice Cream",
+      "color": "#e83a60",
+      "tagline": "A Mission District scoop shop with rotating dairy and vegan flavors made in-house.",
+      "site": "https://gardencreamery.com/",
+      "icon": "garden-creamery-v119",
+      "prep": 0,
+      "items": [],
+      "address": "3566 20th St, San Francisco, CA 94110",
+      "email": "erin@gardencreamery.com",
+      "hours": "Wed–Thu 6–10pm, Fri 6–11pm, Sat noon–11pm, Sun noon–9pm; Mon–Tue closed",
+      "contactOnly": "Flavors change weekly. See the shop’s Instagram for the current scoop case.",
+      "panels": [
+        {
+          "head": "Current flavors",
+          "body": [
+            "See which dairy and vegan scoops the shop is serving."
+          ],
+          "links": [
+            {
+              "label": "Garden Creamery on Instagram",
+              "href": "https://www.instagram.com/gardencreamery/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dumpling-house-sf",
+      "name": "Dumpling House",
+      "label": "Dumpling House",
+      "cuisine": "Hong Kong dim sum and dumplings",
+      "category": "Dumplings",
+      "color": "#ffffff",
+      "tagline": "Handmade dumplings, Hong Kong-style dim sum and soup buns on Noe Street in the Castro.",
+      "site": "https://dumplinghouse-sf.com/",
+      "icon": "dumpling-house-sf-v119",
+      "prep": 0,
+      "items": [],
+      "address": "335 Noe St, San Francisco, CA 94114",
+      "phone": "(415) 829-2789",
+      "email": "dumplinghouse928@gmail.com",
+      "hours": "Mon–Fri 11am–2:30pm and 5–9pm, Sat–Sun 11am–9pm",
+      "orderUrl": "https://takeout.minitable.net/v2/#/welcome/s6d0d351dc50ee66a5275c83faf17804f",
+      "siteCta": "Order online",
+      "contactOnly": "Dumplings and dim sum are made to order. Prices and pickup availability are on the restaurant’s ordering page.",
+      "panels": [
+        {
+          "head": "Menu and pickup",
+          "body": [
+            "Browse soup dumplings, shrimp toast and other dim sum."
+          ],
+          "links": [
+            {
+              "label": "Current pickup menu",
+              "href": "https://takeout.minitable.net/v2/#/welcome/s6d0d351dc50ee66a5275c83faf17804f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "valley-goat",
+      "name": "Valley Goat",
+      "label": "Valley Goat",
+      "cuisine": "Seasonal Californian restaurant",
+      "category": "Eats",
+      "color": "#571c49",
+      "tagline": "Chef Stephanie Izard’s shareable plates and cocktails at Treehouse Silicon Valley.",
+      "site": "https://www.valleygoatsv.com/",
+      "icon": "valley-goat-v119",
+      "prep": 0,
+      "items": [],
+      "address": "1100 N Mathilda Ave, Sunnyvale, CA 94089",
+      "phone": "(408) 900-9470",
+      "hours": "Lunch Mon–Fri 11am–2pm, brunch Sat–Sun 10am–2pm, bar daily 2–4pm, dinner daily 4–10pm",
+      "panels": [
+        {
+          "head": "Menus and reservations",
+          "body": [
+            "See the hotel’s current menus or reserve through the restaurant."
+          ],
+          "links": [
+            {
+              "label": "View menus",
+              "href": "https://www.treehousehotels.com/silicon-valley/eat-drink/valley-goat"
+            },
+            {
+              "label": "Reservations",
+              "href": "https://www.valleygoatsv.com/"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Dinner snacks",
+          "items": [
+            [
+              "Pita and Dips",
+              "",
+              2100
+            ],
+            [
+              "Avocado Dip",
+              "",
+              1700
+            ],
+            [
+              "Goat Empanadas",
+              "",
+              2000
+            ],
+            [
+              "Vegetable Empanadas",
+              "",
+              2000
+            ],
+            [
+              "Spiced Fries",
+              "",
+              1300
+            ],
+            [
+              "Scallion Focaccia",
+              "",
+              2200
+            ],
+            [
+              "Roasted Oysters",
+              "",
+              2000
+            ],
+            [
+              "Spicy Handroll Dip",
+              "",
+              2500
+            ]
+          ]
+        },
+        {
+          "name": "Dinner plates",
+          "items": [
+            [
+              "Disco Fries",
+              "",
+              2500
+            ],
+            [
+              "Shrimp Salad",
+              "",
+              2900
+            ],
+            [
+              "Crispy Quinoa and Tuna Poke Salad",
+              "",
+              2900
+            ],
+            [
+              "Hamachi Aguachile",
+              "",
+              2800
+            ],
+            [
+              "Chicken Skewers",
+              "",
+              2400
+            ],
+            [
+              "Skirt Steak",
+              "",
+              4500
+            ],
+            [
+              "Skuna Bay Salmon",
+              "",
+              3800
+            ],
+            [
+              "Sautéed Green Beans",
+              "",
+              2000
+            ],
+            [
+              "Summer Tomatoes",
+              "",
+              2000
+            ],
+            [
+              "Wood-fired Sprouted Cauliflower",
+              "",
+              2000
+            ],
+            [
+              "Grilled Corn",
+              "",
+              1600
+            ],
+            [
+              "Chickpea Fritters",
+              "",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Bigger plates",
+          "items": [
+            [
+              "Wood-fired Mary’s Chicken",
+              "",
+              5400
+            ],
+            [
+              "Wood-fired Eggplant",
+              "",
+              3400
+            ],
+            [
+              "Sticky Pork Shank",
+              "",
+              5900
+            ],
+            [
+              "Wood-fired Branzino",
+              "",
+              4900
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Olive Oil Semifreddo",
+              "",
+              1800
+            ],
+            [
+              "Pandan Flan",
+              "",
+              1800
+            ],
+            [
+              "Fruity Sundae Funday",
+              "",
+              1600
+            ],
+            [
+              "Mango Sticky Rice",
+              "",
+              1800
+            ],
+            [
+              "Mango Tamarind Sorbet",
+              "",
+              600
+            ],
+            [
+              "Blood Orange Sorbet",
+              "",
+              600
+            ],
+            [
+              "Raspberry Sorbet",
+              "",
+              600
+            ],
+            [
+              "Coffee Gelato",
+              "",
+              600
+            ],
+            [
+              "Vanilla Gelato",
+              "",
+              600
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "vallejo-goods-5": "b_doughbottega",
+    "san-rafael-goods2-0": "b_cerealbarsanrafael",
+    "san-francisco-goods2-93": "b_lataqueriasf",
+    "oakland-goods2-52": "b_krispyjoesoakland",
+    "oakland-goods2-53": "b_popocaoakland",
+    "el-cerrito-goods2-2": "b_elmonoelcerrito",
+    "berkeley-goods2-25": "b_elmonoberkeley",
+    "san-francisco-goods2-94": "b_gardencreamery",
+    "san-francisco-goods2-95": "b_dumplinghousesf",
+    "sunnyvale-goods2-1": "b_valleygoat",
+    "san-francisco-goods2-96": "b_alpastorpapi",
+    "beasty-pizza2-2": "b_doughbottega",
+    "beasty-sweets2-2": "b_cerealbarsanrafael",
+    "beasty-dancers-4": "b_mtpop",
+    "beasty-dancers-5": "b_babyslow",
+    "beasty-burritos-0": "b_lataqueriasf",
+    "beasty-popupcatering-0": "b_lattesyndrome",
+    "beasty-coffee2-4": "b_krispyjoesoakland",
+    "beasty-elsalvadoran-0": "b_popocaoakland",
+    "beasty-peruvian-8": "b_elmonoelcerrito",
+    "beasty-icecream-8": "b_gardencreamery",
+    "beasty-dumplings-8": "b_dumplinghousesf",
+    "beasty-thai-0": "b_thaitableberkeley",
+    "beasty-goods2-127": "b_valleygoat",
+    "beasty-foodies2-322": "b_foodieandoperdidatraveling",
+    "beasty-foodies2-323": "b_foodiefoodiemompickyfam",
+    "beasty-foodies2-324": "b_foodiebayareajessbling",
+    "beasty-foodies2-325": "b_foodiecheycheyfromthebay",
+    "beasty-foodies2-326": "b_foodienomnomnori",
+    "beasty-foodies2-327": "b_foodiethefoodiesergio",
+    "beasty-foodies2-328": "b_foodiemunchingwmunches",
+    "beasty-foodies2-329": "b_foodiematt2o9",
+    "beasty-foodies2-330": "b_foodiecinemundollc",
+    "beasty-foodies2-331": "b_foodiehididyoueatyet",
+    "beasty-foodies2-332": "b_foodiecarynkramerhomes",
+    "beasty-foodies2-333": "b_foodieyetiornot",
+    "beasty-foodies2-334": "b_foodieinternationalkee",
+    "beasty-foodies2-335": "b_foodiebeauteats",
+    "beasty-foodies2-336": "b_foodieapachegoddess1122",
+    "beasty-foodies2-337": "b_foodiesomedinggood",
+    "beasty-foodies2-338": "b_foodieluckybitez",
+    "beasty-foodies2-339": "b_foodiefoodiejudysf",
+    "beasty-foodies2-340": "b_foodiecuratedbynatalie",
+    "beasty-foodies2-341": "b_foodiegirlbeingcrazy",
+    "beasty-foodies2-342": "b_foodievalinthebay",
+    "beasty-foodies2-343": "b_foodiefirstdatedude",
+    "beasty-foodies2-344": "b_foodiesydneymlee"
+  },
+  "posts": [
+    {
+      "code": "DftFcjahjEZ",
+      "slug": "review-DftFcjahjEZ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 54.035,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DftFcjahjEZ/",
+      "brand": "b_crabbycrabbynewark",
+      "by": "bayarea_fooddreamz",
+      "postedBy": "bayarea_fooddreamz",
+      "postedDate": "20261114",
+      "credit": "Review by @bayarea_fooddreamz at Crabby Crabby Newark, Newark.",
+      "request": [
+        {
+          "rowId": 252264,
+          "requestRowId": 252265,
+          "at": "2026-11-13T19:00:45.585885-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DSbWNVIDp29",
+      "slug": "review-DSbWNVIDp29",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 112.967,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DSbWNVIDp29/",
+      "brand": "b_doughbottega",
+      "by": "andoperdidatraveling",
+      "postedBy": "andoperdidatraveling",
+      "postedDate": "20251219",
+      "credit": "Review by @andoperdidatraveling at Dough Bottega, Vallejo.",
+      "request": [
+        {
+          "rowId": 252270,
+          "requestRowId": 252271,
+          "at": "2026-11-13T19:18:17.047494-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DOoIy6CiTBG",
+      "slug": "review-DOoIy6CiTBG",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 80.784,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DOoIy6CiTBG/",
+      "brand": "b_doughbottega",
+      "by": "foodiemompickyfam",
+      "postedBy": "foodiemompickyfam",
+      "postedDate": "20250915",
+      "credit": "Review by @foodiemompickyfam at Dough Bottega, Vallejo.",
+      "request": [
+        {
+          "rowId": 252273,
+          "requestRowId": 252274,
+          "at": "2026-11-13T19:18:39.881429-08:00",
+          "request": "Clip this video plz \nFoodie\nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DNB3-q1SWmg",
+      "slug": "b119-dnb3-q1swmg",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.063,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DNB3-q1SWmg/",
+      "brand": "b_doughbottega",
+      "by": "doughbottega",
+      "postedBy": "doughbottega",
+      "postedDate": "20250806",
+      "credit": "Posted by @doughbottega.",
+      "request": [
+        {
+          "rowId": 252275,
+          "requestRowId": 252276,
+          "at": "2026-11-13T19:19:16.758246-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "Ddxh6UmvbHV",
+      "slug": "review-Ddxh6UmvbHV",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 79.1,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Ddxh6UmvbHV/",
+      "brand": "b_cerealbarsanrafael",
+      "by": "bestinthegamme",
+      "postedBy": "bestinthegamme",
+      "postedDate": "20260927",
+      "credit": "Review by @bestinthegamme at Cereal Bar, San Rafael.",
+      "request": [
+        {
+          "rowId": 252292,
+          "requestRowId": 252293,
+          "at": "2026-11-13T19:42:24.395457-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfsUpregaTd",
+      "slug": "b119-dfsupregatd",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 36.534,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/p/DfsUpregaTd/",
+      "brand": "b_cerealbarsanrafael",
+      "by": "cereal_bar001",
+      "postedBy": "cereal_bar001",
+      "postedDate": "20261113",
+      "credit": "Posted by @cereal_bar001.",
+      "request": [
+        {
+          "rowId": 252294,
+          "requestRowId": 252295,
+          "at": "2026-11-13T19:43:30.123207-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "Ddg8VnQJhrI",
+      "slug": "review-Ddg8VnQJhrI",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 39.313,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Ddg8VnQJhrI/",
+      "brand": "b_lataqueriasf",
+      "by": "bayareajessbling",
+      "postedBy": "bayareajessbling",
+      "postedDate": "20260920",
+      "credit": "Review by @bayareajessbling at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252306,
+          "requestRowId": 252307,
+          "at": "2026-11-13T20:51:03.612665-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre",
+          "rank": "Mediocre"
+        }
+      ],
+      "playOn": "b_foodiebayareajessbling",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DLB396oOniD",
+      "slug": "review-DLB396oOniD",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 178.122,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DLB396oOniD/",
+      "brand": "b_lataqueriasf",
+      "by": "festusfeasts",
+      "postedBy": "festusfeasts",
+      "postedDate": "20250618",
+      "credit": "Review by @festusfeasts at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252308,
+          "requestRowId": 252309,
+          "at": "2026-11-13T20:51:15.968281-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiefestusfeasts",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DBSQ1XEyS56",
+      "slug": "review-DBSQ1XEyS56",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 85.428,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DBSQ1XEyS56/",
+      "brand": "b_lataqueriasf",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "postedDate": "20241019",
+      "credit": "Review by @grubwitmike at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252310,
+          "requestRowId": 252311,
+          "at": "2026-11-13T20:51:34.677899-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiegrubwitmike",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DAphOOjRL_3",
+      "slug": "review-DAphOOjRL_3",
+      "startSeconds": 0,
+      "endSeconds": 13.028,
+      "sourceDuration": 13.028,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DAphOOjRL_3/",
+      "brand": "b_lataqueriasf",
+      "by": "eatswithkath",
+      "postedBy": "eatswithkath",
+      "postedDate": "20241003",
+      "credit": "Review by @eatswithkath at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252313,
+          "requestRowId": 252314,
+          "at": "2026-11-13T20:52:07.218184-08:00",
+          "request": "Clip this video plz \nPlease update icon pic",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodieeatswithkath",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "C17W4xgrKrS",
+      "slug": "review-C17W4xgrKrS",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 62.58,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/C17W4xgrKrS/",
+      "brand": "b_lataqueriasf",
+      "by": "cheycheyfromthebay",
+      "postedBy": "cheycheyfromthebay",
+      "postedDate": "20240110",
+      "credit": "Review by @cheycheyfromthebay at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252316,
+          "requestRowId": 252317,
+          "at": "2026-11-13T20:53:14.211700-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        },
+        {
+          "rowId": 252332,
+          "requestRowId": 252333,
+          "at": "2026-11-13T20:57:56.883750-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DNPGM6Ivssb",
+      "slug": "review-DNPGM6Ivssb",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 171.528,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DNPGM6Ivssb/",
+      "brand": "b_lataqueriasf",
+      "by": "hungry4munchies",
+      "postedBy": "hungry4munchies",
+      "postedDate": "20250812",
+      "credit": "Review by @hungry4munchies at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252318,
+          "requestRowId": 252319,
+          "at": "2026-11-13T20:54:14.211731-08:00",
+          "request": "Clip this video plz \nHeavy Hitter Heavy Hitter",
+          "rank": "Heavy Hitter Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "CoFbH5dDcJR",
+      "slug": "review-CoFbH5dDcJR",
+      "startSeconds": 0,
+      "endSeconds": 14.466,
+      "sourceDuration": 14.466,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/CoFbH5dDcJR/",
+      "brand": "b_lataqueriasf",
+      "by": "snackateriansf",
+      "postedBy": "snackateriansf",
+      "postedDate": "20230131",
+      "credit": "Review by @snackateriansf at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252321,
+          "requestRowId": 252322,
+          "at": "2026-11-13T20:54:48.758719-08:00",
+          "request": "Clip this video plz \nFoodie\nPlease update icon pic",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiesnackateriansf",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DW9x1DBkot7",
+      "slug": "review-DW9x1DBkot7",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 59.561,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DW9x1DBkot7/",
+      "brand": "b_lataqueriasf",
+      "by": "foodgiveness",
+      "postedBy": "foodgiveness",
+      "postedDate": "20260410",
+      "credit": "Review by @foodgiveness at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252323,
+          "requestRowId": 252324,
+          "at": "2026-11-13T20:55:02.424591-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiefoodgiveness",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DPAY-3kD1Sj",
+      "slug": "review-DPAY-3kD1Sj",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 29.607,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DPAY-3kD1Sj/",
+      "brand": "b_lataqueriasf",
+      "by": "nomnom_nori",
+      "postedBy": "nomnom_nori",
+      "postedDate": "20250925",
+      "credit": "Review by @nomnom_nori at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252326,
+          "requestRowId": 252327,
+          "at": "2026-11-13T20:56:20.581965-08:00",
+          "request": "Clip this video plz \nFoodie\nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DUjY5EHkpKw",
+      "slug": "review-DUjY5EHkpKw",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 42.834,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DUjY5EHkpKw/",
+      "brand": "b_lataqueriasf",
+      "by": "thefoodiesergio",
+      "postedBy": "thefoodiesergio",
+      "postedDate": "20260209",
+      "credit": "Review by @thefoodiesergio at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252329,
+          "requestRowId": 252330,
+          "at": "2026-11-13T20:57:14.245849-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DLG-uTcO-nZ",
+      "slug": "review-DLG-uTcO-nZ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 22.967,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DLG-uTcO-nZ/",
+      "brand": "b_lataqueriasf",
+      "by": "charlikestoeat",
+      "postedBy": "charlikestoeat",
+      "postedDate": "20250620",
+      "credit": "Review by @charlikestoeat at La Taqueria, San Francisco.",
+      "request": [
+        {
+          "rowId": 252334,
+          "requestRowId": 252335,
+          "at": "2026-11-13T20:59:59.719932-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiecharlikestoeat",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DfSJdeoJkYi",
+      "slug": "b119-dfsjdeojkyi",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 31.186,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfSJdeoJkYi/",
+      "brand": "b_babyslow",
+      "by": "babyslow_official",
+      "postedBy": "babyslow_official",
+      "postedDate": "20261103",
+      "credit": "Posted by @babyslow_official.",
+      "request": [
+        {
+          "rowId": 252337,
+          "requestRowId": 252338,
+          "at": "2026-11-13T21:16:15.075027-08:00",
+          "request": "BEASTY • Dancers",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "DfaWa1oimCO",
+      "slug": "review-DfaWa1oimCO",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 25.242,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfaWa1oimCO/",
+      "brand": "b_lattesyndrome",
+      "by": "munchingwmunches",
+      "postedBy": "munchingwmunches",
+      "postedDate": "20261106",
+      "credit": "Review by @munchingwmunches at Latte Syndrome, Oakland.",
+      "request": [
+        {
+          "rowId": 252342,
+          "requestRowId": 252343,
+          "at": "2026-11-14T07:52:54.716450-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfQPpzpSxya",
+      "slug": "review-DfQPpzpSxya",
+      "startSeconds": 12,
+      "endSeconds": 27,
+      "sourceDuration": 78.323,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfQPpzpSxya/",
+      "brand": "b_lattesyndrome",
+      "by": "tundemodupee",
+      "postedBy": "tundemodupee",
+      "postedDate": "20261102",
+      "credit": "Review by @tundemodupee at Latte Syndrome, Oakland.",
+      "request": [
+        {
+          "rowId": 252345,
+          "requestRowId": 252346,
+          "at": "2026-11-14T07:53:44.135154-08:00",
+          "request": "Clip this video plz \n\nPlease update icon pic",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "Dehs7DKPTUb",
+      "slug": "b119-dehs7dkptub",
+      "startSeconds": 0,
+      "endSeconds": 12.007,
+      "sourceDuration": 12.007,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Dehs7DKPTUb/",
+      "brand": "b_lattesyndrome",
+      "by": "latte.syndrome",
+      "postedBy": "latte.syndrome",
+      "postedDate": "20261015",
+      "credit": "Posted by @latte.syndrome.",
+      "request": [
+        {
+          "rowId": 252347,
+          "requestRowId": 252348,
+          "at": "2026-11-14T07:54:05.389767-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "DeSOVYDPWup",
+      "slug": "review-DeSOVYDPWup",
+      "startSeconds": 0,
+      "endSeconds": 10.613,
+      "sourceDuration": 10.613,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DeSOVYDPWup/",
+      "brand": "b_lattesyndrome",
+      "by": "eatswithglory",
+      "postedBy": "eatswithglory",
+      "postedDate": "20261009",
+      "credit": "Review by @eatswithglory at Latte Syndrome, Oakland.",
+      "request": [
+        {
+          "rowId": 252349,
+          "requestRowId": 252350,
+          "at": "2026-11-14T07:54:24.127318-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodieeatswithglory",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DeQpaMGMsyx",
+      "slug": "review-DeQpaMGMsyx",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 50.227,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DeQpaMGMsyx/",
+      "brand": "b_lattesyndrome",
+      "by": "phamamiii",
+      "postedBy": "phamamiii",
+      "postedDate": "20261009",
+      "credit": "Review by @phamamiii at Latte Syndrome, Oakland.",
+      "request": [
+        {
+          "rowId": 252352,
+          "requestRowId": 252353,
+          "at": "2026-11-14T07:55:22.410242-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfvBbm5z_Ia",
+      "slug": "review-DfvBbm5z_Ia",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 118.958,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfvBbm5z_Ia/",
+      "brand": "b_indaandmely",
+      "by": "thesnacksensei",
+      "postedBy": "thesnacksensei",
+      "postedDate": "20261114",
+      "credit": "Review by @thesnacksensei at Inda + Mely, San Bruno.",
+      "request": [
+        {
+          "rowId": 252407,
+          "requestRowId": 252408,
+          "at": "2026-11-14T13:22:08.759779-08:00",
+          "request": "Clip this video plz \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DYDtODXgVsl",
+      "slug": "review-DYDtODXgVsl",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 79.867,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DYDtODXgVsl/",
+      "brand": "b_indaandmely",
+      "by": "matt_2o9",
+      "postedBy": "matt_2o9",
+      "postedDate": "20260508",
+      "credit": "Review by @matt_2o9 at Inda + Mely, San Bruno.",
+      "request": [
+        {
+          "rowId": 252410,
+          "requestRowId": 252409,
+          "at": "2026-11-14T13:23:27.109193-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre",
+          "rank": "Mediocre"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfvmlgfR8oG",
+      "slug": "review-DfvmlgfR8oG",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 80.134,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfvmlgfR8oG/",
+      "brand": "b_krispyjoesoakland",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "postedDate": "20261115",
+      "credit": "Review by @grubwitmike at Krispy Joe’s Coffee House, Oakland.",
+      "request": [
+        {
+          "rowId": 252436,
+          "requestRowId": 252437,
+          "at": "2026-11-14T18:49:36.131202-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DdZdCxjT6Nz",
+      "slug": "review-DdZdCxjT6Nz",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 16.697,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DdZdCxjT6Nz/",
+      "brand": "b_krispyjoesoakland",
+      "by": "mukbangyourmama",
+      "postedBy": "mukbangyourmama",
+      "postedDate": "20260917",
+      "credit": "Review by @mukbangyourmama at Krispy Joe’s Coffee House, Oakland.",
+      "request": [
+        {
+          "rowId": 252438,
+          "requestRowId": 252439,
+          "at": "2026-11-14T18:50:22.070925-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DdXmljSpM-M",
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DdXmljSpM-M/",
+      "brand": "b_krispyjoesoakland",
+      "by": "celineeats",
+      "postedBy": "celineeats",
+      "credit": "Review by @celineeats featuring Krispy Joe’s, Froyo Park and Kingpin Donuts.",
+      "request": [
+        {
+          "rowId": 252440,
+          "requestRowId": 252441,
+          "at": "2026-11-14T18:50:39.671383-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Previously published. Connected the existing multi-stop review to Krispy Joe’s and kept one Watch entry."
+    },
+    {
+      "code": "DcwH8SYpfIg",
+      "slug": "b119-dcwh8sypfig",
+      "startSeconds": 0,
+      "endSeconds": 5.834,
+      "sourceDuration": 5.834,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DcwH8SYpfIg/",
+      "brand": "b_krispyjoesoakland",
+      "by": "krispyjoes",
+      "postedBy": "krispyjoes",
+      "postedDate": "20260901",
+      "credit": "Posted by @krispyjoes.",
+      "request": [
+        {
+          "rowId": 252442,
+          "requestRowId": 252443,
+          "at": "2026-11-14T18:51:47.086299-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "DPFhDWgDwAo",
+      "slug": "review-DPFhDWgDwAo",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 54.5,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DPFhDWgDwAo/",
+      "brand": "b_popocaoakland",
+      "by": "cinemundollc",
+      "postedBy": "cinemundollc",
+      "postedDate": "20250927",
+      "credit": "Filmed and posted by @cinemundollc for Salvi Food Tour at Popoca.",
+      "request": [
+        {
+          "rowId": 252447,
+          "requestRowId": 252448,
+          "at": "2026-11-14T19:19:31.660711-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DBCBsowS4SH",
+      "slug": "review-DBCBsowS4SH",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 80.767,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DBCBsowS4SH/",
+      "brand": "b_popocaoakland",
+      "by": "hididyoueatyet",
+      "postedBy": "hididyoueatyet",
+      "postedDate": "20241012",
+      "credit": "Review by @hididyoueatyet at Popoca, Oakland.",
+      "request": [
+        {
+          "rowId": 252450,
+          "requestRowId": 252451,
+          "at": "2026-11-14T19:20:36.245771-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "C4qnJRlvHRU",
+      "slug": "review-C4qnJRlvHRU",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 41.8,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/C4qnJRlvHRU/",
+      "brand": "b_popocaoakland",
+      "by": "snackateriansf",
+      "postedBy": "visitoakland",
+      "postedDate": "20240318",
+      "credit": "Filmed by @snackateriansf. Posted by @visitoakland for Oakland Restaurant Week 2024.",
+      "request": [
+        {
+          "rowId": 252453,
+          "requestRowId": 252454,
+          "at": "2026-11-14T19:21:47.500724-08:00",
+          "request": "Clip this video plz \nPlease update icon pic",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "Dftopj8G6n7",
+      "slug": "review-Dftopj8G6n7",
+      "startSeconds": 0,
+      "endSeconds": 6.155,
+      "sourceDuration": 6.155,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/p/Dftopj8G6n7/",
+      "brand": "b_alpastorpapi",
+      "by": "alpastorpapi415",
+      "postedBy": "alpastorpapi415",
+      "postedDate": "20261114",
+      "credit": "Posted by @alpastorpapi415.",
+      "request": [
+        {
+          "rowId": 252456,
+          "requestRowId": 252457,
+          "at": "2026-11-14T19:23:31.451045-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Featured on the listing and in Watch."
+    },
+    {
+      "code": "Dft0hkfCIAL",
+      "slug": "review-Dft0hkfCIAL",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 17.767,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Dft0hkfCIAL/",
+      "brand": "b_lovelysburgersoakland",
+      "by": "carynkramerhomes",
+      "postedBy": "carynkramerhomes",
+      "postedDate": "20261114",
+      "credit": "Review by @carynkramerhomes at Lovely's Burgers, Oakland.",
+      "request": [
+        {
+          "rowId": 252458,
+          "requestRowId": 252459,
+          "at": "2026-11-14T19:29:00.225770-08:00",
+          "request": "Clip this video plz \nLovely’s",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfvDr-2T4Uo",
+      "slug": "review-DfvDr-2T4Uo",
+      "startSeconds": 8,
+      "endSeconds": 23,
+      "sourceDuration": 59.654,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfvDr-2T4Uo/",
+      "brand": "b_elmonoberkeley",
+      "by": "yetiornot",
+      "postedBy": "yetiornot",
+      "postedDate": "20261114",
+      "credit": "Review by @yetiornot at El Mono, Berkeley.",
+      "request": [
+        {
+          "rowId": 252464,
+          "requestRowId": 252465,
+          "at": "2026-11-14T19:46:35.031006-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre",
+          "rank": "Mediocre"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfLXK8GP2jF",
+      "slug": "review-DfLXK8GP2jF",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 50.738,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfLXK8GP2jF/",
+      "brand": "b_gardencreamery",
+      "by": "internationalkee",
+      "postedBy": "internationalkee",
+      "postedDate": "20261031",
+      "credit": "Review by @internationalkee at Garden Creamery, San Francisco.",
+      "request": [
+        {
+          "rowId": 252474,
+          "requestRowId": 252475,
+          "at": "2026-11-14T20:29:58.200757-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DWB2bXLFJsg",
+      "slug": "review-DWB2bXLFJsg",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 37.409,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DWB2bXLFJsg/",
+      "brand": "b_gardencreamery",
+      "by": "hungere.for.diy",
+      "postedBy": "hungere.for.diy",
+      "postedDate": "20260318",
+      "credit": "Review by @hungere.for.diy at Garden Creamery, San Francisco.",
+      "request": [
+        {
+          "rowId": 252476,
+          "requestRowId": 252477,
+          "at": "2026-11-14T20:30:01.535809-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "CzaFXLNRfcA",
+      "slug": "review-CzaFXLNRfcA",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 30.675,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/CzaFXLNRfcA/",
+      "brand": "b_gardencreamery",
+      "by": "imadoniseats",
+      "postedBy": "imadoniseats",
+      "postedDate": "20231109",
+      "credit": "Review by @imadoniseats at Garden Creamery, San Francisco.",
+      "request": [
+        {
+          "rowId": 252478,
+          "requestRowId": 252479,
+          "at": "2026-11-14T20:30:16.726239-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodieimadoniseats",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "C3cB1lguRJY",
+      "slug": "review-C3cB1lguRJY",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.508,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/C3cB1lguRJY/",
+      "brand": "b_gardencreamery",
+      "by": "pastrywithjenn",
+      "postedBy": "pastrywithjenn",
+      "postedDate": "20240217",
+      "credit": "Review by @pastrywithjenn at Garden Creamery, San Francisco.",
+      "request": [
+        {
+          "rowId": 252481,
+          "requestRowId": 252482,
+          "at": "2026-11-14T20:30:52.451313-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+          "rank": "Heavy Hitter Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "C5L8JKrRyEi",
+      "slug": "review-C5L8JKrRyEi",
+      "startSeconds": 0,
+      "endSeconds": 6.155,
+      "sourceDuration": 6.155,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/C5L8JKrRyEi/",
+      "brand": "b_gardencreamery",
+      "by": "beaut.eats",
+      "postedBy": "beaut.eats",
+      "postedDate": "20240331",
+      "credit": "Review by @beaut.eats at Garden Creamery, San Francisco.",
+      "request": [
+        {
+          "rowId": 252484,
+          "requestRowId": 252485,
+          "at": "2026-11-14T20:31:52.926168-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DfveyMhvgj5",
+      "slug": "review-DfveyMhvgj5",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 34.067,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfveyMhvgj5/",
+      "brand": "b_myomyberkeley",
+      "by": "aliasharrief",
+      "postedBy": "aliasharrief",
+      "postedDate": "20261115",
+      "credit": "Review by @aliasharrief at My O My Berkeley, Berkeley.",
+      "request": [
+        {
+          "rowId": 252493,
+          "requestRowId": 252494,
+          "at": "2026-11-14T22:51:00.035874-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "Dfv8_iktUhb",
+      "slug": "review-Dfv8_iktUhb",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 41.682,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Dfv8_iktUhb/",
+      "brand": "b_dumplinghousesf",
+      "by": "internationalkee",
+      "postedBy": "internationalkee",
+      "postedDate": "20261115",
+      "credit": "Review by @internationalkee at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252526,
+          "requestRowId": 252527,
+          "at": "2026-11-15T08:17:17.350029-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodieinternationalkee",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DQ47uHxkuwf",
+      "slug": "review-DQ47uHxkuwf",
+      "startSeconds": 0,
+      "endSeconds": 10.567,
+      "sourceDuration": 10.567,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DQ47uHxkuwf/",
+      "brand": "b_dumplinghousesf",
+      "by": "apachegoddess1122",
+      "postedBy": "apachegoddess1122",
+      "postedDate": "20251110",
+      "credit": "Review by @apachegoddess1122 at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252529,
+          "requestRowId": 252530,
+          "at": "2026-11-15T08:18:25.355067-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+          "rank": "Heavy Hitter Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DKxaUoVSlRo",
+      "slug": "review-DKxaUoVSlRo",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 89.793,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DKxaUoVSlRo/",
+      "brand": "b_dumplinghousesf",
+      "by": "thesnacksensei",
+      "postedBy": "thesnacksensei",
+      "postedDate": "20250611",
+      "credit": "Review by @thesnacksensei at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252531,
+          "requestRowId": 252532,
+          "at": "2026-11-15T08:18:46.397783-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_grando",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DQ7asl1EgjR",
+      "slug": "review-DQ7asl1EgjR",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 78.509,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DQ7asl1EgjR/",
+      "brand": "b_dumplinghousesf",
+      "by": "thesauceboss_",
+      "postedBy": "thesauceboss_",
+      "postedDate": "20251111",
+      "credit": "Review by @thesauceboss_ at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252533,
+          "requestRowId": 252534,
+          "at": "2026-11-15T08:19:00.450844-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiethesauceboss",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DfBP_W1pxZL",
+      "slug": "review-DfBP_W1pxZL",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.239,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfBP_W1pxZL/",
+      "brand": "b_dumplinghousesf",
+      "by": "somedinggood",
+      "postedBy": "somedinggood",
+      "postedDate": "20261028",
+      "credit": "Review by @somedinggood at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252536,
+          "requestRowId": 252537,
+          "at": "2026-11-15T08:19:52.399772-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DdhVJARSWb2",
+      "slug": "review-DdhVJARSWb2",
+      "startSeconds": 0,
+      "endSeconds": 12.167,
+      "sourceDuration": 12.167,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DdhVJARSWb2/",
+      "brand": "b_dumplinghousesf",
+      "by": "phoebe8food",
+      "postedBy": "phoebe8food",
+      "postedDate": "20260920",
+      "credit": "Review by @phoebe8food at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252538,
+          "requestRowId": 252539,
+          "at": "2026-11-15T08:20:21.347059-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiephoebe8food",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DdKDX7fRA8z",
+      "slug": "review-DdKDX7fRA8z",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 144.778,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DdKDX7fRA8z/",
+      "brand": "b_dumplinghousesf",
+      "by": "luckybitez_",
+      "postedBy": "luckybitez_",
+      "postedDate": "20260911",
+      "credit": "Review by @luckybitez_ at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252541,
+          "requestRowId": 252542,
+          "at": "2026-11-15T08:21:40.982427-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre",
+          "rank": "Mediocre"
+        }
+      ],
+      "playOn": "b_foodieluckybitez",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DaVgEH3xQ2G",
+      "slug": "review-DaVgEH3xQ2G",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 26.917,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DaVgEH3xQ2G/",
+      "brand": "b_dumplinghousesf",
+      "by": "baeareafo0die",
+      "postedBy": "baeareafo0die",
+      "postedDate": "20260703",
+      "credit": "Review by @baeareafo0die at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252543,
+          "requestRowId": 252544,
+          "at": "2026-11-15T08:21:41.793457-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiebaeareafo0die",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DZBj92lphmU",
+      "slug": "review-DZBj92lphmU",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 56.0,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DZBj92lphmU/",
+      "brand": "b_dumplinghousesf",
+      "by": "foodgiveness",
+      "postedBy": "foodgiveness",
+      "postedDate": "20260601",
+      "credit": "Review by @foodgiveness at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252545,
+          "requestRowId": 252546,
+          "at": "2026-11-15T08:21:52.983982-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodiefoodgiveness",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DX7HKHnScZz",
+      "slug": "review-DX7HKHnScZz",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 34.344,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DX7HKHnScZz/",
+      "brand": "b_dumplinghousesf",
+      "by": "itsslydiia",
+      "postedBy": "itsslydiia",
+      "postedDate": "20260504",
+      "credit": "Review by @itsslydiia at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252547,
+          "requestRowId": 252548,
+          "at": "2026-11-15T08:22:31.068167-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DSWDJPfgVlg",
+      "slug": "review-DSWDJPfgVlg",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 136.634,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DSWDJPfgVlg/",
+      "brand": "b_dumplinghousesf",
+      "by": "andre___lucas",
+      "postedBy": "andre___lucas",
+      "postedDate": "20251217",
+      "credit": "Review by @andre___lucas at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252519,
+          "requestRowId": 252520,
+          "at": "2026-11-15T08:25:31.238899-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DSVo5Cskk3J",
+      "slug": "review-DSVo5Cskk3J",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 69.917,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DSVo5Cskk3J/",
+      "brand": "b_dumplinghousesf",
+      "by": "realtorandreviewer",
+      "postedBy": "realtorandreviewer",
+      "postedDate": "20251216",
+      "credit": "Review by @realtorandreviewer at Dumpling House, San Francisco.",
+      "request": [
+        {
+          "rowId": 252521,
+          "requestRowId": 252522,
+          "at": "2026-11-15T08:27:22.516363-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodierealtorandreviewer",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DJiexR5RHAJ",
+      "slug": "review-DJiexR5RHAJ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.534,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DJiexR5RHAJ/",
+      "brand": "b_thaitableberkeley",
+      "by": "_whatarethechances_",
+      "postedBy": "_whatarethechances_",
+      "postedDate": "20250512",
+      "credit": "Review by @_whatarethechances_ at Thai Table, Berkeley.",
+      "request": [
+        {
+          "rowId": 252554,
+          "requestRowId": 252555,
+          "at": "2026-11-15T08:33:38.058267-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DMb9jmdRty7",
+      "slug": "review-DMb9jmdRty7",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 47.394,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DMb9jmdRty7/",
+      "brand": "b_thaitableberkeley",
+      "by": "foodiejudy_sf",
+      "postedBy": "foodiejudy_sf",
+      "postedDate": "20250723",
+      "credit": "Review by @foodiejudy_sf at Thai Table, Berkeley.",
+      "request": [
+        {
+          "rowId": 252557,
+          "requestRowId": 252558,
+          "at": "2026-11-15T08:34:17.347626-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre",
+          "rank": "Mediocre"
+        }
+      ],
+      "playOn": "b_foodiefoodiejudysf",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DeCeAp6iLkh",
+      "slug": "review-DeCeAp6iLkh",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 44.979,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DeCeAp6iLkh/",
+      "brand": "b_thaitableberkeley",
+      "by": "thaitableberkeley",
+      "postedBy": "thaitableberkeley",
+      "postedDate": "20261003",
+      "credit": "Posted by @thaitableberkeley.",
+      "request": [
+        {
+          "rowId": 252559,
+          "requestRowId": 252560,
+          "at": "2026-11-15T08:35:01.990576-08:00",
+          "request": "Watch this video clip",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "Ddtw8_oCRBH",
+      "slug": "review-Ddtw8_oCRBH",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 49.716,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Ddtw8_oCRBH/",
+      "brand": "b_thaitableberkeley",
+      "by": "jetsetjanine",
+      "postedBy": "jetsetjanine",
+      "postedDate": "20260925",
+      "credit": "Review by @jetsetjanine at Thai Table, Berkeley.",
+      "request": [
+        {
+          "rowId": 252561,
+          "requestRowId": 252562,
+          "at": "2026-11-15T08:35:17.886647-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DY2kDouAQIW",
+      "slug": "review-DY2kDouAQIW",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 60.722,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DY2kDouAQIW/",
+      "brand": "b_thaitableberkeley",
+      "by": "mayakay.official",
+      "postedBy": "mayakay.official",
+      "postedDate": "20260527",
+      "credit": "Review by @mayakay.official at Thai Table, Berkeley.",
+      "request": [
+        {
+          "rowId": 252563,
+          "requestRowId": 252564,
+          "at": "2026-11-15T08:36:45.497582-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DdnE_C-ByVu",
+      "slug": "review-DdnE_C-ByVu",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 28.075,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DdnE_C-ByVu/",
+      "brand": "b_urbanmatchacastrovalley",
+      "by": "curatedby.natalie",
+      "postedBy": "curatedby.natalie",
+      "postedDate": "20260923",
+      "credit": "Review by @curatedby.natalie at Urban Matcha — Castro Valley, Castro Valley.",
+      "request": [
+        {
+          "rowId": 252566,
+          "requestRowId": 252567,
+          "at": "2026-11-15T08:40:37.019915-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "playOn": "b_foodiecuratedbynatalie",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "Dce7WAGO1iG",
+      "slug": "review-Dce7WAGO1iG",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 20.041,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Dce7WAGO1iG/",
+      "brand": "b_urbanmatchacastrovalley",
+      "by": "girl_being_crazy",
+      "postedBy": "girl_being_crazy",
+      "postedDate": "20260826",
+      "credit": "Review by @girl_being_crazy at Urban Matcha — Castro Valley, Castro Valley.",
+      "request": [
+        {
+          "rowId": 252569,
+          "requestRowId": 252570,
+          "at": "2026-11-15T08:41:27.380327-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "playOn": "b_foodiegirlbeingcrazy",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DfqfFHGJp9d",
+      "slug": "review-DfqfFHGJp9d",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 60.167,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DfqfFHGJp9d/",
+      "brand": "b_valleygoat",
+      "by": "celineeats",
+      "postedBy": "celineeats",
+      "postedDate": "20261113",
+      "credit": "Review by @celineeats at Valley Goat, Sunnyvale.",
+      "request": [
+        {
+          "rowId": 252574,
+          "requestRowId": 252575,
+          "at": "2026-11-15T08:47:36.510621-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DeU5oazSgdR",
+      "slug": "review-DeU5oazSgdR",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 55.9,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DeU5oazSgdR/",
+      "brand": "b_valleygoat",
+      "by": "naeemahtravels",
+      "postedBy": "naeemahtravels",
+      "postedDate": "20261010",
+      "credit": "Review by @naeemahtravels at Valley Goat, Sunnyvale.",
+      "request": [
+        {
+          "rowId": 252576,
+          "requestRowId": 252577,
+          "at": "2026-11-15T08:47:57.020864-08:00",
+          "request": "Clip this video plz",
+          "rank": null
+        }
+      ],
+      "playOn": "b_foodienaeemahtravels",
+      "disposition": "Plays on the creator page and in Watch. The business links to the original."
+    },
+    {
+      "code": "DeC817Xy2qR",
+      "slug": "review-DeC817Xy2qR",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 47.487,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DeC817Xy2qR/",
+      "brand": "b_valleygoat",
+      "by": "valinthebay_",
+      "postedBy": "valinthebay_",
+      "postedDate": "20261003",
+      "credit": "Review by @valinthebay_ at Valley Goat, Sunnyvale.",
+      "request": [
+        {
+          "rowId": 252579,
+          "requestRowId": 252580,
+          "at": "2026-11-15T08:48:45.363761-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "Dc1XlX5IJUU",
+      "slug": "review-Dc1XlX5IJUU",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 60.815,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/Dc1XlX5IJUU/",
+      "brand": "b_valleygoat",
+      "by": "firstdatedude",
+      "postedBy": "firstdatedude",
+      "postedDate": "20260903",
+      "credit": "Review by @firstdatedude at Valley Goat, Sunnyvale.",
+      "request": [
+        {
+          "rowId": 252584,
+          "requestRowId": 252585,
+          "at": "2026-11-15T08:49:57.297716-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter",
+          "rank": "Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    },
+    {
+      "code": "DcuM4YhhZqe",
+      "slug": "review-DcuM4YhhZqe",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 33.973,
+      "audio": true,
+      "batch": 119,
+      "source": "https://www.instagram.com/reel/DcuM4YhhZqe/",
+      "brand": "b_valleygoat",
+      "by": "sydneymlee_",
+      "postedBy": "sydneymlee_",
+      "postedDate": "20260831",
+      "credit": "Review by @sydneymlee_ at Valley Goat, Sunnyvale.",
+      "request": [
+        {
+          "rowId": 252587,
+          "requestRowId": 252588,
+          "at": "2026-11-15T08:50:31.164480-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie",
+          "rank": "Newbie"
+        }
+      ],
+      "disposition": "Plays under the business’s reviews and in Watch."
+    }
+  ],
+  "updatedIcons": [
+    "/icons/dough-bottega-v119.webp",
+    "/icons/cereal-bar-san-rafael-v119.webp",
+    "/icons/mt-pop-v119.webp",
+    "/icons/la-taqueria-sf-v119.webp",
+    "/icons/babyslow-v119.webp",
+    "/icons/latte-syndrome-v119.webp",
+    "/icons/krispy-joes-oakland-v119.webp",
+    "/icons/popoca-oakland-v119.webp",
+    "/icons/el-mono-v119.webp",
+    "/icons/garden-creamery-v119.webp",
+    "/icons/dumpling-house-sf-v119.webp",
+    "/icons/thai-table-berkeley-v119.webp",
+    "/icons/valley-goat-v119.webp",
+    "/icons/foodie-andoperdidatraveling-v119.webp",
+    "/icons/foodie-foodiemompickyfam-v119.webp",
+    "/icons/foodie-bayareajessbling-v119.webp",
+    "/icons/foodie-eatswithkath-v119.webp",
+    "/icons/foodie-cheycheyfromthebay-v119.webp",
+    "/icons/foodie-snackateriansf-v119.webp",
+    "/icons/foodie-nomnomnori-v119.webp",
+    "/icons/foodie-thefoodiesergio-v119.webp",
+    "/icons/foodie-munchingwmunches-v119.webp",
+    "/icons/foodie-tundemodupee-v119.webp",
+    "/icons/foodie-phamamiii-v119.webp",
+    "/icons/foodie-matt2o9-v119.webp",
+    "/icons/foodie-hididyoueatyet-v119.webp",
+    "/icons/foodie-yetiornot-v119.webp",
+    "/icons/foodie-internationalkee-v119.webp",
+    "/icons/foodie-pastrywithjenn-v119.webp",
+    "/icons/foodie-beauteats-v119.webp",
+    "/icons/foodie-apachegoddess1122-v119.webp",
+    "/icons/foodie-somedinggood-v119.webp",
+    "/icons/foodie-luckybitez-v119.webp",
+    "/icons/foodie-itsslydiia-v119.webp",
+    "/icons/foodie-andrelucas-v119.webp",
+    "/icons/foodie-foodiejudysf-v119.webp",
+    "/icons/foodie-curatedbynatalie-v119.webp",
+    "/icons/foodie-girlbeingcrazy-v119.webp",
+    "/icons/foodie-valinthebay-v119.webp",
+    "/icons/foodie-firstdatedude-v119.webp",
+    "/icons/foodie-sydneymlee-v119.webp"
+  ],
+  "updatedBrands": [
+    "b_thaitableberkeley"
+  ],
+  "categoryOnly": [
+    "b_mtpop",
+    "b_babyslow",
+    "b_lattesyndrome"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0482.png",
+      "submitted": "IMG_0482.png",
+      "path": "/icons/dough-bottega-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "https://cerealbarsanrafael.com/Logo_CerealBar.png",
+      "submitted": "IMG_0488.png",
+      "path": "/icons/cereal-bar-san-rafael-v119.webp",
+      "disposition": "Used the matching original wordmark from the business website."
+    },
+    {
+      "source": "IMG_0490.png",
+      "submitted": "IMG_0490.png",
+      "path": "/icons/mt-pop-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0496.png",
+      "submitted": "IMG_0496.png",
+      "path": "/icons/la-taqueria-sf-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0505.PNG",
+      "submitted": "IMG_0505.PNG",
+      "path": "/icons/babyslow-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0507.png",
+      "submitted": "IMG_0507.png",
+      "path": "/icons/latte-syndrome-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0561.png",
+      "submitted": "IMG_0561.png",
+      "path": "/icons/krispy-joes-oakland-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0567.png",
+      "submitted": "IMG_0567.png",
+      "path": "/icons/popoca-oakland-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0571.PNG",
+      "submitted": "IMG_0571.PNG",
+      "path": "/icons/el-mono-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0582.png",
+      "submitted": "IMG_0582.png",
+      "path": "/icons/garden-creamery-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0600.png",
+      "submitted": "IMG_0600.png",
+      "path": "/icons/dumpling-house-sf-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0611.png",
+      "submitted": "IMG_0611.png",
+      "path": "/icons/thai-table-berkeley-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "https://cdn.prod.website-files.com/6799674546712950cab502f8/67ae5e01e99dfbaee62b5d99_valley_goat.svg",
+      "submitted": "IMG_0617.PNG",
+      "path": "/icons/valley-goat-v119.webp",
+      "disposition": "Used the matching original wordmark from the business website."
+    },
+    {
+      "source": "IMG_0483.png",
+      "submitted": "IMG_0483.png",
+      "path": "/icons/foodie-andoperdidatraveling-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0484.png",
+      "submitted": "IMG_0484.png",
+      "path": "/icons/foodie-foodiemompickyfam-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0497.png",
+      "submitted": "IMG_0497.png",
+      "path": "/icons/foodie-bayareajessbling-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0498.PNG",
+      "submitted": "IMG_0498.PNG",
+      "path": "/icons/foodie-eatswithkath-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0499.png",
+      "submitted": "IMG_0499.png",
+      "path": "/icons/foodie-cheycheyfromthebay-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0500.PNG",
+      "submitted": "IMG_0500.PNG",
+      "path": "/icons/foodie-snackateriansf-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0502.png",
+      "submitted": "IMG_0502.png",
+      "path": "/icons/foodie-nomnomnori-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0503.png",
+      "submitted": "IMG_0503.png",
+      "path": "/icons/foodie-thefoodiesergio-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0510.png",
+      "submitted": "IMG_0510.png",
+      "path": "/icons/foodie-munchingwmunches-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0513.PNG",
+      "submitted": "IMG_0513.PNG",
+      "path": "/icons/foodie-tundemodupee-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0514.PNG",
+      "submitted": "IMG_0514.PNG",
+      "path": "/icons/foodie-phamamiii-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0537.png",
+      "submitted": "IMG_0537.png",
+      "path": "/icons/foodie-matt2o9-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0568.png",
+      "submitted": "IMG_0568.png",
+      "path": "/icons/foodie-hididyoueatyet-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0576.png",
+      "submitted": "IMG_0576.png",
+      "path": "/icons/foodie-yetiornot-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0584.png",
+      "submitted": "IMG_0584.png",
+      "path": "/icons/foodie-internationalkee-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0585.PNG",
+      "submitted": "IMG_0585.PNG",
+      "path": "/icons/foodie-pastrywithjenn-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0586.png",
+      "submitted": "IMG_0586.png",
+      "path": "/icons/foodie-beauteats-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0601.png",
+      "submitted": "IMG_0601.png",
+      "path": "/icons/foodie-apachegoddess1122-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0602.PNG",
+      "submitted": "IMG_0602.PNG",
+      "path": "/icons/foodie-somedinggood-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0603.png",
+      "submitted": "IMG_0603.png",
+      "path": "/icons/foodie-luckybitez-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0605.png",
+      "submitted": "IMG_0605.png",
+      "path": "/icons/foodie-itsslydiia-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0606.PNG",
+      "submitted": "IMG_0606.PNG",
+      "path": "/icons/foodie-andrelucas-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0612.png",
+      "submitted": "IMG_0612.png",
+      "path": "/icons/foodie-foodiejudysf-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0613.png",
+      "submitted": "IMG_0613.png",
+      "path": "/icons/foodie-curatedbynatalie-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0614.png",
+      "submitted": "IMG_0614.png",
+      "path": "/icons/foodie-girlbeingcrazy-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0618.png",
+      "submitted": "IMG_0618.png",
+      "path": "/icons/foodie-valinthebay-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0619.png",
+      "submitted": "IMG_0619.png",
+      "path": "/icons/foodie-firstdatedude-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    },
+    {
+      "source": "IMG_0620.png",
+      "submitted": "IMG_0620.png",
+      "path": "/icons/foodie-sydneymlee-v119.webp",
+      "disposition": "Cropped the matching public profile artwork and checked the phone tile."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252264,
+      "at": "2026-11-13T19:00:45.585885-08:00",
+      "text": "https://www.instagram.com/reel/DftFcjahjEZ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252265,
+      "at": "2026-11-13T19:00:45.718971-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252266,
+      "at": "2026-11-13T19:16:58.265400-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0482.png",
+        "IMG_0478.png",
+        "IMG_0479.png"
+      ]
+    },
+    {
+      "rowId": 252267,
+      "at": "2026-11-13T19:16:58.922968-08:00",
+      "text": "https://www.doughbottega.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252268,
+      "at": "2026-11-13T19:16:59.008128-08:00",
+      "text": "Vallejo • Eats \nBEASTY • Pizza",
+      "attachments": []
+    },
+    {
+      "rowId": 252269,
+      "at": "2026-11-13T19:18:16.607776-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0483.png"
+      ]
+    },
+    {
+      "rowId": 252270,
+      "at": "2026-11-13T19:18:17.047494-08:00",
+      "text": "https://www.instagram.com/reel/DSbWNVIDp29/",
+      "attachments": []
+    },
+    {
+      "rowId": 252271,
+      "at": "2026-11-13T19:18:17.153838-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252272,
+      "at": "2026-11-13T19:18:39.493262-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0484.png"
+      ]
+    },
+    {
+      "rowId": 252273,
+      "at": "2026-11-13T19:18:39.881429-08:00",
+      "text": "https://www.instagram.com/reel/DOoIy6CiTBG/",
+      "attachments": []
+    },
+    {
+      "rowId": 252274,
+      "at": "2026-11-13T19:18:39.980708-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252275,
+      "at": "2026-11-13T19:19:16.758246-08:00",
+      "text": "https://www.instagram.com/reel/DNB3-q1SWmg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252276,
+      "at": "2026-11-13T19:19:16.846494-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252289,
+      "at": "2026-11-13T19:41:53.777730-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0488.png",
+        "IMG_0487.PNG",
+        "IMG_0489.png"
+      ]
+    },
+    {
+      "rowId": 252290,
+      "at": "2026-11-13T19:41:54.329241-08:00",
+      "text": "https://cerealbarsanrafael.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252291,
+      "at": "2026-11-13T19:41:54.410647-08:00",
+      "text": "San Rafael • Sweets \nBEASTY • Sweets",
+      "attachments": []
+    },
+    {
+      "rowId": 252292,
+      "at": "2026-11-13T19:42:24.395457-08:00",
+      "text": "https://www.instagram.com/reel/Ddxh6UmvbHV/",
+      "attachments": []
+    },
+    {
+      "rowId": 252293,
+      "at": "2026-11-13T19:42:24.474924-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252294,
+      "at": "2026-11-13T19:43:30.123207-08:00",
+      "text": "https://www.instagram.com/p/DfsUpregaTd/",
+      "attachments": []
+    },
+    {
+      "rowId": 252295,
+      "at": "2026-11-13T19:43:30.220807-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252300,
+      "at": "2026-11-13T20:16:32.225511-08:00",
+      "text": "BEASTY • Dancers",
+      "attachments": [
+        "IMG_0491.png",
+        "IMG_0490.png"
+      ]
+    },
+    {
+      "rowId": 252301,
+      "at": "2026-11-13T20:17:45.008672-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252302,
+      "at": "2026-11-13T20:18:00.614252-08:00",
+      "text": "https://www.instagram.com/mtpop.vn",
+      "attachments": []
+    },
+    {
+      "rowId": 252304,
+      "at": "2026-11-13T20:49:04.544528-08:00",
+      "text": "San Francisco • Eats \nBEASTY • Burritos \nNew Category",
+      "attachments": [
+        "IMG_0493.png",
+        "IMG_0494.png",
+        "IMG_0496.png"
+      ]
+    },
+    {
+      "rowId": 252305,
+      "at": "2026-11-13T20:51:03.148126-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0497.png"
+      ]
+    },
+    {
+      "rowId": 252306,
+      "at": "2026-11-13T20:51:03.612665-08:00",
+      "text": "https://www.instagram.com/reel/Ddg8VnQJhrI/",
+      "attachments": []
+    },
+    {
+      "rowId": 252307,
+      "at": "2026-11-13T20:51:03.717974-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252308,
+      "at": "2026-11-13T20:51:15.968281-08:00",
+      "text": "https://www.instagram.com/reel/DLB396oOniD/",
+      "attachments": []
+    },
+    {
+      "rowId": 252309,
+      "at": "2026-11-13T20:51:16.093714-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252310,
+      "at": "2026-11-13T20:51:34.677899-08:00",
+      "text": "https://www.instagram.com/reel/DBSQ1XEyS56/",
+      "attachments": []
+    },
+    {
+      "rowId": 252311,
+      "at": "2026-11-13T20:51:34.766923-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252312,
+      "at": "2026-11-13T20:52:06.836845-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0498.PNG"
+      ]
+    },
+    {
+      "rowId": 252313,
+      "at": "2026-11-13T20:52:07.218184-08:00",
+      "text": "https://www.instagram.com/reel/DAphOOjRL_3/",
+      "attachments": []
+    },
+    {
+      "rowId": 252314,
+      "at": "2026-11-13T20:52:07.311902-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252315,
+      "at": "2026-11-13T20:53:13.792422-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0499.png"
+      ]
+    },
+    {
+      "rowId": 252316,
+      "at": "2026-11-13T20:53:14.211700-08:00",
+      "text": "https://www.instagram.com/reel/C17W4xgrKrS/",
+      "attachments": []
+    },
+    {
+      "rowId": 252317,
+      "at": "2026-11-13T20:53:14.323928-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252318,
+      "at": "2026-11-13T20:54:14.211731-08:00",
+      "text": "https://www.instagram.com/reel/DNPGM6Ivssb/",
+      "attachments": []
+    },
+    {
+      "rowId": 252319,
+      "at": "2026-11-13T20:54:14.301776-08:00",
+      "text": "Clip this video plz \nHeavy Hitter Heavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252320,
+      "at": "2026-11-13T20:54:48.355991-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0500.PNG"
+      ]
+    },
+    {
+      "rowId": 252321,
+      "at": "2026-11-13T20:54:48.758719-08:00",
+      "text": "https://www.instagram.com/reel/CoFbH5dDcJR/",
+      "attachments": []
+    },
+    {
+      "rowId": 252322,
+      "at": "2026-11-13T20:54:48.851493-08:00",
+      "text": "Clip this video plz \nFoodie\nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252323,
+      "at": "2026-11-13T20:55:02.424591-08:00",
+      "text": "https://www.instagram.com/reel/DW9x1DBkot7/",
+      "attachments": []
+    },
+    {
+      "rowId": 252324,
+      "at": "2026-11-13T20:55:02.515589-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252325,
+      "at": "2026-11-13T20:56:20.175757-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0502.png"
+      ]
+    },
+    {
+      "rowId": 252326,
+      "at": "2026-11-13T20:56:20.581965-08:00",
+      "text": "https://www.instagram.com/reel/DPAY-3kD1Sj/",
+      "attachments": []
+    },
+    {
+      "rowId": 252327,
+      "at": "2026-11-13T20:56:20.691985-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252328,
+      "at": "2026-11-13T20:57:13.896679-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0503.png"
+      ]
+    },
+    {
+      "rowId": 252329,
+      "at": "2026-11-13T20:57:14.245849-08:00",
+      "text": "https://www.instagram.com/reel/DUjY5EHkpKw/",
+      "attachments": []
+    },
+    {
+      "rowId": 252330,
+      "at": "2026-11-13T20:57:14.355144-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252331,
+      "at": "2026-11-13T20:57:48.882403-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": [
+        "IMG_0504.png"
+      ]
+    },
+    {
+      "rowId": 252332,
+      "at": "2026-11-13T20:57:56.883750-08:00",
+      "text": "https://www.instagram.com/reel/C17W4xgrKrS/",
+      "attachments": []
+    },
+    {
+      "rowId": 252333,
+      "at": "2026-11-13T20:57:57.012904-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252334,
+      "at": "2026-11-13T20:59:59.719932-08:00",
+      "text": "https://www.instagram.com/reel/DLG-uTcO-nZ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252335,
+      "at": "2026-11-13T20:59:59.817694-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252336,
+      "at": "2026-11-13T21:16:14.739127-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0505.PNG"
+      ]
+    },
+    {
+      "rowId": 252337,
+      "at": "2026-11-13T21:16:15.075027-08:00",
+      "text": "https://www.instagram.com/reel/DfSJdeoJkYi/",
+      "attachments": []
+    },
+    {
+      "rowId": 252338,
+      "at": "2026-11-13T21:16:15.156328-08:00",
+      "text": "BEASTY • Dancers",
+      "attachments": []
+    },
+    {
+      "rowId": 252340,
+      "at": "2026-11-14T07:52:28.031888-08:00",
+      "text": "Bay Area\nBEASTY • Pop up/Catering \nNew Category",
+      "attachments": [
+        "IMG_0508.png",
+        "IMG_0507.png"
+      ]
+    },
+    {
+      "rowId": 252341,
+      "at": "2026-11-14T07:52:54.356529-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0510.png"
+      ]
+    },
+    {
+      "rowId": 252342,
+      "at": "2026-11-14T07:52:54.716450-08:00",
+      "text": "https://www.instagram.com/reel/DfaWa1oimCO/",
+      "attachments": []
+    },
+    {
+      "rowId": 252343,
+      "at": "2026-11-14T07:52:54.836366-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252344,
+      "at": "2026-11-14T07:53:43.670300-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0513.PNG"
+      ]
+    },
+    {
+      "rowId": 252345,
+      "at": "2026-11-14T07:53:44.135154-08:00",
+      "text": "https://www.instagram.com/reel/DfQPpzpSxya/",
+      "attachments": []
+    },
+    {
+      "rowId": 252346,
+      "at": "2026-11-14T07:53:44.294676-08:00",
+      "text": "Clip this video plz \n\nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252347,
+      "at": "2026-11-14T07:54:05.389767-08:00",
+      "text": "https://www.instagram.com/reel/Dehs7DKPTUb/",
+      "attachments": []
+    },
+    {
+      "rowId": 252348,
+      "at": "2026-11-14T07:54:05.479661-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252349,
+      "at": "2026-11-14T07:54:24.127318-08:00",
+      "text": "https://www.instagram.com/reel/DeSOVYDPWup/",
+      "attachments": []
+    },
+    {
+      "rowId": 252350,
+      "at": "2026-11-14T07:54:24.299620-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252351,
+      "at": "2026-11-14T07:55:21.965176-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0514.PNG"
+      ]
+    },
+    {
+      "rowId": 252352,
+      "at": "2026-11-14T07:55:22.410242-08:00",
+      "text": "https://www.instagram.com/reel/DeQpaMGMsyx/",
+      "attachments": []
+    },
+    {
+      "rowId": 252353,
+      "at": "2026-11-14T07:55:22.521065-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252401,
+      "at": "2026-11-14T11:38:22.560823-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Private scheduling message."
+    },
+    {
+      "rowId": 252405,
+      "at": "2026-11-14T12:50:55.244331-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Private reply reaction."
+    },
+    {
+      "rowId": 252407,
+      "at": "2026-11-14T13:22:08.759779-08:00",
+      "text": "https://www.instagram.com/reel/DfvBbm5z_Ia/",
+      "attachments": []
+    },
+    {
+      "rowId": 252408,
+      "at": "2026-11-14T13:22:08.871886-08:00",
+      "text": "Clip this video plz \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252409,
+      "at": "2026-11-14T13:23:26.582432-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": [
+        "IMG_0537.png"
+      ]
+    },
+    {
+      "rowId": 252410,
+      "at": "2026-11-14T13:23:27.109193-08:00",
+      "text": "https://www.instagram.com/reel/DYDtODXgVsl/",
+      "attachments": []
+    },
+    {
+      "rowId": 252433,
+      "at": "2026-11-14T18:49:15.091317-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0559.PNG",
+        "IMG_0561.png",
+        "IMG_0562.png"
+      ]
+    },
+    {
+      "rowId": 252434,
+      "at": "2026-11-14T18:49:16.771477-08:00",
+      "text": "https://www.krispyjoes.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252435,
+      "at": "2026-11-14T18:49:17.100731-08:00",
+      "text": "Oakland • Eats \nBEASTY • Cafe",
+      "attachments": []
+    },
+    {
+      "rowId": 252436,
+      "at": "2026-11-14T18:49:36.131202-08:00",
+      "text": "https://www.instagram.com/reel/DfvmlgfR8oG/",
+      "attachments": []
+    },
+    {
+      "rowId": 252437,
+      "at": "2026-11-14T18:49:36.226366-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252438,
+      "at": "2026-11-14T18:50:22.070925-08:00",
+      "text": "https://www.instagram.com/reel/DdZdCxjT6Nz/",
+      "attachments": []
+    },
+    {
+      "rowId": 252439,
+      "at": "2026-11-14T18:50:22.200564-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252440,
+      "at": "2026-11-14T18:50:39.671383-08:00",
+      "text": "https://www.instagram.com/reel/DdXmljSpM-M/",
+      "attachments": []
+    },
+    {
+      "rowId": 252441,
+      "at": "2026-11-14T18:50:39.765659-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252442,
+      "at": "2026-11-14T18:51:47.086299-08:00",
+      "text": "https://www.instagram.com/reel/DcwH8SYpfIg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252443,
+      "at": "2026-11-14T18:51:47.190781-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252444,
+      "at": "2026-11-14T19:18:38.935639-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0565.PNG",
+        "IMG_0567.png",
+        "IMG_0563.png"
+      ]
+    },
+    {
+      "rowId": 252445,
+      "at": "2026-11-14T19:18:40.070697-08:00",
+      "text": "https://www.popocaoakland.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252446,
+      "at": "2026-11-14T19:18:40.185871-08:00",
+      "text": "Oakland • Eats \nBEASTY • El Salvadoran",
+      "attachments": []
+    },
+    {
+      "rowId": 252447,
+      "at": "2026-11-14T19:19:31.660711-08:00",
+      "text": "https://www.instagram.com/reel/DPFhDWgDwAo/",
+      "attachments": []
+    },
+    {
+      "rowId": 252448,
+      "at": "2026-11-14T19:19:31.760638-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252449,
+      "at": "2026-11-14T19:20:35.710802-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0568.png"
+      ]
+    },
+    {
+      "rowId": 252450,
+      "at": "2026-11-14T19:20:36.245771-08:00",
+      "text": "https://www.instagram.com/reel/DBCBsowS4SH/",
+      "attachments": []
+    },
+    {
+      "rowId": 252451,
+      "at": "2026-11-14T19:20:36.321167-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252452,
+      "at": "2026-11-14T19:21:46.726454-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0569.PNG"
+      ]
+    },
+    {
+      "rowId": 252453,
+      "at": "2026-11-14T19:21:47.500724-08:00",
+      "text": "https://www.instagram.com/reel/C4qnJRlvHRU/",
+      "attachments": []
+    },
+    {
+      "rowId": 252454,
+      "at": "2026-11-14T19:21:47.601166-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252455,
+      "at": "2026-11-14T19:22:03.125806-08:00",
+      "text": "https://www.instagram.com/snackateriansf",
+      "attachments": []
+    },
+    {
+      "rowId": 252456,
+      "at": "2026-11-14T19:23:31.451045-08:00",
+      "text": "https://www.instagram.com/p/Dftopj8G6n7/",
+      "attachments": []
+    },
+    {
+      "rowId": 252457,
+      "at": "2026-11-14T19:23:31.540763-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252458,
+      "at": "2026-11-14T19:29:00.225770-08:00",
+      "text": "https://www.instagram.com/reel/Dft0hkfCIAL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252459,
+      "at": "2026-11-14T19:29:00.330644-08:00",
+      "text": "Clip this video plz \nLovely’s",
+      "attachments": []
+    },
+    {
+      "rowId": 252460,
+      "at": "2026-11-14T19:45:39.291526-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0571.PNG",
+        "IMG_0572.png",
+        "IMG_0575.PNG",
+        "IMG_0573.png",
+        "IMG_0574.PNG"
+      ]
+    },
+    {
+      "rowId": 252461,
+      "at": "2026-11-14T19:45:40.465745-08:00",
+      "text": "https://www.elmonofresh.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252462,
+      "at": "2026-11-14T19:45:40.566319-08:00",
+      "text": "El Cerrito • Eats \nBerkeley • Eats \nBEASTY • Peruvian\nNew Category",
+      "attachments": []
+    },
+    {
+      "rowId": 252463,
+      "at": "2026-11-14T19:46:34.340983-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0576.png"
+      ]
+    },
+    {
+      "rowId": 252464,
+      "at": "2026-11-14T19:46:35.031006-08:00",
+      "text": "https://www.instagram.com/reel/DfvDr-2T4Uo/",
+      "attachments": []
+    },
+    {
+      "rowId": 252465,
+      "at": "2026-11-14T19:46:35.106692-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252467,
+      "at": "2026-11-14T19:52:03.176276-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Unrelated private screenshot."
+    },
+    {
+      "rowId": 252469,
+      "at": "2026-11-14T20:17:02.935751-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Private reply."
+    },
+    {
+      "rowId": 252470,
+      "at": "2026-11-14T20:25:58.341423-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0580.png",
+        "IMG_0582.png",
+        "IMG_0578.png",
+        "IMG_0583.PNG"
+      ]
+    },
+    {
+      "rowId": 252471,
+      "at": "2026-11-14T20:25:59.875900-08:00",
+      "text": "https://gardencreamery.co/links",
+      "attachments": []
+    },
+    {
+      "rowId": 252472,
+      "at": "2026-11-14T20:25:59.980814-08:00",
+      "text": "San Francisco • Sweets \nBEASTY • Ice Cream",
+      "attachments": []
+    },
+    {
+      "rowId": 252473,
+      "at": "2026-11-14T20:29:57.631356-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0584.png"
+      ]
+    },
+    {
+      "rowId": 252474,
+      "at": "2026-11-14T20:29:58.200757-08:00",
+      "text": "https://www.instagram.com/reel/DfLXK8GP2jF/",
+      "attachments": []
+    },
+    {
+      "rowId": 252475,
+      "at": "2026-11-14T20:29:58.315677-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252476,
+      "at": "2026-11-14T20:30:01.535809-08:00",
+      "text": "https://www.instagram.com/reel/DWB2bXLFJsg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252477,
+      "at": "2026-11-14T20:30:01.645695-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252478,
+      "at": "2026-11-14T20:30:16.726239-08:00",
+      "text": "https://www.instagram.com/reel/CzaFXLNRfcA/",
+      "attachments": []
+    },
+    {
+      "rowId": 252479,
+      "at": "2026-11-14T20:30:16.816285-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252480,
+      "at": "2026-11-14T20:30:51.911520-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0585.PNG"
+      ]
+    },
+    {
+      "rowId": 252481,
+      "at": "2026-11-14T20:30:52.451313-08:00",
+      "text": "https://www.instagram.com/reel/C3cB1lguRJY/",
+      "attachments": []
+    },
+    {
+      "rowId": 252482,
+      "at": "2026-11-14T20:30:52.551305-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252483,
+      "at": "2026-11-14T20:31:52.396707-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0586.png"
+      ]
+    },
+    {
+      "rowId": 252484,
+      "at": "2026-11-14T20:31:52.926168-08:00",
+      "text": "https://www.instagram.com/reel/C5L8JKrRyEi/",
+      "attachments": []
+    },
+    {
+      "rowId": 252485,
+      "at": "2026-11-14T20:31:53.031387-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252487,
+      "at": "2026-11-14T20:54:04.371671-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Separate product discussion, outside directory intake."
+    },
+    {
+      "rowId": 252493,
+      "at": "2026-11-14T22:51:00.035874-08:00",
+      "text": "https://www.instagram.com/reel/DfveyMhvgj5/",
+      "attachments": []
+    },
+    {
+      "rowId": 252494,
+      "at": "2026-11-14T22:51:00.120603-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252523,
+      "at": "2026-11-15T08:16:53.922871-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0599.png",
+        "IMG_0598.png",
+        "IMG_0600.png"
+      ]
+    },
+    {
+      "rowId": 252524,
+      "at": "2026-11-15T08:16:54.077324-08:00",
+      "text": "https://takeout.minitable.net/v2/#/welcome/s6d0d351dc50ee66a5275c83faf17804f",
+      "attachments": []
+    },
+    {
+      "rowId": 252525,
+      "at": "2026-11-15T08:16:54.183283-08:00",
+      "text": "San Francisco • Eats \nBEASTY • Dumplings",
+      "attachments": []
+    },
+    {
+      "rowId": 252526,
+      "at": "2026-11-15T08:17:17.350029-08:00",
+      "text": "https://www.instagram.com/reel/Dfv8_iktUhb/",
+      "attachments": []
+    },
+    {
+      "rowId": 252527,
+      "at": "2026-11-15T08:17:17.450975-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252528,
+      "at": "2026-11-15T08:18:24.974322-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0601.png"
+      ]
+    },
+    {
+      "rowId": 252529,
+      "at": "2026-11-15T08:18:25.355067-08:00",
+      "text": "https://www.instagram.com/reel/DQ47uHxkuwf/",
+      "attachments": []
+    },
+    {
+      "rowId": 252530,
+      "at": "2026-11-15T08:18:25.468521-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252531,
+      "at": "2026-11-15T08:18:46.397783-08:00",
+      "text": "https://www.instagram.com/reel/DKxaUoVSlRo/",
+      "attachments": []
+    },
+    {
+      "rowId": 252532,
+      "at": "2026-11-15T08:18:46.487727-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252533,
+      "at": "2026-11-15T08:19:00.450844-08:00",
+      "text": "https://www.instagram.com/reel/DQ7asl1EgjR/",
+      "attachments": []
+    },
+    {
+      "rowId": 252534,
+      "at": "2026-11-15T08:19:00.540149-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252535,
+      "at": "2026-11-15T08:19:51.765044-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0602.PNG"
+      ]
+    },
+    {
+      "rowId": 252536,
+      "at": "2026-11-15T08:19:52.399772-08:00",
+      "text": "https://www.instagram.com/reel/DfBP_W1pxZL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252537,
+      "at": "2026-11-15T08:19:52.540305-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252538,
+      "at": "2026-11-15T08:20:21.347059-08:00",
+      "text": "https://www.instagram.com/reel/DdhVJARSWb2/",
+      "attachments": []
+    },
+    {
+      "rowId": 252539,
+      "at": "2026-11-15T08:20:21.453085-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252540,
+      "at": "2026-11-15T08:21:40.362217-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0603.png"
+      ]
+    },
+    {
+      "rowId": 252541,
+      "at": "2026-11-15T08:21:40.982427-08:00",
+      "text": "https://www.instagram.com/reel/DdKDX7fRA8z/",
+      "attachments": []
+    },
+    {
+      "rowId": 252542,
+      "at": "2026-11-15T08:21:41.095944-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252543,
+      "at": "2026-11-15T08:21:41.793457-08:00",
+      "text": "https://www.instagram.com/reel/DaVgEH3xQ2G/",
+      "attachments": []
+    },
+    {
+      "rowId": 252544,
+      "at": "2026-11-15T08:21:41.928980-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252545,
+      "at": "2026-11-15T08:21:52.983982-08:00",
+      "text": "https://www.instagram.com/reel/DZBj92lphmU/",
+      "attachments": []
+    },
+    {
+      "rowId": 252546,
+      "at": "2026-11-15T08:21:53.098806-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252547,
+      "at": "2026-11-15T08:22:31.068167-08:00",
+      "text": "https://www.instagram.com/reel/DX7HKHnScZz/",
+      "attachments": []
+    },
+    {
+      "rowId": 252548,
+      "at": "2026-11-15T08:22:31.157863-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252549,
+      "at": "2026-11-15T08:24:36.958400-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0605.png"
+      ]
+    },
+    {
+      "rowId": 252550,
+      "at": "2026-11-15T08:24:37.044890-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252518,
+      "at": "2026-11-15T08:25:30.912886-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0606.PNG"
+      ]
+    },
+    {
+      "rowId": 252519,
+      "at": "2026-11-15T08:25:31.238899-08:00",
+      "text": "https://www.instagram.com/reel/DSWDJPfgVlg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252520,
+      "at": "2026-11-15T08:25:31.316900-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252521,
+      "at": "2026-11-15T08:27:22.516363-08:00",
+      "text": "https://www.instagram.com/reel/DSVo5Cskk3J/",
+      "attachments": []
+    },
+    {
+      "rowId": 252522,
+      "at": "2026-11-15T08:27:22.605607-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252551,
+      "at": "2026-11-15T08:33:21.409358-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0611.png",
+        "IMG_0609.png"
+      ]
+    },
+    {
+      "rowId": 252552,
+      "at": "2026-11-15T08:33:21.502397-08:00",
+      "text": "https://www.thaitableberkeley.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252553,
+      "at": "2026-11-15T08:33:21.587410-08:00",
+      "text": "Berkeley • Eats \nBEASTY • Thai\nNew Category",
+      "attachments": []
+    },
+    {
+      "rowId": 252554,
+      "at": "2026-11-15T08:33:38.058267-08:00",
+      "text": "https://www.instagram.com/reel/DJiexR5RHAJ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252555,
+      "at": "2026-11-15T08:33:38.149758-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252556,
+      "at": "2026-11-15T08:34:16.957959-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0612.png"
+      ]
+    },
+    {
+      "rowId": 252557,
+      "at": "2026-11-15T08:34:17.347626-08:00",
+      "text": "https://www.instagram.com/reel/DMb9jmdRty7/",
+      "attachments": []
+    },
+    {
+      "rowId": 252558,
+      "at": "2026-11-15T08:34:17.452755-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252559,
+      "at": "2026-11-15T08:35:01.990576-08:00",
+      "text": "https://www.instagram.com/reel/DeCeAp6iLkh/",
+      "attachments": []
+    },
+    {
+      "rowId": 252560,
+      "at": "2026-11-15T08:35:02.087753-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252561,
+      "at": "2026-11-15T08:35:17.886647-08:00",
+      "text": "https://www.instagram.com/reel/Ddtw8_oCRBH/",
+      "attachments": []
+    },
+    {
+      "rowId": 252562,
+      "at": "2026-11-15T08:35:17.983867-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252563,
+      "at": "2026-11-15T08:36:45.497582-08:00",
+      "text": "https://www.instagram.com/reel/DY2kDouAQIW/",
+      "attachments": []
+    },
+    {
+      "rowId": 252564,
+      "at": "2026-11-15T08:36:45.580930-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252565,
+      "at": "2026-11-15T08:40:36.610809-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0613.png"
+      ]
+    },
+    {
+      "rowId": 252566,
+      "at": "2026-11-15T08:40:37.019915-08:00",
+      "text": "https://www.instagram.com/reel/DdnE_C-ByVu/",
+      "attachments": []
+    },
+    {
+      "rowId": 252567,
+      "at": "2026-11-15T08:40:37.130141-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252568,
+      "at": "2026-11-15T08:41:26.995813-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0614.png"
+      ]
+    },
+    {
+      "rowId": 252569,
+      "at": "2026-11-15T08:41:27.380327-08:00",
+      "text": "https://www.instagram.com/reel/Dce7WAGO1iG/",
+      "attachments": []
+    },
+    {
+      "rowId": 252570,
+      "at": "2026-11-15T08:41:27.492431-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252571,
+      "at": "2026-11-15T08:47:16.409527-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0617.PNG"
+      ]
+    },
+    {
+      "rowId": 252572,
+      "at": "2026-11-15T08:47:16.827496-08:00",
+      "text": "https://www.valleygoatsv.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252573,
+      "at": "2026-11-15T08:47:16.939594-08:00",
+      "text": "Sunnyvale • Eats \nBEASTY • Eats",
+      "attachments": []
+    },
+    {
+      "rowId": 252574,
+      "at": "2026-11-15T08:47:36.510621-08:00",
+      "text": "https://www.instagram.com/reel/DfqfFHGJp9d/",
+      "attachments": []
+    },
+    {
+      "rowId": 252575,
+      "at": "2026-11-15T08:47:36.593322-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252576,
+      "at": "2026-11-15T08:47:57.020864-08:00",
+      "text": "https://www.instagram.com/reel/DeU5oazSgdR/",
+      "attachments": []
+    },
+    {
+      "rowId": 252577,
+      "at": "2026-11-15T08:47:57.109622-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252578,
+      "at": "2026-11-15T08:48:45.018837-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0618.png"
+      ]
+    },
+    {
+      "rowId": 252579,
+      "at": "2026-11-15T08:48:45.363761-08:00",
+      "text": "https://www.instagram.com/reel/DeC817Xy2qR/",
+      "attachments": []
+    },
+    {
+      "rowId": 252580,
+      "at": "2026-11-15T08:48:45.461747-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252582,
+      "at": "2026-11-15T08:48:51.164896-08:00",
+      "text": "",
+      "attachments": [],
+      "disposition": "Reaction removal. No deletion request."
+    },
+    {
+      "rowId": 252583,
+      "at": "2026-11-15T08:49:56.951475-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0619.png"
+      ]
+    },
+    {
+      "rowId": 252584,
+      "at": "2026-11-15T08:49:57.297716-08:00",
+      "text": "https://www.instagram.com/reel/Dc1XlX5IJUU/",
+      "attachments": []
+    },
+    {
+      "rowId": 252585,
+      "at": "2026-11-15T08:49:57.425941-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252586,
+      "at": "2026-11-15T08:50:30.826747-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0620.png"
+      ]
+    },
+    {
+      "rowId": 252587,
+      "at": "2026-11-15T08:50:31.164480-08:00",
+      "text": "https://www.instagram.com/reel/DcuM4YhhZqe/",
+      "attachments": []
+    },
+    {
+      "rowId": 252588,
+      "at": "2026-11-15T08:50:31.290737-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    }
+  ],
+  "held": [
+    {
+      "rows": [
+        252301,
+        252302
+      ],
+      "reason": "MT Pop’s profile and dancer listing are included. The separate watch request includes no reel or video URL."
+    },
+    {
+      "rows": [
+        252331
+      ],
+      "reason": "The portrait is unlabeled. The next link repeats the reel already matched to Chelsea Davis and a different supplied portrait. The review is included once."
+    }
+  ],
+  "priorUnresolved": [
+    {
+      "batch": 117,
+      "reason": "No identifiable original was sent for the Wing Bros Heavy Hitter request."
+    }
+  ]
+}

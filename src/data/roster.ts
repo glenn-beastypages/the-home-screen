@@ -1898,6 +1898,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   */
   seed('al-pastor-papi', 'Al Pastor Papi', 'Al Pastor Papi', 'Mexican grill', '#E8197F', {
     icon: 'al-pastor-papi-v99',
+    clip: {"src": "/clips/review-Dftopj8G6n7.mp4", "poster": "/clips/review-Dftopj8G6n7-poster.webp", "href": "https://www.instagram.com/p/Dftopj8G6n7/", "credit": "Posted by @alpastorpapi415.", "platform": "Instagram"},
     logoTemplate: 'monogram', logoInitials: 'AP', logoFace: 'condensed',
     site: 'https://www.alpastorpapisf.com/',
     address: '232 O’Farrell St, San Francisco, CA',
@@ -4708,7 +4709,8 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* Berkeley • Eats */
   seed('thai-table-berkeley', 'Thai Table', 'Thai Table', 'Thai, homemade style', '#BD0D0D', {
-    icon: 'thai-table-berkeley',
+    icon: 'thai-table-berkeley-v119',
+    hours: 'Daily noon–9:30pm',
     tagline: 'Thai, homemade style, in Berkeley',
     site: 'https://www.thaitableberkeley.com/',
     orderUrl: 'https://order.toasttab.com/online/thai-table',

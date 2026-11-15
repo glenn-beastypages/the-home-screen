@@ -1265,4 +1265,19 @@ export const ADDED_ON: Record<string, string> = {
   b_lifeofkaiya: '2026-11-13',
   b_oxandtiger: '2026-11-13',
   b_mysteryskoolai: '2026-11-13',
+
+  // Batch 119 intake dates.
+  b_doughbottega: "2026-11-13",
+  b_cerealbarsanrafael: "2026-11-13",
+  b_mtpop: "2026-11-13",
+  b_babyslow: "2026-11-13",
+  b_lataqueriasf: "2026-11-13",
+  b_lattesyndrome: "2026-11-13",
+  b_krispyjoesoakland: "2026-11-14",
+  b_popocaoakland: "2026-11-14",
+  b_elmonoelcerrito: "2026-11-14",
+  b_elmonoberkeley: "2026-11-14",
+  b_gardencreamery: "2026-11-14",
+  b_dumplinghousesf: "2026-11-15",
+  b_valleygoat: "2026-11-15",
 }

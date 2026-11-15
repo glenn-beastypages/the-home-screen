@@ -149,6 +149,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   // Glenn, November 7: each requested cuisine gets its own searchable category.
   { kind: 'poke', heading: 'Poke', about: 'Poke bowls and poke shops', wall: wall('sushi'), test: /pok[eé]|pok[eé] bowls/i },
   { kind: 'cupcakes', heading: 'Cupcakes', about: 'Cupcake shops and custom cupcakes', wall: wall('bakery'), test: /cupcakes?|cupcakery/i },
+  { kind: 'burritos', heading: 'Burritos', about: 'Taquerias and shops for burritos', wall: wall('diner'), test: /\bburritos?\b/i },
+  { kind: 'popupcatering', heading: 'Pop-up/Catering', about: 'Food and drink pop-ups available for events', wall: wall('catering'), test: /pop[ -]?up/i },
+  { kind: 'elsalvadoran', heading: 'El Salvadoran', about: 'Salvadoran food and pupuserías', wall: wall('diner'), test: /salvadoran|pupuser[ií]a/i },
+  { kind: 'thai', heading: 'Thai', about: 'Thai restaurants and Thai cooking', wall: wall('diner'), test: /\bthai\b/i, not: /massage|tea shop/i },
   { kind: 'peruvian', heading: 'Peruvian', about: 'Peruvian restaurants and ceviche', wall: wall('diner'), test: /peruvian|cevicher/i },
   { kind: 'jamaican', heading: 'Jamaican', about: 'Jamaican restaurants and jerk cooking', wall: wall('bbq'), test: /jamaican|jerk chicken/i },
   { kind: 'friedchicken', heading: 'Fried Chicken', about: 'Fried chicken shops and sandwiches', wall: wall('diner'), test: /fried chicken|hot chicken|chicken wings/i },

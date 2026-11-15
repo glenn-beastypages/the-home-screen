@@ -348,8 +348,9 @@ for (const [id, want, expect] of [
   ['b_bollywoodpizzalivermore', 'Bollywood Pizza', { free: true }],
   ['b_basqhaus', 'Basq Haus', { rows: 13, hours: 'Pre-order only', call: '415-988-2528' }],
 ]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
-  await p.waitForTimeout(600)
+  await p.goto(`${base}/?b=${id}`, { waitUntil: 'domcontentloaded', timeout: 45000 })
+  // Business pages can keep fetching media. Wait for the rendered title.
+  await p.locator('.brand-body h1, .app-window h1').first().waitFor({ timeout: 15000 }).catch(() => {})
   /* The whole menu sits behind a bar since 2026-09-09; the rows are counted
      with it open, which is how a customer counts them too. */
   await p.locator('.brand-menu-drop .menu-picks-bar').first().click({ timeout: 2500 }).catch(() => {})

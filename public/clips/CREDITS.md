@@ -1140,3 +1140,69 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 
 <!-- Batch 117 — Mystery Skool AI. -->
 | `b117-dfq84mfu_e0.mp4` | [Original post](https://www.instagram.com/reel/Dfq84mFu_E0/) | AI fan film featuring Sodom from Final Fight. Posted by @mysteryskool.ai. |
+
+<!-- Batch 119 excerpts. -->
+| `review-DftFcjahjEZ.mp4` | [Original](https://www.instagram.com/reel/DftFcjahjEZ/) | Review by @bayarea_fooddreamz at Crabby Crabby Newark, Newark. 3–18s |
+| `review-DSbWNVIDp29.mp4` | [Original](https://www.instagram.com/reel/DSbWNVIDp29/) | Review by @andoperdidatraveling at Dough Bottega, Vallejo. 3–18s |
+| `review-DOoIy6CiTBG.mp4` | [Original](https://www.instagram.com/reel/DOoIy6CiTBG/) | Review by @foodiemompickyfam at Dough Bottega, Vallejo. 3–18s |
+| `b119-dnb3-q1swmg.mp4` | [Original](https://www.instagram.com/reel/DNB3-q1SWmg/) | Posted by @doughbottega. 3–18s |
+| `review-Ddxh6UmvbHV.mp4` | [Original](https://www.instagram.com/reel/Ddxh6UmvbHV/) | Review by @bestinthegamme at Cereal Bar, San Rafael. 3–18s |
+| `b119-dfsupregatd.mp4` | [Original](https://www.instagram.com/p/DfsUpregaTd/) | Posted by @cereal_bar001. 3–18s |
+| `review-Ddg8VnQJhrI.mp4` | [Original](https://www.instagram.com/reel/Ddg8VnQJhrI/) | Review by @bayareajessbling at La Taqueria, San Francisco. 3–18s |
+| `review-DLB396oOniD.mp4` | [Original](https://www.instagram.com/reel/DLB396oOniD/) | Review by @festusfeasts at La Taqueria, San Francisco. 3–18s |
+| `review-DBSQ1XEyS56.mp4` | [Original](https://www.instagram.com/reel/DBSQ1XEyS56/) | Review by @grubwitmike at La Taqueria, San Francisco. 3–18s |
+| `review-DAphOOjRL_3.mp4` | [Original](https://www.instagram.com/reel/DAphOOjRL_3/) | Review by @eatswithkath at La Taqueria, San Francisco. 0–13.028s |
+| `review-C17W4xgrKrS.mp4` | [Original](https://www.instagram.com/reel/C17W4xgrKrS/) | Review by @cheycheyfromthebay at La Taqueria, San Francisco. 3–18s |
+| `review-DNPGM6Ivssb.mp4` | [Original](https://www.instagram.com/reel/DNPGM6Ivssb/) | Review by @hungry4munchies at La Taqueria, San Francisco. 3–18s |
+| `review-CoFbH5dDcJR.mp4` | [Original](https://www.instagram.com/reel/CoFbH5dDcJR/) | Review by @snackateriansf at La Taqueria, San Francisco. 0–14.466s |
+| `review-DW9x1DBkot7.mp4` | [Original](https://www.instagram.com/reel/DW9x1DBkot7/) | Review by @foodgiveness at La Taqueria, San Francisco. 3–18s |
+| `review-DPAY-3kD1Sj.mp4` | [Original](https://www.instagram.com/reel/DPAY-3kD1Sj/) | Review by @nomnom_nori at La Taqueria, San Francisco. 3–18s |
+| `review-DUjY5EHkpKw.mp4` | [Original](https://www.instagram.com/reel/DUjY5EHkpKw/) | Review by @thefoodiesergio at La Taqueria, San Francisco. 3–18s |
+| `review-DLG-uTcO-nZ.mp4` | [Original](https://www.instagram.com/reel/DLG-uTcO-nZ/) | Review by @charlikestoeat at La Taqueria, San Francisco. 3–18s |
+| `b119-dfsjdeojkyi.mp4` | [Original](https://www.instagram.com/reel/DfSJdeoJkYi/) | Posted by @babyslow_official. 3–18s |
+| `review-DfaWa1oimCO.mp4` | [Original](https://www.instagram.com/reel/DfaWa1oimCO/) | Review by @munchingwmunches at Latte Syndrome, Oakland. 3–18s |
+| `review-DfQPpzpSxya.mp4` | [Original](https://www.instagram.com/reel/DfQPpzpSxya/) | Review by @tundemodupee at Latte Syndrome, Oakland. 12–27s |
+| `b119-dehs7dkptub.mp4` | [Original](https://www.instagram.com/reel/Dehs7DKPTUb/) | Posted by @latte.syndrome. 0–12.007s |
+| `review-DeSOVYDPWup.mp4` | [Original](https://www.instagram.com/reel/DeSOVYDPWup/) | Review by @eatswithglory at Latte Syndrome, Oakland. 0–10.613s |
+| `review-DeQpaMGMsyx.mp4` | [Original](https://www.instagram.com/reel/DeQpaMGMsyx/) | Review by @phamamiii at Latte Syndrome, Oakland. 3–18s |
+| `review-DfvBbm5z_Ia.mp4` | [Original](https://www.instagram.com/reel/DfvBbm5z_Ia/) | Review by @thesnacksensei at Inda + Mely, San Bruno. 3–18s |
+| `review-DYDtODXgVsl.mp4` | [Original](https://www.instagram.com/reel/DYDtODXgVsl/) | Review by @matt_2o9 at Inda + Mely, San Bruno. 3–18s |
+| `review-DfvmlgfR8oG.mp4` | [Original](https://www.instagram.com/reel/DfvmlgfR8oG/) | Review by @grubwitmike at Krispy Joe’s Coffee House, Oakland. 3–18s |
+| `review-DdZdCxjT6Nz.mp4` | [Original](https://www.instagram.com/reel/DdZdCxjT6Nz/) | Review by @mukbangyourmama at Krispy Joe’s Coffee House, Oakland. 0–15s |
+| `b119-dcwh8sypfig.mp4` | [Original](https://www.instagram.com/reel/DcwH8SYpfIg/) | Posted by @krispyjoes. 0–5.834s |
+| `review-DPFhDWgDwAo.mp4` | [Original](https://www.instagram.com/reel/DPFhDWgDwAo/) | Filmed and posted by @cinemundollc for Salvi Food Tour at Popoca. 3–18s |
+| `review-DBCBsowS4SH.mp4` | [Original](https://www.instagram.com/reel/DBCBsowS4SH/) | Review by @hididyoueatyet at Popoca, Oakland. 3–18s |
+| `review-C4qnJRlvHRU.mp4` | [Original](https://www.instagram.com/reel/C4qnJRlvHRU/) | Filmed by @snackateriansf. Posted by @visitoakland for Oakland Restaurant Week 2024. 3–18s |
+| `review-Dftopj8G6n7.mp4` | [Original](https://www.instagram.com/p/Dftopj8G6n7/) | Posted by @alpastorpapi415. 0–6.155s |
+| `review-Dft0hkfCIAL.mp4` | [Original](https://www.instagram.com/reel/Dft0hkfCIAL/) | Review by @carynkramerhomes at Lovely's Burgers, Oakland. 0–15s |
+| `review-DfvDr-2T4Uo.mp4` | [Original](https://www.instagram.com/reel/DfvDr-2T4Uo/) | Review by @yetiornot at El Mono, Berkeley. 8–23s |
+| `review-DfLXK8GP2jF.mp4` | [Original](https://www.instagram.com/reel/DfLXK8GP2jF/) | Review by @internationalkee at Garden Creamery, San Francisco. 3–18s |
+| `review-DWB2bXLFJsg.mp4` | [Original](https://www.instagram.com/reel/DWB2bXLFJsg/) | Review by @hungere.for.diy at Garden Creamery, San Francisco. 3–18s |
+| `review-CzaFXLNRfcA.mp4` | [Original](https://www.instagram.com/reel/CzaFXLNRfcA/) | Review by @imadoniseats at Garden Creamery, San Francisco. 3–18s |
+| `review-C3cB1lguRJY.mp4` | [Original](https://www.instagram.com/reel/C3cB1lguRJY/) | Review by @pastrywithjenn at Garden Creamery, San Francisco. 3–18s |
+| `review-C5L8JKrRyEi.mp4` | [Original](https://www.instagram.com/reel/C5L8JKrRyEi/) | Review by @beaut.eats at Garden Creamery, San Francisco. 0–6.155s |
+| `review-DfveyMhvgj5.mp4` | [Original](https://www.instagram.com/reel/DfveyMhvgj5/) | Review by @aliasharrief at My O My Berkeley, Berkeley. 3–18s |
+| `review-Dfv8_iktUhb.mp4` | [Original](https://www.instagram.com/reel/Dfv8_iktUhb/) | Review by @internationalkee at Dumpling House, San Francisco. 3–18s |
+| `review-DQ47uHxkuwf.mp4` | [Original](https://www.instagram.com/reel/DQ47uHxkuwf/) | Review by @apachegoddess1122 at Dumpling House, San Francisco. 0–10.567s |
+| `review-DKxaUoVSlRo.mp4` | [Original](https://www.instagram.com/reel/DKxaUoVSlRo/) | Review by @thesnacksensei at Dumpling House, San Francisco. 3–18s |
+| `review-DQ7asl1EgjR.mp4` | [Original](https://www.instagram.com/reel/DQ7asl1EgjR/) | Review by @thesauceboss_ at Dumpling House, San Francisco. 3–18s |
+| `review-DfBP_W1pxZL.mp4` | [Original](https://www.instagram.com/reel/DfBP_W1pxZL/) | Review by @somedinggood at Dumpling House, San Francisco. 3–18s |
+| `review-DdhVJARSWb2.mp4` | [Original](https://www.instagram.com/reel/DdhVJARSWb2/) | Review by @phoebe8food at Dumpling House, San Francisco. 0–12.167s |
+| `review-DdKDX7fRA8z.mp4` | [Original](https://www.instagram.com/reel/DdKDX7fRA8z/) | Review by @luckybitez_ at Dumpling House, San Francisco. 3–18s |
+| `review-DaVgEH3xQ2G.mp4` | [Original](https://www.instagram.com/reel/DaVgEH3xQ2G/) | Review by @baeareafo0die at Dumpling House, San Francisco. 3–18s |
+| `review-DZBj92lphmU.mp4` | [Original](https://www.instagram.com/reel/DZBj92lphmU/) | Review by @foodgiveness at Dumpling House, San Francisco. 3–18s |
+| `review-DX7HKHnScZz.mp4` | [Original](https://www.instagram.com/reel/DX7HKHnScZz/) | Review by @itsslydiia at Dumpling House, San Francisco. 3–18s |
+| `review-DSWDJPfgVlg.mp4` | [Original](https://www.instagram.com/reel/DSWDJPfgVlg/) | Review by @andre___lucas at Dumpling House, San Francisco. 3–18s |
+| `review-DSVo5Cskk3J.mp4` | [Original](https://www.instagram.com/reel/DSVo5Cskk3J/) | Review by @realtorandreviewer at Dumpling House, San Francisco. 3–18s |
+| `review-DJiexR5RHAJ.mp4` | [Original](https://www.instagram.com/reel/DJiexR5RHAJ/) | Review by @_whatarethechances_ at Thai Table, Berkeley. 3–18s |
+| `review-DMb9jmdRty7.mp4` | [Original](https://www.instagram.com/reel/DMb9jmdRty7/) | Review by @foodiejudy_sf at Thai Table, Berkeley. 3–18s |
+| `review-DeCeAp6iLkh.mp4` | [Original](https://www.instagram.com/reel/DeCeAp6iLkh/) | Posted by @thaitableberkeley. 3–18s |
+| `review-Ddtw8_oCRBH.mp4` | [Original](https://www.instagram.com/reel/Ddtw8_oCRBH/) | Review by @jetsetjanine at Thai Table, Berkeley. 3–18s |
+| `review-DY2kDouAQIW.mp4` | [Original](https://www.instagram.com/reel/DY2kDouAQIW/) | Review by @mayakay.official at Thai Table, Berkeley. 3–18s |
+| `review-DdnE_C-ByVu.mp4` | [Original](https://www.instagram.com/reel/DdnE_C-ByVu/) | Review by @curatedby.natalie at Urban Matcha — Castro Valley, Castro Valley. 3–18s |
+| `review-Dce7WAGO1iG.mp4` | [Original](https://www.instagram.com/reel/Dce7WAGO1iG/) | Review by @girl_being_crazy at Urban Matcha — Castro Valley, Castro Valley. 3–18s |
+| `review-DfqfFHGJp9d.mp4` | [Original](https://www.instagram.com/reel/DfqfFHGJp9d/) | Review by @celineeats at Valley Goat, Sunnyvale. 3–18s |
+| `review-DeU5oazSgdR.mp4` | [Original](https://www.instagram.com/reel/DeU5oazSgdR/) | Review by @naeemahtravels at Valley Goat, Sunnyvale. 3–18s |
+| `review-DeC817Xy2qR.mp4` | [Original](https://www.instagram.com/reel/DeC817Xy2qR/) | Review by @valinthebay_ at Valley Goat, Sunnyvale. 3–18s |
+| `review-Dc1XlX5IJUU.mp4` | [Original](https://www.instagram.com/reel/Dc1XlX5IJUU/) | Review by @firstdatedude at Valley Goat, Sunnyvale. 3–18s |
+| `review-DcuM4YhhZqe.mp4` | [Original](https://www.instagram.com/reel/DcuM4YhhZqe/) | Review by @sydneymlee_ at Valley Goat, Sunnyvale. 3–18s |
