@@ -61,7 +61,11 @@ export async function auditBatch(number) {
   })
   const base = live || 'http://127.0.0.1:' + port, iphone = process.env.BROWSER === 'webkit'
   const browser = await (iphone ? webkit : chromium).launch(iphone ? {} : { args: ['--mute-audio', '--disable-quic'] })
-  const page = await browser.newPage({ ...(iphone ? devices['iPhone 13'] : {}), viewport: { width: 393, height: 852 } })
+  const page = await browser.newPage({
+    ...(iphone ? devices['iPhone 13'] : {}),
+    viewport: { width: 393, height: 852 },
+    ...(number === 119 ? { reducedMotion: 'reduce' } : {}),
+  })
   if (number === 105) await page.clock.install({ time: new Date('2026-11-07T12:00:00-08:00') })
   const errors = []
   page.on('pageerror', e => errors.push(String(e))); page.on('crash', () => errors.push('browser process crashed'))
@@ -151,7 +155,8 @@ export async function auditBatch(number) {
       else await expand(page.locator('.brand-clip-drop > button'))
       const video = page.locator((index < 0 ? '.brand-clip-drop ' : '') + 'video[src="/clips/' + post.slug + '.mp4"]')
       await video.waitFor(); await video.scrollIntoViewIfNeeded()
-      await video.evaluate(async v => { v.muted = true; await v.play().catch(e => { if (e.name !== 'AbortError') throw e }) })
+      assert.equal(await video.evaluate(v => v.muted), true, post.code + ' opens muted')
+      await video.evaluate(async v => { await v.play().catch(e => { if (e.name !== 'AbortError') throw e }) })
       await page.waitForFunction(v => v.muted && v.currentTime > .1 && !v.error, await video.elementHandle(), { timeout: 20000 })
       await video.evaluate(v => v.pause())
       const r = await fetch(base + '/clips/' + post.slug + '-poster.webp'); assert(r.ok)

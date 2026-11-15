@@ -60,6 +60,7 @@ export function FoodieReviews({ title, reviews, side, api, here }: {
                     src={r.src}
                     poster={r.poster}
                     controls
+                    muted
                     playsInline
                     preload="none"
                     onPlay={() => {
