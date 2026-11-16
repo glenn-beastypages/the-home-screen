@@ -1,0 +1,298 @@
+{
+  "release": {
+    "commit": "af7e2e01061644c14c0e25c51a0a3fdd8469d4df",
+    "entry": "/assets/index-BvNb1jvb.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-16T04:32:21.260524+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/scolaris-good-eats-v121.webp",
+      "sha256": "72672807eefad9465027311ce2cf9c5f41ac345daef50e955a926cd08205283f"
+    },
+    "deploy": "dep-dbt89649v7es73cn2uqg",
+    "finishedAt": "2026-11-16T04:32:00.306448Z"
+  },
+  "through": "2026-11-15T19:03:14.204713-08:00",
+  "messages": 33,
+  "listings": 3,
+  "keptSeats": 2335,
+  "newSeats": 7,
+  "playedSilentlyPerBrowser": 12,
+  "watchFilesRangeChecked": 955,
+  "iphoneEntryChecks": 16,
+  "checks": {
+    "archive-live": 0,
+    "assets-live": 0,
+    "goods-live": 0,
+    "iphone-entry-live": 0,
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "full-live": 0
+  },
+  "archive": {
+    "at": "2026-11-16T04:32:36.726Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-BvNb1jvb.js",
+    "chunks": 10,
+    "messages": 7765,
+    "uniqueInstagramIds": 1053,
+    "matched": 1001,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through121": 326,
+    "exactIconHashes": 253,
+    "exactPosterHashes": 326
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "assets": [
+    {
+      "path": "/icons/scolaris-good-eats-v121.webp",
+      "sha256": "72672807eefad9465027311ce2cf9c5f41ac345daef50e955a926cd08205283f",
+      "bytes": 11354
+    },
+    {
+      "path": "/icons/marley-gs-pizzeria-v121.webp",
+      "sha256": "a46d0faea01c93be20232eca6d906ba89ae9af3a16290d8f12520c57c306a4f1",
+      "bytes": 16194
+    },
+    {
+      "path": "/icons/foodie-baydish-v121.webp",
+      "sha256": "554e6c7e181e4526b70169853acc5244c937d94d587cb56e574c9868aaad9a7a",
+      "bytes": 40966
+    },
+    {
+      "path": "/icons/foodie-mattiasblanco-v121.webp",
+      "sha256": "53f920765f67f26c32a510039c7a17cab46add52ea4302cf1a6768f792059df8",
+      "bytes": 35370
+    },
+    {
+      "path": "/icons/foodie-oaktowngrubhub-v121.webp",
+      "sha256": "08d3c37de11501d4262da8ae03c4605c0193862847a262f843fdeb62746438b0",
+      "bytes": 45466
+    },
+    {
+      "path": "/icons/foodie-taylorandtylor-v121.webp",
+      "sha256": "87ce88cfd5f42512d8b4e1feec557a812a36536fc20ae148b1e51a4248637993",
+      "bytes": 26106
+    },
+    {
+      "path": "/clips/review-DfxX9Dhue66.mp4",
+      "sha256": "7b7d6f6366d96325f5068e6acbaecf742076f825fdd70cacef19eac158e58448",
+      "bytes": 1935526
+    },
+    {
+      "path": "/clips/review-DfxX9Dhue66-poster.webp",
+      "sha256": "37035abd6956ed177a6d4becc36685493bb4076f8eb96dda9bf7c04f0c99c1a3",
+      "bytes": 73348
+    },
+    {
+      "path": "/clips/review-DQhqCY3EoVs.mp4",
+      "sha256": "ddab8491e6ca119c580116143b1ec333feb2db913c306458c37561cbb5fa180f",
+      "bytes": 2376639
+    },
+    {
+      "path": "/clips/review-DQhqCY3EoVs-poster.webp",
+      "sha256": "65683f2f60973ceda94ea00308e22c85bc58707d948a58553f0aca88a1c51b10",
+      "bytes": 75868
+    },
+    {
+      "path": "/clips/review-DfxlkoKhAs1.mp4",
+      "sha256": "633c27c33526d10407669ed8e2f6630860d3db6cfa03bd205f1b8d732b43e081",
+      "bytes": 2496419
+    },
+    {
+      "path": "/clips/review-DfxlkoKhAs1-poster.webp",
+      "sha256": "5265873e05f32864709ebddc277e65452b6f1f39d90f4cca25e766ef629080b1",
+      "bytes": 39518
+    },
+    {
+      "path": "/clips/review-DMdUo7ypjWO.mp4",
+      "sha256": "16ebf455b2f092229dfc6d080f03f0a498a827741b8ebf08b03879f943827ddd",
+      "bytes": 2547231
+    },
+    {
+      "path": "/clips/review-DMdUo7ypjWO-poster.webp",
+      "sha256": "b5eb19cd72c52db38049c494e42913fb0d2f1628630b9b9f9a97b106debc4b78",
+      "bytes": 45180
+    },
+    {
+      "path": "/clips/review-DPmr41vgRAJ.mp4",
+      "sha256": "06206d100d6f72c2c089897f74d2565f4d0e0de2fdf800d73306dfb23d10f33e",
+      "bytes": 2940520
+    },
+    {
+      "path": "/clips/review-DPmr41vgRAJ-poster.webp",
+      "sha256": "bf9bf79cde36fa9592cc3c01f41debf5fca6f8c65bca0e37ae186c612a14156c",
+      "bytes": 56598
+    },
+    {
+      "path": "/clips/review-DPXBJ_GgVpg.mp4",
+      "sha256": "75ec56ed5ffd29f5f64e606d1728ecd41566cfc50e716ff7efeb3b956108d7b3",
+      "bytes": 2345882
+    },
+    {
+      "path": "/clips/review-DPXBJ_GgVpg-poster.webp",
+      "sha256": "08c3eb765eb769240b0b6a57b8add072ff6a696451c27eae85b87341a8d31057",
+      "bytes": 38260
+    },
+    {
+      "path": "/clips/review-DWFh4s0D-nP.mp4",
+      "sha256": "33dfe0a0e66fd3d0f564314e0395c4d989a2917a3044954f03c787e4de54c3c7",
+      "bytes": 1542196
+    },
+    {
+      "path": "/clips/review-DWFh4s0D-nP-poster.webp",
+      "sha256": "c362f7314261cbdf787a32844c2cd18260db0fcfbd866dde33499c11b7c23268",
+      "bytes": 72988
+    },
+    {
+      "path": "/clips/review-BmGstDEhnvX.mp4",
+      "sha256": "17ca1f6d407e927bb878688dae440a3d534e60faa799bf5cc80c474ad76551ef",
+      "bytes": 1016647
+    },
+    {
+      "path": "/clips/review-BmGstDEhnvX-poster.webp",
+      "sha256": "7b11155e1ef4815d0a1ffb62115844136393bf8df61756e7ba8041e945a21d73",
+      "bytes": 21796
+    },
+    {
+      "path": "/clips/review-DOKBVVxEtPP.mp4",
+      "sha256": "13045afba2264b7a472dd7a0bb820f9222b85f7e114e1cb69000b62dd00becd7",
+      "bytes": 2535047
+    },
+    {
+      "path": "/clips/review-DOKBVVxEtPP-poster.webp",
+      "sha256": "e1c3faece9b489e82137d644b659a6e5fa376f4dbac2e0f3aa3ad164831f1da9",
+      "bytes": 68332
+    },
+    {
+      "path": "/clips/review-DbtyrqZhCTQ.mp4",
+      "sha256": "168d8af2aaaa21f8def2154a500683481ceb9fb0b991868ab1e7f0632705e31a",
+      "bytes": 2339673
+    },
+    {
+      "path": "/clips/review-DbtyrqZhCTQ-poster.webp",
+      "sha256": "1c3f13b85c26a6ac83917a849a74f8f7de471da3a5e294106d712a291916fba0",
+      "bytes": 63868
+    },
+    {
+      "path": "/clips/review-DXNqLPBCV__.mp4",
+      "sha256": "ad35a2ff0c685af165cd617e6361612c1c6fee3907bcb74634bca1da0dbfe9a3",
+      "bytes": 2725713
+    },
+    {
+      "path": "/clips/review-DXNqLPBCV__-poster.webp",
+      "sha256": "c5cb38f72f93014bda361b012afc4a68db1742cf4641c4b14620086c5e02ba21",
+      "bytes": 74982
+    },
+    {
+      "path": "/clips/review-DSY4p6PkR3f.mp4",
+      "sha256": "d4c63e52294a260604a05364c04d52481308e7473d2464c5978a63a634448a7c",
+      "bytes": 2091945
+    },
+    {
+      "path": "/clips/review-DSY4p6PkR3f-poster.webp",
+      "sha256": "b8190059cc41facdf7fc2feabedcc0f215b8dd8033a11b0e75d5a4d154ad37ef",
+      "bytes": 78854
+    }
+  ],
+  "visibleChrome": {
+    "scolarisMenu": true,
+    "mutedReview": true,
+    "almanacListing": true,
+    "scolarisMenuRows": 46,
+    "almanacMenuItems": 20,
+    "almanacAddress": "651 W Tower Ave Alameda, CA 94501",
+    "mutedReviewPath": "/clips/review-BmGstDEhnvX.mp4",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852,
+        "scrollWidth": 393
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scrollWidth": 320
+      }
+    ],
+    "bundle": "/assets/index-BvNb1jvb.js"
+  }
+}
