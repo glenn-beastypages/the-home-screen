@@ -850,3 +850,11 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 <!-- Batch 120 — Petaluma Pie Company and Janexis. -->
 | `petaluma-pie-company-v120.webp` | https://petalumapiecompany.com/cdn/shop/files/logo_72dpi_2000x.jpg?v=1613516440 | Original matching 500-pixel mark from the business website. The full ring and lettering fit the phone tile. |
 | `foodie-girasoljanexis-v120.webp` | IMG_0634.png | Public portrait supplied for the review author. Cropped to remove surrounding controls. |
+
+<!-- Batch 121 artwork. -->
+| `scolaris-good-eats-v121.webp` | IMG_0655.png | Supplied orange variant of the verified Scolari’s wordmark. Retained all lettering. |
+| `marley-gs-pizzeria-v121.webp` | IMG_0663.png | Supplied green and red variant of the shop’s slice wordmark. Retained all lettering. |
+| `foodie-baydish-v121.webp` | IMG_0658.png | Supplied public portrait matched to the requesting reel’s author. Retained the whole visible profile portrait. |
+| `foodie-mattiasblanco-v121.webp` | IMG_0659.PNG | Explicit replacement request following Mattias Blanco’s reel. Matched by posting account. |
+| `foodie-oaktowngrubhub-v121.webp` | IMG_0665.PNG | Supplied public avatar matched to the creator’s reel. The profile crops the lower edge of the drawing. The tile preserves the visible mark and keeps the Oaktown Grub label below it. |
+| `foodie-taylorandtylor-v121.webp` | IMG_0666.png | Supplied public portrait matched to the requesting reel’s author. Retained the whole visible profile portrait. |

@@ -1210,3 +1210,17 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 <!-- Batch 120 — Petaluma Pie Company excerpts. -->
 | `b120-dfxbd7jxatl.mp4` | [Original](https://www.instagram.com/reel/DfxBD7jxAtL/) | Posted by @petalumapie. The shop features its Chicken Tinga hand pie. 3–18s |
 | `review-DbTtoXbTuBL.mp4` | [Original](https://www.instagram.com/reel/DbTtoXbTuBL/) | Review by @girasoljanexis at Petaluma Pie Company. 3–18s |
+
+<!-- Batch 121 — Alameda and Rise Woodfire. -->
+| `review-DfxX9Dhue66.mp4` | [Original](https://www.instagram.com/reel/DfxX9Dhue66/) | Carla Charisse’s Rise & Shine weekend brunch review in San Mateo. Posted by @carlacharisse_. 3–18s |
+| `review-DQhqCY3EoVs.mp4` | [Original](https://www.instagram.com/reel/DQhqCY3EoVs/) | Review by @thesnacksensei at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-DfxlkoKhAs1.mp4` | [Original](https://www.instagram.com/reel/DfxlkoKhAs1/) | Review by @baydish at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-DMdUo7ypjWO.mp4` | [Original](https://www.instagram.com/reel/DMdUo7ypjWO/) | Review by @celineeats at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-DPmr41vgRAJ.mp4` | [Original](https://www.instagram.com/reel/DPmr41vgRAJ/) | Review by @bayarea_fooddreamz at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-DPXBJ_GgVpg.mp4` | [Original](https://www.instagram.com/reel/DPXBJ_GgVpg/) | Review by @mattiasblanco at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-DWFh4s0D-nP.mp4` | [Original](https://www.instagram.com/reel/DWFh4s0D-nP/) | Review by @grubwitmike at Scolari’s Good Eats, Alameda. 3–18s |
+| `review-BmGstDEhnvX.mp4` | [Original](https://www.instagram.com/p/BmGstDEhnvX/) | Food Network’s Diners, Drive-Ins and Dives footage with Guy Fieri and E-40. Posted by @e40. 8–23s |
+| `review-DOKBVVxEtPP.mp4` | [Original](https://www.instagram.com/reel/DOKBVVxEtPP/) | Review by @celineeats at Marley G’s Pizzeria, Alameda. 3–18s |
+| `review-DbtyrqZhCTQ.mp4` | [Original](https://www.instagram.com/reel/DbtyrqZhCTQ/) | Review by @oaktowngrubhub at Marley G’s Pizzeria, Alameda. 3–18s |
+| `review-DXNqLPBCV__.mp4` | [Original](https://www.instagram.com/reel/DXNqLPBCV__/) | Review by @cheycheyfromthebay at the Marley G’s pizza window inside Almanac Adventureland. 3–18s |
+| `review-DSY4p6PkR3f.mp4` | [Original](https://www.instagram.com/reel/DSY4p6PkR3f/) | Review by @taylorandtylor at Marley G’s Pizzeria, Alameda. 3–18s |

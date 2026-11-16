@@ -2790,4 +2790,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   "beasty-pie-0": "b_petalumapiecompany",
   "beasty-sweets2-3": "b_petalumapiecompany",
   "beasty-foodies2-345": "b_foodiegirasoljanexis",
+
+  // Batch 121 — Alameda, More burgers, More pizza and Foodies.
+  "alameda-goods2-3": "b_scolarisgoodeats",
+  "alameda-goods2-4": "b_marleygspizzeria",
+  "alameda-goods2-5": "b_marleygspizzeriaalmanac",
+  "beasty-burgers2-4": "b_scolarisgoodeats",
+  "beasty-pizza2-3": "b_marleygspizzeria",
+  "beasty-foodies2-346": "b_foodiebaydish",
+  "beasty-foodies2-347": "b_foodietaylorandtylor",
 }

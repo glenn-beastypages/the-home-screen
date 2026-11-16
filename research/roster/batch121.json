@@ -1,0 +1,1396 @@
+{
+  "cutoff": "2026-11-15T19:03:14.204713-08:00",
+  "listings": [
+    {
+      "slug": "scolaris-good-eats",
+      "name": "Scolari’s Good Eats",
+      "label": "Scolari’s",
+      "cuisine": "Burgers, hot dogs and sandwiches",
+      "tagline": "Park Street counter known for the blueberry bacon blue cheeseburger and Nashville hot chicken.",
+      "icon": "scolaris-good-eats-v121",
+      "category": "Burgers",
+      "color": "#f9a63d",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "Specials",
+          "items": [
+            [
+              "Fontina Bacon Cheeseburger",
+              "",
+              2200
+            ],
+            [
+              "Mushroom Flatbread",
+              "",
+              1400
+            ],
+            [
+              "Indian Butter Chicken Grilled Cheese",
+              "",
+              1600
+            ],
+            [
+              "Fried Pickles",
+              "",
+              1200
+            ],
+            [
+              "Blueberry Thyme Grilled Cheese",
+              "",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Burgers",
+          "items": [
+            [
+              "Scolari's Classic Cheeseburger",
+              "",
+              1750
+            ],
+            [
+              "Wimpy Burger",
+              "",
+              900
+            ],
+            [
+              "Blueberry Bacon Blue Cheeseburger Au Poivre",
+              "",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Chicken",
+          "items": [
+            [
+              "Nashville Hot Good Ol' Boy Sandwich",
+              "",
+              1650
+            ],
+            [
+              "Chicken Lettuce Cups",
+              "",
+              1650
+            ],
+            [
+              "Gochujang Chicken Sandwich",
+              "",
+              1700
+            ],
+            [
+              "Buffalo Lettuce Cups",
+              "",
+              1650
+            ],
+            [
+              "Pickle Brined Fried Chicken Tenders",
+              "",
+              1500
+            ]
+          ]
+        },
+        {
+          "name": "Other Sandwiches",
+          "items": [
+            [
+              "Wimpy Fillet O' Fish Sandwich",
+              "",
+              1350
+            ],
+            [
+              "Taylor Ham Egg & Cheese Sandwich",
+              "",
+              1650
+            ],
+            [
+              "New York Chopped Cheese Sandwich",
+              "",
+              1800
+            ],
+            [
+              "Grilled Cheese Sandwich",
+              "",
+              700
+            ],
+            [
+              "Falafel Wrap",
+              "",
+              1400
+            ],
+            [
+              "BAT Sandwich",
+              "",
+              1500
+            ],
+            [
+              "Crispy Hot Dog",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "House Cut Fries",
+          "items": [
+            [
+              "The Classic Fries",
+              "",
+              700
+            ],
+            [
+              "Texas Queso Fries",
+              "",
+              900
+            ],
+            [
+              "Buffalo Fries",
+              "",
+              800
+            ],
+            [
+              "Texas Queso Fries J's Way",
+              "",
+              1500
+            ],
+            [
+              "Garlic Scampi Fries",
+              "",
+              800
+            ],
+            [
+              "Baby Fry",
+              "",
+              400
+            ],
+            [
+              "Parmesan Truffle Fries",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Giant Pizza By The Slice",
+          "items": [
+            [
+              "Cheese Pizza Slice",
+              "",
+              800
+            ],
+            [
+              "Pepperoni Pizza Slice",
+              "",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Snacks",
+          "items": [
+            [
+              "Wasabi Deviled Eggs",
+              "",
+              1300
+            ],
+            [
+              "Falafel Platter",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Cindy's Salad",
+              "",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Sweet",
+          "items": [
+            [
+              "Apple Crisp Rice Pudding",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "Alameda Soda Company",
+              "",
+              400
+            ],
+            [
+              "Open Water",
+              "",
+              400
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Avocado",
+              "",
+              300
+            ],
+            [
+              "BBQ Sauce",
+              "",
+              100
+            ],
+            [
+              "Uncured Bacon",
+              "",
+              200
+            ],
+            [
+              "Honey Dijon",
+              "",
+              100
+            ],
+            [
+              "Vital Farms Eggs",
+              "",
+              200
+            ],
+            [
+              "Ranch",
+              "",
+              100
+            ],
+            [
+              "Extra Beef Patty",
+              "",
+              600
+            ],
+            [
+              "Buffalo Sauce",
+              "",
+              100
+            ],
+            [
+              "Scampi Sauce",
+              "",
+              200
+            ],
+            [
+              "Jalapenos",
+              "",
+              200
+            ],
+            [
+              "Hot Cherry Peppers",
+              "",
+              100
+            ]
+          ]
+        }
+      ],
+      "address": "1303 Park St, Alameda, CA 94501",
+      "phone": "(510) 521-2400",
+      "email": "scolarisgoodeats@gmail.com",
+      "hours": "Sun–Wed 11:30am–9pm, Thu–Sat 11:30am–11pm",
+      "site": "https://www.scolarisgoodeats.com/",
+      "orderUrl": "https://slicelife.com/restaurants/ca/alameda/94501/scolari-s-good-eats/menu",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the Park Street ordering menu. Specials and availability vary.",
+      "panels": [
+        {
+          "head": "Menu and other location",
+          "body": [
+            "The Park Street counter and the Almanac food truck have separate menus."
+          ],
+          "links": [
+            {
+              "label": "Park Street menu",
+              "href": "https://www.scolarisgoodeats.com/menu"
+            },
+            {
+              "label": "Almanac food truck menu",
+              "href": "https://www.scolarisgoodeats.com/almanac-menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "marley-gs-pizzeria",
+      "name": "Marley G’s Pizzeria",
+      "label": "Marley G’s",
+      "cuisine": "North Jersey style pizza and stromboli",
+      "tagline": "Park Street pizzeria for oversized slices, whole pies, subs and stromboli.",
+      "icon": "marley-gs-pizzeria-v121",
+      "category": "Pizza",
+      "color": "#fcf3eb",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "Specials",
+          "items": [
+            [
+              "Prosciutto and Fig Pie",
+              "",
+              2700
+            ],
+            [
+              "Drunken Tomato Basil Cheesy Pastina",
+              "",
+              1400
+            ],
+            [
+              "Cheesesteak Stromboli",
+              "",
+              1800
+            ],
+            [
+              "Pepperoni Chips",
+              "",
+              1200
+            ],
+            [
+              "Turkey and Provolone Sub",
+              "",
+              1600
+            ],
+            [
+              "Meatball Parm Sandwich",
+              "",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Stromboli",
+          "items": [
+            [
+              "Stromboli",
+              "",
+              1700
+            ],
+            [
+              "Sausage, Pepper and Onion",
+              "",
+              1700
+            ],
+            [
+              "Whitey",
+              "",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "Chicken Cutlet Sandwich",
+              "",
+              2300
+            ],
+            [
+              "Italian Sub",
+              "",
+              1600
+            ],
+            [
+              "Cheesesteak Sandwich",
+              "",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Not Pizza",
+          "items": [
+            [
+              "Pizza Dough Garlic Bread",
+              "",
+              1000
+            ],
+            [
+              "Crispy Buffalo Wings",
+              "",
+              1500
+            ],
+            [
+              "Toasties!",
+              "",
+              1200
+            ],
+            [
+              "Garlic Scampi Wings",
+              "",
+              1500
+            ],
+            [
+              "Mozzarella Sticks",
+              "",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Pizza Pies",
+          "items": [
+            [
+              "Margherita Pie",
+              "",
+              2300
+            ],
+            [
+              "Meatball Pie",
+              "",
+              2500
+            ],
+            [
+              "Garbage Pie",
+              "",
+              2900
+            ],
+            [
+              "Mushroom Pie",
+              "",
+              2500
+            ],
+            [
+              "Cadillac Pie",
+              "",
+              3000
+            ],
+            [
+              "Spicy Pepperoni Pie",
+              "",
+              2800
+            ],
+            [
+              "MG's Hawaiian Pie",
+              "",
+              2800
+            ],
+            [
+              "White Pie with Spinach",
+              "",
+              2700
+            ]
+          ]
+        },
+        {
+          "name": "Make Your Own Pizza",
+          "items": [
+            [
+              "Cheese Pizza",
+              "",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Salad",
+          "items": [
+            [
+              "MG's Caesar Salad",
+              "",
+              1400
+            ],
+            [
+              "Creamy Italian Chopped Salad",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Zeppole",
+              "",
+              800
+            ],
+            [
+              "Chocolate Chip Cannoli",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Pizza By The Slice",
+          "items": [
+            [
+              "Cheese Slice",
+              "",
+              500
+            ],
+            [
+              "Pepperoni Slice",
+              "",
+              600
+            ],
+            [
+              "Meatball Slice",
+              "",
+              600
+            ],
+            [
+              "Cadillac Slice",
+              "",
+              800
+            ],
+            [
+              "Prosciutto and Fig Slice",
+              "",
+              600
+            ],
+            [
+              "White Slice with Spinach",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Dippers",
+          "items": [
+            [
+              "Buttermilk Peppercorn Dressing",
+              "",
+              100
+            ],
+            [
+              "House Hot Honey",
+              "",
+              200
+            ],
+            [
+              "Spicy Calabrian Buttermilk Dressing",
+              "",
+              100
+            ],
+            [
+              "Pizza Sauce",
+              "",
+              200
+            ]
+          ]
+        },
+        {
+          "name": "Sodas and Water",
+          "items": [
+            [
+              "Almeda Sodas",
+              "",
+              400
+            ],
+            [
+              "Can Coke",
+              "",
+              300
+            ],
+            [
+              "Open Water",
+              "",
+              400
+            ]
+          ]
+        }
+      ],
+      "address": "1330 Park St, Alameda, CA 94501",
+      "phone": "(510) 227-5521",
+      "email": "mgsalameda@gmail.com",
+      "hours": "Mon–Sat 11:30am–9pm, Sun noon–8pm",
+      "site": "https://www.marleygspizza.com/",
+      "orderUrl": "https://slicelife.com/restaurants/ca/alameda/94501/marley-g-s-pizzeria/menu",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the Park Street ordering menu. Specialty pies and availability vary.",
+      "panels": [
+        {
+          "head": "Menu and other location",
+          "body": [
+            "Marley G’s has a separate pizza window at Almanac Adventureland."
+          ],
+          "links": [
+            {
+              "label": "Park Street menu",
+              "href": "https://www.marleygspizza.com/menu"
+            },
+            {
+              "label": "Pizza window at Almanac",
+              "href": "https://beastypages.com/?b=b_marleygspizzeriaalmanac"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "marley-gs-pizzeria-almanac",
+      "name": "Marley G’s Pizzeria — Almanac",
+      "label": "Marley G’s Almanac",
+      "cuisine": "North Jersey style pizza window",
+      "tagline": "Marley G’s pizza window inside the Almanac Adventureland taproom.",
+      "icon": "marley-gs-pizzeria-v121",
+      "category": "Pizza",
+      "color": "#fcf3eb",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "14-inch pizza pies",
+          "items": [
+            [
+              "Cadillac Pie",
+              "",
+              3200
+            ],
+            [
+              "Garbage Pie",
+              "",
+              3200
+            ],
+            [
+              "Flammkuchen Pie",
+              "",
+              3200
+            ],
+            [
+              "Buffalo Chicken Pie",
+              "",
+              3200
+            ],
+            [
+              "White Pie with Spinach",
+              "",
+              3000
+            ],
+            [
+              "Meatball Pie",
+              "",
+              2800
+            ],
+            [
+              "Spicy Pepperoni Pie",
+              "",
+              2900
+            ],
+            [
+              "Vegan Meatball Pie",
+              "",
+              3200
+            ],
+            [
+              "Barbecue Pork Pie",
+              "",
+              3200
+            ],
+            [
+              "Make Your Own Cheese Pie",
+              "",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Sides and sandwiches",
+          "items": [
+            [
+              "Pizza Dough Garlic Bread",
+              "",
+              1000
+            ],
+            [
+              "MG’s Caesar Salad",
+              "",
+              1600
+            ],
+            [
+              "Italian Sub · Regular",
+              "",
+              1700
+            ],
+            [
+              "Italian Sub · Large",
+              "",
+              3200
+            ],
+            [
+              "Green Cerignola Olives",
+              "",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Dippers and dessert",
+          "items": [
+            [
+              "House Hot Honey",
+              "",
+              200
+            ],
+            [
+              "Pizza Sauce",
+              "Starting price",
+              100
+            ],
+            [
+              "Buttermilk Peppercorn Dressing",
+              "Starting price",
+              200
+            ],
+            [
+              "Spicy Calabrian Buttermilk Dressing",
+              "Starting price",
+              200
+            ],
+            [
+              "Cannoli",
+              "",
+              700
+            ]
+          ]
+        }
+      ],
+      "address": "651 W Tower Ave, Alameda, CA 94501",
+      "site": "https://www.marleygspizza.com/almanac-menu",
+      "siteNote": "The window has its own menu. Check current hours before visiting.",
+      "panels": [
+        {
+          "head": "Almanac visit and menu",
+          "body": [
+            "See the window menu and check brewery hours before you go."
+          ],
+          "links": [
+            {
+              "label": "Pizza window menu",
+              "href": "https://www.marleygspizza.com/almanac-menu"
+            },
+            {
+              "label": "Almanac Adventureland",
+              "href": "https://www.almanacbeer.com/alameda"
+            },
+            {
+              "label": "Marley G’s on Park Street",
+              "href": "https://beastypages.com/?b=b_marleygspizzeria"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "alameda-goods2-3": "b_scolarisgoodeats",
+    "alameda-goods2-4": "b_marleygspizzeria",
+    "alameda-goods2-5": "b_marleygspizzeriaalmanac",
+    "beasty-burgers2-4": "b_scolarisgoodeats",
+    "beasty-pizza2-3": "b_marleygspizzeria",
+    "beasty-foodies2-346": "b_foodiebaydish",
+    "beasty-foodies2-347": "b_foodietaylorandtylor"
+  },
+  "posts": [
+    {
+      "code": "DfxX9Dhue66",
+      "slug": "review-DfxX9Dhue66",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 56.032,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DfxX9Dhue66/",
+      "brand": "b_risewoodfiresanmateo",
+      "by": "carlaylayyy",
+      "postedBy": "carlacharisse_",
+      "postedDate": "20261115",
+      "request": [
+        {
+          "rowId": 252606,
+          "linkRowId": 252605,
+          "at": "2026-11-15T14:52:54.749364-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Carla Charisse’s Rise & Shine weekend brunch review in San Mateo. Posted by @carlacharisse_.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DQhqCY3EoVs",
+      "slug": "review-DQhqCY3EoVs",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 88.447,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DQhqCY3EoVs/",
+      "brand": "b_scolarisgoodeats",
+      "by": "thesnacksensei",
+      "postedBy": "thesnacksensei",
+      "postedDate": "20251101",
+      "request": [
+        {
+          "rowId": 252619,
+          "linkRowId": 252618,
+          "at": "2026-11-15T18:50:18.435747-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @thesnacksensei at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DfxlkoKhAs1",
+      "slug": "review-DfxlkoKhAs1",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 26.264,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DfxlkoKhAs1/",
+      "brand": "b_scolarisgoodeats",
+      "by": "baydish",
+      "postedBy": "baydish",
+      "postedDate": "20261115",
+      "request": [
+        {
+          "rowId": 252622,
+          "linkRowId": 252621,
+          "at": "2026-11-15T18:50:54.714302-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "rank": "Mediocre",
+      "credit": "Review by @baydish at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the creator page and in Watch. The business links out to the original.",
+      "playOn": "b_foodiebaydish"
+    },
+    {
+      "code": "DMdUo7ypjWO",
+      "slug": "review-DMdUo7ypjWO",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 63.23,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DMdUo7ypjWO/",
+      "brand": "b_scolarisgoodeats",
+      "by": "celineeats",
+      "postedBy": "celineeats",
+      "postedDate": "20250723",
+      "request": [
+        {
+          "rowId": 252624,
+          "linkRowId": 252623,
+          "at": "2026-11-15T18:52:55.246467-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @celineeats at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DPmr41vgRAJ",
+      "slug": "review-DPmr41vgRAJ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 45.118,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DPmr41vgRAJ/",
+      "brand": "b_scolarisgoodeats",
+      "by": "bayarea_fooddreamz",
+      "postedBy": "bayarea_fooddreamz",
+      "postedDate": "20251009",
+      "request": [
+        {
+          "rowId": 252626,
+          "linkRowId": 252625,
+          "at": "2026-11-15T18:53:14.008204-08:00",
+          "request": "Clip this video plz \nHeavy Hitter"
+        }
+      ],
+      "rank": "Heavy Hitter",
+      "credit": "Review by @bayarea_fooddreamz at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DPXBJ_GgVpg",
+      "slug": "review-DPXBJ_GgVpg",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.518,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DPXBJ_GgVpg/",
+      "brand": "b_scolarisgoodeats",
+      "by": "mattiasblanco",
+      "postedBy": "mattiasblanco",
+      "postedDate": "20251003",
+      "request": [
+        {
+          "rowId": 252628,
+          "linkRowId": 252627,
+          "at": "2026-11-15T18:53:27.153523-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @mattiasblanco at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the creator page and in Watch. The business links out to the original.",
+      "playOn": "b_foodiemattiasblanco"
+    },
+    {
+      "code": "DWFh4s0D-nP",
+      "slug": "review-DWFh4s0D-nP",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 86.125,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DWFh4s0D-nP/",
+      "brand": "b_scolarisgoodeats",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "postedDate": "20260320",
+      "request": [
+        {
+          "rowId": 252631,
+          "linkRowId": 252630,
+          "at": "2026-11-15T18:53:51.256866-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @grubwitmike at Scolari’s Good Eats, Alameda.",
+      "disposition": "Plays on the creator page and in Watch. The business links out to the original.",
+      "playOn": "b_foodiegrubwitmike"
+    },
+    {
+      "code": "BmGstDEhnvX",
+      "slug": "review-BmGstDEhnvX",
+      "startSeconds": 8,
+      "endSeconds": 23,
+      "sourceDuration": 43.911,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/p/BmGstDEhnvX/",
+      "brand": "b_scolarisgoodeats",
+      "by": "e40",
+      "postedBy": "e40",
+      "postedDate": "20180805",
+      "request": [
+        {
+          "rowId": 252633,
+          "linkRowId": 252632,
+          "at": "2026-11-15T18:54:31.765108-08:00",
+          "request": "Clip this video plz \nE-40’s 2nd review lol"
+        }
+      ],
+      "credit": "Food Network’s Diners, Drive-Ins and Dives footage with Guy Fieri and E-40. Posted by @e40.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DOKBVVxEtPP",
+      "slug": "review-DOKBVVxEtPP",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 65.877,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DOKBVVxEtPP/",
+      "brand": "b_marleygspizzeria",
+      "by": "celineeats",
+      "postedBy": "celineeats",
+      "postedDate": "20250903",
+      "request": [
+        {
+          "rowId": 252637,
+          "linkRowId": 252637,
+          "at": "2026-11-15T18:59:40.020687-08:00",
+          "request": "Shared with the Marley G’s Park Street submission."
+        }
+      ],
+      "credit": "Review by @celineeats at Marley G’s Pizzeria, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DbtyrqZhCTQ",
+      "slug": "review-DbtyrqZhCTQ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 93.834,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DbtyrqZhCTQ/",
+      "brand": "b_marleygspizzeria",
+      "by": "oaktowngrubhub",
+      "postedBy": "oaktowngrubhub",
+      "postedDate": "20260806",
+      "request": [
+        {
+          "rowId": 252640,
+          "linkRowId": 252639,
+          "at": "2026-11-15T19:00:54.369528-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "rank": "Heavy Hitter",
+      "credit": "Review by @oaktowngrubhub at Marley G’s Pizzeria, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DXNqLPBCV__",
+      "slug": "review-DXNqLPBCV__",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 72.193,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DXNqLPBCV__/",
+      "brand": "b_marleygspizzeriaalmanac",
+      "by": "cheycheyfromthebay",
+      "postedBy": "cheycheyfromthebay",
+      "postedDate": "20260417",
+      "request": [
+        {
+          "rowId": 252642,
+          "linkRowId": 252641,
+          "at": "2026-11-15T19:02:36.289653-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @cheycheyfromthebay at the Marley G’s pizza window inside Almanac Adventureland.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DSY4p6PkR3f",
+      "slug": "review-DSY4p6PkR3f",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 40.474,
+      "audio": true,
+      "batch": 121,
+      "source": "https://www.instagram.com/reel/DSY4p6PkR3f/",
+      "brand": "b_marleygspizzeria",
+      "by": "taylorandtylor",
+      "postedBy": "taylorandtylor",
+      "postedDate": "20251218",
+      "request": [
+        {
+          "rowId": 252645,
+          "linkRowId": 252644,
+          "at": "2026-11-15T19:03:14.204713-08:00",
+          "request": "Clip this video plz \nFoodie\nHeavy Hitter"
+        }
+      ],
+      "rank": "Heavy Hitter",
+      "credit": "Review by @taylorandtylor at Marley G’s Pizzeria, Alameda.",
+      "disposition": "Plays on the business and creator pages and in Watch."
+    }
+  ],
+  "updatedIcons": [
+    "/icons/scolaris-good-eats-v121.webp",
+    "/icons/marley-gs-pizzeria-v121.webp",
+    "/icons/foodie-baydish-v121.webp",
+    "/icons/foodie-mattiasblanco-v121.webp",
+    "/icons/foodie-oaktowngrubhub-v121.webp",
+    "/icons/foodie-taylorandtylor-v121.webp"
+  ],
+  "updatedBrands": [],
+  "categoryOnly": [],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0652.png",
+      "disposition": "Confirms Scolari’s published contact details."
+    },
+    {
+      "source": "IMG_0655.png",
+      "path": "/icons/scolaris-good-eats-v121.webp",
+      "comparedAgainst": "https://www.scolarisgoodeats.com/",
+      "disposition": "Supplied orange variant of the verified Scolari’s wordmark. Retained all lettering."
+    },
+    {
+      "source": "IMG_0656.png",
+      "disposition": "Confirms Scolari’s Park Street profile. The website has a newer Thursday closing time."
+    },
+    {
+      "source": "IMG_0657.PNG",
+      "disposition": "Confirms Scolari’s Park Street location and website hours."
+    },
+    {
+      "source": "IMG_0662.png",
+      "disposition": "Confirms Marley G’s Park Street contact details."
+    },
+    {
+      "source": "IMG_0663.png",
+      "path": "/icons/marley-gs-pizzeria-v121.webp",
+      "comparedAgainst": "https://www.marleygspizza.com/",
+      "disposition": "Supplied green and red variant of the shop’s slice wordmark. Retained all lettering."
+    },
+    {
+      "source": "IMG_0664.png",
+      "disposition": "Confirms the Park Street profile and public address."
+    },
+    {
+      "source": "IMG_0658.png",
+      "path": "/icons/foodie-baydish-v121.webp",
+      "comparedAgainst": "https://www.instagram.com/baydish/",
+      "disposition": "Supplied public portrait matched to the requesting reel’s author. Retained the whole visible profile portrait."
+    },
+    {
+      "source": "IMG_0659.PNG",
+      "path": "/icons/foodie-mattiasblanco-v121.webp",
+      "comparedAgainst": "https://www.instagram.com/mattiasblanco/",
+      "disposition": "Explicit replacement request following Mattias Blanco’s reel. Matched by posting account."
+    },
+    {
+      "source": "IMG_0665.PNG",
+      "path": "/icons/foodie-oaktowngrubhub-v121.webp",
+      "comparedAgainst": "https://www.instagram.com/oaktowngrubhub/",
+      "disposition": "Supplied public avatar matched to the creator’s reel. The profile crops the lower edge of the drawing. The tile preserves the visible mark and keeps the Oaktown Grub label below it."
+    },
+    {
+      "source": "IMG_0666.png",
+      "path": "/icons/foodie-taylorandtylor-v121.webp",
+      "comparedAgainst": "https://www.instagram.com/taylorandtylor/",
+      "disposition": "Supplied public portrait matched to the requesting reel’s author. Retained the whole visible profile portrait."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252605,
+      "at": "2026-11-15T14:52:54.617554-08:00",
+      "text": "https://www.instagram.com/reel/DfxX9Dhue66/",
+      "attachments": []
+    },
+    {
+      "rowId": 252606,
+      "at": "2026-11-15T14:52:54.749364-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252615,
+      "at": "2026-11-15T18:47:17.972759-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0652.png",
+        "IMG_0656.png",
+        "IMG_0655.png",
+        "IMG_0657.PNG"
+      ]
+    },
+    {
+      "rowId": 252616,
+      "at": "2026-11-15T18:47:19.165520-08:00",
+      "text": "https://www.scolarisgoodeats.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252617,
+      "at": "2026-11-15T18:47:19.251664-08:00",
+      "text": "Alameda • Eats \nBEASTY • Burgers/Hot dogs",
+      "attachments": []
+    },
+    {
+      "rowId": 252618,
+      "at": "2026-11-15T18:50:18.348499-08:00",
+      "text": "https://www.instagram.com/reel/DQhqCY3EoVs/",
+      "attachments": []
+    },
+    {
+      "rowId": 252619,
+      "at": "2026-11-15T18:50:18.435747-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252620,
+      "at": "2026-11-15T18:50:54.189115-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0658.png"
+      ]
+    },
+    {
+      "rowId": 252621,
+      "at": "2026-11-15T18:50:54.604774-08:00",
+      "text": "https://www.instagram.com/reel/DfxlkoKhAs1/",
+      "attachments": []
+    },
+    {
+      "rowId": 252622,
+      "at": "2026-11-15T18:50:54.714302-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252623,
+      "at": "2026-11-15T18:52:55.157056-08:00",
+      "text": "https://www.instagram.com/reel/DMdUo7ypjWO/",
+      "attachments": []
+    },
+    {
+      "rowId": 252624,
+      "at": "2026-11-15T18:52:55.246467-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252625,
+      "at": "2026-11-15T18:53:13.930446-08:00",
+      "text": "https://www.instagram.com/reel/DPmr41vgRAJ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252626,
+      "at": "2026-11-15T18:53:14.008204-08:00",
+      "text": "Clip this video plz \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252627,
+      "at": "2026-11-15T18:53:27.068534-08:00",
+      "text": "https://www.instagram.com/reel/DPXBJ_GgVpg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252628,
+      "at": "2026-11-15T18:53:27.153523-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252629,
+      "at": "2026-11-15T18:53:40.175431-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0659.PNG"
+      ]
+    },
+    {
+      "rowId": 252630,
+      "at": "2026-11-15T18:53:51.149967-08:00",
+      "text": "https://www.instagram.com/reel/DWFh4s0D-nP/",
+      "attachments": []
+    },
+    {
+      "rowId": 252631,
+      "at": "2026-11-15T18:53:51.256866-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252632,
+      "at": "2026-11-15T18:54:31.687518-08:00",
+      "text": "https://www.instagram.com/p/BmGstDEhnvX/",
+      "attachments": []
+    },
+    {
+      "rowId": 252633,
+      "at": "2026-11-15T18:54:31.765108-08:00",
+      "text": "Clip this video plz \nE-40’s 2nd review lol",
+      "attachments": []
+    },
+    {
+      "rowId": 252634,
+      "at": "2026-11-15T18:59:11.195494-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0664.png",
+        "IMG_0663.png",
+        "IMG_0662.png"
+      ]
+    },
+    {
+      "rowId": 252635,
+      "at": "2026-11-15T18:59:11.971204-08:00",
+      "text": "https://www.marleygspizza.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252636,
+      "at": "2026-11-15T18:59:12.063297-08:00",
+      "text": "Alameda • Eats \nBEASTY • Pizza",
+      "attachments": []
+    },
+    {
+      "rowId": 252637,
+      "at": "2026-11-15T18:59:40.020687-08:00",
+      "text": "https://www.instagram.com/reel/DOKBVVxEtPP/",
+      "attachments": []
+    },
+    {
+      "rowId": 252638,
+      "at": "2026-11-15T19:00:53.867757-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0665.PNG"
+      ]
+    },
+    {
+      "rowId": 252639,
+      "at": "2026-11-15T19:00:54.273759-08:00",
+      "text": "https://www.instagram.com/reel/DbtyrqZhCTQ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252640,
+      "at": "2026-11-15T19:00:54.369528-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252641,
+      "at": "2026-11-15T19:02:36.206155-08:00",
+      "text": "https://www.instagram.com/reel/DXNqLPBCV__/",
+      "attachments": []
+    },
+    {
+      "rowId": 252642,
+      "at": "2026-11-15T19:02:36.289653-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252643,
+      "at": "2026-11-15T19:03:13.701249-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0666.png"
+      ]
+    },
+    {
+      "rowId": 252644,
+      "at": "2026-11-15T19:03:14.104469-08:00",
+      "text": "https://www.instagram.com/reel/DSY4p6PkR3f/",
+      "attachments": []
+    },
+    {
+      "rowId": 252645,
+      "at": "2026-11-15T19:03:14.204713-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": []
+    }
+  ],
+  "held": [],
+  "priorUnresolved": [
+    {
+      "batch": 117,
+      "reason": "No identifiable source for the separate Wing Bros Heavy Hitter clip."
+    },
+    {
+      "batch": 119,
+      "reason": "MT Pop’s source clip and one unidentified portrait remain held."
+    }
+  ]
+}

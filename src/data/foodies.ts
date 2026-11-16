@@ -508,7 +508,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "oaktowngrubhub",
     "name": "NowThatLooksGooD",
-    "label": "Oaktown Grub"
+    "label": "Oaktown Grub",
+    "icon": "foodie-oaktowngrubhub-v121"
   },
   {
     "handle": "thespoonlist",
@@ -1549,7 +1550,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "mattiasblanco",
     "name": "@mattiasblanco",
     "label": "mattiasblanco",
-    "icon": "foodie-mattiasblanco-v97"
+    "icon": "foodie-mattiasblanco-v121"
   },
   {
     "handle": "deazylee",
@@ -2079,6 +2080,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "sydneymlee_", "name": "@sydneymlee_", "label": "sydneymlee_", "icon": "foodie-sydneymlee-v119"},
 
   {"handle": "girasoljanexis", "name": "Janexis", "label": "Janexis", "icon": "foodie-girasoljanexis-v120"},
+  // Batch 121 creators.
+  {"handle": "baydish", "name": "Dana", "label": "Baydish", "icon": "foodie-baydish-v121"},
+  {"handle": "taylorandtylor", "name": "Taylor and Tylor", "label": "Taylor & Tylor", "icon": "foodie-taylorandtylor-v121"},
+
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2920,6 +2925,20 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "sydneymlee_", "place": "Valley Goat", "reel": "https://www.instagram.com/reel/DcuM4YhhZqe/", "brand": "b_valleygoat", "credit": "Review by @sydneymlee_ at Valley Goat, Sunnyvale.", "clip": true, "city": "Sunnyvale"},
 
   {"by": "girasoljanexis", "place": "Petaluma Pie Company", "city": "Petaluma", "brand": "b_petalumapiecompany", "reel": "https://www.instagram.com/reel/DbTtoXbTuBL/", "clip": true, "credit": "Review by @girasoljanexis at Petaluma Pie Company."},
+  // Batch 121 location-specific, credited reviews.
+  {"by": "carlaylayyy", "place": "Rise Woodfire Pizza & Rotisserie", "city": "San Mateo", "brand": "b_risewoodfiresanmateo", "reel": "https://www.instagram.com/reel/DfxX9Dhue66/", "credit": "Carla Charisse’s Rise & Shine weekend brunch review in San Mateo. Posted by @carlacharisse_.", "clip": true},
+  {"by": "thesnacksensei", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DQhqCY3EoVs/", "credit": "Review by @thesnacksensei at Scolari’s Good Eats, Alameda.", "clip": true},
+  {"by": "baydish", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DfxlkoKhAs1/", "credit": "Review by @baydish at Scolari’s Good Eats, Alameda.", "clip": "creator"},
+  {"by": "celineeats", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DMdUo7ypjWO/", "credit": "Review by @celineeats at Scolari’s Good Eats, Alameda.", "clip": true},
+  {"by": "bayarea_fooddreamz", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DPmr41vgRAJ/", "credit": "Review by @bayarea_fooddreamz at Scolari’s Good Eats, Alameda.", "clip": true},
+  {"by": "mattiasblanco", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DPXBJ_GgVpg/", "credit": "Review by @mattiasblanco at Scolari’s Good Eats, Alameda.", "clip": "creator"},
+  {"by": "grubwitmike", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/reel/DWFh4s0D-nP/", "credit": "Review by @grubwitmike at Scolari’s Good Eats, Alameda.", "clip": "creator"},
+  {"by": "e40", "place": "Scolari’s Good Eats", "city": "Alameda", "brand": "b_scolarisgoodeats", "reel": "https://www.instagram.com/p/BmGstDEhnvX/", "credit": "Food Network’s Diners, Drive-Ins and Dives footage with Guy Fieri and E-40. Posted by @e40.", "clip": true},
+  {"by": "celineeats", "place": "Marley G’s Pizzeria", "city": "Alameda", "brand": "b_marleygspizzeria", "reel": "https://www.instagram.com/reel/DOKBVVxEtPP/", "credit": "Review by @celineeats at Marley G’s Pizzeria, Alameda.", "clip": true},
+  {"by": "oaktowngrubhub", "place": "Marley G’s Pizzeria", "city": "Alameda", "brand": "b_marleygspizzeria", "reel": "https://www.instagram.com/reel/DbtyrqZhCTQ/", "credit": "Review by @oaktowngrubhub at Marley G’s Pizzeria, Alameda.", "clip": true},
+  {"by": "cheycheyfromthebay", "place": "Marley G’s Pizzeria — Almanac", "city": "Alameda", "brand": "b_marleygspizzeriaalmanac", "reel": "https://www.instagram.com/reel/DXNqLPBCV__/", "credit": "Review by @cheycheyfromthebay at the Marley G’s pizza window inside Almanac Adventureland.", "clip": true},
+  {"by": "taylorandtylor", "place": "Marley G’s Pizzeria", "city": "Alameda", "brand": "b_marleygspizzeria", "reel": "https://www.instagram.com/reel/DSY4p6PkR3f/", "credit": "Review by @taylorandtylor at Marley G’s Pizzeria, Alameda.", "clip": true},
+
 ]
 
 /*

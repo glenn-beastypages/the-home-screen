@@ -95565,4 +95565,795 @@ export const LOCAL_SEED: LocalSeed[] = [
     "platform": "Instagram"
   }
 },
+
+  // Batch 121 — Alameda Park Street and Almanac.
+{
+  "slug": "scolaris-good-eats",
+  "name": "Scolari’s Good Eats",
+  "label": "Scolari’s",
+  "cuisine": "Burgers, hot dogs and sandwiches",
+  "tagline": "Park Street counter known for the blueberry bacon blue cheeseburger and Nashville hot chicken.",
+  "icon": "scolaris-good-eats-v121",
+  "category": "Burgers",
+  "color": "#f9a63d",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "Specials",
+      "items": [
+        [
+          "Fontina Bacon Cheeseburger",
+          "",
+          2200
+        ],
+        [
+          "Mushroom Flatbread",
+          "",
+          1400
+        ],
+        [
+          "Indian Butter Chicken Grilled Cheese",
+          "",
+          1600
+        ],
+        [
+          "Fried Pickles",
+          "",
+          1200
+        ],
+        [
+          "Blueberry Thyme Grilled Cheese",
+          "",
+          1300
+        ]
+      ]
+    },
+    {
+      "name": "Burgers",
+      "items": [
+        [
+          "Scolari's Classic Cheeseburger",
+          "",
+          1750
+        ],
+        [
+          "Wimpy Burger",
+          "",
+          900
+        ],
+        [
+          "Blueberry Bacon Blue Cheeseburger Au Poivre",
+          "",
+          2100
+        ]
+      ]
+    },
+    {
+      "name": "Chicken",
+      "items": [
+        [
+          "Nashville Hot Good Ol' Boy Sandwich",
+          "",
+          1650
+        ],
+        [
+          "Chicken Lettuce Cups",
+          "",
+          1650
+        ],
+        [
+          "Gochujang Chicken Sandwich",
+          "",
+          1700
+        ],
+        [
+          "Buffalo Lettuce Cups",
+          "",
+          1650
+        ],
+        [
+          "Pickle Brined Fried Chicken Tenders",
+          "",
+          1500
+        ]
+      ]
+    },
+    {
+      "name": "Other Sandwiches",
+      "items": [
+        [
+          "Wimpy Fillet O' Fish Sandwich",
+          "",
+          1350
+        ],
+        [
+          "Taylor Ham Egg & Cheese Sandwich",
+          "",
+          1650
+        ],
+        [
+          "New York Chopped Cheese Sandwich",
+          "",
+          1800
+        ],
+        [
+          "Grilled Cheese Sandwich",
+          "",
+          700
+        ],
+        [
+          "Falafel Wrap",
+          "",
+          1400
+        ],
+        [
+          "BAT Sandwich",
+          "",
+          1500
+        ],
+        [
+          "Crispy Hot Dog",
+          "",
+          800
+        ]
+      ]
+    },
+    {
+      "name": "House Cut Fries",
+      "items": [
+        [
+          "The Classic Fries",
+          "",
+          700
+        ],
+        [
+          "Texas Queso Fries",
+          "",
+          900
+        ],
+        [
+          "Buffalo Fries",
+          "",
+          800
+        ],
+        [
+          "Texas Queso Fries J's Way",
+          "",
+          1500
+        ],
+        [
+          "Garlic Scampi Fries",
+          "",
+          800
+        ],
+        [
+          "Baby Fry",
+          "",
+          400
+        ],
+        [
+          "Parmesan Truffle Fries",
+          "",
+          800
+        ]
+      ]
+    },
+    {
+      "name": "Giant Pizza By The Slice",
+      "items": [
+        [
+          "Cheese Pizza Slice",
+          "",
+          800
+        ],
+        [
+          "Pepperoni Pizza Slice",
+          "",
+          900
+        ]
+      ]
+    },
+    {
+      "name": "Snacks",
+      "items": [
+        [
+          "Wasabi Deviled Eggs",
+          "",
+          1300
+        ],
+        [
+          "Falafel Platter",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        [
+          "Cindy's Salad",
+          "",
+          900
+        ]
+      ]
+    },
+    {
+      "name": "Sweet",
+      "items": [
+        [
+          "Apple Crisp Rice Pudding",
+          "",
+          800
+        ]
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        [
+          "Alameda Soda Company",
+          "",
+          400
+        ],
+        [
+          "Open Water",
+          "",
+          400
+        ]
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        [
+          "Avocado",
+          "",
+          300
+        ],
+        [
+          "BBQ Sauce",
+          "",
+          100
+        ],
+        [
+          "Uncured Bacon",
+          "",
+          200
+        ],
+        [
+          "Honey Dijon",
+          "",
+          100
+        ],
+        [
+          "Vital Farms Eggs",
+          "",
+          200
+        ],
+        [
+          "Ranch",
+          "",
+          100
+        ],
+        [
+          "Extra Beef Patty",
+          "",
+          600
+        ],
+        [
+          "Buffalo Sauce",
+          "",
+          100
+        ],
+        [
+          "Scampi Sauce",
+          "",
+          200
+        ],
+        [
+          "Jalapenos",
+          "",
+          200
+        ],
+        [
+          "Hot Cherry Peppers",
+          "",
+          100
+        ]
+      ]
+    }
+  ],
+  "address": "1303 Park St, Alameda, CA 94501",
+  "phone": "(510) 521-2400",
+  "email": "scolarisgoodeats@gmail.com",
+  "hours": "Sun–Wed 11:30am–9pm, Thu–Sat 11:30am–11pm",
+  "site": "https://www.scolarisgoodeats.com/",
+  "orderUrl": "https://slicelife.com/restaurants/ca/alameda/94501/scolari-s-good-eats/menu",
+  "siteCta": "Order online",
+  "siteNote": "Prices are from the Park Street ordering menu. Specials and availability vary.",
+  "panels": [
+    {
+      "head": "Menu and other location",
+      "body": [
+        "The Park Street counter and the Almanac food truck have separate menus."
+      ],
+      "links": [
+        {
+          "label": "Park Street menu",
+          "href": "https://www.scolarisgoodeats.com/menu"
+        },
+        {
+          "label": "Almanac food truck menu",
+          "href": "https://www.scolarisgoodeats.com/almanac-menu"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "marley-gs-pizzeria",
+  "name": "Marley G’s Pizzeria",
+  "label": "Marley G’s",
+  "cuisine": "North Jersey style pizza and stromboli",
+  "tagline": "Park Street pizzeria for oversized slices, whole pies, subs and stromboli.",
+  "icon": "marley-gs-pizzeria-v121",
+  "category": "Pizza",
+  "color": "#fcf3eb",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "Specials",
+      "items": [
+        [
+          "Prosciutto and Fig Pie",
+          "",
+          2700
+        ],
+        [
+          "Drunken Tomato Basil Cheesy Pastina",
+          "",
+          1400
+        ],
+        [
+          "Cheesesteak Stromboli",
+          "",
+          1800
+        ],
+        [
+          "Pepperoni Chips",
+          "",
+          1200
+        ],
+        [
+          "Turkey and Provolone Sub",
+          "",
+          1600
+        ],
+        [
+          "Meatball Parm Sandwich",
+          "",
+          2000
+        ]
+      ]
+    },
+    {
+      "name": "Stromboli",
+      "items": [
+        [
+          "Stromboli",
+          "",
+          1700
+        ],
+        [
+          "Sausage, Pepper and Onion",
+          "",
+          1700
+        ],
+        [
+          "Whitey",
+          "",
+          1700
+        ]
+      ]
+    },
+    {
+      "name": "Sandwiches",
+      "items": [
+        [
+          "Chicken Cutlet Sandwich",
+          "",
+          2300
+        ],
+        [
+          "Italian Sub",
+          "",
+          1600
+        ],
+        [
+          "Cheesesteak Sandwich",
+          "",
+          2400
+        ]
+      ]
+    },
+    {
+      "name": "Not Pizza",
+      "items": [
+        [
+          "Pizza Dough Garlic Bread",
+          "",
+          1000
+        ],
+        [
+          "Crispy Buffalo Wings",
+          "",
+          1500
+        ],
+        [
+          "Toasties!",
+          "",
+          1200
+        ],
+        [
+          "Garlic Scampi Wings",
+          "",
+          1500
+        ],
+        [
+          "Mozzarella Sticks",
+          "",
+          1300
+        ]
+      ]
+    },
+    {
+      "name": "Pizza Pies",
+      "items": [
+        [
+          "Margherita Pie",
+          "",
+          2300
+        ],
+        [
+          "Meatball Pie",
+          "",
+          2500
+        ],
+        [
+          "Garbage Pie",
+          "",
+          2900
+        ],
+        [
+          "Mushroom Pie",
+          "",
+          2500
+        ],
+        [
+          "Cadillac Pie",
+          "",
+          3000
+        ],
+        [
+          "Spicy Pepperoni Pie",
+          "",
+          2800
+        ],
+        [
+          "MG's Hawaiian Pie",
+          "",
+          2800
+        ],
+        [
+          "White Pie with Spinach",
+          "",
+          2700
+        ]
+      ]
+    },
+    {
+      "name": "Make Your Own Pizza",
+      "items": [
+        [
+          "Cheese Pizza",
+          "",
+          2000
+        ]
+      ]
+    },
+    {
+      "name": "Salad",
+      "items": [
+        [
+          "MG's Caesar Salad",
+          "",
+          1400
+        ],
+        [
+          "Creamy Italian Chopped Salad",
+          "",
+          1600
+        ]
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        [
+          "Zeppole",
+          "",
+          800
+        ],
+        [
+          "Chocolate Chip Cannoli",
+          "",
+          500
+        ]
+      ]
+    },
+    {
+      "name": "Pizza By The Slice",
+      "items": [
+        [
+          "Cheese Slice",
+          "",
+          500
+        ],
+        [
+          "Pepperoni Slice",
+          "",
+          600
+        ],
+        [
+          "Meatball Slice",
+          "",
+          600
+        ],
+        [
+          "Cadillac Slice",
+          "",
+          800
+        ],
+        [
+          "Prosciutto and Fig Slice",
+          "",
+          600
+        ],
+        [
+          "White Slice with Spinach",
+          "",
+          600
+        ]
+      ]
+    },
+    {
+      "name": "Dippers",
+      "items": [
+        [
+          "Buttermilk Peppercorn Dressing",
+          "",
+          100
+        ],
+        [
+          "House Hot Honey",
+          "",
+          200
+        ],
+        [
+          "Spicy Calabrian Buttermilk Dressing",
+          "",
+          100
+        ],
+        [
+          "Pizza Sauce",
+          "",
+          200
+        ]
+      ]
+    },
+    {
+      "name": "Sodas and Water",
+      "items": [
+        [
+          "Almeda Sodas",
+          "",
+          400
+        ],
+        [
+          "Can Coke",
+          "",
+          300
+        ],
+        [
+          "Open Water",
+          "",
+          400
+        ]
+      ]
+    }
+  ],
+  "address": "1330 Park St, Alameda, CA 94501",
+  "phone": "(510) 227-5521",
+  "email": "mgsalameda@gmail.com",
+  "hours": "Mon–Sat 11:30am–9pm, Sun noon–8pm",
+  "site": "https://www.marleygspizza.com/",
+  "orderUrl": "https://slicelife.com/restaurants/ca/alameda/94501/marley-g-s-pizzeria/menu",
+  "siteCta": "Order online",
+  "siteNote": "Prices are from the Park Street ordering menu. Specialty pies and availability vary.",
+  "panels": [
+    {
+      "head": "Menu and other location",
+      "body": [
+        "Marley G’s has a separate pizza window at Almanac Adventureland."
+      ],
+      "links": [
+        {
+          "label": "Park Street menu",
+          "href": "https://www.marleygspizza.com/menu"
+        },
+        {
+          "label": "Pizza window at Almanac",
+          "href": "https://beastypages.com/?b=b_marleygspizzeriaalmanac"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "marley-gs-pizzeria-almanac",
+  "name": "Marley G’s Pizzeria — Almanac",
+  "label": "Marley G’s Almanac",
+  "cuisine": "North Jersey style pizza window",
+  "tagline": "Marley G’s pizza window inside the Almanac Adventureland taproom.",
+  "icon": "marley-gs-pizzeria-v121",
+  "category": "Pizza",
+  "color": "#fcf3eb",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "14-inch pizza pies",
+      "items": [
+        [
+          "Cadillac Pie",
+          "",
+          3200
+        ],
+        [
+          "Garbage Pie",
+          "",
+          3200
+        ],
+        [
+          "Flammkuchen Pie",
+          "",
+          3200
+        ],
+        [
+          "Buffalo Chicken Pie",
+          "",
+          3200
+        ],
+        [
+          "White Pie with Spinach",
+          "",
+          3000
+        ],
+        [
+          "Meatball Pie",
+          "",
+          2800
+        ],
+        [
+          "Spicy Pepperoni Pie",
+          "",
+          2900
+        ],
+        [
+          "Vegan Meatball Pie",
+          "",
+          3200
+        ],
+        [
+          "Barbecue Pork Pie",
+          "",
+          3200
+        ],
+        [
+          "Make Your Own Cheese Pie",
+          "",
+          2300
+        ]
+      ]
+    },
+    {
+      "name": "Sides and sandwiches",
+      "items": [
+        [
+          "Pizza Dough Garlic Bread",
+          "",
+          1000
+        ],
+        [
+          "MG’s Caesar Salad",
+          "",
+          1600
+        ],
+        [
+          "Italian Sub · Regular",
+          "",
+          1700
+        ],
+        [
+          "Italian Sub · Large",
+          "",
+          3200
+        ],
+        [
+          "Green Cerignola Olives",
+          "",
+          900
+        ]
+      ]
+    },
+    {
+      "name": "Dippers and dessert",
+      "items": [
+        [
+          "House Hot Honey",
+          "",
+          200
+        ],
+        [
+          "Pizza Sauce",
+          "Starting price",
+          100
+        ],
+        [
+          "Buttermilk Peppercorn Dressing",
+          "Starting price",
+          200
+        ],
+        [
+          "Spicy Calabrian Buttermilk Dressing",
+          "Starting price",
+          200
+        ],
+        [
+          "Cannoli",
+          "",
+          700
+        ]
+      ]
+    }
+  ],
+  "address": "651 W Tower Ave, Alameda, CA 94501",
+  "site": "https://www.marleygspizza.com/almanac-menu",
+  "siteNote": "The window has its own menu. Check current hours before visiting.",
+  "panels": [
+    {
+      "head": "Almanac visit and menu",
+      "body": [
+        "See the window menu and check brewery hours before you go."
+      ],
+      "links": [
+        {
+          "label": "Pizza window menu",
+          "href": "https://www.marleygspizza.com/almanac-menu"
+        },
+        {
+          "label": "Almanac Adventureland",
+          "href": "https://www.almanacbeer.com/alameda"
+        },
+        {
+          "label": "Marley G’s on Park Street",
+          "href": "https://beastypages.com/?b=b_marleygspizzeria"
+        }
+      ]
+    }
+  ]
+},
 ]
