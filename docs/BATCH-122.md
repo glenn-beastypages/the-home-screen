@@ -13,3 +13,13 @@ The [intake ledger](../research/roster/batch122.json) records Glenn’s 45 messa
 - **Yakiniku Ginza Heavy Hitter clip and adjacent creator portrait.** The link attached to the request opens the restaurant website. The source reel and creator handle are missing. The restaurant’s listing and artwork shipped.
 - **Yakiniku Ginza on AYCE.** The official ordering menu and supplied promotion show priced tasting sets and individual cuts. An unlimited offer could not be verified.
 - **Tagged influencer sites.** The 8:32 a.m. note refers to Instagram tags. Messages gives no site names or links. No matching tags or recent share appeared in the signed-in Instagram account.
+
+## Live verification
+
+Render served `28ac1fc`. The public BEASTY and hosted Goods health endpoints passed.
+
+- Chrome at phone width and iPhone WebKit both passed the category and store audit. After three entries with category images blocked, the glyphs still rendered. Ginza’s name and monogram remained visible with its logo file blocked. Visible Chrome also showed the new category and Jack’s first-page seat. Opening Gao Viet Kitchen from Eats reproduced the duplicate SVG ID on the previous release. The two rendered logos have distinct IDs on this release.
+- The three new films played muted in both browsers. All 958 Watch files returned valid video byte ranges, and all 18 new icon, clip and poster files matched production.
+- The full site audit, 16 iPhone entry checks, and shared Goods sign-in checks passed. The historical source check found all three new Instagram sources and the same 52 previously recorded exceptions or withdrawals.
+
+[Release evidence](../research/roster/b122-live-verification.json)

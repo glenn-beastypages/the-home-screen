@@ -1,0 +1,260 @@
+{
+  "release": {
+    "commit": "28ac1fc7c532a4dd37dc622df275721f6e61ffbb",
+    "entry": "/assets/index-Cc-T4EaY.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-16T16:58:57.472268+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/yakiniku-ginza-v122.webp",
+      "sha256": "40a84086b56014a59c9a7b7cf795f6cef623e65ffdd8b47663dc93b70a5fd7f2"
+    },
+    "deploy": "dep-dbtj746417fc73dv262g",
+    "finishedAt": "2026-11-16T16:58:35.225299Z"
+  },
+  "through": "2026-11-16T08:32:02.098828-08:00",
+  "messages": 45,
+  "listings": 2,
+  "unchangedSeats": 2340,
+  "swappedSeats": 2,
+  "newSeats": 5,
+  "playedSilentlyPerBrowser": 3,
+  "watchFilesRangeChecked": 958,
+  "iphoneEntryChecks": 16,
+  "checks": {
+    "archive-live": 0,
+    "assets-live": 0,
+    "goods-live": 0,
+    "iphone-entry-live": 0,
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "full-live": 0
+  },
+  "archive": {
+    "at": "2026-11-16T16:59:10.027Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-Cc-T4EaY.js",
+    "chunks": 10,
+    "messages": 7810,
+    "uniqueInstagramIds": 1056,
+    "matched": 1004,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through122": 329,
+    "exactIconHashes": 265,
+    "exactPosterHashes": 329
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "assets": [
+    {
+      "path": "/icons/influencer-trinh-does-things-v122.webp",
+      "sha256": "3b1316b573118ce2e67725429822421af86fa1ecf61741f4dcd0b91ba6523d09",
+      "bytes": 18006
+    },
+    {
+      "path": "/icons/influencer-the-sauce-boss-v122.webp",
+      "sha256": "d558bbfb1625780bf6449c112191c4d2ecee668690de72c52ac6f32298805978",
+      "bytes": 32892
+    },
+    {
+      "path": "/icons/influencer-eat-with-sie-v122.webp",
+      "sha256": "40a70bcdd655fa0bd8ad3b5b5e493251ee4169c5134c15a2c9a45e7b64ba5f0a",
+      "bytes": 11222
+    },
+    {
+      "path": "/icons/influencer-hungry4munchies-v122.webp",
+      "sha256": "26937cbeefcf6be7df206ec234e8a7755ccca75ea51c45e50d0333de869c9b49",
+      "bytes": 18780
+    },
+    {
+      "path": "/icons/influencer-bayarea-fooddreamz-v122.webp",
+      "sha256": "172385e738bc3687486f7a5b5cbbe790bb80002365bf3c969de98adcb3817d3c",
+      "bytes": 37870
+    },
+    {
+      "path": "/icons/influencer-bayarea-foodie-adventures-v122.webp",
+      "sha256": "8557fa60d966f33c2706e59aac90a9a122ba0b16492a04d874f83d054e4c25f9",
+      "bytes": 17150
+    },
+    {
+      "path": "/icons/influencer-kang-of-realty-v122.webp",
+      "sha256": "9ab1a293a904e4d2256f125f58b0497be2a06c3a8f8b58f136f1a831da1f486c",
+      "bytes": 14288
+    },
+    {
+      "path": "/icons/influencer-jacks-dining-room-v122.webp",
+      "sha256": "987c64994a32eb244bc47a447d8ca89bdfa660bad55158fa5452bb0a9e0ce97e",
+      "bytes": 16438
+    },
+    {
+      "path": "/icons/influencer-takeout-with-tuck-v122.webp",
+      "sha256": "e300a9b905413eb1044917adb9f1ae47459869fed5cd0f5c5fa28900f5e7c87b",
+      "bytes": 26644
+    },
+    {
+      "path": "/icons/influencer-booziebrunch-v122.webp",
+      "sha256": "b20b1afebd14a8cce2617bc3cd9cb9cbb23a36fb02dbc6ece596b7b512011cfb",
+      "bytes": 25580
+    },
+    {
+      "path": "/icons/yakiniku-ginza-v122.webp",
+      "sha256": "40a84086b56014a59c9a7b7cf795f6cef623e65ffdd8b47663dc93b70a5fd7f2",
+      "bytes": 31606
+    },
+    {
+      "path": "/icons/the-junction-santa-rosa-v122.webp",
+      "sha256": "b790a626c59542709124adf7f4759682e90a72bfafd0d568698b44570eb07f2d",
+      "bytes": 23192
+    },
+    {
+      "path": "/clips/review-C2RBdWMrJCL.mp4",
+      "sha256": "06bb24aa66e480ec152a71eda3ec8a39814f61629fca533e015ae1414813f997",
+      "bytes": 2352188
+    },
+    {
+      "path": "/clips/review-C2RBdWMrJCL-poster.webp",
+      "sha256": "bc221bf71dba59e99d275eefaf43250bb802f4dccba0e4bc4d3ed2e43f9d30f9",
+      "bytes": 79564
+    },
+    {
+      "path": "/clips/review-DY2myk-Ps5W.mp4",
+      "sha256": "3998a480e55d74ba44c9467b881146f757fcfbf0a26b407c8b991c0e50c7ad14",
+      "bytes": 2042807
+    },
+    {
+      "path": "/clips/review-DY2myk-Ps5W-poster.webp",
+      "sha256": "499b88be6461403c0afe2bddf035d1be5b3e3d5a0f75dc35c9cc3c7fc2fddeca",
+      "bytes": 19834
+    },
+    {
+      "path": "/clips/review-Dfno6o9hL32.mp4",
+      "sha256": "d4235fca439230ad00a98f0a9cc44c80e902d8662286d3b0451ded76b8d6980b",
+      "bytes": 2334171
+    },
+    {
+      "path": "/clips/review-Dfno6o9hL32-poster.webp",
+      "sha256": "dc5a89655d4ef6871b595c08aaa5a4790acea7be7111e73c7e550442cc28f699",
+      "bytes": 22026
+    }
+  ],
+  "localCatalogArtwork": {
+    "brandFiles": 1117,
+    "missingBrandFiles": [],
+    "categoryThumbnailFiles": 51,
+    "missingThumbnails": []
+  },
+  "visibleChrome": {
+    "bundle": "/assets/index-Cc-T4EaY.js",
+    "influencers": true,
+    "jackOnFirst": true,
+    "jackSeat": 18,
+    "jackArtwork": "/icons/influencer-jacks-dining-room-v122.webp",
+    "mzzAbsentFromFirst": true,
+    "noHorizontalOverflow": true,
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852,
+        "scrollWidth": 393,
+        "categories": 24,
+        "glyphs": 24
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scrollWidth": 320,
+        "ginzaMenuItems": 57,
+        "ginzaArtwork": "/icons/yakiniku-ginza-v122.webp"
+      }
+    ]
+  },
+  "svgDefinitions": {
+    "before": {
+      "name": "Gao Viet Kitchen",
+      "copies": 2,
+      "duplicateSvgIds": 1
+    },
+    "after": {
+      "name": "Gao Viet Kitchen",
+      "copies": 2,
+      "duplicateSvgIds": 0
+    }
+  }
+}
