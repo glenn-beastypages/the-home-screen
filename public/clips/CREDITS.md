@@ -1224,3 +1224,8 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DbtyrqZhCTQ.mp4` | [Original](https://www.instagram.com/reel/DbtyrqZhCTQ/) | Review by @oaktowngrubhub at Marley G’s Pizzeria, Alameda. 3–18s |
 | `review-DXNqLPBCV__.mp4` | [Original](https://www.instagram.com/reel/DXNqLPBCV__/) | Review by @cheycheyfromthebay at the Marley G’s pizza window inside Almanac Adventureland. 3–18s |
 | `review-DSY4p6PkR3f.mp4` | [Original](https://www.instagram.com/reel/DSY4p6PkR3f/) | Review by @taylorandtylor at Marley G’s Pizzeria, Alameda. 3–18s |
+
+<!-- Batch 122 reviews. -->
+| `review-C2RBdWMrJCL.mp4` | [Original](https://www.instagram.com/reel/C2RBdWMrJCL/) | Review by @bayarea.foodie.adventures at Four Chairs, San Francisco. 0–11.8s |
+| `review-DY2myk-Ps5W.mp4` | [Original](https://www.instagram.com/reel/DY2myk-Ps5W/) | Review by @kangofrealty at The Junction — Santa Rosa. 3–18s |
+| `review-Dfno6o9hL32.mp4` | [Original](https://www.instagram.com/reel/Dfno6o9hL32/) | Review by @kangofrealty at Popoca, Oakland. 3–18s |

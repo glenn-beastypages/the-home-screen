@@ -13645,15 +13645,13 @@ span.top3-add {
   width: 100%;
   height: 100%;
   background: #1c1c1e center / cover no-repeat;
-  /* The squircle mask is set inline (CategoryIcon), so it scales with the box. */
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  /* Keep the folded corner square without a separate mask surface per tile. */
+  border-radius: 24% 0 24% 24%;
+  overflow: hidden;
 }
 
 /* Glass: light from above, a little weight below, so the drawing sits on the
-   tile instead of floating on a photo. Clipped to the squircle by the mask. */
+   tile instead of floating on a photo. Clipped to the tile border. */
 .cat-icon::before {
   content: '';
   position: absolute;
@@ -13665,7 +13663,7 @@ span.top3-add {
 }
 
 /* A hairline round the edge, so a dark tile still reads as a tile on a dark
-   wallpaper. The mask cuts the outer half of the stroke. */
+   wallpaper. The rounded tile clips the outer half of the stroke. */
 .cat-icon .cat-icon-edge {
   position: absolute;
   inset: 0;
@@ -13684,9 +13682,7 @@ span.top3-add {
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
-/* iPhone entry must not allocate a filter surface for every masked category
-   tile plus live backdrop surfaces over the same grid. Keep the artwork,
-   masks and layout; the existing tile sheen supplies depth without filters. */
+/* Skip per-tile filter surfaces and live backdrops on iPhone entry. */
 .shell-enter.is-touch-apple .home .icon-tile,
 .shell-enter.is-touch-apple .home .cat-icon-glyph {
   filter: none;

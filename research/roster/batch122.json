@@ -1,0 +1,1170 @@
+{
+  "cutoff": "2026-11-16T08:32:02.098828-08:00",
+  "listings": [
+    {
+      "slug": "yakiniku-ginza",
+      "name": "Yakiniku Ginza",
+      "label": "Yakiniku Ginza",
+      "cuisine": "Japanese wagyu BBQ",
+      "category": "BBQ",
+      "color": "#9D6A21",
+      "icon": "yakiniku-ginza-v122",
+      "prep": 0,
+      "items": [],
+      "address": "475 Castro St, Mountain View, CA 94041",
+      "phone": "(669) 800-9100",
+      "email": "yakinikuginzamtv@gmail.com",
+      "hours": "Sun–Thu 5–9:30pm, Fri–Sat 5–10pm",
+      "tagline": "Tabletop Japanese barbecue with A5 Japanese wagyu and Australian wagyu in downtown Mountain View.",
+      "instagram": "https://www.instagram.com/ginzayakiniku/",
+      "site": "https://www.yakinikuginza.com/",
+      "orderUrl": "https://toast.app/r/ginza-475-castro-street/order",
+      "siteCta": "See their ordering menu",
+      "siteNote": "The restaurant serves individual cuts and shareable Wagyu tasting sets. See the restaurant’s current menu for availability and drinks.",
+      "panels": [
+        {
+          "head": "Reservations and walk-ins",
+          "body": [
+            "Reservations are available for any party size Sunday through Thursday. Friday and Saturday reservations are for groups of six or more. Smaller Friday and Saturday parties can walk in."
+          ],
+          "links": [
+            {
+              "label": "Reservation details",
+              "href": "https://www.yakinikuginza.com/"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Salad and appetizers",
+          "items": [
+            [
+              "Ginza House Spring Mix Salad",
+              "",
+              1895
+            ],
+            [
+              "Garlic Seasoned Fries",
+              "",
+              995
+            ],
+            [
+              "Pepper Salt Edamame",
+              "",
+              995
+            ],
+            [
+              "Garlic Edamame",
+              "",
+              1095
+            ],
+            [
+              "Spicy Garlic Edamame",
+              "",
+              1095
+            ],
+            [
+              "Snow Crab Croquettes · 3 pieces",
+              "",
+              1595
+            ],
+            [
+              "Chef’s Appetizer Selection",
+              "Six rotating starters.",
+              1695
+            ],
+            [
+              "Vegetable Tempura",
+              "",
+              1695
+            ],
+            [
+              "Kaki Fry · 5 pieces",
+              "",
+              1695
+            ],
+            [
+              "Fried Kurobuta Sausage · 6 pieces",
+              "",
+              1795
+            ],
+            [
+              "Japanese Karaage",
+              "",
+              1895
+            ],
+            [
+              "Shrimp Tempura",
+              "",
+              1895
+            ],
+            [
+              "Shrimp & Vegetable Tempura",
+              "",
+              1995
+            ],
+            [
+              "Fried Soft-Shell Crab",
+              "",
+              2095
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "Kimchi Beef Soup",
+              "",
+              2358
+            ],
+            [
+              "Clam Miso Soup",
+              "",
+              1958
+            ]
+          ]
+        },
+        {
+          "name": "Wagyu sets",
+          "items": [
+            [
+              "Japanese A5 Wagyu Grand Selection · 20 oz",
+              "Four cuts with two bowls of rice.",
+              16800
+            ],
+            [
+              "Japanese A5 & Australian MB9+ Wagyu Grand Selection · 24 oz",
+              "Six cuts with two bowls of rice.",
+              16800
+            ],
+            [
+              "Australian MB9+ Wagyu Signature Six · 24 oz",
+              "Six Australian cuts with two bowls of rice.",
+              12800
+            ]
+          ]
+        },
+        {
+          "name": "Japanese A5 wagyu",
+          "items": [
+            [
+              "Thick-Cut Striploin · 6 oz",
+              "",
+              6989
+            ],
+            [
+              "Short Rib · 6 oz",
+              "",
+              5889
+            ],
+            [
+              "Chuck Eye Roll · 6 oz",
+              "",
+              4489
+            ],
+            [
+              "Brisket · 6 oz",
+              "",
+              4289
+            ]
+          ]
+        },
+        {
+          "name": "Australian MB9+ wagyu",
+          "items": [
+            [
+              "Ultimate Wagyu Short Rib",
+              "",
+              4689
+            ],
+            [
+              "Marinated Boneless LA Galbi · 6 oz",
+              "",
+              3689
+            ],
+            [
+              "Chuck Roll · 6 oz",
+              "",
+              3489
+            ],
+            [
+              "Top Blade · 6 oz",
+              "",
+              3489
+            ],
+            [
+              "Beef Tongue · 6 oz",
+              "",
+              3389
+            ],
+            [
+              "Brisket · 6 oz",
+              "",
+              3389
+            ],
+            [
+              "Tender Meat · 6 oz",
+              "",
+              3289
+            ],
+            [
+              "Beef Belly · 6 oz",
+              "",
+              2489
+            ],
+            [
+              "Rib Finger · 6 oz",
+              "",
+              2489
+            ]
+          ]
+        },
+        {
+          "name": "More from the grill",
+          "items": [
+            [
+              "Garlic Pork Belly",
+              "",
+              2689
+            ],
+            [
+              "Spicy Pork Belly",
+              "",
+              2689
+            ],
+            [
+              "Garlic Chicken Thigh",
+              "",
+              2389
+            ],
+            [
+              "Spicy Chicken Thigh",
+              "",
+              2389
+            ],
+            [
+              "Garlic Butter Jumbo Shrimp · 8 pieces",
+              "",
+              2489
+            ],
+            [
+              "Butter Scallops · 8 pieces",
+              "",
+              2289
+            ],
+            [
+              "Yakiniku Vegetable Platter",
+              "",
+              1989
+            ],
+            [
+              "Cinnamon Pineapple",
+              "",
+              1556
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Double Corn Cheese",
+              "",
+              1589
+            ],
+            [
+              "Double Spicy Corn Cheese",
+              "",
+              1589
+            ],
+            [
+              "Single Corn Cheese",
+              "",
+              889
+            ],
+            [
+              "Spicy Single Corn Cheese",
+              "",
+              889
+            ],
+            [
+              "Furikake Rice",
+              "",
+              350
+            ],
+            [
+              "Steamed Japanese Rice",
+              "",
+              300
+            ]
+          ]
+        },
+        {
+          "name": "Non-alcoholic drinks",
+          "items": [
+            [
+              "Coke",
+              "",
+              350
+            ],
+            [
+              "Diet Coke",
+              "",
+              350
+            ],
+            [
+              "Sprite",
+              "",
+              350
+            ],
+            [
+              "Premium Japanese Tea",
+              "Sencha, hojicha or genmaicha matcha.",
+              400
+            ],
+            [
+              "Manzanita Sol Apple Soda",
+              "",
+              500
+            ],
+            [
+              "Japanese Kona Milk Coffee",
+              "",
+              600
+            ],
+            [
+              "Moshi Japanese Sparkling Drink",
+              "",
+              700
+            ],
+            [
+              "Maison Perrier Sparkling Water · 330 mL",
+              "",
+              500
+            ],
+            [
+              "S.Pellegrino · 750 mL",
+              "",
+              1100
+            ],
+            [
+              "Asahi Dry Zero",
+              "",
+              600
+            ],
+            [
+              "Suntory All-Free",
+              "",
+              600
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-junction-santa-rosa",
+      "name": "The Junction — Santa Rosa",
+      "label": "The Junction",
+      "cuisine": "Sourdough pizza and beer garden",
+      "category": "Pizza",
+      "color": "#0B1B2B",
+      "icon": "the-junction-santa-rosa-v122",
+      "prep": 0,
+      "items": [],
+      "address": "3901 Montgomery Dr, Santa Rosa, CA 95405",
+      "hours": "Mon–Thu 11:30am–9pm, Fri 11:30am–10pm, Sat 11am–10pm, Sun 10am–8pm",
+      "tagline": "Santa Rosa beer garden with PizzaHacker sourdough pies, a kids’ play area and live music.",
+      "instagram": "https://www.instagram.com/thejunctionbeer/",
+      "site": "https://www.thejunc.com/santa-rosa",
+      "orderUrl": "https://toast.app/r/pizzahacker-santa-rosa-3901-montgomery-drive/order?diningOption=delivery",
+      "siteCta": "Order from Santa Rosa",
+      "siteNote": "Prices come from the Santa Rosa ordering menu. Check the event calendar for changes on concert nights.",
+      "panels": [
+        {
+          "head": "Santa Rosa food and events",
+          "body": [
+            "The Montgomery Drive location has its own menu and music calendar. Check the calendar for ticketed shows that change regular hours."
+          ],
+          "links": [
+            {
+              "label": "Santa Rosa menu and drinks",
+              "href": "https://toast.app/r/pizzahacker-santa-rosa-3901-montgomery-drive/order?diningOption=delivery"
+            },
+            {
+              "label": "Santa Rosa live music",
+              "href": "https://www.thejunc.com/santa-rosa-music-and-events"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Pizzas",
+          "items": [
+            [
+              "Kid’s Cheese",
+              "",
+              2000
+            ],
+            [
+              "The Villa",
+              "Hot Italian sausage, pickled peppers, marinated onions and mozzarella.",
+              2600
+            ],
+            [
+              "El Jefe",
+              "Chorizo, kalamata olives and marinated onions.",
+              2600
+            ],
+            [
+              "Summer Fest",
+              "Sungold tomatoes, arugula and lemon. Check availability.",
+              2300
+            ],
+            [
+              "Shotcaller",
+              "Meatballs and ricotta.",
+              2600
+            ],
+            [
+              "The Hilltopper",
+              "Soppressata, sausage and mushrooms.",
+              2600
+            ],
+            [
+              "The Situation",
+              "Pepperoni and pepperoncini.",
+              2500
+            ],
+            [
+              "Forbidden Fruit",
+              "Canadian bacon, pineapple, jalapeño and red onion.",
+              2600
+            ],
+            [
+              "Shroomer",
+              "Mushrooms, caramelized onions, Taleggio and pesto with sunflower seeds.",
+              2800
+            ],
+            [
+              "Bestie",
+              "Smoked pork belly, red onions, garlic cream sauce and charred lemon.",
+              2500
+            ],
+            [
+              "Margherita",
+              "Tomato, mozzarella and basil.",
+              2200
+            ]
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "items": [
+            [
+              "Party Wings · 6 pieces",
+              "",
+              1200
+            ],
+            [
+              "Korean Chicken Wings",
+              "Gochujang, sesame and green onion.",
+              1200
+            ],
+            [
+              "Fried Brussels Sprouts",
+              "Hot honey, Sriracha and hazelnut.",
+              1400
+            ],
+            [
+              "Meatballs",
+              "",
+              1400
+            ],
+            [
+              "Valley Ford Cheese Curds",
+              "",
+              1400
+            ],
+            [
+              "French Fries",
+              "",
+              600
+            ],
+            [
+              "Garlic Fries",
+              "",
+              900
+            ],
+            [
+              "Chicken Tenders",
+              "Three tenders with fries.",
+              1400
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Caesar",
+              "",
+              1400
+            ],
+            [
+              "Italian Chop",
+              "",
+              1400
+            ],
+            [
+              "Tri Colore",
+              "",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Sub sandwiches",
+          "items": [
+            [
+              "La Madrina",
+              "Italian meats and provolone on sourdough with a side salad.",
+              1600
+            ],
+            [
+              "Meatball Parm",
+              "Meatballs, marinara and cheese on sourdough with Caesar salad.",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Fried chicken sandwiches",
+          "items": [
+            [
+              "Regular",
+              "",
+              1600
+            ],
+            [
+              "Buffalo",
+              "",
+              1600
+            ],
+            [
+              "Korean",
+              "",
+              1600
+            ],
+            [
+              "Nashville",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Dessert and dips",
+          "items": [
+            [
+              "Chocolate Chip Cookies",
+              "Two cookies.",
+              500
+            ],
+            [
+              "Ranch",
+              "",
+              100
+            ],
+            [
+              "Pesto",
+              "",
+              100
+            ],
+            [
+              "Blue Cheese",
+              "",
+              100
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "foodie-kangofrealty",
+      "name": "Eric Kang",
+      "label": "Eric Kang",
+      "cuisine": "Realtor and food creator",
+      "category": "Real estate",
+      "color": "#191919",
+      "icon": "influencer-kang-of-realty-v122",
+      "prep": 0,
+      "items": [],
+      "site": "https://www.fastagents.com/agents/eric-kang",
+      "siteCta": "See Eric’s realtor profile",
+      "email": "eric@fastagents.com",
+      "phone": "(510) 500-5880",
+      "instagram": "https://www.instagram.com/kangofrealty/",
+      "tagline": "Bay Area real estate and restaurant reviews from @kangofrealty.",
+      "contactOnly": "Contact Eric for Bay Area home buying or selling. His restaurant reviews are below.",
+      "panels": [
+        {
+          "head": "Real estate",
+          "body": [
+            "Eric’s brokerage profile lists Oakland as his office and offers contact for buyers and sellers."
+          ],
+          "links": [
+            {
+              "label": "Brokerage profile",
+              "href": "https://www.fastagents.com/agents/eric-kang"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "mountain-view-goods2-0": "b_yakinikuginza",
+    "santa-rosa-goods2-4": "b_thejunctionsantarosa",
+    "beasty-bbq2-1": "b_yakinikuginza",
+    "beasty-pizza2-4": "b_thejunctionsantarosa",
+    "beasty-realtors-2": "b_foodiekangofrealty",
+    "beasty-foodies-17": "b_foodiejacksdiningroom",
+    "beasty-foodies2-7": "b_foodiemzzjuxtaposition"
+  },
+  "replacedSeats": {
+    "beasty-foodies-17": "b_foodiemzzjuxtaposition",
+    "beasty-foodies2-7": "b_foodiejacksdiningroom"
+  },
+  "posts": [
+    {
+      "code": "C2RBdWMrJCL",
+      "slug": "review-C2RBdWMrJCL",
+      "startSeconds": 0,
+      "endSeconds": 11.8,
+      "sourceDuration": 11.8,
+      "audio": true,
+      "batch": 122,
+      "source": "https://www.instagram.com/reel/C2RBdWMrJCL/",
+      "brand": "b_fourchairs",
+      "by": "bayarea.foodie.adventures",
+      "postedBy": "bayarea.foodie.adventures",
+      "postedDate": "20240119",
+      "credit": "Review by @bayarea.foodie.adventures at Four Chairs, San Francisco.",
+      "request": [
+        {
+          "rowId": 252670,
+          "linkRowId": 252669,
+          "at": "2026-11-16T06:57:38.694848-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "DY2myk-Ps5W",
+      "slug": "review-DY2myk-Ps5W",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 33.74,
+      "audio": true,
+      "batch": 122,
+      "source": "https://www.instagram.com/reel/DY2myk-Ps5W/",
+      "brand": "b_thejunctionsantarosa",
+      "by": "kangofrealty",
+      "postedBy": "kangofrealty",
+      "postedDate": "20260527",
+      "credit": "Review by @kangofrealty at The Junction — Santa Rosa.",
+      "request": [
+        {
+          "rowId": 252676,
+          "linkRowId": 252675,
+          "at": "2026-11-16T07:03:53.400986-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays on the business and creator pages and in Watch."
+    },
+    {
+      "code": "Dfno6o9hL32",
+      "slug": "review-Dfno6o9hL32",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 46.883,
+      "audio": true,
+      "batch": 122,
+      "source": "https://www.instagram.com/reel/Dfno6o9hL32/",
+      "brand": "b_popocaoakland",
+      "by": "kangofrealty",
+      "postedBy": "kangofrealty",
+      "postedDate": "20261111",
+      "credit": "Review by @kangofrealty at Popoca, Oakland.",
+      "request": [
+        {
+          "rowId": 252673,
+          "linkRowId": 252672,
+          "at": "2026-11-16T06:58:42.974546-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "disposition": "Plays on the business and creator pages and in Watch."
+    }
+  ],
+  "updatedIcons": [
+    "/icons/influencer-trinh-does-things-v122.webp",
+    "/icons/influencer-the-sauce-boss-v122.webp",
+    "/icons/influencer-eat-with-sie-v122.webp",
+    "/icons/influencer-hungry4munchies-v122.webp",
+    "/icons/influencer-bayarea-fooddreamz-v122.webp",
+    "/icons/influencer-bayarea-foodie-adventures-v122.webp",
+    "/icons/influencer-kang-of-realty-v122.webp",
+    "/icons/influencer-jacks-dining-room-v122.webp",
+    "/icons/influencer-takeout-with-tuck-v122.webp",
+    "/icons/influencer-booziebrunch-v122.webp",
+    "/icons/yakiniku-ginza-v122.webp",
+    "/icons/the-junction-santa-rosa-v122.webp"
+  ],
+  "updatedBrands": [
+    "b_fourchairs",
+    "b_popocaoakland",
+    "b_eatwithsie",
+    "b_foodiekangofrealty"
+  ],
+  "categoryOnly": [
+    "b_foodiekangofrealty"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0674.PNG",
+      "path": "/icons/influencer-trinh-does-things-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/trinhdoesthings/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0675.PNG",
+      "path": "/icons/influencer-the-sauce-boss-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/thesauceboss_/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0676.PNG",
+      "path": "/icons/influencer-eat-with-sie-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/eatwithsie/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0679.png",
+      "path": "/icons/influencer-hungry4munchies-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/hungry4munchies/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0680.PNG",
+      "path": "/icons/influencer-bayarea-fooddreamz-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/bayarea_fooddreamz/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0681.PNG",
+      "path": "/icons/influencer-bayarea-foodie-adventures-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/bayarea.foodie.adventures/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0682.png",
+      "path": "/icons/influencer-kang-of-realty-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/kangofrealty/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0687.PNG",
+      "path": "/icons/influencer-jacks-dining-room-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/jacksdiningroom/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0689.PNG",
+      "path": "/icons/influencer-takeout-with-tuck-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/takeoutwithtuck/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0690.PNG",
+      "path": "/icons/influencer-booziebrunch-v122.webp",
+      "comparedAgainst": "https://www.instagram.com/booziebrunch/",
+      "disposition": "Matched the supplied art to the current official profile and used its original image."
+    },
+    {
+      "source": "IMG_0668.png",
+      "disposition": "Ginza’s supplied business profile and current Wagyu set advertising."
+    },
+    {
+      "source": "IMG_0670.PNG",
+      "disposition": "Ginza’s website contact screenshot, checked against the site."
+    },
+    {
+      "source": "IMG_0671.jpeg",
+      "path": "/icons/yakiniku-ginza-v122.webp",
+      "comparedAgainst": "https://www.yakinikuginza.com/",
+      "disposition": "Supplied square official gold circle on white, checked against the restaurant’s website art. The complete ring and lettering fit the tile."
+    },
+    {
+      "source": "IMG_0672.png",
+      "disposition": "Alternate screenshot of the same official gold logo. The original JPEG supplies the tile."
+    },
+    {
+      "source": "IMG_0673.png",
+      "disposition": "Unidentified profile portrait. The two adjacent links are for the restaurant website. Held pending the matching profile."
+    },
+    {
+      "source": "IMG_0683.png",
+      "disposition": "Identifies The Junction’s shared brand. The profile bio advertises Mill Valley, while the reel shows the Santa Rosa branch."
+    },
+    {
+      "source": "IMG_0684.PNG",
+      "disposition": "Shared-brand contact screenshot. The Mill Valley phone was left off the Santa Rosa listing."
+    },
+    {
+      "source": "IMG_0686.png",
+      "path": "/icons/the-junction-santa-rosa-v122.webp",
+      "comparedAgainst": "https://www.thejunc.com/santa-rosa",
+      "disposition": "Supplied shared Junction roundel. The Santa Rosa official site also uses a shared Tam Valley mark. The listing and review identify Santa Rosa."
+    },
+    {
+      "source": "IMG_0688.PNG",
+      "disposition": "Shows @mzz.juxtaposition as the exact first-page creator to swap with @jacksdiningroom."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252647,
+      "at": "2026-11-16T06:39:47.788436-08:00",
+      "text": "https://www.yakinikuginza.com/ Mountain View • Eats \nBEASTY • BBQ\nBEASTY • AYCE",
+      "attachments": [
+        "IMG_0668.png",
+        "IMG_0670.PNG",
+        "IMG_0671.jpeg",
+        "IMG_0672.png"
+      ]
+    },
+    {
+      "rowId": 252648,
+      "at": "2026-11-16T06:40:54.659732-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0673.png"
+      ]
+    },
+    {
+      "rowId": 252649,
+      "at": "2026-11-16T06:40:55.852942-08:00",
+      "text": "https://www.yakinikuginza.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252650,
+      "at": "2026-11-16T06:40:55.953703-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252651,
+      "at": "2026-11-16T06:44:41.859201-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0674.PNG"
+      ]
+    },
+    {
+      "rowId": 252652,
+      "at": "2026-11-16T06:44:42.297473-08:00",
+      "text": "https://www.instagram.com/trinhdoesthings",
+      "attachments": []
+    },
+    {
+      "rowId": 252653,
+      "at": "2026-11-16T06:44:42.369195-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252654,
+      "at": "2026-11-16T06:45:24.324308-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0675.PNG"
+      ]
+    },
+    {
+      "rowId": 252655,
+      "at": "2026-11-16T06:45:24.844486-08:00",
+      "text": "https://www.instagram.com/thesauceboss_",
+      "attachments": []
+    },
+    {
+      "rowId": 252656,
+      "at": "2026-11-16T06:45:24.956749-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252657,
+      "at": "2026-11-16T06:45:57.323545-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0676.PNG"
+      ]
+    },
+    {
+      "rowId": 252658,
+      "at": "2026-11-16T06:45:57.759259-08:00",
+      "text": "https://www.instagram.com/eatwithsie",
+      "attachments": []
+    },
+    {
+      "rowId": 252659,
+      "at": "2026-11-16T06:45:57.853489-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252660,
+      "at": "2026-11-16T06:49:06.129790-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0679.png"
+      ]
+    },
+    {
+      "rowId": 252661,
+      "at": "2026-11-16T06:49:06.597547-08:00",
+      "text": "https://www.instagram.com/hungry4munchies",
+      "attachments": []
+    },
+    {
+      "rowId": 252662,
+      "at": "2026-11-16T06:49:06.680247-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252663,
+      "at": "2026-11-16T06:50:04.594718-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0680.PNG"
+      ]
+    },
+    {
+      "rowId": 252664,
+      "at": "2026-11-16T06:50:05.082626-08:00",
+      "text": "https://www.instagram.com/bayarea_fooddreamz",
+      "attachments": []
+    },
+    {
+      "rowId": 252665,
+      "at": "2026-11-16T06:50:05.153374-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252666,
+      "at": "2026-11-16T06:56:52.798883-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0681.PNG"
+      ]
+    },
+    {
+      "rowId": 252667,
+      "at": "2026-11-16T06:56:53.155422-08:00",
+      "text": "https://www.instagram.com/bayarea.foodie.adventures",
+      "attachments": []
+    },
+    {
+      "rowId": 252668,
+      "at": "2026-11-16T06:56:53.230568-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252669,
+      "at": "2026-11-16T06:57:38.598953-08:00",
+      "text": "https://www.instagram.com/reel/C2RBdWMrJCL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252670,
+      "at": "2026-11-16T06:57:38.694848-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252671,
+      "at": "2026-11-16T06:58:42.506535-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0682.png"
+      ]
+    },
+    {
+      "rowId": 252672,
+      "at": "2026-11-16T06:58:42.891575-08:00",
+      "text": "https://www.instagram.com/reel/Dfno6o9hL32/",
+      "attachments": []
+    },
+    {
+      "rowId": 252673,
+      "at": "2026-11-16T06:58:42.974546-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252674,
+      "at": "2026-11-16T07:03:37.280134-08:00",
+      "text": "Santa Rosa • Eats \nBEASTY • Pizza",
+      "attachments": [
+        "IMG_0686.png",
+        "IMG_0684.PNG",
+        "IMG_0683.png"
+      ]
+    },
+    {
+      "rowId": 252675,
+      "at": "2026-11-16T07:03:53.328745-08:00",
+      "text": "https://www.instagram.com/reel/DY2myk-Ps5W/",
+      "attachments": []
+    },
+    {
+      "rowId": 252676,
+      "at": "2026-11-16T07:03:53.400986-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252677,
+      "at": "2026-11-16T07:05:40.845372-08:00",
+      "text": "https://www.instagram.com/kangofrealty",
+      "attachments": []
+    },
+    {
+      "rowId": 252678,
+      "at": "2026-11-16T07:05:40.928647-08:00",
+      "text": "BEASTY • Realty",
+      "attachments": []
+    },
+    {
+      "rowId": 252679,
+      "at": "2026-11-16T07:10:15.820681-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0687.PNG"
+      ]
+    },
+    {
+      "rowId": 252680,
+      "at": "2026-11-16T07:10:16.334534-08:00",
+      "text": "https://www.instagram.com/jacksdiningroom",
+      "attachments": []
+    },
+    {
+      "rowId": 252681,
+      "at": "2026-11-16T07:10:16.406152-08:00",
+      "text": "Please update icon pic \nPlease move him to the 1st page and bump back this person",
+      "attachments": []
+    },
+    {
+      "rowId": 252682,
+      "at": "2026-11-16T07:10:19.102834-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0688.PNG"
+      ]
+    },
+    {
+      "rowId": 252683,
+      "at": "2026-11-16T07:11:36.035643-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0689.PNG"
+      ]
+    },
+    {
+      "rowId": 252684,
+      "at": "2026-11-16T07:11:36.520097-08:00",
+      "text": "https://www.instagram.com/takeoutwithtuck",
+      "attachments": []
+    },
+    {
+      "rowId": 252685,
+      "at": "2026-11-16T07:11:36.602828-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252687,
+      "at": "2026-11-16T08:21:28.091870-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252688,
+      "at": "2026-11-16T08:22:18.167860-08:00",
+      "text": "https://www.instagram.com/booziebrunch",
+      "attachments": []
+    },
+    {
+      "rowId": 252689,
+      "at": "2026-11-16T08:22:18.976584-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0690.PNG"
+      ]
+    },
+    {
+      "rowId": 252690,
+      "at": "2026-11-16T08:23:52.095312-08:00",
+      "text": "Hey brother, let’s change the word “foodies” to “Influencers” for the button. This seems to be the more appropriate term.",
+      "attachments": []
+    },
+    {
+      "rowId": 252691,
+      "at": "2026-11-16T08:25:33.490358-08:00",
+      "text": "Also, is there a glitch for the BEASTY pages icons? Some are randomly blank, I’m not sure if you noticed.",
+      "attachments": []
+    },
+    {
+      "rowId": 252696,
+      "at": "2026-11-16T08:32:02.098828-08:00",
+      "text": "I tagged you a few influencer sites that has been on my algorithm. Let’s check them out and see if we can get any ideas from them or compare our platforms.",
+      "attachments": []
+    }
+  ],
+  "held": [
+    {
+      "rows": [
+        252648,
+        252649,
+        252650
+      ],
+      "request": "Yakiniku Ginza Heavy Hitter clip and adjacent creator artwork",
+      "reason": "The imported Messages payload is a second Ginza website card. It includes no original reel or creator handle. The portrait lacks a name."
+    },
+    {
+      "rows": [
+        252647
+      ],
+      "request": "Yakiniku Ginza on AYCE",
+      "reason": "The official menu and supplied Ginza graphic show priced tasting sets and individual cuts. An unlimited dining option could not be confirmed. BBQ and Mountain View shipped."
+    },
+    {
+      "rows": [
+        252696
+      ],
+      "request": "Review influencer sites tagged on Instagram",
+      "reason": "Messages gives no usernames or URLs. No matching tags or recent share appeared in the signed-in Instagram account."
+    }
+  ]
+}

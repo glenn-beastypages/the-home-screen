@@ -2280,7 +2280,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies-14': 'b_foodiethetastebud',
   'beasty-foodies-15': 'b_foodieazteced',
   'beasty-foodies-16': 'b_foodieimadoniseats',
-  'beasty-foodies-17': 'b_foodiemzzjuxtaposition',
+  'beasty-foodies-17': 'b_foodiejacksdiningroom',
   'beasty-foodies-18': 'b_foodieyourglobalfoodiebff',
   'beasty-foodies-19': 'b_foodiefelicitythefoodie',
   'beasty-foodies-20': 'b_foodietrinhdoesthings',
@@ -2316,7 +2316,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-4': 'b_foodielatinmami',
   'beasty-foodies2-5': 'b_foodiebayareafoodieadventures',
   'beasty-foodies2-6': 'b_foodiesiliconvalleyfoodies',
-  'beasty-foodies2-7': 'b_foodiejacksdiningroom',
+  'beasty-foodies2-7': 'b_foodiemzzjuxtaposition',
   'beasty-foodies2-8': 'b_foodieandreweatsinsf',
   'beasty-foodies2-9': 'b_foodieeatswithkath',
   'beasty-foodies2-10': 'b_foodiecestalmoco',
@@ -2799,4 +2799,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   "beasty-pizza2-3": "b_marleygspizzeria",
   "beasty-foodies2-346": "b_foodiebaydish",
   "beasty-foodies2-347": "b_foodietaylorandtylor",
+
+  // Batch 122 — Mountain View BBQ, Santa Rosa pizza, and Eric Kang on Realtors.
+  'mountain-view-goods2-0': 'b_yakinikuginza',
+  'santa-rosa-goods2-4': 'b_thejunctionsantarosa',
+  'beasty-bbq2-1': 'b_yakinikuginza',
+  'beasty-pizza2-4': 'b_thejunctionsantarosa',
+  'beasty-realtors-2': 'b_foodiekangofrealty',
 }

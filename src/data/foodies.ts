@@ -124,17 +124,20 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "hungry4munchies",
     "name": "@hungry4munchies",
-    "label": "hungry4munchies"
+    "label": "hungry4munchies",
+    "icon": "influencer-hungry4munchies-v122"
   },
   {
     "handle": "bayarea_fooddreamz",
     "name": "@bayarea_fooddreamz",
-    "label": "bayarea_fooddreamz"
+    "label": "bayarea_fooddreamz",
+    "icon": "influencer-bayarea-fooddreamz-v122"
   },
   {
     "handle": "eatwithsie",
     "name": "@eatwithsie",
-    "label": "eatwithsie"
+    "label": "eatwithsie",
+    "icon": "influencer-eat-with-sie-v122"
   },
   {
     "handle": "daeatzwitbri",
@@ -182,7 +185,8 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "trinhdoesthings",
     "name": "@trinhdoesthings",
-    "label": "trinhdoesthings"
+    "label": "trinhdoesthings",
+    "icon": "influencer-trinh-does-things-v122"
   },
   {
     "handle": "smackinfood",
@@ -199,7 +203,8 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "thesauceboss_",
     "name": "@thesauceboss_",
-    "label": "thesauceboss_"
+    "label": "thesauceboss_",
+    "icon": "influencer-the-sauce-boss-v122"
   }
 ]
 
@@ -208,7 +213,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "bayarea.foodie.adventures",
     "name": "@bayarea.foodie.adventures",
-    "label": "bayarea.foodie.adventures"
+    "label": "bayarea.foodie.adventures",
+    "icon": "influencer-bayarea-foodie-adventures-v122"
   },
   {
     "handle": "siliconvalley.foodies",
@@ -219,7 +225,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "jacksdiningroom",
     "name": "@jacksdiningroom",
-    "label": "jacksdiningroom"
+    "label": "jacksdiningroom",
+    "icon": "influencer-jacks-dining-room-v122"
   },
   {
     "handle": "andreweatsinsf",
@@ -241,8 +248,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   },
   {
     "handle": "kangofrealty",
-    "name": "@kangofrealty",
-    "label": "kangofrealty"
+    "name": "Eric Kang",
+    "label": "Eric Kang",
+    "icon": "influencer-kang-of-realty-v122",
+    "brand": "b_foodiekangofrealty",
+    "cuisine": "Realtor and food creator"
   },
   {
     "handle": "fedoramaelle",
@@ -412,7 +422,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "booziebrunch",
     "name": "Novi Mitchell",
-    "label": "Novi"
+    "label": "Novi",
+    "icon": "influencer-booziebrunch-v122"
   },
   {
     "handle": "thekhaysie",
@@ -1467,7 +1478,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "takeoutwithtuck",
     "name": "The Honest Reviewer",
-    "label": "Tuck"
+    "label": "Tuck",
+    "icon": "influencer-takeout-with-tuck-v122"
   },
   {
     "handle": "kat.dazzzle",
@@ -2938,6 +2950,11 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "oaktowngrubhub", "place": "Marley G’s Pizzeria", "city": "Alameda", "brand": "b_marleygspizzeria", "reel": "https://www.instagram.com/reel/DbtyrqZhCTQ/", "credit": "Review by @oaktowngrubhub at Marley G’s Pizzeria, Alameda.", "clip": true},
   {"by": "cheycheyfromthebay", "place": "Marley G’s Pizzeria — Almanac", "city": "Alameda", "brand": "b_marleygspizzeriaalmanac", "reel": "https://www.instagram.com/reel/DXNqLPBCV__/", "credit": "Review by @cheycheyfromthebay at the Marley G’s pizza window inside Almanac Adventureland.", "clip": true},
   {"by": "taylorandtylor", "place": "Marley G’s Pizzeria", "city": "Alameda", "brand": "b_marleygspizzeria", "reel": "https://www.instagram.com/reel/DSY4p6PkR3f/", "credit": "Review by @taylorandtylor at Marley G’s Pizzeria, Alameda.", "clip": true},
+
+  // Batch 122 — Four Chairs, Popoca and The Junction, Santa Rosa.
+  {"by": "bayarea.foodie.adventures", "place": "Four Chairs", "city": "San Francisco", "brand": "b_fourchairs", "reel": "https://www.instagram.com/reel/C2RBdWMrJCL/", "credit": "Review by @bayarea.foodie.adventures at Four Chairs, San Francisco.", "clip": true},
+  {"by": "kangofrealty", "place": "The Junction — Santa Rosa", "city": "Santa Rosa", "brand": "b_thejunctionsantarosa", "reel": "https://www.instagram.com/reel/DY2myk-Ps5W/", "credit": "Review by @kangofrealty at The Junction — Santa Rosa.", "clip": true},
+  {"by": "kangofrealty", "place": "Popoca", "city": "Oakland", "brand": "b_popocaoakland", "reel": "https://www.instagram.com/reel/Dfno6o9hL32/", "credit": "Review by @kangofrealty at Popoca, Oakland.", "clip": true},
 
 ]
 

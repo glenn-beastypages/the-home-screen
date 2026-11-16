@@ -1133,6 +1133,9 @@ const SEED: Seed[] = [
 /** One line, every partner. Curated menus are the whole model here. */
 export const MENU_NOTE = "Choose from this week's favorites!"
 
+const seedInitials = (s: Seed) => s.logoInitials ??
+  s.name.replace(/[^A-Za-z0-9 ]/g, '').split(' ').map((word) => word[0]).join('').slice(0, 2).toUpperCase()
+
 const fromSeed = (s: Seed): Brand => ({
   id: `b_${s.slug.replace(/-/g, '')}`,
   vendorId: `v_${s.slug.replace(/-/g, '')}`,
@@ -1141,7 +1144,7 @@ const fromSeed = (s: Seed): Brand => ({
   cuisine: s.cuisine,
   tagline: s.tagline,
   logo: s.icon
-    ? { imageUrl: `/icons/${s.icon}.webp`, bg: s.color, fg: '#ffffff' }
+    ? { imageUrl: `/icons/${s.icon}.webp`, bg: s.color, fg: '#ffffff', initials: seedInitials(s) }
     : // No verifiable artwork: draw a generated mark rather than link a
       // missing file. Seeds may art-direct it (template, face, glyph, lines);
       // the untouched default stays the plain monogram.
@@ -1152,9 +1155,7 @@ const fromSeed = (s: Seed): Brand => ({
         glyph: s.logoGlyph as GlyphName | undefined,
         lines: s.logoLines,
         accent: s.logoAccent,
-        initials:
-          s.logoInitials ??
-          s.name.replace(/[^A-Za-z0-9 ]/g, '').split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase(),
+        initials: seedInitials(s),
         face: (s.logoFace ?? 'grotesk') as NonNullable<Logo['face']>,
       },
   prepMinutes: s.prep,

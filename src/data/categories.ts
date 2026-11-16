@@ -56,7 +56,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 2026-10-10: "change BEASTY • Cooks to BEASTY • Chefs instead". The kind stays
      'cooks', so every seat id and the wallpaper carry on as they were. */
   { kind: 'cooks', heading: 'Chefs', about: 'Chefs, caterers and private chefs', wall: wall('cooks'), test: /catering|private chef|personal chef/i },
-  { kind: 'foodies', heading: 'Foodies', about: 'Food reviewers and creators', wall: wall('foodies'), test: /food reviewer|food blogger/i },
+  { kind: 'foodies', heading: 'Influencers', about: 'Food reviewers and creators', wall: wall('foodies'), test: /food reviewer|food blogger/i },
   { kind: 'realtors', heading: 'Realtors', about: 'Real estate agents', wall: wall('realtors'), test: /real estate|realtor|realty/i },
   /* "BEASTY • PODCAST — NEW CATEGORY, please create brother. This is a great category
      that we can collab with." — Glenn, 2026-10-12, with That's Good PizzZa Podcast.

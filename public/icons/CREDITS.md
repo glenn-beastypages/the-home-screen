@@ -858,3 +858,17 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-mattiasblanco-v121.webp` | IMG_0659.PNG | Explicit replacement request following Mattias Blanco’s reel. Matched by posting account. |
 | `foodie-oaktowngrubhub-v121.webp` | IMG_0665.PNG | Supplied public avatar matched to the creator’s reel. The profile crops the lower edge of the drawing. The tile preserves the visible mark and keeps the Oaktown Grub label below it. |
 | `foodie-taylorandtylor-v121.webp` | IMG_0666.png | Supplied public portrait matched to the requesting reel’s author. Retained the whole visible profile portrait. |
+
+<!-- Batch 122 artwork. -->
+| `influencer-trinh-does-things-v122.webp` | [Official source](https://www.instagram.com/trinhdoesthings/), IMG_0674.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-the-sauce-boss-v122.webp` | [Official source](https://www.instagram.com/thesauceboss_/), IMG_0675.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-eat-with-sie-v122.webp` | [Official source](https://www.instagram.com/eatwithsie/), IMG_0676.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-hungry4munchies-v122.webp` | [Official source](https://www.instagram.com/hungry4munchies/), IMG_0679.png | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-bayarea-fooddreamz-v122.webp` | [Official source](https://www.instagram.com/bayarea_fooddreamz/), IMG_0680.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-bayarea-foodie-adventures-v122.webp` | [Official source](https://www.instagram.com/bayarea.foodie.adventures/), IMG_0681.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-kang-of-realty-v122.webp` | [Official source](https://www.instagram.com/kangofrealty/), IMG_0682.png | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-jacks-dining-room-v122.webp` | [Official source](https://www.instagram.com/jacksdiningroom/), IMG_0687.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-takeout-with-tuck-v122.webp` | [Official source](https://www.instagram.com/takeoutwithtuck/), IMG_0689.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `influencer-booziebrunch-v122.webp` | [Official source](https://www.instagram.com/booziebrunch/), IMG_0690.PNG | Matched the supplied art to the current official profile and used its original image. |
+| `yakiniku-ginza-v122.webp` | [Official source](https://www.yakinikuginza.com/), IMG_0671.jpeg | Supplied square official gold circle on white, checked against the restaurant’s website art. The complete ring and lettering fit the tile. |
+| `the-junction-santa-rosa-v122.webp` | [Official source](https://www.thejunc.com/santa-rosa), IMG_0686.png | Supplied shared Junction roundel. The Santa Rosa official site also uses a shared Tam Valley mark. The listing and review identify Santa Rosa. |

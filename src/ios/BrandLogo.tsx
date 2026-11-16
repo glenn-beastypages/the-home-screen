@@ -1,3 +1,4 @@
+import { useId, useState } from 'react'
 import { pagePaper } from './pagePaper'
 import { PageFold } from './PageFold'
 import { GLYPHS } from '../data/glyphs'
@@ -30,7 +31,6 @@ function parseBg(bg: string): { from: string; to: string; flat: boolean } {
   return { from, to: to ?? from, flat: !to }
 }
 
-/** Stable per-logo id so two icons never share a gradient definition. */
 /* The colour a gradient tile shows behind its middle. The gradient runs from
    the top-left corner toward (35%, 100%), so the centre sits about 60% along. */
 function middleOf(from: string, to: string): string {
@@ -43,18 +43,6 @@ function middleOf(from: string, to: string): string {
   const b = rgb(to)
   if (a.some(Number.isNaN) || b.some(Number.isNaN)) return from
   return `#${a.map((v, i) => Math.round(v + (b[i] - v) * 0.6).toString(16).padStart(2, '0')).join('')}`
-}
-
-function uid(logo: Logo): string {
-  const key = `${logo.template}${logo.bg}${logo.fg}${logo.initials ?? ''}${logo.glyph ?? ''}${(
-    logo.lines ?? []
-  ).join('')}`
-  let h = 2166136261
-  for (let i = 0; i < key.length; i++) {
-    h ^= key.charCodeAt(i)
-    h = Math.imul(h, 16777619)
-  }
-  return Math.abs(h).toString(36)
 }
 
 interface Props {
@@ -76,12 +64,16 @@ interface Props {
 
 export function BrandLogo({ logo, size = 60, masked = true, rounded = false, fill = false }: Props) {
   const { from, to, flat } = parseBg(logo.bg)
-  const id = uid(logo)
+  // The same brand can be mounted on several pages while the pager moves.
+  // SVG definition IDs are document-wide, even across separate SVG roots.
+  const id = useId().replace(/:/g, '')
+  const [failedImage, setFailedImage] = useState<string>()
+  const imageFailed = Boolean(logo.imageUrl && failedImage === logo.imageUrl)
   const face = FACE[logo.face ?? 'grotesk']
   const accent = logo.accent ?? logo.fg
   const paper = masked && !rounded ? pagePaper(logo.imageUrl) : undefined
   const outline = rounded ? 'M24 0H76C94 0 100 6 100 24V76C100 94 94 100 76 100H24C6 100 0 94 0 76V24C0 6 6 0 24 0Z' : PAGE_ICON_PATH
-  const clip = `clip-${id}${rounded ? '-rounded' : ''}`
+  const clip = `clip-${id}`
   const grad = `grad-${id}`
   /*
     A monogram with no strapline was still laying out for one: the initials sat
@@ -134,9 +126,10 @@ export function BrandLogo({ logo, size = 60, masked = true, rounded = false, fil
           are already square app tiles with their own backgrounds, so they just
           get clipped to the squircle like any other icon.
         */}
-        {logo.imageUrl && (
+        {logo.imageUrl && !imageFailed && (
           <image
             href={logo.imageUrl}
+            onError={() => setFailedImage(logo.imageUrl)}
             x="0"
             y="0"
             width="100"
@@ -147,14 +140,14 @@ export function BrandLogo({ logo, size = 60, masked = true, rounded = false, fil
 
         {paper && <path d="M78 0H100V22Z" fill={paper} className="page-paper-corner" />}
 
-        {logo.template === 'monogram' && (
+        {(logo.template === 'monogram' || (imageFailed && !logo.template && logo.initials)) && (
           <>
             <text
               x="50"
               y={strapline ? 45 : 48}
               textAnchor="middle"
               dominantBaseline="central"
-              fill={logo.fg}
+              fill={imageFailed ? readableOn(logo.bg).fg : logo.fg}
               fontFamily={face}
               fontSize={initialSize}
               fontWeight="800"

@@ -161,7 +161,7 @@ try {
   await page.goto(base, { waitUntil: 'domcontentloaded' })
   await page.getByRole('button', { name: 'Enter BEASTY', exact: true }).click()
   const visibleSheet = page.locator('.home-page:not([inert])')
-  const foodieTile = visibleSheet.getByRole('button', { name: 'BEASTY • Foodies', exact: true })
+  const foodieTile = visibleSheet.getByRole('button', { name: 'BEASTY • Influencers', exact: true })
   await foodieTile.waitFor({ timeout: 20000 })
   assert.equal(await foodieTile.locator('.icon-tile.is-glow').count(), 1)
   assert.equal(await foodieTile.evaluate(el => [...el.parentElement.children].indexOf(el)), 10)

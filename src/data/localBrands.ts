@@ -4642,7 +4642,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'eat-with-sie',
-    icon: 'eat-with-sie',
+    icon: 'influencer-eat-with-sie-v122',
     name: 'Eat With Sie',
     label: 'Eat With Sie',
     cuisine: 'Food and lifestyle creator',
@@ -96356,4 +96356,629 @@ export const LOCAL_SEED: LocalSeed[] = [
     }
   ]
 },
+
+  // Batch 122 — Yakiniku Ginza, The Junction Santa Rosa, and Eric Kang.
+  {
+    "slug": "yakiniku-ginza",
+    "name": "Yakiniku Ginza",
+    "label": "Yakiniku Ginza",
+    "cuisine": "Japanese wagyu BBQ",
+    "category": "BBQ",
+    "color": "#9D6A21",
+    "icon": "yakiniku-ginza-v122",
+    "prep": 0,
+    "items": [],
+    "address": "475 Castro St, Mountain View, CA 94041",
+    "phone": "(669) 800-9100",
+    "email": "yakinikuginzamtv@gmail.com",
+    "hours": "Sun–Thu 5–9:30pm, Fri–Sat 5–10pm",
+    "tagline": "Tabletop Japanese barbecue with A5 Japanese wagyu and Australian wagyu in downtown Mountain View.",
+    "instagram": "https://www.instagram.com/ginzayakiniku/",
+    "site": "https://www.yakinikuginza.com/",
+    "orderUrl": "https://toast.app/r/ginza-475-castro-street/order",
+    "siteCta": "See their ordering menu",
+    "siteNote": "The restaurant serves individual cuts and shareable Wagyu tasting sets. See the restaurant’s current menu for availability and drinks.",
+    "panels": [
+      {
+        "head": "Reservations and walk-ins",
+        "body": [
+          "Reservations are available for any party size Sunday through Thursday. Friday and Saturday reservations are for groups of six or more. Smaller Friday and Saturday parties can walk in."
+        ],
+        "links": [
+          {
+            "label": "Reservation details",
+            "href": "https://www.yakinikuginza.com/"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Salad and appetizers",
+        "items": [
+          [
+            "Ginza House Spring Mix Salad",
+            "",
+            1895
+          ],
+          [
+            "Garlic Seasoned Fries",
+            "",
+            995
+          ],
+          [
+            "Pepper Salt Edamame",
+            "",
+            995
+          ],
+          [
+            "Garlic Edamame",
+            "",
+            1095
+          ],
+          [
+            "Spicy Garlic Edamame",
+            "",
+            1095
+          ],
+          [
+            "Snow Crab Croquettes · 3 pieces",
+            "",
+            1595
+          ],
+          [
+            "Chef’s Appetizer Selection",
+            "Six rotating starters.",
+            1695
+          ],
+          [
+            "Vegetable Tempura",
+            "",
+            1695
+          ],
+          [
+            "Kaki Fry · 5 pieces",
+            "",
+            1695
+          ],
+          [
+            "Fried Kurobuta Sausage · 6 pieces",
+            "",
+            1795
+          ],
+          [
+            "Japanese Karaage",
+            "",
+            1895
+          ],
+          [
+            "Shrimp Tempura",
+            "",
+            1895
+          ],
+          [
+            "Shrimp & Vegetable Tempura",
+            "",
+            1995
+          ],
+          [
+            "Fried Soft-Shell Crab",
+            "",
+            2095
+          ]
+        ]
+      },
+      {
+        "name": "Soup",
+        "items": [
+          [
+            "Kimchi Beef Soup",
+            "",
+            2358
+          ],
+          [
+            "Clam Miso Soup",
+            "",
+            1958
+          ]
+        ]
+      },
+      {
+        "name": "Wagyu sets",
+        "items": [
+          [
+            "Japanese A5 Wagyu Grand Selection · 20 oz",
+            "Four cuts with two bowls of rice.",
+            16800
+          ],
+          [
+            "Japanese A5 & Australian MB9+ Wagyu Grand Selection · 24 oz",
+            "Six cuts with two bowls of rice.",
+            16800
+          ],
+          [
+            "Australian MB9+ Wagyu Signature Six · 24 oz",
+            "Six Australian cuts with two bowls of rice.",
+            12800
+          ]
+        ]
+      },
+      {
+        "name": "Japanese A5 wagyu",
+        "items": [
+          [
+            "Thick-Cut Striploin · 6 oz",
+            "",
+            6989
+          ],
+          [
+            "Short Rib · 6 oz",
+            "",
+            5889
+          ],
+          [
+            "Chuck Eye Roll · 6 oz",
+            "",
+            4489
+          ],
+          [
+            "Brisket · 6 oz",
+            "",
+            4289
+          ]
+        ]
+      },
+      {
+        "name": "Australian MB9+ wagyu",
+        "items": [
+          [
+            "Ultimate Wagyu Short Rib",
+            "",
+            4689
+          ],
+          [
+            "Marinated Boneless LA Galbi · 6 oz",
+            "",
+            3689
+          ],
+          [
+            "Chuck Roll · 6 oz",
+            "",
+            3489
+          ],
+          [
+            "Top Blade · 6 oz",
+            "",
+            3489
+          ],
+          [
+            "Beef Tongue · 6 oz",
+            "",
+            3389
+          ],
+          [
+            "Brisket · 6 oz",
+            "",
+            3389
+          ],
+          [
+            "Tender Meat · 6 oz",
+            "",
+            3289
+          ],
+          [
+            "Beef Belly · 6 oz",
+            "",
+            2489
+          ],
+          [
+            "Rib Finger · 6 oz",
+            "",
+            2489
+          ]
+        ]
+      },
+      {
+        "name": "More from the grill",
+        "items": [
+          [
+            "Garlic Pork Belly",
+            "",
+            2689
+          ],
+          [
+            "Spicy Pork Belly",
+            "",
+            2689
+          ],
+          [
+            "Garlic Chicken Thigh",
+            "",
+            2389
+          ],
+          [
+            "Spicy Chicken Thigh",
+            "",
+            2389
+          ],
+          [
+            "Garlic Butter Jumbo Shrimp · 8 pieces",
+            "",
+            2489
+          ],
+          [
+            "Butter Scallops · 8 pieces",
+            "",
+            2289
+          ],
+          [
+            "Yakiniku Vegetable Platter",
+            "",
+            1989
+          ],
+          [
+            "Cinnamon Pineapple",
+            "",
+            1556
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Double Corn Cheese",
+            "",
+            1589
+          ],
+          [
+            "Double Spicy Corn Cheese",
+            "",
+            1589
+          ],
+          [
+            "Single Corn Cheese",
+            "",
+            889
+          ],
+          [
+            "Spicy Single Corn Cheese",
+            "",
+            889
+          ],
+          [
+            "Furikake Rice",
+            "",
+            350
+          ],
+          [
+            "Steamed Japanese Rice",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Non-alcoholic drinks",
+        "items": [
+          [
+            "Coke",
+            "",
+            350
+          ],
+          [
+            "Diet Coke",
+            "",
+            350
+          ],
+          [
+            "Sprite",
+            "",
+            350
+          ],
+          [
+            "Premium Japanese Tea",
+            "Sencha, hojicha or genmaicha matcha.",
+            400
+          ],
+          [
+            "Manzanita Sol Apple Soda",
+            "",
+            500
+          ],
+          [
+            "Japanese Kona Milk Coffee",
+            "",
+            600
+          ],
+          [
+            "Moshi Japanese Sparkling Drink",
+            "",
+            700
+          ],
+          [
+            "Maison Perrier Sparkling Water · 330 mL",
+            "",
+            500
+          ],
+          [
+            "S.Pellegrino · 750 mL",
+            "",
+            1100
+          ],
+          [
+            "Asahi Dry Zero",
+            "",
+            600
+          ],
+          [
+            "Suntory All-Free",
+            "",
+            600
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-junction-santa-rosa",
+    "name": "The Junction — Santa Rosa",
+    "label": "The Junction",
+    "cuisine": "Sourdough pizza and beer garden",
+    "category": "Pizza",
+    "color": "#0B1B2B",
+    "icon": "the-junction-santa-rosa-v122",
+    "prep": 0,
+    "items": [],
+    "address": "3901 Montgomery Dr, Santa Rosa, CA 95405",
+    "hours": "Mon–Thu 11:30am–9pm, Fri 11:30am–10pm, Sat 11am–10pm, Sun 10am–8pm",
+    "tagline": "Santa Rosa beer garden with PizzaHacker sourdough pies, a kids’ play area and live music.",
+    "instagram": "https://www.instagram.com/thejunctionbeer/",
+    "site": "https://www.thejunc.com/santa-rosa",
+    "orderUrl": "https://toast.app/r/pizzahacker-santa-rosa-3901-montgomery-drive/order?diningOption=delivery",
+    "siteCta": "Order from Santa Rosa",
+    "siteNote": "Prices come from the Santa Rosa ordering menu. Check the event calendar for changes on concert nights.",
+    "panels": [
+      {
+        "head": "Santa Rosa food and events",
+        "body": [
+          "The Montgomery Drive location has its own menu and music calendar. Check the calendar for ticketed shows that change regular hours."
+        ],
+        "links": [
+          {
+            "label": "Santa Rosa menu and drinks",
+            "href": "https://toast.app/r/pizzahacker-santa-rosa-3901-montgomery-drive/order?diningOption=delivery"
+          },
+          {
+            "label": "Santa Rosa live music",
+            "href": "https://www.thejunc.com/santa-rosa-music-and-events"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Pizzas",
+        "items": [
+          [
+            "Kid’s Cheese",
+            "",
+            2000
+          ],
+          [
+            "The Villa",
+            "Hot Italian sausage, pickled peppers, marinated onions and mozzarella.",
+            2600
+          ],
+          [
+            "El Jefe",
+            "Chorizo, kalamata olives and marinated onions.",
+            2600
+          ],
+          [
+            "Summer Fest",
+            "Sungold tomatoes, arugula and lemon. Check availability.",
+            2300
+          ],
+          [
+            "Shotcaller",
+            "Meatballs and ricotta.",
+            2600
+          ],
+          [
+            "The Hilltopper",
+            "Soppressata, sausage and mushrooms.",
+            2600
+          ],
+          [
+            "The Situation",
+            "Pepperoni and pepperoncini.",
+            2500
+          ],
+          [
+            "Forbidden Fruit",
+            "Canadian bacon, pineapple, jalapeño and red onion.",
+            2600
+          ],
+          [
+            "Shroomer",
+            "Mushrooms, caramelized onions, Taleggio and pesto with sunflower seeds.",
+            2800
+          ],
+          [
+            "Bestie",
+            "Smoked pork belly, red onions, garlic cream sauce and charred lemon.",
+            2500
+          ],
+          [
+            "Margherita",
+            "Tomato, mozzarella and basil.",
+            2200
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Party Wings · 6 pieces",
+            "",
+            1200
+          ],
+          [
+            "Korean Chicken Wings",
+            "Gochujang, sesame and green onion.",
+            1200
+          ],
+          [
+            "Fried Brussels Sprouts",
+            "Hot honey, Sriracha and hazelnut.",
+            1400
+          ],
+          [
+            "Meatballs",
+            "",
+            1400
+          ],
+          [
+            "Valley Ford Cheese Curds",
+            "",
+            1400
+          ],
+          [
+            "French Fries",
+            "",
+            600
+          ],
+          [
+            "Garlic Fries",
+            "",
+            900
+          ],
+          [
+            "Chicken Tenders",
+            "Three tenders with fries.",
+            1400
+          ]
+        ]
+      },
+      {
+        "name": "Salads",
+        "items": [
+          [
+            "Caesar",
+            "",
+            1400
+          ],
+          [
+            "Italian Chop",
+            "",
+            1400
+          ],
+          [
+            "Tri Colore",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Sub sandwiches",
+        "items": [
+          [
+            "La Madrina",
+            "Italian meats and provolone on sourdough with a side salad.",
+            1600
+          ],
+          [
+            "Meatball Parm",
+            "Meatballs, marinara and cheese on sourdough with Caesar salad.",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Fried chicken sandwiches",
+        "items": [
+          [
+            "Regular",
+            "",
+            1600
+          ],
+          [
+            "Buffalo",
+            "",
+            1600
+          ],
+          [
+            "Korean",
+            "",
+            1600
+          ],
+          [
+            "Nashville",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Dessert and dips",
+        "items": [
+          [
+            "Chocolate Chip Cookies",
+            "Two cookies.",
+            500
+          ],
+          [
+            "Ranch",
+            "",
+            100
+          ],
+          [
+            "Pesto",
+            "",
+            100
+          ],
+          [
+            "Blue Cheese",
+            "",
+            100
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "foodie-kangofrealty",
+    "name": "Eric Kang",
+    "label": "Eric Kang",
+    "cuisine": "Realtor and food creator",
+    "category": "Real estate",
+    "color": "#191919",
+    "icon": "influencer-kang-of-realty-v122",
+    "prep": 0,
+    "items": [],
+    "site": "https://www.fastagents.com/agents/eric-kang",
+    "siteCta": "See Eric’s realtor profile",
+    "email": "eric@fastagents.com",
+    "phone": "(510) 500-5880",
+    "instagram": "https://www.instagram.com/kangofrealty/",
+    "tagline": "Bay Area real estate and restaurant reviews from @kangofrealty.",
+    "contactOnly": "Contact Eric for Bay Area home buying or selling. His restaurant reviews are below.",
+    "panels": [
+      {
+        "head": "Real estate",
+        "body": [
+          "Eric’s brokerage profile lists Oakland as his office and offers contact for buyers and sellers."
+        ],
+        "links": [
+          {
+            "label": "Brokerage profile",
+            "href": "https://www.fastagents.com/agents/eric-kang"
+          }
+        ]
+      }
+    ]
+  },
 ]

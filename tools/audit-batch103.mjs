@@ -17,6 +17,14 @@ export async function auditBatch(number) {
   const ledger = read(`research/roster/b86-b${number}-coverage.json`)
   assert.deepEqual(ledger.posts, [...prior.posts, ...batch.posts])
   const { ALL_PLACEMENTS } = await tsImport('../src/data/categorySeats.ts', import.meta.url)
+  function checkFirstInfluencers(order) {
+    // Batch 122 explicitly swapped Jack’s Dining Room and @mzz.juxtaposition.
+    const updates = read('research/roster/batch122.json').placements
+    for (const [index, entry] of order.slice(0, 24).entries()) {
+      const seat = 'beasty-foodies-' + index
+      assert.equal(ALL_PLACEMENTS[seat], updates[seat] ?? entry.brand, seat)
+    }
+  }
   const { brandById } = await tsImport('../src/data/brands.ts', import.meta.url)
   const { FOODIE_PAGES } = await tsImport('../src/data/foodies.ts', import.meta.url)
   const { reviewsBy, reviewsOf, pageOfFoodie } = await tsImport('../src/data/foodieIndex.ts', import.meta.url)
@@ -36,7 +44,7 @@ export async function auditBatch(number) {
     assert.equal(ALL_PLACEMENTS['beasty-foodies-0'], 'b_foodieronniebanks')
     assert.equal(ALL_PLACEMENTS['beasty-foodies-1'], 'b_foodiemsashleyvee')
     // Later batches may promote newly tagged heavy hitters within the overflow.
-    for (const [i, f] of batch.foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+    checkFirstInfluencers(batch.foodieOrder)
     for (const f of batch.foodieOrder) assert(brandById(f.brand), f.handle)
     const shared = reviewsBy('msashleyvee')
     assert.equal(shared.length, 2)
@@ -50,7 +58,7 @@ export async function auditBatch(number) {
     assert.equal(brandById('b_pakusf').needsSite, true)
     assert.equal(brandById('b_saladmakers').logo.imageUrl, '/icons/salad-makers-v105.webp')
     assert.equal(brandById('b_classycanines').logo.imageUrl, '/icons/classy-canines-v105.webp')
-    for (const [i, f] of batch.foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+    checkFirstInfluencers(batch.foodieOrder)
     for (const f of batch.foodieOrder) assert(brandById(f.brand), f.handle)
   }
   const live = process.env.BASE, db = live ? null : await freshTestDb('batch' + number)
@@ -171,7 +179,7 @@ export async function auditBatch(number) {
     }
     if (number === 103) {
       await category('Fried Chicken', 'Aburaya'); await category('Pizza', 'Via Mia Pizza'); await category('Dumplings', 'Serious Dumpling')
-      await category('Foodies', 'Ronnie Banks'); await icon('MsAshleyVee').waitFor()
+      await category('Influencers', 'Ronnie Banks'); await icon('MsAshleyVee').waitFor()
     } else if (number === 104) {
       await category('Sandwiches', 'Oink & Oscar')
       await category('Breakfast/Diner')
@@ -209,6 +217,63 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 122) {
+      await category('BBQ')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon('Yakiniku Ginza').waitFor()
+      await category('Pizza')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon('The Junction — Santa Rosa').waitFor()
+      await category('Realtors', 'Eric Kang')
+      await category('Influencers', '@jacksdiningroom')
+      const activeSheet = page.locator('.home-page:not([inert])')
+      await activeSheet.getByRole('button', { name: '@jacksdiningroom', exact: true }).waitFor()
+      assert.equal(await activeSheet.getByRole('button', { name: '@mzz.juxtaposition', exact: true }).count(), 0)
+      const overflow = page.locator('.home-page').filter({ hasText: 'BEASTY · More influencers' })
+      assert.equal(await overflow.locator('.app-icon[aria-label="@mzz.juxtaposition"]').count(), 1)
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await page.getByRole('button', { name: 'Keep looking around', exact: true }).waitFor()
+      await page.getByRole('button', { name: 'Keep looking around', exact: true }).click()
+      for (const post of active) {
+        assert(reviewsBy(post.by).some(review => review.href === post.source && review.src && review.credit === post.credit))
+      }
+
+      // Failed artwork must still leave usable, identifiable tiles.
+      const offlineArt = await browser.newPage({
+        ...(iphone ? devices['iPhone 13'] : {}),
+        viewport: { width: 393, height: 852 },
+      })
+      try {
+        await offlineArt.route(/\/wallpapers\/[^/]+-thumb\.webp$/, route => route.abort())
+        await offlineArt.route('**/icons/yakiniku-ginza-v122.webp', route => route.abort())
+        await navigate(offlineArt, base + '/')
+        const entry = offlineArt.getByRole('button', { name: 'Enter BEASTY', exact: true })
+        for (let visit = 0; visit < 3; visit++) {
+          await entry.click()
+          const tiles = offlineArt.locator('.home-page').filter({ hasText: 'BEASTY · Pages' }).first().locator('.cat-icon')
+          await tiles.first().waitFor()
+          const paint = await tiles.evaluateAll(elements => elements.map(element => {
+            const style = getComputedStyle(element)
+            const glyph = element.querySelector('.cat-icon-glyph')
+            return style.maskImage === 'none' && style.backgroundColor !== 'rgba(0, 0, 0, 0)' &&
+              style.borderTopRightRadius === '0px' && !!glyph?.getBoundingClientRect().width
+          }))
+          assert(paint.length > 0 && paint.every(Boolean), 'category tiles retain artwork when thumbnails fail')
+          if (visit < 2) await offlineArt.goBack()
+        }
+        await navigate(offlineArt, base + '/?b=b_yakinikuginza')
+        const fallback = offlineArt.locator('.brand-logo-zoom-trigger svg text').filter({ hasText: /^YG$/ })
+        await fallback.waitFor()
+        assert.equal(await offlineArt.locator('.brand-logo-zoom-trigger image').count(), 0)
+        const parts = offlineArt.locator('clipPath[id^="clip-"], linearGradient[id^="grad-"]')
+        assert(await parts.evaluateAll(elements => new Set(elements.map(element => element.id)).size === elements.length))
+        await offlineArt.getByRole('button', { name: 'Go to the Mountain View More goods page', exact: true }).click()
+        const tile = offlineArt.getByRole('button', { name: 'Yakiniku Ginza', exact: true })
+        await tile.locator('svg text', { hasText: /^YG$/ }).waitFor()
+      } finally {
+        await offlineArt.close()
+      }
+      console.log('ok category repaint, missing thumbnail, business fallback and SVG definitions')
     } else if (number === 121) {
       await category('Burgers/Hot Dogs')
       await page.getByRole('button', { name: 'Next page', exact: true }).click()
@@ -296,7 +361,7 @@ export async function auditBatch(number) {
       assert.equal(ALL_PLACEMENTS['san-ramon-goods2-0'], 'b_theshishgrill')
       assert.equal(reviewsOf('b_theshishgrill').filter(r => r.src).length, 4)
       assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.filter(a => (a.reference ?? a.source).startsWith('IMG_')).map(a => a.reference ?? a.source)))
-      for (const [i, f] of read('research/roster/batch109.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch109.json').foodieOrder)
     } else if (number === 115) {
       const onPageTwo = async (name, names) => {
         await category(name)
@@ -332,7 +397,7 @@ export async function auditBatch(number) {
       assert.equal(REELS.filter(r => r.href?.includes('DfThSHUtrVK')).length, 1)
       assert.deepEqual(Object.values(batch.placements).filter(id => id.startsWith('b_saltandstraw')).length, 9)
       assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.filter(a => (a.reference ?? a.source).startsWith('IMG_')).map(a => a.reference ?? a.source)))
-      for (const [i, f] of read('research/roster/batch109.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch109.json').foodieOrder)
     } else if (number === 114) {
       await category('Sweets')
       await page.getByRole('button', { name: 'Next page', exact: true }).click()
@@ -363,7 +428,7 @@ export async function auditBatch(number) {
       assert.equal(brandById('b_dumplingkitchenmillbrae').clip.by, undefined)
       assert(brandById('b_dumplingkitchenmillbrae').clip.credit.includes('Original by @dumplingkitchenca'))
     } else if (number === 112) {
-      for (const [i, f] of read('research/roster/batch111.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch111.json').foodieOrder)
       for (const f of batch.foodieOrder) assert(brandById(f.brand), f.handle)
       assert.equal(reviewsOf('b_newenglandlobster')[0].by, 'grubwitmike', 'Mike leads the restaurant list')
       assert(reviewsOf('b_newenglandlobster')[0].credit.includes('Home recipe'))
@@ -381,7 +446,7 @@ export async function auditBatch(number) {
       await category('AYCE', 'Hinata Sushi Kitchen')
       await category('Seafood/Crab Boil', 'New England Lobster Market & Eatery')
     } else if (number === 111) {
-      for (const [i, f] of read('research/roster/batch109.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch109.json').foodieOrder)
       assert.equal(ALL_PLACEMENTS['beasty-foodies2-0'], 'b_foodiekeyanajoooon')
       assert.equal(ALL_PLACEMENTS['beasty-foodies2-1'], 'b_foodietakeoutwithtuck')
       assert.equal(ALL_PLACEMENTS['beasty-foodies2-2'], 'b_foodiemacmadame')
@@ -403,7 +468,7 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Next page', exact: true }).click()
       await icon('Bark & Mane of Walnut Creek').waitFor()
       await open('b_foodiemacmadame')
-      await page.getByRole('button', { name: 'Go to the BEASTY More foodies page', exact: true }).click()
+      await page.getByRole('button', { name: 'Go to the BEASTY More influencers page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Christy Mac').waitFor()
     } else if (number === 110) {
@@ -416,18 +481,17 @@ export async function auditBatch(number) {
       const linked = reviews.find(r => r.by === 'bvddiebri')
       assert(linked.creatorClip && !linked.src && linked.credit.includes('Gifted collaboration'))
       assert(reviewsBy('bvddiebri').some(r => r.src === '/clips/review-Dffgm_FBlGk.mp4'))
-      for (const [i, f] of read('research/roster/batch107.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch107.json').foodieOrder)
       await open(b.id)
       await expand(page.locator('.foodie-review-head').filter({ hasText: '@bvddiebri' }))
       await page.getByText(linked.credit, { exact: true }).waitFor()
       assert.equal(await page.locator('video[src="/clips/review-Dffgm_FBlGk.mp4"]').count(), 0)
       await open('b_foodiebvddiebri')
-      await page.getByRole('button', { name: 'Go to the BEASTY More foodies page', exact: true }).click()
+      await page.getByRole('button', { name: 'Go to the BEASTY More influencers page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Bri').waitFor()
     } else if (number === 109) {
-      const before = read('research/roster/batch107.json').foodieOrder.slice(0, 24)
-      for (const [i, f] of before.entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+      checkFirstInfluencers(read('research/roster/batch107.json').foodieOrder)
       assert.equal(ALL_PLACEMENTS['beasty-foodies2-0'], 'b_foodiekeyanajoooon')
       assert.equal(brandById('b_scoopnchill').logo.imageUrl, '/icons/scoop-n-chill-v109.webp')
       assert.equal(brandById('b_scoopnchill').clip.href, 'https://www.instagram.com/reel/DOfOJVwkRC_/')

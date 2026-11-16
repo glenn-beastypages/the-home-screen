@@ -3,10 +3,6 @@ import type { CSSProperties } from 'react'
 import { CATEGORY_GLYPHS } from '../data/categoryGlyphs'
 import { PAGE_ICON_PATH } from './pageIcon'
 
-/* One scalable page mask for the home grid and Search's smaller thumbnails.
-   The square top-right corner carries BEASTY's two-colour fold. */
-const MASK = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='${PAGE_ICON_PATH}'/></svg>`)}")`
-
 /* The plain BEASTY background is the home screen's own wallpaper, so a tile
    cut from it reads as a hole in the screen. Those get a deeper tint. */
 const PLAIN = '/wallpapers/cat-beasty-thumb.webp'
@@ -18,7 +14,7 @@ const PLAIN = '/wallpapers/cat-beasty-thumb.webp'
  */
 export function CategoryIcon({ kind, thumb }: { kind: string; thumb: string | null }) {
   const g = CATEGORY_GLYPHS[kind]
-  const style: CSSProperties = { maskImage: MASK, WebkitMaskImage: MASK }
+  const style: CSSProperties = {}
   if (thumb) style.backgroundImage = thumb === PLAIN ? `linear-gradient(rgba(12, 12, 16, 0.5), rgba(12, 12, 16, 0.5)), url(${thumb})` : `url(${thumb})`
   return (
     <span className="cat-icon" aria-hidden="true" style={style}>

@@ -447,7 +447,7 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
 }, {
   kind: 'foodies2',
   parent: 'foodies',
-  heading: 'More foodies',
+  heading: 'More influencers',
   about: 'More food reviewers and creators',
   yellow: true,
   categories: Array.from({ length: Math.max(24, Math.ceil(MORE_FOODIE_PAGES.length / 24) * 24) }, (_, i) => ({ n: i + 1, name: 'Foodie', label: 'Available' })),
