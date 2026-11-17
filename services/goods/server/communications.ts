@@ -22,6 +22,7 @@ import {
   wrap,
 } from "./common.js";
 import { createConversation, finishTrade, serializeTrade } from "./trades.js";
+import { queueShippingResolution, shippingReview } from "./shipped-trades.js";
 
 async function participant(
   db: DB,
@@ -256,7 +257,9 @@ export function registerCommunications(
           other,
           "New message",
           `${(await getProfile(db, userId)).name} sent you a message.`,
-          `/inbox/${conversationId}`,
+          initial.trade_id
+            ? `/trades/${initial.trade_id}`
+            : `/inbox/${conversationId}`,
         );
         return m;
       });
@@ -514,14 +517,17 @@ export function registerCommunications(
           } else {
             const t = (
               await pool.query(
-                "SELECT state,offered_snapshot,requested_snapshot FROM trade_offers WHERE id=$1::uuid",
+                "SELECT state,offered_bundle,requested_bundle FROM trade_offers WHERE id=$1::uuid",
                 [r.target_id],
               )
             ).rows[0];
-            if (t)
+            if (t) {
+              const titles = (items: { title: string }[]) =>
+                items.map((item) => item.title).join(" + ");
               context = {
-                text: `${t.offered_snapshot.title} ↔ ${t.requested_snapshot.title} · ${t.state}`,
+                text: `${titles(t.offered_bundle)} ↔ ${titles(t.requested_bundle)} · ${t.state}`,
               };
+            }
           }
           return {
             id: r.id,
@@ -545,7 +551,12 @@ export function registerCommunications(
           listingRows.map((r) => listing(pool, r.id)),
         ),
         trades: await Promise.all(
-          tradeRows.map((r) => serializeTrade(pool, r.id)),
+          tradeRows.map(async (r) => {
+            const trade = await serializeTrade(pool, r.id);
+            return trade.fulfillment === "shipping"
+              ? { ...trade, shippingReview: await shippingReview(pool, r.id) }
+              : trade;
+          }),
         ),
       });
     }),
@@ -566,6 +577,13 @@ export function registerCommunications(
             targetId: z.string().min(1).max(100),
             reason: z.string().trim().min(3).max(1000),
             resolution: z.enum(["canceled", "completed"]).optional(),
+            compensation: z
+              .object({
+                payer: z.enum(["sender", "recipient"]),
+                cents: z.number().int().min(50).max(500000),
+              })
+              .strict()
+              .optional(),
           })
           .strict()
           .parse(req.body);
@@ -667,7 +685,12 @@ export function registerCommunications(
             "SELECT id FROM profiles WHERE id=ANY($1::text[]) ORDER BY id FOR NO KEY UPDATE",
             [[initial.sender_id, initial.recipient_id]],
           );
-          await lockListings(db, [initial.offered_id, initial.requested_id]);
+          const current = (
+            await db.query("SELECT item_ids FROM trade_offers WHERE id=$1", [
+              tradeId,
+            ])
+          ).rows[0];
+          await lockListings(db, current.item_ids);
           const target = (
             await db.query(
               "SELECT * FROM trade_offers WHERE id=$1 FOR NO KEY UPDATE",
@@ -676,14 +699,36 @@ export function registerCommunications(
           ).rows[0];
           if (!["accepted", "disputed"].includes(target.state))
             fail(409, "This trade is already resolved.", "TRADE_UNAVAILABLE");
-          await finishTrade(db, target, body.resolution);
+          const shipped = target.fulfillment === "shipping";
+          if (shipped)
+            await queueShippingResolution(
+              db,
+              target,
+              body.resolution,
+              body.compensation
+                ? {
+                    userId:
+                      body.compensation.payer === "sender"
+                        ? target.sender_id
+                        : target.recipient_id,
+                    cents: body.compensation.cents,
+                  }
+                : undefined,
+            );
+          else {
+            if (body.compensation)
+              fail(400, "Compensation requires a shipped trade.");
+            await finishTrade(db, target, body.resolution);
+          }
           await db.query(
             "INSERT INTO trade_events(id,trade_id,actor_id,action,reason) VALUES($1,$2,$3,$4,$5)",
             [
               uuid(),
               tradeId,
               actorId,
-              `operator_${body.resolution}`,
+              shipped
+                ? "operator_settlement_requested"
+                : `operator_${body.resolution}`,
               body.reason,
             ],
           );
@@ -691,7 +736,9 @@ export function registerCommunications(
             await notify(
               db,
               person,
-              "Trade resolved by support",
+              shipped
+                ? "Support recorded a shipping resolution"
+                : "Trade resolved by support",
               body.reason,
               `/trades/${tradeId}`,
             );

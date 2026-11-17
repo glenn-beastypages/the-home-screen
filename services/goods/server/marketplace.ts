@@ -148,6 +148,19 @@ export function registerMarketplace(
             "Resolve your accepted or disputed trades before deleting your account.",
             "UNRESOLVED_TRADE",
           );
+        if (
+          (
+            await db.query(
+              "SELECT 1 FROM purchases WHERE (buyer_id=$1 OR seller_id=$1) AND state IN ('pending','paid','refunding','refund_failed') LIMIT 1",
+              [userId],
+            )
+          ).rowCount
+        )
+          fail(
+            409,
+            "Resolve your open orders before deleting your account.",
+            "UNRESOLVED_ORDER",
+          );
         await invalidateOffers(
           db,
           owned,
@@ -205,12 +218,18 @@ export function registerMarketplace(
     "/api/sellers/:id",
     wrap(async (req, res) => {
       const seller = await getProfile(pool, String(req.params.id));
-      const status = (
-        await pool.query("SELECT status FROM profiles WHERE id=$1", [seller.id])
-      ).rows[0]?.status;
-      if (status !== "active" && res.locals.user?.id !== seller.id)
+      const viewerId = res.locals.user?.id ?? null;
+      const { status, blocked_by_viewer: blockedByViewer } = (
+        await pool.query(
+          `SELECT status, EXISTS (
+             SELECT 1 FROM blocks WHERE user_id=$2 AND target_id=profiles.id
+           ) AS blocked_by_viewer FROM profiles WHERE id=$1`,
+          [seller.id, viewerId],
+        )
+      ).rows[0];
+      if (status !== "active" && viewerId !== seller.id)
         fail(404, "Seller unavailable.", "NOT_FOUND");
-      res.json({ seller });
+      res.json({ seller, blockedByViewer });
     }),
   );
   app.get(
@@ -451,15 +470,22 @@ export function registerMarketplace(
       if (!allowed)
         allowed = !!(
           await pool.query(
-            `SELECT 1 FROM listing_photos lp JOIN listings l ON l.id=lp.listing_id JOIN profiles p ON p.id=l.owner_id WHERE lp.photo_id=$1 AND l.published_at IS NOT NULL AND l.status IN ('active','reserved','traded','archived') AND l.is_hidden=false AND l.demo_disabled=false AND p.status='active' LIMIT 1`,
+            `SELECT 1 FROM listing_photos lp JOIN listings l ON l.id=lp.listing_id JOIN profiles p ON p.id=l.owner_id WHERE lp.photo_id=$1 AND l.published_at IS NOT NULL AND l.status IN ('active','reserved','traded','sold','archived') AND l.is_hidden=false AND l.demo_disabled=false AND p.status='active' LIMIT 1`,
             [photoId],
           )
         ).rowCount;
       if (!allowed && userId)
         allowed = !!(
           await pool.query(
-            `SELECT 1 FROM trade_offers t WHERE (t.sender_id=$1 OR t.recipient_id=$1) AND (t.offered_snapshot->'photos' @> $2::jsonb OR t.requested_snapshot->'photos' @> $2::jsonb) LIMIT 1`,
-            [userId, JSON.stringify([{ id: photoId }])],
+            `SELECT 1 FROM trade_offers t
+             WHERE (t.sender_id=$1 OR t.recipient_id=$1) AND (
+               t.offered_bundle @> $2::jsonb OR t.requested_bundle @> $2::jsonb OR
+               EXISTS (
+                 SELECT 1 FROM trade_events e WHERE e.trade_id=t.id AND
+                   (e.proposal->'offered' @> $2::jsonb OR e.proposal->'requested' @> $2::jsonb)
+               )
+             ) LIMIT 1`,
+            [userId, JSON.stringify([{ photos: [{ id: photoId }] }])],
           )
         ).rowCount;
       if (!allowed) fail(404, "Photo not found.", "NOT_FOUND");
@@ -535,7 +561,7 @@ export function registerMarketplace(
           if (current.owner_id !== userId)
             fail(403, "Only the owner can change this listing.", "FORBIDDEN");
           if (
-            ["reserved", "traded", "hidden"].includes(current.status) ||
+            ["reserved", "traded", "sold", "hidden"].includes(current.status) ||
             current.is_hidden
           )
             fail(

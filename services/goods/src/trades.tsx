@@ -1,702 +1,625 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
+  ArrowLeft,
   ArrowLeftRight,
-  ArrowRight,
+  ArrowUpRight,
   Check,
-  ChevronRight,
   Clock3,
+  Flag,
   MessageCircle,
-  X,
-  ShieldCheck,
 } from "lucide-react";
+import { api, ApiError, requestId, time, type Page, type Trade } from "./api";
 import {
-  api,
-  withBase,
-  codeOf,
-  requestId,
-  time,
-  type Listing,
-  type Page,
-  type Slot,
-  type Trade,
-} from "./api";
-import {
-  Confirm,
+  Avatar,
   Dialog,
   Empty,
   ErrorBox,
   Link,
   Loading,
-  PageTitle,
   Photo,
-  ReportButton,
-  Seller,
   SignedOut,
   Spinner,
-  Status,
   useApp,
   useResource,
 } from "./ui";
+import { ShippingPanel, ShippingTerms, type ShippingView } from "./shipping";
+import {
+  methodLabel,
+  SwapSummary,
+  totalValue,
+  TradeComposer,
+  tradeSides,
+} from "./trade-offer";
+import { ExchangePlanPanel } from "./trade-exchange";
+import { TradeThread } from "./trade-thread";
+import "./trades.css";
 
-function TradeItem({
-  item,
-  label,
-  availability,
-  snapshot = false,
-}: {
-  item: Listing;
-  label: string;
-  availability?: string;
-  snapshot?: boolean;
-}) {
-  return (
-    <div className="trade-item">
-      <span className="eyebrow">{label}</span>
-      <Photo listing={item} />
-      <span className="code-pill">{item.code}</span>
-      <h3>{item.title}</h3>
-      <p>{item.owner.name || item.owner.username}</p>
-      <div className="trade-item-meta">
-        <span>{item.condition}</span>
-        {snapshot ? (
-          <small className="snapshot-note">At request: {item.status}</small>
-        ) : (
-          <Status value={availability || item.status} />
-        )}
-      </div>
-    </div>
-  );
+export { TradeComposer } from "./trade-offer";
+
+function statusText(trade: Trade, userId: string) {
+  switch (trade.state) {
+    case "pending":
+      return trade.proposedBy === userId ? "Waiting for reply" : "Your turn";
+    case "accepted":
+      return trade.cancelRequestedBy.length
+        ? "Cancellation requested"
+        : "Exchange in progress";
+    case "completed":
+      return "Completed";
+    case "disputed":
+      return "Under review";
+    case "invalidated":
+      return "Item unavailable";
+    default:
+      return trade.state.charAt(0).toUpperCase() + trade.state.slice(1);
+  }
 }
-export function TradePair({ trade }: { trade: Trade }) {
+
+const tradeTabs = [
+  { id: "open", label: "Open" },
+  { id: "received", label: "Your turn" },
+  { id: "history", label: "History" },
+] as const;
+
+export function Trades() {
   const { user } = useApp();
-  const availability = ["accepted", "disputed"].includes(trade.state)
-    ? "reserved"
-    : trade.state === "completed"
-      ? "traded"
-      : undefined;
+  if (!user) return <SignedOut what="view your trades" />;
+  const selection = new URLSearchParams(window.location.search).get("tab");
+  const tab =
+    selection === "history" ||
+    selection === "received" ||
+    selection === "sent" ||
+    selection === "accepted"
+      ? selection
+      : "open";
   return (
-    <div className="trade-pair">
-      <TradeItem
-        item={trade.offered}
-        availability={availability}
-        snapshot={!availability}
-        label={
-          trade.sender.id === user?.id
-            ? "You offer"
-            : trade.sender.name + " offers"
-        }
-      />
-      <ArrowLeftRight className="pair-arrow" size={22} />
-      <TradeItem
-        item={trade.requested}
-        availability={availability}
-        snapshot={!availability}
-        label={
-          trade.recipient.id === user?.id
-            ? "You give"
-            : trade.recipient.name + " gives"
-        }
-      />
+    <div className="swap-page">
+      <header className="swap-index-heading">
+        <h1>Trades</h1>
+        <Link className="button secondary" to="/explore?tradeOnly=true">
+          Browse tradeable items <ArrowUpRight size={16} />
+        </Link>
+      </header>
+      <nav className="swap-tabs" aria-label="Filter trades">
+        {tradeTabs.map(({ id, label }) => (
+          <Link
+            key={id}
+            to={`/trades?tab=${id}`}
+            aria-current={
+              tab === id ||
+              (id === "open" && ["sent", "accepted"].includes(tab))
+                ? "page"
+                : undefined
+            }
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
+      <TradeList key={tab} tab={tab} userId={user.id} />
     </div>
   );
 }
-export function TradeComposer({
-  target,
-  onClose,
-}: {
-  target: Listing;
-  onClose: () => void;
-}) {
-  const { go } = useApp();
-  const { data, loading, error, reload } = useResource<{ slots: Slot[] }>(
-    "/me/inventory",
-  );
-  const { data: sellerFeed } = useResource<Page<Listing>>(
-    "/listings?seller=" + target.owner.id + "&limit=78",
-  );
-  const [ownCode, setOwnCode] = useState(""),
-    [targetCode, setTargetCode] = useState(target.code),
-    [message, setMessage] = useState(""),
-    [review, setReview] = useState(false),
-    [busy, setBusy] = useState(false),
-    [sendError, setSendError] = useState("");
-  const [key] = useState(requestId);
-  const eligible =
-    data?.slots.flatMap((s) =>
-      s.listing?.status === "active" && s.listing.tradeEnabled
-        ? [s.listing]
-        : [],
-    ) || [];
-  const own = eligible.find((l) => l.code === codeOf(ownCode));
-  const wanted =
-    sellerFeed?.items.find((l) => l.code === codeOf(targetCode)) ||
-    (codeOf(targetCode) === target.code ? target : undefined);
-  const valid = !!own && wanted?.status === "active" && wanted?.tradeEnabled;
-  const send = async () => {
-    if (!own || !wanted) return;
+
+function TradeList({ tab, userId }: { tab: string; userId: string }) {
+  const path = `/trades?tab=${tab}`;
+  const { data, loading, error, reload } = useResource<Page<Trade>>(path);
+  const [more, setMore] = useState<Page<Trade>[]>([]);
+  const [busy, setBusy] = useState(false);
+  const [loadError, setLoadError] = useState("");
+  const rows = [
+    ...new Map(
+      [...(data?.items ?? []), ...more.flatMap((page) => page.items)].map(
+        (item) => [item.id, item],
+      ),
+    ).values(),
+  ];
+  const next = (more.at(-1) ?? data)?.nextCursor;
+  async function loadMore() {
     setBusy(true);
-    setSendError("");
+    setLoadError("");
     try {
-      const d = await api<{ trade: Trade }>("/trades", "POST", {
-        offeredListingId: own.id,
-        requestedListingId: wanted.id,
-        message,
-        clientRequestId: key,
-      });
-      go("/trades/" + d.trade.id);
-      onClose();
-    } catch (e) {
-      setSendError((e as Error).message);
+      const page = await api<Page<Trade>>(
+        path + "&cursor=" + encodeURIComponent(next!),
+      );
+      setMore((before) => [...before, page]);
+    } catch (error) {
+      setLoadError((error as Error).message);
     } finally {
       setBusy(false);
     }
-  };
-  return (
-    <Dialog
-      title={review ? "Review your trade" : "Propose a trade"}
-      onClose={() => {
-        if (!busy) onClose();
-      }}
-      wide
-    >
-      <p className="muted">
-        {review
-          ? "Two items. Two people. Check both sides before you send."
-          : "Choose what you offer and what you want from " +
-            target.owner.name +
-            "’s shelf."}
-      </p>
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <ErrorBox error={error} retry={reload} />
-      ) : !eligible.length ? (
-        <Empty
-          title="Start with something to offer."
-          body="Add a trade-enabled listing to your inventory, then come back to this item."
-          action={{
-            label: "List an item",
-            to:
-              "/sell/new?returnTo=" + encodeURIComponent("/items/" + target.id),
-          }}
-        />
-      ) : (
-        <>
-          <div className="trade-composer-pair">
-            <section className="trade-box">
-              <span className="eyebrow">01 — You offer</span>
-              {!review && (
-                <label>
-                  Your inventory code
-                  <input
-                    aria-label="Your inventory code"
-                    value={ownCode}
-                    placeholder="e.g. A-1"
-                    maxLength={3}
-                    onChange={(e) => {
-                      setOwnCode(e.target.value.toUpperCase());
-                      setSendError("");
-                    }}
-                    list="my-trade-items"
-                  />
-                  <datalist id="my-trade-items">
-                    {eligible.map((l) => (
-                      <option value={l.code} key={l.id}>
-                        {l.title}
-                      </option>
-                    ))}
-                  </datalist>
-                </label>
-              )}
-              {own ? (
-                <TradeItem item={own} label="From your shelf" />
-              ) : (
-                <div className="item-picker">
-                  {eligible.map((l) => (
-                    <button
-                      className="picker-item"
-                      key={l.id}
-                      onClick={() => setOwnCode(l.code)}
-                    >
-                      <Photo listing={l} />
-                      <span>
-                        <strong>{l.code}</strong>
-                        {l.title}
-                      </span>
-                      <ChevronRight size={16} />
-                    </button>
-                  ))}
-                </div>
-              )}
-              {ownCode && !own && (
-                <p className="field-error">
-                  Choose one of your available, trade-enabled items.
-                </p>
-              )}
-            </section>
-            <ArrowLeftRight size={25} className="pair-arrow" />
-            <section className="trade-box">
-              <span className="eyebrow">02 — You want</span>
-              {!review && (
-                <label>
-                  Their inventory code
-                  <input
-                    aria-label="Their inventory code"
-                    value={targetCode}
-                    onChange={(e) => {
-                      setTargetCode(e.target.value.toUpperCase());
-                      setSendError("");
-                    }}
-                    maxLength={3}
-                  />
-                </label>
-              )}
-              {wanted ? (
-                <TradeItem
-                  item={wanted}
-                  label={"From " + target.owner.name + "’s shelf"}
-                />
-              ) : (
-                <p className="field-error">
-                  No public item matches this code on this seller's shelf.
-                </p>
-              )}
-              {wanted &&
-                (wanted.status !== "active" || !wanted.tradeEnabled) && (
-                  <p className="field-error">
-                    This item isn't available to trade.
-                  </p>
-                )}
-            </section>
-          </div>
-          {!review && (
-            <label>
-              A note (optional)
-              <textarea
-                value={message}
-                maxLength={1000}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Say hello or tell them why it’s a good match."
-                rows={3}
-              />
-            </label>
-          )}
-          {review && (
-            <div className="trade-review-note">
-              <ShieldCheck size={21} />
-              <p>
-                Sending this request keeps both items available. The other
-                person must accept before either item is reserved. Arrange the
-                exchange together; no payment or shipping is handled here.
-              </p>
-            </div>
-          )}
-          {sendError && <ErrorBox error={sendError} />}
-          <div className="actions end">
-            {review && (
-              <button
-                className="button secondary"
-                onClick={() => setReview(false)}
-                disabled={busy}
-              >
-                Back to items
-              </button>
-            )}
-            <button
-              className="button"
-              disabled={!valid || busy}
-              onClick={review ? send : () => setReview(true)}
-            >
-              {busy ? <Spinner /> : <ArrowLeftRight size={18} />}{" "}
-              {review ? "Send trade request" : "Review trade"}
-            </button>
-          </div>
-        </>
-      )}
-    </Dialog>
-  );
-}
-
-export function Trades() {
-  const { user, go } = useApp();
-  const initial = new URLSearchParams(location.search).get("tab") || "received";
-  const [tab, setTab] = useState(initial);
-  const { data, error, loading, reload } = useResource<Page<Trade>>(
-    user ? "/trades?tab=" + tab : null,
-  );
-  const [extra, setExtra] = useState<Trade[]>([]),
-    [next, setNext] = useState<string | null>(null),
-    [more, setMore] = useState(false),
-    [moreError, setMoreError] = useState("");
-  useEffect(() => {
-    setExtra([]);
-    setNext(data?.nextCursor || null);
-  }, [data]);
-  const load = async () => {
-    if (!next) return;
-    setMore(true);
-    setMoreError("");
-    try {
-      const p = await api<Page<Trade>>(
-        "/trades?tab=" + tab + "&cursor=" + encodeURIComponent(next),
-      );
-      setExtra((v) => [...v, ...p.items]);
-      setNext(p.nextCursor);
-    } catch (e) {
-      setMoreError((e as Error).message);
-    } finally {
-      setMore(false);
-    }
-  };
-  if (!user) return <SignedOut what="propose and manage trades" />;
-  const items = [...(data?.items || []), ...extra];
+  }
+  if (loading) return <Loading />;
+  if (error) return <ErrorBox error={error} retry={reload} />;
+  if (!rows.length)
+    return (
+      <Empty
+        title={
+          tab === "history"
+            ? "No past trades"
+            : tab === "received"
+              ? "You’re all caught up"
+              : "No open trades"
+        }
+        body={
+          tab === "open"
+            ? "Pick an item you want and offer something from your shelf."
+            : ""
+        }
+        action={{
+          label:
+            tab === "received" ? "View open trades" : "Find something to trade",
+          to: tab === "received" ? "/trades" : "/explore?tradeOnly=true",
+        }}
+      />
+    );
   return (
     <>
-      <PageTitle title="Your trades" />
-      <div className="tab-bar">
-        {[
-          ["received", "Received"],
-          ["sent", "Sent"],
-          ["accepted", "Accepted"],
-          ["history", "History"],
-        ].map(([key, label]) => (
-          <button
-            className={tab === key ? "selected" : ""}
-            key={key}
-            onClick={() => {
-              setTab(key);
-              history.replaceState({}, "", withBase("/trades?tab=" + key));
-            }}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <ErrorBox error={error} retry={reload} />
-      ) : items.length ? (
-        <div className="trades-grid">
-          {items.map((t) => (
-            <Link key={t.id} to={"/trades/" + t.id} className="trade-card">
-              <div className="trade-card-top">
-                <Status value={t.state} />
-                <span>{time(t.createdAt)}</span>
-              </div>
-              <TradePair trade={t} />
-              <div className="trade-card-bottom">
-                <span>View exchange</span>
-                <ArrowRight size={18} />
-              </div>
-            </Link>
-          ))}
-        </div>
-      ) : (
-        <Empty
-          title={
-            tab === "received"
-              ? "Good offers start here."
-              : tab === "sent"
-                ? "Make the first move."
-                : tab === "accepted"
-                  ? "Your next exchange is out there."
-                  : "A place for every exchange."
-          }
-          body={
-            tab === "received"
-              ? "Offers for your items will arrive here. Make sure your shelf has something to trade."
-              : tab === "sent"
-                ? "Find something you like and offer an item from your own shelf."
-                : "Explore the marketplace and find your next good trade."
-          }
-          action={{
-            label: tab === "received" ? "Manage your shelf" : "Explore goods",
-            to: tab === "received" ? "/sell" : "/explore",
-          }}
-        />
-      )}
-      {moreError && <ErrorBox error={moreError} />}
+      <ul className="swap-inbox-list">
+        {rows.map((trade) => {
+          const { yours, theirs, other } = tradeSides(trade, userId);
+          const needsReply =
+            trade.state === "pending" && trade.proposedBy !== userId;
+          return (
+            <li key={trade.id}>
+              <Link className="swap-inbox-row" to={"/trades/" + trade.id}>
+                <div className="swap-inbox-photos">
+                  <Photo listing={yours[0]} />
+                  <Photo listing={theirs[0]} />
+                </div>
+                <div className="swap-inbox-label">
+                  <strong>{other.name}</strong>
+                  <span>
+                    {theirs[0].title}
+                    {theirs.length > 1 ? ` +${theirs.length - 1}` : ""}
+                  </span>
+                  <small>
+                    {yours.length} for {theirs.length} ·{" "}
+                    {methodLabel[trade.fulfillment]}
+                  </small>
+                </div>
+                <span
+                  className={`swap-status ${needsReply ? "needs-reply" : ""}`}
+                >
+                  {statusText(trade, userId)}
+                </span>
+                <ArrowUpRight
+                  className="swap-inbox-arrow"
+                  size={17}
+                  aria-hidden
+                />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      {loadError && <ErrorBox error={loadError} />}
       {next && (
-        <div className="load-more">
-          <button className="button secondary" disabled={more} onClick={load}>
-            {more ? <Spinner /> : "Load more"}
-          </button>
-        </div>
+        <button className="button secondary" disabled={busy} onClick={loadMore}>
+          {busy ? <Spinner /> : "Load more"}
+        </button>
       )}
     </>
   );
 }
 
-const actionText: Record<
-  string,
-  { title: string; body: string; label: string }
-> = {
+type Action =
+  "accept" | "decline" | "withdraw" | "confirm" | "cancel" | "dispute";
+const actionCopy = {
   accept: {
-    title: "Accept this trade?",
-    body: "Both items will be reserved for this exchange. Other offers involving either item will close. Acceptance does not mean the physical exchange is complete.",
+    title: "Accept this offer?",
+    body: "This reserves every item in the offer for your exchange.",
     label: "Accept trade",
   },
   decline: {
     title: "Decline this offer?",
-    body: "This offer will close. Both items will remain available.",
+    body: "The offer will close and the items will stay available.",
     label: "Decline offer",
   },
   withdraw: {
     title: "Withdraw your offer?",
-    body: "Your pending request will close. Both items will remain available.",
+    body: "The other person will no longer be able to accept it.",
     label: "Withdraw offer",
   },
   confirm: {
-    title: "Have you exchanged the items?",
-    body: "Confirm only after you have completed your part of the exchange. Both people must confirm before the items move to history. This is a participant declaration, not independently verified delivery.",
-    label: "Confirm exchange",
+    title: "Did you receive your items?",
+    body: "Confirm after you’ve received and checked the items. The trade completes once you both confirm.",
+    label: "Confirm receipt",
   },
   cancel: {
-    title: "Request cancellation?",
-    body: "After acceptance, both people must request cancellation before the reserved items are released. A problem can be reported for operator review.",
+    title: "Cancel this trade?",
+    body: "The items stay reserved until you both agree to cancel.",
     label: "Request cancellation",
   },
   dispute: {
-    title: "Report a problem?",
-    body: "Both items remain reserved while the moderation team reviews this exchange. Explain the issue so they can help.",
-    label: "Report problem",
+    title: "Report a problem",
+    body: "The items stay reserved while support reviews the trade.",
+    label: "Send report",
   },
-};
+} satisfies Record<Action, { title: string; body: string; label: string }>;
+
 export function TradePage({ id }: { id: string }) {
-  const { user, toast } = useApp();
+  const { user } = useApp();
+  if (!user) return <SignedOut what="view this trade" />;
+  return <TradeWorkspace key={id} id={id} userId={user.id} />;
+}
+
+function TradeWorkspace({ id, userId }: { id: string; userId: string }) {
   const path = "/trades/" + id;
-  const { data, setData, error, loading, reload } = useResource<{
-    trade: Trade;
-  }>(user ? path : null);
-  const [action, setAction] = useState<string | null>(null),
-    [busy, setBusy] = useState(false),
-    [actionError, setActionError] = useState(""),
-    [reason, setReason] = useState("");
-  const [operation, setOperation] = useState<{
-    action: string;
-    key: string;
+  const [trade, setTrade] = useState<Trade | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
+  const [action, setAction] = useState<{
+    name: Action;
+    revision: number;
+    version?: number;
+    clientKey: string;
   } | null>(null);
-  const t = data?.trade;
-  const ongoing =
-    t?.state === "pending" ||
-    t?.state === "accepted" ||
-    t?.state === "disputed";
+  const [reason, setReason] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [actionError, setActionError] = useState("");
+  const [counter, setCounter] = useState<Trade | null>(null);
+  const poll = useRef<() => void>(() => {});
+  const command = useRef(0);
+  const protectedShipping = trade?.fulfillment === "shipping";
+  const shippingPath =
+    protectedShipping &&
+    ["accepted", "disputed", "completed", "canceled"].includes(
+      trade?.state ?? "",
+    )
+      ? path + "/shipping"
+      : null;
+  const shipping = useResource<ShippingView>(shippingPath);
+  function apply(next: Trade) {
+    command.current++;
+    setTrade(next);
+  }
+
   useEffect(() => {
-    if (!user || !ongoing || loading || error || action) return;
-    let current = true;
-    let inFlight = false;
-    async function refresh() {
-      if (inFlight || document.visibilityState !== "visible") return;
-      inFlight = true;
+    let mounted = true;
+    let pending = false;
+    const load = async () => {
+      if (pending || document.hidden) return;
+      pending = true;
+      const version = command.current;
       try {
-        const updated = await api<{ trade: Trade }>(path);
-        if (current) setData(updated);
-      } catch {
-        // Leave the last confirmed state visible and retry on the next check.
+        const { trade: next } = await api<{ trade: Trade }>(path);
+        if (mounted && command.current === version) {
+          setTrade(next);
+          setLoadError("");
+        }
+      } catch (error) {
+        if (mounted && command.current === version)
+          setLoadError((error as Error).message);
       } finally {
-        inFlight = false;
+        pending = false;
+        if (mounted) setLoading(false);
       }
-    }
-    const timer = setInterval(refresh, 5000);
-    document.addEventListener("visibilitychange", refresh);
-    return () => {
-      current = false;
-      clearInterval(timer);
-      document.removeEventListener("visibilitychange", refresh);
     };
-  }, [user, ongoing, loading, error, action, path, setData]);
-  const choose = (a: string) => {
-    setAction(a);
-    setActionError("");
-    setReason("");
-    setOperation((o) =>
-      o?.action === a ? o : { action: a, key: requestId() },
+    poll.current = load;
+    void load();
+    const timer = setInterval(load, 4500);
+    window.addEventListener("focus", load);
+    return () => {
+      mounted = false;
+      clearInterval(timer);
+      window.removeEventListener("focus", load);
+    };
+  }, [path]);
+
+  useEffect(() => {
+    if (!shippingPath) return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("shipping") !== "return") return;
+    url.searchParams.delete("shipping");
+    window.history.replaceState(window.history.state, "", url);
+    void api<ShippingView>(shippingPath + "/refresh", "POST")
+      .then((view) => {
+        shipping.setData(view);
+        poll.current();
+      })
+      .catch(() => shipping.reload());
+  }, [shippingPath]);
+
+  if (loading) return <Loading />;
+  if (!trade)
+    return (
+      <ErrorBox
+        error={loadError || "This trade is unavailable."}
+        retry={() => poll.current()}
+      />
     );
-  };
-  const submit = async () => {
-    if (!action || !operation || busy) return;
+  const { yours, theirs, other } = tradeSides(trade, userId);
+  const pending = trade.state === "pending";
+  const incoming = trade.proposedBy !== userId;
+  const accepted = trade.state === "accepted";
+  const completed = trade.state === "completed";
+  const confirmed = trade.confirmedBy.includes(userId);
+  const theirReceipt = trade.confirmedBy.includes(other.id);
+  const cancelRequested = trade.cancelRequestedBy.length > 0;
+  const youRequested = trade.cancelRequestedBy.includes(userId);
+  const canCancel =
+    accepted &&
+    !trade.confirmedBy.length &&
+    !youRequested &&
+    !trade.shipments?.yours.tracking &&
+    !trade.shipments?.theirs.tracking &&
+    (!protectedShipping || shipping.data?.canCancel);
+  const planAgreed = trade.exchangePlan?.confirmedBy.length === 2;
+  const canConfirm =
+    accepted &&
+    !confirmed &&
+    !cancelRequested &&
+    (!trade.planRequired || planAgreed) &&
+    (trade.fulfillment !== "arranged_shipping" ||
+      Boolean(
+        trade.shipments?.yours.tracking && trade.shipments?.theirs.tracking,
+      )) &&
+    (!protectedShipping || shipping.data?.canConfirm);
+  const arranged = trade.fulfillment === "arranged_shipping";
+  const method = methodLabel[trade.fulfillment];
+
+  function choose(name: Action) {
+    setReason("");
+    setActionError("");
+    setAction({
+      name,
+      revision: trade!.revision,
+      version: trade!.exchangePlan?.version,
+      clientKey: requestId(),
+    });
+  }
+
+  async function submit() {
+    if (!action || busy) return;
     setBusy(true);
     setActionError("");
     try {
-      const updated = await api<{ trade: Trade }>(path + "/actions", "POST", {
-        action,
-        clientRequestId: operation.key,
-        reason,
-      });
+      const { trade: next } = await api<{ trade: Trade }>(
+        path + "/actions",
+        "POST",
+        {
+          action: action.name,
+          clientRequestId: action.clientKey,
+          expectedRevision: action.revision,
+          planVersion: action.version,
+          reason: reason.trim(),
+        },
+      );
+      apply(next);
       setAction(null);
-      setOperation(null);
-      setData(updated);
-      toast("Exchange updated.");
-    } catch (e) {
-      setActionError((e as Error).message);
+      if (
+        shippingPath &&
+        (action.name === "confirm" || action.name === "cancel")
+      ) {
+        void api<ShippingView>(shippingPath + "/refresh", "POST")
+          .then((view) => {
+            shipping.setData(view);
+            poll.current();
+          })
+          .catch(() => shipping.reload());
+      }
+    } catch (error) {
+      setActionError((error as Error).message);
+      if (error instanceof ApiError && error.status === 409) poll.current();
     } finally {
       setBusy(false);
     }
-  };
-  if (!user) return <SignedOut what="view this exchange" />;
-  if (loading) return <Loading />;
-  if (error) return <ErrorBox error={error} retry={reload} />;
-  if (!t) return null;
-  const incoming = t.recipient.id === user.id;
-  const confirmed = t.confirmedBy.includes(user.id);
-  const cancellation = t.cancelRequestedBy.includes(user.id);
+  }
+
   return (
-    <>
-      <PageTitle title="Trade details" back="/trades">
-        <Status value={t.state} />
-      </PageTitle>
-      <div className="trade-detail-layout">
-        <section className="panel trade-detail-main">
-          <TradePair trade={t} />
-          <div className="trade-state-note">
-            <ArrowLeftRight size={20} />
-            <div>
-              <strong>
-                {t.state === "accepted"
-                  ? "Accepted · Awaiting exchange"
-                  : t.state === "completed"
-                    ? "Exchange confirmed by both people"
-                    : t.state === "pending"
-                      ? "Waiting for a response"
-                      : t.state === "disputed"
-                        ? "A problem has been reported"
-                        : "This offer is " + t.state}
-              </strong>
-              <p>
-                {t.state === "pending"
-                  ? "No items are reserved until the recipient accepts. Expires " +
-                    time(t.expiresAt) +
-                    "."
-                  : t.state === "accepted"
-                    ? "Both items are reserved. Arrange the exchange in your conversation. Each person confirms separately after the exchange."
-                    : t.state === "completed"
-                      ? "Both original listings are now in history. Their inventory positions are free for something new."
-                      : t.state === "disputed"
-                        ? "The items stay reserved until the operator records a resolution."
-                        : "The original item details are preserved below for reference."}
-              </p>
-            </div>
+    <div className="swap-page">
+      <Link className="swap-back" to="/trades">
+        <ArrowLeft size={16} /> Trades
+      </Link>
+      <header className="swap-workspace-heading">
+        <div className="swap-partner">
+          <Link
+            to={"/sellers/" + other.id}
+            aria-label={other.name + "’s profile"}
+          >
+            <Avatar profile={other} size={42} />
+          </Link>
+          <div>
+            <h1>Trade with {other.name}</h1>
+            <span>{method}</span>
           </div>
-          {t.state === "accepted" && (
-            <div className="confirmation-progress">
-              <div
-                className={t.confirmedBy.includes(t.sender.id) ? "done" : ""}
-              >
-                <Check size={16} />
-                {t.sender.name}
-                {t.confirmedBy.includes(t.sender.id)
-                  ? " confirmed"
-                  : " · waiting"}
-              </div>
-              <div
-                className={t.confirmedBy.includes(t.recipient.id) ? "done" : ""}
-              >
-                <Check size={16} />
-                {t.recipient.name}
-                {t.confirmedBy.includes(t.recipient.id)
-                  ? " confirmed"
-                  : " · waiting"}
-              </div>
-              {t.cancelRequestedBy.length > 0 && (
-                <p>
-                  A cancellation has been requested. Items remain reserved until
-                  both participants agree.
-                </p>
+        </div>
+        <span
+          className={`swap-status ${pending && incoming ? "needs-reply" : ""}`}
+        >
+          {statusText(trade, userId)}
+        </span>
+      </header>
+      {loadError && <ErrorBox error={loadError} retry={() => poll.current()} />}
+      <div className="swap-workspace">
+        <div className="swap-workspace-main">
+          <section className="swap-current" aria-label="Trade items">
+            <div className="swap-section-heading">
+              <ArrowLeftRight size={19} aria-hidden />
+              <h2>
+                {pending
+                  ? "Current offer"
+                  : accepted || completed
+                    ? "Agreed items"
+                    : "Trade items"}
+              </h2>
+              {pending && (
+                <span>
+                  <Clock3 size={13} aria-hidden /> Expires{" "}
+                  {time(trade.expiresAt)}
+                </span>
               )}
             </div>
-          )}
-          <div className="trade-actions">
-            {t.state === "pending" &&
-              (incoming ? (
-                <>
-                  <button className="button" onClick={() => choose("accept")}>
-                    <Check size={18} /> Accept trade
-                  </button>
-                  <button
-                    className="button secondary"
-                    onClick={() => choose("decline")}
-                  >
-                    Decline
-                  </button>
-                </>
-              ) : (
-                <button
-                  className="button secondary"
-                  onClick={() => choose("withdraw")}
-                >
-                  Withdraw offer
-                </button>
-              ))}
-            {t.state === "accepted" && (
-              <>
-                <button
-                  className="button"
-                  disabled={confirmed || cancellation}
-                  onClick={() => choose("confirm")}
-                >
-                  <Check size={18} />
-                  {confirmed
-                    ? "Your exchange is confirmed"
-                    : "Confirm exchange"}
-                </button>
-                <button
-                  className="button secondary"
-                  disabled={cancellation || confirmed}
-                  onClick={() => choose("cancel")}
-                >
-                  {cancellation
-                    ? "Cancellation requested"
-                    : "Request cancellation"}
-                </button>
-                <button
-                  className="text-button"
-                  onClick={() => choose("dispute")}
-                >
-                  Report a problem
-                </button>
-              </>
+            <SwapSummary yours={yours} theirs={theirs} state={trade.state} />
+            {protectedShipping && pending && (
+              <ShippingTerms
+                yours={totalValue(yours).cents}
+                theirs={totalValue(theirs).cents}
+                cash={trade.cashDifferenceCents}
+              />
             )}
-            <Link
-              className="button secondary"
-              to={"/inbox/" + t.conversationId}
-            >
-              <MessageCircle size={18} /> Open conversation
-            </Link>
-          </div>
-        </section>
-        <aside className="panel history-panel">
-          <span className="eyebrow">Every step, recorded</span>
-          <h3>Exchange history</h3>
-          <ol className="timeline">
-            {t.events?.map((e) => (
-              <li key={e.id}>
-                <span className="timeline-dot" />
-                <strong>{e.action.replaceAll("_", " ")}</strong>
-                <small>{time(e.createdAt)}</small>
-                {e.reason && <p>{e.reason}</p>}
-              </li>
-            ))}
-          </ol>
-          <ReportButton targetType="trade" targetId={id} />
-        </aside>
+            {pending && (
+              <div className="swap-controls">
+                {incoming ? (
+                  <>
+                    <button className="button" onClick={() => choose("accept")}>
+                      Accept trade
+                    </button>
+                    <button
+                      className="button secondary"
+                      onClick={() => setCounter(trade)}
+                    >
+                      Counteroffer
+                    </button>
+                    <button
+                      className="text-button"
+                      onClick={() => choose("decline")}
+                    >
+                      Decline
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    className="text-button"
+                    onClick={() => choose("withdraw")}
+                  >
+                    Withdraw offer
+                  </button>
+                )}
+              </div>
+            )}
+            {trade.conversationId && (
+              <div className="swap-controls swap-jump-row">
+                <a
+                  href="#trade-conversation"
+                  className="text-button swap-thread-jump"
+                >
+                  <MessageCircle size={16} /> Conversation
+                </a>
+              </div>
+            )}
+          </section>
+          {(accepted || completed) &&
+            (!protectedShipping || trade.planRequired) && (
+              <ExchangePlanPanel
+                trade={trade}
+                onUpdate={apply}
+                protectedShipBy={shipping.data?.shipBy}
+              />
+            )}
+          {shippingPath && shipping.loading && <Loading />}
+          {shippingPath && shipping.error && (
+            <ErrorBox error={shipping.error} retry={shipping.reload} />
+          )}
+          {shippingPath &&
+            shipping.data &&
+            (!trade.planRequired ||
+              planAgreed ||
+              trade.state !== "accepted") && (
+              <ShippingPanel
+                id={id}
+                details={shipping.data}
+                onRefresh={(view) => {
+                  shipping.setData(view);
+                  if (view.tradeState !== trade.state) poll.current();
+                }}
+              />
+            )}
+          {(accepted || completed) && (
+            <section className="swap-receipt" aria-label="Receipt confirmation">
+              <div className="swap-section-heading">
+                <Check size={19} aria-hidden />
+                <h2>{completed ? "Trade complete" : "Confirm receipt"}</h2>
+              </div>
+              <div className="swap-confirmations">
+                <span>
+                  {confirmed ? "✓ You confirmed" : "You · awaiting receipt"}
+                </span>
+                <span>
+                  {theirReceipt
+                    ? `✓ ${other.name} confirmed`
+                    : `${other.name} · awaiting receipt`}
+                </span>
+              </div>
+              {accepted && (
+                <div className="swap-controls">
+                  {canConfirm && (
+                    <button
+                      className="button"
+                      onClick={() => choose("confirm")}
+                    >
+                      I received my items
+                    </button>
+                  )}
+                  {arranged &&
+                    planAgreed &&
+                    !canConfirm &&
+                    !confirmed &&
+                    !cancelRequested && (
+                      <span className="swap-subtle">
+                        Add tracking for both parcels to confirm receipt.
+                      </span>
+                    )}
+                  {canCancel && (
+                    <button
+                      className="text-button"
+                      onClick={() => choose("cancel")}
+                    >
+                      {cancelRequested
+                        ? "Agree to cancel"
+                        : "Request cancellation"}
+                    </button>
+                  )}
+                  <button
+                    className="text-button"
+                    disabled={Boolean(shipping.data?.resolving)}
+                    onClick={() => choose("dispute")}
+                  >
+                    <Flag size={15} /> Report a problem
+                  </button>
+                </div>
+              )}
+            </section>
+          )}
+          {!pending && !accepted && !completed && (
+            <div className="swap-controls">
+              <Link className="button secondary" to="/explore?tradeOnly=true">
+                Browse tradeable items
+              </Link>
+            </div>
+          )}
+        </div>
+        <TradeThread trade={trade} onActivity={() => poll.current()} />
       </div>
+      {counter && (
+        <TradeComposer
+          trade={counter}
+          other={other}
+          onUpdate={apply}
+          onClose={() => setCounter(null)}
+        />
+      )}
       {action && (
         <Dialog
-          title={actionText[action].title}
+          title={actionCopy[action.name].title}
           onClose={() => {
             if (!busy) setAction(null);
           }}
         >
-          <p className="muted">{actionText[action].body}</p>
-          {action === "dispute" && (
+          <p className="muted">
+            {protectedShipping && action.name === "confirm"
+              ? "Confirm after checking the parcel. Once you both confirm, BSTY settles any agreed cash difference and releases the rest of the holds."
+              : actionCopy[action.name].body}
+          </p>
+          {action.name === "dispute" && (
             <label>
               What happened?
               <textarea
                 value={reason}
-                maxLength={2000}
                 rows={4}
-                onChange={(e) => setReason(e.target.value)}
+                maxLength={500}
+                onChange={(event) => setReason(event.target.value)}
               />
             </label>
           )}
@@ -712,15 +635,18 @@ export function TradePage({ id }: { id: string }) {
             <button
               className="button"
               disabled={
-                busy || (action === "dispute" && reason.trim().length < 5)
+                busy || (action.name === "dispute" && reason.trim().length < 3)
               }
               onClick={submit}
             >
-              {busy ? <Spinner /> : actionText[action].label}
+              {busy && <Spinner />}
+              {action.name === "cancel" && cancelRequested
+                ? "Agree to cancel"
+                : actionCopy[action.name].label}
             </button>
           </div>
         </Dialog>
       )}
-    </>
+    </div>
   );
 }

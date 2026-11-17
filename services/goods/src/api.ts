@@ -43,7 +43,7 @@ export interface Photo {
   height: number;
 }
 export type ListingStatus =
-  "draft" | "active" | "reserved" | "traded" | "archived" | "hidden";
+  "draft" | "active" | "reserved" | "traded" | "sold" | "archived" | "hidden";
 export interface Listing {
   id: string;
   isDemo?: boolean;
@@ -80,13 +80,51 @@ export interface Slot {
   code: string;
   listing: Listing | null;
 }
+export type Fulfillment = "meetup" | "arranged_shipping" | "shipping";
+export interface TradeProposal {
+  offered: Listing[];
+  requested: Listing[];
+  fulfillment: Fulfillment;
+  cashDifferenceCents: number;
+  revision: number;
+}
+export interface ExchangePlan {
+  version: number;
+  proposedBy: string;
+  confirmedBy: string[];
+  place?: string;
+  time?: string;
+  shipBy?: string;
+}
+export interface TradeAddress {
+  name: string;
+  street: string;
+  unit?: string;
+  city: string;
+  state: string;
+  zip: string;
+}
+export interface TradeParcel {
+  address?: TradeAddress;
+  tracking?: { carrier: string; code: string };
+}
 export interface Trade {
   id: string;
   sender: Profile;
   recipient: Profile;
   offered: Listing;
   requested: Listing;
+  offeredItems: Listing[];
+  requestedItems: Listing[];
+  proposedBy: string;
+  revision: number;
+  updatedAt: string;
+  planRequired: boolean;
+  exchangePlan: ExchangePlan | null;
+  shipments: { yours: TradeParcel; theirs: TradeParcel } | null;
   state: string;
+  fulfillment: Fulfillment;
+  cashDifferenceCents: number;
   createdAt: string;
   expiresAt: string;
   confirmedBy: string[];
@@ -94,8 +132,9 @@ export interface Trade {
   conversationId: string;
   events: {
     id: string;
-    actorId: string;
+    actorId: string | null;
     action: string;
+    proposal?: TradeProposal | null;
     createdAt: string;
     reason?: string;
   }[];
@@ -179,6 +218,15 @@ export async function api<T>(
     );
   }
   return data as T;
+}
+// No identity or credentials are stored. The signal tells other tabs to recheck their session.
+export const sessionChangeKey = "bsty-goods:session-change";
+export function notifySessionChange() {
+  try {
+    localStorage.setItem(sessionChangeKey, crypto.randomUUID());
+  } catch {
+    // Browsers without storage still recheck when the user returns to the tab.
+  }
 }
 export const requestId = () => crypto.randomUUID();
 export const money = (cents: number | null) =>

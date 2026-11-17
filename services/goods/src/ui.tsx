@@ -2,6 +2,7 @@ import {
   createContext,
   useContext,
   useEffect,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -15,6 +16,7 @@ import {
   ArrowLeft,
   UserRound,
   Heart,
+  Flag,
 } from "lucide-react";
 import {
   api,
@@ -276,18 +278,22 @@ export function Dialog({
   children,
   onClose,
   wide = false,
+  className = "",
 }: {
   title: string;
   children: ReactNode;
   onClose: () => void;
   wide?: boolean;
+  className?: string;
 }) {
+  const close = useRef(onClose);
+  close.current = onClose;
   useEffect(() => {
     const focused = document.activeElement as HTMLElement | null;
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const h = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") close.current();
       if (e.key === "Tab") {
         const modal = document.querySelector('[role="dialog"]');
         const els = Array.from(
@@ -323,7 +329,7 @@ export function Dialog({
       }}
     >
       <section
-        className={"modal " + (wide ? "modal-wide" : "")}
+        className={"modal " + (wide ? "modal-wide " : "") + className}
         role="dialog"
         aria-modal="true"
         aria-label={title}
@@ -490,9 +496,11 @@ export function ProductGrid({
 export function ReportButton({
   targetType,
   targetId,
+  iconOnly = false,
 }: {
   targetType: "listing" | "user" | "message" | "trade";
   targetId: string;
+  iconOnly?: boolean;
 }) {
   const { requireUser, toast } = useApp();
   const [open, setOpen] = useState(false),
@@ -515,12 +523,13 @@ export function ReportButton({
   return (
     <>
       <button
-        className="text-button subtle"
+        className={iconOnly ? "icon-button" : "text-button subtle"}
+        aria-label={iconOnly ? "Report " + targetType : undefined}
         onClick={() => {
           if (requireUser()) setOpen(true);
         }}
       >
-        Report {targetType}
+        {iconOnly ? <Flag size={15} aria-hidden /> : "Report " + targetType}
       </button>
       {open && (
         <Dialog title="Report a concern" onClose={() => setOpen(false)}>
@@ -552,22 +561,16 @@ export function ReportButton({
   );
 }
 export function SignedOut({ what = "continue" }: { what?: string }) {
+  const next =
+    "?returnTo=" +
+    encodeURIComponent(withoutBase(location.pathname + location.search));
   return (
     <Empty
       title="Sign in to BSTY Goods"
-      body={
-        "Sign in to " +
-        what +
-        " and keep your finds, inventory and trades together."
-      }
-      action={{
-        label: "Sign in",
-        to:
-          "/login?returnTo=" +
-          encodeURIComponent(withoutBase(location.pathname + location.search)),
-      }}
+      body={`Sign in to ${what}.`}
+      action={{ label: "Sign in", to: "/login" + next }}
     >
-      <Link to="/signup" className="text-button">
+      <Link to={"/signup" + next} className="text-button">
         New here? Create an account
       </Link>
     </Empty>

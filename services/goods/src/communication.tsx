@@ -256,7 +256,7 @@ export function Inbox({ id }: { id?: string }) {
                   className={
                     "conversation-row " + (c.id === id ? "selected" : "")
                   }
-                  to={"/inbox/" + c.id}
+                  to={c.tradeId ? "/trades/" + c.tradeId : "/inbox/" + c.id}
                   key={c.id}
                 >
                   <Avatar profile={c.other} size={44} />
@@ -274,7 +274,7 @@ export function Inbox({ id }: { id?: string }) {
                   {c.unreadCount > 0 && (
                     <span
                       className="unread-dot"
-                      aria-label={c.unreadCount + " unread messages"}
+                      aria-label={`${c.unreadCount} unread ${c.unreadCount === 1 ? "message" : "messages"}`}
                     />
                   )}
                 </Link>

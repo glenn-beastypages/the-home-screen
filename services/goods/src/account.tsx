@@ -13,7 +13,13 @@ import {
   ArrowLeftRight,
   Grid2X2,
 } from "lucide-react";
-import { api, withBase, type Photo, type Profile } from "./api";
+import {
+  notifySessionChange,
+  api,
+  withBase,
+  type Photo,
+  type Profile,
+} from "./api";
 import {
   SharedSignIn,
   identityError,
@@ -90,6 +96,7 @@ export function AuthPage({
         );
         if (mode === "signup" && result.token === null) setSent(true);
         else {
+          notifySessionChange();
           await refreshUser();
           go(returnTo);
         }
@@ -104,6 +111,7 @@ export function AuthPage({
           token,
           newPassword: password,
         });
+        notifySessionChange();
         setSent(true);
       }
     } catch (cause) {
@@ -186,7 +194,9 @@ export function AuthPage({
                   >
                     {legacyOpen
                       ? "Hide Goods email sign-in"
-                      : "Use an existing Goods email account"}
+                      : mode === "signup"
+                        ? "Sign up with Goods email"
+                        : "Use an existing Goods email account"}
                     <ArrowRight size={15} />
                   </button>
                 </>
@@ -205,7 +215,7 @@ export function AuthPage({
                       </h2>
                       <p className="muted small-copy">
                         {mode === "signup"
-                          ? "For a shared account across both websites, use BEASTY Pages above. This email account starts in Goods and can be connected later."
+                          ? "You can link this account to BEASTY Pages in Settings."
                           : "Already had a Goods email account? Sign in here first, then link BEASTY Pages in Settings to keep your inventory and trade history."}
                       </p>
                     </>
@@ -320,6 +330,7 @@ export function ProfilePage() {
     setLogout(true);
     try {
       await api("/auth/sign-out", "POST", {});
+      notifySessionChange();
       for (const key of Object.keys(sessionStorage))
         if (key.startsWith("bsty-draft:")) sessionStorage.removeItem(key);
       await refreshUser();
@@ -500,6 +511,7 @@ export function SettingsPage() {
     setError("");
     try {
       await api("/me", "DELETE", { confirmation });
+      notifySessionChange();
       await refreshUser();
       go("/");
       toast("Your account has been disabled.");

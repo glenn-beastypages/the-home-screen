@@ -479,8 +479,6 @@ h2,
 .filters,
 .search-bar,
 .modal,
-.trade-card,
-.trade-box,
 .inventory-card,
 .seller-discovery-card,
 .inbox-layout,
@@ -491,7 +489,6 @@ h2,
 }
 .filters,
 .modal,
-.trade-card,
 .auth-layout {
   border-color: var(--ink);
 }

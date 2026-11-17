@@ -267,7 +267,7 @@ export async function invalidateOffers(
   // acceptance and moderation so stale offers cannot survive a committed edit.
   const rows = (
     await db.query(
-      `WITH affected AS (SELECT id FROM trade_offers WHERE state='pending' AND (offered_id=ANY($1::uuid[]) OR requested_id=ANY($1::uuid[])) AND ($2::uuid IS NULL OR id<>$2) ORDER BY id FOR NO KEY UPDATE) UPDATE trade_offers t SET state='invalidated',updated_at=now() FROM affected a WHERE t.id=a.id RETURNING t.id,t.sender_id,t.recipient_id`,
+      `WITH affected AS (SELECT id FROM trade_offers WHERE state='pending' AND item_ids && $1::uuid[] AND ($2::uuid IS NULL OR id<>$2) ORDER BY id FOR NO KEY UPDATE) UPDATE trade_offers t SET state='invalidated',updated_at=now() FROM affected a WHERE t.id=a.id RETURNING t.id,t.sender_id,t.recipient_id`,
       [listingIds, exceptId ?? null],
     )
   ).rows;
@@ -307,14 +307,14 @@ export async function canReadListing(db: DB, r: Row, userId?: string) {
     owner?.status === "active" &&
     r.published_at &&
     !r.is_hidden &&
-    ["active", "reserved", "traded", "archived"].includes(r.status)
+    ["active", "reserved", "traded", "sold", "archived"].includes(r.status)
   )
     return true;
   if (
     userId &&
     (
       await db.query(
-        "SELECT 1 FROM trade_offers WHERE (sender_id=$1 OR recipient_id=$1) AND (offered_id=$2 OR requested_id=$2) LIMIT 1",
+        "SELECT 1 FROM trade_offers WHERE (sender_id=$1 OR recipient_id=$1) AND $2::uuid = ANY(item_ids) LIMIT 1",
         [userId, r.id],
       )
     ).rowCount

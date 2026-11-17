@@ -1,3 +1,4 @@
+import { OrdersLink } from "./purchases";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import {
   ArrowLeft,
@@ -93,6 +94,7 @@ export function Inventory() {
   return (
     <>
       <PageTitle title="Your shelf">
+        <OrdersLink />
         <Link to="/sell/new" className="button">
           <Plus size={18} /> List an item
         </Link>
@@ -128,22 +130,24 @@ export function Inventory() {
             </button>
           ))}
         </div>
-        <div className="view-switch">
-          <button
-            className={mode === "visual" ? "selected" : ""}
-            aria-label="Visual inventory"
-            onClick={() => setMode("visual")}
-          >
-            <LayoutGrid size={18} />
-          </button>
-          <button
-            className={mode === "grid" ? "selected" : ""}
-            aria-label="Coded inventory grid"
-            onClick={() => setMode("grid")}
-          >
-            <Grid2X2 size={18} />
-          </button>
-        </div>
+        {tab !== "history" && (
+          <div className="view-switch">
+            <button
+              className={mode === "visual" ? "selected" : ""}
+              aria-label="Visual inventory"
+              onClick={() => setMode("visual")}
+            >
+              <LayoutGrid size={18} />
+            </button>
+            <button
+              className={mode === "grid" ? "selected" : ""}
+              aria-label="Coded inventory grid"
+              onClick={() => setMode("grid")}
+            >
+              <Grid2X2 size={18} />
+            </button>
+          </div>
+        )}
       </div>
       {loading ? (
         <Loading cards />
@@ -625,7 +629,16 @@ export function ListingEditor({ id }: { id?: string }) {
             ? "Listing moved to history."
             : "Draft saved to your shelf.",
       );
-      if (status === "active") go("/items/" + d.listing.id);
+      const returnTo = new URLSearchParams(window.location.search).get(
+        "returnTo",
+      );
+      const returnToTrade =
+        returnTo &&
+        /^\/(?:items\/[a-f0-9-]{36}\?offer=1|trades\/[a-f0-9-]{36})$/i.test(
+          returnTo,
+        );
+      if (status === "active")
+        go(!id && returnToTrade ? returnTo : "/items/" + d.listing.id);
       else go("/sell");
     } catch (e) {
       setArchive(false);
@@ -671,7 +684,9 @@ export function ListingEditor({ id }: { id?: string }) {
   const immutable =
     listing &&
     (listing.isHidden ||
-      ["reserved", "traded", "archived", "hidden"].includes(listing.status));
+      ["reserved", "traded", "sold", "archived", "hidden"].includes(
+        listing.status,
+      ));
   const preview: Listing = {
     id: listing?.id || "preview",
     owner: user,
@@ -690,7 +705,7 @@ export function ListingEditor({ id }: { id?: string }) {
     updatedAt: new Date().toISOString(),
     isFavorite: false,
   };
-  const steps = ["Photos", "Details", "Position", "Preview", "Publish"];
+  const steps = ["Photos", "Details", "Position", "Review"];
   return (
     <>
       <PageTitle title={id ? "Edit listing" : "List an item"} back="/sell">
@@ -713,7 +728,7 @@ export function ListingEditor({ id }: { id?: string }) {
           <h2>{listing.title}</h2>
           <p className="muted">
             {listing.status === "reserved"
-              ? "This item is reserved for an accepted exchange. Manage the exchange in Trades; its item details stay fixed."
+              ? "This item is reserved. Its details stay fixed until the order or trade is resolved."
               : "This listing is preserved in history or has been restricted. Its original details stay attached to past exchanges."}
           </p>
           <div className="editor-preview">
@@ -753,9 +768,8 @@ export function ListingEditor({ id }: { id?: string }) {
             <section className="panel editor-panel">
               {step === 0 && (
                 <>
-                  <span className="eyebrow">01 / A good first impression</span>
                   <h2 id="listing-step-heading" tabIndex={-1}>
-                    Let your item do the talking.
+                    Add photos
                   </h2>
                   <p className="muted">
                     Add up to six clear photos. The first one is your cover.
@@ -868,9 +882,8 @@ export function ListingEditor({ id }: { id?: string }) {
               )}
               {step === 1 && (
                 <>
-                  <span className="eyebrow">02 / Tell its story</span>
                   <h2 id="listing-step-heading" tabIndex={-1}>
-                    The good details.
+                    Item details
                   </h2>
                   <div className="form">
                     <label>
@@ -972,8 +985,9 @@ export function ListingEditor({ id }: { id?: string }) {
                         }
                       />
                       <small id="listing-price-hint">
-                        A reference value for your item. Payments are not
-                        collected here.
+                        {form.tradeEnabled
+                          ? "Used to compare trade offers."
+                          : "Your asking price."}
                       </small>
                       {inlineError("price")}
                     </label>
@@ -1012,9 +1026,8 @@ export function ListingEditor({ id }: { id?: string }) {
               )}
               {step === 2 && (
                 <>
-                  <span className="eyebrow">03 / Find its place</span>
                   <h2 id="listing-step-heading" tabIndex={-1}>
-                    A spot on your shelf.
+                    Choose a shelf position
                   </h2>
                   <p className="muted">
                     Choose one of your 78 inventory positions. Other sellers can
@@ -1077,13 +1090,11 @@ export function ListingEditor({ id }: { id?: string }) {
               )}
               {step === 3 && (
                 <>
-                  <span className="eyebrow">04 / The shopper's view</span>
                   <h2 id="listing-step-heading" tabIndex={-1}>
-                    Looking good?
+                    Review your listing
                   </h2>
                   <p className="muted">
-                    This is how your item will appear. Check your photos and
-                    details before making it public.
+                    Check the photos and details before publishing.
                   </p>
                   <div className="listing-preview">
                     <Photo listing={preview} />
@@ -1110,36 +1121,6 @@ export function ListingEditor({ id }: { id?: string }) {
                       )}
                     </div>
                   </div>
-                </>
-              )}
-              {step === 4 && (
-                <>
-                  <div className="publish-symbol">
-                    <Check size={40} />
-                  </div>
-                  <h2 id="listing-step-heading" tabIndex={-1}>
-                    Review before publishing
-                  </h2>
-                  <p className="muted">
-                    Your item will be public at position{" "}
-                    <strong>{form.code}</strong>. You can edit it while it’s
-                    available. Accepted trades lock the item details until the
-                    exchange is resolved.
-                  </p>
-                  <div className="publish-summary">
-                    <Photo listing={preview} />
-                    <div>
-                      <strong>{form.title}</strong>
-                      <span>
-                        {form.condition} · {form.photos.length} photos
-                      </span>
-                      <span>
-                        {form.tradeEnabled
-                          ? "Open to trade"
-                          : "Message inquiries"}
-                      </span>
-                    </div>
-                  </div>
                   <button
                     className="button full"
                     onClick={() => save("active")}
@@ -1161,7 +1142,7 @@ export function ListingEditor({ id }: { id?: string }) {
                 >
                   <ArrowLeft size={17} /> Back
                 </button>
-                {step < 4 && (
+                {step < 3 && (
                   <button
                     className="button"
                     onClick={next}

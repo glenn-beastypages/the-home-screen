@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Check, Shield, Search } from "lucide-react";
-import { api, time, type Listing, type Profile, type Trade } from "./api";
+import {
+  api,
+  money,
+  time,
+  type Listing,
+  type Profile,
+  type Trade,
+} from "./api";
 import {
   Dialog,
   Empty,
@@ -13,6 +20,20 @@ import {
   useApp,
   useResource,
 } from "./ui";
+
+type ShippingReview = {
+  userId: string;
+  carrier: string | null;
+  trackingCode: string | null;
+  trackingStatus: string | null;
+  holdStatus: string;
+  holdUntil: string | null;
+  securityCents: number;
+  cashCents: number;
+  capturedCents: number;
+  resolution: string | null;
+  settlementError: boolean;
+};
 
 type Report = {
   id: string;
@@ -29,7 +50,7 @@ export function Admin() {
     users: Profile[];
     reports: Report[];
     listings: Listing[];
-    trades: Trade[];
+    trades: (Trade & { shippingReview?: ShippingReview[] })[];
   }>(user?.role === "admin" ? "/admin/overview" : null);
   const [tab, setTab] = useState("reports"),
     [action, setAction] = useState<{
@@ -41,6 +62,10 @@ export function Admin() {
     [resolution, setResolution] = useState<"canceled" | "completed">(
       "canceled",
     ),
+    [compensationPayer, setCompensationPayer] = useState<
+      "" | "sender" | "recipient"
+    >(""),
+    [compensationAmount, setCompensationAmount] = useState(""),
     [busy, setBusy] = useState(false),
     [actionError, setActionError] = useState("");
   if (user?.role !== "admin")
@@ -51,9 +76,33 @@ export function Admin() {
         action={{ label: "Back to marketplace", to: "/explore" }}
       />
     );
+  const resolvingTrade =
+    action?.action === "resolve_trade"
+      ? data?.trades.find((t) => t.id === action.targetId)
+      : null;
+  const canCompensate =
+    resolvingTrade?.fulfillment === "shipping" &&
+    resolvingTrade.state === "disputed" &&
+    resolution === "canceled";
+  const compensationCents = Math.round(Number(compensationAmount) * 100);
+  const compensationLimit =
+    resolvingTrade && compensationPayer
+      ? resolvingTrade.shippingReview?.find(
+          (party) => party.userId === resolvingTrade[compensationPayer].id,
+        )?.securityCents
+      : undefined;
+  const compensationValid =
+    !canCompensate ||
+    !compensationPayer ||
+    (/^\d+(\.\d{1,2})?$/.test(compensationAmount) &&
+      compensationCents >= 50 &&
+      compensationCents <= (compensationLimit ?? 0));
   const choose = (type: string, id: string, title: string) => {
     setAction({ action: type, targetId: id, title });
     setReason("");
+    setResolution("canceled");
+    setCompensationPayer("");
+    setCompensationAmount("");
     setActionError("");
   };
   const send = async () => {
@@ -66,6 +115,14 @@ export function Admin() {
         targetId: action.targetId,
         reason,
         ...(action.action === "resolve_trade" ? { resolution } : {}),
+        ...(canCompensate && compensationPayer
+          ? {
+              compensation: {
+                payer: compensationPayer,
+                cents: compensationCents,
+              },
+            }
+          : {}),
       });
       setAction(null);
       reload();
@@ -205,12 +262,37 @@ export function Admin() {
                 <div>
                   <Status value={t.state} />
                   <h3>
-                    {t.offered.title} ↔ {t.requested.title}
+                    {t.offeredItems.map((item) => item.title).join(" + ")} ↔{" "}
+                    {t.requestedItems.map((item) => item.title).join(" + ")}
                   </h3>
                   <small>
                     {t.sender.name} · {t.recipient.name}
                   </small>
                   <p className="monospace small-copy">{t.id}</p>
+                  {t.shippingReview?.map((p) => (
+                    <p className="small-copy" key={p.userId}>
+                      <strong>
+                        {p.userId === t.sender.id
+                          ? t.sender.name
+                          : t.recipient.name}
+                      </strong>
+                      {" · "}
+                      {p.carrier && p.trackingCode
+                        ? p.carrier + " " + p.trackingCode
+                        : "Awaiting tracking"}
+                      {p.trackingStatus &&
+                        " · " + p.trackingStatus.replaceAll("_", " ")}
+                      <br />
+                      Card hold {money(p.securityCents + p.cashCents)} ·{" "}
+                      {p.holdStatus.replaceAll("_", " ")}
+                      {p.holdUntil && " · expires " + time(p.holdUntil)}
+                      {p.capturedCents > 0 &&
+                        " · " + money(p.capturedCents) + " collected"}
+                    </p>
+                  ))}
+                  {t.shippingReview?.[0]?.settlementError && (
+                    <p>Payment needs support review.</p>
+                  )}
                   <div className="small-copy">
                     {t.events?.map((e) => (
                       <div key={e.id}>
@@ -222,7 +304,13 @@ export function Admin() {
                 </div>
                 <button
                   className="button secondary compact"
-                  disabled={!["accepted", "disputed"].includes(t.state)}
+                  disabled={
+                    !["accepted", "disputed"].includes(t.state) ||
+                    Boolean(
+                      t.shippingReview?.[0]?.resolution &&
+                      !t.shippingReview[0].settlementError,
+                    )
+                  }
                   onClick={() =>
                     choose("resolve_trade", t.id, "Resolve this exchange")
                   }
@@ -253,12 +341,57 @@ export function Admin() {
                   setResolution(e.target.value as typeof resolution)
                 }
               >
-                <option value="canceled">Cancel and release both items</option>
-                <option value="completed">
-                  Complete and archive both items
+                <option value="canceled">
+                  {resolvingTrade?.fulfillment === "shipping"
+                    ? "Cancel shipped trade"
+                    : "Cancel and release items"}
                 </option>
+                <option value="completed">Complete and archive items</option>
               </select>
             </label>
+          )}
+          {canCompensate && resolvingTrade && (
+            <div className="shipping-form">
+              <label>
+                Compensation
+                <select
+                  value={compensationPayer}
+                  onChange={(e) =>
+                    setCompensationPayer(
+                      e.target.value as typeof compensationPayer,
+                    )
+                  }
+                >
+                  <option value="">Release both holds</option>
+                  <option value="sender">
+                    Charge {resolvingTrade.sender.name} and pay{" "}
+                    {resolvingTrade.recipient.name}
+                  </option>
+                  <option value="recipient">
+                    Charge {resolvingTrade.recipient.name} and pay{" "}
+                    {resolvingTrade.sender.name}
+                  </option>
+                </select>
+              </label>
+              {compensationPayer && (
+                <label>
+                  Charge amount in dollars (up to{" "}
+                  {money(compensationLimit ?? 0)})
+                  <input
+                    type="number"
+                    min="0.50"
+                    max={(compensationLimit ?? 0) / 100}
+                    step="0.01"
+                    value={compensationAmount}
+                    onChange={(e) => setCompensationAmount(e.target.value)}
+                  />
+                </label>
+              )}
+              <p className="muted">
+                Check the carrier and dispute evidence before charging either
+                person. The remaining holds will be released.
+              </p>
+            </div>
           )}
           <label>
             Reason
@@ -280,10 +413,13 @@ export function Admin() {
             </button>
             <button
               className="button"
-              disabled={busy || reason.trim().length < 5}
+              disabled={busy || reason.trim().length < 5 || !compensationValid}
               onClick={send}
             >
-              {busy ? <Spinner /> : <Check size={17} />} Record action
+              {busy ? <Spinner /> : <Check size={17} />}{" "}
+              {canCompensate && compensationPayer
+                ? "Record and charge " + money(compensationCents)
+                : "Record action"}
             </button>
           </div>
         </Dialog>

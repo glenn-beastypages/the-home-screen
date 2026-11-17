@@ -3,6 +3,7 @@ import {
   useCallback,
   useEffect,
   useState,
+  useRef,
   type ErrorInfo,
   type ReactNode,
 } from "react";
@@ -23,6 +24,7 @@ import {
 import {
   api,
   withBase,
+  sessionChangeKey,
   withoutBase,
   type Conversation,
   type Notice,
@@ -37,6 +39,7 @@ import { AuthPage, ProfilePage, SettingsPage } from "./account";
 import { Inbox, Notifications } from "./communication";
 import { Admin } from "./admin";
 import { ManagedResale, ResaleQueue } from "./resale";
+import { Orders, OrderPage } from "./purchases";
 import { initNativeNavigation } from "./platform";
 
 function AppRoute({ route }: { route: string }) {
@@ -52,6 +55,9 @@ function AppRoute({ route }: { route: string }) {
   if (path === "/sell/new") return <ListingEditor />;
   if (path.startsWith("/sell/"))
     return <ListingEditor id={decodeURIComponent(path.slice(6))} />;
+  if (path === "/orders") return <Orders />;
+  if (path.startsWith("/orders/"))
+    return <OrderPage id={decodeURIComponent(path.slice(8))} />;
   if (path === "/trades") return <Trades />;
   if (path.startsWith("/trades/"))
     return <TradePage id={decodeURIComponent(path.slice(8))} />;
@@ -96,48 +102,31 @@ function About() {
   return (
     <div className="about-page">
       <h1>How BSTY Goods works</h1>
-      <p className="about-lead">
-        List an item, browse other shelves, and offer a trade.
-      </p>
       <div className="about-grid">
         <section>
           <h2>List your goods</h2>
+          <p>Add photos, describe the condition, and enable trades.</p>
+        </section>
+        <section>
+          <h2>Make an offer</h2>
           <p>
-            Every member has 78 coded inventory positions: A–1 through Z–3. Add
-            your own photos, describe the details and choose a spot.
+            Choose items from both shelves and compare listing totals. Accept,
+            counter, or decline in the trade conversation.
           </p>
         </section>
         <section>
-          <h2>Propose a trade</h2>
+          <h2>Exchange your items</h2>
           <p>
-            Open a listing and propose a trade. Choose your item and theirs,
-            review both sides, then send your request. Neither item is reserved
-            until the other person accepts.
-          </p>
-        </section>
-        <section>
-          <h2>Complete the exchange</h2>
-          <p>
-            Accepting reserves both items. Use your private conversation to
-            coordinate. Both people confirm the completed exchange; cancellation
-            after acceptance requires both people. Report a problem if you need
-            operator review.
+            Acceptance reserves the agreed items. Confirm a meetup or shipping
+            plan together, then confirm receipt after checking the items.
           </p>
         </section>
       </div>
       <section className="panel about-care">
         <h2>Trading safely</h2>
         <p>
-          Use your own accurate photos, describe flaws honestly and keep
-          conversations respectful. Report suspicious listings or messages using
-          the controls on each item or conversation. Blocking stops new offers
-          and messages while keeping existing records available.
-        </p>
-        <p>
-          BSTY Goods currently provides item listings, trading and
-          conversations. It does not collect payments, issue shipping labels or
-          independently verify the physical exchange. Share only the information
-          you are comfortable providing.
+          Meet in a public place or use tracked postage. Keep the conversation
+          in Goods and use Report a problem if something goes wrong.
         </p>
         <Link className="button" to="/explore">
           Browse listings <ArrowRight size={17} />
@@ -193,8 +182,11 @@ export default function App() {
     setRoute(internal.split("#")[0] || "/");
     window.scrollTo({ top: 0 });
   }, []);
+  const sessionRequest = useRef(0);
   const refreshUser = useCallback(async () => {
+    const request = ++sessionRequest.current;
     const d = await api<{ user: Profile | null }>("/me");
+    if (request !== sessionRequest.current) return;
     setUser(d.user);
     setExpired(false);
   }, []);
@@ -207,10 +199,26 @@ export default function App() {
       window.scrollTo({ top: 0 });
     };
     const onlineChange = () => setOnline(navigator.onLine);
-    const expiry = () => setExpired(true);
+    const expiry = () => {
+      ++sessionRequest.current;
+      setUser(null);
+      setExpired(true);
+    };
     const resume = () => {
       void refreshUser().catch(() => {});
     };
+    const changed = (event: StorageEvent) => {
+      if (event.key !== sessionChangeKey) return;
+      setUser(null);
+      setToast("");
+      resume();
+    };
+    const visible = () => {
+      if (document.visibilityState === "visible") resume();
+    };
+    window.addEventListener("storage", changed);
+    window.addEventListener("pageshow", resume);
+    document.addEventListener("visibilitychange", visible);
     window.addEventListener("popstate", pop);
     window.addEventListener("online", onlineChange);
     window.addEventListener("offline", onlineChange);
@@ -225,6 +233,9 @@ export default function App() {
     return () => {
       disposed = true;
       cleanup?.();
+      window.removeEventListener("storage", changed);
+      window.removeEventListener("pageshow", resume);
+      document.removeEventListener("visibilitychange", visible);
       window.removeEventListener("popstate", pop);
       window.removeEventListener("online", onlineChange);
       window.removeEventListener("offline", onlineChange);
@@ -416,7 +427,7 @@ export default function App() {
         {initializing ? (
           <Loading />
         ) : (
-          <Boundary key={route}>
+          <Boundary key={JSON.stringify([route, user?.id])}>
             <AppRoute route={route} />
           </Boundary>
         )}

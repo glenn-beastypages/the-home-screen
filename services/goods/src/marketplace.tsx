@@ -50,6 +50,7 @@ import {
   useResource,
 } from "./ui";
 import { TradeComposer } from "./trades";
+import { BuyAction } from "./purchases";
 import { shareUrl } from "./platform";
 
 export function Home() {
@@ -541,6 +542,8 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
           )}
           {loading ? (
             <Loading cards />
+          ) : error && !items.length ? (
+            <ErrorBox error={error} retry={() => setVersion((v) => v + 1)} />
           ) : (
             <>
               {error && (
@@ -567,22 +570,34 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
               ) : (
                 <Empty
                   title={
-                    favorites ? "Keep a good find." : "Nothing here just yet."
-                  }
-                  body={
                     favorites
-                      ? "Tap the heart on any item to find it here later."
-                      : "Try another search or reset your filters."
+                      ? "No saved items"
+                      : tradeOnly
+                        ? "No tradeable items found"
+                        : "No listings found"
                   }
+                  body={favorites ? "Save an item to find it here later." : ""}
                   action={
                     favorites
                       ? { label: "Explore goods", to: "/explore" }
-                      : undefined
+                      : tradeOnly &&
+                          !search.get("q") &&
+                          !category &&
+                          !condition &&
+                          !min &&
+                          !max
+                        ? {
+                            label: "List an item",
+                            to: user
+                              ? "/sell/new"
+                              : "/signup?returnTo=%2Fsell%2Fnew",
+                          }
+                        : undefined
                   }
                 >
                   {!favorites && (
                     <button className="button secondary" onClick={reset}>
-                      Reset filters
+                      {tradeOnly ? "Browse all goods" : "Reset filters"}
                     </button>
                   )}
                 </Empty>
@@ -620,14 +635,31 @@ export function ItemPage({ id }: { id: string }) {
   );
   const [index, setIndex] = useState(0),
     [fullscreen, setFullscreen] = useState(false),
-    [trade, setTrade] = useState(false),
+    [trade, setTrade] = useState(
+      () => new URLSearchParams(window.location.search).get("offer") === "1",
+    ),
     [busy, setBusy] = useState(false);
   const l = data?.listing;
+  const checkoutEligible =
+    l?.status === "active" &&
+    !l.isHidden &&
+    !l.isDemo &&
+    !l.owner.isDemo &&
+    !l.tradeEnabled &&
+    l.priceCents !== null &&
+    user?.id !== l.owner.id;
+  const checkout = useResource<{ available: boolean }>(
+    checkoutEligible ? "/purchases/options/" + id : null,
+  );
+  const canBuy = checkoutEligible && checkout.data?.available;
   useEffect(() => {
     if (l && ["active", "reserved"].includes(l.status) && !l.isHidden)
       recordViewed(l.id, user?.id);
   }, [l?.id, user?.id]);
-  useEffect(() => setIndex(0), [id]);
+  useEffect(() => {
+    setIndex(0);
+    setTrade(new URLSearchParams(window.location.search).get("offer") === "1");
+  }, [id]);
   const message = async () => {
     if (!l || l.isDemo || l.owner.isDemo || !requireUser()) return;
     setBusy(true);
@@ -792,15 +824,17 @@ export function ItemPage({ id }: { id: string }) {
           )}
           {!demo && !owned && available && l.priceCents !== null && (
             <p className="muted small-copy">
-              {l.tradeEnabled
-                ? "Listed value. Message the seller if you’d like to buy."
-                : "Arrange the purchase directly with the seller."}
+              {canBuy
+                ? "Pay online and arrange local pickup with the seller."
+                : l.tradeEnabled
+                  ? "Listed value. Message the seller if you’d like to buy."
+                  : "Arrange the purchase directly with the seller."}
             </p>
           )}
           {!demo && !owned && !available && (
             <p className="muted small-copy">
               {reserved
-                ? "This item is currently reserved for a trade."
+                ? "This item is currently reserved."
                 : "This item is no longer available."}
             </p>
           )}
@@ -826,6 +860,7 @@ export function ItemPage({ id }: { id: string }) {
             </div>
           )}
           <Seller profile={l.owner} />
+          {canBuy && <BuyAction listing={l} />}
           {(demo || owned || canStartConversation) && (
             <div className="item-actions">
               {demo ? (
@@ -853,15 +888,16 @@ export function ItemPage({ id }: { id: string }) {
                     <button
                       className="button full"
                       onClick={() => {
-                        if (requireUser()) setTrade(true);
+                        if (requireUser("/items/" + l.id + "?offer=1"))
+                          setTrade(true);
                       }}
                     >
-                      <ArrowLeftRight size={19} /> Propose a trade
+                      <ArrowLeftRight size={19} /> Make a trade offer
                     </button>
                   )}
                   <button
                     className={
-                      available && !l.tradeEnabled
+                      available && !l.tradeEnabled && !canBuy
                         ? "button full"
                         : "button secondary full"
                     }
@@ -920,30 +956,38 @@ export function ItemPage({ id }: { id: string }) {
           </p>
         </Dialog>
       )}
-      {trade && !demo && (
-        <TradeComposer target={l} onClose={() => setTrade(false)} />
-      )}
+      {trade &&
+        user &&
+        !owned &&
+        !demo &&
+        l.status === "active" &&
+        l.tradeEnabled && (
+          <TradeComposer target={l} onClose={() => setTrade(false)} />
+        )}
     </>
   );
 }
 
 export function SellerPage({ id }: { id: string }) {
   const { user, toast, requireUser } = useApp();
-  const { data, error, loading, reload } = useResource<{ seller: Profile }>(
-    "/sellers/" + id,
-  );
+  const { data, setData, error, loading, reload } = useResource<{
+    seller: Profile;
+    blockedByViewer: boolean;
+  }>("/sellers/" + id);
   const {
     data: feed,
     loading: feedLoading,
     error: feedError,
   } = useResource<Page<Listing>>("/listings?seller=" + id + "&limit=78");
   const [blocking, setBlocking] = useState(false);
-  const block = async () => {
-    if (!requireUser()) return;
+  const toggleBlock = async () => {
+    if (!requireUser() || !data) return;
     setBlocking(true);
     try {
-      await api("/blocks", "POST", { userId: id, blocked: true });
-      toast("User blocked. Manage blocked users in Settings.");
+      const blocked = !data.blockedByViewer;
+      await api("/blocks", "POST", { userId: id, blocked });
+      setData({ ...data, blockedByViewer: blocked });
+      toast(blocked ? "User blocked." : "User unblocked.");
     } catch (e) {
       toast((e as Error).message);
     } finally {
@@ -989,8 +1033,12 @@ export function SellerPage({ id }: { id: string }) {
         </div>
         {user?.id !== id && !p.isDemo && (
           <div className="seller-controls">
-            <button className="text-button" onClick={block} disabled={blocking}>
-              Block user
+            <button
+              className="text-button"
+              onClick={toggleBlock}
+              disabled={blocking}
+            >
+              {data.blockedByViewer ? "Unblock user" : "Block user"}
             </button>
             <ReportButton targetType="user" targetId={id} />
           </div>

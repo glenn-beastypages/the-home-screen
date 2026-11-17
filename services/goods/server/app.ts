@@ -19,8 +19,22 @@ import { requestContext } from "./runtime.js";
 import { registerSharedIdentity } from "./identity.js";
 import { registerResale } from "./resale.js";
 import { initializeDemoCatalog } from "./demo-catalog.js";
+import {
+  shippingProviders,
+  type ShippingProviders,
+} from "./shipped-providers.js";
+import { registerShippedTrades } from "./shipped-trades.js";
+import {
+  purchaseProvider,
+  type PurchaseProvider,
+} from "./purchase-provider.js";
+import { registerPurchases } from "./purchases.js";
 
-export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
+export async function createApp(
+  overrides: NodeJS.ProcessEnv = {},
+  tradeProvider?: ShippingProviders,
+  checkoutFixture?: PurchaseProvider,
+) {
   const config = { ...process.env, ...overrides };
   const basePath = (config.APP_BASE_PATH || "").replace(/\/$/, "");
   config.APP_BASE_PATH = basePath;
@@ -33,6 +47,8 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
     );
   const appUrl = new URL(config.APP_URL || "http://localhost:8791").origin;
   const production = config.NODE_ENV === "production";
+  const shipping = shippingProviders(config, appUrl, tradeProvider);
+  const checkout = purchaseProvider(config, appUrl, checkoutFixture);
   if (production && !appUrl.startsWith("https://"))
     throw new Error("Production APP_URL must use HTTPS.");
   const origins = [
@@ -214,7 +230,21 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
   );
   registerSharedIdentity(app, pool, auth, requireUser, config);
   registerMarketplace(app, pool, storage, requireUser);
-  registerTrades(app, pool, requireUser);
+  registerTrades(app, pool, requireUser, Boolean(shipping));
+  const stopShipping = registerShippedTrades(
+    app,
+    pool,
+    requireUser,
+    shipping,
+    appUrl + basePath,
+  );
+  const stopPurchases = registerPurchases(
+    app,
+    pool,
+    requireUser,
+    checkout,
+    appUrl + basePath,
+  );
   registerCommunications(app, pool, requireUser);
   registerResale(app, pool, requireUser);
   app.use("/api", (_req, res) =>
@@ -304,6 +334,8 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
     close: async () => {
       if (closed) return;
       closed = true;
+      await stopShipping();
+      await stopPurchases();
       await flushMail();
       storage.close();
       await pool.end();
