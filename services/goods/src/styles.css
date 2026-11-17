@@ -4391,10 +4391,11 @@ label small {
   }
   .inbox-layout.has-thread .message-panel {
     display: flex;
+    /* Leave room for the page heading and the fixed mobile navigation. */
     height: calc(
-      100dvh - 200px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+      100dvh - 250px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
     );
-    min-height: 400px;
+    min-height: 265px;
     border: 1px solid var(--line);
     border-radius: 6px;
     background: #fff;

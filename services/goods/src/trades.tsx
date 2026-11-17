@@ -465,9 +465,10 @@ const actionText: Record<
 };
 export function TradePage({ id }: { id: string }) {
   const { user, toast } = useApp();
-  const { data, error, loading, reload } = useResource<{ trade: Trade }>(
-    user ? "/trades/" + id : null,
-  );
+  const path = "/trades/" + id;
+  const { data, setData, error, loading, reload } = useResource<{
+    trade: Trade;
+  }>(user ? path : null);
   const [action, setAction] = useState<string | null>(null),
     [busy, setBusy] = useState(false),
     [actionError, setActionError] = useState(""),
@@ -477,6 +478,34 @@ export function TradePage({ id }: { id: string }) {
     key: string;
   } | null>(null);
   const t = data?.trade;
+  const ongoing =
+    t?.state === "pending" ||
+    t?.state === "accepted" ||
+    t?.state === "disputed";
+  useEffect(() => {
+    if (!user || !ongoing || loading || error || action) return;
+    let current = true;
+    let inFlight = false;
+    async function refresh() {
+      if (inFlight || document.visibilityState !== "visible") return;
+      inFlight = true;
+      try {
+        const updated = await api<{ trade: Trade }>(path);
+        if (current) setData(updated);
+      } catch {
+        // Leave the last confirmed state visible and retry on the next check.
+      } finally {
+        inFlight = false;
+      }
+    }
+    const timer = setInterval(refresh, 5000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      current = false;
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [user, ongoing, loading, error, action, path, setData]);
   const choose = (a: string) => {
     setAction(a);
     setActionError("");
@@ -486,18 +515,18 @@ export function TradePage({ id }: { id: string }) {
     );
   };
   const submit = async () => {
-    if (!action || !operation) return;
+    if (!action || !operation || busy) return;
     setBusy(true);
     setActionError("");
     try {
-      await api("/trades/" + id + "/actions", "POST", {
+      const updated = await api<{ trade: Trade }>(path + "/actions", "POST", {
         action,
         clientRequestId: operation.key,
         reason,
       });
       setAction(null);
       setOperation(null);
-      reload();
+      setData(updated);
       toast("Exchange updated.");
     } catch (e) {
       setActionError((e as Error).message);

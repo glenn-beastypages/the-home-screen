@@ -51,7 +51,7 @@ export function Inbox({ id }: { id?: string }) {
     [loadingMessages, setLoadingMessages] = useState(!!id),
     [moreConversations, setMoreConversations] = useState(false);
   const sendKey = useRef(requestId());
-  const end = useRef<HTMLDivElement>(null);
+  const history = useRef<HTMLDivElement>(null);
   const lastRead = useRef("");
   useEffect(() => {
     if (!user) {
@@ -160,12 +160,13 @@ export function Inbox({ id }: { id?: string }) {
     };
   }, [id, user?.id]);
   useEffect(() => {
-    end.current?.scrollIntoView({ block: "nearest" });
+    if (history.current)
+      history.current.scrollTop = history.current.scrollHeight;
   }, [messages.at(-1)?.id]);
   if (!user) return <SignedOut what="keep your conversations together" />;
   const send = async (e: FormEvent) => {
     e.preventDefault();
-    if (!id || !body.trim()) return;
+    if (!id || conversation?.id !== id || busy || !body.trim()) return;
     setBusy(true);
     setMessageError("");
     try {
@@ -355,6 +356,7 @@ export function Inbox({ id }: { id?: string }) {
               )}
               <div
                 className="message-history"
+                ref={history}
                 role="log"
                 aria-label="Conversation messages"
                 aria-live="polite"
@@ -398,7 +400,6 @@ export function Inbox({ id }: { id?: string }) {
                     ))}
                   </>
                 )}
-                <div ref={end} />
               </div>
               {messageError && (
                 <div className="message-error">
@@ -412,13 +413,17 @@ export function Inbox({ id }: { id?: string }) {
                   maxLength={2000}
                   placeholder="Write a message…"
                   value={body}
-                  disabled={busy}
+                  disabled={busy || !conversation}
                   onChange={(e) => {
                     setBody(e.target.value);
                     sendKey.current = requestId();
                   }}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter" && !e.shiftKey) {
+                    if (
+                      e.key === "Enter" &&
+                      !e.shiftKey &&
+                      !e.nativeEvent.isComposing
+                    ) {
                       e.preventDefault();
                       void send(e);
                     }
@@ -427,7 +432,7 @@ export function Inbox({ id }: { id?: string }) {
                 <button
                   className="button"
                   aria-label="Send message"
-                  disabled={busy || !body.trim()}
+                  disabled={busy || !conversation || !body.trim()}
                 >
                   {busy ? <Spinner /> : <Send size={19} />}
                 </button>

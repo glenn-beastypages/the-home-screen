@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import {
   api,
+  ApiError,
   conditions,
   money,
   recentlyViewedIds,
@@ -638,6 +639,7 @@ export function ItemPage({ id }: { id: string }) {
       );
       go("/inbox/" + d.conversation.id);
     } catch (e) {
+      if (e instanceof ApiError && e.status === 404) reload();
       toast((e as Error).message);
     } finally {
       setBusy(false);
@@ -666,6 +668,9 @@ export function ItemPage({ id }: { id: string }) {
   if (!l) return null;
   const owned = user?.id === l.owner.id;
   const demo = l.isDemo || l.owner.isDemo;
+  const available = !l.isHidden && l.status === "active";
+  const reserved = !l.isHidden && l.status === "reserved";
+  const canStartConversation = available || reserved;
   let touchStart: { x: number; y: number } | null = null;
   const gallery = (
     <div
@@ -780,11 +785,23 @@ export function ItemPage({ id }: { id: string }) {
               ? "Sample item"
               : money(l.priceCents)}
           </div>
-          {l.priceCents !== null && (
+          {demo && l.priceCents !== null && (
             <p className="muted small-copy">
-              {demo
-                ? "Example value for this sample item."
-                : "Listed value · Contact the seller to discuss this item."}
+              Example value for this sample item.
+            </p>
+          )}
+          {!demo && !owned && available && l.priceCents !== null && (
+            <p className="muted small-copy">
+              {l.tradeEnabled
+                ? "Listed value. Message the seller if you’d like to buy."
+                : "Arrange the purchase directly with the seller."}
+            </p>
+          )}
+          {!demo && !owned && !available && (
+            <p className="muted small-copy">
+              {reserved
+                ? "This item is currently reserved for a trade."
+                : "This item is no longer available."}
             </p>
           )}
           {demo && (
@@ -797,7 +814,7 @@ export function ItemPage({ id }: { id: string }) {
               </p>
             </div>
           )}
-          {l.tradeEnabled && !demo && (
+          {l.tradeEnabled && !demo && available && (
             <div className="trade-callout">
               <ArrowLeftRight size={19} />
               <div>
@@ -809,60 +826,60 @@ export function ItemPage({ id }: { id: string }) {
             </div>
           )}
           <Seller profile={l.owner} />
-          <div className="item-actions">
-            {demo ? (
-              <>
-                <Link
-                  className="button full"
-                  to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
-                >
-                  {user
-                    ? "List your own item"
-                    : "Join BEASTY and list your own"}
-                  <ArrowRight size={18} />
-                </Link>
-                <Link className="button secondary full" to="/explore">
-                  Keep exploring
-                </Link>
-              </>
-            ) : owned ? (
-              <Link className="button full" to={"/sell/" + l.id}>
-                Manage this listing
-              </Link>
-            ) : (
-              <>
-                {l.tradeEnabled && (
-                  <button
+          {(demo || owned || canStartConversation) && (
+            <div className="item-actions">
+              {demo ? (
+                <>
+                  <Link
                     className="button full"
-                    disabled={l.status !== "active"}
-                    onClick={() => {
-                      if (requireUser()) setTrade(true);
-                    }}
+                    to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
                   >
-                    <ArrowLeftRight size={19} />
-                    {l.status === "active"
-                      ? "Propose a trade"
-                      : "Item " + l.status}
+                    {user
+                      ? "List your own item"
+                      : "Join BEASTY and list your own"}
+                    <ArrowRight size={18} />
+                  </Link>
+                  <Link className="button secondary full" to="/explore">
+                    Keep exploring
+                  </Link>
+                </>
+              ) : owned ? (
+                <Link className="button full" to={"/sell/" + l.id}>
+                  Manage this listing
+                </Link>
+              ) : (
+                <>
+                  {l.tradeEnabled && available && (
+                    <button
+                      className="button full"
+                      onClick={() => {
+                        if (requireUser()) setTrade(true);
+                      }}
+                    >
+                      <ArrowLeftRight size={19} /> Propose a trade
+                    </button>
+                  )}
+                  <button
+                    className={
+                      available && !l.tradeEnabled
+                        ? "button full"
+                        : "button secondary full"
+                    }
+                    disabled={busy}
+                    onClick={message}
+                  >
+                    {busy ? <Spinner /> : <MessageCircle size={19} />} Message
+                    seller
                   </button>
-                )}
-                <button
-                  className="button secondary full"
-                  disabled={
-                    busy || l.status === "hidden" || l.status === "draft"
-                  }
-                  onClick={message}
-                >
-                  {busy ? <Spinner /> : <MessageCircle size={19} />} Message
-                  seller
-                </button>
-              </>
-            )}
-          </div>
+                </>
+              )}
+            </div>
+          )}
           <div className="item-detail-block">
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
           </div>
-          {l.tradeEnabled && l.tradePreferences && (
+          {l.tradeEnabled && l.tradePreferences && (demo || available) && (
             <div className="item-detail-block">
               <h3>
                 {demo ? "Example trade preferences" : "Open to trading for"}
