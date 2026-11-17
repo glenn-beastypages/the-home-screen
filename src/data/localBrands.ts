@@ -97002,7 +97002,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "siteCta": "Request a catering quote",
     "orderUrl": "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville",
     "instagram": "https://www.instagram.com/jarsemeryville/",
-    "contactOnly": "Check the Emeryville menu for the current shop flavors, or use the catering form to request pickup or delivery.",
+    "quoteOnly": true,
     "panels": [
       {
         "head": "Dessert catering",
