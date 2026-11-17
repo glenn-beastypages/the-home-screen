@@ -106,6 +106,11 @@ try {
   for (const [id, address, code, city] of examples) {
     await open(id)
     await page.getByText(address, { exact: false }).first().waitFor()
+    if (id === 'b_jarsemeryville') {
+      await page.getByRole('button', { name: /Price list.*2 items/ }).click()
+      assert.equal(await page.locator('.menu-row.is-quote').count(), 2)
+      assert.equal(await page.locator('.menu-row-add').count(), 0)
+    }
     const clip = batch.posts.find((p) => p.code === code)
     await play(clip, id)
     await page.getByRole('button', { name: `Go to the ${city} More goods page`, exact: true }).click()
