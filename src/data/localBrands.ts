@@ -69130,8 +69130,8 @@ export const LOCAL_SEED: LocalSeed[] = [
         ],
         "links": [
           {
-            "label": "Lemon Crab Richmond on Instagram",
-            "href": "https://www.instagram.com/lemoncrab_richmond/"
+            "label": "Lemon Crab — Richmond on BEASTY",
+            "href": "https://beastypages.com/?b=b_lemoncrabrichmond"
           }
         ]
       }
@@ -96976,6 +96976,173 @@ export const LOCAL_SEED: LocalSeed[] = [
           {
             "label": "Brokerage profile",
             "href": "https://www.fastagents.com/agents/eric-kang"
+          }
+        ]
+      }
+    ]
+  },
+
+  // Batch 123 — new Emeryville, Richmond, and Oakland businesses.
+  {
+    "slug": "jars-emeryville",
+    "name": "JARS by Fabio Viviani — Emeryville",
+    "label": "JARS Emeryville",
+    "cuisine": "Dessert shop, ice cream and catering",
+    "category": "Sweets",
+    "color": "#4BBAD5",
+    "icon": "jars-emeryville-v123",
+    "prep": 0,
+    "items": [],
+    "address": "5649 Bay St, Emeryville, CA 94608",
+    "phone": "(510) 922-9792",
+    "email": "jars@sfbaydesserts.com",
+    "hours": "Daily 11am–9pm",
+    "tagline": "Layered dessert jars, soft serve, shakes and Bay Area dessert catering from the Bay Street shop.",
+    "site": "https://catering.sfbaydesserts.com/",
+    "siteCta": "Request a catering quote",
+    "orderUrl": "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville",
+    "instagram": "https://www.instagram.com/jarsemeryville/",
+    "contactOnly": "Check the Emeryville menu for the current shop flavors, or use the catering form to request pickup or delivery.",
+    "panels": [
+      {
+        "head": "Dessert catering",
+        "body": [
+          "The 8-pack contains full-size dessert jars. The 12-pack is a mini assortment with three each of four flavors. Pickup is at Bay Street. Delivery areas, minimums and service fees are listed on the catering form."
+        ],
+        "links": [
+          {
+            "label": "Catering options and quote",
+            "href": "https://catering.sfbaydesserts.com/"
+          },
+          {
+            "label": "Emeryville store menu",
+            "href": "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catering packs",
+        "items": [
+          [
+            "8 JARS Variety Pack",
+            "Eight individually lidded 6 oz desserts. Choose available flavors when the order is confirmed.",
+            5999
+          ],
+          [
+            "Mini Variety 12-Pack",
+            "Twelve individually lidded 2 oz desserts: banana cream pie, Oreo cookies & cream, tiramisu and salted caramel brownie.",
+            5999
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "lemon-crab-richmond",
+    "name": "Lemon Crab — Richmond",
+    "label": "Lemon Crab",
+    "cuisine": "Cajun seafood boil",
+    "category": "Seafood boil",
+    "color": "#F6E8CE",
+    "icon": "lemon-crab-richmond-v123",
+    "prep": 0,
+    "items": [],
+    "address": "1400 Macdonald Ave, Richmond, CA 94801",
+    "phone": "(510) 850-4588",
+    "tagline": "Cajun seafood boils and garlic noodles at Lemon Crab’s downtown Richmond location.",
+    "instagram": "https://www.instagram.com/lemoncrab_richmond/",
+    "site": "https://www.instagram.com/lemoncrab_richmond/",
+    "siteCta": "See Richmond updates",
+    "contactOnly": "Call the Richmond location for current hours and prices.",
+    "panels": [
+      {
+        "head": "Seafood boils",
+        "body": [
+          "The Richmond review shows king crab, Dungeness crab and garlic noodles. Call this location for the current menu."
+        ],
+        "links": [
+          {
+            "label": "Richmond profile",
+            "href": "https://www.instagram.com/lemoncrab_richmond/"
+          },
+          {
+            "label": "Call Richmond",
+            "href": "tel:5108504588"
+          }
+        ]
+      },
+      {
+        "head": "Locations",
+        "body": [
+          "The Mission Boulevard restaurant has its own BEASTY page, menu and contact details."
+        ],
+        "links": [
+          {
+            "label": "Hayward location",
+            "href": "https://beastypages.com/?b=b_lemoncrabhayward"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "oh-crab-oakland",
+    "name": "OH CRAB!",
+    "label": "OH CRAB!",
+    "cuisine": "Louisiana-style seafood boil and crab",
+    "category": "Seafood boil",
+    "color": "#C93625",
+    "icon": "oh-crab-oakland-v123",
+    "prep": 0,
+    "items": [],
+    "address": "4869 Telegraph Ave, Oakland, CA 94609",
+    "phone": "(510) 654-2000",
+    "hours": "Sun–Thu 4–10pm, Fri–Sat 4–11pm",
+    "tagline": "Seafood by the pound, with a choice of sauce and heat, on Telegraph Avenue in Temescal.",
+    "site": "https://oh-crab.com/",
+    "siteCta": "See the seafood menu",
+    "instagram": "https://www.instagram.com/ohcrab_seafoodboil/",
+    "contactOnly": "Seafood follows market pricing. Ask the restaurant for current prices and availability.",
+    "panels": [
+      {
+        "head": "Build a seafood boil",
+        "body": [
+          "Choose shrimp, crawfish, snow crab, king crab, Dungeness, lobster, clams or mussels. The kitchen offers signature, Cajun, garlic butter, lemon pepper and Cajun cream sauces."
+        ],
+        "links": [
+          {
+            "label": "Seafood boil menu",
+            "href": "https://oh-crab.com/menu"
+          }
+        ]
+      },
+      {
+        "head": "Sides and plates",
+        "body": [
+          "Choose bag additions like corn, potatoes, sausage, egg or broccoli. The menu also lists oysters, seafood ramyeon, clam chowder, garlic noodles, shrimp baskets and a kids’ meal."
+        ],
+        "links": [
+          {
+            "label": "See bowls, sides and drinks",
+            "href": "https://oh-crab.com/menu"
+          }
+        ]
+      },
+      {
+        "head": "Oakland takeout",
+        "body": [
+          "Call to order for pickup on Telegraph Avenue."
+        ],
+        "links": [
+          {
+            "label": "Call OH CRAB!",
+            "href": "tel:5106542000"
+          },
+          {
+            "label": "Hours and directions",
+            "href": "https://oh-crab.com/visit"
           }
         ]
       }

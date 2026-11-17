@@ -514,7 +514,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "kimjsseats",
     "name": "Where Jess at",
-    "label": "Jess"
+    "label": "Jess",
+    "icon": "influencer-kimjsseats-v123"
   },
   {
     "handle": "oaktowngrubhub",
@@ -603,7 +604,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "victoria.pham17",
     "name": "@victoria.pham17",
-    "label": "victoria.pham17"
+    "label": "victoria.pham17",
+    "icon": "influencer-victoria-pham17-v123"
   },
   {
     "handle": "foodieberrie",
@@ -696,7 +698,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "_cynlacson",
     "name": "@_cynlacson",
-    "label": "_cynlacson"
+    "label": "_cynlacson",
+    "icon": "influencer-cynlacson-v123"
   },
   {
     "handle": "alexytravels",
@@ -798,7 +801,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "bylizettexo",
     "name": "@bylizettexo",
-    "label": "bylizettexo"
+    "label": "bylizettexo",
+    "icon": "influencer-bylizettexo-v123"
   },
   {
     "handle": "brianthebarber",
@@ -900,7 +904,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "charlikestoeat",
     "name": "@charlikestoeat",
-    "label": "charlikestoeat"
+    "label": "charlikestoeat",
+    "icon": "influencer-charlikestoeat-v123"
   },
   {
     "handle": "hellahansel",
@@ -1188,7 +1193,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "kitkatvales",
     "name": "@kitkatvales",
-    "label": "kitkatvales"
+    "label": "kitkatvales",
+    "icon": "influencer-kitkatvales-v123"
   },
   {
     "handle": "foodwookie",
@@ -1325,7 +1331,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "karaxhuynh",
     "name": "Kara Huynh",
     "label": "Kara",
-    "icon": "foodie-karaxhuynh-v86"
+    "icon": "influencer-karaxhuynh-v123"
   },
   {
     "handle": "wakeyeats",
@@ -2070,7 +2076,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "andoperdidatraveling", "name": "@andoperdidatraveling", "label": "andoperdidatravelin", "icon": "foodie-andoperdidatraveling-v119"},
   {"handle": "foodiemompickyfam", "name": "@foodiemompickyfam", "label": "foodiemompickyfam", "icon": "foodie-foodiemompickyfam-v119"},
   {"handle": "bayareajessbling", "name": "@bayareajessbling", "label": "bayareajessbling", "icon": "foodie-bayareajessbling-v119"},
-  {"handle": "cheycheyfromthebay", "name": "@cheycheyfromthebay", "label": "cheycheyfromthebay", "icon": "foodie-cheycheyfromthebay-v119"},
+  {
+    "handle": "cheycheyfromthebay",
+    "name": "@cheycheyfromthebay",
+    "label": "cheycheyfromthebay",
+    "icon": "influencer-cheycheyfromthebay-v123"
+  },
   {"handle": "nomnom_nori", "name": "@nomnom_nori", "label": "nomnom_nori", "icon": "foodie-nomnomnori-v119"},
   {"handle": "thefoodiesergio", "name": "@thefoodiesergio", "label": "thefoodiesergio", "icon": "foodie-thefoodiesergio-v119"},
   {"handle": "munchingwmunches", "name": "@munchingwmunches", "label": "munchingwmunches", "icon": "foodie-munchingwmunches-v119"},
@@ -2095,6 +2106,23 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   // Batch 121 creators.
   {"handle": "baydish", "name": "Dana", "label": "Baydish", "icon": "foodie-baydish-v121"},
   {"handle": "taylorandtylor", "name": "Taylor and Tylor", "label": "Taylor & Tylor", "icon": "foodie-taylorandtylor-v121"},
+
+  // Batch 123 — new creator pages follow the established overflow order.
+  {"handle": "deeeatzfood", "name": "@deeeatzfood", "label": "deeeatzfood", "icon": "influencer-deeeatzfood-v123"},
+  {"handle": "circlespoon", "name": "@circlespoon", "label": "circlespoon", "icon": "influencer-circlespoon-v123"},
+  {"handle": "natalie.shuu", "name": "@natalie.shuu", "label": "natalie.shuu", "icon": "influencer-natalie-shuu-v123"},
+  {"handle": "niafitnesss", "name": "@niafitnesss", "label": "niafitnesss", "icon": "influencer-niafitnesss-v123"},
+  {"handle": "andrea.eats.food", "name": "@andrea.eats.food", "label": "andrea.eats.food", "icon": "influencer-andrea-eats-food-v123"},
+  {"handle": "curated.by.lucy", "name": "@curated.by.lucy", "label": "curated.by.lucy", "icon": "influencer-curated-by-lucy-v123"},
+  {"handle": "janeteats", "name": "@janeteats", "label": "janeteats", "icon": "influencer-janeteats-v123"},
+  {"handle": "foodinbob", "name": "@foodinbob", "label": "foodinbob", "icon": "influencer-foodinbob-v123"},
+  {"handle": "foodie.envy", "name": "@foodie.envy", "label": "foodie.envy", "icon": "influencer-foodie-envy-v123"},
+  {"handle": "milktea_karen", "name": "@milktea_karen", "label": "milktea_karen", "icon": "influencer-milktea-karen-v123"},
+  {"handle": "mandy.munchies", "name": "@mandy.munchies", "label": "mandy.munchies", "icon": "influencer-mandy-munchies-v123"},
+  {"handle": "anabellesbelly", "name": "@anabellesbelly", "label": "anabellesbelly", "icon": "influencer-anabellesbelly-v123"},
+  {"handle": "hannah.tags", "name": "@hannah.tags", "label": "hannah.tags", "icon": "influencer-hannah-tags-v123"},
+  {"handle": "eating.the.bay", "name": "@eating.the.bay", "label": "eating.the.bay", "icon": "influencer-eating-the-bay-v123"},
+  {"handle": "thefoodiemon", "name": "@thefoodiemon", "label": "thefoodiemon", "icon": "influencer-thefoodiemon-v123"},
 
 ]
 
@@ -2554,7 +2582,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Batch 97.
   {"by": "aliasharrief", "place": "Fikscue Craft Barbecue", "city": "Alameda", "brand": "b_fikscuealameda", "reel": "https://www.instagram.com/reel/De72TEoP0t9/", "credit": "Filmed by @aliasharrief at Fikscue Craft Barbecue in Alameda.", "clip": true},
   {"by": "smackinfood", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DfVKoBVp_H-/", "credit": "Filmed by @smackinfood at Lemon Crab in Hayward.", "clip": true},
-  {"by": "bayareamunchies510", "place": "Lemon Crab", "city": "Richmond", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DeiXImexmzZ/", "credit": "Filmed by @bayareamunchies510 at Lemon Crab in Richmond.", "clip": true},
+  {"by": "bayareamunchies510", "place": "Lemon Crab", "city": "Richmond", "brand": "b_lemoncrabrichmond", "reel": "https://www.instagram.com/reel/DeiXImexmzZ/", "credit": "Filmed by @bayareamunchies510 at Lemon Crab in Richmond.", "clip": true},
   {"by": "chelchomps", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DcHnHrNvdLB/", "credit": "Filmed by @chelchomps at Lemon Crab in Hayward.", "clip": true},
   {"by": "grubwitmike", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DUCUNAgkbY8/", "credit": "Filmed by @grubwitmike at Lemon Crab in Hayward.", "clip": true},
   {"by": "livingvivalakillah", "place": "Legend Hotpot & Grill", "city": "Newark", "brand": "b_legendhotpotgrill", "reel": "https://www.instagram.com/reel/DfVMPhPS2dJ/", "credit": "Filmed by @livingvivalakillah at Legend Hotpot & Grill in Newark.", "clip": true},
@@ -2955,6 +2983,45 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "bayarea.foodie.adventures", "place": "Four Chairs", "city": "San Francisco", "brand": "b_fourchairs", "reel": "https://www.instagram.com/reel/C2RBdWMrJCL/", "credit": "Review by @bayarea.foodie.adventures at Four Chairs, San Francisco.", "clip": true},
   {"by": "kangofrealty", "place": "The Junction — Santa Rosa", "city": "Santa Rosa", "brand": "b_thejunctionsantarosa", "reel": "https://www.instagram.com/reel/DY2myk-Ps5W/", "credit": "Review by @kangofrealty at The Junction — Santa Rosa.", "clip": true},
   {"by": "kangofrealty", "place": "Popoca", "city": "Oakland", "brand": "b_popocaoakland", "reel": "https://www.instagram.com/reel/Dfno6o9hL32/", "credit": "Review by @kangofrealty at Popoca, Oakland.", "clip": true},
+
+  // Batch 123 — all new excerpts and original account credits.
+  {"by": "jarsemeryville", "place": "JARS by Fabio Viviani — Emeryville", "city": "Emeryville", "brand": "b_jarsemeryville", "reel": "https://www.instagram.com/reel/DZa0dhoyaaN/", "credit": "Published by @jarsemeryville as an introduction to the Emeryville shop.", "clip": true},
+  {"by": "karaxhuynh", "place": "Eat More Pho", "city": "Sunnyvale", "brand": "b_eatmorepho", "reel": "https://www.instagram.com/reel/Df09mpuBpxS/", "credit": "Review by @karaxhuynh at Eat More Pho, Sunnyvale. Instagram collaboration with @eatmorepho_sunnyvale.", "clip": true},
+  {"by": "grubwitmike", "place": "Lemon Crab — Richmond", "city": "Richmond", "brand": "b_lemoncrabrichmond", "reel": "https://www.instagram.com/reel/Df0vZw5xkMs/", "credit": "Review by @grubwitmike at Lemon Crab — Richmond.", "clip": true},
+  {"by": "gregorysgourmetdesserts", "place": "Gregory’s Gourmet Desserts", "city": "Oakland and San Ramon", "brand": "b_gregorysgourmetdesserts", "reel": "https://www.instagram.com/reel/Df0hhgTH1my/", "credit": "Published by @gregorysgourmetdesserts. The caption lists Oakland and San Ramon; the reel does not identify one branch.", "clip": true},
+  {"by": "deeeatzfood", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/Dfxe2IFhWYf/", "credit": "Review by @deeeatzfood at Khao Tiew, San Francisco.", "clip": true},
+  {"by": "phoebe8food", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DXhf5tdjRIr/", "credit": "Review by @phoebe8food at Khao Tiew, San Francisco. Instagram collaboration with @khaotiew_sf.", "clip": "creator"},
+  {"by": "allie.eats", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DVIIU-gAFis/", "credit": "Review by @allie.eats at Khao Tiew, San Francisco.", "clip": "creator"},
+  {"by": "circlespoon", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DPXLDFRATgn/", "credit": "Review by @circlespoon at Khao Tiew, San Francisco.", "clip": true},
+  {"by": "natalie.shuu", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DTzTLeiimyR/", "credit": "Review by @natalie.shuu at Khao Tiew, San Francisco.", "clip": "creator"},
+  {"by": "charlikestoeat", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DPP9VfRiWC7/", "credit": "Review by @charlikestoeat at Khao Tiew, San Francisco.", "clip": "creator"},
+  {"by": "niafitnesss", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DcFeZIkplbK/", "credit": "Review by @niafitnesss at Khao Tiew, San Francisco.", "clip": "creator"},
+  {"by": "thefoodiemon", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DblUtpRuwaN/", "credit": "Review by @thefoodiemon at Khao Tiew, San Francisco. Instagram collaboration with @top_sf_restaurants.", "clip": true},
+  {"by": "andrea.eats.food", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DVElJ6skmta/", "credit": "Review by @andrea.eats.food at Khao Tiew, San Francisco.", "clip": "creator"},
+  {"by": "taratastessf", "place": "Khao Tiew", "city": "San Francisco", "brand": "b_khaotiewsf", "reel": "https://www.instagram.com/reel/DSnUQLxifU0/", "credit": "Review by @taratastessf at Khao Tiew, San Francisco.", "clip": true},
+  {"by": "circlespoon", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DW7_BhTPlW7/", "credit": "Review by @circlespoon at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "chelchomps", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DYKuxqUtWUo/", "credit": "Review by @chelchomps at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "aymibabyeats", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DfqL-eUhZ8x/", "credit": "Review by @aymibabyeats at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast.", "clip": true},
+  {"by": "bylizettexo", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DfhvTCzhrC_/", "credit": "Review by @bylizettexo at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "kitkatvales", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/De24UBSsr13/", "credit": "Review by @kitkatvales at INTL Kitchen, Milpitas. Instagram collaboration with @bayarea.kulture.", "clip": true},
+  {"by": "_whatarethechances_", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DevntxAI3es/", "credit": "Review by @_whatarethechances_ at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "biteswithnatalia", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/Deu_hduBzCl/", "credit": "Review by @biteswithnatalia at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle.", "clip": "creator"},
+  {"by": "dchangshangry", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/Deit2BnT_xd/", "credit": "Review by @dchangshangry at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "curated.by.lucy", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DdzTk3TzSmz/", "credit": "Review by @curated.by.lucy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": true},
+  {"by": "janeteats", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DdwmFK9MQLy/", "credit": "Review by @janeteats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "foodinbob", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DdLBa_yoZgI/", "credit": "Review by @foodinbob at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "foodie.envy", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/Dc2aoTxSk6s/", "credit": "Review by @foodie.envy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "hallojessa", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DcxSfk7CfpU/", "credit": "Review by @hallojessa at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "milktea_karen", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/Dct1hNBS01P/", "credit": "Review by @milktea_karen at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen.", "clip": "creator"},
+  {"by": "victoria.pham17", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DctmfcLCti0/", "credit": "Review by @victoria.pham17 at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen.", "clip": true},
+  {"by": "kimjsseats", "place": "INTL Kitchen", "city": "Milpitas", "brand": "b_intlkitchen", "reel": "https://www.instagram.com/reel/DcjY_yhvNhy/", "credit": "Review by @kimjsseats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.", "clip": "creator"},
+  {"by": "victoria.pham17", "place": "Little Sheep", "city": "Newark", "brand": "b_littlesheepnewark", "reel": "https://www.instagram.com/reel/DfYXhfoMsoi/", "credit": "Review by @victoria.pham17 at Little Sheep, Newark. Instagram collaboration with @littlesheep_official.", "clip": "creator"},
+  {"by": "mandy.munchies", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/Dfz3MejvQCH/", "credit": "Review by @mandy.munchies at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.", "clip": "creator"},
+  {"by": "anabellesbelly", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DcRg0IZBqQg/", "credit": "Review by @anabellesbelly at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast.", "clip": "creator"},
+  {"by": "wakeyeats", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/Db6yQrpNL8w/", "credit": "Review by @wakeyeats at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.", "clip": "creator"},
+  {"by": "hannah.tags", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DZtW-hyx0Cc/", "credit": "Review by @hannah.tags at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast.", "clip": "creator"},
+  {"by": "eating.the.bay", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DXdbP2UArUQ/", "credit": "Review by @eating.the.bay at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.", "clip": "creator"},
+  {"by": "felicitythefoodie", "place": "OH CRAB!", "city": "Oakland", "brand": "b_ohcraboakland", "reel": "https://www.instagram.com/reel/Df1a428MW2s/", "credit": "Review by @felicitythefoodie at OH CRAB!, Oakland. Instagram collaboration with @ohcrab_seafoodboil.", "clip": true},
 
 ]
 

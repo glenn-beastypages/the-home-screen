@@ -1229,3 +1229,42 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-C2RBdWMrJCL.mp4` | [Original](https://www.instagram.com/reel/C2RBdWMrJCL/) | Review by @bayarea.foodie.adventures at Four Chairs, San Francisco. 0–11.8s |
 | `review-DY2myk-Ps5W.mp4` | [Original](https://www.instagram.com/reel/DY2myk-Ps5W/) | Review by @kangofrealty at The Junction — Santa Rosa. 3–18s |
 | `review-Dfno6o9hL32.mp4` | [Original](https://www.instagram.com/reel/Dfno6o9hL32/) | Review by @kangofrealty at Popoca, Oakland. 3–18s |
+
+<!-- Batch 123. -->
+| `review-DZa0dhoyaaN.mp4` | [Original](https://www.instagram.com/reel/DZa0dhoyaaN/) | Published by @jarsemeryville as an introduction to the Emeryville shop. 0–14.607s |
+| `review-Df09mpuBpxS.mp4` | [Original](https://www.instagram.com/reel/Df09mpuBpxS/) | Review by @karaxhuynh at Eat More Pho, Sunnyvale. Instagram collaboration with @eatmorepho_sunnyvale. 3–18s |
+| `review-Df0vZw5xkMs.mp4` | [Original](https://www.instagram.com/reel/Df0vZw5xkMs/) | Review by @grubwitmike at Lemon Crab — Richmond. 3–18s |
+| `review-Df0hhgTH1my.mp4` | [Original](https://www.instagram.com/reel/Df0hhgTH1my/) | Published by @gregorysgourmetdesserts. The caption lists Oakland and San Ramon; the reel does not identify one branch. 3–18s |
+| `review-Dfxe2IFhWYf.mp4` | [Original](https://www.instagram.com/reel/Dfxe2IFhWYf/) | Review by @deeeatzfood at Khao Tiew, San Francisco. 3–18s |
+| `review-DXhf5tdjRIr.mp4` | [Original](https://www.instagram.com/reel/DXhf5tdjRIr/) | Review by @phoebe8food at Khao Tiew, San Francisco. Instagram collaboration with @khaotiew_sf. 3–18s |
+| `review-DVIIU-gAFis.mp4` | [Original](https://www.instagram.com/reel/DVIIU-gAFis/) | Review by @allie.eats at Khao Tiew, San Francisco. 3–18s |
+| `review-DPXLDFRATgn.mp4` | [Original](https://www.instagram.com/reel/DPXLDFRATgn/) | Review by @circlespoon at Khao Tiew, San Francisco. 3–18s |
+| `review-DTzTLeiimyR.mp4` | [Original](https://www.instagram.com/reel/DTzTLeiimyR/) | Review by @natalie.shuu at Khao Tiew, San Francisco. 3–18s |
+| `review-DPP9VfRiWC7.mp4` | [Original](https://www.instagram.com/reel/DPP9VfRiWC7/) | Review by @charlikestoeat at Khao Tiew, San Francisco. 3–18s |
+| `review-DcFeZIkplbK.mp4` | [Original](https://www.instagram.com/reel/DcFeZIkplbK/) | Review by @niafitnesss at Khao Tiew, San Francisco. 3–18s |
+| `review-DblUtpRuwaN.mp4` | [Original](https://www.instagram.com/reel/DblUtpRuwaN/) | Review by @thefoodiemon at Khao Tiew, San Francisco. Instagram collaboration with @top_sf_restaurants. 3–18s |
+| `review-DVElJ6skmta.mp4` | [Original](https://www.instagram.com/reel/DVElJ6skmta/) | Review by @andrea.eats.food at Khao Tiew, San Francisco. 3–18s |
+| `review-DSnUQLxifU0.mp4` | [Original](https://www.instagram.com/reel/DSnUQLxifU0/) | Review by @taratastessf at Khao Tiew, San Francisco. 0–9.174s |
+| `review-DW7_BhTPlW7.mp4` | [Original](https://www.instagram.com/reel/DW7_BhTPlW7/) | Review by @circlespoon at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-DYKuxqUtWUo.mp4` | [Original](https://www.instagram.com/reel/DYKuxqUtWUo/) | Review by @chelchomps at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-DfqL-eUhZ8x.mp4` | [Original](https://www.instagram.com/reel/DfqL-eUhZ8x/) | Review by @aymibabyeats at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. 3–18s |
+| `review-DfhvTCzhrC_.mp4` | [Original](https://www.instagram.com/reel/DfhvTCzhrC_/) | Review by @bylizettexo at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-De24UBSsr13.mp4` | [Original](https://www.instagram.com/reel/De24UBSsr13/) | Review by @kitkatvales at INTL Kitchen, Milpitas. Instagram collaboration with @bayarea.kulture. 3–18s |
+| `review-DevntxAI3es.mp4` | [Original](https://www.instagram.com/reel/DevntxAI3es/) | Review by @_whatarethechances_ at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-Deu_hduBzCl.mp4` | [Original](https://www.instagram.com/reel/Deu_hduBzCl/) | Review by @biteswithnatalia at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle. 3–18s |
+| `review-Deit2BnT_xd.mp4` | [Original](https://www.instagram.com/reel/Deit2BnT_xd/) | Review by @dchangshangry at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-DdzTk3TzSmz.mp4` | [Original](https://www.instagram.com/reel/DdzTk3TzSmz/) | Review by @curated.by.lucy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 0–13.984s |
+| `review-DdwmFK9MQLy.mp4` | [Original](https://www.instagram.com/reel/DdwmFK9MQLy/) | Review by @janeteats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 0–15s |
+| `review-DdLBa_yoZgI.mp4` | [Original](https://www.instagram.com/reel/DdLBa_yoZgI/) | Review by @foodinbob at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-Dc2aoTxSk6s.mp4` | [Original](https://www.instagram.com/reel/Dc2aoTxSk6s/) | Review by @foodie.envy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-DcxSfk7CfpU.mp4` | [Original](https://www.instagram.com/reel/DcxSfk7CfpU/) | Review by @hallojessa at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-Dct1hNBS01P.mp4` | [Original](https://www.instagram.com/reel/Dct1hNBS01P/) | Review by @milktea_karen at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. 3–18s |
+| `review-DctmfcLCti0.mp4` | [Original](https://www.instagram.com/reel/DctmfcLCti0/) | Review by @victoria.pham17 at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. 3–18s |
+| `review-DcjY_yhvNhy.mp4` | [Original](https://www.instagram.com/reel/DcjY_yhvNhy/) | Review by @kimjsseats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers. 3–18s |
+| `review-DfYXhfoMsoi.mp4` | [Original](https://www.instagram.com/reel/DfYXhfoMsoi/) | Review by @victoria.pham17 at Little Sheep, Newark. Instagram collaboration with @littlesheep_official. 3–18s |
+| `review-Dfz3MejvQCH.mp4` | [Original](https://www.instagram.com/reel/Dfz3MejvQCH/) | Review by @mandy.munchies at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas. 3–18s |
+| `review-DcRg0IZBqQg.mp4` | [Original](https://www.instagram.com/reel/DcRg0IZBqQg/) | Review by @anabellesbelly at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast. 0–15s |
+| `review-Db6yQrpNL8w.mp4` | [Original](https://www.instagram.com/reel/Db6yQrpNL8w/) | Review by @wakeyeats at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas. 0–12.6s |
+| `review-DZtW-hyx0Cc.mp4` | [Original](https://www.instagram.com/reel/DZtW-hyx0Cc/) | Review by @hannah.tags at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast. 0–13.818s |
+| `review-DXdbP2UArUQ.mp4` | [Original](https://www.instagram.com/reel/DXdbP2UArUQ/) | Review by @eating.the.bay at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas. 3–18s |
+| `review-Df1a428MW2s.mp4` | [Original](https://www.instagram.com/reel/Df1a428MW2s/) | Review by @felicitythefoodie at OH CRAB!, Oakland. Instagram collaboration with @ohcrab_seafoodboil. 3–18s |

@@ -1288,4 +1288,9 @@ export const ADDED_ON: Record<string, string> = {
   // Batch 122 businesses.
   b_yakinikuginza: '2026-11-16',
   b_thejunctionsantarosa: '2026-11-16',
+
+  // Batch 123.
+  'b_jarsemeryville': '2026-11-17',
+  'b_lemoncrabrichmond': '2026-11-17',
+  'b_ohcraboakland': '2026-11-17',
 }

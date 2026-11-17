@@ -872,3 +872,31 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `influencer-booziebrunch-v122.webp` | [Official source](https://www.instagram.com/booziebrunch/), IMG_0690.PNG | Matched the supplied art to the current official profile and used its original image. |
 | `yakiniku-ginza-v122.webp` | [Official source](https://www.yakinikuginza.com/), IMG_0671.jpeg | Supplied square official gold circle on white, checked against the restaurant’s website art. The complete ring and lettering fit the tile. |
 | `the-junction-santa-rosa-v122.webp` | [Official source](https://www.thejunc.com/santa-rosa), IMG_0686.png | Supplied shared Junction roundel. The Santa Rosa official site also uses a shared Tam Valley mark. The listing and review identify Santa Rosa. |
+
+<!-- Batch 123. -->
+| `influencer-karaxhuynh-v123.webp` | [Source](https://www.instagram.com/karaxhuynh/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-deeeatzfood-v123.webp` | [Source](https://www.instagram.com/deeeatzfood/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-circlespoon-v123.webp` | [Source](https://www.instagram.com/circlespoon/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-natalie-shuu-v123.webp` | [Source](https://www.instagram.com/natalie.shuu/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-charlikestoeat-v123.webp` | [Source](https://www.instagram.com/charlikestoeat/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-niafitnesss-v123.webp` | [Source](https://www.instagram.com/niafitnesss/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-cheycheyfromthebay-v123.webp` | [Source](https://www.instagram.com/cheycheyfromthebay/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-andrea-eats-food-v123.webp` | [Source](https://www.instagram.com/andrea.eats.food/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-bylizettexo-v123.webp` | [Source](https://www.instagram.com/bylizettexo/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-kitkatvales-v123.webp` | [Source](https://www.instagram.com/kitkatvales/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-curated-by-lucy-v123.webp` | [Source](https://www.instagram.com/curated.by.lucy/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-janeteats-v123.webp` | [Source](https://www.instagram.com/janeteats/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-foodinbob-v123.webp` | [Source](https://www.instagram.com/foodinbob/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-foodie-envy-v123.webp` | [Source](https://www.instagram.com/foodie.envy/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-milktea-karen-v123.webp` | [Source](https://www.instagram.com/milktea_karen/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-kimjsseats-v123.webp` | [Source](https://www.instagram.com/kimjsseats/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-victoria-pham17-v123.webp` | [Source](https://www.instagram.com/victoria.pham17/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-mandy-munchies-v123.webp` | [Source](https://www.instagram.com/mandy.munchies/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-anabellesbelly-v123.webp` | [Source](https://www.instagram.com/anabellesbelly/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-hannah-tags-v123.webp` | [Source](https://www.instagram.com/hannah.tags/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-eating-the-bay-v123.webp` | [Source](https://www.instagram.com/eating.the.bay/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-cynlacson-v123.webp` | [Source](https://www.instagram.com/_cynlacson/) | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `jars-emeryville-v123.webp` | [Source](https://catering.sfbaydesserts.com/jars-logo-red-ring-profile.png) | Official artwork, fitted so the full mark is visible at phone tile size. |
+| `lemon-crab-richmond-v123.webp` | [Source](https://lemoncrab.us/wp-content/uploads/2024/03/2X-Logo.png) | Glenn’s location screenshot identifies Richmond. The tile uses the official shared Lemon Crab mark. |
+| `oh-crab-oakland-v123.webp` | [Source](https://oh-crab.com/assets/logo-600.png) | Official artwork, fitted so the full mark is visible at phone tile size. |
+| `influencer-thefoodiemon-v123.webp` | [Source](https://www.instagram.com/thefoodiemon/) | Original public avatar shown in the credited reel’s profile card. |

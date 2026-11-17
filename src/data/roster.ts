@@ -790,6 +790,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     icon: 'intl-kitchen',
     logoTemplate: 'glyph-word', logoGlyph: 'noodles', logoLines: ['INTL'],
     site: 'https://intlkitchen.com/',
+    address: '344 S Main St, Milpitas, CA 95035',
+    phone: '(408) 248-8868',
+    orderUrl: 'https://intlkitchen.com/order',
+    instagram: 'https://www.instagram.com/intl_kitchen/',
+    tagline: 'Cambodian- and Thai-inspired rice plates, noodles and roti pizza in Milpitas.',
+    panels: [{ head: 'Menu and pickup', body: ['Check current items and promotions with the restaurant. The restaurant lists payment at pickup.'], links: [{ label: 'INTL Kitchen menu', href: 'https://intlkitchen.com/menu' }] }],
+
   }),
   seed('majestic-boutique', 'Majestic Boutique', 'Majestic', 'Clothing boutique', '#2B2440', {
     icon: 'majestic-boutique',

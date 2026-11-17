@@ -1,0 +1,2262 @@
+{
+  "cutoff": "2026-11-17T06:03:39.094512-08:00",
+  "cutoffRow": 252843,
+  "listings": [
+    {
+      "slug": "jars-emeryville",
+      "name": "JARS by Fabio Viviani — Emeryville",
+      "label": "JARS Emeryville",
+      "cuisine": "Dessert shop, ice cream and catering",
+      "category": "Sweets",
+      "color": "#4BBAD5",
+      "icon": "jars-emeryville-v123",
+      "prep": 0,
+      "items": [],
+      "address": "5649 Bay St, Emeryville, CA 94608",
+      "phone": "(510) 922-9792",
+      "email": "jars@sfbaydesserts.com",
+      "hours": "Daily 11am–9pm",
+      "tagline": "Layered dessert jars, soft serve, shakes and Bay Area dessert catering from the Bay Street shop.",
+      "site": "https://catering.sfbaydesserts.com/",
+      "siteCta": "Request a catering quote",
+      "orderUrl": "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville",
+      "instagram": "https://www.instagram.com/jarsemeryville/",
+      "contactOnly": "Check the Emeryville menu for the current shop flavors, or use the catering form to request pickup or delivery.",
+      "panels": [
+        {
+          "head": "Dessert catering",
+          "body": [
+            "The 8-pack contains full-size dessert jars. The 12-pack is a mini assortment with three each of four flavors. Pickup is at Bay Street. Delivery areas, minimums and service fees are listed on the catering form."
+          ],
+          "links": [
+            {
+              "label": "Catering options and quote",
+              "href": "https://catering.sfbaydesserts.com/"
+            },
+            {
+              "label": "Emeryville store menu",
+              "href": "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Catering packs",
+          "items": [
+            [
+              "8 JARS Variety Pack",
+              "Eight individually lidded 6 oz desserts. Choose available flavors when the order is confirmed.",
+              5999
+            ],
+            [
+              "Mini Variety 12-Pack",
+              "Twelve individually lidded 2 oz desserts: banana cream pie, Oreo cookies & cream, tiramisu and salted caramel brownie.",
+              5999
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lemon-crab-richmond",
+      "name": "Lemon Crab — Richmond",
+      "label": "Lemon Crab",
+      "cuisine": "Cajun seafood boil",
+      "category": "Seafood boil",
+      "color": "#F6E8CE",
+      "icon": "lemon-crab-richmond-v123",
+      "prep": 0,
+      "items": [],
+      "address": "1400 Macdonald Ave, Richmond, CA 94801",
+      "phone": "(510) 850-4588",
+      "tagline": "Cajun seafood boils and garlic noodles at Lemon Crab’s downtown Richmond location.",
+      "instagram": "https://www.instagram.com/lemoncrab_richmond/",
+      "site": "https://www.instagram.com/lemoncrab_richmond/",
+      "siteCta": "See Richmond updates",
+      "contactOnly": "Call the Richmond location for current hours and prices.",
+      "panels": [
+        {
+          "head": "Seafood boils",
+          "body": [
+            "The Richmond review shows king crab, Dungeness crab and garlic noodles. Call this location for the current menu."
+          ],
+          "links": [
+            {
+              "label": "Richmond profile",
+              "href": "https://www.instagram.com/lemoncrab_richmond/"
+            },
+            {
+              "label": "Call Richmond",
+              "href": "tel:5108504588"
+            }
+          ]
+        },
+        {
+          "head": "Locations",
+          "body": [
+            "The Mission Boulevard restaurant has its own BEASTY page, menu and contact details."
+          ],
+          "links": [
+            {
+              "label": "Hayward location",
+              "href": "https://beastypages.com/?b=b_lemoncrabhayward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "oh-crab-oakland",
+      "name": "OH CRAB!",
+      "label": "OH CRAB!",
+      "cuisine": "Louisiana-style seafood boil and crab",
+      "category": "Seafood boil",
+      "color": "#C93625",
+      "icon": "oh-crab-oakland-v123",
+      "prep": 0,
+      "items": [],
+      "address": "4869 Telegraph Ave, Oakland, CA 94609",
+      "phone": "(510) 654-2000",
+      "hours": "Sun–Thu 4–10pm, Fri–Sat 4–11pm",
+      "tagline": "Seafood by the pound, with a choice of sauce and heat, on Telegraph Avenue in Temescal.",
+      "site": "https://oh-crab.com/",
+      "siteCta": "See the seafood menu",
+      "instagram": "https://www.instagram.com/ohcrab_seafoodboil/",
+      "contactOnly": "Seafood follows market pricing. Ask the restaurant for current prices and availability.",
+      "panels": [
+        {
+          "head": "Build a seafood boil",
+          "body": [
+            "Choose shrimp, crawfish, snow crab, king crab, Dungeness, lobster, clams or mussels. The kitchen offers signature, Cajun, garlic butter, lemon pepper and Cajun cream sauces."
+          ],
+          "links": [
+            {
+              "label": "Seafood boil menu",
+              "href": "https://oh-crab.com/menu"
+            }
+          ]
+        },
+        {
+          "head": "Sides and plates",
+          "body": [
+            "Choose bag additions like corn, potatoes, sausage, egg or broccoli. The menu also lists oysters, seafood ramyeon, clam chowder, garlic noodles, shrimp baskets and a kids’ meal."
+          ],
+          "links": [
+            {
+              "label": "See bowls, sides and drinks",
+              "href": "https://oh-crab.com/menu"
+            }
+          ]
+        },
+        {
+          "head": "Oakland takeout",
+          "body": [
+            "Call to order for pickup on Telegraph Avenue."
+          ],
+          "links": [
+            {
+              "label": "Call OH CRAB!",
+              "href": "tel:5106542000"
+            },
+            {
+              "label": "Hours and directions",
+              "href": "https://oh-crab.com/visit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "emeryville-goods2-2": "b_jarsemeryville",
+    "beasty-sweets2-4": "b_jarsemeryville",
+    "beasty-icecream-9": "b_jarsemeryville",
+    "beasty-cookies-4": "b_jarsemeryville",
+    "richmond-goods2-6": "b_lemoncrabrichmond",
+    "beasty-seafood-14": "b_lemoncrabrichmond",
+    "oakland-goods2-54": "b_ohcraboakland",
+    "beasty-seafood-13": "b_ohcraboakland",
+    "beasty-foodies2-348": "b_foodiedeeeatzfood",
+    "beasty-foodies2-349": "b_foodiecirclespoon",
+    "beasty-foodies2-350": "b_foodienatalieshuu",
+    "beasty-foodies2-351": "b_foodieniafitnesss",
+    "beasty-foodies2-352": "b_foodieandreaeatsfood",
+    "beasty-foodies2-353": "b_foodiecuratedbylucy",
+    "beasty-foodies2-354": "b_foodiejaneteats",
+    "beasty-foodies2-355": "b_foodiefoodinbob",
+    "beasty-foodies2-356": "b_foodiefoodieenvy",
+    "beasty-foodies2-357": "b_foodiemilkteakaren",
+    "beasty-foodies2-358": "b_foodiemandymunchies",
+    "beasty-foodies2-359": "b_foodieanabellesbelly",
+    "beasty-foodies2-360": "b_foodiehannahtags",
+    "beasty-foodies2-361": "b_foodieeatingthebay",
+    "beasty-foodies2-362": "b_foodiethefoodiemon",
+    "beasty-catering-15": "b_jarsemeryville"
+  },
+  "firstInfluencers": {
+    "beasty-foodies-0": "b_foodieronniebanks",
+    "beasty-foodies-1": "b_foodiemsashleyvee",
+    "beasty-foodies-2": "b_foodiefeedhappiness",
+    "beasty-foodies-3": "b_foodieashleyveats",
+    "beasty-foodies-4": "b_foodieblurgotti",
+    "beasty-foodies-5": "b_foodiesebascastroficial",
+    "beasty-foodies-6": "b_foodiefestusfeasts",
+    "beasty-foodies-7": "b_grando",
+    "beasty-foodies-8": "b_foodiefoodandsachi",
+    "beasty-foodies-9": "b_foodiegrubwitmike",
+    "beasty-foodies-10": "b_foodiehungry4munchies",
+    "beasty-foodies-11": "b_foodiebayareafooddreamz",
+    "beasty-foodies-12": "b_foodieeatwithsie",
+    "beasty-foodies-13": "b_foodiedaeatzwitbri",
+    "beasty-foodies-14": "b_foodiethetastebud",
+    "beasty-foodies-15": "b_foodieazteced",
+    "beasty-foodies-16": "b_foodieimadoniseats",
+    "beasty-foodies-17": "b_foodiejacksdiningroom",
+    "beasty-foodies-18": "b_foodieyourglobalfoodiebff",
+    "beasty-foodies-19": "b_foodiefelicitythefoodie",
+    "beasty-foodies-20": "b_foodietrinhdoesthings",
+    "beasty-foodies-21": "b_foodiesmackinfood",
+    "beasty-foodies-22": "b_foodiedroolingbae",
+    "beasty-foodies-23": "b_foodiethesauceboss"
+  },
+  "posts": [
+    {
+      "code": "DZa0dhoyaaN",
+      "slug": "review-DZa0dhoyaaN",
+      "startSeconds": 0,
+      "endSeconds": 14.607,
+      "sourceDuration": 14.607,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DZa0dhoyaaN/",
+      "brand": "b_jarsemeryville",
+      "by": "jarsemeryville",
+      "postedBy": "jarsemeryville",
+      "coauthors": [],
+      "postedDate": "2026-06-10",
+      "credit": "Published by @jarsemeryville as an introduction to the Emeryville shop.",
+      "request": [
+        {
+          "rowId": 252713,
+          "linkRowId": 252712,
+          "at": "2026-11-16T17:02:17.482513-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df09mpuBpxS",
+      "slug": "review-Df09mpuBpxS",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.57,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Df09mpuBpxS/",
+      "brand": "b_eatmorepho",
+      "by": "karaxhuynh",
+      "postedBy": "karaxhuynh",
+      "coauthors": [
+        "eatmorepho_sunnyvale"
+      ],
+      "postedDate": "2026-11-17",
+      "credit": "Review by @karaxhuynh at Eat More Pho, Sunnyvale. Instagram collaboration with @eatmorepho_sunnyvale.",
+      "request": [
+        {
+          "rowId": 252734,
+          "linkRowId": 252733,
+          "at": "2026-11-16T20:24:44.933886-08:00",
+          "request": "Clip this video plz \n\nPlease update icon pic"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df0vZw5xkMs",
+      "slug": "review-Df0vZw5xkMs",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 82.781,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Df0vZw5xkMs/",
+      "brand": "b_lemoncrabrichmond",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "coauthors": [],
+      "postedDate": "2026-11-17",
+      "credit": "Review by @grubwitmike at Lemon Crab — Richmond.",
+      "request": [
+        {
+          "rowId": 252737,
+          "linkRowId": 252736,
+          "at": "2026-11-16T20:26:07.407059-08:00",
+          "request": "Clip this video plz \nCreate separate page for 2nd location in Richmond plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df0hhgTH1my",
+      "slug": "review-Df0hhgTH1my",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 66.713,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Df0hhgTH1my/",
+      "brand": "b_gregorysgourmetdesserts",
+      "by": "gregorysgourmetdesserts",
+      "postedBy": "gregorysgourmetdesserts",
+      "coauthors": [],
+      "postedDate": "2026-11-16",
+      "credit": "Published by @gregorysgourmetdesserts. The caption lists Oakland and San Ramon; the reel does not identify one branch.",
+      "request": [
+        {
+          "rowId": 252739,
+          "linkRowId": 252738,
+          "at": "2026-11-16T21:56:28.989541-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Dfxe2IFhWYf",
+      "slug": "review-Dfxe2IFhWYf",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 132.067,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Dfxe2IFhWYf/",
+      "brand": "b_khaotiewsf",
+      "by": "deeeatzfood",
+      "postedBy": "deeeatzfood",
+      "coauthors": [],
+      "postedDate": "2026-11-15",
+      "credit": "Review by @deeeatzfood at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252744,
+          "linkRowId": 252743,
+          "at": "2026-11-16T22:56:50.449128-08:00",
+          "request": "Clip this video plz\nFoodie\nNewbie"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DXhf5tdjRIr",
+      "slug": "review-DXhf5tdjRIr",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.508,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DXhf5tdjRIr/",
+      "brand": "b_khaotiewsf",
+      "by": "phoebe8food",
+      "postedBy": "phoebe8food",
+      "coauthors": [
+        "khaotiew_sf"
+      ],
+      "postedDate": "2026-04-24",
+      "credit": "Review by @phoebe8food at Khao Tiew, San Francisco. Instagram collaboration with @khaotiew_sf.",
+      "request": [
+        {
+          "rowId": 252746,
+          "linkRowId": 252745,
+          "at": "2026-11-16T22:58:04.011384-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DVIIU-gAFis",
+      "slug": "review-DVIIU-gAFis",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 35.134,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DVIIU-gAFis/",
+      "brand": "b_khaotiewsf",
+      "by": "allie.eats",
+      "postedBy": "allie.eats",
+      "coauthors": [],
+      "postedDate": "2026-02-24",
+      "credit": "Review by @allie.eats at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252748,
+          "linkRowId": 252747,
+          "at": "2026-11-16T22:59:35.302430-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DPXLDFRATgn",
+      "slug": "review-DPXLDFRATgn",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 60.304,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DPXLDFRATgn/",
+      "brand": "b_khaotiewsf",
+      "by": "circlespoon",
+      "postedBy": "circlespoon",
+      "coauthors": [],
+      "postedDate": "2025-10-03",
+      "credit": "Review by @circlespoon at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252751,
+          "linkRowId": 252750,
+          "at": "2026-11-16T23:00:07.288147-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DTzTLeiimyR",
+      "slug": "review-DTzTLeiimyR",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 63.6,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DTzTLeiimyR/",
+      "brand": "b_khaotiewsf",
+      "by": "natalie.shuu",
+      "postedBy": "natalie.shuu",
+      "coauthors": [],
+      "postedDate": "2026-01-22",
+      "credit": "Review by @natalie.shuu at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252754,
+          "linkRowId": 252753,
+          "at": "2026-11-16T23:00:41.305012-08:00",
+          "request": "Clip this video plz \nFoodie\nMediocre"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DPP9VfRiWC7",
+      "slug": "review-DPP9VfRiWC7",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.518,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DPP9VfRiWC7/",
+      "brand": "b_khaotiewsf",
+      "by": "charlikestoeat",
+      "postedBy": "charlikestoeat",
+      "coauthors": [],
+      "postedDate": "2025-10-01",
+      "credit": "Review by @charlikestoeat at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252756,
+          "linkRowId": 252755,
+          "at": "2026-11-16T23:01:10.216720-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DcFeZIkplbK",
+      "slug": "review-DcFeZIkplbK",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 64.112,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DcFeZIkplbK/",
+      "brand": "b_khaotiewsf",
+      "by": "niafitnesss",
+      "postedBy": "niafitnesss",
+      "coauthors": [],
+      "postedDate": "2026-08-16",
+      "credit": "Review by @niafitnesss at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252761,
+          "linkRowId": 252760,
+          "at": "2026-11-16T23:02:25.052667-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DblUtpRuwaN",
+      "slug": "review-DblUtpRuwaN",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 94.716,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DblUtpRuwaN/",
+      "brand": "b_khaotiewsf",
+      "by": "thefoodiemon",
+      "postedBy": "thefoodiemon",
+      "coauthors": [
+        "top_sf_restaurants"
+      ],
+      "postedDate": "2026-08-03",
+      "credit": "Review by @thefoodiemon at Khao Tiew, San Francisco. Instagram collaboration with @top_sf_restaurants.",
+      "request": [
+        {
+          "rowId": 252764,
+          "linkRowId": 252763,
+          "at": "2026-11-16T23:03:36.036977-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DVElJ6skmta",
+      "slug": "review-DVElJ6skmta",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 65.413,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DVElJ6skmta/",
+      "brand": "b_khaotiewsf",
+      "by": "andrea.eats.food",
+      "postedBy": "andrea.eats.food",
+      "coauthors": [],
+      "postedDate": "2026-02-22",
+      "credit": "Review by @andrea.eats.food at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252768,
+          "linkRowId": 252767,
+          "at": "2026-11-16T23:04:09.223163-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DSnUQLxifU0",
+      "slug": "review-DSnUQLxifU0",
+      "startSeconds": 0,
+      "endSeconds": 9.174,
+      "sourceDuration": 9.174,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DSnUQLxifU0/",
+      "brand": "b_khaotiewsf",
+      "by": "taratastessf",
+      "postedBy": "taratastessf",
+      "coauthors": [],
+      "postedDate": "2025-12-23",
+      "credit": "Review by @taratastessf at Khao Tiew, San Francisco.",
+      "request": [
+        {
+          "rowId": 252770,
+          "linkRowId": 252769,
+          "at": "2026-11-16T23:04:23.099651-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DW7_BhTPlW7",
+      "slug": "review-DW7_BhTPlW7",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 85.707,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DW7_BhTPlW7/",
+      "brand": "b_intlkitchen",
+      "by": "circlespoon",
+      "postedBy": "circlespoon",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-04-10",
+      "credit": "Review by @circlespoon at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252773,
+          "linkRowId": 252772,
+          "at": "2026-11-17T04:33:36.473616-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DYKuxqUtWUo",
+      "slug": "review-DYKuxqUtWUo",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.462,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DYKuxqUtWUo/",
+      "brand": "b_intlkitchen",
+      "by": "chelchomps",
+      "postedBy": "chelchomps",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-05-10",
+      "credit": "Review by @chelchomps at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252775,
+          "linkRowId": 252774,
+          "at": "2026-11-17T04:33:53.330434-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DfqL-eUhZ8x",
+      "slug": "review-DfqL-eUhZ8x",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 28.261,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DfqL-eUhZ8x/",
+      "brand": "b_intlkitchen",
+      "by": "aymibabyeats",
+      "postedBy": "aymibabyeats",
+      "coauthors": [
+        "bayareafeast"
+      ],
+      "postedDate": "2026-11-12",
+      "credit": "Review by @aymibabyeats at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast.",
+      "request": [
+        {
+          "rowId": 252777,
+          "linkRowId": 252776,
+          "at": "2026-11-17T04:34:26.895958-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DfhvTCzhrC_",
+      "slug": "review-DfhvTCzhrC_",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 179.005,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DfhvTCzhrC_/",
+      "brand": "b_intlkitchen",
+      "by": "bylizettexo",
+      "postedBy": "bylizettexo",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-11-09",
+      "credit": "Review by @bylizettexo at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252780,
+          "linkRowId": 252779,
+          "at": "2026-11-17T04:35:17.725099-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "De24UBSsr13",
+      "slug": "review-De24UBSsr13",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 123.5,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/De24UBSsr13/",
+      "brand": "b_intlkitchen",
+      "by": "kitkatvales",
+      "postedBy": "kitkatvales",
+      "coauthors": [
+        "bayarea.kulture"
+      ],
+      "postedDate": "2026-10-24",
+      "credit": "Review by @kitkatvales at INTL Kitchen, Milpitas. Instagram collaboration with @bayarea.kulture.",
+      "request": [
+        {
+          "rowId": 252783,
+          "linkRowId": 252782,
+          "at": "2026-11-17T04:36:07.025461-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DevntxAI3es",
+      "slug": "review-DevntxAI3es",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.534,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DevntxAI3es/",
+      "brand": "b_intlkitchen",
+      "by": "_whatarethechances_",
+      "postedBy": "_whatarethechances_",
+      "coauthors": [
+        "thebayarea.lifestyle"
+      ],
+      "postedDate": "2026-10-21",
+      "credit": "Review by @_whatarethechances_ at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252785,
+          "linkRowId": 252784,
+          "at": "2026-11-17T04:36:26.456635-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Deu_hduBzCl",
+      "slug": "review-Deu_hduBzCl",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 117.234,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Deu_hduBzCl/",
+      "brand": "b_intlkitchen",
+      "by": "biteswithnatalia",
+      "postedBy": "biteswithnatalia",
+      "coauthors": [
+        "thebayarea.lifestyle"
+      ],
+      "postedDate": "2026-10-20",
+      "credit": "Review by @biteswithnatalia at INTL Kitchen, Milpitas. Instagram collaboration with @thebayarea.lifestyle.",
+      "request": [
+        {
+          "rowId": 252787,
+          "linkRowId": 252786,
+          "at": "2026-11-17T04:36:42.386784-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Deit2BnT_xd",
+      "slug": "review-Deit2BnT_xd",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.601,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Deit2BnT_xd/",
+      "brand": "b_intlkitchen",
+      "by": "dchangshangry",
+      "postedBy": "dchangshangry",
+      "coauthors": [
+        "bayareafeast"
+      ],
+      "postedDate": "2026-10-16",
+      "credit": "Review by @dchangshangry at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252789,
+          "linkRowId": 252788,
+          "at": "2026-11-17T04:37:04.221440-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DdzTk3TzSmz",
+      "slug": "review-DdzTk3TzSmz",
+      "startSeconds": 0,
+      "endSeconds": 13.984,
+      "sourceDuration": 13.984,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DdzTk3TzSmz/",
+      "brand": "b_intlkitchen",
+      "by": "curated.by.lucy",
+      "postedBy": "curated.by.lucy",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-09-27",
+      "credit": "Review by @curated.by.lucy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252792,
+          "linkRowId": 252791,
+          "at": "2026-11-17T04:37:41.331097-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie Newbie"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DdwmFK9MQLy",
+      "slug": "review-DdwmFK9MQLy",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 17.579,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DdwmFK9MQLy/",
+      "brand": "b_intlkitchen",
+      "by": "janeteats",
+      "postedBy": "janeteats",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-09-26",
+      "credit": "Review by @janeteats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252795,
+          "linkRowId": 252794,
+          "at": "2026-11-17T04:38:14.454235-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DdLBa_yoZgI",
+      "slug": "review-DdLBa_yoZgI",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 46.1,
+      "audio": false,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DdLBa_yoZgI/",
+      "brand": "b_intlkitchen",
+      "by": "foodinbob",
+      "postedBy": "foodinbob",
+      "coauthors": [
+        "bayareafeast"
+      ],
+      "postedDate": "2026-09-12",
+      "credit": "Review by @foodinbob at INTL Kitchen, Milpitas. Instagram collaboration with @bayareafeast. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252798,
+          "linkRowId": 252797,
+          "at": "2026-11-17T04:38:49.176656-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Dc2aoTxSk6s",
+      "slug": "review-Dc2aoTxSk6s",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 116.729,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Dc2aoTxSk6s/",
+      "brand": "b_intlkitchen",
+      "by": "foodie.envy",
+      "postedBy": "foodie.envy",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-09-04",
+      "credit": "Review by @foodie.envy at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252801,
+          "linkRowId": 252800,
+          "at": "2026-11-17T04:39:21.583892-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DcxSfk7CfpU",
+      "slug": "review-DcxSfk7CfpU",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 19.158,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DcxSfk7CfpU/",
+      "brand": "b_intlkitchen",
+      "by": "hallojessa",
+      "postedBy": "hallojessa",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-09-02",
+      "credit": "Review by @hallojessa at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252803,
+          "linkRowId": 252802,
+          "at": "2026-11-17T04:39:56.472907-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Dct1hNBS01P",
+      "slug": "review-Dct1hNBS01P",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.57,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Dct1hNBS01P/",
+      "brand": "b_intlkitchen",
+      "by": "milktea_karen",
+      "postedBy": "milktea_karen",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-08-31",
+      "credit": "Review by @milktea_karen at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen.",
+      "request": [
+        {
+          "rowId": 252806,
+          "linkRowId": 252805,
+          "at": "2026-11-17T04:40:29.025882-08:00",
+          "request": "Clip this video plz\nFoodie \nNewbie Newbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DctmfcLCti0",
+      "slug": "review-DctmfcLCti0",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 134.434,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DctmfcLCti0/",
+      "brand": "b_intlkitchen",
+      "by": "victoria.pham17",
+      "postedBy": "victoria.pham17",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-08-31",
+      "credit": "Review by @victoria.pham17 at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen.",
+      "request": [
+        {
+          "rowId": 252808,
+          "linkRowId": 252807,
+          "at": "2026-11-17T04:40:39.839600-08:00",
+          "request": "Clip this video plz\nPlease update icon pic"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DcjY_yhvNhy",
+      "slug": "review-DcjY_yhvNhy",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 37.874,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DcjY_yhvNhy/",
+      "brand": "b_intlkitchen",
+      "by": "kimjsseats",
+      "postedBy": "kimjsseats",
+      "coauthors": [
+        "intl_kitchen"
+      ],
+      "postedDate": "2026-08-27",
+      "credit": "Review by @kimjsseats at INTL Kitchen, Milpitas. Instagram collaboration with @intl_kitchen. Shows an earlier promotion. Check the shop for today’s offers.",
+      "request": [
+        {
+          "rowId": 252811,
+          "linkRowId": 252810,
+          "at": "2026-11-17T04:42:21.179942-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DfYXhfoMsoi",
+      "slug": "review-DfYXhfoMsoi",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 110.834,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DfYXhfoMsoi/",
+      "brand": "b_littlesheepnewark",
+      "by": "victoria.pham17",
+      "postedBy": "victoria.pham17",
+      "coauthors": [
+        "littlesheep_official"
+      ],
+      "postedDate": "2026-11-06",
+      "credit": "Review by @victoria.pham17 at Little Sheep, Newark. Instagram collaboration with @littlesheep_official.",
+      "request": [
+        {
+          "rowId": 252814,
+          "linkRowId": 252813,
+          "at": "2026-11-17T04:44:27.018869-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Dfz3MejvQCH",
+      "slug": "review-Dfz3MejvQCH",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.09,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Dfz3MejvQCH/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "mandy.munchies",
+      "postedBy": "mandy.munchies",
+      "coauthors": [
+        "sushiumamimilpitas"
+      ],
+      "postedDate": "2026-11-16",
+      "credit": "Review by @mandy.munchies at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.",
+      "request": [
+        {
+          "rowId": 252818,
+          "linkRowId": 252817,
+          "at": "2026-11-17T04:51:20.476510-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DcRg0IZBqQg",
+      "slug": "review-DcRg0IZBqQg",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 17.8,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DcRg0IZBqQg/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "anabellesbelly",
+      "postedBy": "anabellesbelly",
+      "coauthors": [
+        "bayareafeast"
+      ],
+      "postedDate": "2026-08-20",
+      "credit": "Review by @anabellesbelly at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast.",
+      "request": [
+        {
+          "rowId": 252823,
+          "linkRowId": 252822,
+          "at": "2026-11-17T04:52:32.571093-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie Newbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Db6yQrpNL8w",
+      "slug": "review-Db6yQrpNL8w",
+      "startSeconds": 0,
+      "endSeconds": 12.6,
+      "sourceDuration": 12.6,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Db6yQrpNL8w/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "wakeyeats",
+      "postedBy": "wakeyeats",
+      "coauthors": [
+        "sushiumamimilpitas"
+      ],
+      "postedDate": "2026-08-11",
+      "credit": "Review by @wakeyeats at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.",
+      "request": [
+        {
+          "rowId": 252825,
+          "linkRowId": 252824,
+          "at": "2026-11-17T04:53:39.077348-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DZtW-hyx0Cc",
+      "slug": "review-DZtW-hyx0Cc",
+      "startSeconds": 0,
+      "endSeconds": 13.818,
+      "sourceDuration": 13.818,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DZtW-hyx0Cc/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "hannah.tags",
+      "postedBy": "hannah.tags",
+      "coauthors": [
+        "bayareafeast"
+      ],
+      "postedDate": "2026-06-18",
+      "credit": "Review by @hannah.tags at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast.",
+      "request": [
+        {
+          "rowId": 252832,
+          "linkRowId": 252831,
+          "at": "2026-11-17T04:55:45.066682-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DXdbP2UArUQ",
+      "slug": "review-DXdbP2UArUQ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 20.784,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/DXdbP2UArUQ/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "eating.the.bay",
+      "postedBy": "eating.the.bay",
+      "coauthors": [
+        "sushiumamimilpitas"
+      ],
+      "postedDate": "2026-04-23",
+      "credit": "Review by @eating.the.bay at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.",
+      "request": [
+        {
+          "rowId": 252835,
+          "linkRowId": 252834,
+          "at": "2026-11-17T04:56:26.311278-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page where listed; linked from the business under the four-film limit."
+    },
+    {
+      "code": "Df1a428MW2s",
+      "slug": "review-Df1a428MW2s",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 29.793,
+      "audio": true,
+      "batch": 123,
+      "source": "https://www.instagram.com/reel/Df1a428MW2s/",
+      "brand": "b_ohcraboakland",
+      "by": "felicitythefoodie",
+      "postedBy": "felicitythefoodie",
+      "coauthors": [
+        "ohcrab_seafoodboil"
+      ],
+      "postedDate": "2026-11-17",
+      "credit": "Review by @felicitythefoodie at OH CRAB!, Oakland. Instagram collaboration with @ohcrab_seafoodboil.",
+      "request": [
+        {
+          "rowId": 252840,
+          "linkRowId": 252839,
+          "at": "2026-11-17T05:18:58.786188-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    }
+  ],
+  "previouslyPublished": [
+    {
+      "code": "DfWEtUwBFk0",
+      "source": "https://www.instagram.com/reel/DfWEtUwBFk0/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "karaxhuynh",
+      "request": {
+        "rowId": 252820,
+        "linkRowId": 252819,
+        "at": "2026-11-17T04:51:55.608126-08:00",
+        "request": "Clip this video plz"
+      },
+      "disposition": "Previously published. The existing credited film remains live."
+    },
+    {
+      "code": "DbwtXO6xrAq",
+      "source": "https://www.instagram.com/reel/DbwtXO6xrAq/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "_foodieshots_",
+      "request": {
+        "rowId": 252827,
+        "linkRowId": 252826,
+        "at": "2026-11-17T04:54:17.483119-08:00",
+        "request": "Clip this video plz"
+      },
+      "disposition": "Previously published. The existing credited film remains live."
+    },
+    {
+      "code": "DZ6UsplR1V6",
+      "source": "https://www.instagram.com/reel/DZ6UsplR1V6/",
+      "brand": "b_sushiumamimilpitas",
+      "by": "janniners",
+      "request": {
+        "rowId": 252829,
+        "linkRowId": 252828,
+        "at": "2026-11-17T04:55:14.368772-08:00",
+        "request": "Clip this video plz"
+      },
+      "disposition": "Previously published. The existing credited film remains live."
+    }
+  ],
+  "updatedIcons": [
+    "/icons/influencer-karaxhuynh-v123.webp",
+    "/icons/influencer-deeeatzfood-v123.webp",
+    "/icons/influencer-circlespoon-v123.webp",
+    "/icons/influencer-natalie-shuu-v123.webp",
+    "/icons/influencer-charlikestoeat-v123.webp",
+    "/icons/influencer-niafitnesss-v123.webp",
+    "/icons/influencer-cheycheyfromthebay-v123.webp",
+    "/icons/influencer-andrea-eats-food-v123.webp",
+    "/icons/influencer-bylizettexo-v123.webp",
+    "/icons/influencer-kitkatvales-v123.webp",
+    "/icons/influencer-curated-by-lucy-v123.webp",
+    "/icons/influencer-janeteats-v123.webp",
+    "/icons/influencer-foodinbob-v123.webp",
+    "/icons/influencer-foodie-envy-v123.webp",
+    "/icons/influencer-milktea-karen-v123.webp",
+    "/icons/influencer-kimjsseats-v123.webp",
+    "/icons/influencer-victoria-pham17-v123.webp",
+    "/icons/influencer-mandy-munchies-v123.webp",
+    "/icons/influencer-anabellesbelly-v123.webp",
+    "/icons/influencer-hannah-tags-v123.webp",
+    "/icons/influencer-eating-the-bay-v123.webp",
+    "/icons/influencer-cynlacson-v123.webp",
+    "/icons/jars-emeryville-v123.webp",
+    "/icons/lemon-crab-richmond-v123.webp",
+    "/icons/oh-crab-oakland-v123.webp",
+    "/icons/influencer-thefoodiemon-v123.webp"
+  ],
+  "updatedBrands": [
+    "b_eatmorepho",
+    "b_gregorysgourmetdesserts",
+    "b_khaotiewsf",
+    "b_intlkitchen",
+    "b_littlesheepnewark",
+    "b_sushiumamimilpitas",
+    "b_lemoncrabhayward"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0743.PNG",
+      "path": "/icons/influencer-karaxhuynh-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/karaxhuynh/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0750.PNG",
+      "path": "/icons/influencer-deeeatzfood-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/deeeatzfood/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0751.PNG",
+      "path": "/icons/influencer-circlespoon-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/circlespoon/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0752.PNG",
+      "path": "/icons/influencer-natalie-shuu-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/natalie.shuu/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0753.PNG",
+      "path": "/icons/influencer-charlikestoeat-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/charlikestoeat/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0754.PNG",
+      "path": "/icons/influencer-niafitnesss-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/niafitnesss/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0756.PNG",
+      "path": "/icons/influencer-cheycheyfromthebay-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/cheycheyfromthebay/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0757.PNG",
+      "path": "/icons/influencer-andrea-eats-food-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/andrea.eats.food/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0759.PNG",
+      "path": "/icons/influencer-bylizettexo-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/bylizettexo/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0760.PNG",
+      "path": "/icons/influencer-kitkatvales-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/kitkatvales/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0761.PNG",
+      "path": "/icons/influencer-curated-by-lucy-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/curated.by.lucy/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0762.PNG",
+      "path": "/icons/influencer-janeteats-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/janeteats/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0763.PNG",
+      "path": "/icons/influencer-foodinbob-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/foodinbob/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0764.PNG",
+      "path": "/icons/influencer-foodie-envy-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/foodie.envy/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0765.PNG",
+      "path": "/icons/influencer-milktea-karen-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/milktea_karen/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0766.PNG",
+      "path": "/icons/influencer-kimjsseats-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/kimjsseats/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0767.PNG",
+      "path": "/icons/influencer-victoria-pham17-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/victoria.pham17/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0768.PNG",
+      "path": "/icons/influencer-mandy-munchies-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/mandy.munchies/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0769.PNG",
+      "path": "/icons/influencer-anabellesbelly-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/anabellesbelly/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0770.PNG",
+      "path": "/icons/influencer-hannah-tags-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/hannah.tags/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0771.PNG",
+      "path": "/icons/influencer-eating-the-bay-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/eating.the.bay/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0779.PNG",
+      "path": "/icons/influencer-cynlacson-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/_cynlacson/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0737.png",
+      "path": "/icons/jars-emeryville-v123.webp",
+      "comparedAgainst": "https://catering.sfbaydesserts.com/jars-logo-red-ring-profile.png",
+      "disposition": "Official artwork, fitted so the full mark is visible at phone tile size."
+    },
+    {
+      "source": "IMG_0744.PNG",
+      "path": "/icons/lemon-crab-richmond-v123.webp",
+      "comparedAgainst": "https://lemoncrab.us/wp-content/uploads/2024/03/2X-Logo.png",
+      "disposition": "Glenn’s location screenshot identifies Richmond. The tile uses the official shared Lemon Crab mark."
+    },
+    {
+      "source": "IMG_0776.png",
+      "path": "/icons/oh-crab-oakland-v123.webp",
+      "comparedAgainst": "https://oh-crab.com/assets/logo-600.png",
+      "disposition": "Official artwork, fitted so the full mark is visible at phone tile size."
+    },
+    {
+      "source": "https://www.instagram.com/reel/DblUtpRuwaN/",
+      "path": "/icons/influencer-thefoodiemon-v123.webp",
+      "comparedAgainst": "https://www.instagram.com/thefoodiemon/",
+      "disposition": "Original public avatar shown in the credited reel’s profile card."
+    },
+    {
+      "source": "IMG_0730.png",
+      "disposition": "Emeryville address, profile and local pickup/catering description checked against the owner’s site."
+    },
+    {
+      "source": "IMG_0731.PNG",
+      "disposition": "Emeryville phone and email checked against the store and profile."
+    },
+    {
+      "source": "IMG_0758.PNG",
+      "disposition": "Same circlespoon portrait as IMG_0751.PNG; the matching original is used once."
+    },
+    {
+      "source": "IMG_0775.PNG",
+      "disposition": "OH CRAB! hours and Telegraph Avenue address verified on the business website."
+    },
+    {
+      "source": "IMG_0777.png",
+      "disposition": "Official restaurant handle and name also confirmed on its website."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252703,
+      "at": "2026-11-16T13:45:16.776321-08:00",
+      "text": "🙌🏽",
+      "attachments": []
+    },
+    {
+      "rowId": 252707,
+      "at": "2026-11-16T16:52:11.264663-08:00",
+      "text": "Hey bro, you got a minute?",
+      "attachments": []
+    },
+    {
+      "rowId": 252709,
+      "at": "2026-11-16T17:01:17.725420-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0731.PNG",
+        "IMG_0737.png",
+        "IMG_0730.png"
+      ]
+    },
+    {
+      "rowId": 252710,
+      "at": "2026-11-16T17:01:23.540453-08:00",
+      "text": "https://catering.sfbaydesserts.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252711,
+      "at": "2026-11-16T17:01:23.679860-08:00",
+      "text": "Emeryville  • Sweets \nBEASTY • Ice Cream\nBEASTY • Sweets \nBEASTY • Cookies",
+      "attachments": []
+    },
+    {
+      "rowId": 252712,
+      "at": "2026-11-16T17:02:17.350605-08:00",
+      "text": "https://www.instagram.com/reel/DZa0dhoyaaN/",
+      "attachments": []
+    },
+    {
+      "rowId": 252713,
+      "at": "2026-11-16T17:02:17.482513-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 252732,
+      "at": "2026-11-16T20:24:44.549187-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0743.PNG"
+      ]
+    },
+    {
+      "rowId": 252733,
+      "at": "2026-11-16T20:24:44.862082-08:00",
+      "text": "https://www.instagram.com/reel/Df09mpuBpxS/",
+      "attachments": []
+    },
+    {
+      "rowId": 252734,
+      "at": "2026-11-16T20:24:44.933886-08:00",
+      "text": "Clip this video plz \n\nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252735,
+      "at": "2026-11-16T20:26:06.940987-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0744.PNG"
+      ]
+    },
+    {
+      "rowId": 252736,
+      "at": "2026-11-16T20:26:07.317205-08:00",
+      "text": "https://www.instagram.com/reel/Df0vZw5xkMs/",
+      "attachments": []
+    },
+    {
+      "rowId": 252737,
+      "at": "2026-11-16T20:26:07.407059-08:00",
+      "text": "Clip this video plz \nCreate separate page for 2nd location in Richmond plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252738,
+      "at": "2026-11-16T21:56:28.897532-08:00",
+      "text": "https://www.instagram.com/reel/Df0hhgTH1my/",
+      "attachments": []
+    },
+    {
+      "rowId": 252739,
+      "at": "2026-11-16T21:56:28.989541-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252742,
+      "at": "2026-11-16T22:56:49.875033-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0750.PNG"
+      ]
+    },
+    {
+      "rowId": 252743,
+      "at": "2026-11-16T22:56:50.371191-08:00",
+      "text": "https://www.instagram.com/reel/Dfxe2IFhWYf/",
+      "attachments": []
+    },
+    {
+      "rowId": 252744,
+      "at": "2026-11-16T22:56:50.449128-08:00",
+      "text": "Clip this video plz\nFoodie\nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252745,
+      "at": "2026-11-16T22:58:03.913673-08:00",
+      "text": "https://www.instagram.com/reel/DXhf5tdjRIr/",
+      "attachments": []
+    },
+    {
+      "rowId": 252746,
+      "at": "2026-11-16T22:58:04.011384-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252747,
+      "at": "2026-11-16T22:59:35.169751-08:00",
+      "text": "https://www.instagram.com/reel/DVIIU-gAFis/",
+      "attachments": []
+    },
+    {
+      "rowId": 252748,
+      "at": "2026-11-16T22:59:35.302430-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252749,
+      "at": "2026-11-16T23:00:06.594963-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0751.PNG"
+      ]
+    },
+    {
+      "rowId": 252750,
+      "at": "2026-11-16T23:00:07.180900-08:00",
+      "text": "https://www.instagram.com/reel/DPXLDFRATgn/",
+      "attachments": []
+    },
+    {
+      "rowId": 252751,
+      "at": "2026-11-16T23:00:07.288147-08:00",
+      "text": "Clip this video plz \nFoodie\nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252752,
+      "at": "2026-11-16T23:00:40.611215-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0752.PNG"
+      ]
+    },
+    {
+      "rowId": 252753,
+      "at": "2026-11-16T23:00:41.196452-08:00",
+      "text": "https://www.instagram.com/reel/DTzTLeiimyR/",
+      "attachments": []
+    },
+    {
+      "rowId": 252754,
+      "at": "2026-11-16T23:00:41.305012-08:00",
+      "text": "Clip this video plz \nFoodie\nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252755,
+      "at": "2026-11-16T23:01:10.129309-08:00",
+      "text": "https://www.instagram.com/reel/DPP9VfRiWC7/",
+      "attachments": []
+    },
+    {
+      "rowId": 252756,
+      "at": "2026-11-16T23:01:10.216720-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252757,
+      "at": "2026-11-16T23:01:33.825211-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0753.PNG"
+      ]
+    },
+    {
+      "rowId": 252758,
+      "at": "2026-11-16T23:01:34.880344-08:00",
+      "text": "https://www.instagram.com/charlikestoeat",
+      "attachments": []
+    },
+    {
+      "rowId": 252759,
+      "at": "2026-11-16T23:02:24.501053-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0754.PNG"
+      ]
+    },
+    {
+      "rowId": 252760,
+      "at": "2026-11-16T23:02:24.969623-08:00",
+      "text": "https://www.instagram.com/reel/DcFeZIkplbK/",
+      "attachments": []
+    },
+    {
+      "rowId": 252761,
+      "at": "2026-11-16T23:02:25.052667-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252762,
+      "at": "2026-11-16T23:03:35.419852-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0756.PNG"
+      ]
+    },
+    {
+      "rowId": 252763,
+      "at": "2026-11-16T23:03:35.956919-08:00",
+      "text": "https://www.instagram.com/reel/DblUtpRuwaN/",
+      "attachments": []
+    },
+    {
+      "rowId": 252764,
+      "at": "2026-11-16T23:03:36.036977-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252765,
+      "at": "2026-11-16T23:03:36.466952-08:00",
+      "text": "https://www.instagram.com/cheycheyfromthebay",
+      "attachments": []
+    },
+    {
+      "rowId": 252766,
+      "at": "2026-11-16T23:04:08.530453-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0757.PNG"
+      ]
+    },
+    {
+      "rowId": 252767,
+      "at": "2026-11-16T23:04:09.123177-08:00",
+      "text": "https://www.instagram.com/reel/DVElJ6skmta/",
+      "attachments": []
+    },
+    {
+      "rowId": 252768,
+      "at": "2026-11-16T23:04:09.223163-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252769,
+      "at": "2026-11-16T23:04:23.014820-08:00",
+      "text": "https://www.instagram.com/reel/DSnUQLxifU0/",
+      "attachments": []
+    },
+    {
+      "rowId": 252770,
+      "at": "2026-11-16T23:04:23.099651-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252771,
+      "at": "2026-11-17T04:33:35.986615-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0758.PNG"
+      ]
+    },
+    {
+      "rowId": 252772,
+      "at": "2026-11-17T04:33:36.398869-08:00",
+      "text": "https://www.instagram.com/reel/DW7_BhTPlW7/",
+      "attachments": []
+    },
+    {
+      "rowId": 252773,
+      "at": "2026-11-17T04:33:36.473616-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252774,
+      "at": "2026-11-17T04:33:53.257234-08:00",
+      "text": "https://www.instagram.com/reel/DYKuxqUtWUo/",
+      "attachments": []
+    },
+    {
+      "rowId": 252775,
+      "at": "2026-11-17T04:33:53.330434-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252776,
+      "at": "2026-11-17T04:34:26.804604-08:00",
+      "text": "https://www.instagram.com/reel/DfqL-eUhZ8x/",
+      "attachments": []
+    },
+    {
+      "rowId": 252777,
+      "at": "2026-11-17T04:34:26.895958-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252778,
+      "at": "2026-11-17T04:35:17.157355-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0759.PNG"
+      ]
+    },
+    {
+      "rowId": 252779,
+      "at": "2026-11-17T04:35:17.649611-08:00",
+      "text": "https://www.instagram.com/reel/DfhvTCzhrC_/",
+      "attachments": []
+    },
+    {
+      "rowId": 252780,
+      "at": "2026-11-17T04:35:17.725099-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252781,
+      "at": "2026-11-17T04:36:06.340218-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0760.PNG"
+      ]
+    },
+    {
+      "rowId": 252782,
+      "at": "2026-11-17T04:36:06.927928-08:00",
+      "text": "https://www.instagram.com/reel/De24UBSsr13/",
+      "attachments": []
+    },
+    {
+      "rowId": 252783,
+      "at": "2026-11-17T04:36:07.025461-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252784,
+      "at": "2026-11-17T04:36:26.382566-08:00",
+      "text": "https://www.instagram.com/reel/DevntxAI3es/",
+      "attachments": []
+    },
+    {
+      "rowId": 252785,
+      "at": "2026-11-17T04:36:26.456635-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252786,
+      "at": "2026-11-17T04:36:42.310715-08:00",
+      "text": "https://www.instagram.com/reel/Deu_hduBzCl/",
+      "attachments": []
+    },
+    {
+      "rowId": 252787,
+      "at": "2026-11-17T04:36:42.386784-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252788,
+      "at": "2026-11-17T04:37:04.126128-08:00",
+      "text": "https://www.instagram.com/reel/Deit2BnT_xd/",
+      "attachments": []
+    },
+    {
+      "rowId": 252789,
+      "at": "2026-11-17T04:37:04.221440-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252790,
+      "at": "2026-11-17T04:37:40.793625-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0761.PNG"
+      ]
+    },
+    {
+      "rowId": 252791,
+      "at": "2026-11-17T04:37:41.244600-08:00",
+      "text": "https://www.instagram.com/reel/DdzTk3TzSmz/",
+      "attachments": []
+    },
+    {
+      "rowId": 252792,
+      "at": "2026-11-17T04:37:41.331097-08:00",
+      "text": "Clip this video plz \nFoodie\nNewbie Newbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252793,
+      "at": "2026-11-17T04:38:13.880414-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0762.PNG"
+      ]
+    },
+    {
+      "rowId": 252794,
+      "at": "2026-11-17T04:38:14.365477-08:00",
+      "text": "https://www.instagram.com/reel/DdwmFK9MQLy/",
+      "attachments": []
+    },
+    {
+      "rowId": 252795,
+      "at": "2026-11-17T04:38:14.454235-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252796,
+      "at": "2026-11-17T04:38:48.580839-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0763.PNG"
+      ]
+    },
+    {
+      "rowId": 252797,
+      "at": "2026-11-17T04:38:49.057855-08:00",
+      "text": "https://www.instagram.com/reel/DdLBa_yoZgI/",
+      "attachments": []
+    },
+    {
+      "rowId": 252798,
+      "at": "2026-11-17T04:38:49.176656-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252799,
+      "at": "2026-11-17T04:39:20.995322-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0764.PNG"
+      ]
+    },
+    {
+      "rowId": 252800,
+      "at": "2026-11-17T04:39:21.501357-08:00",
+      "text": "https://www.instagram.com/reel/Dc2aoTxSk6s/",
+      "attachments": []
+    },
+    {
+      "rowId": 252801,
+      "at": "2026-11-17T04:39:21.583892-08:00",
+      "text": "Clip this video plz \nFoodie\nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252802,
+      "at": "2026-11-17T04:39:56.396906-08:00",
+      "text": "https://www.instagram.com/reel/DcxSfk7CfpU/",
+      "attachments": []
+    },
+    {
+      "rowId": 252803,
+      "at": "2026-11-17T04:39:56.472907-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252804,
+      "at": "2026-11-17T04:40:28.419121-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0765.PNG"
+      ]
+    },
+    {
+      "rowId": 252805,
+      "at": "2026-11-17T04:40:28.934128-08:00",
+      "text": "https://www.instagram.com/reel/Dct1hNBS01P/",
+      "attachments": []
+    },
+    {
+      "rowId": 252806,
+      "at": "2026-11-17T04:40:29.025882-08:00",
+      "text": "Clip this video plz\nFoodie \nNewbie Newbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252807,
+      "at": "2026-11-17T04:40:39.739467-08:00",
+      "text": "https://www.instagram.com/reel/DctmfcLCti0/",
+      "attachments": []
+    },
+    {
+      "rowId": 252808,
+      "at": "2026-11-17T04:40:39.839600-08:00",
+      "text": "Clip this video plz\nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252809,
+      "at": "2026-11-17T04:42:20.584681-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0766.PNG"
+      ]
+    },
+    {
+      "rowId": 252810,
+      "at": "2026-11-17T04:42:21.066905-08:00",
+      "text": "https://www.instagram.com/reel/DcjY_yhvNhy/",
+      "attachments": []
+    },
+    {
+      "rowId": 252811,
+      "at": "2026-11-17T04:42:21.179942-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 252812,
+      "at": "2026-11-17T04:44:26.325079-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0767.PNG"
+      ]
+    },
+    {
+      "rowId": 252813,
+      "at": "2026-11-17T04:44:26.910330-08:00",
+      "text": "https://www.instagram.com/reel/DfYXhfoMsoi/",
+      "attachments": []
+    },
+    {
+      "rowId": 252814,
+      "at": "2026-11-17T04:44:27.018869-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252815,
+      "at": "2026-11-17T04:44:32.560900-08:00",
+      "text": "Little sheep",
+      "attachments": []
+    },
+    {
+      "rowId": 252816,
+      "at": "2026-11-17T04:51:19.653360-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0768.PNG"
+      ]
+    },
+    {
+      "rowId": 252817,
+      "at": "2026-11-17T04:51:20.376047-08:00",
+      "text": "https://www.instagram.com/reel/Dfz3MejvQCH/",
+      "attachments": []
+    },
+    {
+      "rowId": 252818,
+      "at": "2026-11-17T04:51:20.476510-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "rowId": 252819,
+      "at": "2026-11-17T04:51:55.532309-08:00",
+      "text": "https://www.instagram.com/reel/DfWEtUwBFk0/",
+      "attachments": []
+    },
+    {
+      "rowId": 252820,
+      "at": "2026-11-17T04:51:55.608126-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252821,
+      "at": "2026-11-17T04:52:31.952112-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0769.PNG"
+      ]
+    },
+    {
+      "rowId": 252822,
+      "at": "2026-11-17T04:52:32.471863-08:00",
+      "text": "https://www.instagram.com/reel/DcRg0IZBqQg/",
+      "attachments": []
+    },
+    {
+      "rowId": 252823,
+      "at": "2026-11-17T04:52:32.571093-08:00",
+      "text": "Clip this video plz \nFoodie\nNewbie Newbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252824,
+      "at": "2026-11-17T04:53:38.993056-08:00",
+      "text": "https://www.instagram.com/reel/Db6yQrpNL8w/",
+      "attachments": []
+    },
+    {
+      "rowId": 252825,
+      "at": "2026-11-17T04:53:39.077348-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252826,
+      "at": "2026-11-17T04:54:17.396853-08:00",
+      "text": "https://www.instagram.com/reel/DbwtXO6xrAq/",
+      "attachments": []
+    },
+    {
+      "rowId": 252827,
+      "at": "2026-11-17T04:54:17.483119-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252828,
+      "at": "2026-11-17T04:55:14.290257-08:00",
+      "text": "https://www.instagram.com/reel/DZ6UsplR1V6/",
+      "attachments": []
+    },
+    {
+      "rowId": 252829,
+      "at": "2026-11-17T04:55:14.368772-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252830,
+      "at": "2026-11-17T04:55:44.432845-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0770.PNG"
+      ]
+    },
+    {
+      "rowId": 252831,
+      "at": "2026-11-17T04:55:44.953703-08:00",
+      "text": "https://www.instagram.com/reel/DZtW-hyx0Cc/",
+      "attachments": []
+    },
+    {
+      "rowId": 252832,
+      "at": "2026-11-17T04:55:45.066682-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252833,
+      "at": "2026-11-17T04:56:25.726983-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0771.PNG"
+      ]
+    },
+    {
+      "rowId": 252834,
+      "at": "2026-11-17T04:56:26.213015-08:00",
+      "text": "https://www.instagram.com/reel/DXdbP2UArUQ/",
+      "attachments": []
+    },
+    {
+      "rowId": 252835,
+      "at": "2026-11-17T04:56:26.311278-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252836,
+      "at": "2026-11-17T05:18:22.182652-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0775.PNG",
+        "IMG_0776.png",
+        "IMG_0777.png"
+      ]
+    },
+    {
+      "rowId": 252837,
+      "at": "2026-11-17T05:18:22.994862-08:00",
+      "text": "https://oh-crab.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252838,
+      "at": "2026-11-17T05:18:23.078357-08:00",
+      "text": "Oakland • Eats \nBEASTY • Seafood/Crab boil",
+      "attachments": []
+    },
+    {
+      "rowId": 252839,
+      "at": "2026-11-17T05:18:58.691135-08:00",
+      "text": "https://www.instagram.com/reel/Df1a428MW2s/",
+      "attachments": []
+    },
+    {
+      "rowId": 252840,
+      "at": "2026-11-17T05:18:58.786188-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252841,
+      "at": "2026-11-17T06:03:38.547535-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0779.PNG"
+      ]
+    },
+    {
+      "rowId": 252842,
+      "at": "2026-11-17T06:03:38.928453-08:00",
+      "text": "https://www.instagram.com/_cynlacson",
+      "attachments": []
+    },
+    {
+      "rowId": 252843,
+      "at": "2026-11-17T06:03:39.094512-08:00",
+      "text": "Please update icon pic",
+      "attachments": []
+    }
+  ],
+  "held": [],
+  "sources": [
+    {
+      "brand": "b_jarsemeryville",
+      "urls": [
+        "https://catering.sfbaydesserts.com/",
+        "https://jarsbyfabioviviani.order.tryperdiem.com/locations/emeryville",
+        "https://www.jarsbyfabioviviani.com/findjars"
+      ]
+    },
+    {
+      "brand": "b_lemoncrabrichmond",
+      "urls": [
+        "https://www.instagram.com/lemoncrab_richmond/",
+        "https://richmondstandard.com/community/2026/10/23/rich-dish-lemon-crab-brings-a-fresh-catch-to-downtown-richmond/"
+      ],
+      "note": "Glenn’s Apple Maps card provides the branch phone. Opening times were not repeated because the supplied listing marks Friday closed and Richmond’s official profile does not publish a schedule."
+    },
+    {
+      "brand": "b_ohcraboakland",
+      "urls": [
+        "https://oh-crab.com/",
+        "https://oh-crab.com/menu"
+      ],
+      "note": "The owner’s menu uses market prices; the page gives menu descriptions and a current source."
+    },
+    {
+      "brand": "b_intlkitchen",
+      "urls": [
+        "https://intlkitchen.com/",
+        "https://intlkitchen.com/order"
+      ],
+      "note": "Retain its existing city seat and label. Earlier discounts in the reels are not listed as current offers."
+    }
+  ],
+  "reassignedLocations": [
+    {
+      "code": "DeiXImexmzZ",
+      "from": "b_lemoncrabhayward",
+      "to": "b_lemoncrabrichmond",
+      "reason": "Original caption identified the Richmond storefront."
+    }
+  ],
+  "retainedPlacements": 2347
+}
