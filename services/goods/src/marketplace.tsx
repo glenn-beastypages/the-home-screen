@@ -802,7 +802,9 @@ export function ItemPage({ id }: { id: string }) {
               <ArrowLeftRight size={19} />
               <div>
                 <strong>Open to trade</strong>
-                <p>Offer an item from your shelf to start a trade.</p>
+                {!owned && (
+                  <p>Offer an item from your shelf to start a trade.</p>
+                )}
               </div>
             </div>
           )}
@@ -860,7 +862,7 @@ export function ItemPage({ id }: { id: string }) {
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
           </div>
-          {l.tradePreferences && (
+          {l.tradeEnabled && l.tradePreferences && (
             <div className="item-detail-block">
               <h3>
                 {demo ? "Example trade preferences" : "Open to trading for"}

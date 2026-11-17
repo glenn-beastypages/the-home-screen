@@ -2089,6 +2089,19 @@ label small {
   min-height: 25px;
   min-width: 25px;
 }
+.editor-panel [aria-invalid="true"]:not([type="file"]) {
+  border-color: var(--red);
+}
+.editor-panel .editor-field-error {
+  color: var(--red);
+  font-size: 12px;
+  line-height: 1.4;
+}
+@media (max-width: 430px) {
+  .editor-panel .field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .editor-bottom {
   display: flex;
   justify-content: space-between;
@@ -2141,7 +2154,7 @@ label small {
   font-family: ui-monospace, monospace;
   font-size: 13px;
 }
-.editor-aside > .danger {
+.editor-remove {
   margin-top: 25px;
   font-size: 11px;
 }

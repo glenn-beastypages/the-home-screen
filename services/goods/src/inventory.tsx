@@ -20,6 +20,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import {
+  ApiError,
   api,
   withoutBase,
   conditions,
@@ -303,6 +304,20 @@ async function compressImage(file: File): Promise<File> {
     return file;
   }
 }
+type EditorField =
+  | "photos"
+  | "title"
+  | "description"
+  | "category"
+  | "condition"
+  | "price"
+  | "code";
+type FieldErrors = Partial<Record<EditorField, string>>;
+const INVALID_PRICE =
+  "Enter $0.01 to $1,000,000 with up to two decimal places.";
+const OCCUPIED_POSITION =
+  "That position is already in use. Choose another one.";
+
 export function ListingEditor({ id }: { id?: string }) {
   const { user, go, toast, requireUser } = useApp();
   const cacheKey = "bsty-draft:" + user?.id + ":" + (id || "new");
@@ -326,6 +341,9 @@ export function ListingEditor({ id }: { id?: string }) {
     [listing, setListing] = useState<Listing | null>(null),
     [loading, setLoading] = useState(!!id),
     [error, setError] = useState(""),
+    [loadError, setLoadError] = useState(""),
+    [fieldErrors, setFieldErrors] = useState<FieldErrors>({}),
+    [focusRequest, setFocusRequest] = useState<{ id: string; center?: true }>(),
     [busy, setBusy] = useState(false),
     [uploading, setUploading] = useState(false),
     [failed, setFailed] = useState<{ file: File; error: string }[]>([]),
@@ -348,10 +366,18 @@ export function ListingEditor({ id }: { id?: string }) {
   const operation = useRef<{ payload: string; id: string } | null>(
     readOperation(),
   );
-  const { data: inventory, reload: reloadInventory } = useResource<{
+  const {
+    data: inventory,
+    error: inventoryError,
+    reload: reloadInventory,
+  } = useResource<{
     slots: Slot[];
   }>(user ? "/me/inventory" : null);
-  const { data: categories } = useResource<{ items: string[] }>("/categories");
+  const {
+    data: categories,
+    error: categoryError,
+    reload: reloadCategories,
+  } = useResource<{ items: string[] }>("/categories");
   useEffect(() => {
     if (!id) return;
     let current = true;
@@ -373,7 +399,7 @@ export function ListingEditor({ id }: { id?: string }) {
           });
       })
       .catch((e) => {
-        if (current) setError(e.message);
+        if (current) setLoadError(e.message);
       })
       .finally(() => {
         if (current) setLoading(false);
@@ -383,17 +409,32 @@ export function ListingEditor({ id }: { id?: string }) {
     };
   }, [id]);
   useEffect(() => {
-    if (!loading && user)
+    if (!loading && user && (!id || listing))
       sessionStorage.setItem(cacheKey, JSON.stringify(form));
-  }, [form, cacheKey, loading, user]);
+  }, [form, cacheKey, id, listing, loading, user]);
   useEffect(() => {
     if (!form.code && inventory) {
       const s = inventory.slots.find((s) => !s.listing);
       if (s) setForm((f) => ({ ...f, code: s.code }));
     }
   }, [inventory]);
+  useEffect(() => {
+    if (!focusRequest) return;
+    const target = document.getElementById(focusRequest.id);
+    target?.focus({ preventScroll: true });
+    if (focusRequest.center) target?.scrollIntoView({ block: "center" });
+    else window.scrollTo(0, 0);
+  }, [focusRequest]);
+
   const set = <K extends keyof EditorData>(key: K, value: EditorData[K]) => {
     setError("");
+    setFieldErrors((prior) => {
+      const field = key === "tradeEnabled" ? "price" : key;
+      if (!(field in prior)) return prior;
+      const updated = { ...prior };
+      delete updated[field as EditorField];
+      return updated;
+    });
     setForm((f) => ({ ...f, [key]: value }));
   };
   const upload = async (files: File[]) => {
@@ -435,6 +476,13 @@ export function ListingEditor({ id }: { id?: string }) {
       ...previous.filter((f) => !files.includes(f.file)),
       ...failures,
     ]);
+    if (count > form.photos.length)
+      setFieldErrors((prior) => {
+        if (!prior.photos) return prior;
+        const remaining = { ...prior };
+        delete remaining.photos;
+        return remaining;
+      });
     setUploading(false);
     if (input.current) input.current.value = "";
   };
@@ -447,35 +495,79 @@ export function ListingEditor({ id }: { id?: string }) {
       return { ...f, photos };
     });
   };
-  const validate = (stage: number) => {
+  const priceText = form.price.trim();
+  const priceCents =
+    priceText === "" ? null : Math.round(Number(priceText) * 100);
+  const invalidPrice =
+    priceCents !== null &&
+    (!/^(?:[0-9]+(?:\.[0-9]{0,2})?|\.[0-9]{1,2})$/.test(priceText) ||
+      priceCents < 1 ||
+      priceCents > 100_000_000);
+  const slotOccupied = inventory?.slots.some(
+    (slot) => slot.code === form.code && slot.listing && slot.listing.id !== id,
+  );
+
+  const validate = (stage: number): FieldErrors => {
+    const issues: FieldErrors = {};
     if (stage === 0 && !form.photos.length)
-      return "Add at least one photo before continuing.";
+      issues.photos = "Add at least one photo before continuing.";
     if (stage === 1) {
       if (form.title.trim().length < 3)
-        return "Give your item a title with at least three characters.";
+        issues.title = "Enter an item title with at least 3 characters.";
       if (form.description.trim().length < 5)
-        return "Add a description so the other person knows what to expect.";
-      if (!form.category || !form.condition)
-        return "Choose a category and condition.";
-      if (
-        form.price !== "" &&
-        (!Number.isFinite(Number(form.price)) || Number(form.price) < 0)
-      )
-        return "Enter a valid positive listed value.";
+        issues.description =
+          "Describe the item you’re listing in at least 5 characters.";
+      if (!form.category) issues.category = "Choose a category.";
+      if (!form.condition) issues.condition = "Choose a condition.";
+      if (invalidPrice) issues.price = INVALID_PRICE;
+      else if (!form.tradeEnabled && priceCents === null)
+        issues.price = "Enter a listed value or turn on Open to trade.";
     }
-    if (stage === 2 && !/^[A-Z]-[123]$/.test(form.code))
-      return "Choose an available inventory position.";
-    return "";
+    if (stage === 2) {
+      if (!/^[A-Z]-[123]$/.test(form.code))
+        issues.code = "Choose an available inventory position.";
+      else if (slotOccupied) issues.code = OCCUPIED_POSITION;
+    }
+    return issues;
   };
-  const next = () => {
-    const issue = validate(step);
-    if (issue) {
-      setError(issue);
-      return;
-    }
+
+  const showIssues = (stage: number, issues: FieldErrors) => {
+    const first = Object.keys(issues)[0] as EditorField | undefined;
+    if (!first) return false;
+    setStep(stage);
     setError("");
-    setStep((v) => Math.min(4, v + 1));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setFieldErrors(issues);
+    setFocusRequest({
+      id: first === "photos" ? "listing-photos-error" : "listing-" + first,
+      center: true,
+    });
+    return true;
+  };
+
+  const field = (key: EditorField, hint?: string) => ({
+    id: "listing-" + key,
+    "aria-invalid": fieldErrors[key] ? true : undefined,
+    "aria-describedby":
+      [hint, fieldErrors[key] ? "listing-" + key + "-error" : null]
+        .filter(Boolean)
+        .join(" ") || undefined,
+  });
+  const inlineError = (key: EditorField) =>
+    fieldErrors[key] && (
+      <small id={"listing-" + key + "-error"} className="editor-field-error">
+        {fieldErrors[key]}
+      </small>
+    );
+
+  const goToStep = (stage: number) => {
+    setStep(stage);
+    setError("");
+    setFieldErrors({});
+    setFocusRequest({ id: "listing-step-heading" });
+  };
+
+  const next = () => {
+    if (!showIssues(step, validate(step))) goToStep(step + 1);
   };
   const save = async (status: "draft" | "active" | "archived") => {
     if (!user) {
@@ -483,36 +575,34 @@ export function ListingEditor({ id }: { id?: string }) {
       return;
     }
     if (status === "active") {
-      for (let i = 0; i <= 2; i++) {
-        const issue = validate(i);
-        if (issue) {
-          setStep(i);
-          setError(issue);
-          return;
-        }
-      }
+      for (let stage = 0; stage <= 2; stage++)
+        if (showIssues(stage, validate(stage))) return;
     }
-    if (!form.code) {
-      setError("Choose an inventory position first.");
-      setStep(2);
-      return;
+    if (status === "draft") {
+      if (invalidPrice) {
+        showIssues(1, { price: INVALID_PRICE });
+        return;
+      }
+      if (showIssues(2, validate(2))) return;
     }
     setBusy(true);
     setError("");
     try {
-      const payload = {
-        code: form.code,
-        title: form.title,
-        description: form.description,
-        category: form.category,
-        condition: form.condition,
-        priceCents:
-          form.price === "" ? null : Math.round(Number(form.price) * 100),
-        tradeEnabled: form.tradeEnabled,
-        tradePreferences: form.tradePreferences,
-        photoIds: form.photos.map((p) => p.id),
-        status,
-      };
+      const payload =
+        status === "archived"
+          ? { status }
+          : {
+              code: form.code,
+              title: form.title,
+              description: form.description,
+              category: form.category,
+              condition: form.condition,
+              priceCents,
+              tradeEnabled: form.tradeEnabled,
+              tradePreferences: form.tradePreferences,
+              photoIds: form.photos.map((p) => p.id),
+              status,
+            };
       const fingerprint = JSON.stringify(payload);
       if (operation.current?.payload !== fingerprint)
         operation.current = { payload: fingerprint, id: requestId() };
@@ -538,9 +628,17 @@ export function ListingEditor({ id }: { id?: string }) {
       if (status === "active") go("/items/" + d.listing.id);
       else go("/sell");
     } catch (e) {
-      setError((e as Error).message);
       setArchive(false);
-      reloadInventory();
+      if (
+        status !== "archived" &&
+        e instanceof ApiError &&
+        e.code === "CONFLICT"
+      ) {
+        showIssues(2, { code: OCCUPIED_POSITION });
+        reloadInventory();
+      } else {
+        setError((e as Error).message);
+      }
     } finally {
       setBusy(false);
     }
@@ -561,6 +659,15 @@ export function ListingEditor({ id }: { id?: string }) {
       />
     );
   if (loading) return <Loading />;
+  if (id && (!listing || listing.owner.id !== user.id))
+    return (
+      <>
+        <PageTitle title="Edit listing" back="/sell" />
+        <ErrorBox
+          error={loadError || "Only the owner can edit this listing."}
+        />
+      </>
+    );
   const immutable =
     listing &&
     (listing.isHidden ||
@@ -573,7 +680,7 @@ export function ListingEditor({ id }: { id?: string }) {
     description: form.description,
     category: form.category,
     condition: form.condition,
-    priceCents: form.price === "" ? null : Math.round(Number(form.price) * 100),
+    priceCents,
     tradeEnabled: form.tradeEnabled,
     tradePreferences: form.tradePreferences,
     status: "active",
@@ -631,11 +738,9 @@ export function ListingEditor({ id }: { id?: string }) {
               >
                 <button
                   onClick={() => {
-                    if (i < step) {
-                      setStep(i);
-                      setError("");
-                    }
+                    if (i < step) goToStep(i);
                   }}
+                  aria-current={i === step ? "step" : undefined}
                   disabled={i > step}
                 >
                   <span>{i < step ? <Check size={14} /> : i + 1}</span>
@@ -649,7 +754,9 @@ export function ListingEditor({ id }: { id?: string }) {
               {step === 0 && (
                 <>
                   <span className="eyebrow">01 / A good first impression</span>
-                  <h2>Let your item do the talking.</h2>
+                  <h2 id="listing-step-heading" tabIndex={-1}>
+                    Let your item do the talking.
+                  </h2>
                   <p className="muted">
                     Add up to six clear photos. The first one is your cover.
                     JPEG, PNG or WebP, up to 10 MB each.
@@ -657,10 +764,10 @@ export function ListingEditor({ id }: { id?: string }) {
                   <input
                     ref={input}
                     type="file"
-                    accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
+                    accept="image/jpeg,image/png,image/webp"
                     multiple
                     className="file-input"
-                    id="listing-photos"
+                    {...field("photos")}
                     aria-label="Listing photographs"
                     onChange={(e) =>
                       void upload(Array.from(e.target.files || []))
@@ -724,6 +831,15 @@ export function ListingEditor({ id }: { id?: string }) {
                       </label>
                     )}
                   </div>
+                  {fieldErrors.photos && (
+                    <p
+                      id="listing-photos-error"
+                      className="editor-field-error"
+                      tabIndex={-1}
+                    >
+                      {fieldErrors.photos}
+                    </p>
+                  )}
                   {failed.map((f, i) => (
                     <div className="upload-failure" role="alert" key={i}>
                       <div>
@@ -753,36 +869,57 @@ export function ListingEditor({ id }: { id?: string }) {
               {step === 1 && (
                 <>
                   <span className="eyebrow">02 / Tell its story</span>
-                  <h2>The good details.</h2>
+                  <h2 id="listing-step-heading" tabIndex={-1}>
+                    The good details.
+                  </h2>
                   <div className="form">
                     <label>
-                      Item title
+                      <span id="listing-title-label">Item title</span>
                       <input
+                        {...field("title", "listing-title-hint")}
+                        aria-labelledby="listing-title-label"
+                        required
                         maxLength={80}
                         value={form.title}
                         onChange={(e) => set("title", e.target.value)}
                         placeholder="e.g. Vintage indigo chore jacket"
                       />
-                      <small>{form.title.length}/80</small>
+                      <small id="listing-title-hint">
+                        {form.title.length}/80
+                      </small>
+                      {inlineError("title")}
                     </label>
                     <label>
-                      Description
+                      <span id="listing-description-label">Description</span>
                       <textarea
+                        {...field("description", "listing-description-hint")}
+                        aria-labelledby="listing-description-label"
+                        required
                         maxLength={1000}
                         rows={5}
                         value={form.description}
                         onChange={(e) => set("description", e.target.value)}
                         placeholder="Tell us about the fit, condition and any details worth knowing."
                       />
-                      <small>
-                        {form.description.length}/1000 · Be honest about wear
-                        and flaws.
+                      <small id="listing-description-hint">
+                        {form.description.length}/1000 · Describe your item’s
+                        condition and any wear or flaws.
                       </small>
+                      {inlineError("description")}
                     </label>
+                    {categoryError && (
+                      <ErrorBox
+                        error="Couldn’t load categories."
+                        retry={reloadCategories}
+                      />
+                    )}
                     <div className="field-row">
                       <label>
-                        Category
+                        <span id="listing-category-label">Category</span>
                         <select
+                          {...field("category")}
+                          aria-labelledby="listing-category-label"
+                          required
                           value={form.category}
                           onChange={(e) => set("category", e.target.value)}
                         >
@@ -791,10 +928,14 @@ export function ListingEditor({ id }: { id?: string }) {
                             <option key={c}>{c}</option>
                           ))}
                         </select>
+                        {inlineError("category")}
                       </label>
                       <label>
-                        Condition
+                        <span id="listing-condition-label">Condition</span>
                         <select
+                          {...field("condition")}
+                          aria-labelledby="listing-condition-label"
+                          required
                           value={form.condition}
                           onChange={(e) => set("condition", e.target.value)}
                         >
@@ -803,23 +944,38 @@ export function ListingEditor({ id }: { id?: string }) {
                             <option key={c}>{c}</option>
                           ))}
                         </select>
+                        {inlineError("condition")}
                       </label>
                     </div>
                     <label>
-                      Listed value ($){" "}
-                      <span className="optional">optional</span>
+                      <span id="listing-price-label">
+                        Listed value ($)
+                        {form.tradeEnabled && (
+                          <>
+                            {" "}
+                            <span className="optional">optional</span>
+                          </>
+                        )}
+                      </span>
                       <input
-                        type="number"
-                        min="0"
-                        step="0.01"
+                        {...field("price", "listing-price-hint")}
+                        aria-labelledby="listing-price-label"
+                        type="text"
+                        inputMode="decimal"
+                        required={!form.tradeEnabled}
                         value={form.price}
                         onChange={(e) => set("price", e.target.value)}
-                        placeholder="Leave blank for trade only"
+                        placeholder={
+                          form.tradeEnabled
+                            ? "Leave blank for trade only"
+                            : "e.g. 45.00"
+                        }
                       />
-                      <small>
+                      <small id="listing-price-hint">
                         A reference value for your item. Payments are not
                         collected here.
                       </small>
+                      {inlineError("price")}
                     </label>
                     <label className="check-label">
                       <input
@@ -831,17 +987,24 @@ export function ListingEditor({ id }: { id?: string }) {
                     </label>
                     {form.tradeEnabled && (
                       <label>
-                        Trade preferences{" "}
-                        <span className="optional">optional</span>
+                        <span id="listing-trade-preferences-label">
+                          Trade preferences{" "}
+                          <span className="optional">optional</span>
+                        </span>
                         <textarea
+                          aria-labelledby="listing-trade-preferences-label"
+                          aria-describedby="listing-trade-preferences-hint"
                           rows={3}
                           maxLength={500}
                           value={form.tradePreferences}
                           onChange={(e) =>
                             set("tradePreferences", e.target.value)
                           }
-                          placeholder="What would you love to find?"
+                          placeholder="e.g. Like-new sneakers in size 9"
                         />
+                        <small id="listing-trade-preferences-hint">
+                          What you’d like to receive in a trade.
+                        </small>
                       </label>
                     )}
                   </div>
@@ -850,14 +1013,25 @@ export function ListingEditor({ id }: { id?: string }) {
               {step === 2 && (
                 <>
                   <span className="eyebrow">03 / Find its place</span>
-                  <h2>A spot on your shelf.</h2>
+                  <h2 id="listing-step-heading" tabIndex={-1}>
+                    A spot on your shelf.
+                  </h2>
                   <p className="muted">
                     Choose one of your 78 inventory positions. Other sellers can
                     use this code to refer to your item.
                   </p>
+                  {inventoryError && (
+                    <ErrorBox
+                      error="Couldn’t load your shelf positions."
+                      retry={reloadInventory}
+                    />
+                  )}
                   <label className="slot-select-label">
-                    Inventory position
+                    <span id="listing-code-label">Inventory position</span>
                     <select
+                      {...field("code")}
+                      aria-labelledby="listing-code-label"
+                      required
                       value={form.code}
                       onChange={(e) => set("code", e.target.value)}
                     >
@@ -873,6 +1047,7 @@ export function ListingEditor({ id }: { id?: string }) {
                         </option>
                       ))}
                     </select>
+                    {inlineError("code")}
                   </label>
                   <div className="slot-picker">
                     {inventory?.slots.map((s) => (
@@ -903,7 +1078,9 @@ export function ListingEditor({ id }: { id?: string }) {
               {step === 3 && (
                 <>
                   <span className="eyebrow">04 / The shopper's view</span>
-                  <h2>Looking good?</h2>
+                  <h2 id="listing-step-heading" tabIndex={-1}>
+                    Looking good?
+                  </h2>
                   <p className="muted">
                     This is how your item will appear. Check your photos and
                     details before making it public.
@@ -926,7 +1103,7 @@ export function ListingEditor({ id }: { id?: string }) {
                           <ArrowLeftRight size={16} /> Open to trade
                         </p>
                       )}
-                      {form.tradePreferences && (
+                      {form.tradeEnabled && form.tradePreferences.trim() && (
                         <p>
                           <strong>Looking for:</strong> {form.tradePreferences}
                         </p>
@@ -940,7 +1117,9 @@ export function ListingEditor({ id }: { id?: string }) {
                   <div className="publish-symbol">
                     <Check size={40} />
                   </div>
-                  <h2>Review before publishing</h2>
+                  <h2 id="listing-step-heading" tabIndex={-1}>
+                    Review before publishing
+                  </h2>
                   <p className="muted">
                     Your item will be public at position{" "}
                     <strong>{form.code}</strong>. You can edit it while it’s
@@ -978,10 +1157,7 @@ export function ListingEditor({ id }: { id?: string }) {
                 <button
                   className="text-button"
                   disabled={step === 0 || busy}
-                  onClick={() => {
-                    setStep((s) => s - 1);
-                    setError("");
-                  }}
+                  onClick={() => goToStep(step - 1)}
                 >
                   <ArrowLeft size={17} /> Back
                 </button>
@@ -995,6 +1171,16 @@ export function ListingEditor({ id }: { id?: string }) {
                   </button>
                 )}
               </div>
+              {id && (
+                <button
+                  type="button"
+                  className="text-button danger editor-remove"
+                  disabled={busy || uploading}
+                  onClick={() => setArchive(true)}
+                >
+                  <Trash2 size={16} /> Remove listing
+                </button>
+              )}
             </section>
             <aside className="editor-aside">
               <h3>Listing tips</h3>
@@ -1003,14 +1189,6 @@ export function ListingEditor({ id }: { id?: string }) {
                 <span>{form.code || "A-1"}</span>
                 <ArrowLeftRight size={30} strokeWidth={1} />
               </div>
-              {id && (
-                <button
-                  className="text-button danger"
-                  onClick={() => setArchive(true)}
-                >
-                  <Trash2 size={16} /> Remove listing
-                </button>
-              )}
             </aside>
           </div>
         </>
