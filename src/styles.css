@@ -13876,27 +13876,32 @@ span.top3-add {
   place-items: center;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  /* Cut like a category tile (.cat-icon): three soft corners, the folded
+     one square. Glenn, 2026-11-18: "shaped like our icon with the black
+     triangle? No need for any yellow there and you could make the letters
+     a tad bit bigger." */
+  border-radius: 24% 0 24% 24%;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: -0.2px;
 }
 
-/* The fold: the corner turned down, as on the icon. */
+/* The fold: the icons' reverse black triangle (PAGE_FOLD_DARK, M78 0V22H100Z). */
 .spotlight-pages-face::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  border-style: solid;
-  border-width: 0 11px 11px 0;
-  border-color: transparent #f6d800 transparent transparent;
+  width: 22%;
+  height: 22%;
+  background: #151515;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 
 .spotlight-pages:active .spotlight-pages-face { transform: scale(0.9); }
