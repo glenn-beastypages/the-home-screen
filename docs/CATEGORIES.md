@@ -132,3 +132,32 @@ Bar/Lounge became Bar/Lounge/Pub on 23 October 2026, Glenn's wording with Powder
 FROYO was added on 23 October 2026 ("New category BEASTY • FROYO", with a reel of Yiaya in Palo Alto): frozen yogurt shops by type line, with a cup-and-swirl glyph and wallpaper. Catering was added on 24 October 2026 ("New Category BEASTY • Catering", with Inda & Mely in San Bruno): caterers and restaurants that cater, by type line; Chefs keeps private and personal chefs and also tests catering, so a caterer can be on both. Both are in More pages and Search.
 
 Steakhouse was added on 26 October 2026 ("New category / BEASTY • Steakhouse", with Bourbon Steak, Harris' and Blind Butcher in San Francisco): steakhouses and chophouses by type line, with a steak glyph and a wallpaper of grilled cuts. Existing steakhouses fill it automatically. It is in More pages and Search.
+
+## Every category has a drawing (18 November 2026)
+
+Glenn, 16 November: "is there a glitch for the BEASTY pages icons? Some are
+randomly blank", and again on 18 November with a screenshot of More pages. It
+was not random: 29 categories added after 26 October (Poke, Cupcakes, Pie,
+Burritos, Pop-up/Catering, El Salvadoran, Thai, Peruvian, Jamaican, Fried
+Chicken, Greek, Chicken Sandwich, Pizza, Dumplings, Sandwiches, Donuts, Boba,
+Onigiri, Adopt/Foster, Filipino Food, Italian, Ice Cream, Mobile Cart, Pho,
+Wings, Seafood/Crab Boil, Burgers/Hot Dogs, Korean BBQ and Cookies) had no
+entry in `CATEGORY_GLYPHS`, so their tiles showed only the background. Each
+now has one.
+
+**When a category is added, it gets its drawing in the same commit**, in
+`src/data/categoryGlyphs.ts`, in the set's style, so the tiles stay
+consistent:
+
+- a 24-unit grid, white strokes 1.7 wide with round caps and joins, no fills;
+  a `dot` only for small solid details (sprinkles, pearls, wheels);
+- one object people recognise at thumbnail size, about 18 units across,
+  centred near (12, 12), in 2 to 11 strokes;
+- distinct from its neighbours: Burgers, Chicken Sandwich and Sandwiches
+  differ by the patty edge and the toothpick flag; Ramen, Pho and Poke by
+  steam, noodles and cubes.
+
+`node tools/audit-category-glyphs.mjs` (also in `tools/audit-all.mjs`) fails
+when a category has no drawing or one drifts outside the set. If one is ever
+missing anyway, the tile shows the category's first letter instead of going
+blank (`src/ios/CategoryIcon.tsx`).
