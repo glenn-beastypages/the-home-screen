@@ -10,7 +10,7 @@ import { CartApp } from './apps/CartApp'
 import { OrdersApp } from './apps/OrdersApp'
 import { SearchApp } from './apps/SearchApp'
 import { NewsApp } from './apps/NewsApp'
-import { AccountApp, HelpApp, RewardsApp, SupplyApp } from './apps/SimpleApps'
+import { AccountApp, EatApp, HelpApp, RewardsApp, SupplyApp } from './apps/SimpleApps'
 import { SettingsApp } from './apps/SettingsApp'
 import { PhoneApp } from './apps/PhoneApp'
 import { ReserveApp } from './apps/ReserveApp'
@@ -82,6 +82,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <AffiliateApp api={api} />
     case 'supply':
       return <SupplyApp api={api} />
+    case 'eat':
+      return <EatApp api={api} />
     case 'gallery':
       return <GalleryApp api={api} />
     case 'watch':

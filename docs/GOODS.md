@@ -15,3 +15,24 @@ The November 10 preview adds 16 clearly labeled, persisted demo products across 
 The updated checks pass 39 API tests, 12 desktop/mobile browser cases and 31 actual-host checks. Existing-account code sign-in on `/login` no longer requests signup name/city fields; an explicit Create an account mode retains the original signup form. Visible Chrome verified real Google signup, account/profile creation, sign-out and repeat Pages-to-Goods login to the same account, with an exact matching Pages member ID. A real email code was delivered to the QA inbox; its manual entry was not observed and is not claimed as a completed live email-only login.
 
 Goods support and policy ownership, database/photo backups and restore rehearsal remain operator responsibilities. No shipping, payments, escrow or physical handoff verification is provided by this release.
+
+## One sign-in for both sites (19 November 2026)
+
+Leon: "make sure both login can log both beasty pages and beastygoods". Goods
+is served from the same host, so it reads the BEASTY Pages session directly
+(`/api/identity/status`):
+
+- Signed in on BEASTY Pages → opening Goods signs you in, no tap (one attempt
+  per tab, so a failure shows the normal sign-in screen instead of looping).
+- Signing in on Goods ("Continue with BEASTY" or Google) goes through the
+  BEASTY sign-in, so BEASTY Pages is signed in too.
+- Signing out of Goods signs out of BEASTY Pages; signing out of BEASTY Pages
+  ends a Goods session that came from that account. Goods-only email accounts
+  are left alone, and an unreachable Pages never signs anyone out.
+- No new Goods-only accounts: "Sign up with Goods email" is gone. Existing
+  Goods email accounts still sign in and connect from Settings.
+
+Checked on a local host with a synthetic account in all four directions;
+`node tools/audit-goods-host.mjs` 31/31 and the Goods unit tests 49/49 pass.
+Canonical change: `../bsty-goods` branch `claude/glenn-1119` (off
+`codex/goods-browser-audit`).

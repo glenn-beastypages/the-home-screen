@@ -138,6 +138,22 @@ h2,
   font-weight: 700;
   letter-spacing: 0.12em;
 }
+/* Glenn, 2026-11-19: "put Goods below BSTY and perhaps bold the letters".
+   GOODS reads left to right under the yellow bar, as wide as BSTY. */
+.wordmark {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.wordmark small {
+  writing-mode: horizontal-tb;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.42em;
+  padding: 0 0 0 1px;
+}
 .header-search {
   grid-area: search;
   display: grid;
@@ -592,6 +608,10 @@ h2,
   }
   .wordmark-dot {
     right: 0;
+  }
+  .wordmark small {
+    font-size: 11px;
+    letter-spacing: 0.4em;
   }
   .header-listing {
     display: none;

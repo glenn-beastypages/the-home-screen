@@ -293,3 +293,13 @@ export function SupplyApp({ api }: { api: ShellApi }) {
     </AppChrome>
   )
 }
+
+export function EatApp({ api }: { api: ShellApi }) {
+  return (
+    <AppChrome title="EAT" onBack={api.closeApp} tint="#2F2F31">
+      <div className="plain">
+        <p className="plain-note">Coming soon.</p>
+      </div>
+    </AppChrome>
+  )
+}

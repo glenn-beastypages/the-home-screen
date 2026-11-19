@@ -121,6 +121,80 @@ export function navigateToIdentity(url: string) {
   location.assign(parsed.href);
 }
 
+/*
+  ONE BEASTY ACCOUNT ACROSS BOTH SITES. Leon, 2026-11-19: "make sure both login
+  can log both beasty pages and beastygoods". Goods is served from the same
+  host as BEASTY Pages, so a visitor already signed in there is signed in here
+  without a second tap. One attempt per tab: if it fails (an unlinked Goods
+  account, say), the ordinary sign-in screen shows its error instead of looping.
+*/
+const sharedAttemptKey = "bsty-goods:shared-sign-in-attempt";
+
+export async function continueSharedSession(route: string): Promise<boolean> {
+  try {
+    if (sessionStorage.getItem(sharedAttemptKey)) return false;
+    if (/^\/(reset-password|forgot)/.test(route)) return false;
+    const pages = await fetch("/api/identity/status", {
+      credentials: "same-origin",
+      cache: "no-store",
+    });
+    if (!pages.ok) return false;
+    const status = (await pages.json()) as { member?: { id?: string } | null };
+    if (!status?.member?.id) return false;
+    sessionStorage.setItem(sharedAttemptKey, String(Date.now()));
+    const returnTo = /^\/(login|signup)/.test(route) ? "/" : route;
+    const response = await api<{ url: string }>("/identity/sign-in", "POST", {
+      method: "beastypages",
+      returnTo,
+    });
+    navigateToIdentity(response.url);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function sharedSessionReady() {
+  try {
+    sessionStorage.removeItem(sharedAttemptKey);
+  } catch {
+    /* private mode: nothing to clear */
+  }
+}
+
+/** Signed out on BEASTY Pages: a Goods session that came from that account
+ *  ends too. Goods-only email accounts are left alone, and an unreachable
+ *  Pages never signs anyone out. */
+export async function endedOnPages(): Promise<boolean> {
+  try {
+    const pages = await fetch("/api/identity/status", {
+      credentials: "same-origin",
+      cache: "no-store",
+    });
+    if (!pages.ok) return false;
+    const status = (await pages.json()) as { member?: { id?: string } | null };
+    if (status?.member?.id) return false;
+    const linked = await api<{ linked: boolean }>("/identity/linked");
+    if (!linked.linked) return false;
+    await api("/auth/sign-out", "POST", {});
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/** Signing out of Goods signs out of BEASTY Pages too: it is one account. */
+export async function signOutOfPages() {
+  try {
+    await fetch("/api/members/signout", {
+      method: "POST",
+      credentials: "same-origin",
+    });
+  } catch {
+    /* Pages unreachable: Goods is still signed out */
+  }
+}
+
 export function SharedSignIn({
   options,
   loading,

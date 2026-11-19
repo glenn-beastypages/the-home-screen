@@ -41,6 +41,7 @@ import { Admin } from "./admin";
 import { ManagedResale, ResaleQueue } from "./resale";
 import { Orders, OrderPage } from "./purchases";
 import { initNativeNavigation } from "./platform";
+import { continueSharedSession, endedOnPages, sharedSessionReady } from "./identity";
 
 function AppRoute({ route }: { route: string }) {
   const path = route.split("?")[0].replace(/\/$/, "") || "/";
@@ -183,17 +184,33 @@ export default function App() {
     window.scrollTo({ top: 0 });
   }, []);
   const sessionRequest = useRef(0);
-  const refreshUser = useCallback(async () => {
+  const loadUser = useCallback(async () => {
     const request = ++sessionRequest.current;
     const d = await api<{ user: Profile | null }>("/me");
-    if (request !== sessionRequest.current) return;
+    if (request !== sessionRequest.current) return undefined;
     setUser(d.user);
     setExpired(false);
+    if (d.user) sharedSessionReady();
+    return d.user;
   }, []);
+  const refreshUser = useCallback(async () => {
+    await loadUser();
+  }, [loadUser]);
   useEffect(() => {
-    void refreshUser()
-      .catch(() => {})
-      .finally(() => setInitializing(false));
+    void (async () => {
+      let leaving = false;
+      try {
+        const signedIn = await loadUser();
+        if (signedIn === null)
+          leaving = await continueSharedSession(
+            withoutBase(location.pathname + location.search),
+          );
+        else if (signedIn && (await endedOnPages())) await loadUser();
+      } catch {
+        /* the sign-in screen handles it */
+      }
+      if (!leaving) setInitializing(false);
+    })();
     const pop = () => {
       setRoute(withoutBase(location.pathname + location.search));
       window.scrollTo({ top: 0 });
@@ -242,7 +259,7 @@ export default function App() {
       window.removeEventListener("bsty:session-expired", expiry);
       window.removeEventListener("bsty:resume", resume);
     };
-  }, [refreshUser, go]);
+  }, [refreshUser, loadUser, go]);
   useEffect(() => {
     if (!user) {
       setNoticeCount(0);

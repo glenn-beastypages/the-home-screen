@@ -19,7 +19,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery' | 'watch' | 'join' | 'news' | 'affiliate' | 'friends'
+  | 'supply' | 'gallery' | 'watch' | 'join' | 'news' | 'affiliate' | 'friends' | 'eat'
 
 export interface AppDef {
   id: string
@@ -537,6 +537,34 @@ export const SUPPLY_APP: AppDef = {
   tint: '#111111',
 }
 
+/*
+  EAT, back in the BEASTY dock set. Glenn, 2026-11-19: "can we include an EAT
+  button again & put coming soon." The dock shows no labels, so "coming soon"
+  is printed on the tile itself, under the slab EAT it wore before November 4.
+*/
+const EatIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <path d={PAGE_ICON_PATH} fill="#2F2F31" />
+    <text x="50" y="57" textAnchor="middle" fill="#fff" fontFamily="'Rockwell', 'Roboto Slab', Georgia, serif" fontSize="34" fontWeight="800" letterSpacing="-1">
+      EAT
+    </text>
+    <text x="50" y="76" textAnchor="middle" fill="#FFE63D" fontFamily="Inter, system-ui, sans-serif" fontSize="9.5" fontWeight="800" letterSpacing="1.4">
+      COMING SOON
+    </text>
+    <PageFold />
+  </svg>
+)
+
+export const EAT_APP: AppDef = {
+  id: 'sys.eat',
+  name: 'EAT',
+  label: 'EAT',
+  icon: <EatIcon />,
+  kind: 'system',
+  systemKey: 'eat',
+  tint: '#2F2F31',
+}
+
 /**
  * BEASTY · Goods, the flagship sheet — a PAGE, not a window.
  *
@@ -612,6 +640,7 @@ export const ALL_APPS: AppDef[] = [
   CALENDAR_APP,
   PROFILE_APP,
   SUPPLY_APP,
+  EAT_APP,
   GOODS_APP,
   GALLERY_APP,
   WATCH_APP,
@@ -801,7 +830,8 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
   {
     key: 'beasty',
     name: 'BEASTY',
-    /* Glenn removed EAT on November 4. */
+    /* Glenn removed EAT on November 4 and asked for it back, marked coming
+       soon, on November 19 (EAT_APP). Third, where it sat before. */
     /*
       DESIGNS TAKES THE FIRST SLOT, his instruction on 2026-08-25: "you can put
       BEASTY designs in place of the BEASTY pages icon."
@@ -814,7 +844,7 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
       BEASTY Goods keeps its place in ALL_APPS and on the home grid; it is the
       dock slot it loses, and Designs is a thing he sells.
     */
-    apps: [DESIGNS_APP, byId('b_beastyh20'), SUPPLY_APP],
+    apps: [DESIGNS_APP, byId('b_beastyh20'), EAT_APP, SUPPLY_APP],
   },
   { key: 'help', name: 'Help', apps: [PHONE_APP, ...SYSTEM_APPS.filter((a) =>
       ['sys.account', 'sys.help', 'sys.settings'].includes(a.id))

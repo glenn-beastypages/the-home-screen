@@ -23,6 +23,7 @@ import {
 import {
   SharedSignIn,
   identityError,
+  signOutOfPages,
   navigateToIdentity,
   safeGoodsReturn,
   type IdentityOptions,
@@ -56,6 +57,12 @@ export function AuthPage({
     [busy, setBusy] = useState(false),
     [sent, setSent] = useState(false),
     [legacyOpen, setLegacyOpen] = useState(false);
+  /* Goods-only accounts cannot sign in to BEASTY Pages, so none are created any
+     more (Leon, 2026-11-19): signing up is a BEASTY account. Existing Goods
+     email accounts still sign in and connect from Settings. */
+  useEffect(() => {
+    if (mode === "signup") setLegacyOpen(false);
+  }, [mode]);
   const sharedMode = mode === "login" || mode === "signup";
   const identity = useResource<IdentityOptions>(
     sharedMode ? "/identity/options" : null,
@@ -186,6 +193,7 @@ export function AuthPage({
                     returnTo={returnTo}
                     onRetry={identity.reload}
                   />
+                  {mode !== "signup" && (
                   <button
                     className="legacy-toggle text-button"
                     aria-expanded={legacyOpen}
@@ -194,11 +202,10 @@ export function AuthPage({
                   >
                     {legacyOpen
                       ? "Hide Goods email sign-in"
-                      : mode === "signup"
-                        ? "Sign up with Goods email"
-                        : "Use an existing Goods email account"}
+                      : "Use an existing Goods email account"}
                     <ArrowRight size={15} />
                   </button>
+                  )}
                 </>
               )}
               {(!sharedMode || legacyOpen) && (
@@ -330,6 +337,7 @@ export function ProfilePage() {
     setLogout(true);
     try {
       await api("/auth/sign-out", "POST", {});
+      await signOutOfPages();
       notifySessionChange();
       for (const key of Object.keys(sessionStorage))
         if (key.startsWith("bsty-draft:")) sessionStorage.removeItem(key);
@@ -424,7 +432,7 @@ export function ProfilePage() {
         disabled={logout}
       >
         <LogOut size={17} />
-        {logout ? "Signing out…" : "Sign out of Goods"}
+        {logout ? "Signing out…" : "Sign out"}
       </button>
     </>
   );
