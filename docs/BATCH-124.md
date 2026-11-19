@@ -22,3 +22,11 @@ The [intake ledger](../research/roster/batch124.json) covers all 96 messages aft
 ## Checks
 
 The seat comparison against origin/main found 23 new seats: House of Nanking’s two seats and 21 automatic Chinese spots. Exactly 138 overflow positions moved and nothing was removed. Apart from the new listing, only the three creators’ icons changed among the 1,397 existing business records. `tools/audit-batch124.mjs` passed locally in Chromium, including muted playback of all eight films, the 55-row menu, the San Francisco More goods return and the 320 px layout. `tools/audit-category-glyphs.mjs` passes with 82 categories.
+
+## Live verification
+
+Render served `69eee01` at 3:23 p.m. Pacific on November 19, with the new entry bundle. The directory and Goods both answered 200. The Batch 124 audit passed on beastypages.com in Chromium, with all eight films played muted, and in iPhone WebKit. In both, House of Nanking’s 55-row menu, San Francisco More goods return, 320 px layout, all 22 Chinese seats, the Heavy Hitter seat and all 20 new icon, clip and poster files matched the release. `tools/live-verify.mjs` passed. No new sends had arrived when this was recorded.
+
+Three older audits fail the same way on a clean, built copy of origin/main from before this batch, so they are not caused by it. `audit-data` still expects three BEASTY dock tiles after EAT came back. `audit-categories` waits for a “BEASTY • Cafe” home button. `audit-foodies` fails on its “reviewed twice” example.
+
+[Live verification record](../research/roster/b124-live-verification.json)
