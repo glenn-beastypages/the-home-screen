@@ -220,8 +220,9 @@ for (const b of BRANDS) {
 // ---- 7. the registry -----------------------------------------------------
 const appIds = new Set(ALL_APPS.map((a) => a.id))
 for (const set of DOCK_SETS) {
-  // Glenn removed EAT from the BEASTY dock on November 4.
-  const expected = set.key === 'beasty' ? 3 : 4
+  // Every set is four. Glenn removed EAT from the BEASTY set on November 4 and
+  // asked for it back, marked coming soon, on November 19.
+  const expected = 4
   if (set.apps.length !== expected) err(`dock set "${set.name}" has ${set.apps.length} tiles, expected ${expected}`)
   for (const a of set.apps)
     if (!appIds.has(a.id) && !a.page) err(`dock tile ${a.name} (${a.id}) cannot be resolved by appById`)
