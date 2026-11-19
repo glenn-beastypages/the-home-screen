@@ -97148,4 +97148,376 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+
+  // Batch 124 — House of Nanking opens BEASTY • Chinese.
+  {
+    "slug": "house-of-nanking-sf",
+    "name": "House of Nanking",
+    "label": "House of Nanking",
+    "cuisine": "Shanghainese and Chinese American restaurant",
+    "category": "Chinese",
+    "color": "#0B0B0B",
+    "icon": "house-of-nanking-sf-v124",
+    "prep": 0,
+    "items": [],
+    "address": "919 Kearny St, San Francisco, CA 94133",
+    "phone": "(415) 421-1429",
+    "hours": "Mon–Fri 11am–9pm, Sat–Sun 12pm–9pm",
+    "tagline": "Peter and Lily Fang’s Shanghainese home cooking, Nanking sesame chicken and sizzling fried rice on Kearny Street since 1988.",
+    "site": "https://www.houseofnankingsf.com/",
+    "siteCta": "See the menu",
+    "orderUrl": "https://s.allsetnow.com/UHDZSUw/",
+    "instagram": "https://www.instagram.com/houseofnankingsf/",
+    "siteNote": "Prices are from the restaurant’s May 2025 lunch and dinner menu. The restaurant notes that prices are subject to change.",
+    "panels": [
+      {
+        "head": "Family style",
+        "body": [
+          "Every dish is served family style. Ask the kitchen to choose for the table, or order the chef’s choice menu."
+        ],
+        "links": [
+          {
+            "label": "House of Nanking menu",
+            "href": "https://www.houseofnankingsf.com/menu/"
+          },
+          {
+            "label": "Order pickup",
+            "href": "https://s.allsetnow.com/UHDZSUw/"
+          }
+        ]
+      },
+      {
+        "head": "Groups and catering",
+        "body": [
+          "Groups of five or fewer walk in. Groups of six or more reserve by email. Catering goes through the family’s sister restaurant, FANG."
+        ],
+        "links": [
+          {
+            "label": "Reservations",
+            "href": "https://www.houseofnankingsf.com/reservations/"
+          },
+          {
+            "label": "FANG catering",
+            "href": "https://www.fangrestaurant.com/catering/"
+          },
+          {
+            "label": "Hours and location",
+            "href": "https://www.houseofnankingsf.com/location/house-of-nanking/"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Appetizers & dumplings",
+        "items": [
+          [
+            "Fried Pork Potstickers (6 pcs)",
+            "Served with the house peanut sauce",
+            1495
+          ],
+          [
+            "Crispy Beef Potstickers (6 pcs)",
+            "Served with sweet and sour sauce",
+            1495
+          ],
+          [
+            "Crispy Egg Pillows (2 pcs)",
+            "Crisp crepe filled with chives, vermicelli and egg",
+            895
+          ],
+          [
+            "Crispy Shrimp Packets (4 pcs)",
+            "Shrimp, peas and zucchini, served with the house peanut sauce",
+            1195
+          ],
+          [
+            "Fried Onion Cakes (4 pcs)",
+            "Vegan. Served with soy chili sesame sauce",
+            1195
+          ],
+          [
+            "Steamed Vegetable Dumplings (6 pcs)",
+            "Vegan. Served with chili soy sauce",
+            1195
+          ],
+          [
+            "Steamed Pork Dumplings (6 pcs)",
+            "Served with chili soy sauce",
+            1195
+          ],
+          [
+            "Chili Oil Tossed Pork Wontons (8 pcs)",
+            "",
+            1195
+          ],
+          [
+            "Steamed Vegetable Wontons with Chinese Eggplant",
+            "Vegan. Tossed in soy garlic sauce",
+            1995
+          ],
+          [
+            "Vegetarian Eggrolls (2 pcs)",
+            "Vegan. Served with sweet basil sauce",
+            895
+          ],
+          [
+            "Pork Confit Eggrolls (2 pcs)",
+            "Served with sweet basil sauce",
+            895
+          ],
+          [
+            "Fang’s Famous Buns (2 pcs)",
+            "Pork belly, chicken, duck, shrimp or tofu, with pickled vegetables, secret sauce and herbs",
+            995
+          ]
+        ]
+      },
+      {
+        "name": "Salads & chilled",
+        "items": [
+          [
+            "Marinated Seasonal Market Greens",
+            "Ask for the vegetable of the day. Add chicken, pork, beef or tofu $4; prawns, scallop or fish $7",
+            1495
+          ],
+          [
+            "Tomato Apple Crisp Rice Salad",
+            "Vegan, gluten free. Garlic sesame dressing",
+            1495
+          ],
+          [
+            "Umami Garlic Spicy Long Beans",
+            "Vegan, gluten free",
+            900
+          ],
+          [
+            "Happy Cucumbers",
+            "Vegan, gluten free. Sweet and sour garlic crunchy cucumbers",
+            900
+          ],
+          [
+            "Chayote Squash",
+            "Vegan, gluten free. Tossed in chili onion sesame sauce",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Soups",
+        "items": [
+          [
+            "Hot and Sour Soup",
+            "Vegan. Serves 2–4. Add chicken, pork, beef or tofu $2; prawns or fish $4",
+            1495
+          ],
+          [
+            "Sizzling Rice Soup",
+            "Vegan, gluten free. Lemon scallion broth, puffed rice and seasonal vegetables. Serves 2–4",
+            1495
+          ],
+          [
+            "Wonton Soup",
+            "Pork wontons in roasted onion basil broth. Serves 2–4",
+            1495
+          ],
+          [
+            "Wor Wonton Soup",
+            "Pork wontons, roasted onion basil broth, clams and aromatics. Serves 2–4",
+            1895
+          ],
+          [
+            "Fish Soup",
+            "Rice noodles, pork wontons and fish simmered in a rich fish bone broth. Serves 2–4",
+            2695
+          ]
+        ]
+      },
+      {
+        "name": "Chicken, beef & pork",
+        "items": [
+          [
+            "Nanking’s Sesame Chicken",
+            "With glazed sweet potatoes. A 37-year classic",
+            1895
+          ],
+          [
+            "Spicy Szechuan Sautéed Chicken with Peppers",
+            "",
+            1895
+          ],
+          [
+            "Mogu Chicken",
+            "Gluten free. Crispy chicken breast tossed with mushrooms in spicy garlic mustard sauce",
+            1895
+          ],
+          [
+            "Honey Apple Chicken",
+            "Gluten free. Lightly crisp chicken breast tossed in sweet mayo",
+            1895
+          ],
+          [
+            "Chicken and Green Beans",
+            "Chicken breast sautéed in ginger soy black bean sauce",
+            1895
+          ],
+          [
+            "Fang’s Crispy Honey Beef Short Rib with Bok Choy",
+            "Tender beef cubes crusted in sweet five spice",
+            2395
+          ],
+          [
+            "Mogu Beef",
+            "Lightly crisped beef cubes tossed with mushrooms in spicy garlic mustard sauce",
+            2395
+          ],
+          [
+            "Crackling Beef",
+            "Puffed rice sautéed with sliced beef, cabbage, tomato and onion in chili garlic soy sauce",
+            2395
+          ],
+          [
+            "Honey Beef and Apples",
+            "Gluten free. Lightly crisped beef cubes tossed in a sweet mayo sauce",
+            2395
+          ],
+          [
+            "Mapo Tofu Pork",
+            "",
+            1895
+          ],
+          [
+            "Nanking’s Stuffed Mushrooms",
+            "Ground pork, sweet sesame sauce",
+            1995
+          ],
+          [
+            "Spicy Melt-in-Your-Mouth Pork Belly",
+            "With cabbage stir fry",
+            1995
+          ],
+          [
+            "Fall-off-the-Bone Chinese BBQ Pork Ribs",
+            "St. Louis cut ribs, sweet and sour sauce, zucchini wedges",
+            2395
+          ]
+        ]
+      },
+      {
+        "name": "Seafood",
+        "items": [
+          [
+            "Panfried Tender Garlic Fish with Spinach",
+            "",
+            2295
+          ],
+          [
+            "Five Spiced Whitefish",
+            "Boneless fish filet, soy reduction, jade spinach and garlic confit oil",
+            2295
+          ],
+          [
+            "Mogu Fish",
+            "Gluten free. Lightly crisped fish tossed with mushrooms in spicy garlic mustard sauce",
+            2295
+          ],
+          [
+            "Sautéed Tender Fish",
+            "With pickled mustard greens in garlic sauce",
+            2295
+          ],
+          [
+            "Mogu Prawns",
+            "Gluten free. Lightly crisped prawns tossed with mushrooms in spicy garlic mustard sauce",
+            2295
+          ],
+          [
+            "Honey Apple Prawns",
+            "Gluten free. A nut-free twist on the Chinese banquet classic",
+            2295
+          ],
+          [
+            "Salt and Pepper Prawns",
+            "Gluten free. With mushrooms, onions, basil and garlic lemon",
+            2295
+          ],
+          [
+            "Kung Pao Prawns",
+            "",
+            2295
+          ],
+          [
+            "Melt-in-Your-Mouth Fried Calamari",
+            "Gluten free. Served with lemon garlic vinegar sauce",
+            2195
+          ],
+          [
+            "Ginger Garlic Poached Scallops",
+            "Thinly sliced scallops, soy reduction and garlic oil",
+            2495
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian",
+        "items": [
+          [
+            "Fried Tofu in Black Bean Sauce",
+            "Vegan",
+            1795
+          ],
+          [
+            "Fried Tofu in Peanut Sauce",
+            "Vegan",
+            1795
+          ],
+          [
+            "Eggplant and Sweet Potato",
+            "Vegan. Tossed in sweet chili sauce",
+            1795
+          ],
+          [
+            "Salt and Pepper Mushrooms",
+            "Vegan, gluten free. Garlic, onions, lemon and basil",
+            1795
+          ],
+          [
+            "Dry Braised Green Beans",
+            "Vegan",
+            1795
+          ],
+          [
+            "Eggplant in Chili Sauce",
+            "Vegan",
+            1795
+          ]
+        ]
+      },
+      {
+        "name": "Noodles & rice",
+        "items": [
+          [
+            "House Noodles",
+            "Vegetarian. Hand-pulled noodles tossed in the black sesame sauce. Add chicken, pork, beef or tofu $4; prawns $5; combo $8",
+            1595
+          ],
+          [
+            "Chow Mein",
+            "Vegetarian. Thick egg noodles in sweet onion soy sauce with seasonal vegetables",
+            1595
+          ],
+          [
+            "House Sizzling Fried Rice",
+            "Vegetarian. Egg and vegetables, prepared table side",
+            1695
+          ],
+          [
+            "Steamed White Rice",
+            "Vegan, gluten free",
+            300
+          ]
+        ]
+      }
+    ]
+  },
 ]

@@ -1268,3 +1268,13 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DZtW-hyx0Cc.mp4` | [Original](https://www.instagram.com/reel/DZtW-hyx0Cc/) | Review by @hannah.tags at Sushi Umami, Milpitas. Instagram collaboration with @bayareafeast. 0–13.818s |
 | `review-DXdbP2UArUQ.mp4` | [Original](https://www.instagram.com/reel/DXdbP2UArUQ/) | Review by @eating.the.bay at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas. 3–18s |
 | `review-Df1a428MW2s.mp4` | [Original](https://www.instagram.com/reel/Df1a428MW2s/) | Review by @felicitythefoodie at OH CRAB!, Oakland. Instagram collaboration with @ohcrab_seafoodboil. 3–18s |
+
+<!-- Batch 124. -->
+| `review-DQZ7kAJjEDA.mp4` | [Original](https://www.instagram.com/reel/DQZ7kAJjEDA/) | Published by @kqedfood (KQED’s Check, Please! Bay Area) with Kathy Fang at House of Nanking, San Francisco. 0–15s |
+| `review-Df1OUXegnq8.mp4` | [Original](https://www.instagram.com/reel/Df1OUXegnq8/) | Review by @festusfeasts at House of Nanking, San Francisco. 0–15s |
+| `review-DVTyayoFEpy.mp4` | [Original](https://www.instagram.com/reel/DVTyayoFEpy/) | Review by @festusfeasts with @sherryeatworld and Kathy Fang at House of Nanking, San Francisco. 0–15s |
+| `review-DSgqCtlARFr.mp4` | [Original](https://www.instagram.com/reel/DSgqCtlARFr/) | Review by @hellahansel at House of Nanking, San Francisco. 37–52s |
+| `review-Df3Jf9qosVs.mp4` | [Original](https://www.instagram.com/reel/Df3Jf9qosVs/) | Review by @booziebrunch at Z & Y Restaurant (@zandyrestaurant), San Francisco. Crab dishes are seasonal. 0–15s |
+| `review-Df5Jx-3JZlo.mp4` | [Original](https://www.instagram.com/reel/Df5Jx-3JZlo/) | Review by @singlecatm0m at Mikiya Wagyu Shabu House, Santa Clara. The original post also announces a membership giveaway by @mikiya.official. 0–15s |
+| `review-DboLDLIMvja.mp4` | [Original](https://www.instagram.com/reel/DboLDLIMvja/) | Review by @_aemeriee.dance at Mrs. Ramen, Concord. 0–15s |
+| `review-Df5_igDJnyL.mp4` | [Original](https://www.instagram.com/reel/Df5_igDJnyL/) | Review by @bennyeats.bayarea at Funky Elephant, Berkeley. 3–18s |

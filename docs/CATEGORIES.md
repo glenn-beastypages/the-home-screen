@@ -161,3 +161,5 @@ consistent:
 when a category has no drawing or one drifts outside the set. If one is ever
 missing anyway, the tile shows the category's first letter instead of going
 blank (`src/ios/CategoryIcon.tsx`).
+
+Chinese was added on 19 November 2026 (Glenn, 17 November: "BEASTY • Chinese / New Category"), opened by House of Nanking in San Francisco in spot 0. It covers restaurants whose type line says Chinese, Cantonese, Sichuan/Szechuan, Shanghainese, Hunan or Peking duck, leaving out bakeries, desserts and boba, so dim sum and dumpling shops that do not say Chinese stay on Dim Sum and Dumplings. Its drawing is a takeout box with chopsticks, and it uses the Dim Sum background. 21 existing restaurants filled spots 1–21 automatically. It is in More pages and Search.

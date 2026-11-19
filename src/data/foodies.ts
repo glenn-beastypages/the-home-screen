@@ -509,7 +509,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "singlecatm0m",
     "name": "Tiffany",
-    "label": "Tiffany"
+    "label": "Tiffany",
+    "icon": "influencer-singlecatm0m-v124"
   },
   {
     "handle": "kimjsseats",
@@ -969,7 +970,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "_aemeriee.dance",
     "name": "@_aemeriee.dance",
-    "label": "_aemeriee.dance"
+    "label": "_aemeriee.dance",
+    "icon": "influencer-aemeriee-dance-v124"
   },
   {
     "handle": "greatonezfoodreview",
@@ -1616,7 +1618,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "bennyeats.bayarea",
     "name": "@bennyeats.bayarea",
     "label": "bennyeats.bayarea",
-    "icon": "foodie-bennyeats-bayarea-v100"
+    "icon": "influencer-bennyeats-bayarea-v124"
   },
   {
     "handle": "jourdyn.lynn",
@@ -3023,6 +3025,15 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "eating.the.bay", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DXdbP2UArUQ/", "credit": "Review by @eating.the.bay at Sushi Umami, Milpitas. Instagram collaboration with @sushiumamimilpitas.", "clip": "creator"},
   {"by": "felicitythefoodie", "place": "OH CRAB!", "city": "Oakland", "brand": "b_ohcraboakland", "reel": "https://www.instagram.com/reel/Df1a428MW2s/", "credit": "Review by @felicitythefoodie at OH CRAB!, Oakland. Instagram collaboration with @ohcrab_seafoodboil.", "clip": true},
 
+  // Batch 124 — House of Nanking films and Glenn’s November 17–18 creator clips.
+  {"by": "kqedfood", "place": "House of Nanking", "city": "San Francisco", "brand": "b_houseofnankingsf", "reel": "https://www.instagram.com/reel/DQZ7kAJjEDA/", "credit": "Published by @kqedfood (KQED’s Check, Please! Bay Area) with Kathy Fang at House of Nanking, San Francisco.", "clip": true},
+  {"by": "festusfeasts", "place": "House of Nanking", "city": "San Francisco", "brand": "b_houseofnankingsf", "reel": "https://www.instagram.com/reel/Df1OUXegnq8/", "credit": "Review by @festusfeasts at House of Nanking, San Francisco.", "clip": true},
+  {"by": "festusfeasts", "place": "House of Nanking", "city": "San Francisco", "brand": "b_houseofnankingsf", "reel": "https://www.instagram.com/reel/DVTyayoFEpy/", "credit": "Review by @festusfeasts with @sherryeatworld and Kathy Fang at House of Nanking, San Francisco.", "clip": true, "featuring": ["sherryeatworld"]},
+  {"by": "hellahansel", "place": "House of Nanking", "city": "San Francisco", "brand": "b_houseofnankingsf", "reel": "https://www.instagram.com/reel/DSgqCtlARFr/", "credit": "Review by @hellahansel at House of Nanking, San Francisco.", "clip": true},
+  {"by": "booziebrunch", "place": "Z & Y Restaurant", "city": "San Francisco", "reel": "https://www.instagram.com/reel/Df3Jf9qosVs/", "credit": "Review by @booziebrunch at Z & Y Restaurant (@zandyrestaurant), San Francisco. Crab dishes are seasonal.", "clip": true},
+  {"by": "singlecatm0m", "place": "Mikiya Wagyu Shabu House", "city": "Santa Clara", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/Df5Jx-3JZlo/", "credit": "Review by @singlecatm0m at Mikiya Wagyu Shabu House, Santa Clara. The original post also announces a membership giveaway by @mikiya.official.", "clip": "creator"},
+  {"by": "_aemeriee.dance", "place": "Mrs. Ramen", "city": "Concord", "brand": "b_mrsramen", "reel": "https://www.instagram.com/reel/DboLDLIMvja/", "credit": "Review by @_aemeriee.dance at Mrs. Ramen, Concord.", "clip": true},
+  {"by": "bennyeats.bayarea", "place": "Funky Elephant", "city": "Berkeley", "brand": "b_funkyelephant", "reel": "https://www.instagram.com/reel/Df5_igDJnyL/", "credit": "Review by @bennyeats.bayarea at Funky Elephant, Berkeley.", "clip": true},
 ]
 
 /*

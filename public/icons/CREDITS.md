@@ -900,3 +900,8 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `lemon-crab-richmond-v123.webp` | [Source](https://lemoncrab.us/wp-content/uploads/2024/03/2X-Logo.png) | Glenn’s location screenshot identifies Richmond. The tile uses the official shared Lemon Crab mark. |
 | `oh-crab-oakland-v123.webp` | [Source](https://oh-crab.com/assets/logo-600.png) | Official artwork, fitted so the full mark is visible at phone tile size. |
 | `influencer-thefoodiemon-v123.webp` | [Source](https://www.instagram.com/thefoodiemon/) | Original public avatar shown in the credited reel’s profile card. |
+
+| `house-of-nanking-sf-v124.webp` | [Source](https://www.instagram.com/houseofnankingsf/), IMG_0811.png | Glenn’s supplied House of Nanking wordmark matched the restaurant’s current Instagram profile art; used the original square. Checked at phone tile size. |
+| `influencer-singlecatm0m-v124.webp` | [Source](https://www.instagram.com/singlecatm0m/), IMG_0900.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-aemeriee-dance-v124.webp` | [Source](https://www.instagram.com/_aemeriee.dance/), IMG_0902.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-bennyeats-bayarea-v124.webp` | [Source](https://www.instagram.com/bennyeats.bayarea/), IMG_0904.PNG | Same sunset portrait as the v100 tile, now the original square avatar with no circle edge or orange corners. Checked at phone tile size. |

@@ -204,6 +204,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'cookies', heading: 'Cookies', about: 'Cookie shops and cookie bakers', wall: wall('bakery'), test: /cookies?/i },
   { kind: 'ceviche', heading: 'Ceviche', about: 'Ceviche, aguachile and cevicherias', wall: wall('sushi'), test: /cevich|cebich/i },
   { kind: 'massage', heading: 'Massage/Therapy', about: 'Massage therapists and bodywork', wall: wall('health'), test: /massage|bodywork/i },
+  // Glenn, November 17: "BEASTY • Chinese / New Category", opened by House of Nanking in San Francisco.
+  { kind: 'chinese', heading: 'Chinese', about: 'Chinese restaurants, from Cantonese to Sichuan', wall: wall('dimsum'), test: /\bchinese\b|szechuan|sichuan|cantonese|shanghainese|hunan|peking duck/i, not: /bakery|dessert|pastr|boba|tea shop/i },
 ]
 
 /** Every category page holds his twenty-four. */

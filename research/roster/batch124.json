@@ -1,0 +1,1627 @@
+{
+  "cutoff": "2026-11-19T14:02:41.856499-08:00",
+  "cutoffRow": 253051,
+  "previousCutoffRow": 252843,
+  "listings": [
+    {
+      "slug": "house-of-nanking-sf",
+      "name": "House of Nanking",
+      "label": "House of Nanking",
+      "cuisine": "Shanghainese and Chinese American restaurant",
+      "category": "Chinese",
+      "color": "#0B0B0B",
+      "icon": "house-of-nanking-sf-v124",
+      "prep": 0,
+      "items": [],
+      "address": "919 Kearny St, San Francisco, CA 94133",
+      "phone": "(415) 421-1429",
+      "hours": "Mon–Fri 11am–9pm, Sat–Sun 12pm–9pm",
+      "tagline": "Peter and Lily Fang’s Shanghainese home cooking, Nanking sesame chicken and sizzling fried rice on Kearny Street since 1988.",
+      "site": "https://www.houseofnankingsf.com/",
+      "siteCta": "See the menu",
+      "orderUrl": "https://s.allsetnow.com/UHDZSUw/",
+      "instagram": "https://www.instagram.com/houseofnankingsf/",
+      "siteNote": "Prices are from the restaurant’s May 2025 lunch and dinner menu. The restaurant notes that prices are subject to change.",
+      "panels": [
+        {
+          "head": "Family style",
+          "body": [
+            "Every dish is served family style. Ask the kitchen to choose for the table, or order the chef’s choice menu."
+          ],
+          "links": [
+            {
+              "label": "House of Nanking menu",
+              "href": "https://www.houseofnankingsf.com/menu/"
+            },
+            {
+              "label": "Order pickup",
+              "href": "https://s.allsetnow.com/UHDZSUw/"
+            }
+          ]
+        },
+        {
+          "head": "Groups and catering",
+          "body": [
+            "Groups of five or fewer walk in. Groups of six or more reserve by email. Catering goes through the family’s sister restaurant, FANG."
+          ],
+          "links": [
+            {
+              "label": "Reservations",
+              "href": "https://www.houseofnankingsf.com/reservations/"
+            },
+            {
+              "label": "FANG catering",
+              "href": "https://www.fangrestaurant.com/catering/"
+            },
+            {
+              "label": "Hours and location",
+              "href": "https://www.houseofnankingsf.com/location/house-of-nanking/"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Appetizers & dumplings",
+          "items": [
+            [
+              "Fried Pork Potstickers (6 pcs)",
+              "Served with the house peanut sauce",
+              1495
+            ],
+            [
+              "Crispy Beef Potstickers (6 pcs)",
+              "Served with sweet and sour sauce",
+              1495
+            ],
+            [
+              "Crispy Egg Pillows (2 pcs)",
+              "Crisp crepe filled with chives, vermicelli and egg",
+              895
+            ],
+            [
+              "Crispy Shrimp Packets (4 pcs)",
+              "Shrimp, peas and zucchini, served with the house peanut sauce",
+              1195
+            ],
+            [
+              "Fried Onion Cakes (4 pcs)",
+              "Vegan. Served with soy chili sesame sauce",
+              1195
+            ],
+            [
+              "Steamed Vegetable Dumplings (6 pcs)",
+              "Vegan. Served with chili soy sauce",
+              1195
+            ],
+            [
+              "Steamed Pork Dumplings (6 pcs)",
+              "Served with chili soy sauce",
+              1195
+            ],
+            [
+              "Chili Oil Tossed Pork Wontons (8 pcs)",
+              "",
+              1195
+            ],
+            [
+              "Steamed Vegetable Wontons with Chinese Eggplant",
+              "Vegan. Tossed in soy garlic sauce",
+              1995
+            ],
+            [
+              "Vegetarian Eggrolls (2 pcs)",
+              "Vegan. Served with sweet basil sauce",
+              895
+            ],
+            [
+              "Pork Confit Eggrolls (2 pcs)",
+              "Served with sweet basil sauce",
+              895
+            ],
+            [
+              "Fang’s Famous Buns (2 pcs)",
+              "Pork belly, chicken, duck, shrimp or tofu, with pickled vegetables, secret sauce and herbs",
+              995
+            ]
+          ]
+        },
+        {
+          "name": "Salads & chilled",
+          "items": [
+            [
+              "Marinated Seasonal Market Greens",
+              "Ask for the vegetable of the day. Add chicken, pork, beef or tofu $4; prawns, scallop or fish $7",
+              1495
+            ],
+            [
+              "Tomato Apple Crisp Rice Salad",
+              "Vegan, gluten free. Garlic sesame dressing",
+              1495
+            ],
+            [
+              "Umami Garlic Spicy Long Beans",
+              "Vegan, gluten free",
+              900
+            ],
+            [
+              "Happy Cucumbers",
+              "Vegan, gluten free. Sweet and sour garlic crunchy cucumbers",
+              900
+            ],
+            [
+              "Chayote Squash",
+              "Vegan, gluten free. Tossed in chili onion sesame sauce",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Soups",
+          "items": [
+            [
+              "Hot and Sour Soup",
+              "Vegan. Serves 2–4. Add chicken, pork, beef or tofu $2; prawns or fish $4",
+              1495
+            ],
+            [
+              "Sizzling Rice Soup",
+              "Vegan, gluten free. Lemon scallion broth, puffed rice and seasonal vegetables. Serves 2–4",
+              1495
+            ],
+            [
+              "Wonton Soup",
+              "Pork wontons in roasted onion basil broth. Serves 2–4",
+              1495
+            ],
+            [
+              "Wor Wonton Soup",
+              "Pork wontons, roasted onion basil broth, clams and aromatics. Serves 2–4",
+              1895
+            ],
+            [
+              "Fish Soup",
+              "Rice noodles, pork wontons and fish simmered in a rich fish bone broth. Serves 2–4",
+              2695
+            ]
+          ]
+        },
+        {
+          "name": "Chicken, beef & pork",
+          "items": [
+            [
+              "Nanking’s Sesame Chicken",
+              "With glazed sweet potatoes. A 37-year classic",
+              1895
+            ],
+            [
+              "Spicy Szechuan Sautéed Chicken with Peppers",
+              "",
+              1895
+            ],
+            [
+              "Mogu Chicken",
+              "Gluten free. Crispy chicken breast tossed with mushrooms in spicy garlic mustard sauce",
+              1895
+            ],
+            [
+              "Honey Apple Chicken",
+              "Gluten free. Lightly crisp chicken breast tossed in sweet mayo",
+              1895
+            ],
+            [
+              "Chicken and Green Beans",
+              "Chicken breast sautéed in ginger soy black bean sauce",
+              1895
+            ],
+            [
+              "Fang’s Crispy Honey Beef Short Rib with Bok Choy",
+              "Tender beef cubes crusted in sweet five spice",
+              2395
+            ],
+            [
+              "Mogu Beef",
+              "Lightly crisped beef cubes tossed with mushrooms in spicy garlic mustard sauce",
+              2395
+            ],
+            [
+              "Crackling Beef",
+              "Puffed rice sautéed with sliced beef, cabbage, tomato and onion in chili garlic soy sauce",
+              2395
+            ],
+            [
+              "Honey Beef and Apples",
+              "Gluten free. Lightly crisped beef cubes tossed in a sweet mayo sauce",
+              2395
+            ],
+            [
+              "Mapo Tofu Pork",
+              "",
+              1895
+            ],
+            [
+              "Nanking’s Stuffed Mushrooms",
+              "Ground pork, sweet sesame sauce",
+              1995
+            ],
+            [
+              "Spicy Melt-in-Your-Mouth Pork Belly",
+              "With cabbage stir fry",
+              1995
+            ],
+            [
+              "Fall-off-the-Bone Chinese BBQ Pork Ribs",
+              "St. Louis cut ribs, sweet and sour sauce, zucchini wedges",
+              2395
+            ]
+          ]
+        },
+        {
+          "name": "Seafood",
+          "items": [
+            [
+              "Panfried Tender Garlic Fish with Spinach",
+              "",
+              2295
+            ],
+            [
+              "Five Spiced Whitefish",
+              "Boneless fish filet, soy reduction, jade spinach and garlic confit oil",
+              2295
+            ],
+            [
+              "Mogu Fish",
+              "Gluten free. Lightly crisped fish tossed with mushrooms in spicy garlic mustard sauce",
+              2295
+            ],
+            [
+              "Sautéed Tender Fish",
+              "With pickled mustard greens in garlic sauce",
+              2295
+            ],
+            [
+              "Mogu Prawns",
+              "Gluten free. Lightly crisped prawns tossed with mushrooms in spicy garlic mustard sauce",
+              2295
+            ],
+            [
+              "Honey Apple Prawns",
+              "Gluten free. A nut-free twist on the Chinese banquet classic",
+              2295
+            ],
+            [
+              "Salt and Pepper Prawns",
+              "Gluten free. With mushrooms, onions, basil and garlic lemon",
+              2295
+            ],
+            [
+              "Kung Pao Prawns",
+              "",
+              2295
+            ],
+            [
+              "Melt-in-Your-Mouth Fried Calamari",
+              "Gluten free. Served with lemon garlic vinegar sauce",
+              2195
+            ],
+            [
+              "Ginger Garlic Poached Scallops",
+              "Thinly sliced scallops, soy reduction and garlic oil",
+              2495
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian",
+          "items": [
+            [
+              "Fried Tofu in Black Bean Sauce",
+              "Vegan",
+              1795
+            ],
+            [
+              "Fried Tofu in Peanut Sauce",
+              "Vegan",
+              1795
+            ],
+            [
+              "Eggplant and Sweet Potato",
+              "Vegan. Tossed in sweet chili sauce",
+              1795
+            ],
+            [
+              "Salt and Pepper Mushrooms",
+              "Vegan, gluten free. Garlic, onions, lemon and basil",
+              1795
+            ],
+            [
+              "Dry Braised Green Beans",
+              "Vegan",
+              1795
+            ],
+            [
+              "Eggplant in Chili Sauce",
+              "Vegan",
+              1795
+            ]
+          ]
+        },
+        {
+          "name": "Noodles & rice",
+          "items": [
+            [
+              "House Noodles",
+              "Vegetarian. Hand-pulled noodles tossed in the black sesame sauce. Add chicken, pork, beef or tofu $4; prawns $5; combo $8",
+              1595
+            ],
+            [
+              "Chow Mein",
+              "Vegetarian. Thick egg noodles in sweet onion soy sauce with seasonal vegetables",
+              1595
+            ],
+            [
+              "House Sizzling Fried Rice",
+              "Vegetarian. Egg and vegetables, prepared table side",
+              1695
+            ],
+            [
+              "Steamed White Rice",
+              "Vegan, gluten free",
+              300
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "san-francisco-goods2-97": "b_houseofnankingsf",
+    "beasty-chinese-0": "b_houseofnankingsf"
+  },
+  "newCategory": {
+    "kind": "chinese",
+    "heading": "Chinese",
+    "openedBy": "b_houseofnankingsf",
+    "automaticSeats": 21,
+    "note": "Existing businesses whose type line says Chinese, Cantonese, Sichuan, Shanghainese, Hunan or Peking duck fill spots 1–21 in joining order; 2 spots stay open."
+  },
+  "heavyHitter": {
+    "handle": "_aemeriee.dance",
+    "brand": "b_foodieaemerieedance",
+    "to": "beasty-foodies2-5",
+    "after": "b_foodielatinmami",
+    "movedDownOne": 137,
+    "from": "beasty-foodies2-142"
+  },
+  "overflowAfter": {
+    "beasty-foodies2-5": "b_foodieaemerieedance",
+    "beasty-foodies2-6": "b_foodiebayareafoodieadventures",
+    "beasty-foodies2-7": "b_foodiesiliconvalleyfoodies",
+    "beasty-foodies2-8": "b_foodiemzzjuxtaposition",
+    "beasty-foodies2-9": "b_foodieandreweatsinsf",
+    "beasty-foodies2-10": "b_foodieeatswithkath",
+    "beasty-foodies2-11": "b_foodiecestalmoco",
+    "beasty-foodies2-12": "b_foodiekangofrealty",
+    "beasty-foodies2-13": "b_foodiefedoramaelle",
+    "beasty-foodies2-14": "b_foodiepastrywithjenn",
+    "beasty-foodies2-15": "b_foodietravelwtiff",
+    "beasty-foodies2-16": "b_foodieemwong",
+    "beasty-foodies2-17": "b_foodiekimonieatss",
+    "beasty-foodies2-18": "b_foodiebaygirlseat",
+    "beasty-foodies2-19": "b_foodieheraldh",
+    "beasty-foodies2-20": "b_foodiefoodiswhyimbroke",
+    "beasty-foodies2-21": "b_foodiekeneats",
+    "beasty-foodies2-22": "b_e40",
+    "beasty-foodies2-23": "b_foodiemamamarquez888",
+    "beasty-foodies2-24": "b_foodiereelkevo",
+    "beasty-foodies2-25": "b_foodierollingwithdeneats",
+    "beasty-foodies2-26": "b_foodieagnespittioni",
+    "beasty-foodies2-27": "b_foodiej00diefoodie",
+    "beasty-foodies2-28": "b_foodiealiasharrief",
+    "beasty-foodies2-29": "b_foodiecarlosbradley",
+    "beasty-foodies2-30": "b_foodiejceeats",
+    "beasty-foodies2-31": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-32": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-33": "b_foodiejanniners",
+    "beasty-foodies2-34": "b_foodiealwayshannegry",
+    "beasty-foodies2-35": "b_foodierainmoreturely",
+    "beasty-foodies2-36": "b_foodiewheresthefoodat",
+    "beasty-foodies2-37": "b_foodiesfbayfood",
+    "beasty-foodies2-38": "b_foodiezeynoern",
+    "beasty-foodies2-39": "b_foodiebooziebrunch",
+    "beasty-foodies2-40": "b_foodiethekhaysie",
+    "beasty-foodies2-41": "b_foodiekelmeleats",
+    "beasty-foodies2-42": "b_foodiecourtneylyneaa",
+    "beasty-foodies2-43": "b_foodieiamnikkieg",
+    "beasty-foodies2-44": "b_foodiehungerefordiy",
+    "beasty-foodies2-45": "b_foodiecookwithhenny",
+    "beasty-foodies2-46": "b_foodiemartiwantsmore",
+    "beasty-foodies2-47": "b_foodielimitlessfood",
+    "beasty-foodies2-48": "b_foodiechefemaristevens",
+    "beasty-foodies2-49": "b_foodieforkandscore",
+    "beasty-foodies2-50": "b_foodierealphdfoodie",
+    "beasty-foodies2-51": "b_foodiejustmostie",
+    "beasty-foodies2-52": "b_foodiecapturedbysado",
+    "beasty-foodies2-53": "b_foodieallieeats",
+    "beasty-foodies2-54": "b_foodieseekeasyeats",
+    "beasty-foodies2-55": "b_foodieorangeginger",
+    "beasty-foodies2-56": "b_foodieantoinetterzz",
+    "beasty-foodies2-57": "b_foodiebayareakulture",
+    "beasty-foodies2-58": "b_foodiechefmelissaking",
+    "beasty-foodies2-59": "b_foodiecelineeats",
+    "beasty-foodies2-60": "b_foodiesinglecatm0m",
+    "beasty-foodies2-61": "b_foodiekimjsseats",
+    "beasty-foodies2-62": "b_foodieoaktowngrubhub",
+    "beasty-foodies2-63": "b_foodiethespoonlist",
+    "beasty-foodies2-64": "b_foodiesherryeatworld",
+    "beasty-foodies2-65": "b_foodiehungrydanz",
+    "beasty-foodies2-66": "b_foodiejaneethefoodie",
+    "beasty-foodies2-67": "b_foodiepeggyshoo",
+    "beasty-foodies2-68": "b_foodiezarinanawabi",
+    "beasty-foodies2-69": "b_foodiejbrenes",
+    "beasty-foodies2-70": "b_foodiesimplydorothy",
+    "beasty-foodies2-71": "b_foodieacoupleofcooks",
+    "beasty-foodies2-72": "b_foodiejantrinanicole",
+    "beasty-foodies2-73": "b_foodiechriscorpz",
+    "beasty-foodies2-74": "b_foodiethealamedapulse",
+    "beasty-foodies2-75": "b_foodiebayareamunchies510",
+    "beasty-foodies2-76": "b_foodievictoriapham17",
+    "beasty-foodies2-77": "b_foodiefoodieberrie",
+    "beasty-foodies2-78": "b_foodiesamserved",
+    "beasty-foodies2-79": "b_foodieareweeatingyet",
+    "beasty-foodies2-80": "b_foodiesiusvision",
+    "beasty-foodies2-81": "b_foodiearianasade",
+    "beasty-foodies2-82": "b_foodiebayareafoodz",
+    "beasty-foodies2-83": "b_foodiebestbayareafood",
+    "beasty-foodies2-84": "b_foodieannnaeats",
+    "beasty-foodies2-85": "b_foodieugcwithfrances",
+    "beasty-foodies2-86": "b_foodiedariananthony",
+    "beasty-foodies2-87": "b_foodiecharweeezy",
+    "beasty-foodies2-88": "b_foodiemukbangyourmama",
+    "beasty-foodies2-89": "b_foodiewanderingstefany",
+    "beasty-foodies2-90": "b_foodielifebyvivien",
+    "beasty-foodies2-91": "b_foodieandrelucas",
+    "beasty-foodies2-92": "b_foodieshrimpfriedroice",
+    "beasty-foodies2-93": "b_foodiecynlacson",
+    "beasty-foodies2-94": "b_foodiealexytravels",
+    "beasty-foodies2-95": "b_foodieandygravs",
+    "beasty-foodies2-96": "b_foodielivingvivalakillah",
+    "beasty-foodies2-97": "b_foodieeighty6ix",
+    "beasty-foodies2-98": "b_foodiemayakayofficial",
+    "beasty-foodies2-99": "b_foodiebayareamagandaeats",
+    "beasty-foodies2-100": "b_foodieforkmeetsfood",
+    "beasty-foodies2-101": "b_foodiefoodiesnflightss",
+    "beasty-foodies2-102": "b_foodiecarlaylayyy",
+    "beasty-foodies2-103": "b_foodieshuatangco",
+    "beasty-foodies2-104": "b_foodiejennyhomeloans",
+    "beasty-foodies2-105": "b_foodiewthellydanyelly",
+    "beasty-foodies2-106": "b_foodiesophiaxbayarea",
+    "beasty-foodies2-107": "b_foodiesierraeats8",
+    "beasty-foodies2-108": "b_foodieyosiiiifoodie",
+    "beasty-foodies2-109": "b_foodieivkicks",
+    "beasty-foodies2-110": "b_foodieitsslydiia",
+    "beasty-foodies2-111": "b_foodiestartingfiresevrywhere",
+    "beasty-foodies2-112": "b_foodiebylizettexo",
+    "beasty-foodies2-113": "b_foodiebrianthebarber",
+    "beasty-foodies2-114": "b_foodienickk",
+    "beasty-foodies2-115": "b_foodiejamesbaylife",
+    "beasty-foodies2-116": "b_foodieshesvibinhigh",
+    "beasty-foodies2-117": "b_foodiedchangshangry",
+    "beasty-foodies2-118": "b_foodiebayareafoodiesan",
+    "beasty-foodies2-119": "b_foodietrulyathi",
+    "beasty-foodies2-120": "b_foodiejetsetjanine",
+    "beasty-foodies2-121": "b_foodiekvbitesandgo",
+    "beasty-foodies2-122": "b_foodiestunnaman02",
+    "beasty-foodies2-123": "b_foodiesavorwithcoral",
+    "beasty-foodies2-124": "b_foodiefirstdibsbayarea",
+    "beasty-foodies2-125": "b_foodiemargsout",
+    "beasty-foodies2-126": "b_foodieyogetasworld",
+    "beasty-foodies2-127": "b_foodieitsmayrazambrano",
+    "beasty-foodies2-128": "b_foodieyourtraveldaddy",
+    "beasty-foodies2-129": "b_foodiehellalocalmo",
+    "beasty-foodies2-130": "b_foodiethesnobbiefoodie",
+    "beasty-foodies2-131": "b_foodiekatfoodsf",
+    "beasty-foodies2-132": "b_foodiecharlikestoeat",
+    "beasty-foodies2-133": "b_foodiehellahansel",
+    "beasty-foodies2-134": "b_foodiegeraldfermin",
+    "beasty-foodies2-135": "b_foodiepimchanyum",
+    "beasty-foodies2-136": "b_foodiebayareawilson",
+    "beasty-foodies2-137": "b_foodiewhatthejessi",
+    "beasty-foodies2-138": "b_foodiefoodgiveness",
+    "beasty-foodies2-139": "b_foodieasideofsweet",
+    "beasty-foodies2-140": "b_foodietashamalan",
+    "beasty-foodies2-141": "b_foodiecamemzmin",
+    "beasty-foodies2-142": "b_foodieventurewithkelly"
+  },
+  "posts": [
+    {
+      "code": "DQZ7kAJjEDA",
+      "slug": "review-DQZ7kAJjEDA",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 151.447,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/DQZ7kAJjEDA/",
+      "brand": "b_houseofnankingsf",
+      "by": "kqedfood",
+      "postedBy": "kqedfood",
+      "postedDate": "2025-10-29",
+      "credit": "Published by @kqedfood (KQED’s Check, Please! Bay Area) with Kathy Fang at House of Nanking, San Francisco.",
+      "request": [
+        {
+          "rowId": 252932,
+          "linkRowId": 252931,
+          "at": "2026-11-17T20:13:25.709151-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df1OUXegnq8",
+      "slug": "review-Df1OUXegnq8",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 143.617,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/Df1OUXegnq8/",
+      "brand": "b_houseofnankingsf",
+      "by": "festusfeasts",
+      "postedBy": "festusfeasts",
+      "postedDate": "2026-11-16",
+      "credit": "Review by @festusfeasts at House of Nanking, San Francisco.",
+      "request": [
+        {
+          "rowId": 252930,
+          "linkRowId": 252929,
+          "at": "2026-11-17T20:10:27.295816-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DVTyayoFEpy",
+      "slug": "review-DVTyayoFEpy",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 104.255,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/DVTyayoFEpy/",
+      "brand": "b_houseofnankingsf",
+      "by": "festusfeasts",
+      "postedBy": "festusfeasts",
+      "postedDate": "2026-02-28",
+      "credit": "Review by @festusfeasts with @sherryeatworld and Kathy Fang at House of Nanking, San Francisco.",
+      "request": [
+        {
+          "rowId": 252922,
+          "linkRowId": 252921,
+          "at": "2026-11-17T18:18:27.900829-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch.",
+      "featuring": [
+        "sherryeatworld"
+      ]
+    },
+    {
+      "code": "DSgqCtlARFr",
+      "slug": "review-DSgqCtlARFr",
+      "startSeconds": 37,
+      "endSeconds": 52,
+      "sourceDuration": 135.034,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/DSgqCtlARFr/",
+      "brand": "b_houseofnankingsf",
+      "by": "hellahansel",
+      "postedBy": "hellahansel",
+      "postedDate": "2025-12-20",
+      "credit": "Review by @hellahansel at House of Nanking, San Francisco.",
+      "request": [
+        {
+          "rowId": 252928,
+          "linkRowId": 252927,
+          "at": "2026-11-17T20:09:53.806109-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df3Jf9qosVs",
+      "slug": "review-Df3Jf9qosVs",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 48.0,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/Df3Jf9qosVs/",
+      "by": "booziebrunch",
+      "postedBy": "booziebrunch",
+      "postedDate": "2026-11-17",
+      "credit": "Review by @booziebrunch at Z & Y Restaurant (@zandyrestaurant), San Francisco. Crab dishes are seasonal.",
+      "request": [
+        {
+          "rowId": 252919,
+          "linkRowId": 252918,
+          "at": "2026-11-17T17:48:27.988330-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page. Z & Y Restaurant is not listed on BEASTY; the listed Z & Y Peking Duck is a separate restaurant, so no business link is invented."
+    },
+    {
+      "code": "Df5Jx-3JZlo",
+      "slug": "review-Df5Jx-3JZlo",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 151.559,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/Df5Jx-3JZlo/",
+      "brand": "b_mikiyasantaclara",
+      "by": "singlecatm0m",
+      "postedBy": "singlecatm0m",
+      "postedDate": "2026-11-18",
+      "credit": "Review by @singlecatm0m at Mikiya Wagyu Shabu House, Santa Clara. The original post also announces a membership giveaway by @mikiya.official.",
+      "request": [
+        {
+          "rowId": 252993,
+          "linkRowId": 252992,
+          "at": "2026-11-18T18:50:37.275719-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie"
+        }
+      ],
+      "disposition": "Plays in Watch and on the creator’s page; linked from the business under the four-film limit."
+    },
+    {
+      "code": "DboLDLIMvja",
+      "slug": "review-DboLDLIMvja",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 84.234,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/DboLDLIMvja/",
+      "brand": "b_mrsramen",
+      "by": "_aemeriee.dance",
+      "postedBy": "_aemeriee.dance",
+      "postedDate": "2026-08-04",
+      "credit": "Review by @_aemeriee.dance at Mrs. Ramen, Concord.",
+      "request": [
+        {
+          "rowId": 252996,
+          "linkRowId": 252995,
+          "at": "2026-11-18T19:26:45.280448-08:00",
+          "request": "Clip this video plz \nPlease update icon pic\nHeavy Hitter"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Df5_igDJnyL",
+      "slug": "review-Df5_igDJnyL",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 31.697,
+      "audio": true,
+      "batch": 124,
+      "source": "https://www.instagram.com/reel/Df5_igDJnyL/",
+      "brand": "b_funkyelephant",
+      "by": "bennyeats.bayarea",
+      "postedBy": "bennyeats.bayarea",
+      "postedDate": "2026-11-18",
+      "credit": "Review by @bennyeats.bayarea at Funky Elephant, Berkeley.",
+      "request": [
+        {
+          "rowId": 253000,
+          "linkRowId": 252999,
+          "at": "2026-11-18T19:31:48.303199-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    }
+  ],
+  "previouslyPublished": [],
+  "updatedIcons": [
+    "/icons/house-of-nanking-sf-v124.webp",
+    "/icons/influencer-singlecatm0m-v124.webp",
+    "/icons/influencer-aemeriee-dance-v124.webp",
+    "/icons/influencer-bennyeats-bayarea-v124.webp"
+  ],
+  "updatedBrands": [
+    "b_foodiesinglecatm0m",
+    "b_foodieaemerieedance",
+    "b_foodiebennyeatsbayarea",
+    "b_mrsramen",
+    "b_funkyelephant",
+    "b_mikiyasantaclara"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0811.png",
+      "path": "/icons/house-of-nanking-sf-v124.webp",
+      "comparedAgainst": "https://www.instagram.com/houseofnankingsf/",
+      "disposition": "Glenn’s wordmark screenshot matched the restaurant’s current profile art; used the original 1080 px square."
+    },
+    {
+      "source": "IMG_0815.png",
+      "path": null,
+      "comparedAgainst": "https://www.instagram.com/houseofnankingsf/",
+      "disposition": "Profile screenshot: confirms 919 Kearny Street and the account. Used for facts, not artwork."
+    },
+    {
+      "source": "IMG_0900.PNG",
+      "path": "/icons/influencer-singlecatm0m-v124.webp",
+      "comparedAgainst": "https://www.instagram.com/singlecatm0m/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0902.PNG",
+      "path": "/icons/influencer-aemeriee-dance-v124.webp",
+      "comparedAgainst": "https://www.instagram.com/_aemeriee.dance/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0904.PNG",
+      "path": "/icons/influencer-bennyeats-bayarea-v124.webp",
+      "comparedAgainst": "https://www.instagram.com/bennyeats.bayarea/",
+      "disposition": "Same photo as the v100 tile, which had orange corners and a white ring; replaced with the original square avatar."
+    },
+    {
+      "source": "IMG_0846.png",
+      "path": null,
+      "disposition": "Blank-tile screenshot; fixed earlier in d08c584."
+    },
+    {
+      "source": "IMG_0882.PNG",
+      "path": null,
+      "disposition": "B•P button reference; done earlier in d045e3d."
+    },
+    {
+      "source": "IMG_0884.PNG",
+      "path": null,
+      "disposition": "B•P button reference; done earlier in d045e3d."
+    },
+    {
+      "source": "IMG_0888.mov",
+      "path": null,
+      "disposition": "Building walkthrough; not a listing."
+    },
+    {
+      "source": "IMG_0889.mov",
+      "path": null,
+      "disposition": "Building walkthrough; not a listing."
+    },
+    {
+      "source": "IMG_0938.png",
+      "path": null,
+      "disposition": "Goods header reference; done earlier in 53998e7."
+    },
+    {
+      "source": "IMG_0941.PNG",
+      "path": null,
+      "disposition": "EAT button reference; done earlier in 53998e7."
+    },
+    {
+      "source": "IMG_0950.png",
+      "path": null,
+      "disposition": "BSTY Goods logo idea; held for Leon’s mockups."
+    },
+    {
+      "source": "IMG_0951.PNG",
+      "path": null,
+      "disposition": "BSTY Goods logo idea; held for Leon’s mockups."
+    },
+    {
+      "source": "IMG_0954.png",
+      "path": null,
+      "disposition": "BSTY Goods logo reference; held for Leon’s mockups."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252844,
+      "at": "2026-11-17T08:02:15.818347-08:00",
+      "fromLeon": true,
+      "text": "Liked “Please update icon pic ”",
+      "attachments": []
+    },
+    {
+      "rowId": 252845,
+      "at": "2026-11-17T08:02:54.495796-08:00",
+      "fromLeon": true,
+      "text": "Morning brother, I just checked and don’t seem to have received the $150 for the website creation. Could you check on that? Thanks!",
+      "attachments": []
+    },
+    {
+      "rowId": 252848,
+      "at": "2026-11-17T11:00:45.031694-08:00",
+      "fromLeon": false,
+      "text": "Sorry about that bro, for some reason it didn’t go through yesterday.",
+      "attachments": [],
+      "disposition": "Conversation (payment). No directory action."
+    },
+    {
+      "rowId": 252850,
+      "at": "2026-11-17T11:23:48.366773-08:00",
+      "fromLeon": true,
+      "text": "No worries , received it, thanks brother 🙌",
+      "attachments": []
+    },
+    {
+      "rowId": 252853,
+      "at": "2026-11-17T13:40:00.428395-08:00",
+      "fromLeon": false,
+      "text": "I appreciate all your work brother 🙏🏽",
+      "attachments": [],
+      "disposition": "Conversation. No directory action."
+    },
+    {
+      "rowId": 252854,
+      "at": "2026-11-17T13:40:31.001058-08:00",
+      "fromLeon": false,
+      "text": "Calvin is sending me files to have some shirts printed, if needed would you be able to vectorize it? I’m not sure what kind of file he’s giving me.",
+      "attachments": [],
+      "disposition": "Shirt-file vectorizing request for Calvin, to arrive by email. Not a directory listing; no files received in the thread."
+    },
+    {
+      "rowId": 252857,
+      "at": "2026-11-17T15:18:11.185757-08:00",
+      "fromLeon": true,
+      "text": "I could see yeah , can you email me the files? [email]",
+      "attachments": []
+    },
+    {
+      "rowId": 252918,
+      "at": "2026-11-17T17:48:27.840189-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df3Jf9qosVs/?gwpx=MWl1dDloMTE4aWF1cQ==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (Df3Jf9qosVs)."
+    },
+    {
+      "rowId": 252919,
+      "at": "2026-11-17T17:48:27.988330-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request; see posts."
+    },
+    {
+      "rowId": 252920,
+      "at": "2026-11-17T18:16:17.850136-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz ”",
+      "attachments": []
+    },
+    {
+      "rowId": 252921,
+      "at": "2026-11-17T18:18:27.800388-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DVTyayoFEpy/?avpt=MTl3NzlmZTc5a3Nwbw==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (DVTyayoFEpy)."
+    },
+    {
+      "rowId": 252922,
+      "at": "2026-11-17T18:18:27.900829-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request; see posts."
+    },
+    {
+      "rowId": 252923,
+      "at": "2026-11-17T19:30:11.082209-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz ”",
+      "attachments": []
+    },
+    {
+      "rowId": 252924,
+      "at": "2026-11-17T20:08:41.898352-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0811.png",
+        "IMG_0815.png"
+      ],
+      "disposition": "House of Nanking logo and Instagram profile screenshots; used for the listing icon and facts."
+    },
+    {
+      "rowId": 252925,
+      "at": "2026-11-17T20:08:42.409061-08:00",
+      "fromLeon": false,
+      "text": "https://www.houseofnankingsf.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+      "attachments": [],
+      "disposition": "House of Nanking website; listing researched from it."
+    },
+    {
+      "rowId": 252926,
+      "at": "2026-11-17T20:08:42.695135-08:00",
+      "fromLeon": false,
+      "text": "San Francisco  • Eats \nBEASTY • Chinese \nNew Category",
+      "attachments": [],
+      "disposition": "Seats: San Francisco More goods 97 and new category BEASTY • Chinese, spot 0."
+    },
+    {
+      "rowId": 252927,
+      "at": "2026-11-17T20:09:53.558050-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DSgqCtlARFr/?evlk=MXBhZjVjZ2x0bzRyMA==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (DSgqCtlARFr)."
+    },
+    {
+      "rowId": 252928,
+      "at": "2026-11-17T20:09:53.806109-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request; see posts."
+    },
+    {
+      "rowId": 252929,
+      "at": "2026-11-17T20:10:27.165892-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df1OUXegnq8/?dmpr=Z2ozb2xsOHcwdTd3",
+      "attachments": [],
+      "disposition": "Reel link; clipped (Df1OUXegnq8)."
+    },
+    {
+      "rowId": 252930,
+      "at": "2026-11-17T20:10:27.295816-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request; see posts."
+    },
+    {
+      "rowId": 252931,
+      "at": "2026-11-17T20:13:25.619168-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DQZ7kAJjEDA/?lqvp=MXY0c2FhbmF2MzQycA==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (DQZ7kAJjEDA)."
+    },
+    {
+      "rowId": 252932,
+      "at": "2026-11-17T20:13:25.709151-08:00",
+      "fromLeon": false,
+      "text": "Watch this video clip",
+      "attachments": [],
+      "disposition": "Watch request; see posts."
+    },
+    {
+      "rowId": 252933,
+      "at": "2026-11-17T20:58:42.363521-08:00",
+      "fromLeon": true,
+      "text": "Liked “Watch this video clip ”",
+      "attachments": []
+    },
+    {
+      "rowId": 252934,
+      "at": "2026-11-17T20:58:46.602489-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz ”",
+      "attachments": []
+    },
+    {
+      "rowId": 252941,
+      "at": "2026-11-18T10:07:07.626325-08:00",
+      "fromLeon": false,
+      "text": "Hey brother, did you ever figure out that glitch?",
+      "attachments": [
+        "IMG_0846.png"
+      ],
+      "disposition": "Blank category tiles. Already fixed and live in d08c584 (18 Nov)."
+    },
+    {
+      "rowId": 252942,
+      "at": "2026-11-18T10:36:30.571000-08:00",
+      "fromLeon": true,
+      "text": "",
+      "attachments": []
+    },
+    {
+      "rowId": 252943,
+      "at": "2026-11-18T10:36:57.893000-08:00",
+      "fromLeon": true,
+      "text": "Hey bro, I’m  checking on that now  , I fixed that earlier, but seems like its still being overloaded",
+      "attachments": []
+    },
+    {
+      "rowId": 252945,
+      "at": "2026-11-18T11:02:28.716000-08:00",
+      "fromLeon": true,
+      "text": "Just fixed it bro, it was just the icons not being rendered correctly",
+      "attachments": []
+    },
+    {
+      "rowId": 252947,
+      "at": "2026-11-18T11:41:25.741384-08:00",
+      "fromLeon": false,
+      "text": "https://beasty-pages.vercel.app/directory.html?g=creators",
+      "attachments": [],
+      "disposition": "beasty-pages.vercel.app redesign. Already mirrored on 18 Nov (the-home-screen/archive, git-ignored). Not a listing."
+    },
+    {
+      "rowId": 252948,
+      "at": "2026-11-18T11:41:25.882435-08:00",
+      "fromLeon": false,
+      "text": "Check this out",
+      "attachments": [],
+      "disposition": "See previous."
+    },
+    {
+      "rowId": 252949,
+      "at": "2026-11-18T11:46:30.148000-08:00",
+      "fromLeon": true,
+      "text": "This is very interesting",
+      "attachments": []
+    },
+    {
+      "rowId": 252950,
+      "at": "2026-11-18T11:46:40.538000-08:00",
+      "fromLeon": true,
+      "text": "That could be the UI for the app I guess too",
+      "attachments": []
+    },
+    {
+      "rowId": 252951,
+      "at": "2026-11-18T11:46:57.315016-08:00",
+      "fromLeon": false,
+      "text": "You can definitely get inspired from that",
+      "attachments": [],
+      "disposition": "Conversation about the Vercel redesign. No directory action."
+    },
+    {
+      "rowId": 252952,
+      "at": "2026-11-18T11:47:06.348897-08:00",
+      "fromLeon": false,
+      "text": "Just remember it all so you could redo it lol",
+      "attachments": [],
+      "disposition": "Conversation. No directory action."
+    },
+    {
+      "rowId": 252953,
+      "at": "2026-11-18T11:47:28.958000-08:00",
+      "fromLeon": true,
+      "text": "Yes I can have that downloaded and check on that, did you make that?",
+      "attachments": []
+    },
+    {
+      "rowId": 252954,
+      "at": "2026-11-18T11:47:36.581000-08:00",
+      "fromLeon": true,
+      "text": "Very interesting concept",
+      "attachments": []
+    },
+    {
+      "rowId": 252955,
+      "at": "2026-11-18T11:47:40.716953-08:00",
+      "fromLeon": false,
+      "text": "They definitely use AI because they accomplish that within hours from this morning",
+      "attachments": [],
+      "disposition": "Conversation. No directory action."
+    },
+    {
+      "rowId": 252956,
+      "at": "2026-11-18T11:48:06.942915-08:00",
+      "fromLeon": false,
+      "text": "Very unique and clean, but it takes away from our interactive interface",
+      "attachments": [],
+      "disposition": "Conversation. No directory action."
+    },
+    {
+      "rowId": 252957,
+      "at": "2026-11-18T11:48:14.239000-08:00",
+      "fromLeon": true,
+      "text": "Yup, Vercel is a default connector from ChatGPT",
+      "attachments": []
+    },
+    {
+      "rowId": 252958,
+      "at": "2026-11-18T11:48:45.752806-08:00",
+      "fromLeon": false,
+      "text": "We will definitely rip some good ideas and incorporated to our shit lol",
+      "attachments": [],
+      "disposition": "Conversation. No directory action."
+    },
+    {
+      "rowId": 252959,
+      "at": "2026-11-18T11:48:50.778000-08:00",
+      "fromLeon": true,
+      "text": "I liked it, it fits a lot for a tech based concept, we can introduce pros of both of them",
+      "attachments": []
+    },
+    {
+      "rowId": 252960,
+      "at": "2026-11-18T11:48:56.394000-08:00",
+      "fromLeon": true,
+      "text": "Yessir",
+      "attachments": []
+    },
+    {
+      "rowId": 252961,
+      "at": "2026-11-18T11:49:31.380571-08:00",
+      "fromLeon": false,
+      "text": "If you can try to record every single page before they delete this render",
+      "attachments": [],
+      "disposition": "Record the Vercel pages. Done on 18 Nov (archive mirror)."
+    },
+    {
+      "rowId": 252962,
+      "at": "2026-11-18T11:50:12.243000-08:00",
+      "fromLeon": true,
+      "text": "Yup, I will download the web",
+      "attachments": []
+    },
+    {
+      "rowId": 252963,
+      "at": "2026-11-18T12:43:21.916270-08:00",
+      "fromLeon": false,
+      "text": "Hey brother, let me know if you have time today to get on a call",
+      "attachments": [],
+      "disposition": "Call request. No directory action."
+    },
+    {
+      "rowId": 252972,
+      "at": "2026-11-18T15:33:22.717224-08:00",
+      "fromLeon": false,
+      "text": "Hey brother, would you mind making this B•P shaped like our icon with the black triangle? No need for any yellow there and you could make the letters a tad bit bigger.",
+      "attachments": [
+        "IMG_0882.PNG",
+        "IMG_0884.PNG"
+      ],
+      "disposition": "B•P button reshaped. Already live in d045e3d (18 Nov)."
+    },
+    {
+      "rowId": 252973,
+      "at": "2026-11-18T15:36:29.367000-08:00",
+      "fromLeon": true,
+      "text": "Hey bro, just saw the message, I can around 5pm?",
+      "attachments": []
+    },
+    {
+      "rowId": 252974,
+      "at": "2026-11-18T15:36:34.239000-08:00",
+      "fromLeon": true,
+      "text": "Yes, I can do that",
+      "attachments": []
+    },
+    {
+      "rowId": 252975,
+      "at": "2026-11-18T15:37:16.133000-08:00",
+      "fromLeon": true,
+      "text": "I can do a quick call now too",
+      "attachments": []
+    },
+    {
+      "rowId": 252976,
+      "at": "2026-11-18T15:37:40.956556-08:00",
+      "fromLeon": false,
+      "text": "That’s perfect, I’m checking out the place around 415 with the owner. I’ll be able to fill you in at that time.",
+      "attachments": [],
+      "disposition": "Conversation about a site visit. No directory action."
+    },
+    {
+      "rowId": 252980,
+      "at": "2026-11-18T16:11:56.982296-08:00",
+      "fromLeon": false,
+      "text": "https://grubbrr.com/products/food-lockers/",
+      "attachments": [],
+      "disposition": "GrubBrr food-locker link: talk about the space, not a listing."
+    },
+    {
+      "rowId": 252981,
+      "at": "2026-11-18T16:40:11.477950-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0888.mov"
+      ],
+      "disposition": "Building walkthrough video: talk, not a listing."
+    },
+    {
+      "rowId": 252982,
+      "at": "2026-11-18T16:40:27.988194-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0889.mov"
+      ],
+      "disposition": "Building walkthrough video: talk, not a listing."
+    },
+    {
+      "rowId": 252983,
+      "at": "2026-11-18T16:42:06.106000-08:00",
+      "fromLeon": true,
+      "text": "Liked “https://grubbrr.com/products/food-lockers/”",
+      "attachments": []
+    },
+    {
+      "rowId": 252984,
+      "at": "2026-11-18T16:43:34.557000-08:00",
+      "fromLeon": true,
+      "text": "Love that you bring munchie everywhere haha, looking good, for $900 month you said?",
+      "attachments": []
+    },
+    {
+      "rowId": 252985,
+      "at": "2026-11-18T16:43:37.578000-08:00",
+      "fromLeon": true,
+      "text": "Space looks huge",
+      "attachments": []
+    },
+    {
+      "rowId": 252986,
+      "at": "2026-11-18T16:44:35.422000-08:00",
+      "fromLeon": true,
+      "text": "I’m in a meeting right now bro, my bad",
+      "attachments": []
+    },
+    {
+      "rowId": 252987,
+      "at": "2026-11-18T16:44:56.711000-08:00",
+      "fromLeon": true,
+      "text": "I will call you back around 5:30pm, but overall the place looks very good, close to downtown too",
+      "attachments": []
+    },
+    {
+      "rowId": 252988,
+      "at": "2026-11-18T16:51:17.351247-08:00",
+      "fromLeon": false,
+      "text": "No problem",
+      "attachments": [],
+      "disposition": "Conversation."
+    },
+    {
+      "rowId": 252989,
+      "at": "2026-11-18T17:32:23.925438-08:00",
+      "fromLeon": false,
+      "text": "Brb bro",
+      "attachments": [],
+      "disposition": "Conversation."
+    },
+    {
+      "rowId": 252990,
+      "at": "2026-11-18T17:37:33.047625-08:00",
+      "fromLeon": true,
+      "text": "No worries bro",
+      "attachments": []
+    },
+    {
+      "rowId": 252991,
+      "at": "2026-11-18T18:50:35.715912-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0900.PNG"
+      ],
+      "disposition": "@singlecatm0m portrait; her page icon updated from the matching Instagram avatar."
+    },
+    {
+      "rowId": 252992,
+      "at": "2026-11-18T18:50:37.065603-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df5Jx-3JZlo/?bqrl=MWxqdXNwcXBhanNkMw==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (Df5Jx-3JZlo)."
+    },
+    {
+      "rowId": 252993,
+      "at": "2026-11-18T18:50:37.275719-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFoodie\nNewbie",
+      "attachments": [],
+      "disposition": "Clip request, Foodie, Newbie. Newbie stays provenance, not a public rating."
+    },
+    {
+      "rowId": 252994,
+      "at": "2026-11-18T19:26:44.620557-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0902.PNG"
+      ],
+      "disposition": "@_aemeriee.dance portrait; her page icon updated from the matching Instagram avatar."
+    },
+    {
+      "rowId": 252995,
+      "at": "2026-11-18T19:26:45.180944-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DboLDLIMvja/?cnvx=MTFtYWV6cmVrNnZ1cA==",
+      "attachments": [],
+      "disposition": "Reel link; clipped (DboLDLIMvja)."
+    },
+    {
+      "rowId": 252996,
+      "at": "2026-11-18T19:26:45.280448-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": [],
+      "disposition": "Clip request and icon update; see posts and artwork."
+    },
+    {
+      "rowId": 252997,
+      "at": "2026-11-18T19:26:45.381112-08:00",
+      "fromLeon": false,
+      "text": "Heavy Hitter",
+      "attachments": [],
+      "disposition": "Heavy Hitter: @_aemeriee.dance moves to More foodies seat 5, after the earlier overflow Heavy Hitters."
+    },
+    {
+      "rowId": 252998,
+      "at": "2026-11-18T19:31:48.123254-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0904.PNG"
+      ],
+      "disposition": "@bennyeats.bayarea portrait; his page icon updated from the matching Instagram avatar."
+    },
+    {
+      "rowId": 252999,
+      "at": "2026-11-18T19:31:48.218156-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df5_igDJnyL/?lqvp=cmY3ZTZoemhtcHh1",
+      "attachments": [],
+      "disposition": "Reel link; clipped (Df5_igDJnyL)."
+    },
+    {
+      "rowId": 253000,
+      "at": "2026-11-18T19:31:48.303199-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": [],
+      "disposition": "Clip request and icon update; see posts and artwork."
+    },
+    {
+      "rowId": 253001,
+      "at": "2026-11-18T20:10:11.705857-08:00",
+      "fromLeon": false,
+      "text": "Hey bro, are you free?",
+      "attachments": [],
+      "disposition": "Call request. No directory action."
+    },
+    {
+      "rowId": 253002,
+      "at": "2026-11-18T21:19:48.030000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz \nPlease update icon pic ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253003,
+      "at": "2026-11-18T21:20:09.880000-08:00",
+      "fromLeon": true,
+      "text": "Hey bro, I’m out now, I can give you a call tomorrow morning?",
+      "attachments": []
+    },
+    {
+      "rowId": 253004,
+      "at": "2026-11-18T21:20:14.354000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz \nPlease update icon pic \n”",
+      "attachments": []
+    },
+    {
+      "rowId": 253007,
+      "at": "2026-11-19T08:17:25.744000-08:00",
+      "fromLeon": true,
+      "text": "Hey bro, this is or BSTY Goods, let me know if this is the theme you want, and you can play around and test all already",
+      "attachments": []
+    },
+    {
+      "rowId": 253008,
+      "at": "2026-11-19T08:17:26.175000-08:00",
+      "fromLeon": true,
+      "text": "https://beastypages.com/goods/",
+      "attachments": []
+    },
+    {
+      "rowId": 253029,
+      "at": "2026-11-19T11:13:21.646078-08:00",
+      "fromLeon": false,
+      "text": "Looks good brother! Is the sign in our same BEASTYpages sign in?",
+      "attachments": [],
+      "disposition": "Goods sign-in question. Shared sign-in already live in 53998e7."
+    },
+    {
+      "rowId": 253030,
+      "at": "2026-11-19T11:20:03.431745-08:00",
+      "fromLeon": false,
+      "text": "My only suggestion is if we can just put Goods below BSTY and perhaps bold the letters.",
+      "attachments": [
+        "IMG_0938.png"
+      ],
+      "disposition": "Goods under BSTY, bold. Already live in 53998e7."
+    },
+    {
+      "rowId": 253031,
+      "at": "2026-11-19T11:28:25.916964-08:00",
+      "fromLeon": false,
+      "text": "Also brother, can we include an EAT button again & put coming soon.",
+      "attachments": [
+        "IMG_0941.PNG"
+      ],
+      "disposition": "EAT button with coming soon. Already live in 53998e7."
+    },
+    {
+      "rowId": 253034,
+      "at": "2026-11-19T11:59:16.794000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Also brother, can we include an EAT button again & put coming soon. ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253035,
+      "at": "2026-11-19T11:59:19.049000-08:00",
+      "fromLeon": true,
+      "text": "Liked “My only suggestion is if we can just put Goods below BSTY and perhaps bold the letters.”",
+      "attachments": []
+    },
+    {
+      "rowId": 253036,
+      "at": "2026-11-19T11:59:21.738000-08:00",
+      "fromLeon": true,
+      "text": "Sure",
+      "attachments": []
+    },
+    {
+      "rowId": 253037,
+      "at": "2026-11-19T11:59:33.956000-08:00",
+      "fromLeon": true,
+      "text": "Yup same account connected between them",
+      "attachments": []
+    },
+    {
+      "rowId": 253038,
+      "at": "2026-11-19T12:13:51.395585-08:00",
+      "fromLeon": false,
+      "text": "So if a user signs up for one website they are automatically signed up for the other?",
+      "attachments": [],
+      "disposition": "Question about shared sign-up between BEASTY Pages and BSTY Goods. Goods work, not a directory listing; held for the Goods session (services/goods is packaged from bsty-goods)."
+    },
+    {
+      "rowId": 253039,
+      "at": "2026-11-19T12:14:44.089565-08:00",
+      "fromLeon": false,
+      "text": "If that’s the case, maybe on the sign-up we can put they can visit the other site and they will be automatically signed up?",
+      "attachments": [],
+      "disposition": "Sign-up copy pointing to the other site. Held for the Goods session."
+    },
+    {
+      "rowId": 253040,
+      "at": "2026-11-19T12:15:38.455012-08:00",
+      "fromLeon": false,
+      "text": "This would really help our user base. As we build users for either platform, it adds to either platform.",
+      "attachments": [],
+      "disposition": "See previous."
+    },
+    {
+      "rowId": 253043,
+      "at": "2026-11-19T12:50:40.696000-08:00",
+      "fromLeon": true,
+      "text": "Yupp, I can think of the way how we can connect them and implement it , good idea",
+      "attachments": []
+    },
+    {
+      "rowId": 253044,
+      "at": "2026-11-19T12:53:10.080347-08:00",
+      "fromLeon": false,
+      "text": "So you should definitely add perhaps our BEASTYpages icon somewhere on this website for a quick connection and vice versa, which we already have. You can re-label the BEASTY supply button with the shopping bag as BSTY goods",
+      "attachments": [],
+      "disposition": "Cross-link buttons (BEASTY Pages icon on Goods, BSTY Goods button on BEASTY). Held for the Goods session; Leon agreed to do it."
+    },
+    {
+      "rowId": 253045,
+      "at": "2026-11-19T12:54:24.764588-08:00",
+      "fromLeon": false,
+      "text": "Or actually create a new button because we will create a BEASTY  supply shopping website connection as well since we have allotted an extra space for this anyways.",
+      "attachments": [],
+      "disposition": "See previous."
+    },
+    {
+      "rowId": 253046,
+      "at": "2026-11-19T12:54:59.904000-08:00",
+      "fromLeon": true,
+      "text": "Liked “So you should definitely add perhaps our BEASTYpages icon somewhere on this website for a quick connection and vice versa, which we already have. You can re-label the BEASTY supply button with the shopping bag as BSTY goods”",
+      "attachments": []
+    },
+    {
+      "rowId": 253047,
+      "at": "2026-11-19T12:55:12.663000-08:00",
+      "fromLeon": true,
+      "text": "Agree, yeah I will do that , and make it easy for the user too",
+      "attachments": []
+    },
+    {
+      "rowId": 253048,
+      "at": "2026-11-19T13:41:16.405257-08:00",
+      "fromLeon": false,
+      "text": "Hey brother, I got a good idea for the logo. Can you make the yellow line thicker but under laps half of BSTY and can you put the word GOODS sandwiched in between the trade arrows and make it just as wide as BSTY and let that overlap half of the thick yellow line. I hope that makes good sense to you.",
+      "attachments": [
+        "IMG_0951.PNG",
+        "IMG_0950.png"
+      ],
+      "disposition": "BSTY Goods logo idea (thicker yellow line, GOODS between the arrows). Leon is making mockups; not a directory listing."
+    },
+    {
+      "rowId": 253049,
+      "at": "2026-11-19T14:00:10.930578-08:00",
+      "fromLeon": true,
+      "text": "Sure I will make some mockups of the logo and will send you",
+      "attachments": []
+    },
+    {
+      "rowId": 253050,
+      "at": "2026-11-19T14:01:00.399752-08:00",
+      "fromLeon": false,
+      "text": "I’m sure you get the idea",
+      "attachments": [
+        "IMG_0954.png"
+      ],
+      "disposition": "Logo reference image for the previous request."
+    },
+    {
+      "rowId": 253051,
+      "at": "2026-11-19T14:02:41.856499-08:00",
+      "fromLeon": true,
+      "text": "Yuppp",
+      "attachments": []
+    }
+  ],
+  "held": [
+    {
+      "rows": [
+        253038,
+        253039,
+        253040,
+        253044,
+        253045
+      ],
+      "what": "Shared sign-up message and cross-link buttons between BEASTY Pages and BSTY Goods",
+      "reason": "Goods work, not a directory listing. services/goods is packaged from bsty-goods; left for the Goods session."
+    },
+    {
+      "rows": [
+        253048,
+        253050
+      ],
+      "what": "BSTY Goods logo idea",
+      "reason": "Leon replied he will make mockups first."
+    },
+    {
+      "rows": [
+        252854
+      ],
+      "what": "Vectorize Calvin’s shirt files",
+      "reason": "Files are to arrive by email; none in the thread."
+    }
+  ],
+  "sources": [
+    {
+      "brand": "b_houseofnankingsf",
+      "urls": [
+        "https://www.houseofnankingsf.com/",
+        "https://www.houseofnankingsf.com/location/house-of-nanking/",
+        "https://www.houseofnankingsf.com/menu/",
+        "https://media-cdn.getbento.com/accounts/eecc446dc5ab4d2b8eaef51b57551588/media/yM5UIO1STAe3GHovlZWw_House%20of%20Nanking%20Menu%202025.pdf",
+        "https://www.houseofnankingsf.com/reservations/",
+        "https://www.houseofnankingsf.com/catering/",
+        "https://www.houseofnankingsf.com/about/"
+      ],
+      "note": "Address, phone and hours from the Hours & Location page; the menu from the May 2025 lunch and dinner PDF linked on the menu page (newest of the three). Merchandise and chili sauces on the PDF are not listed. The order link is the site’s Order Pickup button."
+    }
+  ]
+}

@@ -1293,4 +1293,7 @@ export const ADDED_ON: Record<string, string> = {
   'b_jarsemeryville': '2026-11-17',
   'b_lemoncrabrichmond': '2026-11-17',
   'b_ohcraboakland': '2026-11-17',
+
+  // Batch 124.
+  'b_houseofnankingsf': '2026-11-19',
 }
