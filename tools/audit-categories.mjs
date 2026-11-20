@@ -24,6 +24,10 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { mkdirSync, openSync, readFileSync } from 'node:fs'
 import { freshTestDb } from './pgtest.mjs'
+import { tsImport } from 'tsx/esm/api'
+
+const { BEASTY_CATEGORIES } = await tsImport('../src/data/categories.ts', import.meta.url)
+const { PAGES_TILES } = await tsImport('../src/data/categoryGlyphs.ts', import.meta.url)
 
 const TESTDB = await freshTestDb('categories')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
@@ -68,6 +72,35 @@ const wallIs = async (p, re) => {
   }
   return w
 }
+/* Every screen of the swipe, by turning Next page from the first. The dot
+   strip is a sliding window (about nineteen dots), so it cannot see the last
+   screens once More pages and More eats run to several screens each. */
+/* The next screen by its dot. Not the Next page arrow: signed out, that arrow
+   asks to sign up first by design (Glenn: "When they tap the right arrow to
+   view more city's"); the dots are never gated. */
+const nextDot = async (p) => {
+  const before = await where(p)
+  await p.evaluate(() => (document.querySelector('.page-dots [aria-current="page"]')?.nextElementSibling)?.click())
+  for (let k = 0; k < 20 && (await where(p)) === before; k++) await p.waitForTimeout(150)
+  return (await where(p)) !== before
+}
+/* Back to BEASTY • Pages: B•P always lands there, whatever the dot window shows. */
+const toPages = async (p) => {
+  await p.locator('.spotlight-pages').click()
+  await waitWhere(p, 'BEASTY, Pages')
+  await p.waitForTimeout(400)
+}
+const walk = async (p) => {
+  await goDot(p, 0)
+  const seen = [await where(p)]
+  for (let i = 0; i < 60 && (await nextDot(p)); i++) seen.push(await where(p))
+  return seen
+}
+/* The tiles on screen now: a section that runs to several screens keeps them
+   all in one page element, so read what is inside the viewport. */
+const gridOf = (p) => p.evaluate(() => [...document.querySelectorAll('.home-grid button[aria-label]')]
+  .filter((x) => { const r = x.getBoundingClientRect(); return r.width > 0 && r.left >= -1 && r.right <= innerWidth + 1 })
+  .map((x) => x.getAttribute('aria-label')))
 const goDot = async (p, i) => {
   await p.evaluate((n) => document.querySelectorAll('.page-dots .dot')[n]?.click(), i)
   await p.waitForTimeout(700)
@@ -83,39 +116,66 @@ const p = await b.newPage({ viewport: { width: 393, height: 852 } })
 await toHome(p)
 
 // ---- the swipe ------------------------------------------------------------
-const run = await dots(p)
-/* One name per page, a page that runs on to a second screen counted once. */
+const opening = await where(p)
+const run = await walk(p)
+/* One name per page, a page that runs on to further screens counted once. */
 const sections = run.map((l) => l?.replace(/^Page \d+ of \d+, BEASTY, /, '')).filter((x, i, a) => x !== a[i - 1])
 /* 2026-10-05: BEASTY • Pages first (Glenn: "make the Home Screen BEASTY •
    Pages"), then the nine: Sweets after Eats, AYCE after Sweets, Whips renamed
    Automotive. */
 /* And its yellow page, More pages, for the categories past the 24 tiles (Glenn, 2026-10-05). */
 const want = ['Pages', 'More pages', 'Eats', 'Sweets', 'AYCE', 'Goods', 'Services', 'Online', 'Individuals', 'Tattoo', 'Automotive']
-step('the home screen opens on BEASTY • Pages', (await where(p))?.endsWith('BEASTY, Pages'), await where(p))
+step('the home screen opens on BEASTY • Pages', opening?.endsWith('BEASTY, Pages'), opening)
 step('then the nine category pages, in order', want.every((w, i) => sections[i] === w), sections.slice(0, 11).join(', '))
 step('then the yellow sheets', sections.includes('More eats') && sections.includes('More services'), sections.slice(11).join(', '))
-await goDot(p, await (async () => (await dots(p)).findIndex((l) => l.endsWith('BEASTY, More pages')))())
-const more = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
-step('More pages holds all 24 overflow categories, including Yakitori and Vegan', more.length === 24 && more.includes('BEASTY • Dancers') && more.includes('BEASTY • Media') && more.includes('BEASTY • Yakitori') && more.includes('BEASTY • Vegan'), more.slice(0, 7).join(' | '))
+/* More pages runs on to as many screens as the categories need (81 of them by
+   2026-11-18), 24 tiles to a screen; every screen is a More pages screen. */
+await p.locator('.spotlight-pages').click()
+await waitWhere(p, 'BEASTY, Pages')
+await nextDot(p)
+await p.waitForTimeout(500)
+const more = []
+const screens = []
+for (let i = 0; i < 10 && (await where(p))?.endsWith('BEASTY, More pages'); i++) {
+  /* Read once the screen has settled: the same tiles twice in a row. */
+  let g = await gridOf(p)
+  for (let k = 0; k < 10; k++) {
+    await p.waitForTimeout(250)
+    const again = await gridOf(p)
+    if (JSON.stringify(again) === JSON.stringify(g)) break
+    g = again
+  }
+  screens.push([await where(p), g.length])
+  more.push(...g)
+  if (!(await nextDot(p))) break
+}
+/* The last screen is filled out with "A new BEASTY category, coming soon"
+   tiles; only the real categories are counted. */
+const moreCats = more.filter((x) => x?.startsWith('BEASTY • '))
+/* Exactly the categories that are not one of the 24 tiles on BEASTY • Pages. */
+const overflow = BEASTY_CATEGORIES.filter((c) => !PAGES_TILES.includes(c.kind)).map((c) => `BEASTY • ${c.heading}`)
+const moreMissing = overflow.filter((h) => !moreCats.includes(h))
+const moreExtra = [...new Set(moreCats)].filter((h) => !overflow.includes(h))
+step('More pages holds the overflow categories, 24 to a screen, including Yakitori and Vegan', screens.every(([, n]) => n === 24) && new Set(moreCats).size === moreCats.length && moreMissing.length === 0 && moreExtra.length === 0 && ['BEASTY • Dancers', 'BEASTY • Media', 'BEASTY • Yakitori', 'BEASTY • Vegan'].every((x) => moreCats.includes(x)), `${moreCats.length} categories over ${screens.length} screens (${screens.map(([, n]) => n).join('/')})${moreMissing.length ? `; missing ${moreMissing.join(', ')}` : ''}${moreExtra.length ? `; extra ${moreExtra.join(', ')}` : ''}`)
 step('B•P is left of the gallery button and turns to BEASTY • Pages', (await p.locator('.spotlight-pages').count()) === 1)
 await p.locator('.spotlight-pages').click()
 step('B•P lands on BEASTY • Pages', !!(await waitWhere(p, 'BEASTY, Pages'))?.endsWith('BEASTY, Pages'))
 const pagesAtHome = await total(p)
-step('the whole swipe is short: no city pages in it', pagesAtHome > 0 && pagesAtHome <= 20, `${pagesAtHome} pages`)
+step('the swipe holds no city pages', pagesAtHome === run.length && run.every((l) => / of \d+, BEASTY, /.test(l ?? '')), `${pagesAtHome} screens, all BEASTY`)
 
 // ---- a category page ------------------------------------------------------
 const dotOf = async (name) => (await dots(p)).findIndex((l) => l.endsWith(`BEASTY, ${name}`))
 /* BEASTY • Pages: a tile per category, each opening its page. */
 const tiles = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
-step('BEASTY • Pages is a tile per category', tiles.length >= 12 && tiles.includes('BEASTY • Eats') && tiles.includes('BEASTY • Cafe'), `${tiles.length}: ${tiles.slice(0, 5).join(', ')} …`)
+step('BEASTY • Pages is a tile per category', tiles.length >= 12 && tiles.includes('BEASTY • Eats') && tiles.includes('BEASTY • Coffee/teas'), `${tiles.length}: ${tiles.slice(0, 5).join(', ')} …`)
 await shot(p, '0-pages')
 /* Signed out, a tile on the swipe turns to its page; one off the swipe asks
    to sign up first, as Search does (checked again signed in, below). */
 await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Tattoo"]').first().click()
 const viaTile = await waitWhere(p, 'BEASTY, Tattoo')
 step('a tile for a category on the swipe turns to its page', !!viaTile?.endsWith('BEASTY, Tattoo'), viaTile)
-await goDot(p, 0)
-await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Cafe"]').first().click()
+await toPages(p)
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee/teas"]').first().click()
 await p.waitForTimeout(600)
 step('signed out, a category off the swipe asks to sign up first', (await p.locator('.gate[role="dialog"]').count()) === 1)
 await p.locator('.gate-scrim').first().click().catch(() => {})
@@ -181,14 +241,16 @@ const openSearch = async () => {
   await p.waitForSelector('.search-drops', { timeout: 10000 }).catch(() => {})
   await p.waitForTimeout(500)
 }
-await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Cafe"]').first().click()
-const coffee = await waitWhere(p, 'BEASTY, Cafe')
-step('signed in, a tile for a category off the swipe opens its page', !!coffee?.endsWith('BEASTY, Cafe'), coffee)
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee/teas"]').first().click()
+const coffee = await waitWhere(p, 'BEASTY, Coffee/teas')
+step('signed in, a tile for a category off the swipe opens its page', !!coffee?.endsWith('BEASTY, Coffee/teas'), coffee)
 await openSearch()
 step('Search has a Categories button and a Cities button', (await p.locator('.search-drop-btn', { hasText: 'Categories' }).count()) === 1 && (await p.locator('.search-drop-btn', { hasText: 'Cities' }).count()) === 1)
 await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()
 const cats = await p.locator('#search-drop-categories .search-brand strong').allTextContents()
-step('Categories lists every BEASTY page, including Games, Health/Beauty, Breakfast/Diner, FROYO, Catering and Steakhouse', cats.length === 53 && cats.includes('BEASTY • Games') && cats.includes('BEASTY • Health/Beauty') && cats.includes('BEASTY • Breakfast/Diner') && cats.includes('BEASTY • FROYO') && cats.includes('BEASTY • Catering') && cats.includes('BEASTY • Steakhouse') && cats.includes('BEASTY • Ramen') && cats.includes('BEASTY • Dim Sum') && cats.includes('BEASTY • Hot Pot') && cats.includes('BEASTY • BBQ') && cats.includes('BEASTY • Vegan') && cats.includes('BEASTY • Yakitori') && cats.includes('BEASTY • Teas/Boba/Matcha') && cats.includes('BEASTY • More foodies') && cats.includes('BEASTY • B i P') && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length}: ${cats.slice(0, 6).join(', ')} …`)
+/* Every category in the data, whatever its count has grown to (82 on 2026-11-19). */
+const missingCats = BEASTY_CATEGORIES.map((c) => `BEASTY • ${c.heading}`).filter((h) => !cats.includes(h))
+step('Categories lists every BEASTY page, including Games, Health/Beauty, Breakfast/Diner, FROYO, Catering and Steakhouse', missingCats.length === 0 && cats.includes('BEASTY • Games') && cats.includes('BEASTY • Health/Beauty') && cats.includes('BEASTY • Breakfast/Diner') && cats.includes('BEASTY • FROYO') && cats.includes('BEASTY • Catering') && cats.includes('BEASTY • Steakhouse') && cats.includes('BEASTY • Ramen') && cats.includes('BEASTY • Dim Sum') && cats.includes('BEASTY • Hot Pot') && cats.includes('BEASTY • BBQ') && cats.includes('BEASTY • Vegan') && cats.includes('BEASTY • Yakitori') && cats.includes('BEASTY • Teas/Boba/Matcha') && cats.includes('BEASTY • More influencers') && cats.includes('BEASTY • BIP') && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length} listed${missingCats.length ? `; missing ${missingCats.join(', ')}` : ''}; absent: ${['BEASTY • Games','BEASTY • Health/Beauty','BEASTY • Breakfast/Diner','BEASTY • FROYO','BEASTY • Catering','BEASTY • Steakhouse','BEASTY • Ramen','BEASTY • Dim Sum','BEASTY • Hot Pot','BEASTY • BBQ','BEASTY • Vegan','BEASTY • Yakitori','BEASTY • Teas/Boba/Matcha','BEASTY • More influencers','BEASTY • BIP'].filter((x) => !cats.includes(x)).join(', ') || 'none'}; not BEASTY: ${cats.filter((c) => !c.startsWith('BEASTY • ')).join(', ') || 'none'}`)
 step('Search has a Share button', (await p.locator('.chrome-pill.is-share', { hasText: 'Share' }).count()) >= 1)
 step('A to Z', cats.every((c, i) => i === 0 || cats[i - 1].localeCompare(c) <= 0))
 const thumbs = await p.evaluate(() => [...document.querySelectorAll('#search-drop-categories .search-cat-thumb .cat-icon')].filter((t) => /url\(/.test(t.style.backgroundImage)).length)
@@ -197,14 +259,14 @@ await shot(p, '3-categories')
 await p.locator('#search-drop-categories .search-brand', { hasText: 'BEASTY • Ramen' }).click()
 step('Ramen opens from Categories', (await waitWhere(p, 'BEASTY, Ramen'))?.endsWith('BEASTY, Ramen'))
 const ramenTiles = await p.locator('.home-page:not([inert]) .home-grid button[aria-label]').evaluateAll(a => a.map(x => x.getAttribute('aria-label')))
-step('Ramen holds eleven shops including Garlic High, Ramen Shop and NōKA', ramenTiles.filter(t => !/spot available/.test(t)).length === 11 && ramenTiles.some(t => /Garlic High/.test(t)) && ramenTiles.some(t => /Ramen Shop/.test(t)) && ramenTiles.some(t => /NōKA/.test(t)), ramenTiles.join(' | '))
+step('Ramen holds at least eleven shops including Garlic High, Ramen Shop and NōKA', ramenTiles.filter(t => !/spot available/.test(t)).length >= 11 && ramenTiles.some(t => /Garlic High/.test(t)) && ramenTiles.some(t => /Ramen Shop/.test(t)) && ramenTiles.some(t => /NōKA/.test(t)), ramenTiles.join(' | '))
 step('Ramen draws its own wallpaper', /cat-ramen\.webp/.test(await wallIs(p, /cat-ramen\.webp/)))
 await openSearch()
 await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()
 await p.locator('#search-drop-categories .search-brand', { hasText: 'BEASTY • Dim Sum' }).click()
 step('Dim Sum opens from Categories', (await waitWhere(p, 'BEASTY, Dim Sum'))?.endsWith('BEASTY, Dim Sum'))
 const dimsumTiles = await p.locator('.home-page:not([inert]) .home-grid button[aria-label]').evaluateAll(a => a.map(x => x.getAttribute('aria-label')))
-step('Dim Sum holds twelve shops including Din Ding and Taste of Shaxian', dimsumTiles.filter(t => !/spot available/.test(t)).length === 12 && dimsumTiles.some(t => /Din Ding/.test(t)) && dimsumTiles.some(t => /Taste of Shaxian/.test(t)))
+step('Dim Sum holds at least twelve shops including Din Ding and Taste of Shaxian', dimsumTiles.filter(t => !/spot available/.test(t)).length >= 12 && dimsumTiles.some(t => /Din Ding/.test(t)) && dimsumTiles.some(t => /Taste of Shaxian/.test(t)), dimsumTiles.filter(t => !/spot available/.test(t)).join(' | '))
 step('Dim Sum draws its own wallpaper', /cat-dimsum\.webp/.test(await wallIs(p, /cat-dimsum\.webp/)))
 for (const [heading,kind,label] of [['Hot Pot','hotpot','Mumu'],['BBQ','bbq','Wooga'],['Vegan','vegan','Laughing Monk'],['Teas/Boba/Matcha','teas','CHICHA']]) {
  await openSearch()

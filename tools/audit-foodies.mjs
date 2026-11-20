@@ -8,7 +8,7 @@
   - a foodie's page lists the places reviewed; one opens to its film and one
     to the business on BEASTY;
   - Grand-O's existing page carries @thesnacksensei's reviews;
-  - a business reviewed twice lists both reviewers, and a row leads to the
+  - a business reviewed more than once lists every reviewer, and a row leads to the
     foodie's page.
 */
 import { chromium } from 'playwright'
@@ -61,10 +61,11 @@ await open('b_grando')
 const grando = await rows()
 step("Grand-O's page carries @thesnacksensei's reviews", grando.includes('Hungry Cow') && grando.includes("Tony's Pizza Napoletana"), grando.join(' | '))
 
-// ---- a business reviewed twice --------------------------------------------
+// ---- a business reviewed more than once --------------------------------------------
 await open('b_deliboard')
 const deli = await rows()
-step('a business reviewed twice lists both reviewers', (await heading()) === 'Foodie reviews' && deli.length === 2, deli.join(' | '))
+/* Deli Board has gathered a third reviewer since (2026-11); every one is listed. */
+step('a business reviewed more than once lists every reviewer', (await heading()) === 'Foodie reviews' && deli.length >= 2 && new Set(deli).size === deli.length, deli.join(' | '))
 await p.locator('.foodie-review-head').first().click()
 const toFoodie = p.locator('.foodie-review.is-open button', { hasText: /page$/ })
 step("a reviewer with a page links to it", (await toFoodie.count()) === 1, await toFoodie.first().textContent().catch(() => ''))
