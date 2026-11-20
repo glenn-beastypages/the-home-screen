@@ -57,6 +57,9 @@ function JoinHead({ step, signinOnly = false }: { step: 'details' | 'code'; sign
           <b>2</b> Your code
         </li>
       </ol>
+      {/* Glenn, 2026-11-19: "on the sign-up we can put they can visit the
+          other site and they will be automatically signed up". */}
+      {step === 'details' && <p className="join-both">One account for BEASTY Pages + BSTY Goods</p>}
     </div>
   )
 }

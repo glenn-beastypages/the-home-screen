@@ -197,6 +197,11 @@ h2,
   gap: 4px;
   margin-left: 0;
 }
+.pages-entry img {
+  display: block;
+  flex: none;
+  border-radius: 6px;
+}
 .header-profile {
   margin-left: 3px;
 }

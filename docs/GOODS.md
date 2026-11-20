@@ -31,6 +31,10 @@ is served from the same host, so it reads the BEASTY Pages session directly
   are left alone, and an unreachable Pages never signs anyone out.
 - No new Goods-only accounts: "Sign up with Goods email" is gone. Existing
   Goods email accounts still sign in and connect from Settings.
+- Links both ways (Glenn, 19 November): a BSTY Goods tile in the dock's BEASTY
+  set (it took the shopping bag's slot; Supply keeps key 4 on the landing
+  keypad), and the BEASTY Pages icon in the Goods header. The BEASTY sign-up
+  says "One account for BEASTY Pages + BSTY Goods".
 
 Checked on a local host with a synthetic account in all four directions;
 `node tools/audit-goods-host.mjs` 31/31 and the Goods unit tests 49/49 pass.

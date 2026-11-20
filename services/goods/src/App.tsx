@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import {
   api,
+  appBase,
   withBase,
   sessionChangeKey,
   withoutBase,
@@ -363,6 +364,21 @@ export default function App() {
             ))}
           </nav>
           <div className="header-actions">
+            {/* Glenn, 2026-11-19: "add perhaps our BEASTYpages icon somewhere
+                on this website for a quick connection". Same sign-in on both. */}
+            <a
+              className="icon-button pages-entry"
+              href={appBase === "/goods" ? "/" : "https://beastypages.com/"}
+              aria-label="Open BEASTY Pages"
+              title="BEASTY Pages"
+            >
+              <img
+                src={withBase("/brand/beasty-pages.webp")}
+                width={25}
+                height={25}
+                alt=""
+              />
+            </a>
             <Link
               to="/favorites"
               className="icon-button favorites-entry"
