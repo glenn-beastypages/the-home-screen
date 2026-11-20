@@ -97520,4 +97520,904 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+  // Batch 125 — Little Lucca in South San Francisco; Minnie Bell’s Soul Movement opens BEASTY • Soul Food.
+  {
+    "slug": "little-lucca-south-sf",
+    "name": "Little Lucca",
+    "label": "Little Lucca",
+    "cuisine": "Specialty sandwich shop and deli",
+    "category": "Sandwiches",
+    "color": "#1E7B34",
+    "icon": "little-lucca-south-sf-v125",
+    "prep": 0,
+    "items": [],
+    "address": "724 El Camino Real, South San Francisco, CA 94080",
+    "phone": "(650) 589-8916",
+    "hours": "Mon–Fri 8:30am–4pm, Sat–Sun 9am–4pm",
+    "tagline": "Hot and cold deli sandwiches on fresh rolls with the shop’s original garlic sauce, made since 1980.",
+    "site": "https://littlelucca.com/",
+    "siteCta": "See the menu",
+    "orderUrl": "https://southcity.littlelucca.com/shop/",
+    "instagram": "https://www.instagram.com/littleluccadeli/",
+    "siteNote": "Prices are from the shop’s September 2025 printed menu, and the sauces to go from its South San Francisco online ordering page. Salad prices vary by size. Prices are subject to change.",
+    "panels": [
+      {
+        "head": "Every sandwich",
+        "body": [
+          "Comes with mayo, mustard, pickles, red onion, lettuce, tomato, hot pepper sauce and the original garlic sauce.",
+          "Rolls: wheat, sourdough, Dutch crunch, sweet or rustic Italian. Sliced bread: rye or white.",
+          "Phone orders 9am–3pm. Phone orders of three or more sandwiches need a credit card."
+        ],
+        "links": [
+          {
+            "label": "Order online",
+            "href": "https://southcity.littlelucca.com/shop/"
+          },
+          {
+            "label": "Little Lucca menu",
+            "href": "https://littlelucca.com/menu-images/"
+          }
+        ]
+      },
+      {
+        "head": "Burlingame shop",
+        "body": [
+          "1809 El Camino Real, Burlingame, CA 94010",
+          "(650) 697-8389",
+          "Daily 9am–4pm"
+        ],
+        "links": [
+          {
+            "label": "Burlingame shop",
+            "href": "https://burlingame.littlelucca.com/"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Sandwiches – Beef",
+        "items": [
+          [
+            "BBQ Beef Brisket (CAB)",
+            "",
+            1600
+          ],
+          [
+            "BLT",
+            "",
+            1500
+          ],
+          [
+            "Bologna",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Corned Beef",
+            "",
+            1395
+          ],
+          [
+            "Fire Roasted Prime Rib",
+            "",
+            1600
+          ],
+          [
+            "Headcheese",
+            "",
+            1395
+          ],
+          [
+            "Liverwurst",
+            "",
+            1395
+          ],
+          [
+            "Meatball",
+            "",
+            1395
+          ],
+          [
+            "Mortadella",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Pastrami",
+            "",
+            1425
+          ],
+          [
+            "Roast Pork",
+            "",
+            1495
+          ],
+          [
+            "Roast Beef",
+            "",
+            1395
+          ],
+          [
+            "Tri Tip",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches – Italian Cured Meats",
+        "items": [
+          [
+            "Hot Salami",
+            "",
+            1395
+          ],
+          [
+            "Salami",
+            "",
+            1395
+          ],
+          [
+            "Genoa Salami",
+            "",
+            1445
+          ],
+          [
+            "Toscano",
+            "",
+            1445
+          ],
+          [
+            "Soppressata",
+            "",
+            1445
+          ],
+          [
+            "Dry Coppa",
+            "",
+            1445
+          ],
+          [
+            "Hot Coppa",
+            "",
+            1445
+          ],
+          [
+            "Prosciutto",
+            "",
+            1445
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches – Chicken",
+        "items": [
+          [
+            "Grilled Chicken Breast",
+            "",
+            1395
+          ],
+          [
+            "Chicken Salad",
+            "",
+            1395
+          ],
+          [
+            "Chicken Rotisserie",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Chipotle Chicken Breast",
+            "Boar’s Head",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches – Ham",
+        "items": [
+          [
+            "Black Forest Ham",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Boiled Ham",
+            "",
+            1350
+          ],
+          [
+            "Honey Ham",
+            "",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches – Turkey",
+        "items": [
+          [
+            "Deli Regular Turkey",
+            "",
+            1350
+          ],
+          [
+            "Fresh Roasted Turkey",
+            "",
+            1395
+          ],
+          [
+            "Peppered Turkey",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Sausalito Turkey",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Tuscan Turkey",
+            "Boar’s Head",
+            1395
+          ],
+          [
+            "Smoked Turkey",
+            "Boar’s Head",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches – Vegetarian",
+        "items": [
+          [
+            "Cheese",
+            "",
+            1325
+          ],
+          [
+            "Egg Salad",
+            "",
+            1395
+          ],
+          [
+            "Tuna Salad",
+            "",
+            1425
+          ],
+          [
+            "Veggie",
+            "Cheese, avocado, cucumber, sprouts",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Sandwich Specials",
+        "items": [
+          [
+            "BLT & A",
+            "BLT with avocado",
+            1695
+          ],
+          [
+            "Chicken Cordon Bleu",
+            "Breaded chicken patties, honey ham, Swiss cheese",
+            1495
+          ],
+          [
+            "Rotisserie Chicken Bacon Ranch",
+            "Provolone, bacon, ranch dressing",
+            1625
+          ],
+          [
+            "Chicken Santa Fe",
+            "Mesquite-grilled chicken breast, melted cheddar, roasted raspberry chipotle sauce",
+            1525
+          ],
+          [
+            "Chicken Parmesan",
+            "Breaded chicken, parmesan, marinara",
+            1495
+          ],
+          [
+            "Chicken Chipotle Caesar",
+            "Grilled chicken breast, parmesan and provolone, chipotle Caesar dressing",
+            1525
+          ],
+          [
+            "Double Beef",
+            "Pastrami and corned beef, Swiss, coleslaw, McClymond’s Russian dressing",
+            1775
+          ],
+          [
+            "Fire Roasted Steak Caesar",
+            "Fire-roasted prime rib, caramelized onion, melted cheese, Caesar dressing",
+            1775
+          ],
+          [
+            "Hot Link Sandwich",
+            "Louisiana hot links",
+            1595
+          ],
+          [
+            "Lucca Combo",
+            "Mortadella, provolone, salami",
+            1425
+          ],
+          [
+            "Lucca’s Hot Bird",
+            "Sausalito turkey, roasted green pepper, pepper jack, cilantro Caesar dressing",
+            1625
+          ],
+          [
+            "Lucca’s Chipotle Bird",
+            "Chipotle chicken, bacon, cheddar, Vidalia onion dressing, roasted red peppers",
+            1675
+          ],
+          [
+            "Lucca’s Spicy Buffalo",
+            "Spicy chicken strips, jack cheese, ranch, Buffalo bleu cheese or bleu cheese dressing",
+            1575
+          ],
+          [
+            "Lucca Ultimate",
+            "Turkey, ham, bacon, cheese",
+            1625
+          ],
+          [
+            "Reuben",
+            "Corned beef, sauerkraut, melted Swiss, McClymond’s Russian dressing",
+            1625
+          ],
+          [
+            "Two Meat Special",
+            "Your choice of two meats; some cost extra, some are excluded",
+            1425
+          ],
+          [
+            "Tri Tip Special",
+            "BBQ tri tip, horseradish mayo, cheddar, jalapeño bacon",
+            1795
+          ],
+          [
+            "Turkey, Bacon, Pepper Cheese",
+            "",
+            1626
+          ],
+          [
+            "Fresh Roasted Turkey & Cranberry",
+            "",
+            1525
+          ],
+          [
+            "Southwestern",
+            "BBQ beef brisket, caramelized onions, melted cheddar, BBQ sauce",
+            1775
+          ],
+          [
+            "Vegetarian Delight",
+            "Cream cheese, tomato, cucumber, avocado, creamy Caesar dressing",
+            1425
+          ],
+          [
+            "Wild Turkey",
+            "Cream cheese, deli turkey, cranberry sauce",
+            1495
+          ],
+          [
+            "Muffuletta",
+            "Soppressata, mortadella, capicola, olive salad, provolone",
+            1795
+          ],
+          [
+            "Cuban",
+            "Roasted pork, ham, Swiss cheese",
+            1675
+          ]
+        ]
+      },
+      {
+        "name": "Seafood Sandwiches (Tuesdays and Fridays only)",
+        "items": [
+          [
+            "Imitation Crab",
+            "",
+            1595
+          ],
+          [
+            "Shrimp",
+            "",
+            1795
+          ],
+          [
+            "Seafood Combo",
+            "Imitation crab and shrimp",
+            1675
+          ]
+        ]
+      },
+      {
+        "name": "Salads",
+        "items": [
+          [
+            "Potato",
+            "",
+            1095
+          ],
+          [
+            "Macaroni",
+            "",
+            1095
+          ],
+          [
+            "Pesto Pasta",
+            "",
+            1095
+          ],
+          [
+            "Coleslaw",
+            "",
+            1095
+          ],
+          [
+            "Antipasto",
+            "",
+            1095
+          ],
+          [
+            "Chicken Salad",
+            "",
+            1095
+          ],
+          [
+            "Tuna Salad",
+            "",
+            1095
+          ],
+          [
+            "Tossed Green",
+            "",
+            1095
+          ],
+          [
+            "Chef Salad",
+            "",
+            1650
+          ],
+          [
+            "Shrimp",
+            "Tuesdays and Fridays only",
+            1595
+          ],
+          [
+            "Crab",
+            "Tuesdays and Fridays only",
+            1375
+          ]
+        ]
+      },
+      {
+        "name": "Add Cheese",
+        "items": [
+          [
+            "Swiss",
+            "",
+            125
+          ],
+          [
+            "American",
+            "",
+            125
+          ],
+          [
+            "Provolone",
+            "",
+            125
+          ],
+          [
+            "Cheddar",
+            "",
+            125
+          ],
+          [
+            "Monterey Jack",
+            "",
+            125
+          ],
+          [
+            "Pepper Jack",
+            "",
+            125
+          ],
+          [
+            "Mozzarella",
+            "",
+            125
+          ],
+          [
+            "Imported Havarti",
+            "",
+            150
+          ]
+        ]
+      },
+      {
+        "name": "Extra Toppings",
+        "items": [
+          [
+            "Cranberry Sauce",
+            "",
+            125
+          ],
+          [
+            "Avocado",
+            "",
+            250
+          ],
+          [
+            "Bacon",
+            "",
+            250
+          ],
+          [
+            "Cucumber",
+            "",
+            125
+          ],
+          [
+            "Pepperoncini",
+            "",
+            125
+          ],
+          [
+            "Sprouts",
+            "",
+            125
+          ],
+          [
+            "Caramelized Onions",
+            "",
+            125
+          ],
+          [
+            "Roasted Green or Red Peppers",
+            "",
+            125
+          ],
+          [
+            "Jalapeño Bacon",
+            "",
+            335
+          ],
+          [
+            "Jalapeño Rings",
+            "",
+            125
+          ],
+          [
+            "Cream Cheese",
+            "",
+            125
+          ],
+          [
+            "Dressing",
+            "Ranch, bleu cheese, Caesar, Russian, Vidalia onion or cilantro Caesar",
+            95
+          ],
+          [
+            "Italian Olive Salad",
+            "",
+            235
+          ],
+          [
+            "Sauce",
+            "Hot, garlic, raspberry or chipotle",
+            95
+          ]
+        ]
+      },
+      {
+        "name": "Sauces to Go",
+        "items": [
+          [
+            "Garlic Sauce (2 oz side)",
+            "House-made",
+            100
+          ],
+          [
+            "Garlic Sauce (½ pint)",
+            "House-made",
+            825
+          ],
+          [
+            "Garlic Sauce (pint)",
+            "House-made",
+            1650
+          ],
+          [
+            "Hot Sauce (½ pint)",
+            "House-made",
+            825
+          ],
+          [
+            "Hot Sauce (pint)",
+            "House-made",
+            1650
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "minnie-bells-sf",
+    "name": "Minnie Bell’s Soul Movement",
+    "label": "Minnie Bell’s",
+    "cuisine": "Soul food and rosemary fried chicken",
+    "category": "Soul Food",
+    "color": "#7A1517",
+    "icon": "minnie-bells-sf-v125",
+    "prep": 0,
+    "items": [],
+    "address": "1375 Fillmore St, San Francisco, CA 94115",
+    "phone": "(415) 829-3498",
+    "hours": "Tue–Thu 4pm–9pm, Fri–Sat 11am–2pm and 4pm–10pm, closed Sun–Mon",
+    "tagline": "Chef Fernay McPherson’s Fillmore soul food spot, built on family recipes and rosemary fried chicken.",
+    "site": "https://www.minniebellssoul.com/",
+    "siteCta": "See the menu",
+    "orderUrl": "https://order.toasttab.com/online/minnie-bells-soul-food-movement-san-francisco-1375-fillmore-street",
+    "instagram": "https://www.instagram.com/minnie_bells/",
+    "siteNote": "Prices are from the restaurant’s Toast online ordering menu, read on November 19, 2026.",
+    "panels": [
+      {
+        "head": "Ordering",
+        "body": [
+          "Walk-in only, no reservations.",
+          "Pickup and delivery through Toast. Online orders stop 15 minutes before closing."
+        ],
+        "links": [
+          {
+            "label": "Order on Toast",
+            "href": "https://order.toasttab.com/online/minnie-bells-soul-food-movement-san-francisco-1375-fillmore-street"
+          },
+          {
+            "label": "Hours and menu",
+            "href": "https://www.minniebellssoul.com/restaurant-pacific"
+          }
+        ]
+      },
+      {
+        "head": "Catering",
+        "body": [
+          "Catering trays for pickup or delivery, scheduled between 10:30am and 3pm.",
+          "Fried chicken is $4.50 a piece, or $4.20 each for 35 or more. Pans run $98–$263 and feed up to 25–30 people."
+        ],
+        "links": [
+          {
+            "label": "Catering menu",
+            "href": "https://www.minniebellssoul.com/catering"
+          },
+          {
+            "label": "Order catering",
+            "href": "https://minniebells.gethoneycart.com/?menu=108&order_type=1"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Starters",
+        "items": [
+          [
+            "Fried Mac & Cheese Balls",
+            "",
+            1200
+          ],
+          [
+            "Hot Honey Wings",
+            "6 wings tossed in hot honey sauce",
+            1400
+          ],
+          [
+            "BBQ Wings",
+            "6 wings tossed in house BBQ sauce",
+            1400
+          ],
+          [
+            "Classic Wings",
+            "6 wings, no sauce",
+            1300
+          ],
+          [
+            "BBQ Turkey Meatballs",
+            "",
+            1300
+          ]
+        ]
+      },
+      {
+        "name": "Fried chicken",
+        "items": [
+          [
+            "Single Piece",
+            "Any piece; leg or thigh 37¢ more",
+            450
+          ],
+          [
+            "2pc Combo",
+            "2 pieces, cornbread and 1 small side",
+            2000
+          ],
+          [
+            "4pc Combo",
+            "4 pieces, cornbread and 2 small sides",
+            3500
+          ],
+          [
+            "8pc Combo",
+            "8 pieces, cornbread and 2 large sides",
+            7000
+          ],
+          [
+            "2pc Breast Special",
+            "2 breasts, 1 side and cornbread",
+            1800
+          ],
+          [
+            "Kids Meal",
+            "1 piece rosemary fried chicken, half a small mac & cheese and a fruit cup; no substitutions",
+            1000
+          ],
+          [
+            "Fried Chicken Sandwich",
+            "",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Cornbread",
+            "Brown butter cornbread",
+            400
+          ],
+          [
+            "Mac & Cheese (small)",
+            "",
+            700
+          ],
+          [
+            "Mac & Cheese (large)",
+            "",
+            1800
+          ],
+          [
+            "Braised Greens (small)",
+            "",
+            700
+          ],
+          [
+            "Braised Greens (large)",
+            "",
+            1800
+          ],
+          [
+            "Candied Yams (small)",
+            "",
+            700
+          ],
+          [
+            "Candied Yams (large)",
+            "",
+            1800
+          ],
+          [
+            "Potato Salad (small)",
+            "",
+            700
+          ],
+          [
+            "Potato Salad (large)",
+            "",
+            1800
+          ],
+          [
+            "House Salad (small)",
+            "",
+            600
+          ],
+          [
+            "House Salad (large)",
+            "",
+            1000
+          ],
+          [
+            "Pickled Veggies (small)",
+            "",
+            600
+          ],
+          [
+            "Fries (small)",
+            "",
+            500
+          ],
+          [
+            "Fries (large)",
+            "",
+            800
+          ],
+          [
+            "White Rice (small)",
+            "",
+            400
+          ],
+          [
+            "White Rice (large)",
+            "",
+            800
+          ],
+          [
+            "Fried Corn Nibs",
+            "4 pieces",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Sauces",
+        "items": [
+          [
+            "Hot Sauce",
+            "",
+            300
+          ],
+          [
+            "Hot Honey",
+            "",
+            300
+          ],
+          [
+            "Hot Honey Butter",
+            "",
+            350
+          ],
+          [
+            "Mumbo",
+            "",
+            200
+          ],
+          [
+            "BBQ",
+            "",
+            100
+          ],
+          [
+            "Ranch",
+            "",
+            100
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Banana Pudding",
+            "",
+            1000
+          ],
+          [
+            "Caramel Cake",
+            "",
+            800
+          ]
+        ]
+      }
+    ]
+  },
 ]

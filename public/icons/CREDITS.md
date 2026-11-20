@@ -905,3 +905,12 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `influencer-singlecatm0m-v124.webp` | [Source](https://www.instagram.com/singlecatm0m/), IMG_0900.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
 | `influencer-aemeriee-dance-v124.webp` | [Source](https://www.instagram.com/_aemeriee.dance/), IMG_0902.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
 | `influencer-bennyeats-bayarea-v124.webp` | [Source](https://www.instagram.com/bennyeats.bayarea/), IMG_0904.PNG | Same sunset portrait as the v100 tile, now the original square avatar with no circle edge or orange corners. Checked at phone tile size. |
+
+| `influencer-bayarea-buzz-v125.webp` | [Source](https://www.instagram.com/bayarea_buzz/), IMG_0964.PNG | Original public wordmark avatar; the full lettering fits inside the phone tile. |
+| `influencer-foodie-wit-a-bootie-408-v125.webp` | [Source](https://www.instagram.com/foodie_wit_a_bootie_408/), IMG_0962.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-jennixchi-v125.webp` | [Source](https://www.instagram.com/jennixchi/), IMG_0963.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-justjasminesingh-v125.webp` | [Source](https://www.instagram.com/justjasminesingh/), IMG_0968.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `influencer-sfbaydiaries-v125.webp` | [Source](https://www.instagram.com/sfbaydiaries/), IMG_0967.PNG | Glenn asked to update the icon. The original avatar has a ring around the picture; cropped inside it so the bridge and lettering fill the tile. Replaces the v115 circle-in-square tile. |
+| `influencer-willwanderforfood-v125.webp` | [Source](https://www.instagram.com/willwanderforfood/), IMG_0966.PNG | Matched Glenn’s portrait to the public Instagram avatar and used the original. Checked at phone tile size. |
+| `little-lucca-south-sf-v125.webp` | [Source](https://www.instagram.com/littleluccadeli/), IMG_0972.png | Official logo, the original square; full lettering inside the tile. |
+| `minnie-bells-sf-v125.webp` | [Source](https://www.instagram.com/minnie_bells/), IMG_0978.png | Official mark, the original square. Checked at phone tile size. |

@@ -206,6 +206,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'massage', heading: 'Massage/Therapy', about: 'Massage therapists and bodywork', wall: wall('health'), test: /massage|bodywork/i },
   // Glenn, November 17: "BEASTY • Chinese / New Category", opened by House of Nanking in San Francisco.
   { kind: 'chinese', heading: 'Chinese', about: 'Chinese restaurants, from Cantonese to Sichuan', wall: wall('dimsum'), test: /\bchinese\b|szechuan|sichuan|cantonese|shanghainese|hunan|peking duck/i, not: /bakery|dessert|pastr|boba|tea shop/i },
+  // Glenn, November 19: "San Francisco • Eats / BEASTY • Soul Food / New Category", opened by Minnie Bell’s Soul Movement.
+  { kind: 'soulfood', heading: 'Soul Food', about: 'Soul food kitchens and Southern home cooking', wall: wall('diner'), test: /soul food/i },
 ]
 
 /** Every category page holds his twenty-four. */

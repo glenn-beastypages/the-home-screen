@@ -1296,4 +1296,8 @@ export const ADDED_ON: Record<string, string> = {
 
   // Batch 124.
   'b_houseofnankingsf': '2026-11-19',
+
+  // Batch 125.
+  'b_littleluccasouthsf': '2026-11-19',
+  'b_minniebellssf': '2026-11-19',
 }

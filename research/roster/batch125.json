@@ -1,0 +1,2463 @@
+{
+  "cutoff": "2026-11-19T18:18:41.408534-08:00",
+  "cutoffRow": 253122,
+  "previousCutoffRow": 253051,
+  "listings": [
+    {
+      "slug": "little-lucca-south-sf",
+      "name": "Little Lucca",
+      "label": "Little Lucca",
+      "cuisine": "Specialty sandwich shop and deli",
+      "category": "Sandwiches",
+      "color": "#1E7B34",
+      "icon": "little-lucca-south-sf-v125",
+      "prep": 0,
+      "items": [],
+      "address": "724 El Camino Real, South San Francisco, CA 94080",
+      "phone": "(650) 589-8916",
+      "hours": "Mon–Fri 8:30am–4pm, Sat–Sun 9am–4pm",
+      "tagline": "Hot and cold deli sandwiches on fresh rolls with the shop’s original garlic sauce, made since 1980.",
+      "site": "https://littlelucca.com/",
+      "siteCta": "See the menu",
+      "orderUrl": "https://southcity.littlelucca.com/shop/",
+      "instagram": "https://www.instagram.com/littleluccadeli/",
+      "siteNote": "Prices are from the shop’s September 2025 printed menu, and the sauces to go from its South San Francisco online ordering page. Salad prices vary by size. Prices are subject to change.",
+      "panels": [
+        {
+          "head": "Every sandwich",
+          "body": [
+            "Comes with mayo, mustard, pickles, red onion, lettuce, tomato, hot pepper sauce and the original garlic sauce.",
+            "Rolls: wheat, sourdough, Dutch crunch, sweet or rustic Italian. Sliced bread: rye or white.",
+            "Phone orders 9am–3pm. Phone orders of three or more sandwiches need a credit card."
+          ],
+          "links": [
+            {
+              "label": "Order online",
+              "href": "https://southcity.littlelucca.com/shop/"
+            },
+            {
+              "label": "Little Lucca menu",
+              "href": "https://littlelucca.com/menu-images/"
+            }
+          ]
+        },
+        {
+          "head": "Burlingame shop",
+          "body": [
+            "1809 El Camino Real, Burlingame, CA 94010",
+            "(650) 697-8389",
+            "Daily 9am–4pm"
+          ],
+          "links": [
+            {
+              "label": "Burlingame shop",
+              "href": "https://burlingame.littlelucca.com/"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sandwiches – Beef",
+          "items": [
+            [
+              "BBQ Beef Brisket (CAB)",
+              "",
+              1600
+            ],
+            [
+              "BLT",
+              "",
+              1500
+            ],
+            [
+              "Bologna",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Corned Beef",
+              "",
+              1395
+            ],
+            [
+              "Fire Roasted Prime Rib",
+              "",
+              1600
+            ],
+            [
+              "Headcheese",
+              "",
+              1395
+            ],
+            [
+              "Liverwurst",
+              "",
+              1395
+            ],
+            [
+              "Meatball",
+              "",
+              1395
+            ],
+            [
+              "Mortadella",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Pastrami",
+              "",
+              1425
+            ],
+            [
+              "Roast Pork",
+              "",
+              1495
+            ],
+            [
+              "Roast Beef",
+              "",
+              1395
+            ],
+            [
+              "Tri Tip",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches – Italian Cured Meats",
+          "items": [
+            [
+              "Hot Salami",
+              "",
+              1395
+            ],
+            [
+              "Salami",
+              "",
+              1395
+            ],
+            [
+              "Genoa Salami",
+              "",
+              1445
+            ],
+            [
+              "Toscano",
+              "",
+              1445
+            ],
+            [
+              "Soppressata",
+              "",
+              1445
+            ],
+            [
+              "Dry Coppa",
+              "",
+              1445
+            ],
+            [
+              "Hot Coppa",
+              "",
+              1445
+            ],
+            [
+              "Prosciutto",
+              "",
+              1445
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches – Chicken",
+          "items": [
+            [
+              "Grilled Chicken Breast",
+              "",
+              1395
+            ],
+            [
+              "Chicken Salad",
+              "",
+              1395
+            ],
+            [
+              "Chicken Rotisserie",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Chipotle Chicken Breast",
+              "Boar’s Head",
+              1395
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches – Ham",
+          "items": [
+            [
+              "Black Forest Ham",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Boiled Ham",
+              "",
+              1350
+            ],
+            [
+              "Honey Ham",
+              "",
+              1395
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches – Turkey",
+          "items": [
+            [
+              "Deli Regular Turkey",
+              "",
+              1350
+            ],
+            [
+              "Fresh Roasted Turkey",
+              "",
+              1395
+            ],
+            [
+              "Peppered Turkey",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Sausalito Turkey",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Tuscan Turkey",
+              "Boar’s Head",
+              1395
+            ],
+            [
+              "Smoked Turkey",
+              "Boar’s Head",
+              1395
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches – Vegetarian",
+          "items": [
+            [
+              "Cheese",
+              "",
+              1325
+            ],
+            [
+              "Egg Salad",
+              "",
+              1395
+            ],
+            [
+              "Tuna Salad",
+              "",
+              1425
+            ],
+            [
+              "Veggie",
+              "Cheese, avocado, cucumber, sprouts",
+              1395
+            ]
+          ]
+        },
+        {
+          "name": "Sandwich Specials",
+          "items": [
+            [
+              "BLT & A",
+              "BLT with avocado",
+              1695
+            ],
+            [
+              "Chicken Cordon Bleu",
+              "Breaded chicken patties, honey ham, Swiss cheese",
+              1495
+            ],
+            [
+              "Rotisserie Chicken Bacon Ranch",
+              "Provolone, bacon, ranch dressing",
+              1625
+            ],
+            [
+              "Chicken Santa Fe",
+              "Mesquite-grilled chicken breast, melted cheddar, roasted raspberry chipotle sauce",
+              1525
+            ],
+            [
+              "Chicken Parmesan",
+              "Breaded chicken, parmesan, marinara",
+              1495
+            ],
+            [
+              "Chicken Chipotle Caesar",
+              "Grilled chicken breast, parmesan and provolone, chipotle Caesar dressing",
+              1525
+            ],
+            [
+              "Double Beef",
+              "Pastrami and corned beef, Swiss, coleslaw, McClymond’s Russian dressing",
+              1775
+            ],
+            [
+              "Fire Roasted Steak Caesar",
+              "Fire-roasted prime rib, caramelized onion, melted cheese, Caesar dressing",
+              1775
+            ],
+            [
+              "Hot Link Sandwich",
+              "Louisiana hot links",
+              1595
+            ],
+            [
+              "Lucca Combo",
+              "Mortadella, provolone, salami",
+              1425
+            ],
+            [
+              "Lucca’s Hot Bird",
+              "Sausalito turkey, roasted green pepper, pepper jack, cilantro Caesar dressing",
+              1625
+            ],
+            [
+              "Lucca’s Chipotle Bird",
+              "Chipotle chicken, bacon, cheddar, Vidalia onion dressing, roasted red peppers",
+              1675
+            ],
+            [
+              "Lucca’s Spicy Buffalo",
+              "Spicy chicken strips, jack cheese, ranch, Buffalo bleu cheese or bleu cheese dressing",
+              1575
+            ],
+            [
+              "Lucca Ultimate",
+              "Turkey, ham, bacon, cheese",
+              1625
+            ],
+            [
+              "Reuben",
+              "Corned beef, sauerkraut, melted Swiss, McClymond’s Russian dressing",
+              1625
+            ],
+            [
+              "Two Meat Special",
+              "Your choice of two meats; some cost extra, some are excluded",
+              1425
+            ],
+            [
+              "Tri Tip Special",
+              "BBQ tri tip, horseradish mayo, cheddar, jalapeño bacon",
+              1795
+            ],
+            [
+              "Turkey, Bacon, Pepper Cheese",
+              "",
+              1626
+            ],
+            [
+              "Fresh Roasted Turkey & Cranberry",
+              "",
+              1525
+            ],
+            [
+              "Southwestern",
+              "BBQ beef brisket, caramelized onions, melted cheddar, BBQ sauce",
+              1775
+            ],
+            [
+              "Vegetarian Delight",
+              "Cream cheese, tomato, cucumber, avocado, creamy Caesar dressing",
+              1425
+            ],
+            [
+              "Wild Turkey",
+              "Cream cheese, deli turkey, cranberry sauce",
+              1495
+            ],
+            [
+              "Muffuletta",
+              "Soppressata, mortadella, capicola, olive salad, provolone",
+              1795
+            ],
+            [
+              "Cuban",
+              "Roasted pork, ham, Swiss cheese",
+              1675
+            ]
+          ]
+        },
+        {
+          "name": "Seafood Sandwiches (Tuesdays and Fridays only)",
+          "items": [
+            [
+              "Imitation Crab",
+              "",
+              1595
+            ],
+            [
+              "Shrimp",
+              "",
+              1795
+            ],
+            [
+              "Seafood Combo",
+              "Imitation crab and shrimp",
+              1675
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Potato",
+              "",
+              1095
+            ],
+            [
+              "Macaroni",
+              "",
+              1095
+            ],
+            [
+              "Pesto Pasta",
+              "",
+              1095
+            ],
+            [
+              "Coleslaw",
+              "",
+              1095
+            ],
+            [
+              "Antipasto",
+              "",
+              1095
+            ],
+            [
+              "Chicken Salad",
+              "",
+              1095
+            ],
+            [
+              "Tuna Salad",
+              "",
+              1095
+            ],
+            [
+              "Tossed Green",
+              "",
+              1095
+            ],
+            [
+              "Chef Salad",
+              "",
+              1650
+            ],
+            [
+              "Shrimp",
+              "Tuesdays and Fridays only",
+              1595
+            ],
+            [
+              "Crab",
+              "Tuesdays and Fridays only",
+              1375
+            ]
+          ]
+        },
+        {
+          "name": "Add Cheese",
+          "items": [
+            [
+              "Swiss",
+              "",
+              125
+            ],
+            [
+              "American",
+              "",
+              125
+            ],
+            [
+              "Provolone",
+              "",
+              125
+            ],
+            [
+              "Cheddar",
+              "",
+              125
+            ],
+            [
+              "Monterey Jack",
+              "",
+              125
+            ],
+            [
+              "Pepper Jack",
+              "",
+              125
+            ],
+            [
+              "Mozzarella",
+              "",
+              125
+            ],
+            [
+              "Imported Havarti",
+              "",
+              150
+            ]
+          ]
+        },
+        {
+          "name": "Extra Toppings",
+          "items": [
+            [
+              "Cranberry Sauce",
+              "",
+              125
+            ],
+            [
+              "Avocado",
+              "",
+              250
+            ],
+            [
+              "Bacon",
+              "",
+              250
+            ],
+            [
+              "Cucumber",
+              "",
+              125
+            ],
+            [
+              "Pepperoncini",
+              "",
+              125
+            ],
+            [
+              "Sprouts",
+              "",
+              125
+            ],
+            [
+              "Caramelized Onions",
+              "",
+              125
+            ],
+            [
+              "Roasted Green or Red Peppers",
+              "",
+              125
+            ],
+            [
+              "Jalapeño Bacon",
+              "",
+              335
+            ],
+            [
+              "Jalapeño Rings",
+              "",
+              125
+            ],
+            [
+              "Cream Cheese",
+              "",
+              125
+            ],
+            [
+              "Dressing",
+              "Ranch, bleu cheese, Caesar, Russian, Vidalia onion or cilantro Caesar",
+              95
+            ],
+            [
+              "Italian Olive Salad",
+              "",
+              235
+            ],
+            [
+              "Sauce",
+              "Hot, garlic, raspberry or chipotle",
+              95
+            ]
+          ]
+        },
+        {
+          "name": "Sauces to Go",
+          "items": [
+            [
+              "Garlic Sauce (2 oz side)",
+              "House-made",
+              100
+            ],
+            [
+              "Garlic Sauce (½ pint)",
+              "House-made",
+              825
+            ],
+            [
+              "Garlic Sauce (pint)",
+              "House-made",
+              1650
+            ],
+            [
+              "Hot Sauce (½ pint)",
+              "House-made",
+              825
+            ],
+            [
+              "Hot Sauce (pint)",
+              "House-made",
+              1650
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "minnie-bells-sf",
+      "name": "Minnie Bell’s Soul Movement",
+      "label": "Minnie Bell’s",
+      "cuisine": "Soul food and rosemary fried chicken",
+      "category": "Soul Food",
+      "color": "#7A1517",
+      "icon": "minnie-bells-sf-v125",
+      "prep": 0,
+      "items": [],
+      "address": "1375 Fillmore St, San Francisco, CA 94115",
+      "phone": "(415) 829-3498",
+      "hours": "Tue–Thu 4pm–9pm, Fri–Sat 11am–2pm and 4pm–10pm, closed Sun–Mon",
+      "tagline": "Chef Fernay McPherson’s Fillmore soul food spot, built on family recipes and rosemary fried chicken.",
+      "site": "https://www.minniebellssoul.com/",
+      "siteCta": "See the menu",
+      "orderUrl": "https://order.toasttab.com/online/minnie-bells-soul-food-movement-san-francisco-1375-fillmore-street",
+      "instagram": "https://www.instagram.com/minnie_bells/",
+      "siteNote": "Prices are from the restaurant’s Toast online ordering menu, read on November 19, 2026.",
+      "panels": [
+        {
+          "head": "Ordering",
+          "body": [
+            "Walk-in only, no reservations.",
+            "Pickup and delivery through Toast. Online orders stop 15 minutes before closing."
+          ],
+          "links": [
+            {
+              "label": "Order on Toast",
+              "href": "https://order.toasttab.com/online/minnie-bells-soul-food-movement-san-francisco-1375-fillmore-street"
+            },
+            {
+              "label": "Hours and menu",
+              "href": "https://www.minniebellssoul.com/restaurant-pacific"
+            }
+          ]
+        },
+        {
+          "head": "Catering",
+          "body": [
+            "Catering trays for pickup or delivery, scheduled between 10:30am and 3pm.",
+            "Fried chicken is $4.50 a piece, or $4.20 each for 35 or more. Pans run $98–$263 and feed up to 25–30 people."
+          ],
+          "links": [
+            {
+              "label": "Catering menu",
+              "href": "https://www.minniebellssoul.com/catering"
+            },
+            {
+              "label": "Order catering",
+              "href": "https://minniebells.gethoneycart.com/?menu=108&order_type=1"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Starters",
+          "items": [
+            [
+              "Fried Mac & Cheese Balls",
+              "",
+              1200
+            ],
+            [
+              "Hot Honey Wings",
+              "6 wings tossed in hot honey sauce",
+              1400
+            ],
+            [
+              "BBQ Wings",
+              "6 wings tossed in house BBQ sauce",
+              1400
+            ],
+            [
+              "Classic Wings",
+              "6 wings, no sauce",
+              1300
+            ],
+            [
+              "BBQ Turkey Meatballs",
+              "",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Fried chicken",
+          "items": [
+            [
+              "Single Piece",
+              "Any piece; leg or thigh 37¢ more",
+              450
+            ],
+            [
+              "2pc Combo",
+              "2 pieces, cornbread and 1 small side",
+              2000
+            ],
+            [
+              "4pc Combo",
+              "4 pieces, cornbread and 2 small sides",
+              3500
+            ],
+            [
+              "8pc Combo",
+              "8 pieces, cornbread and 2 large sides",
+              7000
+            ],
+            [
+              "2pc Breast Special",
+              "2 breasts, 1 side and cornbread",
+              1800
+            ],
+            [
+              "Kids Meal",
+              "1 piece rosemary fried chicken, half a small mac & cheese and a fruit cup; no substitutions",
+              1000
+            ],
+            [
+              "Fried Chicken Sandwich",
+              "",
+              1500
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Cornbread",
+              "Brown butter cornbread",
+              400
+            ],
+            [
+              "Mac & Cheese (small)",
+              "",
+              700
+            ],
+            [
+              "Mac & Cheese (large)",
+              "",
+              1800
+            ],
+            [
+              "Braised Greens (small)",
+              "",
+              700
+            ],
+            [
+              "Braised Greens (large)",
+              "",
+              1800
+            ],
+            [
+              "Candied Yams (small)",
+              "",
+              700
+            ],
+            [
+              "Candied Yams (large)",
+              "",
+              1800
+            ],
+            [
+              "Potato Salad (small)",
+              "",
+              700
+            ],
+            [
+              "Potato Salad (large)",
+              "",
+              1800
+            ],
+            [
+              "House Salad (small)",
+              "",
+              600
+            ],
+            [
+              "House Salad (large)",
+              "",
+              1000
+            ],
+            [
+              "Pickled Veggies (small)",
+              "",
+              600
+            ],
+            [
+              "Fries (small)",
+              "",
+              500
+            ],
+            [
+              "Fries (large)",
+              "",
+              800
+            ],
+            [
+              "White Rice (small)",
+              "",
+              400
+            ],
+            [
+              "White Rice (large)",
+              "",
+              800
+            ],
+            [
+              "Fried Corn Nibs",
+              "4 pieces",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Sauces",
+          "items": [
+            [
+              "Hot Sauce",
+              "",
+              300
+            ],
+            [
+              "Hot Honey",
+              "",
+              300
+            ],
+            [
+              "Hot Honey Butter",
+              "",
+              350
+            ],
+            [
+              "Mumbo",
+              "",
+              200
+            ],
+            [
+              "BBQ",
+              "",
+              100
+            ],
+            [
+              "Ranch",
+              "",
+              100
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Banana Pudding",
+              "",
+              1000
+            ],
+            [
+              "Caramel Cake",
+              "",
+              800
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "south-san-francisco-goods-6": "b_littleluccasouthsf",
+    "beasty-sandwiches2-0": "b_littleluccasouthsf",
+    "san-francisco-goods2-98": "b_minniebellssf",
+    "beasty-soulfood-0": "b_minniebellssf"
+  },
+  "newCategory": {
+    "kind": "soulfood",
+    "heading": "Soul Food",
+    "openedBy": "b_minniebellssf",
+    "automaticSeats": 7,
+    "note": "Existing businesses whose type line says soul food fill spots 1–7 in joining order. Brenda’s French Soul Food’s type line says Cajun and Creole, so it stays on its own pages."
+  },
+  "newOverflow": {
+    "kind": "sandwiches2",
+    "heading": "More sandwiches",
+    "openedBy": "b_littleluccasouthsf",
+    "note": "BEASTY • Sandwiches already has 24; every seat there stays."
+  },
+  "automaticSeats": {
+    "beasty-friedchicken-9": "b_minniebellssf"
+  },
+  "heavyHitters": [
+    {
+      "handle": "bayarea_buzz",
+      "brand": "b_foodiebayareabuzz",
+      "to": "beasty-foodies2-6",
+      "rowId": 253066
+    },
+    {
+      "handle": "willwanderforfood",
+      "brand": "b_foodiewillwanderforfood",
+      "to": "beasty-foodies2-7",
+      "rowId": 253069,
+      "note": "Glenn wrote “Fasho / Heavy Hitter”."
+    },
+    {
+      "handle": "justjasminesingh",
+      "brand": "b_foodiejustjasminesingh",
+      "to": "beasty-foodies2-8",
+      "rowId": 253083
+    }
+  ],
+  "newbies": [
+    {
+      "handle": "foodie_wit_a_bootie_408",
+      "brand": "b_foodiefoodiewitabootie408",
+      "to": "beasty-foodies2-366",
+      "rowId": 253060
+    },
+    {
+      "handle": "jennixchi",
+      "brand": "b_foodiejennixchi",
+      "to": "beasty-foodies2-367",
+      "rowId": 253063
+    }
+  ],
+  "movedDownThree": 357,
+  "overflowAfter": {
+    "beasty-foodies2-0": "b_foodiekeyanajoooon",
+    "beasty-foodies2-1": "b_foodietakeoutwithtuck",
+    "beasty-foodies2-2": "b_foodiemacmadame",
+    "beasty-foodies2-3": "b_foodiehungryhugh",
+    "beasty-foodies2-4": "b_foodielatinmami",
+    "beasty-foodies2-5": "b_foodieaemerieedance",
+    "beasty-foodies2-6": "b_foodiebayareabuzz",
+    "beasty-foodies2-7": "b_foodiewillwanderforfood",
+    "beasty-foodies2-8": "b_foodiejustjasminesingh",
+    "beasty-foodies2-9": "b_foodiebayareafoodieadventures",
+    "beasty-foodies2-10": "b_foodiesiliconvalleyfoodies",
+    "beasty-foodies2-11": "b_foodiemzzjuxtaposition",
+    "beasty-foodies2-12": "b_foodieandreweatsinsf",
+    "beasty-foodies2-13": "b_foodieeatswithkath",
+    "beasty-foodies2-14": "b_foodiecestalmoco",
+    "beasty-foodies2-15": "b_foodiekangofrealty",
+    "beasty-foodies2-16": "b_foodiefedoramaelle",
+    "beasty-foodies2-17": "b_foodiepastrywithjenn",
+    "beasty-foodies2-18": "b_foodietravelwtiff",
+    "beasty-foodies2-19": "b_foodieemwong",
+    "beasty-foodies2-20": "b_foodiekimonieatss",
+    "beasty-foodies2-21": "b_foodiebaygirlseat",
+    "beasty-foodies2-22": "b_foodieheraldh",
+    "beasty-foodies2-23": "b_foodiefoodiswhyimbroke",
+    "beasty-foodies2-24": "b_foodiekeneats",
+    "beasty-foodies2-25": "b_e40",
+    "beasty-foodies2-26": "b_foodiemamamarquez888",
+    "beasty-foodies2-27": "b_foodiereelkevo",
+    "beasty-foodies2-28": "b_foodierollingwithdeneats",
+    "beasty-foodies2-29": "b_foodieagnespittioni",
+    "beasty-foodies2-30": "b_foodiej00diefoodie",
+    "beasty-foodies2-31": "b_foodiealiasharrief",
+    "beasty-foodies2-32": "b_foodiecarlosbradley",
+    "beasty-foodies2-33": "b_foodiejceeats",
+    "beasty-foodies2-34": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-35": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-36": "b_foodiejanniners",
+    "beasty-foodies2-37": "b_foodiealwayshannegry",
+    "beasty-foodies2-38": "b_foodierainmoreturely",
+    "beasty-foodies2-39": "b_foodiewheresthefoodat",
+    "beasty-foodies2-40": "b_foodiesfbayfood",
+    "beasty-foodies2-41": "b_foodiezeynoern",
+    "beasty-foodies2-42": "b_foodiebooziebrunch",
+    "beasty-foodies2-43": "b_foodiethekhaysie",
+    "beasty-foodies2-44": "b_foodiekelmeleats",
+    "beasty-foodies2-45": "b_foodiecourtneylyneaa",
+    "beasty-foodies2-46": "b_foodieiamnikkieg",
+    "beasty-foodies2-47": "b_foodiehungerefordiy",
+    "beasty-foodies2-48": "b_foodiecookwithhenny",
+    "beasty-foodies2-49": "b_foodiemartiwantsmore",
+    "beasty-foodies2-50": "b_foodielimitlessfood",
+    "beasty-foodies2-51": "b_foodiechefemaristevens",
+    "beasty-foodies2-52": "b_foodieforkandscore",
+    "beasty-foodies2-53": "b_foodierealphdfoodie",
+    "beasty-foodies2-54": "b_foodiejustmostie",
+    "beasty-foodies2-55": "b_foodiecapturedbysado",
+    "beasty-foodies2-56": "b_foodieallieeats",
+    "beasty-foodies2-57": "b_foodieseekeasyeats",
+    "beasty-foodies2-58": "b_foodieorangeginger",
+    "beasty-foodies2-59": "b_foodieantoinetterzz",
+    "beasty-foodies2-60": "b_foodiebayareakulture",
+    "beasty-foodies2-61": "b_foodiechefmelissaking",
+    "beasty-foodies2-62": "b_foodiecelineeats",
+    "beasty-foodies2-63": "b_foodiesinglecatm0m",
+    "beasty-foodies2-64": "b_foodiekimjsseats",
+    "beasty-foodies2-65": "b_foodieoaktowngrubhub",
+    "beasty-foodies2-66": "b_foodiethespoonlist",
+    "beasty-foodies2-67": "b_foodiesherryeatworld",
+    "beasty-foodies2-68": "b_foodiehungrydanz",
+    "beasty-foodies2-69": "b_foodiejaneethefoodie",
+    "beasty-foodies2-70": "b_foodiepeggyshoo",
+    "beasty-foodies2-71": "b_foodiezarinanawabi",
+    "beasty-foodies2-72": "b_foodiejbrenes",
+    "beasty-foodies2-73": "b_foodiesimplydorothy",
+    "beasty-foodies2-74": "b_foodieacoupleofcooks",
+    "beasty-foodies2-75": "b_foodiejantrinanicole",
+    "beasty-foodies2-76": "b_foodiechriscorpz",
+    "beasty-foodies2-77": "b_foodiethealamedapulse",
+    "beasty-foodies2-78": "b_foodiebayareamunchies510",
+    "beasty-foodies2-79": "b_foodievictoriapham17",
+    "beasty-foodies2-80": "b_foodiefoodieberrie",
+    "beasty-foodies2-81": "b_foodiesamserved",
+    "beasty-foodies2-82": "b_foodieareweeatingyet",
+    "beasty-foodies2-83": "b_foodiesiusvision",
+    "beasty-foodies2-84": "b_foodiearianasade",
+    "beasty-foodies2-85": "b_foodiebayareafoodz",
+    "beasty-foodies2-86": "b_foodiebestbayareafood",
+    "beasty-foodies2-87": "b_foodieannnaeats",
+    "beasty-foodies2-88": "b_foodieugcwithfrances",
+    "beasty-foodies2-89": "b_foodiedariananthony",
+    "beasty-foodies2-90": "b_foodiecharweeezy",
+    "beasty-foodies2-91": "b_foodiemukbangyourmama",
+    "beasty-foodies2-92": "b_foodiewanderingstefany",
+    "beasty-foodies2-93": "b_foodielifebyvivien",
+    "beasty-foodies2-94": "b_foodieandrelucas",
+    "beasty-foodies2-95": "b_foodieshrimpfriedroice",
+    "beasty-foodies2-96": "b_foodiecynlacson",
+    "beasty-foodies2-97": "b_foodiealexytravels",
+    "beasty-foodies2-98": "b_foodieandygravs",
+    "beasty-foodies2-99": "b_foodielivingvivalakillah",
+    "beasty-foodies2-100": "b_foodieeighty6ix",
+    "beasty-foodies2-101": "b_foodiemayakayofficial",
+    "beasty-foodies2-102": "b_foodiebayareamagandaeats",
+    "beasty-foodies2-103": "b_foodieforkmeetsfood",
+    "beasty-foodies2-104": "b_foodiefoodiesnflightss",
+    "beasty-foodies2-105": "b_foodiecarlaylayyy",
+    "beasty-foodies2-106": "b_foodieshuatangco",
+    "beasty-foodies2-107": "b_foodiejennyhomeloans",
+    "beasty-foodies2-108": "b_foodiewthellydanyelly",
+    "beasty-foodies2-109": "b_foodiesophiaxbayarea",
+    "beasty-foodies2-110": "b_foodiesierraeats8",
+    "beasty-foodies2-111": "b_foodieyosiiiifoodie",
+    "beasty-foodies2-112": "b_foodieivkicks",
+    "beasty-foodies2-113": "b_foodieitsslydiia",
+    "beasty-foodies2-114": "b_foodiestartingfiresevrywhere",
+    "beasty-foodies2-115": "b_foodiebylizettexo",
+    "beasty-foodies2-116": "b_foodiebrianthebarber",
+    "beasty-foodies2-117": "b_foodienickk",
+    "beasty-foodies2-118": "b_foodiejamesbaylife",
+    "beasty-foodies2-119": "b_foodieshesvibinhigh",
+    "beasty-foodies2-120": "b_foodiedchangshangry",
+    "beasty-foodies2-121": "b_foodiebayareafoodiesan",
+    "beasty-foodies2-122": "b_foodietrulyathi",
+    "beasty-foodies2-123": "b_foodiejetsetjanine",
+    "beasty-foodies2-124": "b_foodiekvbitesandgo",
+    "beasty-foodies2-125": "b_foodiestunnaman02",
+    "beasty-foodies2-126": "b_foodiesavorwithcoral",
+    "beasty-foodies2-127": "b_foodiefirstdibsbayarea",
+    "beasty-foodies2-128": "b_foodiemargsout",
+    "beasty-foodies2-129": "b_foodieyogetasworld",
+    "beasty-foodies2-130": "b_foodieitsmayrazambrano",
+    "beasty-foodies2-131": "b_foodieyourtraveldaddy",
+    "beasty-foodies2-132": "b_foodiehellalocalmo",
+    "beasty-foodies2-133": "b_foodiethesnobbiefoodie",
+    "beasty-foodies2-134": "b_foodiekatfoodsf",
+    "beasty-foodies2-135": "b_foodiecharlikestoeat",
+    "beasty-foodies2-136": "b_foodiehellahansel",
+    "beasty-foodies2-137": "b_foodiegeraldfermin",
+    "beasty-foodies2-138": "b_foodiepimchanyum",
+    "beasty-foodies2-139": "b_foodiebayareawilson",
+    "beasty-foodies2-140": "b_foodiewhatthejessi",
+    "beasty-foodies2-141": "b_foodiefoodgiveness",
+    "beasty-foodies2-142": "b_foodieasideofsweet",
+    "beasty-foodies2-143": "b_foodietashamalan",
+    "beasty-foodies2-144": "b_foodiecamemzmin",
+    "beasty-foodies2-145": "b_foodieventurewithkelly",
+    "beasty-foodies2-146": "b_foodiegreatonezfoodreview",
+    "beasty-foodies2-147": "b_foodiemrsmackreviews",
+    "beasty-foodies2-148": "b_foodiebpeats",
+    "beasty-foodies2-149": "b_foodieerinlovesfun",
+    "beasty-foodies2-150": "b_foodielovelivermore",
+    "beasty-foodies2-151": "b_foodieexplorewithtaka",
+    "beasty-foodies2-152": "b_foodiethehautesheet",
+    "beasty-foodies2-153": "b_foodiehumminglion",
+    "beasty-foodies2-154": "b_foodiewhatarethechances",
+    "beasty-foodies2-155": "b_foodiekatwalksf",
+    "beasty-foodies2-156": "b_foodieyulmool",
+    "beasty-foodies2-157": "b_foodiebarstoolsports",
+    "beasty-foodies2-158": "b_foodiexopinsta",
+    "beasty-foodies2-159": "b_foodielovemissfit",
+    "beasty-foodies2-160": "b_foodiechloechomps",
+    "beasty-foodies2-161": "b_foodierealtorandreviewer",
+    "beasty-foodies2-162": "b_foodiexoaramarie",
+    "beasty-foodies2-163": "b_foodiefoodiedreams",
+    "beasty-foodies2-164": "b_foodieeatswithfoodie",
+    "beasty-foodies2-165": "b_foodiejensintec",
+    "beasty-foodies2-166": "b_foodiesnackateriansf",
+    "beasty-foodies2-167": "b_foodieapoorvasharma1",
+    "beasty-foodies2-168": "b_foodievolhacreative",
+    "beasty-foodies2-169": "b_foodiebobaaddict",
+    "beasty-foodies2-170": "b_foodieruthannesturman",
+    "beasty-foodies2-171": "b_foodielarryjunetfm",
+    "beasty-foodies2-172": "b_foodieeileenhuynher",
+    "beasty-foodies2-173": "b_foodiecreatewithcv",
+    "beasty-foodies2-174": "b_foodiealohastephanie",
+    "beasty-foodies2-175": "b_foodiezoegabon",
+    "beasty-foodies2-176": "b_foodiebyhillaryn",
+    "beasty-foodies2-177": "b_foodiealyeatscali",
+    "beasty-foodies2-178": "b_foodiebayareafoodies",
+    "beasty-foodies2-179": "b_foodiemoniicamichelle",
+    "beasty-foodies2-180": "b_foodieryanbyryanchua",
+    "beasty-foodies2-181": "b_foodiehangrypotato",
+    "beasty-foodies2-182": "b_foodiemelsotel",
+    "beasty-foodies2-183": "b_foodiesanleandroeats",
+    "beasty-foodies2-184": "b_foodiebroitsva",
+    "beasty-foodies2-185": "b_foodiefatashfoodie",
+    "beasty-foodies2-186": "b_foodiefoodieshots",
+    "beasty-foodies2-187": "b_foodiekitkatvales",
+    "beasty-foodies2-188": "b_foodiefoodwookie",
+    "beasty-foodies2-189": "b_foodiesonomacountyliving",
+    "beasty-foodies2-190": "b_foodielovecartier25",
+    "beasty-foodies2-191": "b_foodiefoodelaventures",
+    "beasty-foodies2-192": "b_foodiefoodietravelhappiness",
+    "beasty-foodies2-193": "b_foodiepeterlyagent",
+    "beasty-foodies2-194": "b_foodieksmokeskitchen",
+    "beasty-foodies2-195": "b_foodietysfqods",
+    "beasty-foodies2-196": "b_foodieilisaeatssf",
+    "beasty-foodies2-197": "b_foodietundemodupee",
+    "beasty-foodies2-198": "b_foodiewafflebam",
+    "beasty-foodies2-199": "b_foodiegoyuliiago",
+    "beasty-foodies2-200": "b_foodiejamiebeoutside",
+    "beasty-foodies2-201": "b_foodieanjaliwandersoul",
+    "beasty-foodies2-202": "b_foodiegabriiellas",
+    "beasty-foodies2-203": "b_foodieploinsanfrancisco",
+    "beasty-foodies2-204": "b_foodiepiscesprincesspriya",
+    "beasty-foodies2-205": "b_foodiedbaylock",
+    "beasty-foodies2-206": "b_foodiehallojessa",
+    "beasty-foodies2-207": "b_foodielagrandedelabanda",
+    "beasty-foodies2-208": "b_foodiechaudownfood",
+    "beasty-foodies2-209": "b_foodiephoebe8food",
+    "beasty-foodies2-210": "b_foodiekaraxhuynh",
+    "beasty-foodies2-211": "b_foodiewakeyeats",
+    "beasty-foodies2-212": "b_foodiedodoeats",
+    "beasty-foodies2-213": "b_foodiemayamunches",
+    "beasty-foodies2-214": "b_foodiepreetkhatrii",
+    "beasty-foodies2-215": "b_foodiekogumahs",
+    "beasty-foodies2-216": "b_foodienursedanamae",
+    "beasty-foodies2-217": "b_foodiethehabibizeat",
+    "beasty-foodies2-218": "b_foodieeatwithbooboo",
+    "beasty-foodies2-219": "b_foodiebayareafoodogram",
+    "beasty-foodies2-220": "b_foodielubtoeat",
+    "beasty-foodies2-221": "b_foodiethismajourney",
+    "beasty-foodies2-222": "b_foodiesummerishungry",
+    "beasty-foodies2-223": "b_foodiejustfeediris",
+    "beasty-foodies2-224": "b_foodiehungryhungryheejin",
+    "beasty-foodies2-225": "b_foodieliltiffyvert",
+    "beasty-foodies2-226": "b_foodiejovanacamberos",
+    "beasty-foodies2-227": "b_foodiesullieats",
+    "beasty-foodies2-228": "b_foodiephamamiii",
+    "beasty-foodies2-229": "b_foodietastewithrach",
+    "beasty-foodies2-230": "b_foodiesisicooksandeats",
+    "beasty-foodies2-231": "b_foodiemyrealtoralexbradeis",
+    "beasty-foodies2-232": "b_foodierowbot408",
+    "beasty-foodies2-233": "b_foodierevrocrichboy",
+    "beasty-foodies2-234": "b_foodiekatdazzzle",
+    "beasty-foodies2-235": "b_foodiequeenfoode",
+    "beasty-foodies2-236": "b_foodiecindydreamtravel",
+    "beasty-foodies2-237": "b_foodieyummylouey",
+    "beasty-foodies2-238": "b_foodieericasorelle",
+    "beasty-foodies2-239": "b_foodiechelchomps",
+    "beasty-foodies2-240": "b_foodiemonicaplatt",
+    "beasty-foodies2-241": "b_foodieimsarahchaz",
+    "beasty-foodies2-242": "b_foodieirenedony",
+    "beasty-foodies2-243": "b_foodiebiteswithnatalia",
+    "beasty-foodies2-244": "b_foodielaurenlovessfood",
+    "beasty-foodies2-245": "b_foodielisaaaaletseat",
+    "beasty-foodies2-246": "b_foodiemattiasblanco",
+    "beasty-foodies2-247": "b_foodiedeazylee",
+    "beasty-foodies2-248": "b_foodieedmunchthefoodie",
+    "beasty-foodies2-249": "b_foodielynniethefoodie",
+    "beasty-foodies2-250": "b_foodiekelsyannn",
+    "beasty-foodies2-251": "b_foodiefoodadventures21",
+    "beasty-foodies2-252": "b_foodietaratastessf",
+    "beasty-foodies2-253": "b_foodieziahazrati",
+    "beasty-foodies2-254": "b_foodiebennyeatsbayarea",
+    "beasty-foodies2-255": "b_foodiejourdynlynn",
+    "beasty-foodies2-256": "b_foodiebayeatss",
+    "beasty-foodies2-257": "b_foodiecharlizetse",
+    "beasty-foodies2-258": "b_foodieeatwithange",
+    "beasty-foodies2-259": "b_foodiehabibimocha",
+    "beasty-foodies2-260": "b_foodiemaddyeatssfbay",
+    "beasty-foodies2-261": "b_foodiemrbayareafoodie",
+    "beasty-foodies2-262": "b_foodiesoysupli",
+    "beasty-foodies2-263": "b_foodiethehungrycurator",
+    "beasty-foodies2-264": "b_foodiewithlovelysss",
+    "beasty-foodies2-265": "b_foodieoliviiacai",
+    "beasty-foodies2-266": "b_foodiekevinberkeleyfoodreviews",
+    "beasty-foodies2-267": "b_foodiemartiebautista",
+    "beasty-foodies2-268": "b_foodiebadiesaf",
+    "beasty-foodies2-269": "b_foodiesjfoodgram",
+    "beasty-foodies2-270": "b_foodietiensmunchies",
+    "beasty-foodies2-271": "b_foodiealexisbaybe",
+    "beasty-foodies2-272": "b_foodiedyannaluna",
+    "beasty-foodies2-273": "b_foodiesapphiesofire",
+    "beasty-foodies2-274": "b_foodiekimmmpossxble",
+    "beasty-foodies2-275": "b_foodiestaycationsfbayarea",
+    "beasty-foodies2-276": "b_foodieswooningspoon",
+    "beasty-foodies2-277": "b_foodievvveats",
+    "beasty-foodies2-278": "b_foodieelkattt",
+    "beasty-foodies2-279": "b_foodiealmightyalondra",
+    "beasty-foodies2-280": "b_foodieunwntedtv",
+    "beasty-foodies2-281": "b_foodieawesomejuliee",
+    "beasty-foodies2-282": "b_foodiebvddiebri",
+    "beasty-foodies2-283": "b_foodiejadedancelrealtor",
+    "beasty-foodies2-284": "b_foodiemonicasdaniels",
+    "beasty-foodies2-285": "b_foodieecheneats",
+    "beasty-foodies2-286": "b_foodierosebuds",
+    "beasty-foodies2-287": "b_foodieamandabushman",
+    "beasty-foodies2-288": "b_foodiebayarealumpia",
+    "beasty-foodies2-289": "b_foodieyaymeegoround",
+    "beasty-foodies2-290": "b_foodiefoodieclubsf",
+    "beasty-foodies2-291": "b_foodienomwithelaine",
+    "beasty-foodies2-292": "b_foodieedeatstheworld",
+    "beasty-foodies2-293": "b_foodiesophieeatsworld",
+    "beasty-foodies2-294": "b_foodieeatswithglory",
+    "beasty-foodies2-295": "b_foodielifestylebyangiee",
+    "beasty-foodies2-296": "b_foodieeatswithvinni",
+    "beasty-foodies2-297": "b_foodiebaeareafo0die",
+    "beasty-foodies2-298": "b_foodiegoeatwithangie",
+    "beasty-foodies2-299": "b_foodienaeemahtravels",
+    "beasty-foodies2-300": "b_foodiefeedchris",
+    "beasty-foodies2-301": "b_foodiektraaaaan",
+    "beasty-foodies2-302": "b_foodiegoutclout",
+    "beasty-foodies2-303": "b_foodiebestinthegamme",
+    "beasty-foodies2-304": "b_foodiebonjocbites",
+    "beasty-foodies2-305": "b_foodieeatwcass",
+    "beasty-foodies2-306": "b_foodieheatherreats",
+    "beasty-foodies2-307": "b_foodiejaneezhao",
+    "beasty-foodies2-308": "b_foodiejeaninthebay",
+    "beasty-foodies2-309": "b_foodiejasminibites",
+    "beasty-foodies2-310": "b_foodiesfbaydiaries",
+    "beasty-foodies2-311": "b_foodiemaeeatsbay",
+    "beasty-foodies2-312": "b_foodievrutichokshi",
+    "beasty-foodies2-313": "b_foodiechubbiebunnies",
+    "beasty-foodies2-314": "b_foodiegillynova",
+    "beasty-foodies2-315": "b_foodiebayareapineapples",
+    "beasty-foodies2-316": "b_foodieaymibabyeats",
+    "beasty-foodies2-317": "b_foodiecrenshawvisuals",
+    "beasty-foodies2-318": "b_foodiecooldadcoolermom",
+    "beasty-foodies2-319": "b_foodienomzsaiyan",
+    "beasty-foodies2-320": "b_foodieugcwithdiana",
+    "beasty-foodies2-321": "b_foodiebrojackson",
+    "beasty-foodies2-322": "b_foodiemeenaaqureshi",
+    "beasty-foodies2-323": "b_foodiemasstache",
+    "beasty-foodies2-324": "b_foodiediorabelle",
+    "beasty-foodies2-325": "b_foodieandoperdidatraveling",
+    "beasty-foodies2-326": "b_foodiefoodiemompickyfam",
+    "beasty-foodies2-327": "b_foodiebayareajessbling",
+    "beasty-foodies2-328": "b_foodiecheycheyfromthebay",
+    "beasty-foodies2-329": "b_foodienomnomnori",
+    "beasty-foodies2-330": "b_foodiethefoodiesergio",
+    "beasty-foodies2-331": "b_foodiemunchingwmunches",
+    "beasty-foodies2-332": "b_foodiematt2o9",
+    "beasty-foodies2-333": "b_foodiecinemundollc",
+    "beasty-foodies2-334": "b_foodiehididyoueatyet",
+    "beasty-foodies2-335": "b_foodiecarynkramerhomes",
+    "beasty-foodies2-336": "b_foodieyetiornot",
+    "beasty-foodies2-337": "b_foodieinternationalkee",
+    "beasty-foodies2-338": "b_foodiebeauteats",
+    "beasty-foodies2-339": "b_foodieapachegoddess1122",
+    "beasty-foodies2-340": "b_foodiesomedinggood",
+    "beasty-foodies2-341": "b_foodieluckybitez",
+    "beasty-foodies2-342": "b_foodiefoodiejudysf",
+    "beasty-foodies2-343": "b_foodiecuratedbynatalie",
+    "beasty-foodies2-344": "b_foodiegirlbeingcrazy",
+    "beasty-foodies2-345": "b_foodievalinthebay",
+    "beasty-foodies2-346": "b_foodiefirstdatedude",
+    "beasty-foodies2-347": "b_foodiesydneymlee",
+    "beasty-foodies2-348": "b_foodiegirasoljanexis",
+    "beasty-foodies2-349": "b_foodiebaydish",
+    "beasty-foodies2-350": "b_foodietaylorandtylor",
+    "beasty-foodies2-351": "b_foodiedeeeatzfood",
+    "beasty-foodies2-352": "b_foodiecirclespoon",
+    "beasty-foodies2-353": "b_foodienatalieshuu",
+    "beasty-foodies2-354": "b_foodieniafitnesss",
+    "beasty-foodies2-355": "b_foodieandreaeatsfood",
+    "beasty-foodies2-356": "b_foodiecuratedbylucy",
+    "beasty-foodies2-357": "b_foodiejaneteats",
+    "beasty-foodies2-358": "b_foodiefoodinbob",
+    "beasty-foodies2-359": "b_foodiefoodieenvy",
+    "beasty-foodies2-360": "b_foodiemilkteakaren",
+    "beasty-foodies2-361": "b_foodiemandymunchies",
+    "beasty-foodies2-362": "b_foodieanabellesbelly",
+    "beasty-foodies2-363": "b_foodiehannahtags",
+    "beasty-foodies2-364": "b_foodieeatingthebay",
+    "beasty-foodies2-365": "b_foodiethefoodiemon",
+    "beasty-foodies2-366": "b_foodiefoodiewitabootie408",
+    "beasty-foodies2-367": "b_foodiejennixchi"
+  },
+  "posts": [
+    {
+      "code": "Df6ajpzOsZx",
+      "slug": "review-Df6ajpzOsZx",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 67.317,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/Df6ajpzOsZx/",
+      "brand": "b_thecats",
+      "by": "mr.bayareafoodie",
+      "postedBy": "mr.bayareafoodie",
+      "postedDate": "2026-11-19",
+      "credit": "Review by @mr.bayareafoodie at The Cats, Los Gatos.",
+      "request": [
+        {
+          "rowId": 253054,
+          "linkRowId": 253053,
+          "at": "2026-11-19T15:53:24.332183-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Dd7lLtcSNGB",
+      "slug": "review-Dd7lLtcSNGB",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.148,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/Dd7lLtcSNGB/",
+      "brand": "b_thecats",
+      "by": "chelchomps",
+      "postedBy": "chelchomps",
+      "postedDate": "2026-09-30",
+      "credit": "Review by @chelchomps at The Cats, Los Gatos. Instagram collaboration with @thecatslosgatos.",
+      "request": [
+        {
+          "rowId": 253056,
+          "linkRowId": 253055,
+          "at": "2026-11-19T15:53:53.805193-08:00",
+          "request": "Clip this video plz"
+        },
+        {
+          "rowId": 253057,
+          "linkRowId": 253055,
+          "at": "2026-11-19T15:54:58.519914-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "De6xiqgBIh2",
+      "slug": "review-De6xiqgBIh2",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 30.072,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/De6xiqgBIh2/",
+      "brand": "b_thecats",
+      "by": "foodie_wit_a_bootie_408",
+      "postedBy": "foodie_wit_a_bootie_408",
+      "postedDate": "2026-10-25",
+      "credit": "Review by @foodie_wit_a_bootie_408 at The Cats, Los Gatos.",
+      "request": [
+        {
+          "rowId": 253060,
+          "linkRowId": 253059,
+          "at": "2026-11-19T15:55:33.561128-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DZkpO72gT7c",
+      "slug": "review-DZkpO72gT7c",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 67.134,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DZkpO72gT7c/",
+      "brand": "b_thecats",
+      "by": "jennixchi",
+      "postedBy": "jennixchi",
+      "postedDate": "2026-06-14",
+      "credit": "Review by @jennixchi at The Cats, Los Gatos.",
+      "request": [
+        {
+          "rowId": 253063,
+          "linkRowId": 253062,
+          "at": "2026-11-19T15:56:27.270525-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "C1Yoc-SLpAL",
+      "slug": "review-C1Yoc-SLpAL",
+      "startSeconds": 0,
+      "endSeconds": 13.028,
+      "sourceDuration": 13.028,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/C1Yoc-SLpAL/",
+      "brand": "b_thecats",
+      "by": "bayarea_buzz",
+      "postedBy": "bayarea_buzz",
+      "postedDate": "2023-12-28",
+      "credit": "Review by @bayarea_buzz at a @mestizopaella pop-up at The Cats, Los Gatos.",
+      "request": [
+        {
+          "rowId": 253066,
+          "linkRowId": 253065,
+          "at": "2026-11-19T16:03:27.794014-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter"
+        }
+      ],
+      "disposition": "Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline.",
+      "creatorOnly": true
+    },
+    {
+      "code": "DZZt4XMON95",
+      "slug": "review-DZZt4XMON95",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 43.261,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DZZt4XMON95/",
+      "by": "willwanderforfood",
+      "postedBy": "willwanderforfood",
+      "postedDate": "2026-06-10",
+      "credit": "Review by @willwanderforfood at Vicinity, the tasting menu inside Tasting House, Los Gatos.",
+      "request": [
+        {
+          "rowId": 253069,
+          "linkRowId": 253068,
+          "at": "2026-11-19T16:03:28.488937-08:00",
+          "request": "Clip this video plz \nFasho \nHeavy Hitter"
+        }
+      ],
+      "disposition": "Plays on the creator’s page and in Watch. Vicinity at Tasting House is not on BEASTY, so there is no business link."
+    },
+    {
+      "code": "Df8MTdZNl96",
+      "slug": "review-Df8MTdZNl96",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.239,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/Df8MTdZNl96/",
+      "brand": "b_fikscuealameda",
+      "by": "orangeginger",
+      "postedBy": "orangeginger",
+      "postedDate": "2026-11-19",
+      "credit": "Review by @orangeginger at Fikscue Craft Barbecue, Alameda.",
+      "request": [
+        {
+          "rowId": 253076,
+          "linkRowId": 253075,
+          "at": "2026-11-19T16:29:33.192672-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DavbcdNpszy",
+      "slug": "review-DavbcdNpszy",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 21.434,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DavbcdNpszy/",
+      "brand": "b_fikscuealameda",
+      "by": "sfbaydiaries",
+      "postedBy": "sfbaydiaries",
+      "postedDate": "2026-07-13",
+      "credit": "Review by @sfbaydiaries at Fikscue Craft Barbecue, Alameda.",
+      "request": [
+        {
+          "rowId": 253079,
+          "linkRowId": 253078,
+          "at": "2026-11-19T16:32:45.680361-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DYvVFpxP_YQ",
+      "slug": "review-DYvVFpxP_YQ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 23.942,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DYvVFpxP_YQ/",
+      "brand": "b_fikscuealameda",
+      "by": "justjasminesingh",
+      "postedBy": "justjasminesingh",
+      "postedDate": "2026-05-24",
+      "credit": "Review by @justjasminesingh at Fikscue Craft Barbecue, Alameda.",
+      "request": [
+        {
+          "rowId": 253083,
+          "linkRowId": 253082,
+          "at": "2026-11-19T16:32:53.200451-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "Dew2j0Xi4_H",
+      "slug": "review-Dew2j0Xi4_H",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 37.827,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/Dew2j0Xi4_H/",
+      "brand": "b_thaitableberkeley",
+      "by": "thaitableberkeley",
+      "postedBy": "thaitableberkeley",
+      "postedDate": "2026-10-21",
+      "credit": "Posted by @thaitableberkeley.",
+      "request": [
+        {
+          "rowId": 253091,
+          "linkRowId": 253090,
+          "at": "2026-11-19T17:09:39.606664-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "disposition": "Thai Table’s own post. Plays in Watch and is linked from Thai Table’s Foodie reviews, because the page already has four inline films.",
+      "creatorOnly": true
+    },
+    {
+      "code": "Df5kWtZP3rn",
+      "slug": "review-Df5kWtZP3rn",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 37.967,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/Df5kWtZP3rn/",
+      "brand": "b_minniebellssf",
+      "by": "booziebrunch",
+      "postedBy": "booziebrunch",
+      "postedDate": "2026-11-18",
+      "credit": "Review by @booziebrunch at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253100,
+          "linkRowId": 253099,
+          "at": "2026-11-19T17:34:55.312298-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DCDaOJtvMyx",
+      "slug": "review-DCDaOJtvMyx",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 30.025,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DCDaOJtvMyx/",
+      "brand": "b_minniebellssf",
+      "by": "snackateriansf",
+      "postedBy": "snackateriansf",
+      "postedDate": "2024-11-07",
+      "credit": "Review by @snackateriansf at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253104,
+          "linkRowId": 253103,
+          "at": "2026-11-19T17:36:04.568676-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DbZKVpSgc6c",
+      "slug": "review-DbZKVpSgc6c",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 166.837,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DbZKVpSgc6c/",
+      "brand": "b_minniebellssf",
+      "by": "festusfeasts",
+      "postedBy": "festusfeasts",
+      "postedDate": "2026-07-30",
+      "credit": "Review by @festusfeasts with @nikkiblades at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253106,
+          "linkRowId": 253105,
+          "at": "2026-11-19T17:36:22.148587-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "DHB_5Z_h7h6",
+      "slug": "review-DHB_5Z_h7h6",
+      "startSeconds": 0,
+      "endSeconds": 9.545,
+      "sourceDuration": 9.545,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DHB_5Z_h7h6/",
+      "brand": "b_minniebellssf",
+      "by": "sfbaydiaries",
+      "postedBy": "sfbaydiaries",
+      "postedDate": "2025-03-10",
+      "credit": "Review by @sfbaydiaries at Minnie Bell’s Soul Movement, San Francisco. Prices shown are from March 2025.",
+      "request": [
+        {
+          "rowId": 253108,
+          "linkRowId": 253107,
+          "at": "2026-11-19T17:36:40.800740-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "code": "CwmJD7xIoOC",
+      "slug": "review-CwmJD7xIoOC",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 89.934,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/CwmJD7xIoOC/",
+      "brand": "b_minniebellssf",
+      "by": "thesnacksensei",
+      "postedBy": "thesnacksensei",
+      "postedDate": "2023-08-31",
+      "credit": "Review by @thesnacksensei at Minnie Bell’s earlier Emeryville location, August 2023.",
+      "request": [
+        {
+          "rowId": 253102,
+          "linkRowId": 253101,
+          "at": "2026-11-19T17:35:38.138664-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Filmed at Minnie Bell’s earlier Emeryville location in August 2023. Plays on Grand-O’s page and in Watch and is linked from Minnie Bell’s Foodie reviews; the page plays four San Francisco films inline.",
+      "creatorOnly": true
+    },
+    {
+      "code": "DeLGoVRvsFQ",
+      "slug": "review-DeLGoVRvsFQ",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 120.0,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DeLGoVRvsFQ/",
+      "brand": "b_minniebellssf",
+      "by": "bestinthegamme",
+      "postedBy": "bestinthegamme",
+      "postedDate": "2026-10-07",
+      "credit": "Review by @bestinthegamme at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253110,
+          "linkRowId": 253109,
+          "at": "2026-11-19T17:36:58.752635-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline.",
+      "creatorOnly": true
+    },
+    {
+      "code": "DWKeR_XEgTX",
+      "slug": "review-DWKeR_XEgTX",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 46.372,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DWKeR_XEgTX/",
+      "brand": "b_minniebellssf",
+      "by": "naeemahtravels",
+      "postedBy": "naeemahtravels",
+      "postedDate": "2026-03-21",
+      "credit": "Review by @naeemahtravels at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253112,
+          "linkRowId": 253111,
+          "at": "2026-11-19T17:37:18.202662-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline.",
+      "creatorOnly": true
+    },
+    {
+      "code": "DJdSNeGxD7E",
+      "slug": "review-DJdSNeGxD7E",
+      "startSeconds": 0,
+      "endSeconds": 10.242,
+      "sourceDuration": 10.242,
+      "audio": true,
+      "batch": 125,
+      "source": "https://www.instagram.com/reel/DJdSNeGxD7E/",
+      "brand": "b_minniebellssf",
+      "by": "hungryhungryheejin",
+      "postedBy": "hungryhungryheejin",
+      "postedDate": "2025-05-10",
+      "credit": "Review by @hungryhungryheejin at Minnie Bell’s Soul Movement, San Francisco.",
+      "request": [
+        {
+          "rowId": 253114,
+          "linkRowId": 253113,
+          "at": "2026-11-19T17:38:58.736775-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "disposition": "Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline.",
+      "creatorOnly": true
+    }
+  ],
+  "previouslyPublished": [],
+  "updatedIcons": [
+    "/icons/influencer-bayarea-buzz-v125.webp",
+    "/icons/influencer-foodie-wit-a-bootie-408-v125.webp",
+    "/icons/influencer-jennixchi-v125.webp",
+    "/icons/influencer-justjasminesingh-v125.webp",
+    "/icons/influencer-sfbaydiaries-v125.webp",
+    "/icons/influencer-willwanderforfood-v125.webp",
+    "/icons/little-lucca-south-sf-v125.webp",
+    "/icons/minnie-bells-sf-v125.webp"
+  ],
+  "updatedBrands": [
+    "b_thecats",
+    "b_fikscuealameda",
+    "b_thaitableberkeley",
+    "b_foodiesfbaydiaries",
+    "b_foodiemrbayareafoodie",
+    "b_foodiechelchomps",
+    "b_foodieorangeginger",
+    "b_foodiebooziebrunch",
+    "b_foodiesnackateriansf",
+    "b_foodiefestusfeasts",
+    "b_foodiebestinthegamme",
+    "b_foodienaeemahtravels",
+    "b_foodiehungryhungryheejin"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0962.PNG",
+      "path": "/icons/influencer-foodie-wit-a-bootie-408-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/foodie_wit_a_bootie_408/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the 1080 px original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0963.PNG",
+      "path": "/icons/influencer-jennixchi-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/jennixchi/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the 1080 px original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0964.PNG",
+      "path": "/icons/influencer-bayarea-buzz-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/bayarea_buzz/",
+      "disposition": "Matched Glenn’s screenshot to the public Instagram wordmark avatar and used the 750 px original; the full wordmark stays inside the tile."
+    },
+    {
+      "source": "IMG_0966.PNG",
+      "path": "/icons/influencer-willwanderforfood-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/willwanderforfood/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the 1080 px original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0967.PNG",
+      "path": "/icons/influencer-sfbaydiaries-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/sfbaydiaries/",
+      "disposition": "“Please update icon pic.” The account’s own 320 px avatar has a white and yellow ring around the picture, and the v115 tile showed the picture as a circle in a grey square. The new tile crops inside the ring so the Golden Gate and the SF Bay Diaries lettering fill the tile. Checked at full size and phone tile size."
+    },
+    {
+      "source": "IMG_0968.PNG",
+      "path": "/icons/influencer-justjasminesingh-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/justjasminesingh/",
+      "disposition": "Matched Glenn’s portrait to the public Instagram avatar and used the 1080 px original. Checked at phone tile size."
+    },
+    {
+      "source": "IMG_0972.png",
+      "path": "/icons/little-lucca-south-sf-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/littleluccadeli/",
+      "disposition": "Glenn’s logo screenshot matches the shop’s Instagram logo; used the 1080 px original, full lettering inside the tile."
+    },
+    {
+      "source": "IMG_0973.png",
+      "path": null,
+      "comparedAgainst": "https://www.instagram.com/littleluccadeli/",
+      "disposition": "Instagram profile screenshot: confirms the account, “Located in Burlingame & South San Francisco”. Facts only."
+    },
+    {
+      "source": "IMG_0974.PNG",
+      "path": null,
+      "disposition": "Apple Maps card: 724 El Camino Real, South San Francisco, (650) 589-8916, 8:30am–4pm. Facts only; matches the shop’s menu."
+    },
+    {
+      "source": "IMG_0976.PNG",
+      "path": null,
+      "comparedAgainst": "https://www.instagram.com/minnie_bells/",
+      "disposition": "Instagram contact sheet. The (510) number is not on the restaurant’s site, which, like Toast and the Michelin Guide, gives (415) 829-3498; the listing uses the site’s number."
+    },
+    {
+      "source": "IMG_0977.PNG",
+      "path": null,
+      "comparedAgainst": "https://www.instagram.com/minnie_bells/",
+      "disposition": "Instagram profile: hours and 1375 Fillmore St, matching the restaurant’s site. Facts only."
+    },
+    {
+      "source": "IMG_0978.png",
+      "path": "/icons/minnie-bells-sf-v125.webp",
+      "comparedAgainst": "https://www.instagram.com/minnie_bells/",
+      "disposition": "Logo screenshot matches the restaurant’s Instagram mark; used the 778 px original."
+    },
+    {
+      "source": "IMG_0979.png",
+      "path": null,
+      "disposition": "Same logo as IMG_0978, viewed in Photos."
+    },
+    {
+      "source": "IMG_3070.png",
+      "path": null,
+      "disposition": "Leon’s BSTY Goods logo mockup to Glenn. Goods work, handled by the Goods session."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 253053,
+      "at": "2026-11-19T15:53:24.186086-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df6ajpzOsZx/?avpt=ZWtsYW96ZW0xc2cw",
+      "attachments": [],
+      "disposition": "Reel link for @mr.bayareafoodie at The Cats, Los Gatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253054,
+      "at": "2026-11-19T15:53:24.332183-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for Df6ajpzOsZx. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253055,
+      "at": "2026-11-19T15:53:53.659187-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Dd7lLtcSNGB/?knvt=MWc5cG9hdTB2cmliZg==",
+      "attachments": [],
+      "disposition": "Reel link for @chelchomps at The Cats, Los Gatos. Instagram collaboration with @thecatslosgatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253056,
+      "at": "2026-11-19T15:53:53.805193-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for Dd7lLtcSNGB. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253057,
+      "at": "2026-11-19T15:54:58.519914-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "A third “Clip this video plz” with no new link, a repeat of the request above it (Dd7lLtcSNGB). Nothing more to clip."
+    },
+    {
+      "rowId": 253058,
+      "at": "2026-11-19T15:55:32.961509-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0962.PNG"
+      ],
+      "disposition": "Avatar for @foodie_wit_a_bootie_408 (Foodie, Newbie). New creator page with her original Instagram avatar."
+    },
+    {
+      "rowId": 253059,
+      "at": "2026-11-19T15:55:33.420449-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/De6xiqgBIh2/?hvrq=MWR1ZHdiOHkwemV2",
+      "attachments": [],
+      "disposition": "Reel link for @foodie_wit_a_bootie_408 at The Cats, Los Gatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253060,
+      "at": "2026-11-19T15:55:33.561128-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": [],
+      "disposition": "Clip request for De6xiqgBIh2. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253061,
+      "at": "2026-11-19T15:56:26.658251-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0963.PNG"
+      ],
+      "disposition": "Avatar for @jennixchi (Foodie, Newbie). New creator page with her original Instagram avatar."
+    },
+    {
+      "rowId": 253062,
+      "at": "2026-11-19T15:56:27.140338-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DZkpO72gT7c/?jplx=NWJnNzB4NTkwbnY=",
+      "attachments": [],
+      "disposition": "Reel link for @jennixchi at The Cats, Los Gatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253063,
+      "at": "2026-11-19T15:56:27.270525-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": [],
+      "disposition": "Clip request for DZkpO72gT7c. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253064,
+      "at": "2026-11-19T16:03:26.610323-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0964.PNG"
+      ],
+      "disposition": "Avatar for @bayarea_buzz (Foodie, Heavy Hitter). New creator page with the original Instagram avatar."
+    },
+    {
+      "rowId": 253065,
+      "at": "2026-11-19T16:03:27.689919-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/C1Yoc-SLpAL/?gwpx=MXBvYTZsM3V3N2k5Mw==",
+      "attachments": [],
+      "disposition": "Reel link for @bayarea_buzz at a @mestizopaella pop-up at The Cats, Los Gatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253066,
+      "at": "2026-11-19T16:03:27.794014-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+      "attachments": [],
+      "disposition": "Clip request for C1Yoc-SLpAL. Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline."
+    },
+    {
+      "rowId": 253067,
+      "at": "2026-11-19T16:03:27.906026-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0966.PNG"
+      ],
+      "disposition": "Avatar for @willwanderforfood (Heavy Hitter). New creator page with her original Instagram avatar."
+    },
+    {
+      "rowId": 253068,
+      "at": "2026-11-19T16:03:28.388044-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DZZt4XMON95/?gwpx=MW42dXd2enY2bHMzbg==",
+      "attachments": [],
+      "disposition": "Reel link for @willwanderforfood at Vicinity, the tasting menu inside Tasting House, Los Gatos. Clipped; see posts."
+    },
+    {
+      "rowId": 253069,
+      "at": "2026-11-19T16:03:28.488937-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFasho \nHeavy Hitter",
+      "attachments": [],
+      "disposition": "Clip request for DZZt4XMON95. Plays on the creator’s page and in Watch. Vicinity at Tasting House is not on BEASTY, so there is no business link."
+    },
+    {
+      "rowId": 253070,
+      "at": "2026-11-19T16:23:56.345000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz \nFasho \nHeavy Hitter ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253075,
+      "at": "2026-11-19T16:29:33.072304-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df8MTdZNl96/?evlk=aHRtdGpnd3czaDNk",
+      "attachments": [],
+      "disposition": "Reel link for @orangeginger at Fikscue Craft Barbecue, Alameda. Clipped; see posts."
+    },
+    {
+      "rowId": 253076,
+      "at": "2026-11-19T16:29:33.192672-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for Df8MTdZNl96. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253077,
+      "at": "2026-11-19T16:30:55.983000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253078,
+      "at": "2026-11-19T16:32:45.582994-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DavbcdNpszy/?evlk=dDcxaTV3M296eWk5",
+      "attachments": [],
+      "disposition": "Reel link for @sfbaydiaries at Fikscue Craft Barbecue, Alameda. Clipped; see posts."
+    },
+    {
+      "rowId": 253079,
+      "at": "2026-11-19T16:32:45.680361-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DavbcdNpszy. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253080,
+      "at": "2026-11-19T16:32:46.913979-08:00",
+      "fromLeon": false,
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0967.PNG"
+      ],
+      "disposition": "“Please update icon pic” for @sfbaydiaries. New tile from the current Instagram avatar, cropped so the Golden Gate picture fills the tile with no ring."
+    },
+    {
+      "rowId": 253081,
+      "at": "2026-11-19T16:32:51.758000-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0968.PNG"
+      ],
+      "disposition": "Avatar for @justjasminesingh (Foodie, Heavy Hitter). New creator page with her original Instagram avatar."
+    },
+    {
+      "rowId": 253082,
+      "at": "2026-11-19T16:32:53.047014-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DYvVFpxP_YQ/?knvt=aW9heGc4eXIzZG4w",
+      "attachments": [],
+      "disposition": "Reel link for @justjasminesingh at Fikscue Craft Barbecue, Alameda. Clipped; see posts."
+    },
+    {
+      "rowId": 253083,
+      "at": "2026-11-19T16:32:53.200451-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": [],
+      "disposition": "Clip request for DYvVFpxP_YQ. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253084,
+      "at": "2026-11-19T16:33:34.453000-08:00",
+      "fromLeon": true,
+      "text": "Liked “\nClip this video plz \nFoodie \nHeavy Hitter ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253090,
+      "at": "2026-11-19T17:09:39.482664-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Dew2j0Xi4_H/?cnvx=aTBpaGgxcmY1M3Nz",
+      "attachments": [],
+      "disposition": "Reel link for Posted by @thaitableberkeley. Clipped; see posts."
+    },
+    {
+      "rowId": 253091,
+      "at": "2026-11-19T17:09:39.606664-08:00",
+      "fromLeon": false,
+      "text": "Watch this video clip",
+      "attachments": [],
+      "disposition": "Clip request for Dew2j0Xi4_H. Thai Table’s own post. Plays in Watch and is linked from Thai Table’s Foodie reviews, because the page already has four inline films."
+    },
+    {
+      "rowId": 253092,
+      "at": "2026-11-19T17:19:04.487965-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0973.png",
+        "IMG_0974.PNG",
+        "IMG_0972.png"
+      ],
+      "disposition": "Little Lucca screenshots: logo, Instagram profile and the Apple Maps card for 724 El Camino Real, South San Francisco."
+    },
+    {
+      "rowId": 253093,
+      "at": "2026-11-19T17:19:05.459107-08:00",
+      "fromLeon": false,
+      "text": "https://littlelucca.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+      "attachments": [],
+      "disposition": "Little Lucca’s site. New listing in South San Francisco."
+    },
+    {
+      "rowId": 253094,
+      "at": "2026-11-19T17:19:05.571494-08:00",
+      "fromLeon": false,
+      "text": "South San Francisco  • Eats \nBEASTY • Sandwiches",
+      "attachments": [],
+      "disposition": "South San Francisco • Eats and BEASTY • Sandwiches. Seated on South San Francisco’s Sandwiches tile (spot 7) and in spot 1 of the new More sandwiches sheet, because BEASTY • Sandwiches is full."
+    },
+    {
+      "rowId": 253095,
+      "at": "2026-11-19T17:31:41.410219-08:00",
+      "fromLeon": false,
+      "text": "",
+      "attachments": [
+        "IMG_0976.PNG",
+        "IMG_0977.PNG",
+        "IMG_0979.png",
+        "IMG_0978.png"
+      ],
+      "disposition": "Minnie Bell’s screenshots: Instagram profile and contact, and the logo."
+    },
+    {
+      "rowId": 253096,
+      "at": "2026-11-19T17:31:41.530339-08:00",
+      "fromLeon": false,
+      "text": "https://www.minniebellssoul.com/?utm_content=link_in_bio&utm_source=ig&utm_medium=social",
+      "attachments": [],
+      "disposition": "Minnie Bell’s site. New listing in San Francisco."
+    },
+    {
+      "rowId": 253097,
+      "at": "2026-11-19T17:31:41.622633-08:00",
+      "fromLeon": false,
+      "text": "San Francisco • Eats \nBEASTY • Soul Food\nNew Category",
+      "attachments": [],
+      "disposition": "San Francisco • Eats and BEASTY • Soul Food, New Category. Seated on San Francisco More goods (seat 98) and in spot 0 of the new BEASTY • Soul Food page."
+    },
+    {
+      "rowId": 253098,
+      "at": "2026-11-19T17:32:03.145821-08:00",
+      "fromLeon": true,
+      "text": "Liked “\n\nSan Francisco • Eats \nBEASTY • Soul Food\nNew Category ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253099,
+      "at": "2026-11-19T17:34:55.117800-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/Df5kWtZP3rn/?dmpr=bmhjemozMGQzbDBu",
+      "attachments": [],
+      "disposition": "Reel link for @booziebrunch at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253100,
+      "at": "2026-11-19T17:34:55.312298-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for Df5kWtZP3rn. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253101,
+      "at": "2026-11-19T17:35:37.984677-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/CwmJD7xIoOC/?lqvp=ZGgydHkzNGEzc3g5",
+      "attachments": [],
+      "disposition": "Reel link for @thesnacksensei at Minnie Bell’s earlier Emeryville location, August 2023. Clipped; see posts."
+    },
+    {
+      "rowId": 253102,
+      "at": "2026-11-19T17:35:38.138664-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for CwmJD7xIoOC. Filmed at Minnie Bell’s earlier Emeryville location in August 2023. Plays on Grand-O’s page and in Watch and is linked from Minnie Bell’s Foodie reviews; the page plays four San Francisco films inline."
+    },
+    {
+      "rowId": 253103,
+      "at": "2026-11-19T17:36:04.408786-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DCDaOJtvMyx/?avpt=MWU3NTJlcHJpNXJpNA==",
+      "attachments": [],
+      "disposition": "Reel link for @snackateriansf at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253104,
+      "at": "2026-11-19T17:36:04.568676-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DCDaOJtvMyx. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253105,
+      "at": "2026-11-19T17:36:21.995186-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DbZKVpSgc6c/?lqvp=bG1nN3pmaGdkbGJk",
+      "attachments": [],
+      "disposition": "Reel link for @festusfeasts with @nikkiblades at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253106,
+      "at": "2026-11-19T17:36:22.148587-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DbZKVpSgc6c. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253107,
+      "at": "2026-11-19T17:36:40.562948-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DHB_5Z_h7h6/?evlk=NnJuZGtiZ2cybzBs",
+      "attachments": [],
+      "disposition": "Reel link for @sfbaydiaries at Minnie Bell’s Soul Movement, San Francisco. Prices shown are from March 2025. Clipped; see posts."
+    },
+    {
+      "rowId": 253108,
+      "at": "2026-11-19T17:36:40.800740-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DHB_5Z_h7h6. Plays inline on the business page, on the creator’s page where listed, and in Watch."
+    },
+    {
+      "rowId": 253109,
+      "at": "2026-11-19T17:36:58.600724-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DeLGoVRvsFQ/?cnvx=OHhhOTVvazEzdWEx",
+      "attachments": [],
+      "disposition": "Reel link for @bestinthegamme at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253110,
+      "at": "2026-11-19T17:36:58.752635-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DeLGoVRvsFQ. Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline."
+    },
+    {
+      "rowId": 253111,
+      "at": "2026-11-19T17:37:18.071844-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DWKeR_XEgTX/?gwpx=a3d6enY4enB5N2g5",
+      "attachments": [],
+      "disposition": "Reel link for @naeemahtravels at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253112,
+      "at": "2026-11-19T17:37:18.202662-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DWKeR_XEgTX. Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline."
+    },
+    {
+      "rowId": 253113,
+      "at": "2026-11-19T17:38:58.559685-08:00",
+      "fromLeon": false,
+      "text": "https://www.instagram.com/reel/DJdSNeGxD7E/?hvrq=M3NlZmtvbmc4a2Rk",
+      "attachments": [],
+      "disposition": "Reel link for @hungryhungryheejin at Minnie Bell’s Soul Movement, San Francisco. Clipped; see posts."
+    },
+    {
+      "rowId": 253114,
+      "at": "2026-11-19T17:38:58.736775-08:00",
+      "fromLeon": false,
+      "text": "Clip this video plz",
+      "attachments": [],
+      "disposition": "Clip request for DJdSNeGxD7E. Plays on the creator’s page and in Watch and is linked from the business’s Foodie reviews, because the business already plays four films inline."
+    },
+    {
+      "rowId": 253115,
+      "at": "2026-11-19T18:09:01.897000-08:00",
+      "fromLeon": true,
+      "text": "Liked “Clip this video plz ”",
+      "attachments": []
+    },
+    {
+      "rowId": 253116,
+      "at": "2026-11-19T18:09:14.281000-08:00",
+      "fromLeon": true,
+      "text": "Hey bro This is the mockup for the logo, is this what you meant?",
+      "attachments": []
+    },
+    {
+      "rowId": 253117,
+      "at": "2026-11-19T18:09:15.330000-08:00",
+      "fromLeon": true,
+      "text": "",
+      "attachments": [
+        "IMG_3070.png"
+      ]
+    },
+    {
+      "rowId": 253118,
+      "at": "2026-11-19T18:16:54.510457-08:00",
+      "fromLeon": false,
+      "text": "Yes exactly. What do you think of it?",
+      "attachments": [],
+      "disposition": "BSTY Goods logo conversation about Leon’s mockup. Goods work, handled by the Goods session."
+    },
+    {
+      "rowId": 253119,
+      "at": "2026-11-19T18:17:41.566973-08:00",
+      "fromLeon": true,
+      "text": "It looks great also gives a sense of trading",
+      "attachments": []
+    },
+    {
+      "rowId": 253120,
+      "at": "2026-11-19T18:17:45.504131-08:00",
+      "fromLeon": true,
+      "text": "It’s a good idea",
+      "attachments": []
+    },
+    {
+      "rowId": 253121,
+      "at": "2026-11-19T18:18:14.787532-08:00",
+      "fromLeon": false,
+      "text": "Cool, I’m glad you think so as well. 🙌🏽",
+      "attachments": [],
+      "disposition": "BSTY Goods logo conversation about Leon’s mockup. Goods work, handled by the Goods session."
+    },
+    {
+      "rowId": 253122,
+      "at": "2026-11-19T18:18:41.408534-08:00",
+      "fromLeon": false,
+      "text": "should we delete that Dot?",
+      "attachments": [],
+      "disposition": "BSTY Goods logo conversation about Leon’s mockup. Goods work, handled by the Goods session."
+    }
+  ],
+  "held": [],
+  "notIntake": [
+    {
+      "rows": [
+        253116,
+        253117,
+        253118,
+        253119,
+        253120,
+        253121,
+        253122
+      ],
+      "what": "Leon’s BSTY Goods logo mockup and the conversation about it",
+      "reason": "Goods work, handled by the Goods session."
+    }
+  ],
+  "sources": [
+    {
+      "brand": "b_littleluccasouthsf",
+      "urls": [
+        "https://littlelucca.com/",
+        "https://littlelucca.com/menu-images/",
+        "https://littlelucca.com/wp-content/uploads/2026/06/Menu-el_camino-scaled.jpeg",
+        "https://littlelucca.com/wp-content/uploads/2026/06/cheese-scaled.jpeg",
+        "https://littlelucca.com/wp-content/uploads/2026/06/specials-scaled.jpeg",
+        "https://littlelucca.com/order-now/",
+        "https://littlelucca.com/about-us/",
+        "https://southcity.littlelucca.com/",
+        "https://southcity.littlelucca.com/shop/",
+        "https://southcity.littlelucca.com/wp-json/wc/store/v1/products?per_page=100",
+        "https://burlingame.littlelucca.com/"
+      ],
+      "note": "Prices from the September 2025 printed menu on littlelucca.com/menu-images; sauces to go from southcity.littlelucca.com. Hours from the printed menu (the South San Francisco page says 8:30am–4pm daily; Apple Maps shows 8:30am–4pm). The phone is on all three menu pages. Turkey, Bacon, Pepper Cheese is printed at $16.26 and kept as printed. Online prices differ in places; the printed menu is used.",
+      "gaps": [
+        "Hours conflict: the printed menu (Sep 2025) says Mon–Fri 8:30am–4pm and Sat–Sun 9am–4pm; the South San Francisco web page’s Store Hours list 8:30am–4pm every day, and its FAQ says online ordering, pickup and delivery start at 9am daily. The listing uses the menu hours.",
+        "Phone (650) 589-8916 is confirmed on all three menu pages; the South San Francisco web page shows no number and its Call Us button has an empty phone link.",
+        "Salads: the menu says half-pint and pint prices vary per salad but gives one price each without naming the size; the online ordering page shows different half-pint and pint prices (for example potato $5.25 half pint, $10.50 pint).",
+        "Turkey, Bacon, Pepper Cheese is printed at $16.26, likely a typo for $16.25; kept as printed. Online ordering lists it at $14.25.",
+        "Online ordering prices differ from the printed menu for many items, in both directions (for example Bologna $14.25 online vs $13.95 printed; Tri Tip Special $17.25 online vs $17.95 printed). The menu notes prices are subject to change without notice.",
+        "Online ordering also lists items not on the printed menu (Capicola, Turkey BBQ Sauce, Chicken Honey BBQ, hot versions of most sandwiches, $25 and $50 gift cards); these were left out. Hot Sauce 2 oz is listed online at $16.50, the same as a pint, so it was left out as a likely error.",
+        "“CAB” after BBQ Beef Brisket is not explained on the menu.",
+        "No catering menu or catering prices were found; the South San Francisco page only mentions catering in passing. Delivery is through third-party apps per the site’s FAQ; no delivery details are given.",
+        "Parts of the official site carry leftover template content (customer reviews of an unrelated Texas restaurant and a list of Massachusetts zip codes); none of it was used."
+      ]
+    },
+    {
+      "brand": "b_minniebellssf",
+      "urls": [
+        "https://www.minniebellssoul.com/",
+        "https://www.minniebellssoul.com/restaurant-pacific",
+        "https://www.minniebellssoul.com/catering",
+        "https://www.minniebellssoul.com/new-page",
+        "https://www.minniebellssoul.com/about-pacific",
+        "https://www.minniebellssoul.com/press",
+        "https://order.toasttab.com/online/minnie-bells-soul-food-movement-san-francisco-1375-fillmore-street",
+        "https://minniebells.gethoneycart.com/?menu=108&order_type=1",
+        "https://guide.michelin.com/us/en/california/san-francisco/restaurant/minnie-bell-s-soul-movement"
+      ],
+      "note": "Address, phone and hours from minniebellssoul.com; menu and prices from its Toast page, read November 19, 2026. Catering from its catering page. No drinks are published.",
+      "gaps": [
+        "Phone conflict: the official site, Toast and the Michelin Guide all give (415) 829-3498; the Instagram contact button’s (510) 879-7199 appears nowhere on the site, so its purpose (old Emeryville or sales line?) is unconfirmed.",
+        "Emeryville: the official site lists only the Fillmore location and never mentions Emeryville (apart from an old East Bay Express link on the press page); it gives no closure notice, so the stall’s status is confirmed only by its absence.",
+        "Michelin: the Michelin Guide lists it as a recommended restaurant (Southern, $) with no Star or Bib Gourmand; the “award-winning” claim in the Instagram bio isn’t spelled out on the site beyond press links such as the 2017 Chronicle Rising Star Chefs.",
+        "No drinks are listed on the Toast menu or the site, so no non-alcoholic drink prices were published.",
+        "No descriptions are published for the mac & cheese balls, turkey meatballs, chicken sandwich, sauces, desserts or most sides.",
+        "Fried Corn Nibs showed as out of stock on Toast on Nov 19, 2026.",
+        "The site FAQ says candied yams are sold only at the counter, but Toast currently lists them ($7 small, $18 large).",
+        "Toast shows one menu for lunch and dinner; whether lunch has a different menu could not be confirmed."
+      ]
+    }
+  ]
+}

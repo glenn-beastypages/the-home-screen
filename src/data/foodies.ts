@@ -2003,7 +2003,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "handle": "sfbaydiaries",
   "name": "@sfbaydiaries",
   "label": "sfbaydiaries",
-  "icon": "foodie-sfbaydiaries-v115"
+  "icon": "influencer-sfbaydiaries-v125"
 },
 {
   "handle": "mae.eats.bay",
@@ -2125,6 +2125,13 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "hannah.tags", "name": "@hannah.tags", "label": "hannah.tags", "icon": "influencer-hannah-tags-v123"},
   {"handle": "eating.the.bay", "name": "@eating.the.bay", "label": "eating.the.bay", "icon": "influencer-eating-the-bay-v123"},
   {"handle": "thefoodiemon", "name": "@thefoodiemon", "label": "thefoodiemon", "icon": "influencer-thefoodiemon-v123"},
+
+  // Batch 125 — Glenn’s November 19 Foodie tags: three Heavy Hitters, then two Newbies.
+  {"handle": "bayarea_buzz", "name": "@bayarea_buzz", "label": "bayarea_buzz", "icon": "influencer-bayarea-buzz-v125"},
+  {"handle": "willwanderforfood", "name": "@willwanderforfood", "label": "willwanderforfood", "icon": "influencer-willwanderforfood-v125"},
+  {"handle": "justjasminesingh", "name": "@justjasminesingh", "label": "justjasminesingh", "icon": "influencer-justjasminesingh-v125"},
+  {"handle": "foodie_wit_a_bootie_408", "name": "@foodie_wit_a_bootie_408", "label": "foodie_wit_a_bootie_408", "icon": "influencer-foodie-wit-a-bootie-408-v125"},
+  {"handle": "jennixchi", "name": "@jennixchi", "label": "jennixchi", "icon": "influencer-jennixchi-v125"},
 
 ]
 
@@ -3034,6 +3041,25 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "singlecatm0m", "place": "Mikiya Wagyu Shabu House", "city": "Santa Clara", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/Df5Jx-3JZlo/", "credit": "Review by @singlecatm0m at Mikiya Wagyu Shabu House, Santa Clara. The original post also announces a membership giveaway by @mikiya.official.", "clip": "creator"},
   {"by": "_aemeriee.dance", "place": "Mrs. Ramen", "city": "Concord", "brand": "b_mrsramen", "reel": "https://www.instagram.com/reel/DboLDLIMvja/", "credit": "Review by @_aemeriee.dance at Mrs. Ramen, Concord.", "clip": true},
   {"by": "bennyeats.bayarea", "place": "Funky Elephant", "city": "Berkeley", "brand": "b_funkyelephant", "reel": "https://www.instagram.com/reel/Df5_igDJnyL/", "credit": "Review by @bennyeats.bayarea at Funky Elephant, Berkeley.", "clip": true},
+  // Batch 125 — Glenn’s November 19 clips: The Cats, Vicinity, Fikscue, Thai Table and Minnie Bell’s.
+  {"by": "mr.bayareafoodie", "place": "The Cats", "city": "Los Gatos", "brand": "b_thecats", "reel": "https://www.instagram.com/reel/Df6ajpzOsZx/", "credit": "Review by @mr.bayareafoodie at The Cats, Los Gatos.", "clip": true},
+  {"by": "chelchomps", "place": "The Cats", "city": "Los Gatos", "brand": "b_thecats", "reel": "https://www.instagram.com/reel/Dd7lLtcSNGB/", "credit": "Review by @chelchomps at The Cats, Los Gatos. Instagram collaboration with @thecatslosgatos.", "clip": true},
+  {"by": "foodie_wit_a_bootie_408", "place": "The Cats", "city": "Los Gatos", "brand": "b_thecats", "reel": "https://www.instagram.com/reel/De6xiqgBIh2/", "credit": "Review by @foodie_wit_a_bootie_408 at The Cats, Los Gatos.", "clip": true},
+  {"by": "jennixchi", "place": "The Cats", "city": "Los Gatos", "brand": "b_thecats", "reel": "https://www.instagram.com/reel/DZkpO72gT7c/", "credit": "Review by @jennixchi at The Cats, Los Gatos.", "clip": true},
+  {"by": "bayarea_buzz", "place": "The Cats", "city": "Los Gatos", "brand": "b_thecats", "reel": "https://www.instagram.com/reel/C1Yoc-SLpAL/", "credit": "Review by @bayarea_buzz at a @mestizopaella pop-up at The Cats, Los Gatos.", "clip": "creator"},
+  {"by": "willwanderforfood", "place": "Vicinity at Tasting House", "city": "Los Gatos", "reel": "https://www.instagram.com/reel/DZZt4XMON95/", "credit": "Review by @willwanderforfood at Vicinity, the tasting menu inside Tasting House, Los Gatos.", "clip": true},
+  {"by": "orangeginger", "place": "Fikscue Craft Barbecue", "city": "Alameda", "brand": "b_fikscuealameda", "reel": "https://www.instagram.com/reel/Df8MTdZNl96/", "credit": "Review by @orangeginger at Fikscue Craft Barbecue, Alameda.", "clip": true},
+  {"by": "sfbaydiaries", "place": "Fikscue Craft Barbecue", "city": "Alameda", "brand": "b_fikscuealameda", "reel": "https://www.instagram.com/reel/DavbcdNpszy/", "credit": "Review by @sfbaydiaries at Fikscue Craft Barbecue, Alameda.", "clip": true},
+  {"by": "justjasminesingh", "place": "Fikscue Craft Barbecue", "city": "Alameda", "brand": "b_fikscuealameda", "reel": "https://www.instagram.com/reel/DYvVFpxP_YQ/", "credit": "Review by @justjasminesingh at Fikscue Craft Barbecue, Alameda.", "clip": true},
+  {"by": "thaitableberkeley", "place": "Thai Table", "city": "Berkeley", "brand": "b_thaitableberkeley", "reel": "https://www.instagram.com/reel/Dew2j0Xi4_H/", "credit": "Posted by @thaitableberkeley.", "clip": "creator"},
+  {"by": "booziebrunch", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/Df5kWtZP3rn/", "credit": "Review by @booziebrunch at Minnie Bell’s Soul Movement, San Francisco.", "clip": true},
+  {"by": "snackateriansf", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DCDaOJtvMyx/", "credit": "Review by @snackateriansf at Minnie Bell’s Soul Movement, San Francisco.", "clip": true},
+  {"by": "festusfeasts", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DbZKVpSgc6c/", "credit": "Review by @festusfeasts with @nikkiblades at Minnie Bell’s Soul Movement, San Francisco.", "clip": true},
+  {"by": "sfbaydiaries", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DHB_5Z_h7h6/", "credit": "Review by @sfbaydiaries at Minnie Bell’s Soul Movement, San Francisco. Prices shown are from March 2025.", "clip": true},
+  {"by": "thesnacksensei", "place": "Minnie Bell’s Soul Movement", "city": "Emeryville", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/CwmJD7xIoOC/", "credit": "Review by @thesnacksensei at Minnie Bell’s earlier Emeryville location, August 2023.", "clip": "creator"},
+  {"by": "bestinthegamme", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DeLGoVRvsFQ/", "credit": "Review by @bestinthegamme at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
+  {"by": "naeemahtravels", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DWKeR_XEgTX/", "credit": "Review by @naeemahtravels at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
+  {"by": "hungryhungryheejin", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DJdSNeGxD7E/", "credit": "Review by @hungryhungryheejin at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
 ]
 
 /*
