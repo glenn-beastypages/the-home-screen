@@ -1,0 +1,29 @@
+{
+  "commit": "214a883fbddbce759c5048ddc1dc6bbbe69f919e",
+  "checkedAt": "2026-11-20T16:29:25.428Z",
+  "bundlePath": "/goods/assets/index-CDP5pX8D.js",
+  "bundleSha256": "bb2dae6ad792375c8a7d19d326ea6276884450fe56bf4c6ca6d47ffbea9587e4",
+  "logoPath": "/goods/brand/bsty-goods.svg",
+  "logoSha256": "37c9a01c189c81728a3ed7b85476391e89012fdc37aa43ff7331f233c006c1a7",
+  "pagesHealthy": true,
+  "goodsHealthy": true,
+  "pagesSignIn": true,
+  "googleSignIn": true,
+  "cardHoldsEnabled": false,
+  "checkoutEnabled": false,
+  "deploy": "dep-dc074soae00c73b1b2ug",
+  "liveAt": "2026-11-20T16:28:35.289892Z",
+  "publicPlayback": {
+    "chrome": 5,
+    "iPhoneWebKit": 5
+  },
+  "liveCreatorPage": "https://beastypages.com/?b=b_foodieyunamomimood",
+  "local": {
+    "goodsApiTests": 49,
+    "chromeCases": 36,
+    "hostChecks": 32,
+    "testCashAdjustmentCents": 2500,
+    "watchPlaybackAndVisitLink": true
+  },
+  "liveRegressionCheck": "tools/live-verify.mjs --skip-roster"
+}
