@@ -2850,4 +2850,5 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-365': 'b_foodiethefoodiemon',
   'beasty-foodies2-366': 'b_foodiefoodiewitabootie408',
   'beasty-foodies2-367': 'b_foodiejennixchi',
+  'beasty-foodies2-368': 'b_foodieyunamomimood',
 }

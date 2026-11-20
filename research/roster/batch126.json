@@ -1,0 +1,113 @@
+{
+  "previousCutoffRow": 253122,
+  "cutoffRow": 253150,
+  "sourceWindow": "2026-11-19 18:21 to 2026-11-20 08:08 Pacific",
+  "posts": [
+    {
+      "code": "Df6A1uvBPUs",
+      "source": "https://www.instagram.com/reel/Df6A1uvBPUs/",
+      "by": "hangrypotato",
+      "brand": "b_tadaramen",
+      "slug": "review-Df6A1uvBPUs",
+      "rows": [
+        253136,
+        253137
+      ],
+      "excerpt": {
+        "start": 3,
+        "end": 18
+      },
+      "surface": "business"
+    },
+    {
+      "code": "DHKVpHTPMMR",
+      "source": "https://www.instagram.com/reel/DHKVpHTPMMR/",
+      "by": "bayarea.foodie.adventures",
+      "brand": "b_tadaramen",
+      "slug": "review-DHKVpHTPMMR",
+      "rows": [
+        253138,
+        253139
+      ],
+      "excerpt": {
+        "start": 3,
+        "end": 18
+      },
+      "surface": "business"
+    },
+    {
+      "code": "DVUhZSYksN1",
+      "source": "https://www.instagram.com/reel/DVUhZSYksN1/",
+      "by": "foodandsachi",
+      "brand": "b_tadaramen",
+      "slug": "review-DVUhZSYksN1",
+      "rows": [
+        253140,
+        253141
+      ],
+      "excerpt": {
+        "start": 3,
+        "end": 18
+      },
+      "surface": "business"
+    },
+    {
+      "code": "DfqVk-6xyBo",
+      "source": "https://www.instagram.com/reel/DfqVk-6xyBo/",
+      "by": "yunamomi.mood",
+      "brand": "b_tadaramen",
+      "slug": "review-DfqVk-6xyBo",
+      "rows": [
+        253143,
+        253144
+      ],
+      "excerpt": {
+        "start": 0,
+        "end": null
+      },
+      "surface": "business"
+    },
+    {
+      "code": "De0SazxourG",
+      "source": "https://www.instagram.com/reel/De0SazxourG/",
+      "by": "bayarea_foodogram",
+      "brand": "b_tadaramen",
+      "slug": "review-De0SazxourG",
+      "rows": [
+        253145,
+        253146
+      ],
+      "excerpt": {
+        "start": 0,
+        "end": null
+      },
+      "surface": "watch-and-creator"
+    }
+  ],
+  "placements": {
+    "beasty-foodies2-368": "b_foodieyunamomimood"
+  },
+  "artworkDispositions": [
+    {
+      "row": 253142,
+      "screenshot": "IMG_0998.PNG",
+      "source": "https://www.instagram.com/yunamomi.mood/",
+      "asset": "/icons/influencer-yunamomi-mood-v126.webp",
+      "disposition": "Matched the supplied screenshot to the original public profile photo. Use the square original with no screenshot chrome or ring."
+    }
+  ],
+  "goods": {
+    "rows": [
+      253122,
+      253124,
+      253127,
+      253130,
+      253134
+    ],
+    "changes": [
+      "Publish the dotless lockup.",
+      "Open the offer builder from seller shelves and existing listing conversations.",
+      "Add shelf code entry and editable cash balancing within the existing card-hold gate."
+    ]
+  }
+}

@@ -734,3 +734,30 @@
     scroll-margin-top: 72px;
   }
 }
+
+.swap-code {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.swap-code input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 7px;
+  font-size: 16px;
+}
+.swap-code .text-button {
+  min-height: 36px;
+}
+.swap-code-notice {
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+.thread-trade-action {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--line);
+}

@@ -38,6 +38,7 @@ const offerFields = {
   message: z.string().trim().max(2000).optional(),
   fulfillment: fulfillment.default("meetup"),
   balanceValues: z.boolean().default(false),
+  cashAdjustmentCents: z.number().int().min(50).max(maxShippedValue).optional(),
 };
 const createOffer = z.union([
   z
@@ -191,9 +192,10 @@ function shippingDifference(
   method: z.infer<typeof fulfillment>,
   balance: boolean,
   shippingEnabled: boolean,
+  adjustment?: number,
 ) {
   if (method !== "shipping") {
-    if (balance)
+    if (balance || adjustment !== undefined)
       fail(
         400,
         "Cash adjustments require shipping with card holds.",
@@ -222,7 +224,14 @@ function shippingDifference(
       "For card holds, price every item at $0.50 or more and keep each side under $5,000.",
       "TRADE_VALUE_REQUIRED",
     );
-  const cash = balance ? Math.abs(a - b) : 0;
+  const difference = Math.abs(a - b);
+  if (adjustment !== undefined && (balance || adjustment > difference))
+    fail(
+      400,
+      "Choose one cash amount that is no higher than the difference between the listing totals.",
+      "INVALID_CASH_ADJUSTMENT",
+    );
+  const cash = adjustment ?? (balance ? difference : 0);
   if (cash > 0 && cash < 50)
     fail(
       400,
@@ -448,6 +457,9 @@ export function registerTrades(
             body.message ?? "",
             body.fulfillment,
             body.balanceValues,
+            ...(body.cashAdjustmentCents !== undefined
+              ? [body.cashAdjustmentCents]
+              : []),
           ])
         : hash([
             offeredIds[0],
@@ -455,6 +467,9 @@ export function registerTrades(
             body.message ?? "",
             ...(body.fulfillment !== "meetup" || body.balanceValues
               ? [body.fulfillment, body.balanceValues]
+              : []),
+            ...(body.cashAdjustmentCents !== undefined
+              ? [body.cashAdjustmentCents]
               : []),
           ]);
       const tradeId = await transaction(pool, async (db) => {
@@ -507,6 +522,7 @@ export function registerTrades(
           body.fulfillment,
           body.balanceValues,
           shippingEnabled,
+          body.cashAdjustmentCents,
         );
         if (modern) {
           const duplicate = (
@@ -694,6 +710,7 @@ export function registerTrades(
           body.fulfillment,
           body.balanceValues,
           shippingEnabled,
+          body.cashAdjustmentCents,
         );
         if (
           trade.fulfillment === body.fulfillment &&

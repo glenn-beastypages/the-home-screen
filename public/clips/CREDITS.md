@@ -1298,3 +1298,10 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DeLGoVRvsFQ.mp4` | [Original](https://www.instagram.com/reel/DeLGoVRvsFQ/) | Review by @bestinthegamme at Minnie Bell’s Soul Movement, San Francisco. 3–18s |
 | `review-DWKeR_XEgTX.mp4` | [Original](https://www.instagram.com/reel/DWKeR_XEgTX/) | Review by @naeemahtravels at Minnie Bell’s Soul Movement, San Francisco. 3–18s |
 | `review-DJdSNeGxD7E.mp4` | [Original](https://www.instagram.com/reel/DJdSNeGxD7E/) | Review by @hungryhungryheejin at Minnie Bell’s Soul Movement, San Francisco. 0–10.242s |
+
+<!-- Batch 126. -->
+| `review-Df6A1uvBPUs.mp4` | [Original](https://www.instagram.com/reel/Df6A1uvBPUs/) | Review by @hangrypotato at Tada Ramen & Yakitori, Oakland. 3–18s |
+| `review-DHKVpHTPMMR.mp4` | [Original](https://www.instagram.com/reel/DHKVpHTPMMR/) | Review by @bayarea.foodie.adventures at Tada Ramen & Yakitori, Oakland. 3–18s |
+| `review-DVUhZSYksN1.mp4` | [Original](https://www.instagram.com/reel/DVUhZSYksN1/) | Review by @foodandsachi at Tada Ramen & Yakitori, Oakland. 3–18s |
+| `review-DfqVk-6xyBo.mp4` | [Original](https://www.instagram.com/reel/DfqVk-6xyBo/) | Review by @yunamomi.mood at Tada Ramen & Yakitori, Oakland. Full 8.2s |
+| `review-De0SazxourG.mp4` | [Original](https://www.instagram.com/reel/De0SazxourG/) | Review by @bayarea_foodogram at Tada Ramen & Yakitori, Oakland. Specials shown in the original post are subject to change. Full reel |

@@ -14,6 +14,7 @@ import {
   api,
   requestId,
   time,
+  withBase,
   type Conversation,
   type Message,
   type Notice,
@@ -35,6 +36,15 @@ import {
   useApp,
   useResource,
 } from "./ui";
+import { TradeComposer, isTradeable } from "./trade-offer";
+
+function historyReplaceTradeDraft(id: string) {
+  window.history.replaceState(
+    window.history.state,
+    "",
+    withBase("/inbox/" + id),
+  );
+}
 
 export function Inbox({ id }: { id?: string }) {
   const { user, toast } = useApp();
@@ -43,13 +53,27 @@ export function Inbox({ id }: { id?: string }) {
     [messages, setMessages] = useState<Message[]>([]),
     [next, setNext] = useState<string | null>(null),
     [older, setOlder] = useState(false),
-    [body, setBody] = useState(""),
+    [body, setBody] = useState(() =>
+      id && new URLSearchParams(location.search).get("tradeInterest") === "1"
+        ? "Would you be open to trading for this item? Let me know what you like on my shelf."
+        : "",
+    ),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
     [messageError, setMessageError] = useState(""),
     [loading, setLoading] = useState(true),
     [loadingMessages, setLoadingMessages] = useState(!!id),
     [moreConversations, setMoreConversations] = useState(false);
+  const [composeTrade, setComposeTrade] = useState(
+    () => new URLSearchParams(location.search).get("offer") === "1",
+  );
+  const tradeListing =
+    conversation?.id === id &&
+    !conversation?.tradeId &&
+    conversation?.listing &&
+    isTradeable(conversation.listing)
+      ? conversation.listing
+      : null;
   const sendKey = useRef(requestId());
   const history = useRef<HTMLDivElement>(null);
   const lastRead = useRef("");
@@ -179,6 +203,8 @@ export function Inbox({ id }: { id?: string }) {
         old.some((m) => m.id === d.message.id) ? old : [...old, d.message],
       );
       setBody("");
+      if (new URLSearchParams(location.search).has("tradeInterest"))
+        historyReplaceTradeDraft(id);
       sendKey.current = requestId();
     } catch (e) {
       setMessageError((e as Error).message);
@@ -354,6 +380,16 @@ export function Inbox({ id }: { id?: string }) {
                   <ArrowRight size={16} />
                 </Link>
               )}
+              {tradeListing && (
+                <div className="thread-trade-action">
+                  <button
+                    className="button secondary compact"
+                    onClick={() => setComposeTrade(true)}
+                  >
+                    <ArrowLeftRight size={16} /> Build a trade offer
+                  </button>
+                </div>
+              )}
               <div
                 className="message-history"
                 ref={history}
@@ -441,6 +477,18 @@ export function Inbox({ id }: { id?: string }) {
           )}
         </section>
       </div>
+      {composeTrade && tradeListing && conversation && (
+        <TradeComposer
+          other={conversation.other}
+          yourListing={
+            tradeListing.owner.id === user.id ? tradeListing : undefined
+          }
+          theirListing={
+            tradeListing.owner.id === user.id ? undefined : tradeListing
+          }
+          onClose={() => setComposeTrade(false)}
+        />
+      )}
     </>
   );
 }

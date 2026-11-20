@@ -2133,6 +2133,9 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "foodie_wit_a_bootie_408", "name": "@foodie_wit_a_bootie_408", "label": "foodie_wit_a_bootie_408", "icon": "influencer-foodie-wit-a-bootie-408-v125"},
   {"handle": "jennixchi", "name": "@jennixchi", "label": "jennixchi", "icon": "influencer-jennixchi-v125"},
 
+  {"handle": "yunamomi.mood", "name": "@yunamomi.mood", "label": "yunamomi.mood", "icon": "influencer-yunamomi-mood-v126"},
+
+
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3060,6 +3063,13 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "bestinthegamme", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DeLGoVRvsFQ/", "credit": "Review by @bestinthegamme at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
   {"by": "naeemahtravels", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DWKeR_XEgTX/", "credit": "Review by @naeemahtravels at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
   {"by": "hungryhungryheejin", "place": "Minnie Bell’s Soul Movement", "city": "San Francisco", "brand": "b_minniebellssf", "reel": "https://www.instagram.com/reel/DJdSNeGxD7E/", "credit": "Review by @hungryhungryheejin at Minnie Bell’s Soul Movement, San Francisco.", "clip": "creator"},
+
+  // Batch 126 — Glenn’s November 20 Tada Ramen & Yakitori intake.
+  {"by": "hangrypotato", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/Df6A1uvBPUs/", "credit": "Review by @hangrypotato at Tada Ramen & Yakitori, Oakland.", "clip": true},
+  {"by": "bayarea.foodie.adventures", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/DHKVpHTPMMR/", "credit": "Review by @bayarea.foodie.adventures at Tada Ramen & Yakitori, Oakland.", "clip": true},
+  {"by": "foodandsachi", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/DVUhZSYksN1/", "credit": "Review by @foodandsachi at Tada Ramen & Yakitori, Oakland.", "clip": true},
+  {"by": "yunamomi.mood", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/DfqVk-6xyBo/", "credit": "Review by @yunamomi.mood at Tada Ramen & Yakitori, Oakland.", "clip": true},
+  {"by": "bayarea_foodogram", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/De0SazxourG/", "credit": "Review by @bayarea_foodogram at Tada Ramen & Yakitori, Oakland. Specials shown in the original post are subject to change.", "clip": "creator"},
 ]
 
 /*

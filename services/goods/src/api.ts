@@ -219,6 +219,13 @@ export async function api<T>(
   }
   return data as T;
 }
+export async function startListingConversation(item: Listing) {
+  const { conversation } = await api<{
+    conversation: Pick<Conversation, "id">;
+  }>("/conversations", "POST", { sellerId: item.owner.id, listingId: item.id });
+  return "/inbox/" + conversation.id;
+}
+
 // No identity or credentials are stored. The signal tells other tabs to recheck their session.
 export const sessionChangeKey = "bsty-goods:session-change";
 export function notifySessionChange() {

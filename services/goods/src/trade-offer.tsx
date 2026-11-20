@@ -5,6 +5,8 @@ import {
   ApiError,
   money,
   requestId,
+  startListingConversation,
+  withoutBase,
   type Fulfillment,
   type Listing,
   type Page,
@@ -75,7 +77,7 @@ function ItemText({ item }: { item: Listing }) {
     <span className="swap-item-text">
       <strong>{item.title}</strong>
       <small>
-        {item.condition} ·{" "}
+        {item.code} · {item.condition} ·{" "}
         {item.priceCents === null ? "Unpriced" : money(item.priceCents)}
       </small>
     </span>
@@ -128,7 +130,7 @@ export function SwapSummary({
   );
 }
 
-const isAvailable = (item: Listing) =>
+export const isTradeable = (item: Listing) =>
   item.status === "active" &&
   item.tradeEnabled &&
   !item.isDemo &&
@@ -147,33 +149,105 @@ function PickerSide({
   onToggle: (item: Listing) => void;
   empty?: string;
 }) {
+  const [code, setCode] = useState("");
+  const [notice, setNotice] = useState("");
+  const addCode = () => {
+    const match = /^([A-Z])-?([1-3])$/.exec(
+      code.trim().toUpperCase().replace(/\s/g, ""),
+    );
+    const item =
+      match && items.find((entry) => entry.code === match[1] + "-" + match[2]);
+    if (!match) {
+      setNotice("Enter a shelf code like A-1.");
+      return;
+    }
+    if (!item) {
+      setNotice(
+        "No available trade item at " + match[1] + "-" + match[2] + ".",
+      );
+      return;
+    }
+    if (selected.some((entry) => entry.id === item.id)) {
+      setNotice(item.code + " is already added.");
+      return;
+    }
+    if (selected.length >= 10) {
+      setNotice("Remove an item before adding another.");
+      return;
+    }
+    onToggle(item);
+    setCode("");
+    setNotice("");
+  };
+  const ordered = [
+    ...selected,
+    ...items.filter((item) => !selected.some((entry) => entry.id === item.id)),
+  ];
   return (
     <section className="swap-side" aria-label={title}>
       <SideHeading title={title} items={selected} />
       {items.length ? (
-        <ul className="swap-items swap-picker-list">
-          {items.map((item) => {
-            const active = selected.some((chosen) => chosen.id === item.id);
-            return (
-              <li key={item.id}>
-                <button
-                  type="button"
-                  className="swap-item swap-choice"
-                  aria-label={item.title}
-                  aria-pressed={active}
-                  disabled={selected.length >= 10 && !active}
-                  onClick={() => onToggle(item)}
-                >
-                  <Photo listing={item} />
-                  <ItemText item={item} />
-                  <span className="swap-choice-icon">
-                    {active ? <Check size={15} /> : <Plus size={15} />}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+        <>
+          <div className="swap-code">
+            <input
+              aria-label={
+                title === "Your items" ? "Your shelf code" : "Their shelf code"
+              }
+              placeholder="Shelf code"
+              maxLength={8}
+              autoCapitalize="characters"
+              autoComplete="off"
+              spellCheck={false}
+              value={code}
+              onChange={(event) => {
+                setCode(event.target.value);
+                setNotice("");
+              }}
+              onKeyDown={(event) => {
+                if (event.key !== "Enter" || event.nativeEvent.isComposing)
+                  return;
+                event.preventDefault();
+                if (code.trim()) addCode();
+              }}
+            />
+            <button
+              type="button"
+              className="text-button"
+              disabled={!code.trim()}
+              onClick={addCode}
+            >
+              Add
+            </button>
+          </div>
+          {notice && (
+            <p className="swap-code-notice" role="status">
+              {notice}
+            </p>
+          )}
+          <ul className="swap-items swap-picker-list">
+            {ordered.map((item) => {
+              const active = selected.some((chosen) => chosen.id === item.id);
+              return (
+                <li key={item.id}>
+                  <button
+                    type="button"
+                    className="swap-item swap-choice"
+                    aria-label={item.title}
+                    aria-pressed={active}
+                    disabled={selected.length >= 10 && !active}
+                    onClick={() => onToggle(item)}
+                  >
+                    <Photo listing={item} />
+                    <ItemText item={item} />
+                    <span className="swap-choice-icon">
+                      {active ? <Check size={15} /> : <Plus size={15} />}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </>
       ) : (
         <p className="swap-picker-empty">{empty}</p>
       )}
@@ -183,19 +257,24 @@ function PickerSide({
 
 export function TradeComposer({
   target,
+  theirListing,
+  yourListing,
   trade,
   other: participant,
   onClose,
   onUpdate,
 }: {
   target?: Listing;
+  theirListing?: Listing;
+  yourListing?: Listing;
   trade?: Trade;
   other?: Profile;
   onClose: () => void;
   onUpdate?: (trade: Trade) => void;
 }) {
   const { go, user } = useApp();
-  const other = participant ?? target?.owner;
+  const requested = target ?? theirListing;
+  const other = participant ?? requested?.owner;
   const original = trade && user ? tradeSides(trade, user.id) : null;
   const inventory = useResource<{ slots: Slot[] }>("/me/inventory");
   const shelf = useResource<Page<Listing>>(
@@ -205,29 +284,33 @@ export function TradeComposer({
   );
   const options = useResource<TradeOptions>("/trade-options");
   const [ownIds, setOwnIds] = useState<string[]>(
-    () => original?.yours.map((item) => item.id) ?? [],
+    () =>
+      original?.yours.map((item) => item.id) ??
+      (yourListing ? [yourListing.id] : []),
   );
   const [theirIds, setTheirIds] = useState<string[]>(
     () =>
-      original?.theirs.map((item) => item.id) ?? (target ? [target.id] : []),
+      original?.theirs.map((item) => item.id) ??
+      (requested ? [requested.id] : []),
   );
   const [method, setMethod] = useState<Fulfillment>(
     trade?.fulfillment ?? "meetup",
   );
   const [balance, setBalance] = useState(Boolean(trade?.cashDifferenceCents));
+  const [cashAmount, setCashAmount] = useState(
+    trade?.cashDifferenceCents
+      ? (trade.cashDifferenceCents / 100).toFixed(2)
+      : "",
+  );
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [sendError, setSendError] = useState("");
   const request = useRef<{ payload: string; key: string }>();
   const mine =
     inventory.data?.slots.flatMap(({ listing }) =>
-      listing && isAvailable(listing) ? [listing] : [],
+      listing && isTradeable(listing) ? [listing] : [],
     ) ?? [];
-  const partner = shelf.data?.items.filter(isAvailable) ?? [];
-  if (target) {
-    const first = partner.findIndex((item) => item.id === target.id);
-    if (first > 0) partner.unshift(...partner.splice(first, 1));
-  }
+  const partner = shelf.data?.items.filter(isTradeable) ?? [];
   const yours = ownIds.flatMap(
     (itemId) => mine.find((item) => item.id === itemId) ?? [],
   );
@@ -237,6 +320,14 @@ export function TradeComposer({
   const ownValue = totalValue(yours);
   const otherValue = totalValue(theirs);
   const difference = Math.abs(ownValue.cents - otherValue.cents);
+  const hasCashAdjustment =
+    method === "shipping" && balance && difference >= 50;
+  const cashCents = Math.round(Number(cashAmount) * 100);
+  const validCash =
+    !hasCashAdjustment ||
+    (/^\d+(?:\.\d{1,2})?$/.test(cashAmount) &&
+      cashCents >= 50 &&
+      cashCents <= difference);
   const canHold = Boolean(
     options.data?.shipping &&
     yours.length &&
@@ -250,6 +341,7 @@ export function TradeComposer({
     yours.length &&
     theirs.length &&
     !staleItems &&
+    validCash &&
     (method !== "shipping" || canHold),
   );
   const reload = () => {
@@ -276,7 +368,7 @@ export function TradeComposer({
       offeredListingIds: yours.map((item) => item.id),
       requestedListingIds: theirs.map((item) => item.id),
       fulfillment: method,
-      balanceValues: method === "shipping" && balance && difference >= 50,
+      ...(hasCashAdjustment ? { cashAdjustmentCents: cashCents } : {}),
       message: note.trim(),
       ...(trade ? { expectedRevision: trade.revision } : {}),
     };
@@ -303,6 +395,20 @@ export function TradeComposer({
     }
   }
 
+  const interestItem = !trade && !participant?.isDemo && theirs[0];
+  const messageSeller = async () => {
+    if (!interestItem || busy) return;
+    setBusy(true);
+    setSendError("");
+    try {
+      go((await startListingConversation(interestItem)) + "?tradeInterest=1");
+      onClose();
+    } catch (error) {
+      setSendError((error as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
   const loadError = inventory.error || shelf.error;
   const readyToPick = !inventory.loading && !shelf.loading && !loadError;
   return (
@@ -320,7 +426,7 @@ export function TradeComposer({
             <ErrorBox error={loadError} retry={reload} />
           ) : !readyToPick ? (
             <Loading />
-          ) : !mine.length ? (
+          ) : !mine.length && !partner.length ? (
             <Empty
               title="List something to trade"
               body="Enable trades on your listing."
@@ -331,7 +437,7 @@ export function TradeComposer({
                   encodeURIComponent(
                     trade
                       ? `/trades/${trade.id}`
-                      : `/items/${target?.id}?offer=1`,
+                      : withoutBase(location.pathname) + "?offer=1",
                   ),
               }}
             />
@@ -358,6 +464,7 @@ export function TradeComposer({
                   items={mine}
                   selected={yours}
                   onToggle={(item) => toggle(item, ownIds, setOwnIds)}
+                  empty="List an item and turn on trades to make an offer."
                 />
                 <PickerSide
                   title="Their items"
@@ -370,29 +477,54 @@ export function TradeComposer({
               <p className="swap-value-note">
                 Estimated value from listing prices
               </p>
-              <fieldset className="swap-method">
-                <legend>Exchange method</legend>
-                {(
-                  [
-                    "meetup",
-                    "arranged_shipping",
-                    ...(options.data?.shipping || method === "shipping"
-                      ? ["shipping"]
-                      : []),
-                  ] as Fulfillment[]
-                ).map((key) => (
-                  <label key={key}>
-                    <input
-                      type="radio"
-                      name="exchange-method"
-                      value={key}
-                      checked={method === key}
-                      onChange={() => setMethod(key)}
-                    />
-                    {methodLabel[key]}
-                  </label>
-                ))}
-              </fieldset>
+              {!mine.length && (
+                <Link
+                  className="text-button"
+                  to={
+                    "/sell/new?returnTo=" +
+                    encodeURIComponent(
+                      withoutBase(location.pathname) + "?offer=1",
+                    )
+                  }
+                >
+                  List an item
+                </Link>
+              )}
+              {mine.length > 0 && interestItem && !yours.length && (
+                <button
+                  className="text-button"
+                  type="button"
+                  disabled={busy}
+                  onClick={messageSeller}
+                >
+                  Message about trading
+                </button>
+              )}
+              {mine.length > 0 && (
+                <fieldset className="swap-method">
+                  <legend>Exchange method</legend>
+                  {(
+                    [
+                      "meetup",
+                      "arranged_shipping",
+                      ...(options.data?.shipping || method === "shipping"
+                        ? ["shipping"]
+                        : []),
+                    ] as Fulfillment[]
+                  ).map((key) => (
+                    <label key={key}>
+                      <input
+                        type="radio"
+                        name="exchange-method"
+                        value={key}
+                        checked={method === key}
+                        onChange={() => setMethod(key)}
+                      />
+                      {methodLabel[key]}
+                    </label>
+                  ))}
+                </fieldset>
+              )}
               {method === "arranged_shipping" && (
                 <p className="swap-method-note">
                   Buy your own postage and share tracking here. BSTY doesn’t
@@ -407,19 +539,39 @@ export function TradeComposer({
                         <input
                           type="checkbox"
                           checked={balance}
-                          onChange={(e) => setBalance(e.target.checked)}
+                          onChange={(e) => {
+                            setBalance(e.target.checked);
+                            setCashAmount(
+                              e.target.checked
+                                ? (difference / 100).toFixed(2)
+                                : "",
+                            );
+                          }}
                         />
                         {ownValue.cents < otherValue.cents
-                          ? "Add " + money(difference) + " to my offer"
-                          : "Request " +
-                            money(difference) +
-                            " to balance the trade"}
+                          ? "Add cash to my offer"
+                          : "Request cash to balance the trade"}
+                      </label>
+                    )}
+                    {hasCashAdjustment && (
+                      <label className="swap-note">
+                        Cash amount
+                        <input
+                          value={cashAmount}
+                          inputMode="decimal"
+                          onChange={(e) => setCashAmount(e.target.value)}
+                          aria-invalid={!validCash}
+                          aria-describedby="swap-cash-range"
+                        />
+                        <small id="swap-cash-range">
+                          Enter $0.50 to {money(difference)}.
+                        </small>
                       </label>
                     )}
                     <ShippingTerms
                       yours={ownValue.cents}
                       theirs={otherValue.cents}
-                      cash={balance && difference >= 50 ? difference : 0}
+                      cash={hasCashAdjustment && validCash ? cashCents : 0}
                     />
                   </>
                 ) : (
@@ -428,21 +580,23 @@ export function TradeComposer({
                     total on each side.
                   </p>
                 ))}
-              <label className="swap-note">
-                Add a message <span>Optional</span>
-                <textarea
-                  rows={2}
-                  maxLength={2000}
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                  placeholder="Tell them what you have in mind"
-                />
-              </label>
+              {mine.length > 0 && (
+                <label className="swap-note">
+                  Add a message <span>Optional</span>
+                  <textarea
+                    rows={2}
+                    maxLength={2000}
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)}
+                    placeholder="Tell them what you have in mind"
+                  />
+                </label>
+              )}
             </>
           )}
           {sendError && <ErrorBox error={sendError} />}
         </div>
-        {readyToPick && mine.length > 0 && (
+        {readyToPick && (mine.length > 0 || interestItem) && (
           <footer className="swap-composer-footer">
             <span aria-live="polite">
               {ready
@@ -451,10 +605,26 @@ export function TradeComposer({
                   ? "Review selected items"
                   : "Select an item on each side"}
             </span>
-            <button className="button" type="submit" disabled={busy || !ready}>
-              {busy && <Spinner />}
-              {trade ? "Send counteroffer" : "Send offer"}
-            </button>
+            {!mine.length && interestItem ? (
+              <button
+                className="button"
+                type="button"
+                disabled={busy}
+                onClick={messageSeller}
+              >
+                {busy && <Spinner />}
+                Message about trading
+              </button>
+            ) : (
+              <button
+                className="button"
+                type="submit"
+                disabled={busy || !ready}
+              >
+                {busy && <Spinner />}
+                {trade ? "Send counteroffer" : "Send offer"}
+              </button>
+            )}
           </footer>
         )}
       </form>

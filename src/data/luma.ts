@@ -691,6 +691,7 @@ export const ICON_LUMA: Record<string, number> = {
   'influencer-jacks-dining-room-v122': 0.3714,
   'influencer-janeteats-v123': 0.2943,
   'influencer-jennixchi-v125': 0.1923,
+  'influencer-yunamomi-mood-v126': 0.2441,
   'influencer-justjasminesingh-v125': 0.218,
   'influencer-kang-of-realty-v122': 0.0718,
   'influencer-karaxhuynh-v123': 0.2537,

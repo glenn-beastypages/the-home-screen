@@ -19,6 +19,7 @@ import {
 import {
   api,
   ApiError,
+  startListingConversation,
   conditions,
   money,
   recentlyViewedIds,
@@ -49,7 +50,7 @@ import {
   useApp,
   useResource,
 } from "./ui";
-import { TradeComposer } from "./trades";
+import { TradeComposer, isTradeable } from "./trade-offer";
 import { BuyAction } from "./purchases";
 import { shareUrl } from "./platform";
 
@@ -661,15 +662,15 @@ export function ItemPage({ id }: { id: string }) {
     setTrade(new URLSearchParams(window.location.search).get("offer") === "1");
   }, [id]);
   const message = async () => {
-    if (!l || l.isDemo || l.owner.isDemo || !requireUser()) return;
+    if (!l || l.isDemo || l.owner.isDemo) return;
+    const wantsTrade = isTradeable(l);
+    if (!requireUser()) return;
     setBusy(true);
     try {
-      const d = await api<{ conversation: { id: string } }>(
-        "/conversations",
-        "POST",
-        { sellerId: l.owner.id, listingId: l.id },
+      go(
+        (await startListingConversation(l)) +
+          (wantsTrade ? "?tradeInterest=1" : ""),
       );
-      go("/inbox/" + d.conversation.id);
     } catch (e) {
       if (e instanceof ApiError && e.status === 404) reload();
       toast((e as Error).message);
@@ -904,8 +905,10 @@ export function ItemPage({ id }: { id: string }) {
                     disabled={busy}
                     onClick={message}
                   >
-                    {busy ? <Spinner /> : <MessageCircle size={19} />} Message
-                    seller
+                    {busy ? <Spinner /> : <MessageCircle size={19} />}
+                    {isTradeable(l)
+                      ? "Message about trading"
+                      : "Message seller"}
                   </button>
                 </>
               )}
@@ -980,6 +983,9 @@ export function SellerPage({ id }: { id: string }) {
     error: feedError,
   } = useResource<Page<Listing>>("/listings?seller=" + id + "&limit=78");
   const [blocking, setBlocking] = useState(false);
+  const [trade, setTrade] = useState(
+    () => new URLSearchParams(location.search).get("offer") === "1",
+  );
   const toggleBlock = async () => {
     if (!requireUser() || !data) return;
     setBlocking(true);
@@ -1050,7 +1056,19 @@ export function SellerPage({ id }: { id: string }) {
           <span className="eyebrow">Coded from A–1 to Z–3</span>
           <h2>On the shelf.</h2>
         </div>
-        <span className="muted">{feed?.items.length || 0} items</span>
+        {!p.isDemo &&
+          !data.blockedByViewer &&
+          user?.id !== id &&
+          feed?.items.some(isTradeable) && (
+            <button
+              className="button compact"
+              onClick={() => {
+                if (requireUser("/sellers/" + id + "?offer=1")) setTrade(true);
+              }}
+            >
+              <ArrowLeftRight size={17} /> Trade from this shelf
+            </button>
+          )}
       </div>
       {feedLoading ? (
         <Loading cards />
@@ -1082,6 +1100,13 @@ export function SellerPage({ id }: { id: string }) {
           action={{ label: "Explore the marketplace", to: "/explore" }}
         />
       )}
+      {trade &&
+        user &&
+        user.id !== id &&
+        !p.isDemo &&
+        !data.blockedByViewer && (
+          <TradeComposer other={p} onClose={() => setTrade(false)} />
+        )}
     </>
   );
 }
