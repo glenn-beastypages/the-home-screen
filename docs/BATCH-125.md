@@ -24,3 +24,9 @@ Nothing.
 ## Checks
 
 The seat comparison against origin/main found 17 new seats: the four hand seats for the two new listings, seven automatic Soul Food spots, Minnie Bell’s automatic Fried Chicken spot and the five new creator seats. Exactly 357 overflow foodie positions moved and nothing was removed. Among the 1,398 existing business records, nothing else changed. `tools/audit-batch125.mjs` passed locally in Chromium, with all 17 page films played muted and Thai Table’s own post confirmed in Watch, and in iPhone WebKit. Both checked the two menus, the returns to South San Francisco Goods and San Francisco More goods, and the 320 px layout. `tools/audit-category-glyphs.mjs` passes with 83 categories. `audit-data`, `audit-categories` and `audit-foodies` pass. The two data warnings on Little Lucca’s 95¢ dressing and sauce add-ons are the printed prices.
+
+## Live verification
+
+Render served `7138edc` by 6:31 p.m. Pacific on November 19, rebased on the BSTY Goods dock change `6d73fd4`. The directory and Goods both answered 200. The Batch 125 audit passed on beastypages.com in Chromium, with all 17 page films played muted and Thai Table’s own post in Watch, and in iPhone WebKit. In both, the two menus (103 and 37 rows), the returns to South San Francisco Goods and San Francisco More goods, the 320 px layout, all eight Soul Food seats, More sandwiches, the three Heavy Hitter seats and all 44 new icon, clip and poster files matched the release. `tools/live-verify.mjs` passed. Its first run, alongside both browser audits, caught Pijja Paradise in Pittsburg before its menu loaded; that page is untouched here, and a lone rerun passed with its 105 rows. No new sends from Glenn had arrived when this was recorded, only his driving auto-reply and Leon’s Goods logo replies.
+
+[Live verification record](../research/roster/b125-live-verification.json)

@@ -1,0 +1,52 @@
+{
+ "release": {
+  "commit": "7138edc",
+  "pushedAt": "2026-11-19T18:20:06-08:00",
+  "liveAt": "2026-11-19T18:31:55-08:00",
+  "base": "https://beastypages.com",
+  "entry": "/assets/index-D2UOG_xG.js",
+  "siteHealthy": true,
+  "goodsHealthy": true,
+  "goodsEntry": "/goods/assets/index-TwrLc-rC.js",
+  "exactIcon": {
+   "path": "/icons/minnie-bells-sf-v125.webp",
+   "sha256": "a32bba1118dc2edfd20287aa2d4afe31b018772fd6a8b6ba0698be5e5e79bcd8"
+  },
+  "deploy": "Render auto-deploy from main; no Render API key on this Mac, so the release is proven by the new entry bundle and exact asset hashes."
+ },
+ "through": "2026-11-19T18:18:41.408534-08:00",
+ "throughRow": 253122,
+ "messages": 61,
+ "glennSends": 52,
+ "attachments": 14,
+ "newListings": 2,
+ "newCategories": [
+  "soulfood"
+ ],
+ "newOverflowSheets": [
+  "sandwiches2"
+ ],
+ "newClips": 18,
+ "updatedIcons": 8,
+ "seats": {
+  "before": 2395,
+  "after": 2412,
+  "added": 17,
+  "removed": 0,
+  "overflowMoved": 357,
+  "otherSeatsChanged": 0
+ },
+ "newBatchMediaHashes": 44,
+ "mutedClipsPlayedInChromium": 17,
+ "mutedSamplesPlayedInIphoneWebKit": 4,
+ "checks": {
+  "batch-chrome-live": 0,
+  "batch-webkit-live": 0,
+  "full-live (tools/live-verify.mjs)": 0,
+  "category-glyphs": 0
+ },
+ "postDeployMessageRead": "No Glenn intake after row 253122 at 6:59 p.m.: only Leon’s Goods-logo replies (253124, 253126, 253127) and Glenn’s Driving Focus auto-reply (253125).",
+ "proofWrittenAt": "2026-11-20T02:59:20.068614+00:00",
+ "liveVerifyFirstRun": "The first run, alongside both browser audits, saw 0 menu rows on b_pijjaparadisepittsburg (data untouched by this batch); a lone rerun passed with 105 rows.",
+ "entryNote": "Render builds its own bundle, so the live entry hash differs from the local build; the release is proven by the new icons, clips and posters, all byte-identical live."
+}
