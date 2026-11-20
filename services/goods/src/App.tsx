@@ -342,10 +342,12 @@ export default function App() {
       >
         <div className="header-inner">
           <Link className="wordmark" to="/" aria-label="BSTY Goods home">
-            <span>
-              BSTY<span className="wordmark-dot">•</span>
-            </span>
-            <small>GOODS</small>
+            <img
+              src={withBase("/brand/bsty-goods.svg")}
+              width={72}
+              height={55}
+              alt=""
+            />
           </Link>
           {showSearch && <HeaderSearch key={route} go={go} />}
           <nav className="desktop-nav" aria-label="Main navigation">

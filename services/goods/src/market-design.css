@@ -113,46 +113,12 @@ h2,
 .wordmark {
   grid-area: logo;
   align-self: center;
-  flex: none;
-  gap: 8px;
   width: fit-content;
 }
-.wordmark > span {
-  font-family: var(--display);
-  font-size: 43px;
-  line-height: 0.84;
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  box-shadow: inset 0 -0.19em var(--accent);
-  padding: 0 7px 3px 0;
-}
-.wordmark-dot {
-  color: var(--ink);
-  top: 1px;
-  right: 0;
-  font-size: 13px;
-}
-.wordmark small {
-  padding-left: 0;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-/* Glenn, 2026-11-19: "put Goods below BSTY and perhaps bold the letters".
-   GOODS reads left to right under the yellow bar, as wide as BSTY. */
-.wordmark {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-.wordmark small {
-  writing-mode: horizontal-tb;
-  font-family: var(--display);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.42em;
-  padding: 0 0 0 1px;
+.wordmark img {
+  display: block;
+  width: 72px;
+  height: auto;
 }
 .header-search {
   grid-area: search;
@@ -607,16 +573,8 @@ h2,
     grid-template-areas: "logo actions" "search search";
     column-gap: 7px;
   }
-  .wordmark > span {
-    font-size: 36px;
-    letter-spacing: -0.055em;
-  }
-  .wordmark-dot {
-    right: 0;
-  }
-  .wordmark small {
-    font-size: 11px;
-    letter-spacing: 0.4em;
+  .wordmark img {
+    width: 64px;
   }
   .header-listing {
     display: none;
