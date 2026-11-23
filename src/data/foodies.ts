@@ -200,12 +200,7 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
     "label": "drooling.bae",
     "icon": "foodie-drooling-bae-v98"
   },
-  {
-    "handle": "thesauceboss_",
-    "name": "@thesauceboss_",
-    "label": "thesauceboss_",
-    "icon": "influencer-the-sauce-boss-v122"
-  }
+  {"handle": "ieat.bayarea", "name": "@ieat.bayarea", "label": "ieat.bayarea", "icon": "foodie-ieat-bayarea-v127"}
 ]
 
 /** Everyone else remains reachable on the yellow More foodies sheets. */
@@ -244,7 +239,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "cestalmoco",
     "name": "@cestalmoco",
     "label": "cestalmoco",
-    "icon": "foodie-cestalmoco-v88"
+    "icon": "foodie-cestalmoco-v127"
   },
   {
     "handle": "kangofrealty",
@@ -2136,6 +2131,14 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "yunamomi.mood", "name": "@yunamomi.mood", "label": "yunamomi.mood", "icon": "influencer-yunamomi-mood-v126"},
 
 
+  {
+    "handle": "thesauceboss_",
+    "name": "@thesauceboss_",
+    "label": "thesauceboss_",
+    "icon": "influencer-the-sauce-boss-v122"
+  },
+  {"handle": "hangryhenny_", "name": "@hangryhenny_", "label": "hangryhenny_", "icon": "foodie-hangryhenny-v127"},
+  {"handle": "ch0ubella", "name": "@ch0ubella", "label": "ch0ubella", "icon": "foodie-ch0ubella-v127"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3070,6 +3073,26 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "foodandsachi", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/DVUhZSYksN1/", "credit": "Review by @foodandsachi at Tada Ramen & Yakitori, Oakland.", "clip": true},
   {"by": "yunamomi.mood", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/DfqVk-6xyBo/", "credit": "Review by @yunamomi.mood at Tada Ramen & Yakitori, Oakland.", "clip": true},
   {"by": "bayarea_foodogram", "place": "Tada Ramen & Yakitori", "city": "Oakland", "brand": "b_tadaramen", "reel": "https://www.instagram.com/reel/De0SazxourG/", "credit": "Review by @bayarea_foodogram at Tada Ramen & Yakitori, Oakland. Specials shown in the original post are subject to change.", "clip": "creator"},
+
+  // Batch 127 — November 20–22. Original posting handles are preserved.
+  {"by": "eatswithglory", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/Df-mCgNvvlZ/", "credit": "Review by @eatswithglory at Nono’s Doughnuts & Cafe, Berkeley.", "clip": "creator"},
+  {"by": "vrutichokshi", "place": "Hed Verythai — Downtown", "city": "San Francisco", "brand": "b_hedverythaidowntown", "reel": "https://www.instagram.com/reel/Da6x2hXhrfX/", "credit": "Review by @vrutichokshi at Hed Verythai — Downtown, San Francisco.", "clip": true},
+  {"by": "pimchanyum", "place": "Hed Verythai — Japantown", "city": "San Francisco", "brand": "b_hedverythaijapantown", "reel": "https://www.instagram.com/reel/Df8XkucPCem/", "credit": "Review by @pimchanyum at Hed Verythai — Japantown, San Francisco.", "clip": true},
+  {"by": "hangryhenny_", "place": "Hed Verythai — Japantown", "city": "San Francisco", "brand": "b_hedverythaijapantown", "reel": "https://www.instagram.com/reel/Df5VRgWhlWm/", "credit": "Review by @hangryhenny_ at Hed Verythai in Japantown, San Francisco. The creator disclosed an invitation.", "clip": true},
+  {"by": "ch0ubella", "place": "Hed Verythai — Japantown", "city": "San Francisco", "brand": "b_hedverythaijapantown", "reel": "https://www.instagram.com/reel/Df0-LuGROQk/", "credit": "Review by @ch0ubella at Hed Verythai — Japantown, San Francisco.", "clip": true},
+  {"by": "staycation.sfbayarea", "place": "Hed Verythai — Japantown", "city": "San Francisco", "brand": "b_hedverythaijapantown", "reel": "https://www.instagram.com/reel/Df0GTr-ymbQ/", "credit": "Opening coverage by @staycation.sfbayarea at Hed Verythai’s Japantown location.", "clip": true},
+  {"by": "foodieberrie", "place": "Hoagie's World of Hoagies", "city": "Berkeley", "brand": "b_worldofhoagies", "reel": "https://www.instagram.com/reel/Df8LzcUv5lt/", "credit": "Review by @foodieberrie at Hoagie's World of Hoagies, Berkeley.", "clip": true},
+  {"by": "cheycheyfromthebay", "place": "R&G Lounge", "city": "San Francisco", "brand": "b_rglounge", "reel": "https://www.instagram.com/reel/Df_d6vLJIpa/", "credit": "Review by @cheycheyfromthebay at the original San Francisco R&G Lounge. The post also discusses the Las Vegas expansion.", "clip": true},
+  {"by": "hungere.for.diy", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/DgAfle6pzXW/", "credit": "Review by @hungere.for.diy at Nono’s Doughnuts & Cafe, Berkeley.", "clip": "creator"},
+  {"by": "ieat.bayarea", "place": "El Portal Mexican Restaurant", "city": "San Leandro", "brand": "b_elportalsanleandro", "reel": "https://www.instagram.com/reel/Df-7hjpP69s/", "credit": "Review by @ieat.bayarea at El Portal Mexican Restaurant, San Leandro. Specials and prices shown are from the original post.", "clip": "creator"},
+  {"by": "ivkicks", "place": "Katsu Burger", "city": "Santa Clara", "brand": "b_katsuburgersantaclara", "reel": "https://www.instagram.com/reel/DgAs7dMvqXF/", "credit": "Review by @ivkicks at Katsu Burger, Santa Clara.", "clip": true},
+  {"by": "eatwithsie", "place": "Yonsei Handrolls — Oakland", "city": "Oakland", "brand": "b_yonseihandrollsoakland", "reel": "https://www.instagram.com/reel/DgBf8Hkp0BO/", "credit": "Review by @eatwithsie at Yonsei Handrolls — Oakland, Oakland.", "clip": true},
+  {"by": "cestalmoco", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DgBQHFdTG9z/", "credit": "Review by @cestalmoco at Wooga Korean BBQ, Cupertino.", "clip": "creator"},
+  {"by": "the.artofchiro", "place": "Ube Bae", "city": "Bay Area", "brand": "b_ubebae", "reel": "https://www.instagram.com/reel/Df5YFp5Broh/", "credit": "Posted by @the.artofchiro featuring @theubebae cookies.", "clip": true},
+  {"by": "thesnacksensei", "place": "Yemen Cafe & Restaurant", "city": "Richmond", "brand": "b_yemencaferichmond", "reel": "https://www.instagram.com/reel/DXc-UjVDU-5/", "credit": "Review by @thesnacksensei at Yemen Cafe & Restaurant, Richmond.", "clip": true},
+  {"by": "bayarea_fooddreamz", "place": "Yemen Cafe & Restaurant", "city": "Richmond", "brand": "b_yemencaferichmond", "reel": "https://www.instagram.com/reel/DcRx7K6yVyd/", "credit": "Review by @bayarea_fooddreamz at Yemen Cafe & Restaurant, Richmond.", "clip": true},
+  {"by": "grubwitmike", "place": "Yemen Cafe & Restaurant", "city": "Richmond", "brand": "b_yemencaferichmond", "reel": "https://www.instagram.com/reel/DaHBSSDRpMl/", "credit": "Review by @grubwitmike at Yemen Cafe & Restaurant, Richmond.", "clip": true},
+  {"by": "hungere.for.diy", "place": "Ruay Mitr Chicken & Rice", "city": "San Francisco", "brand": "b_ruaymitr", "reel": "https://www.instagram.com/reel/DgDJhfIJstS/", "credit": "Review by @hungere.for.diy at Ruay Mitr Chicken & Rice, San Francisco.", "clip": true},
 ]
 
 /*

@@ -2286,7 +2286,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies-20': 'b_foodietrinhdoesthings',
   'beasty-foodies-21': 'b_foodiesmackinfood',
   'beasty-foodies-22': 'b_foodiedroolingbae',
-  'beasty-foodies-23': 'b_foodiethesauceboss',
+  'beasty-foodies-23': 'b_foodieieatbayarea',
   // Batch 108 — add Ice Cream seats and the new Foodie; every prior seat retained.
   'beasty-sweets-16': 'b_scoopnchill', // Preserve its original automatic Sweets seat alongside Ice Cream.
   'beasty-icecream-1': 'b_scoopnchill',
@@ -2851,4 +2851,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-366': 'b_foodiefoodiewitabootie408',
   'beasty-foodies2-367': 'b_foodiejennixchi',
   'beasty-foodies2-368': 'b_foodieyunamomimood',
+  // Batch 127 — keep the directory seats and move the requested creator forward.
+  'san-francisco-goods2-99': 'b_hedverythaidowntown',
+  'san-francisco-goods2-100': 'b_hedverythaijapantown',
+  'beasty-thai-22': 'b_hedverythaidowntown',
+  'beasty-thai-23': 'b_hedverythaijapantown',
+  'oakland-goods2-55': 'b_petitcafeoakland',
+  'oakland-goods2-56': 'b_yonseihandrollsoakland',
+  'beasty-coffee2-5': 'b_petitcafeoakland',
+  'beasty-sushi2-2': 'b_yonseihandrollsoakland',
+  'richmond-goods2-7': 'b_yemencaferichmond',
+  'beasty-yemeni-0': 'b_yemencaferichmond',
+  'beasty-foodies2-369': 'b_foodiethesauceboss',
+  'beasty-foodies2-370': 'b_foodiehangryhenny',
+  'beasty-foodies2-371': 'b_foodiech0ubella',
 }

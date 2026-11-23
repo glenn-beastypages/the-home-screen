@@ -1,0 +1,8 @@
+# Batch 127 · Glenn’s November 20–22 intake
+
+- Added five business pages across four brands. Hed Verythai has separate [Downtown](https://beastypages.com/?b=b_hedverythaidowntown) and [Japantown](https://beastypages.com/?b=b_hedverythaijapantown) pages. [Petit Cafe](https://beastypages.com/?b=b_petitcafeoakland) joins Oakland Goods and Cafe. [Yonsei Handrolls](https://beastypages.com/?b=b_yonseihandrollsoakland) joins Oakland Eats and Sushi. [Yemen Cafe & Restaurant](https://beastypages.com/?b=b_yemencaferichmond) joins Richmond Eats and the new BEASTY · Yemeni category.
+- Published 20 clips at their verified locations, with the original reviewer or posting account credited. Four reviews link from the business to the original post and play in Watch and on the creator’s page, where the business already had a full set of inline clips. Each business page uses its existing video behind the icon when available. Otherwise it uses a playable business post first, then a published review.
+- Promoted [@ieat.bayarea](https://beastypages.com/?b=b_foodieieatbayarea) to the first Foodies page and moved @thesauceboss_ to the next open More Foodies spot. Added @hangryhenny_ and @ch0ubella to More Foodies, and updated @cestalmoco’s profile photo. The eight updated icons use original artwork and were inspected in a phone-sized squircle.
+- Increased [BSTY Goods](https://beastypages.com/goods/) listing description text to 16px, section headings to 17px, and item facts to 14px. Long values wrap on narrow screens.
+
+[Message and media ledger](../research/roster/batch127.json) · [Clip credits](../public/clips/CREDITS.md)

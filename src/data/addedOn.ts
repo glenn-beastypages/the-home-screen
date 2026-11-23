@@ -1300,4 +1300,11 @@ export const ADDED_ON: Record<string, string> = {
   // Batch 125.
   'b_littleluccasouthsf': '2026-11-19',
   'b_minniebellssf': '2026-11-19',
+
+  // Batch 127.
+  b_hedverythaidowntown: '2026-11-22',
+  b_hedverythaijapantown: '2026-11-22',
+  b_petitcafeoakland: '2026-11-22',
+  b_yemencaferichmond: '2026-11-22',
+  b_yonseihandrollsoakland: '2026-11-22',
 }

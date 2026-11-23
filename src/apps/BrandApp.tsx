@@ -172,7 +172,15 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const tier = brand.tier ?? 3
   /* The creator whose BEASTY page this is, when it is a foodie's. */
   const foodie = foodieOfBrand(brand.id)
-  const film = tier >= 3 ? brand.clip?.src : undefined
+  const businessReviews = foodie ? [] : reviewsOf(brand.id)
+  /* Keep the current film and choose a fallback only from videos visitors can play. */
+  const existingFilm = tier >= 3 && brand.clip?.src ? brand.clip : undefined
+  const eligibleReviews = businessReviews.filter((review) => review.src && (tier >= 3 || review.href !== brand.clip?.href))
+  const instagram = brand.instagram?.replace(/^@/, '').toLowerCase()
+  const background = existingFilm ??
+    eligibleReviews.find((review) => review.by.toLowerCase() === instagram) ??
+    eligibleReviews[0]
+  const film = background?.src
   /* The pages its tile is on: the first is the button at the top right, and a
      business in several cities also gets a row per city below. See seats.ts. */
   const place = seatsOf(brand.id)[0]
@@ -266,7 +274,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
           >
             {/*
-              THEIR OWN FOOTAGE, BEHIND THE MARK.
+              THE BUSINESS VIDEO OR A FOODIE REVIEW, BEHIND THE MARK.
 
               The operator asked "is it possible to add this video too?" and it
               first shipped as a card that opened Instagram. His follow-up is
@@ -294,10 +302,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   film and leaving an empty band, because the fallback was a CSS
                   background nothing ever set.
                 */}
-                {brand.clip?.poster && <img className="brand-film-still" src={brand.clip.poster} alt="" />}
+                {background?.poster && <img className="brand-film-still" src={background.poster} alt="" />}
                 <video
                   src={film}
-                  poster={brand.clip?.poster}
+                  poster={background?.poster}
                   autoPlay
                   muted
                   loop
@@ -1030,8 +1038,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {foodie ? (
             <FoodieReviews title="Their reviews" reviews={reviewsBy(foodie)} side="place" api={api} here={brand.id} />
           ) : (
-            reviewsOf(brand.id).some((r) => r.href !== brand.clip?.href) && (
-              <FoodieReviews title="Foodie reviews" reviews={reviewsOf(brand.id)} side="foodie" api={api} here={brand.id} />
+            businessReviews.some((r) => r.href !== brand.clip?.href) && (
+              <FoodieReviews title="Foodie reviews" reviews={businessReviews} side="foodie" api={api} here={brand.id} />
             )
           )}
 

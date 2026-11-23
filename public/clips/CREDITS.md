@@ -1305,3 +1305,25 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DVUhZSYksN1.mp4` | [Original](https://www.instagram.com/reel/DVUhZSYksN1/) | Review by @foodandsachi at Tada Ramen & Yakitori, Oakland. 3–18s |
 | `review-DfqVk-6xyBo.mp4` | [Original](https://www.instagram.com/reel/DfqVk-6xyBo/) | Review by @yunamomi.mood at Tada Ramen & Yakitori, Oakland. Full 8.2s |
 | `review-De0SazxourG.mp4` | [Original](https://www.instagram.com/reel/De0SazxourG/) | Review by @bayarea_foodogram at Tada Ramen & Yakitori, Oakland. Specials shown in the original post are subject to change. Full reel |
+
+<!-- Batch 127. -->
+| `review-Df-mCgNvvlZ.mp4` | [Original](https://www.instagram.com/reel/Df-mCgNvvlZ/) | Review by @eatswithglory at Nono’s Doughnuts & Cafe, Berkeley. 3s-17s |
+| `review-Da6x2hXhrfX.mp4` | [Original](https://www.instagram.com/reel/Da6x2hXhrfX/) | Review by @vrutichokshi at Hed Verythai — Downtown, San Francisco. 3s-18s |
+| `review-Df8XkucPCem.mp4` | [Original](https://www.instagram.com/reel/Df8XkucPCem/) | Review by @pimchanyum at Hed Verythai — Japantown, San Francisco. 3s-18s |
+| `review-Df5VRgWhlWm.mp4` | [Original](https://www.instagram.com/reel/Df5VRgWhlWm/) | Review by @hangryhenny_ at Hed Verythai in Japantown, San Francisco. The creator disclosed an invitation. 3s-15s |
+| `review-Df0-LuGROQk.mp4` | [Original](https://www.instagram.com/reel/Df0-LuGROQk/) | Review by @ch0ubella at Hed Verythai — Japantown, San Francisco. 3s-14s |
+| `review-Df0GTr-ymbQ.mp4` | [Original](https://www.instagram.com/reel/Df0GTr-ymbQ/) | Opening coverage by @staycation.sfbayarea at Hed Verythai’s Japantown location. 3s-18s |
+| `review-Df8LzcUv5lt.mp4` | [Original](https://www.instagram.com/reel/Df8LzcUv5lt/) | Review by @foodieberrie at Hoagie's World of Hoagies, Berkeley. 3s-18s |
+| `review-Df_d6vLJIpa.mp4` | [Original](https://www.instagram.com/reel/Df_d6vLJIpa/) | Review by @cheycheyfromthebay at the original San Francisco R&G Lounge. The post also discusses the Las Vegas expansion. 3s-18s |
+| `review-DgAfle6pzXW.mp4` | [Original](https://www.instagram.com/reel/DgAfle6pzXW/) | Review by @hungere.for.diy at Nono’s Doughnuts & Cafe, Berkeley. 3s-18s |
+| `review-Df-7hjpP69s.mp4` | [Original](https://www.instagram.com/reel/Df-7hjpP69s/) | Review by @ieat.bayarea at El Portal Mexican Restaurant, San Leandro. Specials and prices shown are from the original post. 3s-10s |
+| `review-DgAs7dMvqXF.mp4` | [Original](https://www.instagram.com/reel/DgAs7dMvqXF/) | Review by @ivkicks at Katsu Burger, Santa Clara. 3s-18s |
+| `review-DgBf8Hkp0BO.mp4` | [Original](https://www.instagram.com/reel/DgBf8Hkp0BO/) | Review by @eatwithsie at Yonsei Handrolls — Oakland, Oakland. 3s-18s |
+| `review-DgBQHFdTG9z.mp4` | [Original](https://www.instagram.com/reel/DgBQHFdTG9z/) | Review by @cestalmoco at Wooga Korean BBQ, Cupertino. 3s-18s |
+| `review-Df5YFp5Broh.mp4` | [Original](https://www.instagram.com/reel/Df5YFp5Broh/) | Posted by @the.artofchiro featuring @theubebae cookies. 3s-15s |
+| `review-DXc-UjVDU-5.mp4` | [Original](https://www.instagram.com/reel/DXc-UjVDU-5/) | Review by @thesnacksensei at Yemen Cafe & Restaurant, Richmond. 3s-18s |
+| `review-DcRx7K6yVyd.mp4` | [Original](https://www.instagram.com/reel/DcRx7K6yVyd/) | Review by @bayarea_fooddreamz at Yemen Cafe & Restaurant, Richmond. 3s-18s |
+| `review-DaHBSSDRpMl.mp4` | [Original](https://www.instagram.com/reel/DaHBSSDRpMl/) | Review by @grubwitmike at Yemen Cafe & Restaurant, Richmond. 3s-18s |
+| `review-DgDJhfIJstS.mp4` | [Original](https://www.instagram.com/reel/DgDJhfIJstS/) | Review by @hungere.for.diy at Ruay Mitr Chicken & Rice, San Francisco. 3s-18s |
+| `review-Cpu-qebNjKH.mp4` | [Original](https://www.instagram.com/reel/Cpu-qebNjKH/) | Posted by @petitcafeoak on Instagram. 0s-15s |
+| `review-Df_AAicNDkK.mp4` | [Original](https://www.instagram.com/reel/Df_AAicNDkK/) | Posted by @yonseihandrolls on Instagram. 0s-15s |

@@ -1035,12 +1035,13 @@ svg {
   padding: 22px 0 3px;
 }
 .item-detail-block h3 {
-  font-size: 14px;
+  font-size: 17px;
 }
 .item-detail-block p {
-  color: #6b6d63;
-  font-size: 13px;
-  line-height: 1.85;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 .item-facts {
   display: flex;
@@ -1052,8 +1053,9 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  font-size: 11px;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 .item-facts span {
   color: var(--muted);
@@ -3125,19 +3127,9 @@ label small {
   .item-detail-block {
     padding: 20px 0 2px;
   }
-  .item-detail-block h3 {
-    font-size: 13px;
-  }
-  .item-detail-block p {
-    font-size: 12px;
-    line-height: 1.85;
-  }
   .item-facts {
     gap: 16px;
     padding-bottom: 20px;
-  }
-  .item-facts > div {
-    font-size: 10px;
   }
   .modal-backdrop {
     padding: 0;
