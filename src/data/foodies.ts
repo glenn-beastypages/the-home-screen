@@ -677,7 +677,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "lifebyvivien",
     "name": "@lifebyvivien",
     "label": "lifebyvivien",
-    "icon": "foodie-lifebyvivien-v107"
+    "icon": "foodie-lifebyvivien-v128"
   },
   {
   "handle": "andre___lucas",
@@ -869,7 +869,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "yogetasworld",
     "name": "@yogetasworld",
-    "label": "yogetasworld"
+    "label": "yogetasworld",
+    "icon": "foodie-yogetasworld-v128"
   },
   {
     "handle": "itsmayrazambrano",
@@ -917,7 +918,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "pimchanyum",
     "name": "@pimchanyum",
-    "label": "pimchanyum"
+    "label": "pimchanyum",
+    "icon": "foodie-pimchanyum-v128"
   },
   {
     "handle": "bayareawilson",
@@ -1032,7 +1034,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "xo.pinsta",
     "name": "@xo.pinsta",
-    "label": "xo.pinsta"
+    "label": "xo.pinsta",
+    "icon": "foodie-xopinsta-v128"
   },
   {
     "handle": "lovemissfit",
@@ -2057,7 +2060,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "handle": "ugcwith_diana",
   "name": "@ugcwith_diana",
   "label": "ugcwith_diana",
-  "icon": "foodie-ugcwithdiana-v115"
+    "icon": "foodie-ugcwithdiana-v128"
 },
 {
   "handle": "brojackson",
@@ -2139,6 +2142,13 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   },
   {"handle": "hangryhenny_", "name": "@hangryhenny_", "label": "hangryhenny_", "icon": "foodie-hangryhenny-v127"},
   {"handle": "ch0ubella", "name": "@ch0ubella", "label": "ch0ubella", "icon": "foodie-ch0ubella-v127"},
+  {"handle": "charlie_and_cyn", "name": "@charlie_and_cyn", "label": "charlie_and_cyn", "icon": "foodie-charlieandcyn-v128"},
+  {"handle": "wendan.vs.world", "name": "@wendan.vs.world", "label": "wendan.vs.world", "icon": "foodie-wendanvsworld-v128"},
+  {"handle": "notahamsterttv", "name": "@notahamsterttv", "label": "notahamsterttv", "icon": "foodie-notahamsterttv-v128"},
+  {"handle": "itsjessandsteven", "name": "@itsjessandsteven", "label": "itsjessandsteven", "icon": "foodie-itsjessandsteven-v128"},
+  {"handle": "lifeofanks_", "name": "@lifeofanks_", "label": "lifeofanks_", "icon": "foodie-lifeofanks-v128"},
+  {"handle": "elixayala", "name": "@elixayala", "label": "elixayala", "icon": "foodie-elixayala-v128"},
+  {"handle": "natashabythebay", "name": "@natashabythebay", "label": "natashabythebay", "icon": "foodie-natashabythebay-v128"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3093,6 +3103,33 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "bayarea_fooddreamz", "place": "Yemen Cafe & Restaurant", "city": "Richmond", "brand": "b_yemencaferichmond", "reel": "https://www.instagram.com/reel/DcRx7K6yVyd/", "credit": "Review by @bayarea_fooddreamz at Yemen Cafe & Restaurant, Richmond.", "clip": true},
   {"by": "grubwitmike", "place": "Yemen Cafe & Restaurant", "city": "Richmond", "brand": "b_yemencaferichmond", "reel": "https://www.instagram.com/reel/DaHBSSDRpMl/", "credit": "Review by @grubwitmike at Yemen Cafe & Restaurant, Richmond.", "clip": true},
   {"by": "hungere.for.diy", "place": "Ruay Mitr Chicken & Rice", "city": "San Francisco", "brand": "b_ruaymitr", "reel": "https://www.instagram.com/reel/DgDJhfIJstS/", "credit": "Review by @hungere.for.diy at Ruay Mitr Chicken & Rice, San Francisco.", "clip": true},
+
+  // Batch 128 — November 22–23.
+  {"by": "thesnacksensei", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DW7i150CL8L/", "credit": "Review by @thesnacksensei at Nan Hot Pot, San Francisco.", "clip": true},
+  {"by": "xo.pinsta", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DeiJPySNkVT/", "credit": "Review by @xo.pinsta at Nan Hot Pot, San Francisco.", "clip": true},
+  {"by": "charlie_and_cyn", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DecWOWbu_tR/", "credit": "Review by @charlie_and_cyn at Nan Hot Pot, San Francisco. The creator disclosed that the visit was hosted.", "clip": true},
+  {"by": "lifebyvivien", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DeXg998yUeB/", "credit": "Review by @lifebyvivien at Nan Hot Pot, San Francisco.", "clip": "creator", "featuring": ["xo.pinsta"]},
+  {"by": "grubwitmike", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Dd5DeuePwep/", "credit": "Review by @grubwitmike at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "lub.to.eat", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DdvKY8YsGHt/", "credit": "Review by @lub.to.eat at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "ugcwith_diana", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Ddig0PwTzfx/", "credit": "Review by @ugcwith_diana at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "wendan.vs.world", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DdNHQd4P1Rc/", "credit": "Posted by @wendan.vs.world with @nanhotpotsf at Nan Hot Pot, San Francisco.", "clip": true},
+  {"by": "notahamsterttv", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Dc33CZEM40-/", "credit": "Review by @notahamsterttv at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "goyuliiago", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Dc1v9M9yEG3/", "credit": "Review by @goyuliiago at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "thesnobbiefoodie", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DcujQ51J8Jd/", "credit": "Review by @thesnobbiefoodie at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "pimchanyum", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DcADnlnT_6c/", "credit": "Review by @pimchanyum at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "foodandsachi", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Db_iehbSiSK/", "credit": "Review by @foodandsachi at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "yogetasworld", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Db7YUOaOYIM/", "credit": "Review by @yogetasworld at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "itsjessandsteven", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DbzQO0kBOWm/", "credit": "Review by @itsjessandsteven at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "phoebe8food", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/Dbd6n6-tjCw/", "credit": "Review by @phoebe8food at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "sfbayfood", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DbZ722MCOcQ/", "credit": "Review by @sfbayfood at Nan Hot Pot, San Francisco.", "clip": "creator"},
+  {"by": "drooling.bae", "place": "Pineapple Thai", "city": "Cupertino", "brand": "b_pineapplethaicupertino", "reel": "https://www.instagram.com/reel/DgEhsAXhzHQ/", "credit": "Review by @drooling.bae at Pineapple Thai, Cupertino.", "clip": true},
+  {"by": "_whatarethechances_", "place": "Pineapple Thai", "city": "Cupertino", "brand": "b_pineapplethaicupertino", "reel": "https://www.instagram.com/reel/DcNcCrsoU2a/", "credit": "Review by @_whatarethechances_ at Pineapple Thai, Cupertino.", "clip": true},
+  {"by": "foodandsachi", "place": "Pineapple Thai", "city": "Cupertino", "brand": "b_pineapplethaicupertino", "reel": "https://www.instagram.com/reel/DVcN-GAEsxY/", "credit": "Review by @foodandsachi at Pineapple Thai, Cupertino.", "clip": true},
+  {"by": "lifeofanks_", "place": "Pineapple Thai", "city": "Cupertino", "brand": "b_pineapplethaicupertino", "reel": "https://www.instagram.com/reel/DVWXRMqj454/", "credit": "Review by @lifeofanks_ at Pineapple Thai, Cupertino.", "clip": "creator"},
+  {"by": "elixayala", "place": "Pineapple Thai", "city": "Cupertino", "brand": "b_pineapplethaicupertino", "reel": "https://www.instagram.com/reel/DUV82tjieWQ/", "credit": "Review by @elixayala at Pineapple Thai, Cupertino.", "clip": "creator"},
+  {"by": "_foodieshots_", "place": "Dope Pho", "city": "Fremont", "brand": "b_dopepho", "reel": "https://www.instagram.com/reel/DgEopeUxxBj/", "credit": "Review by @_foodieshots_ at Dope Pho, Fremont.", "clip": true},
+  {"by": "foodie.envy", "place": "Dope Pho", "city": "Fremont", "brand": "b_dopepho", "reel": "https://www.instagram.com/reel/Defe-7oPcoH/", "credit": "Review by @foodie.envy at Dope Pho, Fremont.", "clip": true},
+  {"by": "natashabythebay", "place": "Penelope’s Coffee and Tea", "city": "Daly City", "brand": "b_penelopescoffeedalycity", "reel": "https://www.instagram.com/reel/Df09NylOD-R/", "credit": "Review by @natashabythebay at Penelope’s Coffee and Tea, Daly City.", "clip": true},
 ]
 
 /*

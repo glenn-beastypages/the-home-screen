@@ -11,6 +11,20 @@
  */
 
 export const ICON_LUMA: Record<string, number> = {
+  'foodie-charlieandcyn-v128': 0.2106,
+  'foodie-elixayala-v128': 0.0836,
+  'foodie-itsjessandsteven-v128': 0.2469,
+  'foodie-lifebyvivien-v128': 0.3022,
+  'foodie-lifeofanks-v128': 0.384,
+  'foodie-natashabythebay-v128': 0.1555,
+  'foodie-notahamsterttv-v128': 0.1733,
+  'foodie-pimchanyum-v128': 0.1536,
+  'foodie-ugcwithdiana-v128': 0.2155,
+  'foodie-wendanvsworld-v128': 0.2302,
+  'foodie-xopinsta-v128': 0.4075,
+  'nan-hot-pot-v128': 0.8422,
+  'pineapple-thai-v128': 0.0093,
+  'foodie-yogetasworld-v128': 0.2445,
   '1850-properties': 0.0671,
   '1up-retro': 0.565,
   '6th-street-burger': 0.6803,

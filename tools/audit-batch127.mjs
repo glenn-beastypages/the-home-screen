@@ -10,7 +10,9 @@ import { tsImport } from 'tsx/esm/api'
 import { freshTestDb } from './pgtest.mjs'
 import { navigate } from './live-navigation.mjs'
 
-const batch = JSON.parse(readFileSync('research/roster/batch127.json', 'utf8'))
+const batchNumber = process.env.BATCH ?? '127'
+assert(/^\d+$/.test(batchNumber))
+const batch = JSON.parse(readFileSync(`research/roster/batch${batchNumber}.json`, 'utf8'))
 const { ALL_PLACEMENTS } = await tsImport('../src/data/categorySeats.ts', import.meta.url)
 const { REELS } = await tsImport('../src/data/clips.ts', import.meta.url)
 const { pageOfFoodie, reviewsBy, reviewsOf } = await tsImport('../src/data/foodieIndex.ts', import.meta.url)
@@ -34,7 +36,7 @@ await new Promise((resolve) => reserve.close(resolve))
 const base = live ?? 'http://127.0.0.1:' + port
 const capture = process.env.SCREENSHOT_DIR
 if (capture) mkdirSync(capture, { recursive: true })
-const db = live ? null : await freshTestDb('batch127')
+const db = live ? null : await freshTestDb('batch' + batchNumber)
 const instance = db ? spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: 'ignore',
   env: {
@@ -64,6 +66,8 @@ try {
     assert(brand, 'Missing creator page')
     await navigate(page, base + '/?b=' + brand)
     await page.locator('.brand-hero').first().waitFor({ timeout: 15000 })
+    // The hero mounts while the home tile is still expanding. Tap after it reaches full size.
+    await page.waitForFunction(() => document.querySelector('.app-window')?.style.willChange === 'auto')
   }
   const verifyPlayback = async (video) => {
     await video.scrollIntoViewIfNeeded()
@@ -105,16 +109,34 @@ try {
       const video = document.querySelector('.brand-film video')
       return video?.muted && video.loop && video.playsInline && video.currentTime > 0
     }, undefined, { timeout: 10000 })
-    if (capture && brand === 'b_yemencaferichmond') await page.screenshot({ path: capture + '/yemen-page.jpg' })
+    if (capture) await page.screenshot({ path: capture + '/' + brand + '.jpg' })
     console.log('Background plays automatically', brand)
   }
 
   for (const { profilePage, asset } of batch.artworkDispositions) {
     await openBrand(profilePage)
-    await page.locator('.brand-logo-zoom-trigger').click()
+    const trigger = page.locator('.brand-logo-zoom-trigger')
+    await trigger.scrollIntoViewIfNeeded()
+    if (iphone) await trigger.tap()
+    else await trigger.click()
     const dialog = page.getByRole('dialog')
     await dialog.locator('img[src="' + asset + '"]').evaluate((img) => img.decode())
     await dialog.getByRole('button', { name: /Close enlarged/ }).click()
+  }
+
+  for (const [id, listing] of Object.entries(batch.listings ?? {})) {
+    await openBrand(id)
+    await page.getByRole('heading', { name: listing.name, exact: true }).waitFor()
+    if (batch.menus[id].pricedItems) {
+      const count = batch.menus[id].pricedItems
+      await page.getByRole('button', { name: 'Menu · ' + count + ' items', exact: true }).click()
+      assert.equal(await page.locator('.menu-row').count(), count, id)
+    }
+    await page.getByRole('button', { name: 'Go to the ' + listing.city + ' More goods page' }).click()
+    const tile = page.locator('.home-page:not([inert]) .home-grid button').filter({ hasText: listing.name }).first()
+    await tile.click()
+    await page.getByRole('heading', { name: listing.name, exact: true }).waitFor()
+    console.log('Opened city tile', listing.city, listing.name)
   }
 
   await navigate(page, base + '/goods/')
@@ -153,7 +175,7 @@ try {
     assert(response.ok, asset)
     assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(readFileSync('public' + asset)), asset)
   }
-  console.log('PASS Batch 127', iphone ? 'iPhone WebKit' : 'Chrome', base)
+  console.log('PASS Batch', batchNumber, iphone ? 'iPhone WebKit' : 'Chrome', base)
 } finally {
   await browser?.close()
   if (instance && instance.exitCode === null && instance.signalCode === null) {

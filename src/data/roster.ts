@@ -5336,6 +5336,34 @@ export const ROSTER_SEED: LocalSeed[] = [
     panels: [{"head": "Traditional Yemeni dishes", "body": ["Mandi and lamb haneeth are served alongside stews, flatbread and Adeni chai. The restaurant offers takeout and delivery."], "links": [{"label": "Full menu and ordering", "href": "https://yemencafeandrestaurant.com/menu/"}]}],
     contactOnly: undefined,
   }),
+  // Batch 128 — November 22–23.
+  seed("nan-hot-pot-sf", "Nan Hot Pot", "Nan Hot Pot", "Chongqing hot pot", "#ffffff", {
+    icon: "nan-hot-pot-v128",
+    address: "501 Broadway, San Francisco, CA 94133",
+    phone: "(415) 986-8832",
+    instagram: "nanhotpotsf",
+    site: "https://pos.chowbus.com/online-ordering/store/Nan-Hot-Pot/23647",
+    siteCta: "Browse the menu",
+    orderUrl: "https://pos.chowbus.com/online-ordering/store/Nan-Hot-Pot/23647",
+    hours: "Mon–Fri noon–3pm and 4:30–10pm, Sat–Sun 11am–10pm",
+    tagline: "Chongqing hot pot in San Francisco’s Chinatown.",
+    panels: [{"head": "Kitchen menu", "body": ["The published kitchen menu includes soup dumplings, beef rolls and mala pot. Choose Hotpot Menu for broth and ingredients."], "links": [{"label": "Menu and online ordering", "href": "https://pos.chowbus.com/online-ordering/store/Nan-Hot-Pot/23647"}]}],
+    contactOnly: undefined,
+  }),
+  seed("pineapple-thai-cupertino", "Pineapple Thai", "Pineapple Thai", "Thai restaurant", "#070707", {
+    icon: "pineapple-thai-v128",
+    address: "19369 Stevens Creek Blvd, Suite 120, Cupertino, CA 95014",
+    phone: "(669) 240-5556",
+    instagram: "pineapplethaiofficial",
+    site: "https://www.pineapplethai.com/",
+    siteCta: "Visit Pineapple Thai",
+    orderUrl: "https://www.pineapplethai.com/store/20302",
+    hours: "Daily 11am–3pm and 5–9pm",
+    tagline: "Thai curries, wok noodles and pineapple fried rice at Main Street Cupertino.",
+    panels: [{"head": "House favorites", "body": ["Pineapple fried rice with prawns and cashews, and Duck Dynasty with lychee and red curry."], "links": [{"label": "Menu and online ordering", "href": "https://www.pineapplethai.com/store/20302"}]}],
+    clip: {"src": "/clips/review-Dc39SRgvwig.mp4", "poster": "/clips/review-Dc39SRgvwig-poster.webp", "href": "https://www.instagram.com/reel/Dc39SRgvwig/", "credit": "Posted by @pineapplethaiofficial on Instagram.", "platform": "Instagram"},
+    contactOnly: undefined,
+  }),
 ]
 
 /**

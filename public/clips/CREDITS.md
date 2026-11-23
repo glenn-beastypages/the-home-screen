@@ -1327,3 +1327,31 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DgDJhfIJstS.mp4` | [Original](https://www.instagram.com/reel/DgDJhfIJstS/) | Review by @hungere.for.diy at Ruay Mitr Chicken & Rice, San Francisco. 3s-18s |
 | `review-Cpu-qebNjKH.mp4` | [Original](https://www.instagram.com/reel/Cpu-qebNjKH/) | Posted by @petitcafeoak on Instagram. 0s-15s |
 | `review-Df_AAicNDkK.mp4` | [Original](https://www.instagram.com/reel/Df_AAicNDkK/) | Posted by @yonseihandrolls on Instagram. 0s-15s |
+
+<!-- Batch 128. -->
+| `review-DW7i150CL8L.mp4` | [Original](https://www.instagram.com/reel/DW7i150CL8L/) | Review by @thesnacksensei at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DeiJPySNkVT.mp4` | [Original](https://www.instagram.com/reel/DeiJPySNkVT/) | Review by @xo.pinsta at Nan Hot Pot, San Francisco. 0s-8s |
+| `review-DecWOWbu_tR.mp4` | [Original](https://www.instagram.com/reel/DecWOWbu_tR/) | Review by @charlie_and_cyn at Nan Hot Pot, San Francisco. The creator disclosed that the visit was hosted. 0s-15s |
+| `review-Dd5DeuePwep.mp4` | [Original](https://www.instagram.com/reel/Dd5DeuePwep/) | Review by @grubwitmike at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DdvKY8YsGHt.mp4` | [Original](https://www.instagram.com/reel/DdvKY8YsGHt/) | Review by @lub.to.eat at Nan Hot Pot, San Francisco. 0s-8s |
+| `review-Ddig0PwTzfx.mp4` | [Original](https://www.instagram.com/reel/Ddig0PwTzfx/) | Review by @ugcwith_diana at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DdNHQd4P1Rc.mp4` | [Original](https://www.instagram.com/reel/DdNHQd4P1Rc/) | Posted by @wendan.vs.world with @nanhotpotsf at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-Dc33CZEM40-.mp4` | [Original](https://www.instagram.com/reel/Dc33CZEM40-/) | Review by @notahamsterttv at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-Dc1v9M9yEG3.mp4` | [Original](https://www.instagram.com/reel/Dc1v9M9yEG3/) | Review by @goyuliiago at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DcujQ51J8Jd.mp4` | [Original](https://www.instagram.com/reel/DcujQ51J8Jd/) | Review by @thesnobbiefoodie at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DcADnlnT_6c.mp4` | [Original](https://www.instagram.com/reel/DcADnlnT_6c/) | Review by @pimchanyum at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-Db_iehbSiSK.mp4` | [Original](https://www.instagram.com/reel/Db_iehbSiSK/) | Review by @foodandsachi at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DbzQO0kBOWm.mp4` | [Original](https://www.instagram.com/reel/DbzQO0kBOWm/) | Review by @itsjessandsteven at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-Dbd6n6-tjCw.mp4` | [Original](https://www.instagram.com/reel/Dbd6n6-tjCw/) | Review by @phoebe8food at Nan Hot Pot, San Francisco. 0s-13s |
+| `review-DbZ722MCOcQ.mp4` | [Original](https://www.instagram.com/reel/DbZ722MCOcQ/) | Review by @sfbayfood at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-DgEhsAXhzHQ.mp4` | [Original](https://www.instagram.com/reel/DgEhsAXhzHQ/) | Review by @drooling.bae at Pineapple Thai, Cupertino. 0s-15s |
+| `review-Dc39SRgvwig.mp4` | [Original](https://www.instagram.com/reel/Dc39SRgvwig/) | Posted by @pineapplethaiofficial on Instagram. 0s-10s |
+| `review-DcNcCrsoU2a.mp4` | [Original](https://www.instagram.com/reel/DcNcCrsoU2a/) | Review by @_whatarethechances_ at Pineapple Thai, Cupertino. 0s-15s |
+| `review-DVcN-GAEsxY.mp4` | [Original](https://www.instagram.com/reel/DVcN-GAEsxY/) | Review by @foodandsachi at Pineapple Thai, Cupertino. 0s-15s |
+| `review-DVWXRMqj454.mp4` | [Original](https://www.instagram.com/reel/DVWXRMqj454/) | Review by @lifeofanks_ at Pineapple Thai, Cupertino. 0s-14s |
+| `review-DUV82tjieWQ.mp4` | [Original](https://www.instagram.com/reel/DUV82tjieWQ/) | Review by @elixayala at Pineapple Thai, Cupertino. 0s-15s |
+| `review-DgEopeUxxBj.mp4` | [Original](https://www.instagram.com/reel/DgEopeUxxBj/) | Review by @_foodieshots_ at Dope Pho, Fremont. 0s-15s |
+| `review-Defe-7oPcoH.mp4` | [Original](https://www.instagram.com/reel/Defe-7oPcoH/) | Review by @foodie.envy at Dope Pho, Fremont. 0s-15s |
+| `review-Df09NylOD-R.mp4` | [Original](https://www.instagram.com/reel/Df09NylOD-R/) | Review by @natashabythebay at Penelope’s Coffee and Tea, Daly City. 0s-15s |
+| `review-DeXg998yUeB.mp4` | [Original](https://www.instagram.com/reel/DeXg998yUeB/) | Review by @lifebyvivien at Nan Hot Pot, San Francisco. 0s-15s |
+| `review-Db7YUOaOYIM.mp4` | [Original](https://www.instagram.com/reel/Db7YUOaOYIM/) | Review by @yogetasworld at Nan Hot Pot, San Francisco. 0s-15s |
