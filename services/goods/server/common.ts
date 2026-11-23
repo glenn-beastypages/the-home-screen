@@ -240,6 +240,7 @@ export async function listing(db: DB, listingId: string, viewerId?: string) {
     condition: r.condition,
     priceCents: r.price_cents,
     tradeEnabled: r.trade_enabled,
+    shipsPurchases: r.ships_purchases,
     tradePreferences: r.trade_preferences,
     status: r.status,
     isHidden: r.is_hidden,

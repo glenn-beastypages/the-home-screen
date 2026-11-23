@@ -28,6 +28,22 @@ import {
 } from "./common.js";
 import type { createStorage } from "./storage.js";
 
+const catalogSearch = z.object({
+  q: z.string().trim().max(120).optional(),
+  category: z.enum(CATEGORIES).optional(),
+  condition: z.enum(CONDITIONS).optional(),
+  minPrice: z.coerce.number().int().min(0).max(100000000).optional(),
+  maxPrice: z.coerce.number().int().min(0).max(100000000).optional(),
+  tradeOnly: z.enum(["true", "false"]).optional(),
+  sort: z.enum(["newest", "price_asc", "price_desc"]).default("newest"),
+  seller: z.string().max(100).optional(),
+});
+
+function validatePrices({ minPrice, maxPrice }: z.infer<typeof catalogSearch>) {
+  if (minPrice !== undefined && maxPrice !== undefined && minPrice > maxPrice)
+    fail(400, "Minimum price must not exceed maximum price.");
+}
+
 export function registerMarketplace(
   app: Express,
   pool: Pool,
@@ -192,6 +208,7 @@ export function registerMarketplace(
           [userId],
         );
         await db.query("DELETE FROM favorites WHERE user_id=$1", [userId]);
+        await db.query("DELETE FROM saved_searches WHERE user_id=$1", [userId]);
         await db.query("DELETE FROM notifications WHERE user_id=$1", [userId]);
         await db.query('DELETE FROM session WHERE "userId"=$1', [userId]);
         await db.query('DELETE FROM account WHERE "userId"=$1', [userId]);
@@ -236,24 +253,8 @@ export function registerMarketplace(
     "/api/listings",
     wrap(async (req, res) => {
       const { limit, offset } = pagination(req);
-      const q = z
-        .object({
-          q: z.string().trim().max(120).optional(),
-          category: z.enum(CATEGORIES).optional(),
-          condition: z.enum(CONDITIONS).optional(),
-          minPrice: z.coerce.number().int().min(0).max(100000000).optional(),
-          maxPrice: z.coerce.number().int().min(0).max(100000000).optional(),
-          tradeOnly: z.enum(["true", "false"]).optional(),
-          sort: z.enum(["newest", "price_asc", "price_desc"]).default("newest"),
-          seller: z.string().max(100).optional(),
-        })
-        .parse(req.query);
-      if (
-        q.minPrice !== undefined &&
-        q.maxPrice !== undefined &&
-        q.minPrice > q.maxPrice
-      )
-        fail(400, "Minimum price must not exceed maximum price.");
+      const q = catalogSearch.parse(req.query);
+      validatePrices(q);
       const clauses = [
         `l.status IN ('active','reserved')`,
         `l.is_hidden=false`,
@@ -308,6 +309,58 @@ export function registerMarketplace(
       res.json({
         listing: await listing(pool, listingId, res.locals.user?.id),
       });
+    }),
+  );
+  app.get(
+    "/api/saved-searches",
+    wrap(async (_req, res) => {
+      const member = requireUser(res);
+      const { rows } = await pool.query(
+        "SELECT id,filters FROM saved_searches WHERE user_id=$1 ORDER BY created_at DESC,id DESC",
+        [member],
+      );
+      res.json({ items: rows });
+    }),
+  );
+  app.post(
+    "/api/saved-searches",
+    wrap(async (req, res) => {
+      const member = requireUser(res);
+      const filters = catalogSearch.strict().parse(req.body);
+      validatePrices(filters);
+      if (!filters.q) delete filters.q;
+      if (!filters.seller) delete filters.seller;
+      if (filters.tradeOnly === "false") delete filters.tradeOnly;
+      if (!Object.keys(filters).some((key) => key !== "sort"))
+        fail(400, "Search or apply a filter first.");
+      const saved = await transaction(pool, async (db) => {
+        await activePeople(db, [member], true);
+        const rows = await db.query(
+          `SELECT id,filters,filters=$2::jsonb AS matches FROM saved_searches WHERE user_id=$1`,
+          [member, filters],
+        );
+        const prior = rows.rows.find((row) => row.matches);
+        if (prior) return { id: prior.id, filters: prior.filters };
+        if (rows.rows.length >= 50)
+          fail(409, "Remove a saved search before adding another.");
+        const result = await db.query(
+          "INSERT INTO saved_searches(id,user_id,filters) VALUES($1,$2,$3) RETURNING id,filters",
+          [uuid(), member, filters],
+        );
+        return result.rows[0];
+      });
+      res.json({ search: saved });
+    }),
+  );
+  app.delete(
+    "/api/saved-searches/:id",
+    wrap(async (req, res) => {
+      const member = requireUser(res);
+      await pool.query(
+        "DELETE FROM saved_searches WHERE id=$1 AND user_id=$2",
+        [id.parse(req.params.id), member],
+      );
+      res.status(204).end();
     }),
   );
   app.get(
@@ -515,6 +568,7 @@ export function registerMarketplace(
       condition: z.union([z.enum(CONDITIONS), z.literal("")]).optional(),
       priceCents: z.number().int().min(1).max(100000000).nullable().optional(),
       tradeEnabled: z.boolean().optional(),
+      shipsPurchases: z.boolean().optional(),
       tradePreferences: z.string().trim().max(500).optional(),
       photoIds: z
         .array(id)
@@ -581,6 +635,9 @@ export function registerMarketplace(
             : body.priceCents;
         const tradeEnabled =
           body.tradeEnabled ?? current?.trade_enabled ?? true;
+        const shipsPurchases =
+          !tradeEnabled &&
+          (body.shipsPurchases ?? current?.ships_purchases ?? false);
         const tradePreferences =
           body.tradePreferences ?? current?.trade_preferences ?? "";
         const status = body.status ?? current?.status ?? "draft";
@@ -627,7 +684,7 @@ export function registerMarketplace(
           );
         if (editing) {
           await db.query(
-            `UPDATE listings SET code=$2,title=$3,description=$4,category=$5,condition=$6,price_cents=$7,trade_enabled=$8,trade_preferences=$9,status=$10,published_at=CASE WHEN $10='active' THEN COALESCE(published_at,now()) ELSE published_at END,version=version+1,updated_at=now() WHERE id=$1`,
+            `UPDATE listings SET code=$2,title=$3,description=$4,category=$5,condition=$6,price_cents=$7,trade_enabled=$8,trade_preferences=$9,status=$10,published_at=CASE WHEN $10='active' THEN COALESCE(published_at,now()) ELSE published_at END,ships_purchases=$11,version=version+1,updated_at=now() WHERE id=$1`,
             [
               listingId,
               code,
@@ -639,6 +696,7 @@ export function registerMarketplace(
               tradeEnabled,
               tradePreferences,
               status,
+              shipsPurchases,
             ],
           );
           await invalidateOffers(
@@ -646,12 +704,32 @@ export function registerMarketplace(
             [listingId],
             "An item in this offer was changed or removed. Review the updated listing before sending a new offer.",
           );
+          if (
+            current.status === "active" &&
+            status === "active" &&
+            !current.is_demo &&
+            price !== null &&
+            current.price_cents !== null &&
+            price < current.price_cents
+          ) {
+            await db.query(
+              `INSERT INTO notifications(id,user_id,title,body,href)
+                SELECT gen_random_uuid(),f.user_id,'Price dropped',$3,'/items/' || $1::text
+                FROM favorites f JOIN profiles p ON p.id=f.user_id AND p.status='active'
+                WHERE f.listing_id=$1::uuid AND f.user_id<>$2
+                AND NOT EXISTS (
+                  SELECT 1 FROM blocks b WHERE
+                  (b.user_id=$2 AND b.target_id=f.user_id) OR (b.target_id=$2 AND b.user_id=f.user_id)
+                )`,
+              [listingId, userId, title],
+            );
+          }
           await db.query("DELETE FROM listing_photos WHERE listing_id=$1", [
             listingId,
           ]);
         } else {
           await db.query(
-            `INSERT INTO listings(id,owner_id,code,title,description,category,condition,price_cents,trade_enabled,trade_preferences,status,published_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,CASE WHEN $11='active' THEN now() ELSE NULL END)`,
+            `INSERT INTO listings(id,owner_id,code,title,description,category,condition,price_cents,trade_enabled,trade_preferences,status,published_at,ships_purchases) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,CASE WHEN $11='active' THEN now() ELSE NULL END,$12)`,
             [
               listingId,
               userId,
@@ -664,6 +742,7 @@ export function registerMarketplace(
               tradeEnabled,
               tradePreferences,
               status,
+              shipsPurchases,
             ],
           );
         }

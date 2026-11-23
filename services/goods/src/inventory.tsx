@@ -266,6 +266,7 @@ type EditorData = {
   condition: string;
   price: string;
   tradeEnabled: boolean;
+  shipsPurchases: boolean;
   tradePreferences: string;
   photos: PhotoType[];
 };
@@ -277,6 +278,7 @@ const blank: EditorData = {
   condition: "",
   price: "",
   tradeEnabled: true,
+  shipsPurchases: false,
   tradePreferences: "",
   photos: [],
 };
@@ -382,6 +384,9 @@ export function ListingEditor({ id }: { id?: string }) {
     error: categoryError,
     reload: reloadCategories,
   } = useResource<{ items: string[] }>("/categories");
+  const purchaseOptions = useResource<{ shipping: boolean }>(
+    user ? "/purchases/options" : null,
+  );
   useEffect(() => {
     if (!id) return;
     let current = true;
@@ -398,6 +403,7 @@ export function ListingEditor({ id }: { id?: string }) {
             condition: l.condition,
             price: l.priceCents == null ? "" : String(l.priceCents / 100),
             tradeEnabled: l.tradeEnabled,
+            shipsPurchases: l.shipsPurchases ?? false,
             tradePreferences: l.tradePreferences || "",
             photos: l.photos,
           });
@@ -603,6 +609,7 @@ export function ListingEditor({ id }: { id?: string }) {
               condition: form.condition,
               priceCents,
               tradeEnabled: form.tradeEnabled,
+              shipsPurchases: Boolean(form.shipsPurchases),
               tradePreferences: form.tradePreferences,
               photoIds: form.photos.map((p) => p.id),
               status,
@@ -999,6 +1006,18 @@ export function ListingEditor({ id }: { id?: string }) {
                       />{" "}
                       Open to trade
                     </label>
+                    {!form.tradeEnabled && purchaseOptions.data?.shipping && (
+                      <label className="check-label">
+                        <input
+                          type="checkbox"
+                          checked={Boolean(form.shipsPurchases)}
+                          onChange={(e) =>
+                            set("shipsPurchases", e.target.checked)
+                          }
+                        />{" "}
+                        Offer shipping as well as local pickup
+                      </label>
+                    )}
                     {form.tradeEnabled && (
                       <label>
                         <span id="listing-trade-preferences-label">
@@ -1109,6 +1128,11 @@ export function ListingEditor({ id }: { id?: string }) {
                       </p>
                       <h3>{money(preview.priceCents)}</h3>
                       <p className="preserve-lines">{form.description}</p>
+                      {!form.tradeEnabled &&
+                        form.shipsPurchases &&
+                        purchaseOptions.data?.shipping && (
+                          <p>Shipping or local pickup</p>
+                        )}
                       {form.tradeEnabled && (
                         <p className="trade-mark">
                           <ArrowLeftRight size={16} /> Open to trade

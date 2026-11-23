@@ -55,6 +55,7 @@ export interface Listing {
   condition: string;
   priceCents: number | null;
   tradeEnabled: boolean;
+  shipsPurchases?: boolean;
   tradePreferences: string;
   status: ListingStatus;
   version: number;

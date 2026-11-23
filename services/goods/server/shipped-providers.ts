@@ -22,6 +22,17 @@ export const shippingAddress = z
   .strict();
 export type ShippingAddress = z.infer<typeof shippingAddress>;
 
+export const trackingReference = z
+  .object({
+    carrier: z.enum(["USPS", "UPS", "FedEx", "DHLExpress"]),
+    code: z
+      .string()
+      .trim()
+      .toUpperCase()
+      .regex(/^[A-Z0-9]{7,40}$/),
+  })
+  .strict();
+
 export const parcelSize = z
   .object({
     weight: z.number().min(1).max(1120),

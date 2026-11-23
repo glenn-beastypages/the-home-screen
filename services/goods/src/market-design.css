@@ -95,6 +95,30 @@ h2,
   max-width: 1512px;
   padding: 23px var(--gutter) 68px;
 }
+.search-result-tools,
+.saved-search-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.search-result-tools {
+  margin: 14px 0;
+}
+.search-result-tools .result-summary {
+  margin: 0;
+}
+.saved-search-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.saved-search-list a {
+  min-width: min(240px, 100%);
+  overflow-wrap: anywhere;
+}
 
 .site-header {
   height: auto;

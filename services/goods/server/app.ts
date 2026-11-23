@@ -244,6 +244,7 @@ export async function createApp(
     requireUser,
     checkout,
     appUrl + basePath,
+    shipping?.mode === "test" ? shipping : null,
   );
   registerCommunications(app, pool, requireUser);
   registerResale(app, pool, requireUser);

@@ -9,7 +9,7 @@ export type TradeOptions = {
   mode: "test" | "live" | null;
 };
 
-type Address = {
+export type Address = {
   name: string;
   street: string;
   unit?: string;
@@ -110,7 +110,41 @@ export function ShippingTerms({
   );
 }
 
-function AddressLines({ address }: { address: Address }) {
+export function AddressInputs({
+  address,
+  test = false,
+}: {
+  address?: Address | null;
+  test?: boolean;
+}) {
+  return (
+    <>
+      {(
+        [
+          ["Name for delivery", "name", "name", 80],
+          ["Street address", "street", "address-line1", 100],
+          ["Apartment or unit", "unit", "address-line2", 40],
+          ["City", "city", "address-level2", 80],
+          ["State code", "state", "address-level1", 2],
+          ["ZIP code", "zip", "postal-code", 10],
+        ] as const
+      ).map(([label, key, autoComplete, max]) => (
+        <label key={key}>
+          {label}
+          <input
+            name={key}
+            autoComplete={test ? "off" : autoComplete}
+            required={key !== "unit"}
+            maxLength={max}
+            defaultValue={address?.[key]}
+          />
+        </label>
+      ))}
+    </>
+  );
+}
+
+export function AddressLines({ address }: { address: Address }) {
   return (
     <address>
       {address.name}
@@ -285,27 +319,7 @@ export function ShippingPanel({
               )}
               {details.canEditAddress && (!own.address || edit) && (
                 <form className="shipping-form" onSubmit={saveAddress}>
-                  {(
-                    [
-                      ["Name for delivery", "name", "name", 80],
-                      ["Street address", "street", "address-line1", 100],
-                      ["Apartment or unit", "unit", "address-line2", 40],
-                      ["City", "city", "address-level2", 80],
-                      ["State code", "state", "address-level1", 2],
-                      ["ZIP code", "zip", "postal-code", 10],
-                    ] as const
-                  ).map(([label, key, autoComplete, max]) => (
-                    <label key={key}>
-                      {label}
-                      <input
-                        name={key}
-                        autoComplete={autoComplete}
-                        required={key !== "unit"}
-                        maxLength={max}
-                        defaultValue={own.address?.[key]}
-                      />
-                    </label>
-                  ))}
+                  <AddressInputs address={own.address} />
                   <button className="button secondary" disabled={busy}>
                     Save receiving address
                   </button>

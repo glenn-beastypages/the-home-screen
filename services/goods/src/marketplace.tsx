@@ -328,8 +328,104 @@ export function Home() {
   );
 }
 
+const savedSearchFields = [
+  "q",
+  "category",
+  "condition",
+  "minPrice",
+  "maxPrice",
+  "tradeOnly",
+  "sort",
+  "seller",
+];
+type SavedSearch = {
+  id: string;
+  filters: Record<string, string | number>;
+};
+
+export function SavedSearches() {
+  const { user, toast } = useApp();
+  const { data, loading, error, reload, setData } = useResource<{
+    items: SavedSearch[];
+  }>(user ? "/saved-searches" : null);
+  const [busy, setBusy] = useState<string | null>(null);
+  async function remove(id: string) {
+    setBusy(id);
+    try {
+      await api("/saved-searches/" + id, "DELETE");
+      setData(
+        (current) =>
+          current && { items: current.items.filter((item) => item.id !== id) },
+      );
+    } catch (error) {
+      toast((error as Error).message);
+    } finally {
+      setBusy(null);
+    }
+  }
+  if (!user) return <SignedOut what="see your saved searches" />;
+  return (
+    <>
+      <PageTitle title="Saved searches" back="/favorites" />
+      {loading ? (
+        <Loading />
+      ) : error ? (
+        <ErrorBox error={error} retry={reload} />
+      ) : data?.items.length ? (
+        <ul className="saved-search-list">
+          {data.items.map(({ id, filters }) => {
+            const label = [
+              filters.q,
+              filters.category,
+              filters.condition,
+              filters.tradeOnly === "true" ? "Open to trade" : "",
+              filters.minPrice !== undefined
+                ? "From " + money(Number(filters.minPrice))
+                : "",
+              filters.maxPrice !== undefined
+                ? "Up to " + money(Number(filters.maxPrice))
+                : "",
+              filters.seller ? "Specific seller" : "",
+            ]
+              .filter(Boolean)
+              .join(" · ");
+            const url = new URLSearchParams(
+              Object.entries(filters).map(([key, value]) => [
+                key,
+                String(value),
+              ]),
+            );
+            return (
+              <li key={id} className="panel">
+                <Link to={"/explore?" + url}>
+                  <strong>{label}</strong>
+                </Link>
+                <button
+                  type="button"
+                  className="text-button"
+                  disabled={busy !== null}
+                  aria-label={"Remove " + label}
+                  onClick={() => void remove(id)}
+                >
+                  Remove
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <Empty
+          title="No saved searches"
+          body="Run a search or apply filters, then save it to come back to the results."
+          action={{ label: "Explore goods", to: "/explore" }}
+        />
+      )}
+    </>
+  );
+}
+
 export function Explore({ favorites = false }: { favorites?: boolean }) {
-  const { user, go } = useApp();
+  const { user, go, requireUser, toast } = useApp();
   const search = new URLSearchParams(location.search);
   const [q, setQ] = useState(search.get("q") || "");
   const [category, setCategory] = useState(search.get("category") || "");
@@ -351,10 +447,34 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
     [loading, setLoading] = useState(true),
     [more, setMore] = useState(false),
     [version, setVersion] = useState(0);
+  const [savingSearch, setSavingSearch] = useState(false);
+  const [searchSaved, setSearchSaved] = useState(false);
   const { data: categories } = useResource<{ items: string[] }>("/categories");
   const params = new URLSearchParams(location.search);
   params.set("limit", "24");
   const path = favorites ? "/favorites?limit=24" : "/listings?" + params;
+  const filtersToSave = Object.fromEntries(
+    Array.from(search).filter(([key]) => savedSearchFields.includes(key)),
+  );
+  const canSaveSearch = Object.entries(filtersToSave).some(
+    ([key, value]) =>
+      value.trim() &&
+      key !== "sort" &&
+      (key !== "tradeOnly" || value === "true"),
+  );
+  async function saveSearch() {
+    if (!requireUser() || savingSearch) return;
+    setSavingSearch(true);
+    try {
+      await api("/saved-searches", "POST", filtersToSave);
+      setSearchSaved(true);
+      toast("Search saved");
+    } catch (error) {
+      toast((error as Error).message);
+    } finally {
+      setSavingSearch(false);
+    }
+  }
   useEffect(() => {
     let current = true;
     if (favorites && !user) {
@@ -497,6 +617,11 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
   return (
     <>
       <PageTitle title={favorites ? "Saved goods" : "Browse the market"}>
+        {favorites && (
+          <Link className="button secondary" to="/saved-searches">
+            Saved searches
+          </Link>
+        )}
         {!favorites && (
           <button
             className="button secondary mobile-filter"
@@ -553,11 +678,30 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
                   retry={() => setVersion((v) => v + 1)}
                 />
               )}
-              <p className="result-summary">
-                {items.length} {items.length === 1 ? "find" : "finds"}
-                {next ? " and more" : ""}
-                {search.get("q") ? " for “" + search.get("q") + "”" : ""}
-              </p>
+              <div className="search-result-tools">
+                <p className="result-summary">
+                  {items.length} {items.length === 1 ? "find" : "finds"}
+                  {next ? " and more" : ""}
+                  {search.get("q") ? " for “" + search.get("q") + "”" : ""}
+                </p>
+                {!favorites &&
+                  !error &&
+                  canSaveSearch &&
+                  (searchSaved ? (
+                    <Link className="text-button" to="/saved-searches">
+                      Search saved · View saved searches
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      className="button secondary compact"
+                      disabled={savingSearch}
+                      onClick={() => void saveSearch()}
+                    >
+                      Save search
+                    </button>
+                  ))}
+              </div>
               {items.some((item) => item.isDemo || item.owner.isDemo) && (
                 <DemoCatalogNotice />
               )}
@@ -649,7 +793,7 @@ export function ItemPage({ id }: { id: string }) {
     !l.tradeEnabled &&
     l.priceCents !== null &&
     user?.id !== l.owner.id;
-  const checkout = useResource<{ available: boolean }>(
+  const checkout = useResource<{ available: boolean; shipping?: boolean }>(
     checkoutEligible ? "/purchases/options/" + id : null,
   );
   const canBuy = checkoutEligible && checkout.data?.available;
@@ -826,7 +970,9 @@ export function ItemPage({ id }: { id: string }) {
           {!demo && !owned && available && l.priceCents !== null && (
             <p className="muted small-copy">
               {canBuy
-                ? "Pay online and arrange local pickup with the seller."
+                ? checkout.data?.shipping
+                  ? "Pay online and choose shipping or local pickup."
+                  : "Pay online and arrange local pickup with the seller."
                 : l.tradeEnabled
                   ? "Listed value. Message the seller if you’d like to buy."
                   : "Arrange the purchase directly with the seller."}
@@ -861,7 +1007,12 @@ export function ItemPage({ id }: { id: string }) {
             </div>
           )}
           <Seller profile={l.owner} />
-          {canBuy && <BuyAction listing={l} />}
+          {canBuy && (
+            <BuyAction
+              listing={l}
+              shipping={Boolean(checkout.data?.shipping)}
+            />
+          )}
           {(demo || owned || canStartConversation) && (
             <div className="item-actions">
               {demo ? (

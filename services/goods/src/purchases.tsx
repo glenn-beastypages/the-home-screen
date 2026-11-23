@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, CreditCard, PackageCheck } from "lucide-react";
-import { api, money, requestId, type Listing } from "./api";
+import { api, money, requestId, time, type Listing } from "./api";
 import {
   Confirm,
+  Dialog,
   Empty,
   ErrorBox,
   Link,
@@ -12,6 +13,7 @@ import {
   useApp,
   useResource,
 } from "./ui";
+import { AddressInputs, AddressLines, type Address } from "./shipping";
 
 type OrderState =
   | "pending"
@@ -29,6 +31,17 @@ type Order = {
   role: "buyer" | "seller";
   conversationId: string;
   state: OrderState;
+  fulfillment: "pickup" | "shipping";
+  canRefund: boolean;
+  shipment: {
+    address: Address | null;
+    carrier: string | null;
+    code: string | null;
+    status: string | null;
+    reviewBy: string | null;
+    issue: string | null;
+    canTrack: boolean;
+  } | null;
 };
 const stateLabels: Record<OrderState, string> = {
   pending: "Awaiting payment",
@@ -39,6 +52,24 @@ const stateLabels: Record<OrderState, string> = {
   refunded: "Refunded",
   refund_failed: "Refund needs attention",
 };
+
+function orderLabel(order: Order) {
+  if (!order.shipment) return stateLabels[order.state];
+  if (order.state === "complete") return "Order complete";
+  if (order.state !== "paid") return stateLabels[order.state];
+  if (order.shipment.issue) return "Delivery issue reported";
+  if (order.shipment.reviewBy)
+    return order.role === "buyer"
+      ? "Delivered · Review your item"
+      : "Delivered · Awaiting buyer review";
+  if (order.shipment.code) return "Paid · Tracking available";
+  return "Paid · Awaiting shipment";
+}
+
+type OrderCommand =
+  | { action: "pay" | "cancel" | "complete" | "refund" }
+  | { action: "track"; carrier: string; code: string }
+  | { action: "report"; reason: string };
 
 export function OrdersLink() {
   const { user } = useApp();
@@ -52,20 +83,38 @@ export function OrdersLink() {
   ) : null;
 }
 
-export function BuyAction({ listing }: { listing: Listing }) {
+export function BuyAction({
+  listing,
+  shipping,
+}: {
+  listing: Listing;
+  shipping: boolean;
+}) {
   const { go, requireUser } = useApp();
-  const key = useRef(requestId());
+  const key = useRef<{ details: string; id: string }>();
+  const [choosing, setChoosing] = useState(false);
+  const [fulfillment, setFulfillment] = useState<"pickup" | "shipping">(
+    "pickup",
+  );
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  async function start() {
+  async function start(
+    method: "pickup" | "shipping",
+    address?: Record<string, FormDataEntryValue>,
+  ) {
     if (!requireUser() || busy) return;
     setBusy(true);
     setError("");
     try {
+      const details = JSON.stringify({ method, address });
+      if (key.current?.details !== details)
+        key.current = { details, id: requestId() };
       const result = await api<{ id: string }>("/purchases", "POST", {
         listingId: listing.id,
         version: listing.version,
-        requestId: key.current,
+        requestId: key.current.id,
+        fulfillment: method,
+        address,
       });
       go("/orders/" + result.id);
     } catch (e) {
@@ -76,11 +125,71 @@ export function BuyAction({ listing }: { listing: Listing }) {
   }
   return (
     <div className="purchase-action">
-      <button className="button full" disabled={busy} onClick={start}>
+      <button
+        className="button full"
+        disabled={busy}
+        onClick={() => {
+          if (!requireUser()) return;
+          if (shipping) setChoosing(true);
+          else void start("pickup");
+        }}
+      >
         <CreditCard size={18} /> Buy for {money(listing.priceCents)}
       </button>
-      <small>Local pickup · Test checkout</small>
-      {error && <ErrorBox error={error} />}
+      <small>
+        {shipping ? "Shipping or local pickup" : "Local pickup"} · Test checkout
+      </small>
+      {error && !choosing && <ErrorBox error={error} />}
+      {choosing && (
+        <Dialog
+          title="How do you want to get this item?"
+          onClose={() => !busy && setChoosing(false)}
+        >
+          <form
+            className="form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              const address =
+                fulfillment === "shipping"
+                  ? Object.fromEntries(new FormData(event.currentTarget))
+                  : undefined;
+              void start(fulfillment, address);
+            }}
+          >
+            <label>
+              Fulfillment
+              <select
+                value={fulfillment}
+                onChange={(event) =>
+                  setFulfillment(
+                    event.target.value === "shipping" ? "shipping" : "pickup",
+                  )
+                }
+              >
+                <option value="pickup">Local pickup</option>
+                <option value="shipping">Ship to me</option>
+              </select>
+            </label>
+            {fulfillment === "shipping" ? (
+              <>
+                <p>
+                  Use a fictional U.S. address for this test. The seller covers
+                  postage.
+                </p>
+                <AddressInputs test />
+              </>
+            ) : (
+              <p>
+                Arrange a pickup time and place with the seller after payment.
+              </p>
+            )}
+            <button className="button full" disabled={busy}>
+              Review order
+            </button>
+            {error && <ErrorBox error={error} />}
+          </form>
+        </Dialog>
+      )}
     </div>
   );
 }
@@ -163,7 +272,7 @@ export function Orders() {
                     <strong>{order.title}</strong>
                     <span>
                       {order.role === "buyer" ? "Buying" : "Selling"} ·{" "}
-                      {stateLabels[order.state]} · {money(order.cents)}
+                      {orderLabel(order)} · {money(order.cents)}
                     </span>
                     <ArrowRight size={18} />
                   </Link>
@@ -204,13 +313,14 @@ export function OrderPage({ id }: { id: string }) {
   const [confirm, setConfirm] = useState<
     "cancel" | "complete" | "refund" | null
   >(null);
+  const [reporting, setReporting] = useState(false);
   const order = data?.order;
   const pending =
     order?.state === "pending" ||
     order?.state === "paid" ||
     order?.state === "refunding";
   useEffect(() => {
-    if (!pending || busy || confirm) return;
+    if (!pending || busy || confirm || reporting) return;
     let open = true;
     let inFlight = false;
     const timer = setInterval(async () => {
@@ -229,18 +339,21 @@ export function OrderPage({ id }: { id: string }) {
       open = false;
       clearInterval(timer);
     };
-  }, [path, pending, busy, confirm, setData]);
+  }, [path, pending, busy, confirm, reporting, setData]);
 
-  async function act(action: "pay" | "cancel" | "complete" | "refund") {
+  async function act(command: OrderCommand) {
     if (busy) return;
     setBusy(true);
     setActionError("");
     try {
-      const result = await api<{ order: Order; url?: string }>(path, "POST", {
-        action,
-      });
+      const result = await api<{ order: Order; url?: string }>(
+        path,
+        "POST",
+        command,
+      );
       setData(result);
       setConfirm(null);
+      setReporting(false);
       if (result.url) window.location.assign(result.url);
     } catch (e) {
       setActionError((e as Error).message);
@@ -253,20 +366,43 @@ export function OrderPage({ id }: { id: string }) {
   if (error) return <ErrorBox error={error} retry={reload} />;
   if (!order) return null;
   const buyer = order.role === "buyer";
+  const shipment = order.shipment;
+  const canConfirmReceipt =
+    order.state === "paid" &&
+    buyer &&
+    (!shipment || (shipment.reviewBy && !shipment.issue));
+  const canReport = shipment?.reviewBy && !shipment.issue && canConfirmReceipt;
+  function submitTracking(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    void act({
+      action: "track",
+      carrier: String(data.get("carrier")),
+      code: String(data.get("code")),
+    });
+  }
   const confirmation = {
     cancel: [
       "Cancel this checkout?",
       "The reservation ends when the payment provider confirms checkout is closed.",
       "Cancel checkout",
     ],
-    complete: [
-      "Confirm pickup?",
-      "Confirm after you receive the item in person.",
-      "Confirm pickup",
-    ],
+    complete: shipment
+      ? [
+          "Confirm receipt?",
+          "Check that the item matches the listing before completing your order.",
+          "Confirm receipt",
+        ]
+      : [
+          "Confirm pickup?",
+          "Confirm after you receive the item in person.",
+          "Confirm pickup",
+        ],
     refund: [
       "Refund this order?",
-      "Send the full amount back to the buyer’s original payment method.",
+      shipment?.issue
+        ? "Send the full amount back to the buyer’s original payment method. This does not arrange return shipping."
+        : "Send the full amount back to the buyer’s original payment method.",
       "Refund buyer",
     ],
   } as const;
@@ -275,26 +411,89 @@ export function OrderPage({ id }: { id: string }) {
       <PageTitle title={order.title} back="/orders" />
       <section className="panel order-panel" aria-labelledby="order-state">
         <span className="eyebrow">
-          Test order · {buyer ? "Buying" : "Selling"} · Local pickup
+          Test order · {buyer ? "Buying" : "Selling"} ·{" "}
+          {shipment ? "Shipping" : "Local pickup"}
         </span>
         <h2 id="order-state" aria-live="polite">
-          {stateLabels[order.state]}
+          {orderLabel(order)}
         </h2>
         <p>
           {order.state === "pending" && !buyer
-            ? "The buyer is reviewing checkout. Wait for payment confirmation before handing over the item."
-            : details[order.state]}
+            ? "The buyer is reviewing checkout. Wait for payment confirmation before fulfilling the order."
+            : shipment && order.state === "pending"
+              ? "Review your shipping address and total before continuing to test payment."
+              : shipment && order.state === "paid"
+                ? shipment.issue
+                  ? "The order stays open while the delivery issue is unresolved."
+                  : shipment.reviewBy
+                    ? buyer
+                      ? "Check your item and confirm receipt or report a problem by " +
+                        time(shipment.reviewBy) +
+                        "."
+                      : "The buyer can review the item until " +
+                        time(shipment.reviewBy) +
+                        "."
+                    : buyer
+                      ? "Payment confirmed. Check this order for carrier updates."
+                      : "Use your own shipping label and add the carrier and tracking number here."
+                : shipment && order.state === "complete"
+                  ? "The delivery review is complete."
+                  : details[order.state]}
         </p>
         <div className="order-total">
           <span>Total</span>
           <strong>{money(order.cents)}</strong>
         </div>
+        {shipment?.address && (
+          <section aria-label="Shipping address">
+            <h3>Ship to</h3>
+            <AddressLines address={shipment.address} />
+          </section>
+        )}
+        {shipment?.code && (
+          <p>
+            <strong>
+              {shipment.carrier} {shipment.code}
+            </strong>{" "}
+            · {shipment.status?.replaceAll("_", " ")}
+          </p>
+        )}
+        {shipment?.issue && (
+          <p>
+            <strong>Reported issue</strong> · {shipment.issue}
+          </p>
+        )}
+        {shipment?.canTrack && (
+          <form className="shipping-form" onSubmit={submitTracking}>
+            <label>
+              <span id="purchase-carrier-label">Carrier</span>
+              <select
+                name="carrier"
+                aria-labelledby="purchase-carrier-label"
+                required
+              >
+                <option value="">Choose carrier</option>
+                <option>USPS</option>
+                <option>UPS</option>
+                <option>FedEx</option>
+                <option value="DHLExpress">DHL Express</option>
+              </select>
+            </label>
+            <label>
+              Tracking number
+              <input name="code" minLength={7} maxLength={40} required />
+            </label>
+            <button className="button" disabled={busy}>
+              Add tracking
+            </button>
+          </form>
+        )}
         <div className="actions">
           {buyer && order.state === "pending" && (
             <>
               <button
                 className="button"
-                onClick={() => act("pay")}
+                onClick={() => act({ action: "pay" })}
                 disabled={busy}
               >
                 Continue to test payment
@@ -308,24 +507,36 @@ export function OrderPage({ id }: { id: string }) {
               </button>
             </>
           )}
-          {order.state === "paid" &&
-            (buyer ? (
-              <button
-                className="button"
-                onClick={() => setConfirm("complete")}
-                disabled={busy}
-              >
-                <PackageCheck size={18} /> Confirm pickup
-              </button>
-            ) : (
-              <button
-                className="button secondary"
-                onClick={() => setConfirm("refund")}
-                disabled={busy}
-              >
-                Refund buyer
-              </button>
-            ))}
+          {canConfirmReceipt && (
+            <button
+              className="button"
+              onClick={() => setConfirm("complete")}
+              disabled={busy}
+            >
+              <PackageCheck size={18} /> {confirmation.complete[2]}
+            </button>
+          )}
+          {canReport && (
+            <button
+              className="button secondary"
+              onClick={() => {
+                setActionError("");
+                setReporting(true);
+              }}
+              disabled={busy}
+            >
+              Report a delivery issue
+            </button>
+          )}
+          {order.canRefund && (
+            <button
+              className="button secondary"
+              onClick={() => setConfirm("refund")}
+              disabled={busy}
+            >
+              Refund buyer
+            </button>
+          )}
           {order.state !== "canceled" && (
             <Link
               className="button secondary"
@@ -338,7 +549,7 @@ export function OrderPage({ id }: { id: string }) {
             View listing
           </Link>
         </div>
-        {actionError && <ErrorBox error={actionError} />}
+        {actionError && !reporting && <ErrorBox error={actionError} />}
         <small className="muted">Order {order.id}</small>
       </section>
       {confirm && (
@@ -346,12 +557,45 @@ export function OrderPage({ id }: { id: string }) {
           title={confirmation[confirm][0]}
           body={confirmation[confirm][1]}
           label={confirmation[confirm][2]}
-          onConfirm={() => act(confirm)}
+          onConfirm={() => act({ action: confirm })}
           onClose={() => {
             if (!busy) setConfirm(null);
           }}
           busy={busy}
         />
+      )}
+      {reporting && (
+        <Dialog
+          title="Report a delivery issue"
+          onClose={() => !busy && setReporting(false)}
+        >
+          <form
+            className="form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              const reason = String(
+                new FormData(event.currentTarget).get("reason"),
+              );
+              void act({ action: "report", reason });
+            }}
+          >
+            <p>The seller will see your report and the order will stay open.</p>
+            <label>
+              What happened?
+              <textarea
+                name="reason"
+                required
+                minLength={10}
+                maxLength={1000}
+                rows={4}
+              />
+            </label>
+            <button className="button full" disabled={busy}>
+              Submit report
+            </button>
+            {actionError && <ErrorBox error={actionError} />}
+          </form>
+        </Dialog>
       )}
     </>
   );

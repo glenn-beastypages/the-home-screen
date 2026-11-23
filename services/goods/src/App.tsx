@@ -33,7 +33,13 @@ import {
   type Profile,
 } from "./api";
 import { AppContext, Avatar, Empty, Link, Loading } from "./ui";
-import { Home, Explore, ItemPage, SellerPage } from "./marketplace";
+import {
+  Home,
+  Explore,
+  ItemPage,
+  SellerPage,
+  SavedSearches,
+} from "./marketplace";
 import { Inventory, ListingEditor } from "./inventory";
 import { Trades, TradePage } from "./trades";
 import { AuthPage, ProfilePage, SettingsPage } from "./account";
@@ -42,13 +48,18 @@ import { Admin } from "./admin";
 import { ManagedResale, ResaleQueue } from "./resale";
 import { Orders, OrderPage } from "./purchases";
 import { initNativeNavigation } from "./platform";
-import { continueSharedSession, endedOnPages, sharedSessionReady } from "./identity";
+import {
+  continueSharedSession,
+  endedOnPages,
+  sharedSessionReady,
+} from "./identity";
 
 function AppRoute({ route }: { route: string }) {
   const path = route.split("?")[0].replace(/\/$/, "") || "/";
   if (path === "/") return <Home />;
   if (path === "/explore") return <Explore />;
   if (path === "/favorites") return <Explore favorites />;
+  if (path === "/saved-searches") return <SavedSearches />;
   if (path.startsWith("/items/"))
     return <ItemPage id={decodeURIComponent(path.slice(7))} />;
   if (path.startsWith("/sellers/"))
