@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-23T04:55:16.048Z",
+  "release": "524ad0525679e546cdcdb073c7c12b23021edb5d",
+  "pagesHealthy": true,
+  "goodsHealthy": true,
+  "pagesSignInAvailable": true,
+  "googleSignInAvailable": true,
+  "shippedTradeHoldsEnabled": false,
+  "checkoutEnabled": false,
+  "goodsStylesheet": "/goods/assets/index-BJL3h45Q.css",
+  "goodsStylesheetSha256": "f58c3f5ff8b105b90462b520885b3f050afd8aded9e025bb1dcbf31892f05a90",
+  "deploy": "dep-dc1s94jbc2fs73envneg",
+  "liveAt": "2026-11-23T04:55:12.236863Z",
+  "browserVerificationCompletedAt": "2026-11-23T04:58:26.301Z",
+  "browser": {
+    "chrome": {
+      "played": 20,
+      "backgroundPlayback": 9,
+      "mediaHashes": 48
+    },
+    "iPhoneWebKit": {
+      "played": 20,
+      "backgroundPlayback": 9,
+      "mediaHashes": 48
+    }
+  },
+  "localChecks": {
+    "dataErrors": 0,
+    "goodsHostChecks": 31,
+    "watchAndCategoryChromeChecks": 3
+  },
+  "closingRefetch": {
+    "cutoffRow": 253381,
+    "newerMessages": 0
+  },
+  "liveRegression": "Passed signed-out Pages checks with historical roster walk skipped.",
+  "deploymentHandoff": "Pages and Goods served 502 during the switch and recovered. Both browser audits passed on retry."
+}

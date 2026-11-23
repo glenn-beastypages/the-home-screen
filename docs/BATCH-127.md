@@ -6,3 +6,11 @@
 - Increased [BSTY Goods](https://beastypages.com/goods/) listing description text to 16px, section headings to 17px, and item facts to 14px. Long values wrap on narrow screens.
 
 [Message and media ledger](../research/roster/batch127.json) · [Clip credits](../public/clips/CREDITS.md)
+
+## Verification
+
+Render made `524ad052` live at 8:55 p.m. Pacific on November 22. Pages and Goods recovered after returning 502 during the handoff. Public Chrome and iPhone-sized WebKit played all 20 clips, verified automatic background playback on nine business pages, decoded the eight logos, and checked the Goods listing typography. All 48 fetched media files matched the release. The public signed-out Pages regression checks passed with the historical roster walk skipped.
+
+The local host passed 31 shared-account and Goods checks. Three additional Chrome checks covered the @ieat.bayarea reel in Watch and the Yemen Cafe tile from both the Yemeni category and Richmond. The public configuration reported BEASTY and Google sign-in available, with checkout and shipping card holds disabled. No live sign-in or payment journey was part of this batch.
+
+[Production verification record](../research/roster/b127-live-verification.json)
