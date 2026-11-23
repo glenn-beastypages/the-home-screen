@@ -8,3 +8,13 @@ Glenn sent 24 reel links and 19 screenshots. Two screenshot requests lacked link
 - Seven new creator pages join More influencers. @yogetasworld moves from index 129 to 9, after the established Heavy Hitters. The original 24 influencers keep their seats. The source and disposition of all 14 business and creator icons are recorded below.
 
 [Source, media and placement ledger](../research/roster/batch128.json) · [Original post credits](../public/clips/CREDITS.md)
+
+## Production verification
+
+Render made `b8f06f68` live at 10:22 a.m. Pacific, November 23. Pages and Goods briefly returned 502 during the handoff. Both recovered before the final walkthrough.
+
+Desktop Chrome and iPhone-sized WebKit each played all 26 videos, opened all 14 icons, verified four autoplaying listing backgrounds and checked all 66 media files against the release. Both city directory tiles reopened the correct listing, and Nan’s menu displayed all 167 priced rows. The visible Chrome walkthrough opened both restaurants from Search → Categories and followed @yogetasworld’s recovered review through to her creator page.
+
+The Goods demo listing opened in both browsers, and the public site reported Pages and Google sign-in available. The local shared-account host passed 31 checks. The signed-out Pages regression passed with its historical roster walk skipped.
+
+[Production verification record](../research/roster/b128-live-verification.json)

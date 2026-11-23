@@ -1,0 +1,118 @@
+{
+  "release": "b8f06f68d381b1fa8aa36768f93686907c8d27b1",
+  "renderDeploy": "dep-dc282ns9v7es73dbn1fg",
+  "liveAt": "2026-11-23T18:22:20.565314Z",
+  "checkedAt": "2026-11-23T18:24:47.484603+00:00",
+  "health": {
+    "checkedAt": "2026-11-23T18:22:27.391Z",
+    "release": "b8f06f68d381b1fa8aa36768f93686907c8d27b1",
+    "pagesHealthy": true,
+    "goodsHealthy": true,
+    "pagesSignInAvailable": true,
+    "googleSignInAvailable": true,
+    "shippedTradeHoldsEnabled": false,
+    "checkoutEnabled": false,
+    "goodsStylesheet": "/goods/assets/index-BJL3h45Q.css",
+    "goodsStylesheetSha256": "f58c3f5ff8b105b90462b520885b3f050afd8aded9e025bb1dcbf31892f05a90"
+  },
+  "publicBrowsers": {
+    "Chrome": {
+      "played": [
+        "DW7i150CL8L",
+        "DeiJPySNkVT",
+        "DecWOWbu_tR",
+        "DeXg998yUeB",
+        "Dd5DeuePwep",
+        "DdvKY8YsGHt",
+        "Ddig0PwTzfx",
+        "DdNHQd4P1Rc",
+        "Dc33CZEM40-",
+        "Dc1v9M9yEG3",
+        "DcujQ51J8Jd",
+        "DcADnlnT_6c",
+        "Db_iehbSiSK",
+        "Db7YUOaOYIM",
+        "DbzQO0kBOWm",
+        "Dbd6n6-tjCw",
+        "DbZ722MCOcQ",
+        "DgEhsAXhzHQ",
+        "Dc39SRgvwig",
+        "DcNcCrsoU2a",
+        "DVcN-GAEsxY",
+        "DVWXRMqj454",
+        "DUV82tjieWQ",
+        "DgEopeUxxBj",
+        "Defe-7oPcoH",
+        "Df09NylOD-R"
+      ],
+      "logoDialogs": 14,
+      "releaseFilesHashed": 66,
+      "cityTileRoundTrips": [
+        "b_nanhotpotsf",
+        "b_pineapplethaicupertino"
+      ],
+      "autoPlayingBusinessBackgrounds": [
+        "b_nanhotpotsf",
+        "b_pineapplethaicupertino",
+        "b_dopepho",
+        "b_penelopescoffeedalycity"
+      ],
+      "nanMenuRows": 167,
+      "goodsListingOpened": true
+    },
+    "iPhone WebKit": {
+      "played": [
+        "DW7i150CL8L",
+        "DeiJPySNkVT",
+        "DecWOWbu_tR",
+        "DeXg998yUeB",
+        "Dd5DeuePwep",
+        "DdvKY8YsGHt",
+        "Ddig0PwTzfx",
+        "DdNHQd4P1Rc",
+        "Dc33CZEM40-",
+        "Dc1v9M9yEG3",
+        "DcujQ51J8Jd",
+        "DcADnlnT_6c",
+        "Db_iehbSiSK",
+        "Db7YUOaOYIM",
+        "DbzQO0kBOWm",
+        "Dbd6n6-tjCw",
+        "DbZ722MCOcQ",
+        "DgEhsAXhzHQ",
+        "Dc39SRgvwig",
+        "DcNcCrsoU2a",
+        "DVcN-GAEsxY",
+        "DVWXRMqj454",
+        "DUV82tjieWQ",
+        "DgEopeUxxBj",
+        "Defe-7oPcoH",
+        "Df09NylOD-R"
+      ],
+      "logoDialogs": 14,
+      "releaseFilesHashed": 66,
+      "cityTileRoundTrips": [
+        "b_nanhotpotsf",
+        "b_pineapplethaicupertino"
+      ],
+      "autoPlayingBusinessBackgrounds": [
+        "b_nanhotpotsf",
+        "b_pineapplethaicupertino",
+        "b_dopepho",
+        "b_penelopescoffeedalycity"
+      ],
+      "nanMenuRows": 167,
+      "goodsListingOpened": true
+    }
+  },
+  "publicDirectoryChecks": [
+    "Search → Categories → More Thai → Pineapple Thai",
+    "Search → Categories → Hot Pot → Nan Hot Pot",
+    "Nan Hot Pot → @yogetasworld review → creator → Nan Hot Pot review"
+  ],
+  "localSharedHostChecks": 31,
+  "dataAuditErrors": 0,
+  "signedOutRegression": "Passed with historical roster walk skipped",
+  "handoff": "Pages and Goods health checks returned HTTP 502 at 18:18:02 UTC and HTTP 200 at 18:22:27 UTC.",
+  "finalThreadCutoffBeforePush": 253666
+}
