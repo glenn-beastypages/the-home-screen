@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import {
   createContext,
   useContext,
@@ -157,11 +158,8 @@ export function Empty({
 }) {
   return (
     <div className="empty">
-      <div className="empty-symbol">
-        <Box size={30} strokeWidth={1.25} />
-      </div>
       <h2>{title}</h2>
-      <p>{body}</p>
+      {body && <p>{body}</p>}
       {action && (
         <Link className="button" to={action.to}>
           {action.label}
@@ -221,20 +219,10 @@ export function DemoBadge() {
 }
 
 export function DemoCatalogNotice() {
-  const { user } = useApp();
   return (
     <aside className="demo-catalog-notice" aria-label="Demo catalog">
-      <Box size={18} aria-hidden="true" />
-      <p>
-        <strong>Sample catalog.</strong> These illustrated samples are for
-        browsing only.
-      </p>
-      <Link
-        to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
-        className="text-button"
-      >
-        {user ? "List your own" : "Join BEASTY"} <ArrowRight size={15} />
-      </Link>
+      <Box size={15} aria-hidden="true" />
+      <p>Items marked “Demo sample” are illustrated samples for browsing.</p>
     </aside>
   );
 }
@@ -321,7 +309,7 @@ export function Dialog({
       focused?.focus();
     };
   }, []);
-  return (
+  return createPortal(
     <div
       className="modal-backdrop"
       onMouseDown={(e) => {
@@ -346,7 +334,8 @@ export function Dialog({
         </div>
         {children}
       </section>
-    </div>
+    </div>,
+    document.body,
   );
 }
 export function Confirm({
@@ -448,9 +437,6 @@ export function ProductCard({
           <span className="image-status">{listing.status}</span>
         )}
       </div>
-      <Link className="product-title" to={"/items/" + listing.id}>
-        {listing.title || "Untitled draft"}
-      </Link>
       <div className="product-meta">
         <span>
           {demo && listing.priceCents === null
@@ -461,7 +447,18 @@ export function ProductCard({
           <span className="trade-mark">↔ Trade</span>
         )}
       </div>
+      <Link className="product-title" to={"/items/" + listing.id}>
+        {listing.title || "Untitled draft"}
+      </Link>
       <div className="product-facts">
+        {listing.code && (
+          <span
+            className="shelf-ticket"
+            aria-label={"Seller shelf position " + listing.code}
+          >
+            {listing.code}
+          </span>
+        )}
         <span className="product-condition">{listing.condition}</span>
         {!demo && listing.owner.location && (
           <span>{listing.owner.location}</span>
@@ -486,7 +483,7 @@ export function ProductGrid({
   onSaved?: () => void;
 }) {
   return (
-    <div className="product-grid">
+    <div className="product-grid catalog-grid">
       {items.map((item) => (
         <ProductCard key={item.id} listing={item} onSaved={onSaved} />
       ))}

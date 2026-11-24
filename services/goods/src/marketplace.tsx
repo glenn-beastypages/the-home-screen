@@ -24,6 +24,7 @@ import {
   money,
   recentlyViewedIds,
   listingPhotoUrl,
+  withBase,
   recordViewed,
   clearRecentlyViewed,
   type Listing,
@@ -121,63 +122,8 @@ export function Home() {
           !saved.data?.items.some((savedItem) => savedItem.id === item.id),
       )
       .slice(0, 4) || [];
-  const featured = [
-    data?.items.find(
-      (item) => item.category === "Electronics" && item.photos.length,
-    ),
-    data?.items.find(
-      (item) => item.category === "Collectibles" && item.photos.length,
-    ),
-  ].filter((item): item is Listing => Boolean(item));
   return (
     <div className="market-home">
-      <section className="market-masthead" aria-labelledby="market-title">
-        <div className="market-intro">
-          <h1
-            id="market-title"
-            className="market-acronym"
-            aria-label="Buy, Sell, Trade Your Goods"
-          >
-            <span>
-              <b>B</b>uy
-            </span>{" "}
-            <i aria-hidden="true">•</i>{" "}
-            <span>
-              <b>S</b>ell
-            </span>{" "}
-            <i aria-hidden="true">•</i>{" "}
-            <span>
-              <b>T</b>rade
-            </span>{" "}
-            <span>
-              <b>Y</b>our Goods
-            </span>
-          </h1>
-          <p>See something you want? Offer an item you own in exchange.</p>
-          <Link to="/explore?tradeOnly=true" className="market-trade-link">
-            <ArrowLeftRight size={17} /> Browse tradeable items{" "}
-            <ArrowUpRight size={15} />
-          </Link>
-        </div>
-        {featured.length > 0 && (
-          <div className="market-featured" aria-label="Featured listings">
-            {featured.map((item) => (
-              <Link
-                className="market-feature"
-                key={item.id}
-                to={"/items/" + item.id}
-              >
-                <Photo listing={item} />
-                <span>
-                  <span>{item.title}</span>
-                  <ArrowUpRight size={16} aria-hidden="true" />
-                </span>
-                {(item.isDemo || item.owner.isDemo) && <DemoBadge />}
-              </Link>
-            ))}
-          </div>
-        )}
-      </section>
       <nav className="market-categories" aria-label="Shop by category">
         <Link className="market-all" to="/explore">
           <Grid2X2 size={16} /> All goods
@@ -188,6 +134,34 @@ export function Home() {
           </Link>
         ))}
       </nav>
+      <section className="market-masthead" aria-labelledby="market-title">
+        <div className="market-intro">
+          <h1
+            id="market-title"
+            className="market-acronym"
+            aria-label="Buy, Sell, Trade Your Goods"
+          >
+            <span>
+              <b>B</b>uy, <b>S</b>ell, <b>T</b>rade
+            </span>{" "}
+            <span>
+              <b>Y</b>our Goods.
+            </span>
+          </h1>
+          <Link to="/explore?tradeOnly=true" className="market-trade-link">
+            <ArrowLeftRight size={16} /> Browse tradeable items
+            <ArrowRight size={15} />
+          </Link>
+        </div>
+        <div className="market-shelf-window">
+          <img
+            className="market-shelf-photo"
+            src={withBase("/brand/market-shelf.webp")}
+            alt=""
+            fetchPriority="high"
+          />
+        </div>
+      </section>
       <section
         className="section market-feed"
         aria-labelledby="new-listings-title"
@@ -1006,15 +980,20 @@ export function ItemPage({ id }: { id: string }) {
               </div>
             </div>
           )}
-          <Seller profile={l.owner} />
-          {canBuy && (
-            <BuyAction
-              listing={l}
-              shipping={Boolean(checkout.data?.shipping)}
-            />
-          )}
-          {(demo || owned || canStartConversation) && (
-            <div className="item-actions">
+          {(demo || owned || canBuy || canStartConversation) && (
+            <div
+              className={
+                demo || owned
+                  ? "item-actions"
+                  : "item-actions item-actions-transaction"
+              }
+            >
+              {canBuy && (
+                <BuyAction
+                  listing={l}
+                  shipping={Boolean(checkout.data?.shipping)}
+                />
+              )}
               {demo ? (
                 <>
                   <Link
@@ -1038,7 +1017,9 @@ export function ItemPage({ id }: { id: string }) {
                 <>
                   {l.tradeEnabled && available && (
                     <button
-                      className="button full"
+                      className={
+                        canBuy ? "button secondary full" : "button full"
+                      }
                       onClick={() => {
                         if (requireUser("/items/" + l.id + "?offer=1"))
                           setTrade(true);
@@ -1065,6 +1046,7 @@ export function ItemPage({ id }: { id: string }) {
               )}
             </div>
           )}
+          <Seller profile={l.owner} />
           <div className="item-detail-block">
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
@@ -1153,6 +1135,10 @@ export function SellerPage({ id }: { id: string }) {
   };
   if (loading) return <Loading />;
   if (error) return <ErrorBox error={error} retry={reload} />;
+  const shelf = [...(feed?.items || [])].sort((a, b) =>
+    a.code.localeCompare(b.code),
+  );
+  const occupiedRows = [...new Set(shelf.map((item) => item.code[0]))];
   const p = data?.seller;
   if (!p) return null;
   return (
@@ -1204,8 +1190,7 @@ export function SellerPage({ id }: { id: string }) {
       {p.isDemo && <DemoCatalogNotice />}
       <div className="section-heading">
         <div>
-          <span className="eyebrow">Coded from A–1 to Z–3</span>
-          <h2>On the shelf.</h2>
+          <h2>On the shelf</h2>
         </div>
         {!p.isDemo &&
           !data.blockedByViewer &&
@@ -1227,8 +1212,16 @@ export function SellerPage({ id }: { id: string }) {
         <ErrorBox error={feedError} />
       ) : feed?.items.length ? (
         <div className="public-shelf">
-          {feed.items.map((l) => (
-            <Link to={"/items/" + l.id} className="shelf-item" key={l.id}>
+          {shelf.map((l) => (
+            <Link
+              to={"/items/" + l.id}
+              className="shelf-item"
+              key={l.id}
+              style={{
+                gridColumn: l.code.split("-")[1],
+                gridRow: occupiedRows.indexOf(l.code[0]) + 1,
+              }}
+            >
               <Photo listing={l} />
               <span className="shelf-code">{l.code}</span>
               {(l.isDemo || p.isDemo) && <DemoBadge />}
@@ -1246,8 +1239,8 @@ export function SellerPage({ id }: { id: string }) {
         </div>
       ) : (
         <Empty
-          title="Room for something new."
-          body="This seller doesn't have any public listings yet."
+          title="No public listings yet"
+          body=""
           action={{ label: "Explore the marketplace", to: "/explore" }}
         />
       )}

@@ -250,53 +250,68 @@ export function Orders() {
             : "/sell"
         }
       />
-      <section className="panel order-panel" aria-labelledby="seller-checkout">
-        <h2 id="seller-checkout">Seller checkout</h2>
-        <p>
-          {data?.sellerReady
-            ? "Test payments are ready for your sale-only listings."
-            : options.shipping
-              ? "Connect a Stripe test account to sell with shipping or local pickup."
-              : "Connect a Stripe test account to sell with local pickup."}
-        </p>
-        {!data?.sellerReady && (
-          <button
-            className="button"
-            disabled={busy}
-            onClick={() => setup(false)}
-          >
-            Set up test checkout
-          </button>
-        )}
-        {setupError && <ErrorBox error={setupError} />}
-      </section>
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <ErrorBox error={error} retry={reload} />
-      ) : (
-        <>
-          <h2>Buying and selling</h2>
-          {data?.orders.length ? (
-            <ul className="order-list">
-              {data.orders.map((order) => (
-                <li key={order.id}>
-                  <Link to={"/orders/" + order.id}>
-                    <strong>{order.title}</strong>
-                    <span>
-                      {order.role === "buyer" ? "Buying" : "Selling"} ·{" "}
-                      {orderLabel(order)} · {money(order.cents)}
-                    </span>
-                    <ArrowRight size={18} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <div className="orders-layout">
+        <section className="orders-history" aria-label="Order history">
+          {loading ? (
+            <Loading />
+          ) : error ? (
+            <ErrorBox error={error} retry={reload} />
           ) : (
-            <p className="muted">Your purchases and sales will appear here.</p>
+            <>
+              <h2 id="order-list-title">Buying and selling</h2>
+              {data?.orders.length ? (
+                <ul className="order-list">
+                  {data.orders.map((order) => (
+                    <li key={order.id}>
+                      <Link to={"/orders/" + order.id}>
+                        <strong>{order.title}</strong>
+                        <span>
+                          {order.role === "buyer" ? "Buying" : "Selling"} ·{" "}
+                          {orderLabel(order)} ·{" "}
+                          {order.fulfillment === "shipping"
+                            ? "Shipping"
+                            : "Local pickup"}
+                        </span>
+                        <b className="order-amount">{money(order.cents)}</b>
+                        <ArrowRight size={18} />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="muted">
+                  Your purchases and sales will appear here.
+                </p>
+              )}
+            </>
           )}
-        </>
-      )}
+        </section>
+        {data && (
+          <section
+            className="panel order-setup"
+            aria-labelledby="seller-checkout"
+          >
+            <h2 id="seller-checkout">Seller checkout</h2>
+            <p>
+              {data?.sellerReady
+                ? "Test payments are ready for your sale-only listings."
+                : options.shipping
+                  ? "Connect a Stripe test account to sell with shipping or local pickup."
+                  : "Connect a Stripe test account to sell with local pickup."}
+            </p>
+            {!data?.sellerReady && (
+              <button
+                className="button"
+                disabled={busy}
+                onClick={() => setup(false)}
+              >
+                Set up test checkout
+              </button>
+            )}
+            {setupError && <ErrorBox error={setupError} />}
+          </section>
+        )}
+      </div>
     </>
   );
 }

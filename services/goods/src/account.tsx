@@ -131,17 +131,11 @@ export function AuthPage({
   return (
     <div className="auth-layout">
       <div className="auth-intro">
-        <span className="auth-brand">BSTY GOODS</span>
-        <strong>
-          One BEASTY
-          <br />
-          account.
-        </strong>
+        <img src={withBase("/brand/bsty-goods.svg")} alt="BSTY Goods" />
         <p>
-          Use your BEASTY Pages account to sign in, list goods, and manage
+          Use your BEASTY Pages account to list goods, save items, and manage
           trades.
         </p>
-        <img src={withBase("/sample-products/field-notebook.webp")} alt="" />
       </div>
       <section className="auth-form-wrap">
         <div className="auth-form auth-shared-form">
@@ -380,13 +374,13 @@ export function ProfilePage() {
           {
             to: "/sell",
             title: "Your shelf",
-            body: "78 positions for your good stuff",
+            body: "Listings, drafts and shelf positions",
             icon: Grid2X2,
           },
           {
             to: "/favorites",
             title: "Saved goods",
-            body: "The finds you want to come back to",
+            body: "Items you’ve saved",
             icon: Heart,
           },
           {
@@ -398,13 +392,13 @@ export function ProfilePage() {
           {
             to: "/inbox",
             title: "Your conversations",
-            body: "Keep every exchange connected",
+            body: "Messages with buyers and sellers",
             icon: MessageCircle,
           },
           {
             to: "/sellers/" + user.id,
             title: "Public storefront",
-            body: "See your shelf as the community does",
+            body: "View your listings as a shopper",
             icon: UserRound,
           },
           {

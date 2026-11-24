@@ -57,16 +57,10 @@ export function Inventory() {
   if (!user)
     return (
       <div className="join-shelf">
-        <span className="eyebrow">A place for your good stuff</span>
-        <h1>
-          Your shelf.
-          <br />
-          Your next exchange.
-        </h1>
+        <h1>Start your shelf</h1>
         <p>
-          78 positions to organize your collection.
-          <br />
-          One simple way to find it a new home.
+          List goods for sale or trade. Each item gets its own shelf position,
+          from A-1 to Z-3.
         </p>
         <Link className="button" to="/signup?returnTo=/sell">
           Create your shelf <ArrowRight size={18} />
@@ -238,20 +232,29 @@ export function Inventory() {
       ) : (
         <Empty
           title={
-            tab === "history"
-              ? "Every item has a story."
-              : tab === "draft"
-                ? "No unfinished business."
-                : "No listings yet"
+            {
+              all: "No listings yet",
+              draft: "No drafts",
+              active: "No available listings",
+              reserved: "No reserved items",
+              history: "No listing history",
+            }[tab] || "No listings yet"
           }
           body={
-            tab === "history"
-              ? "Traded and archived items will stay here. Reusing a position never changes an old exchange."
-              : tab === "draft"
-                ? "Drafts you save will be waiting here when you’re ready."
-                : "Your first listing starts a whole new possibility. Choose a photo and find it a spot on your shelf."
+            {
+              all: "Add a photo and choose a shelf position to list your first item.",
+              draft: "Unpublished listings you save will appear here.",
+              reserved: "Items reserved for a trade or order appear here.",
+              history:
+                "Completed and archived listings stay here after their positions reopen.",
+              active: "Published items appear here while they are available.",
+            }[tab] || ""
           }
-          action={{ label: "List an item", to: "/sell/new" }}
+          action={
+            ["all", "active", "draft"].includes(tab)
+              ? { label: "List an item", to: "/sell/new" }
+              : undefined
+          }
         />
       )}
     </>
@@ -1187,14 +1190,23 @@ export function ListingEditor({ id }: { id?: string }) {
                 </button>
               )}
             </section>
-            <aside className="editor-aside">
-              <h3>Listing tips</h3>
-              <p>Use your own photos and describe any wear or damage.</p>
-              <div className="mini-shelf">
-                <span>{form.code || "A-1"}</span>
-                <ArrowLeftRight size={30} strokeWidth={1} />
-              </div>
-            </aside>
+            {step < 3 && (
+              <aside className="editor-aside" aria-label="Listing preview">
+                <h3>Listing preview</h3>
+                <Photo listing={preview} />
+                <div className="preview-caption">
+                  {form.code && (
+                    <span className="shelf-ticket">{form.code}</span>
+                  )}
+                  <strong>{form.title || "Your item"}</strong>
+                  {priceCents !== null && <span>{money(priceCents)}</span>}
+                  {form.condition && <small>{form.condition}</small>}
+                </div>
+                {!form.photos.length && (
+                  <p>Your first photo becomes the cover.</p>
+                )}
+              </aside>
+            )}
           </div>
         </>
       )}

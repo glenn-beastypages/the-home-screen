@@ -269,7 +269,13 @@ export function Inbox({ id }: { id?: string }) {
   return (
     <>
       <PageTitle title="Inbox" />
-      <div className={"inbox-layout " + (id ? "has-thread" : "")}>
+      <div
+        className={
+          "inbox-layout " +
+          (id ? "has-thread" : "") +
+          (!id && !list?.items.length && !loading ? " empty-inbox" : "")
+        }
+      >
         <aside className="conversation-list panel">
           {loading ? (
             <Loading />
@@ -317,18 +323,15 @@ export function Inbox({ id }: { id?: string }) {
             </>
           ) : (
             <Empty
-              title="Say hello."
-              body="Open any listing to message the seller, or start a trade to keep its conversation together."
+              title="No conversations yet"
+              body="Open a community listing to message its seller."
               action={{ label: "Explore goods", to: "/explore" }}
             />
           )}
         </aside>
         <section className="message-panel panel">
           {!id ? (
-            <Empty
-              title="A good conversation starts here."
-              body="Choose a conversation to pick up where you left off."
-            />
+            <Empty title="Select a conversation" body="" />
           ) : (
             <>
               <div className="message-heading">
