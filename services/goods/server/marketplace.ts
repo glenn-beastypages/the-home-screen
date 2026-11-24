@@ -207,6 +207,7 @@ export function registerMarketplace(
           "DELETE FROM managed_resale_requests WHERE owner_id=$1",
           [userId],
         );
+        await db.query("DELETE FROM catalog_practice WHERE actor_id=$1", [userId]);
         await db.query("DELETE FROM favorites WHERE user_id=$1", [userId]);
         await db.query("DELETE FROM saved_searches WHERE user_id=$1", [userId]);
         await db.query("DELETE FROM notifications WHERE user_id=$1", [userId]);

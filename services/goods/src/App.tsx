@@ -54,6 +54,8 @@ import {
   sharedSessionReady,
 } from "./identity";
 
+import { PracticeStart, PracticeDetail } from "./practice";
+
 function AppRoute({ route }: { route: string }) {
   const path = route.split("?")[0].replace(/\/$/, "") || "/";
   if (path === "/") return <Home />;
@@ -68,6 +70,18 @@ function AppRoute({ route }: { route: string }) {
   if (path === "/sell/new") return <ListingEditor />;
   if (path.startsWith("/sell/"))
     return <ListingEditor id={decodeURIComponent(path.slice(6))} />;
+  const start = path.match(
+    /^\/practice\/new\/(purchase|message|trade)\/([^/]+)$/,
+  );
+  if (start)
+    return (
+      <PracticeStart
+        kind={start[1] as "purchase" | "message" | "trade"}
+        id={start[2]}
+      />
+    );
+  if (path.startsWith("/practice/"))
+    return <PracticeDetail id={path.slice(10)} />;
   if (path === "/orders") return <Orders />;
   if (path.startsWith("/orders/"))
     return <OrderPage id={decodeURIComponent(path.slice(8))} />;
@@ -183,7 +197,7 @@ export default function App() {
     [messageCount, setMessageCount] = useState(0),
     [online, setOnline] = useState(navigator.onLine),
     [expired, setExpired] = useState(false);
-  const go = useCallback((path: string) => {
+  const go = useCallback((path: string, replace = false) => {
     if (
       !path.startsWith("/") ||
       path.startsWith("//") ||
@@ -191,7 +205,8 @@ export default function App() {
     )
       return;
     const internal = withoutBase(path);
-    history.pushState({}, "", withBase(internal));
+    if (replace) history.replaceState({}, "", withBase(internal));
+    else history.pushState({}, "", withBase(internal));
     setRoute(internal.split("#")[0] || "/");
     window.scrollTo({ top: 0 });
   }, []);

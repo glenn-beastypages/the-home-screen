@@ -29,6 +29,13 @@ export const DEMO_SELLERS = [
   email: `sample-shelf-${index + 1}@demo.bsty.invalid`,
 }));
 
+const legacyBio =
+  "DEMO SAMPLE seller. This fictional shelf shows how BSTY Goods works. These illustrated items cannot be bought, traded or messaged about.";
+const legacyDescription =
+  "DEMO SAMPLE — An illustrated example, not a real seller's item. This sample is not for sale, shipping or trading. You can browse and save it while exploring BSTY Goods; messages and trade offers are disabled. Price and condition are examples only.";
+const sellerBio =
+  "Explore this shelf, message the simulated seller, or try an order or trade.";
+
 type Kind =
   | "jacket"
   | "hoodie"
@@ -46,6 +53,7 @@ type Kind =
   | "notebook";
 type Item = {
   title: string;
+  description: string;
   category: string;
   condition: string;
   priceCents: number;
@@ -57,6 +65,8 @@ type Item = {
 const items: Item[] = [
   {
     title: "Indigo utility jacket",
+    description:
+      "An indigo utility jacket with a button front and patch pockets.",
     category: "Clothing",
     condition: "Good",
     priceCents: 4800,
@@ -67,6 +77,7 @@ const items: Item[] = [
   },
   {
     title: "Sunset cotton hoodie",
+    description: "A sunset-colored cotton pullover with a front pouch pocket.",
     category: "Clothing",
     condition: "Like new",
     priceCents: 3600,
@@ -77,6 +88,8 @@ const items: Item[] = [
   },
   {
     title: "Cream canvas low-tops",
+    description:
+      "Cream canvas sneakers with a low-cut profile and lace-up front.",
     category: "Sneakers",
     condition: "Good",
     priceCents: 4200,
@@ -87,6 +100,7 @@ const items: Item[] = [
   },
   {
     title: "Moss everyday runners",
+    description: "Moss-green everyday running shoes with contrasting soles.",
     category: "Sneakers",
     condition: "Like new",
     priceCents: 6200,
@@ -97,6 +111,7 @@ const items: Item[] = [
   },
   {
     title: "Mini crossbody bag",
+    description: "A compact crossbody bag with a front pocket.",
     category: "Accessories",
     condition: "Like new",
     priceCents: 2800,
@@ -107,6 +122,7 @@ const items: Item[] = [
   },
   {
     title: "Amber knit beanie",
+    description: "An amber knit beanie with a folded cuff.",
     category: "Accessories",
     condition: "New",
     priceCents: 1800,
@@ -117,6 +133,7 @@ const items: Item[] = [
   },
   {
     title: "Ceramic desk set",
+    description: "A matching set of ceramic pieces for a desk.",
     category: "Home",
     condition: "Like new",
     priceCents: 3200,
@@ -127,6 +144,7 @@ const items: Item[] = [
   },
   {
     title: "Speckled plant pot",
+    description: "A speckled pot for a small houseplant.",
     category: "Home",
     condition: "Good",
     priceCents: 2400,
@@ -137,6 +155,7 @@ const items: Item[] = [
   },
   {
     title: "Retro pocket console",
+    description: "A pocket-sized handheld game console with built-in controls.",
     category: "Electronics",
     condition: "Good",
     priceCents: 8500,
@@ -147,6 +166,7 @@ const items: Item[] = [
   },
   {
     title: "Slate wireless headphones",
+    description: "Slate-colored wireless over-ear headphones.",
     category: "Electronics",
     condition: "Like new",
     priceCents: 7800,
@@ -157,6 +177,7 @@ const items: Item[] = [
   },
   {
     title: "Pocket robot figure",
+    description: "A small robot figure for a desk or display shelf.",
     category: "Collectibles",
     condition: "New",
     priceCents: 2200,
@@ -167,6 +188,7 @@ const items: Item[] = [
   },
   {
     title: "Weekend vinyl character",
+    description: "A vinyl character figure for a display shelf.",
     category: "Collectibles",
     condition: "Like new",
     priceCents: 3400,
@@ -177,6 +199,7 @@ const items: Item[] = [
   },
   {
     title: "Color study art print",
+    description: "An art print built from bold blocks of color.",
     category: "Art",
     condition: "New",
     priceCents: 2500,
@@ -187,6 +210,7 @@ const items: Item[] = [
   },
   {
     title: "Geometric gallery print",
+    description: "An abstract gallery print with geometric shapes.",
     category: "Art",
     condition: "New",
     priceCents: 3000,
@@ -197,6 +221,7 @@ const items: Item[] = [
   },
   {
     title: "Maple cruiser deck",
+    description: "A maple cruiser deck with a curved profile.",
     category: "Other",
     condition: "Good",
     priceCents: 5500,
@@ -207,6 +232,7 @@ const items: Item[] = [
   },
   {
     title: "Yellow field notebook",
+    description: "A yellow-covered field notebook for sketches and notes.",
     category: "Other",
     condition: "New",
     priceCents: 1200,
@@ -401,21 +427,20 @@ export async function initializeDemoCatalog(
       );
       await db.query(
         "INSERT INTO profiles(id,username,name,bio,location,is_demo) VALUES($1,$2,$3,$4,$5,true) ON CONFLICT(id) DO NOTHING",
-        [
-          seller.id,
-          seller.username,
-          seller.name,
-          "DEMO SAMPLE seller. This fictional shelf shows how BSTY Goods works. These illustrated items cannot be bought, traded or messaged about.",
-          "Sample catalog",
-        ],
+        [seller.id, seller.username, seller.name, sellerBio, ""],
       );
       await db.query(
         "INSERT INTO inventory_slots(owner_id,code) SELECT $1,unnest($2::text[]) ON CONFLICT DO NOTHING",
         [seller.id, codes],
       );
+      await db.query(
+        "UPDATE profiles SET bio=$2,location=CASE WHEN location='Sample catalog' THEN '' ELSE location END WHERE id=$1 AND is_demo AND bio=$3",
+        [seller.id, sellerBio, legacyBio],
+      );
       await record(db, "seller", seller.id);
     }
     for (const [index, item] of DEMO_ITEMS.entries()) {
+      const description = item.description;
       const generated = await sharp(illustration(item))
         .webp({ quality: 88 })
         .toBuffer();
@@ -462,23 +487,32 @@ export async function initializeDemoCatalog(
       );
       await record(db, "photo", item.photoId);
       await db.query(
-        `INSERT INTO listings(id,owner_id,code,title,description,category,condition,price_cents,trade_enabled,trade_preferences,status,is_demo,published_at,created_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,false,$9,'active',true,now()-($10::integer*interval '38 minutes'),now()-($10::integer*interval '38 minutes')) ON CONFLICT(id) DO NOTHING`,
+        `INSERT INTO listings(id,owner_id,code,title,description,category,condition,price_cents,trade_enabled,trade_preferences,status,is_demo,published_at,created_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,true,$9,'active',true,now()-($10::integer*interval '38 minutes'),now()-($10::integer*interval '38 minutes')) ON CONFLICT(id) DO NOTHING`,
         [
           item.id,
           item.ownerId,
           item.code,
           item.title,
-          "DEMO SAMPLE — An illustrated example, not a real seller's item. This sample is not for sale, shipping or trading. You can browse and save it while exploring BSTY Goods; messages and trade offers are disabled. Price and condition are examples only.",
+          description,
           item.category,
           item.condition,
           item.priceCents,
-          "Sample catalog item. No trade offers are accepted.",
+          "Open to item-for-item offers.",
           index,
         ],
       );
       await db.query(
         "INSERT INTO listing_photos(listing_id,photo_id,position) VALUES($1,$2,0) ON CONFLICT DO NOTHING",
         [item.id, item.photoId],
+      );
+      await db.query(
+        "UPDATE listings SET description=$2,trade_enabled=true,trade_preferences=$3 WHERE id=$1 AND is_demo AND description=$4",
+        [
+          item.id,
+          description,
+          "Open to item-for-item offers.",
+          legacyDescription,
+        ],
       );
       await record(db, "listing", item.id);
       await db.query(

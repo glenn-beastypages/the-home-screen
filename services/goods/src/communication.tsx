@@ -1,3 +1,4 @@
+import { PracticeHistory } from "./practice";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowLeft,
@@ -283,6 +284,7 @@ export function Inbox({ id }: { id?: string }) {
             <ErrorBox error={error} />
           ) : list?.items.length ? (
             <>
+              {!id && <PracticeHistory kind="message" />}
               {list.items.map((c) => (
                 <Link
                   className={
@@ -322,10 +324,15 @@ export function Inbox({ id }: { id?: string }) {
               )}
             </>
           ) : (
-            <Empty
-              title="No conversations yet"
-              body="Open a community listing to message its seller."
-              action={{ label: "Explore goods", to: "/explore" }}
+            <PracticeHistory
+              kind="message"
+              empty={
+                <Empty
+                  title="No conversations yet"
+                  body="Open a community listing to message its seller."
+                  action={{ label: "Explore goods", to: "/explore" }}
+                />
+              }
             />
           )}
         </aside>

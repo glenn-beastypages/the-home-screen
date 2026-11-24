@@ -1264,3 +1264,115 @@ textarea::placeholder {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.practice-page {
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+  display: grid;
+  gap: 1rem;
+}
+.practice-page .page-heading {
+  margin-bottom: 0;
+}
+.practice-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+  padding-block: 1rem;
+  border-block: 1px solid #d5d3ce;
+}
+.practice-item .item-photo {
+  width: 5rem;
+  height: 5rem;
+  flex: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.practice-item div:not(.item-photo),
+.practice-chat small {
+  display: grid;
+  gap: 0.25rem;
+}
+.practice-item strong {
+  font-size: 1.2rem;
+}
+.practice-note,
+.practice-status p {
+  margin: 0;
+  color: #58564f;
+  line-height: 1.5;
+}
+.practice-method {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.practice-method legend {
+  font-weight: 650;
+  margin-bottom: 0.6rem;
+}
+.practice-page .practice-method label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.7rem;
+  border: 1px solid #ceccc7;
+  padding: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.practice-page .practice-method input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+.practice-method label:has(:checked) {
+  outline: 1px solid currentColor;
+}
+.practice-total,
+.practice-status {
+  display: flex;
+  gap: 0.8rem;
+  padding-block: 1rem;
+  align-items: baseline;
+  border-bottom: 1px solid #d5d3ce;
+}
+.practice-total {
+  justify-content: space-between;
+}
+.practice-status h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+.practice-status > svg {
+  flex: none;
+}
+.practice-history {
+  margin: 1rem 0 1.6rem;
+}
+.practice-history h2 {
+  font-size: 1.12rem;
+}
+.practice-page .button {
+  justify-content: center;
+}
+.practice-chat p {
+  background: #f2f1eb;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin: 0.5rem 12% 0.5rem 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.practice-chat p:first-child {
+  margin: 0.5rem 0 0.5rem 12%;
+  background: #eeedf9;
+}
+.practice-chat small {
+  font-weight: 650;
+  margin-bottom: 0.25rem;
+}

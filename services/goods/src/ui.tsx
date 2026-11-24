@@ -30,7 +30,7 @@ import {
 
 export const AppContext = createContext<{
   user: Profile | null;
-  go: (path: string) => void;
+  go: (path: string, replace?: boolean) => void;
   refreshUser: () => Promise<void>;
   toast: (text: string) => void;
   requireUser: (returnTo?: string) => boolean;
@@ -424,9 +424,7 @@ export function ProductCard({
       </div>
       <div className="product-meta">
         <span>{moneyForCard(listing.priceCents)}</span>
-        {listing.tradeEnabled && (
-          <span className="trade-mark">↔ Trade</span>
-        )}
+        {listing.tradeEnabled && <span className="trade-mark">↔ Trade</span>}
       </div>
       <Link className="product-title" to={"/items/" + listing.id}>
         {listing.title || "Untitled draft"}
@@ -441,9 +439,7 @@ export function ProductCard({
           </span>
         )}
         <span className="product-condition">{listing.condition}</span>
-        {listing.owner.location && (
-          <span>{listing.owner.location}</span>
-        )}
+        {listing.owner.location && <span>{listing.owner.location}</span>}
       </div>
     </article>
   );

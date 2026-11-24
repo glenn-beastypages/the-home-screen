@@ -50,6 +50,7 @@ import {
   useResource,
 } from "./ui";
 import { TradeComposer, isTradeable } from "./trade-offer";
+import { practicePath } from "./practice";
 import { BuyAction } from "./purchases";
 import { shareUrl } from "./platform";
 
@@ -935,11 +936,35 @@ export function ItemPage({ id }: { id: string }) {
                 : "This item is no longer available."}
             </p>
           )}
-          {!staffed && available && (
-            <p className="muted small-copy">
-              This catalog item has no seller available for inquiries or
-              fulfillment.
-            </p>
+          {!staffed && l.isDemo && available && (
+            <>
+              <p className="muted small-copy">
+                Simulated seller · Shipping or local pickup. No payment
+                required.
+              </p>
+              <div className="item-actions item-actions-transaction">
+                {l.priceCents !== null && (
+                  <Link
+                    className="button full"
+                    to={practicePath("purchase", l.id)}
+                  >
+                    Buy for {money(l.priceCents)}
+                  </Link>
+                )}
+                <Link
+                  className="button secondary full"
+                  to={practicePath("trade", l.id)}
+                >
+                  <ArrowLeftRight size={19} /> Make a trade offer
+                </Link>
+                <Link
+                  className="button secondary full"
+                  to={practicePath("message", l.id)}
+                >
+                  <MessageCircle size={19} /> Message seller
+                </Link>
+              </div>
+            </>
           )}
           {isTradeable(l) && (
             <div className="trade-callout">
@@ -1136,6 +1161,14 @@ export function SellerPage({ id }: { id: string }) {
         <div>
           <h2>On the shelf</h2>
         </div>
+        {p.isDemo &&
+          !data.blockedByViewer &&
+          shelf.some((l) => l.isDemo && l.status === "active") && (
+            <button className="button compact" onClick={() => setTrade(!trade)}>
+              <ArrowLeftRight size={17} />{" "}
+              {trade ? "Done choosing" : "Trade from this shelf"}
+            </button>
+          )}
         {!p.isDemo &&
           !data.blockedByViewer &&
           user?.id !== id &&
@@ -1150,6 +1183,9 @@ export function SellerPage({ id }: { id: string }) {
             </button>
           )}
       </div>
+      {trade && p.isDemo && !data.blockedByViewer && (
+        <p>Choose the item you want to trade for.</p>
+      )}
       {feedLoading ? (
         <Loading cards />
       ) : feedError ? (
@@ -1158,7 +1194,15 @@ export function SellerPage({ id }: { id: string }) {
         <div className="public-shelf">
           {shelf.map((l) => (
             <Link
-              to={"/items/" + l.id}
+              to={
+                trade &&
+                p.isDemo &&
+                l.isDemo &&
+                l.status === "active" &&
+                !data.blockedByViewer
+                  ? practicePath("trade", l.id)
+                  : "/items/" + l.id
+              }
               className="shelf-item"
               key={l.id}
               style={{

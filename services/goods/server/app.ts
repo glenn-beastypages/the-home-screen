@@ -12,6 +12,7 @@ import { resolve } from "node:path";
 import { createAuth, migrate } from "./auth.js";
 import { ApiError, ensureProfile, fail, hash, wrap } from "./common.js";
 import { createStorage } from "./storage.js";
+import { registerCatalogPractice } from "./catalog-practice.js";
 import { registerMarketplace } from "./marketplace.js";
 import { registerTrades } from "./trades.js";
 import { registerCommunications } from "./communications.js";
@@ -229,6 +230,7 @@ export async function createApp(
     }),
   );
   registerSharedIdentity(app, pool, auth, requireUser, config);
+  registerCatalogPractice(app, pool, requireUser);
   registerMarketplace(app, pool, storage, requireUser);
   registerTrades(app, pool, requireUser, Boolean(shipping));
   const stopShipping = registerShippedTrades(

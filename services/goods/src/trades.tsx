@@ -1,3 +1,4 @@
+import { PracticeHistory } from "./practice";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -133,28 +134,37 @@ function TradeList({ tab, userId }: { tab: string; userId: string }) {
   if (error) return <ErrorBox error={error} retry={reload} />;
   if (!rows.length)
     return (
-      <Empty
-        title={
-          tab === "history"
-            ? "No past trades"
-            : tab === "received"
-              ? "You’re all caught up"
-              : "No open trades"
+      <PracticeHistory
+        kind="trade"
+        tab={tab}
+        empty={
+          <Empty
+            title={
+              tab === "history"
+                ? "No past trades"
+                : tab === "received"
+                  ? "You’re all caught up"
+                  : "No open trades"
+            }
+            body={
+              tab === "open"
+                ? "Pick an item you want and offer something from your shelf."
+                : ""
+            }
+            action={{
+              label:
+                tab === "received"
+                  ? "View open trades"
+                  : "Find something to trade",
+              to: tab === "received" ? "/trades" : "/explore?tradeOnly=true",
+            }}
+          />
         }
-        body={
-          tab === "open"
-            ? "Pick an item you want and offer something from your shelf."
-            : ""
-        }
-        action={{
-          label:
-            tab === "received" ? "View open trades" : "Find something to trade",
-          to: tab === "received" ? "/trades" : "/explore?tradeOnly=true",
-        }}
       />
     );
   return (
     <>
+      <PracticeHistory kind="trade" tab={tab} />
       <ul className="swap-inbox-list">
         {rows.map((trade) => {
           const { yours, theirs, other } = tradeSides(trade, userId);

@@ -1,3 +1,4 @@
+import { PracticeHistory } from "./practice";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, CreditCard, PackageCheck } from "lucide-react";
 import { api, money, requestId, time, type Listing } from "./api";
@@ -76,7 +77,10 @@ export function OrdersLink({ fromProfile = false }: { fromProfile?: boolean }) {
   const { data } = useResource<{ enabled: boolean }>(
     user ? "/purchases/options" : null,
   );
-  return data?.enabled ? (
+  const practice = useResource<{ items: unknown[] }>(
+    user && !data?.enabled ? "/practice?kind=purchase" : null,
+  );
+  return data?.enabled || practice.data?.items.length ? (
     <Link
       className="button secondary"
       to={fromProfile ? "/orders?from=profile" : "/orders"}
@@ -234,11 +238,13 @@ export function Orders() {
   if (checking) return <Loading />;
   if (!options?.enabled)
     return (
-      <Empty
-        title="Checkout is unavailable"
-        body="Browse listings and message sellers to arrange a purchase."
-        action={{ label: "Explore", to: "/explore" }}
-      />
+      <>
+        <PageTitle title="Orders" back="/profile" />
+        <PracticeHistory kind="purchase" />
+        <Link className="back-link" to="/explore">
+          Browse listings
+        </Link>
+      </>
     );
   return (
     <>
@@ -250,6 +256,7 @@ export function Orders() {
             : "/sell"
         }
       />
+      <PracticeHistory kind="purchase" />
       <div className="orders-layout">
         <section className="orders-history" aria-label="Order history">
           {loading ? (
