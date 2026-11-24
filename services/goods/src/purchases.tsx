@@ -71,13 +71,16 @@ type OrderCommand =
   | { action: "track"; carrier: string; code: string }
   | { action: "report"; reason: string };
 
-export function OrdersLink() {
+export function OrdersLink({ fromProfile = false }: { fromProfile?: boolean }) {
   const { user } = useApp();
   const { data } = useResource<{ enabled: boolean }>(
     user ? "/purchases/options" : null,
   );
   return data?.enabled ? (
-    <Link className="button secondary" to="/orders">
+    <Link
+      className="button secondary"
+      to={fromProfile ? "/orders?from=profile" : "/orders"}
+    >
       Orders
     </Link>
   ) : null;
@@ -198,6 +201,7 @@ export function Orders() {
   const { user } = useApp();
   const { data: options, loading: checking } = useResource<{
     enabled: boolean;
+    shipping: boolean;
   }>(user ? "/purchases/options" : null);
   const { data, error, loading, reload } = useResource<{
     orders: Order[];
@@ -238,13 +242,22 @@ export function Orders() {
     );
   return (
     <>
-      <PageTitle title="Orders" back="/sell" />
+      <PageTitle
+        title="Orders"
+        back={
+          new URLSearchParams(location.search).get("from") === "profile"
+            ? "/profile"
+            : "/sell"
+        }
+      />
       <section className="panel order-panel" aria-labelledby="seller-checkout">
         <h2 id="seller-checkout">Seller checkout</h2>
         <p>
           {data?.sellerReady
             ? "Test payments are ready for your sale-only listings."
-            : "Connect a Stripe test account to try selling for local pickup."}
+            : options.shipping
+              ? "Connect a Stripe test account to sell with shipping or local pickup."
+              : "Connect a Stripe test account to sell with local pickup."}
         </p>
         {!data?.sellerReady && (
           <button
@@ -433,9 +446,11 @@ export function OrderPage({ id }: { id: string }) {
                       : "The buyer can review the item until " +
                         time(shipment.reviewBy) +
                         "."
-                    : buyer
-                      ? "Payment confirmed. Check this order for carrier updates."
-                      : "Use your own shipping label and add the carrier and tracking number here."
+                    : shipment.code
+                      ? "Tracking is saved. Check this order for carrier updates."
+                      : buyer
+                        ? "Payment confirmed. Check this order for carrier updates."
+                        : "Use your own shipping label and add the carrier and tracking number here."
                 : shipment && order.state === "complete"
                   ? "The delivery review is complete."
                   : details[order.state]}

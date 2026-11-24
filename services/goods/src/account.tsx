@@ -29,6 +29,7 @@ import {
   type IdentityOptions,
   type LinkedIdentity,
 } from "./identity";
+import { OrdersLink } from "./purchases";
 import {
   Avatar,
   Confirm,
@@ -353,7 +354,9 @@ export function ProfilePage() {
   if (!user) return <SignedOut what="make your shelf your own" />;
   return (
     <>
-      <PageTitle title="Your profile" />
+      <PageTitle title="Your profile">
+        <OrdersLink fromProfile />
+      </PageTitle>
       <section className="my-profile panel">
         <Avatar profile={user} size={88} />
         <div>
