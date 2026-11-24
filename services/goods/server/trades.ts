@@ -153,7 +153,7 @@ function available(row: Row | undefined, owner: string) {
     row.owner_id === owner &&
     row.status === "active" &&
     !row.is_hidden &&
-    !row.is_demo &&
+    !row.demo_disabled &&
     row.trade_enabled
   );
 }
@@ -168,8 +168,6 @@ async function snapshotItems(
   const items = ids.map((itemId) => rows.find((row) => row.id === itemId));
   for (const row of items) {
     if (!row) fail(404, "An item is unavailable.", "NOT_FOUND");
-    if (row.is_demo)
-      fail(409, "Sample listings cannot be traded.", "DEMO_LISTING");
     if (row.owner_id !== owner)
       fail(
         403,

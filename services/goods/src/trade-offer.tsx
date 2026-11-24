@@ -133,7 +133,7 @@ export function SwapSummary({
 export const isTradeable = (item: Listing) =>
   item.status === "active" &&
   item.tradeEnabled &&
-  !item.isDemo &&
+  !item.owner.isDemo &&
   !item.isHidden;
 
 function PickerSide({

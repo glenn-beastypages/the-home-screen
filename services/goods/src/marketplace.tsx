@@ -34,8 +34,6 @@ import {
 import {
   Avatar,
   Dialog,
-  DemoBadge,
-  DemoCatalogNotice,
   Empty,
   ErrorBox,
   Link,
@@ -172,9 +170,6 @@ export function Home() {
             Browse all <ArrowRight size={18} />
           </Link>
         </div>
-        {data?.items.some((item) => item.isDemo || item.owner.isDemo) && (
-          <DemoCatalogNotice />
-        )}
         {loading ? (
           <Loading cards />
         ) : error ? (
@@ -205,11 +200,7 @@ export function Home() {
         <section className="section seller-discovery-section">
           <div className="section-heading">
             <div>
-              <h2>
-                {sellers.every((seller) => seller.isDemo)
-                  ? "Sample storefronts"
-                  : "Browse sellers"}
-              </h2>
+              <h2>Browse sellers</h2>
             </div>
           </div>
           <div className="seller-discovery-grid">
@@ -223,7 +214,6 @@ export function Home() {
                 <div>
                   <strong>{seller.name}</strong>
                   <span>@{seller.username}</span>
-                  {seller.isDemo && <DemoBadge />}
                   <small>{seller.location || "Newly listed goods"}</small>
                 </div>
                 <ArrowUpRight size={17} />
@@ -676,9 +666,6 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
                     </button>
                   ))}
               </div>
-              {items.some((item) => item.isDemo || item.owner.isDemo) && (
-                <DemoCatalogNotice />
-              )}
               {items.length ? (
                 <ProductGrid
                   items={items}
@@ -762,7 +749,6 @@ export function ItemPage({ id }: { id: string }) {
   const checkoutEligible =
     l?.status === "active" &&
     !l.isHidden &&
-    !l.isDemo &&
     !l.owner.isDemo &&
     !l.tradeEnabled &&
     l.priceCents !== null &&
@@ -780,7 +766,7 @@ export function ItemPage({ id }: { id: string }) {
     setTrade(new URLSearchParams(window.location.search).get("offer") === "1");
   }, [id]);
   const message = async () => {
-    if (!l || l.isDemo || l.owner.isDemo) return;
+    if (!l || l.owner.isDemo) return;
     const wantsTrade = isTradeable(l);
     if (!requireUser()) return;
     setBusy(true);
@@ -818,10 +804,10 @@ export function ItemPage({ id }: { id: string }) {
   if (error) return <ErrorBox error={error} retry={reload} />;
   if (!l) return null;
   const owned = user?.id === l.owner.id;
-  const demo = l.isDemo || l.owner.isDemo;
+  const staffed = !l.owner.isDemo;
   const available = !l.isHidden && l.status === "active";
   const reserved = !l.isHidden && l.status === "reserved";
-  const canStartConversation = available || reserved;
+  const canStartConversation = staffed && (available || reserved);
   let touchStart: { x: number; y: number } | null = null;
   const gallery = (
     <div
@@ -855,7 +841,6 @@ export function ItemPage({ id }: { id: string }) {
       ) : (
         <Photo listing={l} />
       )}
-      {demo && <DemoBadge />}
       <span className="gallery-counter">
         {l.photos.length ? index + 1 : 0} / {l.photos.length}
       </span>
@@ -925,23 +910,14 @@ export function ItemPage({ id }: { id: string }) {
         <section className="item-info">
           <div className="item-kicker">
             <span className="code-pill">{l.code}</span>
-            {demo ? <DemoBadge /> : <Status value={l.status} />}
+            <Status value={l.status} />
           </div>
           <h1>{l.title || "Untitled draft"}</h1>
           <p className="item-subtitle">
             {l.category} <span>·</span> {l.condition}
           </p>
-          <div className="item-price">
-            {demo && l.priceCents === null
-              ? "Sample item"
-              : money(l.priceCents)}
-          </div>
-          {demo && l.priceCents !== null && (
-            <p className="muted small-copy">
-              Example value for this sample item.
-            </p>
-          )}
-          {!demo && !owned && available && l.priceCents !== null && (
+          <div className="item-price">{money(l.priceCents)}</div>
+          {!owned && staffed && available && l.priceCents !== null && (
             <p className="muted small-copy">
               {canBuy
                 ? checkout.data?.shipping
@@ -952,24 +928,20 @@ export function ItemPage({ id }: { id: string }) {
                   : "Arrange the purchase directly with the seller."}
             </p>
           )}
-          {!demo && !owned && !available && (
+          {!owned && !available && (
             <p className="muted small-copy">
               {reserved
                 ? "This item is currently reserved."
                 : "This item is no longer available."}
             </p>
           )}
-          {demo && (
-            <div className="demo-item-notice">
-              <strong>Sample listing</strong>
-              <p>
-                This illustrated item and its seller are part of the demo
-                catalog. You can browse and save it. Trades and messages are
-                available for real community listings.
-              </p>
-            </div>
+          {!staffed && available && (
+            <p className="muted small-copy">
+              This catalog item has no seller available for inquiries or
+              fulfillment.
+            </p>
           )}
-          {l.tradeEnabled && !demo && available && (
+          {isTradeable(l) && (
             <div className="trade-callout">
               <ArrowLeftRight size={19} />
               <div>
@@ -980,12 +952,10 @@ export function ItemPage({ id }: { id: string }) {
               </div>
             </div>
           )}
-          {(demo || owned || canBuy || canStartConversation) && (
+          {(owned || canBuy || canStartConversation) && (
             <div
               className={
-                demo || owned
-                  ? "item-actions"
-                  : "item-actions item-actions-transaction"
+                owned ? "item-actions" : "item-actions item-actions-transaction"
               }
             >
               {canBuy && (
@@ -994,22 +964,7 @@ export function ItemPage({ id }: { id: string }) {
                   shipping={Boolean(checkout.data?.shipping)}
                 />
               )}
-              {demo ? (
-                <>
-                  <Link
-                    className="button full"
-                    to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
-                  >
-                    {user
-                      ? "List your own item"
-                      : "Join BEASTY and list your own"}
-                    <ArrowRight size={18} />
-                  </Link>
-                  <Link className="button secondary full" to="/explore">
-                    Keep exploring
-                  </Link>
-                </>
-              ) : owned ? (
+              {owned ? (
                 <Link className="button full" to={"/sell/" + l.id}>
                   Manage this listing
                 </Link>
@@ -1051,11 +1006,9 @@ export function ItemPage({ id }: { id: string }) {
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
           </div>
-          {l.tradeEnabled && l.tradePreferences && (demo || available) && (
+          {isTradeable(l) && l.tradePreferences && (
             <div className="item-detail-block">
-              <h3>
-                {demo ? "Example trade preferences" : "Open to trading for"}
-              </h3>
+              <h3>Open to trading for</h3>
               <p>{l.tradePreferences}</p>
             </div>
           )}
@@ -1069,7 +1022,7 @@ export function ItemPage({ id }: { id: string }) {
               <strong>{l.condition}</strong>
             </div>
             <div>
-              <span>{demo ? "Added to demo catalog" : "Listed"}</span>
+              <span>Listed</span>
               <strong>{new Date(l.createdAt).toLocaleDateString()}</strong>
             </div>
             <div>
@@ -1077,7 +1030,7 @@ export function ItemPage({ id }: { id: string }) {
               <small className="monospace">{l.id.slice(0, 12)}</small>
             </div>
           </div>
-          {!demo && <ReportButton targetType="listing" targetId={l.id} />}
+          <ReportButton targetType="listing" targetId={l.id} />
         </section>
       </div>
       {fullscreen && (
@@ -1092,14 +1045,9 @@ export function ItemPage({ id }: { id: string }) {
           </p>
         </Dialog>
       )}
-      {trade &&
-        user &&
-        !owned &&
-        !demo &&
-        l.status === "active" &&
-        l.tradeEnabled && (
-          <TradeComposer target={l} onClose={() => setTrade(false)} />
-        )}
+      {trade && user && !owned && isTradeable(l) && (
+        <TradeComposer target={l} onClose={() => setTrade(false)} />
+      )}
     </>
   );
 }
@@ -1146,11 +1094,8 @@ export function SellerPage({ id }: { id: string }) {
       <section className="seller-profile">
         <Avatar profile={p} size={96} />
         <div>
-          <span className="eyebrow">
-            {p.isDemo ? "Sample storefront" : "The seller's shelf"}
-          </span>
+          <span className="eyebrow">The seller’s shelf</span>
           <h1>{p.name}</h1>
-          {p.isDemo && <DemoBadge />}
           <span className="muted">@{p.username}</span>
           {p.bio && <p>{p.bio}</p>}
           <div className="profile-facts">
@@ -1174,7 +1119,7 @@ export function SellerPage({ id }: { id: string }) {
             )}
           </div>
         </div>
-        {user?.id !== id && !p.isDemo && (
+        {user?.id !== id && (
           <div className="seller-controls">
             <button
               className="text-button"
@@ -1187,7 +1132,6 @@ export function SellerPage({ id }: { id: string }) {
           </div>
         )}
       </section>
-      {p.isDemo && <DemoCatalogNotice />}
       <div className="section-heading">
         <div>
           <h2>On the shelf</h2>
@@ -1224,15 +1168,10 @@ export function SellerPage({ id }: { id: string }) {
             >
               <Photo listing={l} />
               <span className="shelf-code">{l.code}</span>
-              {(l.isDemo || p.isDemo) && <DemoBadge />}
               <h3>{l.title}</h3>
               <div className="product-meta">
-                <span>
-                  {(l.isDemo || p.isDemo) && l.priceCents === null
-                    ? "Sample item"
-                    : money(l.priceCents)}
-                </span>
-                {!(l.isDemo || p.isDemo) && <Status value={l.status} />}
+                <span>{money(l.priceCents)}</span>
+                <Status value={l.status} />
               </div>
             </Link>
           ))}

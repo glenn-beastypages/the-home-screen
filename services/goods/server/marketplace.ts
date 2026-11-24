@@ -707,7 +707,7 @@ export function registerMarketplace(
           if (
             current.status === "active" &&
             status === "active" &&
-            !current.is_demo &&
+            !current.demo_disabled &&
             price !== null &&
             current.price_cents !== null &&
             price < current.price_cents

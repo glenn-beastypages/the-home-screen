@@ -142,7 +142,7 @@ export function registerPurchases(
           `SELECT l.ships_purchases FROM listings l JOIN purchase_sellers s ON s.seller_id=l.owner_id
        JOIN profiles p ON p.id=l.owner_id
        WHERE l.id=$1 AND s.ready AND p.status='active' AND l.status='active'
-       AND l.published_at IS NOT NULL AND NOT l.is_demo AND NOT l.is_hidden
+       AND l.published_at IS NOT NULL AND NOT l.demo_disabled AND NOT p.is_demo AND NOT l.is_hidden
        AND NOT l.trade_enabled AND l.price_cents BETWEEN 50 AND 99999999`,
           [listingId],
         )
@@ -587,7 +587,7 @@ export function registerPurchases(
         if (
           !item ||
           item.is_hidden ||
-          item.is_demo ||
+          item.demo_disabled ||
           item.trade_enabled ||
           item.status !== "active" ||
           !item.published_at ||
