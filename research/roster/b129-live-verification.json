@@ -1,0 +1,104 @@
+{
+  "release": "8a0d08fd0eaf3425b1908b6fae5e8d1c6e9f5c21",
+  "renderDeploy": "dep-dc2dogm7bikc73fj3oag",
+  "liveAt": "2026-11-24T00:49:40.552701Z",
+  "checkedAt": "2026-11-24T00:53:03.131045+00:00",
+  "health": {
+    "checkedAt": "2026-11-24T00:50:09.610Z",
+    "release": "8a0d08fd0eaf3425b1908b6fae5e8d1c6e9f5c21",
+    "pagesHealthy": true,
+    "goodsHealthy": true,
+    "pagesSignInAvailable": true,
+    "googleSignInAvailable": true,
+    "shippedTradeHoldsEnabled": false,
+    "checkoutEnabled": false,
+    "goodsStylesheet": "/goods/assets/index-BJL3h45Q.css",
+    "goodsStylesheetSha256": "f58c3f5ff8b105b90462b520885b3f050afd8aded9e025bb1dcbf31892f05a90"
+  },
+  "publicBrowsers": {
+    "Chrome": {
+      "played": [
+        "DgGgpXSsjYG",
+        "DgF-Od9hwv8",
+        "DgEfcA7nO2a",
+        "DgGU3kTSWxH",
+        "DgFwR0GtSb9",
+        "DgGQJNiSCv-",
+        "DW7i150CL8L",
+        "DecWOWbu_tR",
+        "DeXg998yUeB",
+        "DdNHQd4P1Rc"
+      ],
+      "logoDialogs": 7,
+      "releaseFilesHashed": 27,
+      "autoPlayingBusinessBackgrounds": [
+        "b_chiquoandeva",
+        "b_carabao",
+        "b_wagyufactoryoakland",
+        "b_larbthaitapas",
+        "b_garlichighsunnyvale",
+        "b_nanhotpotsf"
+      ],
+      "reopenedFromOaklandDirectory": true,
+      "wagyuMenuRows": 3,
+      "goodsListingOpened": true
+    },
+    "iPhone WebKit": {
+      "played": [
+        "DgGgpXSsjYG",
+        "DgF-Od9hwv8",
+        "DgEfcA7nO2a",
+        "DgGU3kTSWxH",
+        "DgFwR0GtSb9",
+        "DgGQJNiSCv-",
+        "DW7i150CL8L",
+        "DecWOWbu_tR",
+        "DeXg998yUeB",
+        "DdNHQd4P1Rc"
+      ],
+      "logoDialogs": 7,
+      "releaseFilesHashed": 27,
+      "autoPlayingBusinessBackgrounds": [
+        "b_chiquoandeva",
+        "b_carabao",
+        "b_wagyufactoryoakland",
+        "b_larbthaitapas",
+        "b_garlichighsunnyvale",
+        "b_nanhotpotsf"
+      ],
+      "reopenedFromOaklandDirectory": true,
+      "wagyuMenuRows": 3,
+      "goodsListingOpened": true
+    }
+  },
+  "signedOutPages": {
+    "passed": true,
+    "historicalRosterWalk": "skipped"
+  },
+  "localValidation": {
+    "unchangedPriorSeatAssignments": 2440,
+    "dataErrors": 0,
+    "dataWarnings": 212,
+    "sharedHostChecks": 31,
+    "additionalWatchAndCategoryChecks": 3
+  },
+  "visibleChrome": {
+    "route": "Search \u2192 Categories \u2192 BEASTY \u2022 More AYCE \u2192 Wagyu Factory \u2192 Menu",
+    "categoryBusinessCount": 1,
+    "city": "Oakland",
+    "menuPricesUSD": {
+      "Silver": {
+        "regular": 49.99,
+        "clubMember": 42.99
+      },
+      "Gold": {
+        "regular": 59.99,
+        "clubMember": 49.99
+      },
+      "Platinum": {
+        "regular": 79.99,
+        "clubMember": 69.99
+      }
+    }
+  }
+}
