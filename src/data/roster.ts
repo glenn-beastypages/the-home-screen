@@ -5364,6 +5364,32 @@ export const ROSTER_SEED: LocalSeed[] = [
     clip: {"src": "/clips/review-Dc39SRgvwig.mp4", "poster": "/clips/review-Dc39SRgvwig-poster.webp", "href": "https://www.instagram.com/reel/Dc39SRgvwig/", "credit": "Posted by @pineapplethaiofficial on Instagram.", "platform": "Instagram"},
     contactOnly: undefined,
   }),
+  // Batch 129 — Oakland's own opening announcement and dining menu.
+  seed('wagyu-factory-oakland', 'Wagyu Factory', 'Wagyu Factory', 'Wagyu grill', '#100c0c', {
+    icon: 'wagyu-factory-oakland-v129',
+    address: '528 34th Street, Oakland, CA 94609',
+    instagram: 'wagyu.factory',
+    site: 'https://wagyufactory.com/project/oakland/',
+    siteCta: 'Oakland location',
+    tagline: 'All-you-can-eat Wagyu barbecue in Oakland.',
+    menuNote: 'Oakland dining prices per person, before tax and service fees.',
+    sections: [{ name: 'All-you-can-eat BBQ', items: [
+      ['Silver', 'Chubby Club member price $42.99.', 4999],
+      ['Gold', 'Chubby Club member price $49.99.', 5999],
+      ['Platinum', 'Chubby Club member price $69.99.', 7999],
+    ] }],
+    panels: [{ head: 'Oakland menu', body: [], links: [
+      { label: 'Original Oakland menu (PDF)', href: 'https://storage.googleapis.com/qrfyprod/aa811f7b-b86d-4382-ae2b-7afacdf13805.pdf' },
+      { label: 'Wagyu Factory locations', href: 'https://linktr.ee/wagyufactory' },
+    ] }],
+    clip: {
+      src: '/clips/review-DgEfcA7nO2a.mp4',
+      poster: '/clips/review-DgEfcA7nO2a-poster.webp',
+      href: 'https://www.instagram.com/reel/DgEfcA7nO2a/',
+      credit: 'Opening film posted by @wagyu.factory for its Oakland restaurant.',
+      platform: 'Instagram',
+    },
+  }),
 ]
 
 /**

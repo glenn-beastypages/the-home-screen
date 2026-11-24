@@ -1544,7 +1544,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "irenedony",
     "name": "@irenedony",
     "label": "irenedony",
-    "icon": "foodie-irenedony-v97"
+    "icon": "foodie-irenedony-v129"
   },
   {
   "handle": "biteswithnatalia",
@@ -2149,6 +2149,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "lifeofanks_", "name": "@lifeofanks_", "label": "lifeofanks_", "icon": "foodie-lifeofanks-v128"},
   {"handle": "elixayala", "name": "@elixayala", "label": "elixayala", "icon": "foodie-elixayala-v128"},
   {"handle": "natashabythebay", "name": "@natashabythebay", "label": "natashabythebay", "icon": "foodie-natashabythebay-v128"},
+  {"handle": "liveitholistic", "name": "Marc Capistrano", "label": "liveitholistic", "icon": "foodie-liveitholistic-v129"},
+  {"handle": "sundropeats", "name": "Sarah · Sundrop Eats", "label": "sundropeats", "icon": "foodie-sundropeats-v129"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3130,6 +3132,13 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "_foodieshots_", "place": "Dope Pho", "city": "Fremont", "brand": "b_dopepho", "reel": "https://www.instagram.com/reel/DgEopeUxxBj/", "credit": "Review by @_foodieshots_ at Dope Pho, Fremont.", "clip": true},
   {"by": "foodie.envy", "place": "Dope Pho", "city": "Fremont", "brand": "b_dopepho", "reel": "https://www.instagram.com/reel/Defe-7oPcoH/", "credit": "Review by @foodie.envy at Dope Pho, Fremont.", "clip": true},
   {"by": "natashabythebay", "place": "Penelope’s Coffee and Tea", "city": "Daly City", "brand": "b_penelopescoffeedalycity", "reel": "https://www.instagram.com/reel/Df09NylOD-R/", "credit": "Review by @natashabythebay at Penelope’s Coffee and Tea, Daly City.", "clip": true},
+
+  // Batch 129 — November 23.
+  {"by": "eatwithsie", "place": "Chiquo & Eva’s", "city": "Fairfield", "brand": "b_chiquoandeva", "reel": "https://www.instagram.com/reel/DgGgpXSsjYG/", "credit": "Weekend Wagyu plate pickup in Fairfield, posted by @eatwithsie. Contact @chiquoevasteaks for the pickup details.", "clip": true},
+  {"by": "liveitholistic", "place": "Carabao", "city": "Napa", "brand": "b_carabao", "reel": "https://www.instagram.com/reel/DgF-Od9hwv8/", "credit": "Filmed by @liveitholistic at Carabao in Napa.", "clip": true},
+  {"by": "mayakay.official", "place": "Larb Thai Food & Tapas", "city": "El Cerrito", "brand": "b_larbthaitapas", "reel": "https://www.instagram.com/reel/DgGU3kTSWxH/", "credit": "Filmed by @mayakay.official at Larb Thai Food & Tapas in El Cerrito.", "clip": true},
+  {"by": "irenedony", "place": "Garlic High — Sunnyvale", "city": "Sunnyvale", "brand": "b_garlichighsunnyvale", "reel": "https://www.instagram.com/reel/DgFwR0GtSb9/", "credit": "Filmed by @irenedony at Garlic High in Sunnyvale.", "clip": true},
+  {"by": "sundropeats", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DgGQJNiSCv-/", "credit": "Filmed by @sundropeats at Nan Hot Pot in San Francisco.", "clip": "creator"},
 ]
 
 /*

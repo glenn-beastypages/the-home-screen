@@ -1355,3 +1355,11 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-Df09NylOD-R.mp4` | [Original](https://www.instagram.com/reel/Df09NylOD-R/) | Review by @natashabythebay at Penelope’s Coffee and Tea, Daly City. 0s-15s |
 | `review-DeXg998yUeB.mp4` | [Original](https://www.instagram.com/reel/DeXg998yUeB/) | Review by @lifebyvivien at Nan Hot Pot, San Francisco. 0s-15s |
 | `review-Db7YUOaOYIM.mp4` | [Original](https://www.instagram.com/reel/Db7YUOaOYIM/) | Review by @yogetasworld at Nan Hot Pot, San Francisco. 0s-15s |
+
+<!-- Batch 129. -->
+| `review-DgGgpXSsjYG.mp4` | [Original](https://www.instagram.com/reel/DgGgpXSsjYG/) | Weekend Wagyu plate pickup in Fairfield, posted by @eatwithsie. Contact @chiquoevasteaks for the pickup details. 0s-15s |
+| `review-DgF-Od9hwv8.mp4` | [Original](https://www.instagram.com/reel/DgF-Od9hwv8/) | Filmed by @liveitholistic at Carabao in Napa. 0s-15s |
+| `review-DgEfcA7nO2a.mp4` | [Original](https://www.instagram.com/reel/DgEfcA7nO2a/) | Opening film posted by @wagyu.factory for its Oakland restaurant. 0s-15s |
+| `review-DgGU3kTSWxH.mp4` | [Original](https://www.instagram.com/reel/DgGU3kTSWxH/) | Filmed by @mayakay.official at Larb Thai Food & Tapas in El Cerrito. 0s-15s |
+| `review-DgFwR0GtSb9.mp4` | [Original](https://www.instagram.com/reel/DgFwR0GtSb9/) | Filmed by @irenedony at Garlic High in Sunnyvale. 0s-15s |
+| `review-DgGQJNiSCv-.mp4` | [Original](https://www.instagram.com/reel/DgGQJNiSCv-/) | Filmed by @sundropeats at Nan Hot Pot in San Francisco. 0s-15s |

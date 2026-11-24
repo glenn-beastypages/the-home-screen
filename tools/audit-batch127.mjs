@@ -13,13 +13,15 @@ import { navigate } from './live-navigation.mjs'
 const batchNumber = process.env.BATCH ?? '127'
 assert(/^\d+$/.test(batchNumber))
 const batch = JSON.parse(readFileSync(`research/roster/batch${batchNumber}.json`, 'utf8'))
+const posts = [...batch.posts, ...(batch.reconfirmedPosts ?? [])]
+const artwork = [...batch.artworkDispositions, ...(batch.reconfirmedArtwork ?? [])]
 const { ALL_PLACEMENTS } = await tsImport('../src/data/categorySeats.ts', import.meta.url)
 const { REELS } = await tsImport('../src/data/clips.ts', import.meta.url)
 const { pageOfFoodie, reviewsBy, reviewsOf } = await tsImport('../src/data/foodieIndex.ts', import.meta.url)
 for (const [seat, brand] of Object.entries(batch.placements)) {
   assert.equal(ALL_PLACEMENTS[seat], brand, seat)
 }
-for (const post of batch.posts) {
+for (const post of posts) {
   const clip = REELS.find((reel) => reel.href === post.reel)
   assert.equal(clip?.src, post.asset, post.code)
   assert.equal(clip?.poster, post.poster, post.code)
@@ -82,7 +84,7 @@ try {
     await video.evaluate((el) => el.pause())
   }
 
-  for (const post of batch.posts) {
+  for (const post of posts) {
     const onCreator = post.clip === 'creator'
     await openBrand(onCreator ? pageOfFoodie(post.by) : post.brand)
     const selector = 'video[src="' + post.asset + '"]'
@@ -113,7 +115,7 @@ try {
     console.log('Background plays automatically', brand)
   }
 
-  for (const { profilePage, asset } of batch.artworkDispositions) {
+  for (const { profilePage, asset } of artwork) {
     await openBrand(profilePage)
     const trigger = page.locator('.brand-logo-zoom-trigger')
     await trigger.scrollIntoViewIfNeeded()
@@ -166,8 +168,8 @@ try {
   assert.deepEqual(errors, [])
   // Compare the fetched assets to the release, including clips used on multiple surfaces.
   const media = [
-    ...batch.posts.flatMap((post) => [post.asset, post.poster]),
-    ...batch.artworkDispositions.map((art) => art.asset),
+    ...posts.flatMap((post) => [post.asset, post.poster]),
+    ...artwork.map((art) => art.asset),
   ]
   const hash = (bytes) => createHash('sha256').update(bytes).digest('hex')
   for (const asset of media) {

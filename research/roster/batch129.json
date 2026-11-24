@@ -1,0 +1,325 @@
+{
+  "previousCutoffRow": 253666,
+  "posts": [
+    {
+      "by": "eatwithsie",
+      "place": "Chiquo & Eva’s",
+      "city": "Fairfield",
+      "brand": "b_chiquoandeva",
+      "reel": "https://www.instagram.com/reel/DgGgpXSsjYG/",
+      "credit": "Weekend Wagyu plate pickup in Fairfield, posted by @eatwithsie. Contact @chiquoevasteaks for the pickup details.",
+      "clip": true,
+      "code": "DgGgpXSsjYG",
+      "asset": "/clips/review-DgGgpXSsjYG.mp4",
+      "poster": "/clips/review-DgGgpXSsjYG-poster.webp",
+      "messageRow": 253673,
+      "excerpt": "0s-15s of 65s -> 2147KB"
+    },
+    {
+      "by": "liveitholistic",
+      "place": "Carabao",
+      "city": "Napa",
+      "brand": "b_carabao",
+      "reel": "https://www.instagram.com/reel/DgF-Od9hwv8/",
+      "credit": "Filmed by @liveitholistic at Carabao in Napa.",
+      "clip": true,
+      "code": "DgF-Od9hwv8",
+      "asset": "/clips/review-DgF-Od9hwv8.mp4",
+      "poster": "/clips/review-DgF-Od9hwv8-poster.webp",
+      "messageRow": 253677,
+      "excerpt": "0s-15s of 62s -> 1810KB"
+    },
+    {
+      "by": "wagyu.factory",
+      "place": "Wagyu Factory",
+      "city": "Oakland",
+      "brand": "b_wagyufactoryoakland",
+      "reel": "https://www.instagram.com/reel/DgEfcA7nO2a/",
+      "credit": "Opening film posted by @wagyu.factory for its Oakland restaurant.",
+      "clip": "primary",
+      "code": "DgEfcA7nO2a",
+      "asset": "/clips/review-DgEfcA7nO2a.mp4",
+      "poster": "/clips/review-DgEfcA7nO2a-poster.webp",
+      "messageRow": 253682,
+      "excerpt": "0s-15s of 21s -> 2460KB"
+    },
+    {
+      "by": "mayakay.official",
+      "place": "Larb Thai Food & Tapas",
+      "city": "El Cerrito",
+      "brand": "b_larbthaitapas",
+      "reel": "https://www.instagram.com/reel/DgGU3kTSWxH/",
+      "credit": "Filmed by @mayakay.official at Larb Thai Food & Tapas in El Cerrito.",
+      "clip": true,
+      "code": "DgGU3kTSWxH",
+      "asset": "/clips/review-DgGU3kTSWxH.mp4",
+      "poster": "/clips/review-DgGU3kTSWxH-poster.webp",
+      "messageRow": 253685,
+      "excerpt": "0s-15s of 56s -> 2112KB"
+    },
+    {
+      "by": "irenedony",
+      "place": "Garlic High — Sunnyvale",
+      "city": "Sunnyvale",
+      "brand": "b_garlichighsunnyvale",
+      "reel": "https://www.instagram.com/reel/DgFwR0GtSb9/",
+      "credit": "Filmed by @irenedony at Garlic High in Sunnyvale.",
+      "clip": true,
+      "code": "DgFwR0GtSb9",
+      "asset": "/clips/review-DgFwR0GtSb9.mp4",
+      "poster": "/clips/review-DgFwR0GtSb9-poster.webp",
+      "messageRow": 253690,
+      "excerpt": "0s-15s of 30s -> 2415KB"
+    },
+    {
+      "by": "sundropeats",
+      "place": "Nan Hot Pot",
+      "city": "San Francisco",
+      "brand": "b_nanhotpotsf",
+      "reel": "https://www.instagram.com/reel/DgGQJNiSCv-/",
+      "credit": "Filmed by @sundropeats at Nan Hot Pot in San Francisco.",
+      "clip": "creator",
+      "code": "DgGQJNiSCv-",
+      "asset": "/clips/review-DgGQJNiSCv-.mp4",
+      "poster": "/clips/review-DgGQJNiSCv--poster.webp",
+      "messageRow": 253693,
+      "excerpt": "0s-15s of 21s -> 3243KB"
+    }
+  ],
+  "artworkDispositions": [
+    {
+      "asset": "/icons/wagyu-factory-oakland-v129.webp",
+      "profilePage": "b_wagyufactoryoakland",
+      "source": "https://wagyufactory.com/wp-content/uploads/2025/06/Wagyu-Factory-Logo-2.png",
+      "attachment": "IMG_1208",
+      "attachmentRow": 253679,
+      "disposition": "Original transparent restaurant wordmark centered on black; complete lettering retained."
+    },
+    {
+      "asset": "/icons/foodie-liveitholistic-v129.webp",
+      "profilePage": "b_foodieliveitholistic",
+      "source": "https://www.instagram.com/liveitholistic/",
+      "attachment": "IMG_1198",
+      "attachmentRow": 253676,
+      "disposition": "Original square profile photograph matched to the supplied screenshot."
+    },
+    {
+      "asset": "/icons/foodie-irenedony-v129.webp",
+      "profilePage": "b_foodieirenedony",
+      "source": "https://www.instagram.com/irenedony/",
+      "attachment": "IMG_1215",
+      "attachmentRow": 253689,
+      "disposition": "Original square profile photograph matched to the supplied screenshot."
+    },
+    {
+      "asset": "/icons/foodie-sundropeats-v129.webp",
+      "profilePage": "b_foodiesundropeats",
+      "source": "https://www.instagram.com/sundropeats/",
+      "attachment": "IMG_1216",
+      "attachmentRow": 253694,
+      "disposition": "Original square profile photograph matched to the supplied screenshot."
+    }
+  ],
+  "placements": {
+    "oakland-goods2-57": "b_wagyufactoryoakland",
+    "beasty-ayce2-0": "b_wagyufactoryoakland",
+    "beasty-foodies2-379": "b_foodieliveitholistic",
+    "beasty-foodies2-380": "b_foodiesundropeats",
+    "beasty-thai-12": "b_larbthaitapas",
+    "beasty-hotpot-14": "b_nanhotpotsf",
+    "san-francisco-goods2-101": "b_nanhotpotsf"
+  },
+  "listings": {
+    "b_wagyufactoryoakland": {
+      "name": "Wagyu Factory",
+      "city": "Oakland"
+    }
+  },
+  "menus": {
+    "b_wagyufactoryoakland": {
+      "pricedItems": 3,
+      "source": "https://storage.googleapis.com/qrfyprod/aa811f7b-b86d-4382-ae2b-7afacdf13805.pdf",
+      "sourcePost": "https://www.reddit.com/r/OaklandFood/comments/1y3smkj/wagyu_factory_ayce_bbq_opening/"
+    }
+  },
+  "backgroundChecks": {
+    "b_chiquoandeva": "/clips/review-DgGgpXSsjYG.mp4",
+    "b_carabao": "/clips/carabao.mp4",
+    "b_wagyufactoryoakland": "/clips/review-DgEfcA7nO2a.mp4",
+    "b_larbthaitapas": "/clips/review-DgGU3kTSWxH.mp4",
+    "b_garlichighsunnyvale": "/clips/garlic-high-sunnyvale.mp4",
+    "b_nanhotpotsf": "/clips/review-DW7i150CL8L.mp4"
+  },
+  "creatorPlacements": {
+    "liveitholistic": "Mediocre, More influencers",
+    "sundropeats": "Foodie, More influencers"
+  },
+  "merchantSources": {
+    "b_chiquoandeva": [
+      "https://www.chiquoandeva.com/",
+      "https://www.instagram.com/reel/DgGgpXSsjYG/"
+    ],
+    "b_wagyufactoryoakland": [
+      "https://wagyufactory.com/project/oakland/",
+      "https://www.instagram.com/reel/DgEfcA7nO2a/",
+      "https://linktr.ee/wagyufactory",
+      "https://storage.googleapis.com/qrfyprod/aa811f7b-b86d-4382-ae2b-7afacdf13805.pdf"
+    ]
+  },
+  "reconfirmedPosts": [
+    {
+      "by": "thesnacksensei",
+      "place": "Nan Hot Pot",
+      "city": "San Francisco",
+      "brand": "b_nanhotpotsf",
+      "reel": "https://www.instagram.com/reel/DW7i150CL8L/",
+      "credit": "Review by @thesnacksensei at Nan Hot Pot, San Francisco.",
+      "clip": true,
+      "code": "DW7i150CL8L",
+      "asset": "/clips/review-DW7i150CL8L.mp4",
+      "poster": "/clips/review-DW7i150CL8L-poster.webp",
+      "messageRow": 253573,
+      "excerpt": "0s-15s of 117s -> 2292KB",
+      "reconfirmedAtRow": 253697
+    },
+    {
+      "by": "charlie_and_cyn",
+      "place": "Nan Hot Pot",
+      "city": "San Francisco",
+      "brand": "b_nanhotpotsf",
+      "reel": "https://www.instagram.com/reel/DecWOWbu_tR/",
+      "credit": "Review by @charlie_and_cyn at Nan Hot Pot, San Francisco. The creator disclosed that the visit was hosted.",
+      "clip": true,
+      "code": "DecWOWbu_tR",
+      "asset": "/clips/review-DecWOWbu_tR.mp4",
+      "poster": "/clips/review-DecWOWbu_tR-poster.webp",
+      "messageRow": 253581,
+      "excerpt": "0s-15s of 67s -> 2192KB",
+      "reconfirmedAtRow": 253700
+    },
+    {
+      "by": "lifebyvivien",
+      "place": "Nan Hot Pot",
+      "city": "San Francisco",
+      "brand": "b_nanhotpotsf",
+      "reel": "https://www.instagram.com/reel/DeXg998yUeB/",
+      "credit": "Review by @lifebyvivien at Nan Hot Pot, San Francisco.",
+      "clip": "creator",
+      "featuring": [
+        "xo.pinsta"
+      ],
+      "code": "DeXg998yUeB",
+      "asset": "/clips/review-DeXg998yUeB.mp4",
+      "poster": "/clips/review-DeXg998yUeB-poster.webp",
+      "messageRow": 253583,
+      "excerpt": "0s-15s of 25s -> 3325KB",
+      "sourceResolution": "Matched the original profile artwork, adjacent credited posts and restaurant grid on https://www.instagram.com/nanhotpotsf/.",
+      "reconfirmedAtRow": 253702
+    },
+    {
+      "by": "wendan.vs.world",
+      "place": "Nan Hot Pot",
+      "city": "San Francisco",
+      "brand": "b_nanhotpotsf",
+      "reel": "https://www.instagram.com/reel/DdNHQd4P1Rc/",
+      "credit": "Posted by @wendan.vs.world with @nanhotpotsf at Nan Hot Pot, San Francisco.",
+      "clip": true,
+      "code": "DdNHQd4P1Rc",
+      "asset": "/clips/review-DdNHQd4P1Rc.mp4",
+      "poster": "/clips/review-DdNHQd4P1Rc-poster.webp",
+      "messageRow": 253597,
+      "excerpt": "0s-15s of 32s -> 3445KB",
+      "reconfirmedAtRow": 253706
+    }
+  ],
+  "cutoffRow": 253707,
+  "lastGlennRow": 253707,
+  "attachmentLedger": [
+    {
+      "messageRow": 253676,
+      "attachment": "IMG_1198",
+      "page": "b_foodieliveitholistic",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253679,
+      "attachment": "IMG_1202",
+      "page": "b_wagyufactoryoakland",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253679,
+      "attachment": "IMG_1208",
+      "page": "b_wagyufactoryoakland",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253679,
+      "attachment": "IMG_1210",
+      "page": "b_wagyufactoryoakland",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253689,
+      "attachment": "IMG_1215",
+      "page": "b_foodieirenedony",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253694,
+      "attachment": "IMG_1216",
+      "page": "b_foodiesundropeats",
+      "disposition": "Applied or used to confirm the listing"
+    },
+    {
+      "messageRow": 253694,
+      "attachment": "IMG_1219",
+      "page": "b_nanhotpotsf",
+      "disposition": "Matched against existing page artwork"
+    },
+    {
+      "messageRow": 253694,
+      "attachment": "IMG_1220",
+      "page": "b_nanhotpotsf",
+      "disposition": "Matched against existing page artwork"
+    },
+    {
+      "messageRow": 253699,
+      "attachment": "IMG_1222",
+      "page": "b_foodiecharlieandcyn",
+      "disposition": "Matched against existing page artwork"
+    },
+    {
+      "messageRow": 253705,
+      "attachment": "IMG_1225",
+      "page": "b_foodiewendanvsworld",
+      "disposition": "Matched against existing page artwork"
+    }
+  ],
+  "reconfirmedArtwork": [
+    {
+      "attachmentRow": 253570,
+      "attachment": "IMG_1150",
+      "asset": "/icons/nan-hot-pot-v128.webp",
+      "profilePage": "b_nanhotpotsf",
+      "source": "https://pos.chowbus.com/online-ordering/store/Nan-Hot-Pot/23647",
+      "disposition": "Matched the supplied mark to the restaurant’s official site. Retained the complete lettering and removed surrounding screen controls."
+    },
+    {
+      "attachmentRow": 253580,
+      "attachment": "IMG_1153",
+      "asset": "/icons/foodie-charlieandcyn-v128.webp",
+      "profilePage": "b_foodiecharlieandcyn",
+      "source": "https://www.instagram.com/charlie_and_cyn/",
+      "disposition": "Original square profile image matched against the supplied picture."
+    },
+    {
+      "attachmentRow": 253596,
+      "attachment": "IMG_1156",
+      "asset": "/icons/foodie-wendanvsworld-v128.webp",
+      "profilePage": "b_foodiewendanvsworld",
+      "source": "https://www.instagram.com/wendan.vs.world/",
+      "disposition": "Original square profile image matched against the supplied picture."
+    }
+  ]
+}

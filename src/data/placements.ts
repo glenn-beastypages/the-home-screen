@@ -2888,4 +2888,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-376': 'b_foodielifeofanks',
   'beasty-foodies2-377': 'b_foodieelixayala',
   'beasty-foodies2-378': 'b_foodienatashabythebay',
+  // Batch 129. The original AYCE sheet is full.
+  'oakland-goods2-57': 'b_wagyufactoryoakland',
+  'beasty-ayce2-0': 'b_wagyufactoryoakland',
+  'beasty-foodies2-379': 'b_foodieliveitholistic',
+  'beasty-foodies2-380': 'b_foodiesundropeats',
 }

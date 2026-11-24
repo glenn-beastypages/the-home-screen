@@ -1715,9 +1715,11 @@ export const ONLINE_FILLS: Record<string, Partial<LocalSeed>> = {
     siteNote: "Hours are from their own website (\"or until sold out\"); Restaurantji lists the same."
   },
   'chiquo-and-eva': {
-    hours: "Fri–Sun 5–9pm; Closed Mon–Thu",
-    address: "321 First St, Benicia, CA 94510",
-    siteNote: "Hours and address from their own website (chiquoandeva.com), which lists the Benicia pop-up at 321 First Street."
+    tagline: 'Weekend Wagyu plates for pickup in Fairfield while the Benicia restaurant is in preparation.',
+    menuNote: 'The published steakhouse menu is shown below. Ask about this weekend’s pickup plates.',
+    panels: [{ head: 'Arrange pickup', body: ['Message the business for availability and the pickup location.'],
+      links: [{ label: 'Contact @chiquoevasteaks', href: 'https://www.instagram.com/chiquoevasteaks/' }] }],
+    siteNote: 'The restaurant website also lists its earlier Benicia pop-up.',
   },
   'chutneys': {
     sections: [
