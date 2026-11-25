@@ -1323,4 +1323,20 @@ export const ADDED_ON: Record<string, string> = {
   b_wagyufactoryoakland: '2026-11-23',
   b_foodieliveitholistic: '2026-11-23',
   b_foodiesundropeats: '2026-11-23',
+
+  // Batch 130.
+  b_nikusteakhousesf: '2026-11-24',
+  b_yoeecheesf: '2026-11-24',
+  b_phokimlongsanjose: '2026-11-24',
+  b_thelaundromatsf: '2026-11-24',
+  b_zandyrestaurant: '2026-11-24',
+  b_cajuncracknmilpitas: '2026-11-24',
+  b_northbeachpizzasanmateo: '2026-11-24',
+  b_foodiealexandereatsworld: '2026-11-24',
+  b_foodiefashionbyally: '2026-11-24',
+  b_foodiesfstandard: '2026-11-24',
+  b_foodielisavsfood: '2026-11-24',
+  b_foodiemeggyeatz: '2026-11-24',
+  b_foodiejakinbaycon: '2026-11-24',
+  b_foodiedavefoodeats: '2026-11-24',
 }

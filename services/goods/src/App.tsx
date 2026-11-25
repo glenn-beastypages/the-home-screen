@@ -95,6 +95,7 @@ function AppRoute({ route }: { route: string }) {
   if (path === "/profile") return <ProfilePage />;
   if (path === "/settings") return <SettingsPage />;
   if (path === "/admin") return <Admin />;
+  if (path === "/closets-for-a-cause") return <ManagedResale fundraiser />;
   if (path === "/managed-resale") return <ManagedResale />;
   if (path === "/admin/resale") return <ResaleQueue />;
   if (

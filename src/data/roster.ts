@@ -2827,6 +2827,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      counter, so it is named in the note rather than sold as pickup. */
   seed('delage-oakland', 'Delage', 'Delage', 'Sushi & omakase', '#732B2F', {
     icon: 'delage-v99',
+    clip: {"src": "/clips/review-Df-eINDSmyk.mp4", "poster": "/clips/review-Df-eINDSmyk-poster.webp", "href": "https://www.instagram.com/reel/Df-eINDSmyk/", "credit": "Posted by @delage_oakland for Delage in Oakland.", "platform": "Instagram"},
     logoTemplate: 'wordmark', logoLines: ['DELAGE'], logoFace: 'slab',
     site: 'https://www.delagesushi.com/',
     siteCta: 'See their menus',
@@ -5390,6 +5391,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       platform: 'Instagram',
     },
   }),
+
 ]
 
 /**

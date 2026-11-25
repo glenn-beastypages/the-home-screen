@@ -98420,4 +98420,504 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+// Batch 130. Verified restaurant locations, including reviewed branches.
+{
+  "slug": "niku-steakhouse-sf",
+  "name": "Niku Steakhouse",
+  "label": "Niku",
+  "cuisine": "Japanese steakhouse",
+  "color": "#191918",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "niku-steakhouse-sf-v130",
+  "address": "61 Division Street, San Francisco, CA 94103",
+  "site": "https://www.nikusteakhouse.com/",
+  "instagram": "nikusteakhouse",
+  "tagline": "Wood-fired steaks and Japanese Wagyu in the Design District.",
+  "sections": [
+    {
+      "name": "Small plates",
+      "items": [
+        [
+          "Chicory salad",
+          "",
+          2500
+        ],
+        [
+          "Nashville hot oysters",
+          "",
+          3300
+        ],
+        [
+          "Hokkaido scallop crudo",
+          "",
+          3200
+        ],
+        [
+          "Beef tartare",
+          "",
+          3200
+        ],
+        [
+          "Grilled beets",
+          "",
+          2600
+        ],
+        [
+          "Delicata tortelloni",
+          "",
+          3400
+        ],
+        [
+          "Matsutake chawanmushi",
+          "",
+          3800
+        ],
+        [
+          "Crispy pig ears",
+          "",
+          2400
+        ],
+        [
+          "Wagyu tsukune",
+          "",
+          2400
+        ],
+        [
+          "Bone marrow",
+          "",
+          3300
+        ]
+      ]
+    },
+    {
+      "name": "Ember roasted",
+      "items": [
+        [
+          "Grilled local black cod",
+          "",
+          6300
+        ],
+        [
+          "Australian Wagyu flat iron",
+          "",
+          7500
+        ],
+        [
+          "Wagyu bone-in short rib",
+          "",
+          13500
+        ],
+        [
+          "Abatti Ranch ribeye",
+          "",
+          13500
+        ],
+        [
+          "Bryan Flannery dry-aged New York strip",
+          "",
+          11500
+        ],
+        [
+          "Westholme Wagyu tomahawk",
+          "",
+          29500
+        ]
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        [
+          "Crispy potato",
+          "",
+          2000
+        ],
+        [
+          "Dungeness crab rice",
+          "",
+          2800
+        ],
+        [
+          "Tempura squash",
+          "",
+          2600
+        ],
+        [
+          "Confit maitake mushroom",
+          "",
+          2400
+        ],
+        [
+          "Buckwheat Parker House rolls",
+          "",
+          1200
+        ],
+        [
+          "Pickled market vegetables",
+          "",
+          1200
+        ]
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        [
+          "Spiced apple cake",
+          "",
+          1800
+        ],
+        [
+          "Young coconut kakigori",
+          "",
+          1800
+        ],
+        [
+          "Hojicha tarte",
+          "",
+          1800
+        ],
+        [
+          "Wagyu fat brownie",
+          "",
+          1800
+        ],
+        [
+          "Ice cream and sorbet",
+          "",
+          800
+        ]
+      ]
+    }
+  ],
+  "siteCta": "Visit Niku Steakhouse",
+  "hours": "Sun–Thu 5–9 pm; Fri–Sat 5–10 pm",
+  "phone": "415-829-7817",
+  "menuNote": "Selections from the seasonal dinner menu. Niku lists a 6% employee-benefits surcharge.",
+  "panels": [
+    {
+      "head": "Dinner menu",
+      "body": [],
+      "links": [
+        {
+          "label": "Full dinner menu and Wagyu options",
+          "href": "https://www.nikusteakhouse.com/dailymenu"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/review-C7QGaHRpysq.mp4",
+    "poster": "/clips/review-C7QGaHRpysq-poster.webp",
+    "href": "https://www.instagram.com/reel/C7QGaHRpysq/",
+    "credit": "Posted by @nikusteakhouse for Niku Steakhouse in San Francisco.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "yoeechee-sf",
+  "name": "Yoeechee",
+  "label": "Yoeechee",
+  "cuisine": "Takeout sushi",
+  "color": "#24445e",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "yoeechee-sf-v130",
+  "address": "1552 Fillmore Street, San Francisco, CA 94115",
+  "site": "https://order.toasttab.com/online/yoeechee-1552-fillmore-street",
+  "instagram": "yoeechee",
+  "tagline": "Takeout sushi boxes and donburi on Fillmore Street.",
+  "sections": [
+    {
+      "name": "Sushi",
+      "items": [
+        [
+          "Yoeechee omakase",
+          "",
+          5300
+        ],
+        [
+          "Seven-piece sushi set",
+          "",
+          3300
+        ],
+        [
+          "Six-piece tuna nigiri",
+          "",
+          2900
+        ],
+        [
+          "Six-piece salmon nigiri",
+          "",
+          2500
+        ],
+        [
+          "Giant salmon nigiri",
+          "",
+          3200
+        ],
+        [
+          "Handroll trio",
+          "",
+          2500
+        ],
+        [
+          "Six-piece tuna and salmon",
+          "",
+          2700
+        ]
+      ]
+    },
+    {
+      "name": "Donburi and rolls",
+      "items": [
+        [
+          "Sake don",
+          "",
+          2700
+        ],
+        [
+          "Tekka don",
+          "",
+          3500
+        ],
+        [
+          "Salmon ebi don",
+          "",
+          2000
+        ],
+        [
+          "Mini chirashi",
+          "",
+          2300
+        ],
+        [
+          "Miso salmon collar bento",
+          "",
+          1800
+        ],
+        [
+          "Uni ebi chirashi",
+          "",
+          3500
+        ],
+        [
+          "Futo maki",
+          "",
+          1700
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://order.toasttab.com/online/yoeechee-1552-fillmore-street",
+  "siteCta": "Order pickup",
+  "hours": "Tue–Sun 11 am–6 pm",
+  "phone": "415-463-8126",
+  "menuNote": "Selected sushi sets, rice bowls and rolls. The pickup menu lists daily availability."
+},
+{
+  "slug": "pho-kim-long-san-jose",
+  "name": "Pho Kim Long",
+  "label": "Pho Kim Long",
+  "cuisine": "Vietnamese pho",
+  "color": "#8e2567",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "pho-kim-long-san-jose-v130",
+  "address": "2082 N Capitol Ave, San Jose, CA 95132",
+  "site": "https://phokimlongsanjose.com/",
+  "instagram": "phokimlongsj",
+  "tagline": "Vietnamese noodle soups, rice plates and turmeric fish on North Capitol Avenue.",
+  "siteCta": "Visit Pho Kim Long",
+  "phone": "408-946-2181",
+  "hours": "Daily 9 am–9 pm",
+  "panels": [
+    {
+      "head": "Menu",
+      "body": [],
+      "links": [
+        {
+          "label": "See noodle soups, rice plates and more",
+          "href": "https://phokimlongsanjose.com/menu/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "the-laundromat-sf",
+  "name": "The Laundromat",
+  "label": "Laundromat",
+  "cuisine": "Bagels and pizza",
+  "color": "#35302b",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "the-laundromat-sf-v130",
+  "address": "3725 Balboa Street, San Francisco, CA 94121",
+  "site": "https://www.thelaundromatsf.com/",
+  "instagram": "thelaundromatsf",
+  "tagline": "House-made bagels in the morning and pizza in the evening on Balboa Street.",
+  "sections": [
+    {
+      "name": "Bagels",
+      "items": [
+        [
+          "Single bagel",
+          "",
+          300
+        ],
+        [
+          "Half dozen",
+          "",
+          1600
+        ],
+        [
+          "Baker’s dozen",
+          "",
+          3000
+        ]
+      ]
+    },
+    {
+      "name": "Cream cheese",
+      "items": [
+        [
+          "Plain",
+          "",
+          600
+        ],
+        [
+          "Scallion",
+          "",
+          700
+        ],
+        [
+          "Calabrian chili",
+          "",
+          700
+        ],
+        [
+          "Pickled onion and caper",
+          "",
+          700
+        ],
+        [
+          "Smoked salmon with dill",
+          "",
+          900
+        ]
+      ]
+    }
+  ],
+  "siteCta": "Visit The Laundromat",
+  "phone": "415-379-4340",
+  "hours": "Wed–Sat bagels from 8 am; Sun from 9 am. Pizza from 5 pm Wed–Sun.",
+  "menuNote": "Bagels and spreads are sold separately. The dinner menu changes.",
+  "panels": [
+    {
+      "head": "Menus",
+      "body": [],
+      "links": [
+        {
+          "label": "Bagels and spreads",
+          "href": "https://www.thelaundromatsf.com/hours-1"
+        },
+        {
+          "label": "Dinner and pizza",
+          "href": "https://www.thelaundromatsf.com/menu"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "z-and-y-restaurant",
+  "name": "Z & Y Restaurant",
+  "label": "Z & Y",
+  "cuisine": "Sichuan Chinese",
+  "color": "#8d2831",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "z-and-y-restaurant-v130",
+  "address": "655 Jackson Street, San Francisco, CA 94133",
+  "site": "https://www.zandyrestaurant.com/",
+  "instagram": "zandyrestaurant",
+  "tagline": "Sichuan cooking on Jackson Street in Chinatown.",
+  "siteCta": "Visit Z & Y Restaurant",
+  "panels": [
+    {
+      "head": "Sichuan menu",
+      "body": [],
+      "links": [
+        {
+          "label": "See the restaurant menu",
+          "href": "https://www.zandyrestaurant.com/menu/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "cajun-crackn-milpitas",
+  "name": "Cajun Crack’n — Milpitas",
+  "label": "Cajun Crack’n",
+  "cuisine": "Cajun seafood boil",
+  "color": "#284359",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "cajun-crackn-milpitas-v130",
+  "address": "275 Ranch Drive, Milpitas, CA 95035",
+  "site": "https://www.cajuncracknmilpitas.com/",
+  "instagram": "cajuncrackn.milpitas",
+  "tagline": "Cajun seafood boils at the Milpitas location on Ranch Drive.",
+  "siteCta": "Visit the Milpitas restaurant",
+  "panels": [
+    {
+      "head": "Seafood menu",
+      "body": [],
+      "links": [
+        {
+          "label": "See the Milpitas menu",
+          "href": "https://www.cajuncracknmilpitas.com/menu.php"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "north-beach-pizza-san-mateo",
+  "name": "North Beach Pizza — San Mateo",
+  "label": "North Beach Pizza",
+  "cuisine": "Pizza",
+  "color": "#31594e",
+  "category": "Dining",
+  "prep": 0,
+  "items": [],
+  "icon": "north-beach-pizza-san-mateo-v130",
+  "address": "240 East 3rd Avenue, San Mateo, CA 94401",
+  "site": "https://northbeachpizza.com/san-mateo",
+  "instagram": "northbeachpizzaofficial",
+  "tagline": "Pizza and pasta at the downtown San Mateo location.",
+  "siteCta": "Visit the San Mateo location",
+  "panels": [
+    {
+      "head": "Menu",
+      "body": [],
+      "links": [
+        {
+          "label": "See the San Mateo menu",
+          "href": "https://northbeachpizza.com/menu/san-mateo"
+        }
+      ]
+    }
+  ]
+},
+
 ]

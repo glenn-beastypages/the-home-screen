@@ -364,7 +364,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "jc.eeats",
     "name": "@jc.eeats",
     "label": "jc.eeats",
-    "icon": "foodie-jc-eeats-v98"
+    "icon": "foodie-jceeats-v130"
   },
   {
     "handle": "monaeatsnearby",
@@ -545,7 +545,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "janeethefoodie",
     "name": "Jane",
-    "label": "Jane"
+    "label": "Jane",
+    "icon": "foodie-janeethefoodie-v130"
   },
   {
     "handle": "peggy_shoo",
@@ -1194,7 +1195,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "kitkatvales",
     "name": "@kitkatvales",
     "label": "kitkatvales",
-    "icon": "influencer-kitkatvales-v123"
+    "icon": "foodie-kitkatvales-v130"
   },
   {
     "handle": "foodwookie",
@@ -1784,7 +1785,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "keyanajoooon",
     "name": "@keyanajoooon",
     "label": "keyanajoooon",
-    "icon": "foodie-keyanajoooon-v109"
+    "icon": "foodie-keyanajoooon-v130"
   },
   {
   "handle": "bvddiebri",
@@ -1854,7 +1855,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "handle": "nomwithelaine",
   "name": "Elaine",
   "label": "Elaine",
-  "icon": "foodie-nomwithelaine-v112"
+  "icon": "foodie-nomwithelaine-v130"
 },
 {
   "handle": "chefemaristevens",
@@ -2071,7 +2072,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   // Batch 116 — Glenn’s November 13 intake.
   {"handle": "meenaaqureshi", "name": "@meenaaqureshi", "label": "meenaaqureshi", "icon": "foodie-meenaaqureshi-v116"},
   {"handle": "masstache_", "name": "@masstache_", "label": "masstache_", "icon": "foodie-masstache-v116"},
-  {"handle": "diorabelle", "name": "@diorabelle", "label": "diorabelle", "icon": "foodie-diorabelle-v116"},
+  {"handle": "diorabelle", "name": "@diorabelle", "label": "diorabelle", "icon": "foodie-diorabelle-v130"},
   // Batch 119 creator profiles.
   {"handle": "andoperdidatraveling", "name": "@andoperdidatraveling", "label": "andoperdidatravelin", "icon": "foodie-andoperdidatraveling-v119"},
   {"handle": "foodiemompickyfam", "name": "@foodiemompickyfam", "label": "foodiemompickyfam", "icon": "foodie-foodiemompickyfam-v119"},
@@ -2151,6 +2152,13 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "natashabythebay", "name": "@natashabythebay", "label": "natashabythebay", "icon": "foodie-natashabythebay-v128"},
   {"handle": "liveitholistic", "name": "Marc Capistrano", "label": "liveitholistic", "icon": "foodie-liveitholistic-v129"},
   {"handle": "sundropeats", "name": "Sarah · Sundrop Eats", "label": "sundropeats", "icon": "foodie-sundropeats-v129"},
+  {"handle": "alexandereatsworld", "name": "Alex Ander", "label": "alexandereatsworld", "icon": "foodie-alexandereatsworld-v130"},
+  {"handle": "fashionbyally", "name": "Ally Chen", "label": "fashionbyally", "icon": "foodie-fashionbyally-v130"},
+  {"handle": "sfstandard", "name": "The San Francisco Standard", "label": "SF Standard", "icon": "foodie-sfstandard-v130", "cuisine": "Local news and food reporting"},
+  {"handle": "lisa_vs_food", "name": "Lisa Ngu-Wins", "label": "lisa_vs_food", "icon": "foodie-lisavsfood-v130"},
+  {"handle": "meggyeatz", "name": "Meg", "label": "meggyeatz", "icon": "foodie-meggyeatz-v130"},
+  {"handle": "jakinbaycon", "name": "Jakin", "label": "jakinbaycon", "icon": "foodie-jakinbaycon-v130"},
+  {"handle": "davefoodeats", "name": "@davefoodeats", "label": "davefoodeats", "icon": "foodie-davefoodeats-v130"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3139,6 +3147,34 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "mayakay.official", "place": "Larb Thai Food & Tapas", "city": "El Cerrito", "brand": "b_larbthaitapas", "reel": "https://www.instagram.com/reel/DgGU3kTSWxH/", "credit": "Filmed by @mayakay.official at Larb Thai Food & Tapas in El Cerrito.", "clip": true},
   {"by": "irenedony", "place": "Garlic High — Sunnyvale", "city": "Sunnyvale", "brand": "b_garlichighsunnyvale", "reel": "https://www.instagram.com/reel/DgFwR0GtSb9/", "credit": "Filmed by @irenedony at Garlic High in Sunnyvale.", "clip": true},
   {"by": "sundropeats", "place": "Nan Hot Pot", "city": "San Francisco", "brand": "b_nanhotpotsf", "reel": "https://www.instagram.com/reel/DgGQJNiSCv-/", "credit": "Filmed by @sundropeats at Nan Hot Pot in San Francisco.", "clip": "creator"},
+
+  // Batch 130 — November 24.
+  {"by": "mukbangyourmama", "place": "Z & Y Restaurant", "city": "San Francisco", "brand": "b_zandyrestaurant", "reel": "https://www.instagram.com/reel/DgGGPXKia9R/", "credit": "Review by @mukbangyourmama at Z & Y Restaurant, San Francisco.", "clip": true},
+  {"by": "hungere.for.diy", "place": "Cajun Crack’n — Milpitas", "city": "Milpitas", "brand": "b_cajuncracknmilpitas", "reel": "https://www.instagram.com/reel/DgFvcAHJ3fh/", "credit": "Review by @hungere.for.diy at Cajun Crack’n — Milpitas, Milpitas.", "clip": true},
+  {"by": "sherryeatworld", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/C39WCbYr1iq/", "credit": "Review by @sherryeatworld at Niku Steakhouse, San Francisco.", "clip": true},
+  {"by": "heatherr.eats", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/DTwNFbPjIWW/", "credit": "Review by @heatherr.eats at Niku Steakhouse, San Francisco. The creator disclosed an invitation.", "clip": true},
+  {"by": "thetastebud", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/C36VQ19v7dH/", "credit": "Review by @thetastebud at Niku Steakhouse, San Francisco.", "clip": true},
+  {"by": "thefoodiemon", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/C5XXBVxLVxy/", "credit": "Review by @thefoodiemon at Niku Steakhouse, San Francisco.", "clip": "creator"},
+  {"by": "alexandereatsworld", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/DbBXlcZxQAX/", "credit": "Review by @alexandereatsworld at Niku Steakhouse, San Francisco.", "clip": "creator"},
+  {"by": "fashionbyally", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/C2-V2VKx2q_/", "credit": "Review by @fashionbyally at Niku Steakhouse, San Francisco.", "clip": "creator"},
+  {"by": "festusfeasts", "place": "ACRE Kitchen & Bar", "city": "Oakland", "brand": "b_acrekitchenandbar", "reel": "https://www.instagram.com/reel/DgGyGTxAG9r/", "credit": "Review by @festusfeasts at ACRE Kitchen & Bar, Oakland. Featuring Kristi Yamaguchi.", "clip": true},
+  {"by": "nomwithelaine", "place": "North Beach Pizza — San Mateo", "city": "San Mateo", "brand": "b_northbeachpizzasanmateo", "reel": "https://www.instagram.com/reel/DgGXobbStSE/", "credit": "Review by @nomwithelaine at North Beach Pizza — San Mateo, San Mateo.", "clip": true},
+  {"by": "hallojessa", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/DgGJnNAPoMp/", "credit": "Review by @hallojessa at Nono’s Doughnuts & Cafe, Berkeley.", "clip": "creator"},
+  {"by": "janeethefoodie", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/DZDJ1lrqtyH/", "credit": "Review by @janeethefoodie at Yoeechee, San Francisco.", "clip": true},
+  {"by": "jc.eeats", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/DajYmG5pvtc/", "credit": "Review by @jc.eeats at Yoeechee, San Francisco.", "clip": true},
+  {"by": "sfstandard", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/Deh29ngOqVX/", "credit": "Reported by @astridkane for @sfstandard. Edited by @danielleojedaa.", "clip": true},
+  {"by": "lisa_vs_food", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/DecT11siMY1/", "credit": "Review by @lisa_vs_food at Yoeechee, San Francisco.", "clip": true},
+  {"by": "itsjessandsteven", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/DeFNLL8hnYO/", "credit": "Review by @itsjessandsteven at Yoeechee, San Francisco.", "clip": "creator"},
+  {"by": "kitkatvales", "place": "Yoeechee", "city": "San Francisco", "brand": "b_yoeecheesf", "reel": "https://www.instagram.com/reel/DeAwBjePvam/", "credit": "Review by @kitkatvales at Yoeechee, San Francisco.", "clip": "creator"},
+  {"by": "meggyeatz", "place": "Pho Kim Long", "city": "San Jose", "brand": "b_phokimlongsanjose", "reel": "https://www.instagram.com/reel/DdhaB-NyTHY/", "credit": "Review by @meggyeatz at Pho Kim Long, San Jose.", "clip": true},
+  {"by": "foodie.envy", "place": "Pho Kim Long", "city": "San Jose", "brand": "b_phokimlongsanjose", "reel": "https://www.instagram.com/reel/DdZyeLDylN-/", "credit": "Review by @foodie.envy at Pho Kim Long, San Jose.", "clip": true},
+  {"by": "jakinbaycon", "place": "Pho Kim Long", "city": "San Jose", "brand": "b_phokimlongsanjose", "reel": "https://www.instagram.com/reel/Da9pD6CISTg/", "credit": "Review by @jakinbaycon at Pho Kim Long, San Jose. The post is tagged as a collaboration.", "clip": true},
+  {"by": "eatswithfoodie", "place": "Pho Kim Long", "city": "San Jose", "brand": "b_phokimlongsanjose", "reel": "https://www.instagram.com/reel/DaVT5XkOIA0/", "credit": "Review by @eatswithfoodie at Pho Kim Long, San Jose.", "clip": true},
+  {"by": "davefoodeats", "place": "Pho Kim Long", "city": "San Jose", "brand": "b_phokimlongsanjose", "reel": "https://www.instagram.com/reel/DaMC7Wbv6DH/", "credit": "Review by @davefoodeats at Pho Kim Long, San Jose.", "clip": "creator"},
+  {"by": "foodandsachi", "place": "Hed Verythai — Japantown", "city": "San Francisco", "brand": "b_hedverythaijapantown", "reel": "https://www.instagram.com/reel/Df-dzmIviBU/", "credit": "Review by @foodandsachi at Hed Verythai — Japantown, San Francisco.", "clip": "creator"},
+  {"by": "keneats_", "place": "Slice House by Tony Gemignani — Brentwood", "city": "Brentwood", "brand": "b_slicehousebrentwood", "reel": "https://www.instagram.com/reel/Df3EXquB54U/", "credit": "Review by @keneats_ at Slice House by Tony Gemignani — Brentwood, Brentwood. The creator disclosed an invitation.", "clip": true},
+  {"by": "keyanajoooon", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/DbHZ8Japk5S/", "credit": "Review by @keyanajoooon at Niku Steakhouse, San Francisco.", "clip": "creator"},
+  {"by": "grubwitmike", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/DgGskKmR9DV/", "credit": "Review by @grubwitmike at Bun Appétit Donuts, Fremont.", "clip": true},
 ]
 
 /*
