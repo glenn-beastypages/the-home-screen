@@ -1,7 +1,36 @@
 import { useState, type FormEvent } from "react";
-import { Package, ShieldCheck } from "lucide-react";
+import { MapPin, Package, ShieldCheck, Truck } from "lucide-react";
 import { api, money, time } from "./api";
 import { ErrorBox } from "./ui";
+
+type DeliveryMethod = "shipping" | "pickup";
+
+export function DeliveryMethodPicker({
+  method,
+  onChange,
+}: {
+  method: DeliveryMethod;
+  onChange: (method: DeliveryMethod) => void;
+}) {
+  return (
+    <fieldset className="delivery-picker">
+      <legend>How would you like to get it?</legend>
+      {(["shipping", "pickup"] as const).map((value) => (
+        <label key={value}>
+          <input
+            type="radio"
+            name="method"
+            value={value}
+            checked={method === value}
+            onChange={() => onChange(value)}
+          />
+          {value === "shipping" ? <Truck size={20} /> : <MapPin size={20} />}
+          {value === "shipping" ? "Shipping" : "Local pickup"}
+        </label>
+      ))}
+    </fieldset>
+  );
+}
 
 export type TradeOptions = {
   shipping: boolean;

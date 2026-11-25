@@ -16,6 +16,7 @@ import {
   Maximize2,
   Grid2X2,
   MapPin,
+  Package,
 } from "lucide-react";
 import {
   api,
@@ -125,18 +126,11 @@ export function Home() {
   return (
     <div className="market-home">
       <Link className="closet-announcement" to="/closets-for-a-cause">
-        Closets for a Cause <span>Meet the concierge <ArrowRight size={14} /></span>
+        Closets for a Cause{" "}
+        <span>
+          Meet the concierge <ArrowRight size={14} />
+        </span>
       </Link>
-      <nav className="market-categories" aria-label="Shop by category">
-        <Link className="market-all" to="/explore">
-          <Grid2X2 size={16} /> All goods
-        </Link>
-        {categories?.items.map((name) => (
-          <Link key={name} to={"/explore?category=" + encodeURIComponent(name)}>
-            {name}
-          </Link>
-        ))}
-      </nav>
       <section className="market-masthead" aria-labelledby="market-title">
         <div className="market-intro">
           <h1
@@ -165,6 +159,16 @@ export function Home() {
           />
         </div>
       </section>
+      <nav className="market-categories" aria-label="Shop by category">
+        <Link className="market-all" to="/explore">
+          <Grid2X2 size={16} /> All goods
+        </Link>
+        {categories?.items.map((name) => (
+          <Link key={name} to={"/explore?category=" + encodeURIComponent(name)}>
+            {name}
+          </Link>
+        ))}
+      </nav>
       <section
         className="section market-feed"
         aria-labelledby="new-listings-title"
@@ -215,11 +219,27 @@ export function Home() {
                 className="seller-discovery-card"
                 key={seller.id}
               >
-                <Avatar profile={seller} size={47} />
+                <div className="seller-stock" aria-hidden="true">
+                  {data?.items
+                    .filter(
+                      (item) =>
+                        item.owner.id === seller.id && item.photos.length,
+                    )
+                    .slice(0, 3)
+                    .map((item) => (
+                      <img
+                        key={item.id}
+                        src={listingPhotoUrl(item, item.photos[0], true)}
+                        alt=""
+                        loading="lazy"
+                      />
+                    ))}
+                </div>
+                <Avatar profile={seller} size={36} />
                 <div>
                   <strong>{seller.name}</strong>
-                  <span>@{seller.username}</span>
-                  <small>{seller.location || "Newly listed goods"}</small>
+                  {!seller.isDemo && <span>@{seller.username}</span>}
+                  {seller.location && <small>{seller.location}</small>}
                 </div>
                 <ArrowUpRight size={17} />
               </Link>
@@ -833,7 +853,7 @@ function ListingOptions({
 }
 export function ItemPage({ id }: { id: string }) {
   const { user, requireUser, go, toast } = useApp();
-  const { data, error, errorStatus, loading, reload } = useResource<{
+  const { data, setData, error, errorStatus, loading, reload } = useResource<{
     listing: Listing;
   }>("/listings/" + id);
   const [index, setIndex] = useState(0),
@@ -842,6 +862,8 @@ export function ItemPage({ id }: { id: string }) {
       () => new URLSearchParams(window.location.search).get("offer") === "1",
     ),
     [busy, setBusy] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const l = data?.listing;
   const shelf = useResource<Page<Listing>>(
     l && !l.isHidden && ["active", "reserved"].includes(l.status)
@@ -862,6 +884,7 @@ export function ItemPage({ id }: { id: string }) {
   const checkout = useResource<{ available: boolean; shipping?: boolean }>(
     checkoutEligible ? "/purchases/options/" + id : null,
   );
+  const checkingPurchase = checkoutEligible && !checkout.data;
   const canBuy = checkoutEligible && checkout.data?.available;
   useEffect(() => {
     if (l && ["active", "reserved"].includes(l.status) && !l.isHidden)
@@ -888,6 +911,22 @@ export function ItemPage({ id }: { id: string }) {
       setBusy(false);
     }
   };
+  useEffect(() => {
+    const count = l?.photos.length ?? 0;
+    if (!fullscreen || count < 2) return;
+    const changePhoto = (event: KeyboardEvent) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      setIndex((current) =>
+        Math.min(
+          count - 1,
+          Math.max(0, current + (event.key === "ArrowRight" ? 1 : -1)),
+        ),
+      );
+    };
+    document.addEventListener("keydown", changePhoto);
+    return () => document.removeEventListener("keydown", changePhoto);
+  }, [fullscreen, l?.photos.length]);
   const share = async () => {
     try {
       const result = await shareUrl(location.href, l?.title || "BSTY Goods");
@@ -898,12 +937,22 @@ export function ItemPage({ id }: { id: string }) {
     }
   };
   const save = async () => {
-    if (!l || !requireUser()) return;
+    if (!l || saving || !requireUser()) return;
+    setSaving(true);
     try {
-      await api("/favorites/" + id, "PUT", { saved: !l.isFavorite });
-      reload();
+      const { saved } = await api<{ saved: boolean }>(
+        "/favorites/" + id,
+        "PUT",
+        { saved: !l.isFavorite },
+      );
+      setData(
+        (current) =>
+          current && { listing: { ...current.listing, isFavorite: saved } },
+      );
     } catch (e) {
       toast((e as Error).message);
+    } finally {
+      setSaving(false);
     }
   };
   if (loading) return <Loading />;
@@ -923,22 +972,26 @@ export function ItemPage({ id }: { id: string }) {
   const reserved = !l.isHidden && l.status === "reserved";
   const canStartConversation = staffed && (available || reserved);
   const messageFirst =
-    canStartConversation && !canBuy && !(available && l.tradeEnabled);
+    canStartConversation &&
+    !canBuy &&
+    !checkingPurchase &&
+    !(available && l.tradeEnabled);
   const demoMessage = !staffed && l.isDemo && available;
-  let touchStart: { x: number; y: number } | null = null;
   const gallery = (
     <div
       className={"gallery " + (fullscreen ? "gallery-fullscreen" : "")}
       onTouchStart={(e) => {
-        touchStart =
+        touchStart.current =
           e.touches.length === 1
             ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
             : null;
       }}
       onTouchEnd={(e) => {
-        if (!touchStart || e.touches.length > 0) return;
-        const delta = e.changedTouches[0].clientX - touchStart.x;
-        const vertical = e.changedTouches[0].clientY - touchStart.y;
+        const start = touchStart.current;
+        touchStart.current = null;
+        if (!start || e.touches.length > 0) return;
+        const delta = e.changedTouches[0].clientX - start.x;
+        const vertical = e.changedTouches[0].clientY - start.y;
         if (Math.abs(delta) > 45 && Math.abs(delta) > Math.abs(vertical))
           setIndex((i) =>
             Math.max(
@@ -958,8 +1011,11 @@ export function ItemPage({ id }: { id: string }) {
       ) : (
         <Photo listing={l} />
       )}
+      {!fullscreen && l.code && (
+        <span className="gallery-ticket shelf-ticket">Shelf {l.code}</span>
+      )}
       {l.photos.length > 1 && (
-        <span className="gallery-counter">
+        <span className="gallery-counter" aria-live="polite">
           {index + 1} / {l.photos.length}
         </span>
       )}
@@ -995,149 +1051,45 @@ export function ItemPage({ id }: { id: string }) {
   return (
     <>
       <div className="item-topline">
-        <Link className="back-link" to="/explore">
-          <ChevronLeft size={18} /> Marketplace
-        </Link>
-        <div className="actions">
-          <button
-            className="text-button"
-            aria-pressed={l.isFavorite}
-            onClick={save}
-          >
-            <Heart size={17} fill={l.isFavorite ? "currentColor" : "none"} />
-            {l.isFavorite ? "Saved" : "Save"}
-          </button>
-          <ListingOptions id={l.id} share={share} />
-        </div>
+        <nav className="listing-path" aria-label="Breadcrumb">
+          <Link to="/explore">Marketplace</Link>
+          {l.category && (
+            <>
+              <ChevronRight aria-hidden="true" size={13} />
+              <Link to={"/explore?category=" + encodeURIComponent(l.category)}>
+                {l.category}
+              </Link>
+            </>
+          )}
+          <ChevronRight aria-hidden="true" size={13} />
+          <span aria-current="page">{l.title || "Untitled draft"}</span>
+        </nav>
+        <ListingOptions id={l.id} share={share} />
       </div>
       <div className="item-layout">
         <div className="item-visual">
-          {gallery}
-          {l.photos.length > 1 && (
-            <div className="gallery-thumbs">
-              {l.photos.map((p, i) => (
-                <button
-                  key={p.id}
-                  onClick={() => setIndex(i)}
-                  className={i === index ? "selected" : ""}
-                  aria-label={"View photo " + (i + 1)}
-                >
-                  <img src={listingPhotoUrl(l, p, true)} alt="" />
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-        <section className="item-info">
-          <div className="item-kicker">
-            <span className="code-pill">Shelf {l.code}</span>
-            <Status value={l.status} />
-          </div>
-          <p className="item-subtitle">
-            {l.category} <span>·</span> {l.condition}
-          </p>
-          <h1>{l.title || "Untitled draft"}</h1>
-          <div className="item-price">
-            {money(l.priceCents)}
-            {l.priceCents !== null && staffed && l.tradeEnabled && (
-              <small>Listed value</small>
+          <div className="listing-gallery" aria-label="Listing gallery">
+            {gallery}
+            {l.photos.length > 1 && (
+              <div
+                className="gallery-thumbs"
+                role="group"
+                aria-label="Choose a photo"
+              >
+                {l.photos.map((p, i) => (
+                  <button
+                    key={p.id}
+                    onClick={() => setIndex(i)}
+                    className={i === index ? "selected" : ""}
+                    aria-pressed={i === index}
+                    aria-label={"View photo " + (i + 1)}
+                  >
+                    <img src={listingPhotoUrl(l, p, true)} alt="" />
+                  </button>
+                ))}
+              </div>
             )}
           </div>
-          {!owned && staffed && available && l.priceCents !== null && (
-            <p className="muted small-copy">
-              {canBuy
-                ? checkout.data?.shipping
-                  ? "Pay online and choose shipping or local pickup."
-                  : "Pay online and arrange local pickup with the seller."
-                : l.tradeEnabled
-                  ? "Message the seller if you’d like to buy."
-                  : "Arrange the purchase directly with the seller."}
-            </p>
-          )}
-          {!owned && !available && (
-            <p className="muted small-copy">
-              {reserved
-                ? "This item is currently reserved."
-                : "This item is no longer available."}
-            </p>
-          )}
-          {!staffed && l.isDemo && available && (
-            <>
-              <p className="muted small-copy">
-                Simulated seller · Shipping or local pickup. No payment
-                required.
-              </p>
-              <div className="item-actions item-actions-transaction">
-                {l.priceCents !== null && (
-                  <Link
-                    className="button full"
-                    to={practicePath("purchase", l.id)}
-                  >
-                    Buy for {money(l.priceCents)}
-                  </Link>
-                )}
-                <Link
-                  className="button secondary full"
-                  to={practicePath("trade", l.id)}
-                >
-                  <ArrowLeftRight size={19} /> Make a trade offer
-                </Link>
-              </div>
-            </>
-          )}
-          {owned && isTradeable(l) && (
-            <div className="trade-callout">
-              <ArrowLeftRight size={19} />
-              <div>
-                <strong>Open to trade</strong>
-              </div>
-            </div>
-          )}
-          {(owned || canBuy || canStartConversation) && (
-            <div
-              className={
-                owned ? "item-actions" : "item-actions item-actions-transaction"
-              }
-            >
-              {canBuy && (
-                <BuyAction
-                  listing={l}
-                  shipping={Boolean(checkout.data?.shipping)}
-                />
-              )}
-              {owned ? (
-                <Link className="button full" to={"/sell/" + l.id}>
-                  Manage this listing
-                </Link>
-              ) : (
-                <>
-                  {l.tradeEnabled && available && (
-                    <button
-                      className={
-                        canBuy ? "button secondary full" : "button full"
-                      }
-                      onClick={() => {
-                        if (requireUser("/items/" + l.id + "?offer=1"))
-                          setTrade(true);
-                      }}
-                    >
-                      <ArrowLeftRight size={19} /> Make a trade offer
-                    </button>
-                  )}
-                  {messageFirst && (
-                    <button
-                      className="button full"
-                      disabled={busy}
-                      onClick={message}
-                    >
-                      {busy ? <Spinner /> : <MessageCircle size={18} />} Message
-                      seller
-                    </button>
-                  )}
-                </>
-              )}
-            </div>
-          )}
           <div className="listing-seller">
             <Seller profile={l.owner} />
             {!owned &&
@@ -1159,35 +1111,193 @@ export function ItemPage({ id }: { id: string }) {
                 </button>
               ) : null)}
           </div>
-          <div className="item-detail-block">
-            <h3>Description</h3>
-            <p className="preserve-lines">{l.description}</p>
-            {l.sourceUrl && (
-              <a
-                className="text-button"
-                href={l.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+        </div>
+        <section className="item-info" aria-labelledby="listing-title">
+          <div className="buy-summary">
+            <div className="listing-title-row">
+              <h1 id="listing-title">{l.title || "Untitled draft"}</h1>
+              <button
+                className="listing-save icon-button"
+                aria-label={l.isFavorite ? "Saved" : "Save"}
+                title={l.isFavorite ? "Saved" : "Save listing"}
+                aria-pressed={l.isFavorite}
+                disabled={saving}
+                onClick={save}
               >
-                Original Facebook Marketplace listing <ArrowUpRight size={14} />
-              </a>
+                <Heart
+                  size={20}
+                  fill={l.isFavorite ? "currentColor" : "none"}
+                />
+              </button>
+            </div>
+            <div className="listing-condition">
+              {[l.condition, l.category].filter(Boolean).join(" · ")}
+              {!available && (
+                <Status value={l.isHidden ? "hidden" : l.status} />
+              )}
+            </div>
+            <div className="item-price">
+              {money(l.priceCents)}
+              {l.priceCents !== null && staffed && l.tradeEnabled && (
+                <small>Listed value</small>
+              )}
+            </div>
+            {checkingPurchase &&
+              (checkout.error ? (
+                <ErrorBox error={checkout.error} retry={checkout.reload} />
+              ) : (
+                <p className="muted small-copy" role="status">
+                  Checking checkout availability…
+                </p>
+              ))}
+            {!owned &&
+              staffed &&
+              available &&
+              !checkingPurchase &&
+              l.priceCents !== null && (
+                <p className="muted small-copy">
+                  {canBuy
+                    ? checkout.data?.shipping
+                      ? "Pay online and choose shipping or local pickup."
+                      : "Pay online and arrange local pickup with the seller."
+                    : l.tradeEnabled
+                      ? "Message the seller if you’d like to buy."
+                      : "Arrange the purchase directly with the seller."}
+                </p>
+              )}
+            {!owned && !available && (
+              <p className="muted small-copy">
+                {reserved
+                  ? "This item is currently reserved."
+                  : "This item is no longer available."}
+              </p>
+            )}
+            {!staffed && l.isDemo && available && (
+              <>
+                <p className="muted small-copy listing-delivery">
+                  <Package size={17} aria-hidden="true" />
+                  Simulated seller · Shipping or local pickup. No payment
+                  required.
+                </p>
+                <div className="item-actions item-actions-transaction">
+                  {l.priceCents !== null && (
+                    <Link
+                      className="button full"
+                      to={practicePath("purchase", l.id)}
+                    >
+                      Buy for {money(l.priceCents)}
+                    </Link>
+                  )}
+                  <Link
+                    className="button secondary full"
+                    to={practicePath("trade", l.id)}
+                  >
+                    <ArrowLeftRight size={19} /> Make a trade offer
+                  </Link>
+                </div>
+              </>
+            )}
+            {owned && isTradeable(l) && (
+              <div className="trade-callout">
+                <ArrowLeftRight size={19} />
+                <div>
+                  <strong>Open to trade</strong>
+                </div>
+              </div>
+            )}
+            {(owned || canBuy || canStartConversation) && (
+              <div
+                className={
+                  owned
+                    ? "item-actions"
+                    : "item-actions item-actions-transaction"
+                }
+              >
+                {canBuy && (
+                  <BuyAction
+                    listing={l}
+                    shipping={Boolean(checkout.data?.shipping)}
+                  />
+                )}
+                {owned ? (
+                  <Link className="button full" to={"/sell/" + l.id}>
+                    Manage this listing
+                  </Link>
+                ) : (
+                  <>
+                    {l.tradeEnabled && available && (
+                      <button
+                        className={
+                          canBuy ? "button secondary full" : "button full"
+                        }
+                        onClick={() => {
+                          if (requireUser("/items/" + l.id + "?offer=1"))
+                            setTrade(true);
+                        }}
+                      >
+                        <ArrowLeftRight size={19} /> Make a trade offer
+                      </button>
+                    )}
+                    {messageFirst && (
+                      <button
+                        className="button full"
+                        disabled={busy}
+                        onClick={message}
+                      >
+                        {busy ? <Spinner /> : <MessageCircle size={18} />}{" "}
+                        Message seller
+                      </button>
+                    )}
+                  </>
+                )}
+              </div>
             )}
           </div>
-          {isTradeable(l) && l.tradePreferences && (
-            <div className="item-detail-block">
-              <h3>Open to trading for</h3>
-              <p>{l.tradePreferences}</p>
-            </div>
-          )}
-          <div className="item-detail-block item-facts">
-            <div>
-              <span>Listed</span>
-              <strong>{new Date(l.createdAt).toLocaleDateString()}</strong>
-            </div>
-            <div>
-              <span>Item reference</span>
-              <small className="monospace">{l.id.slice(0, 12)}</small>
-            </div>
+          <div className="listing-details">
+            {l.description && (
+              <section className="item-detail-block">
+                <h2>Description</h2>
+                <p className="preserve-lines">{l.description}</p>
+              </section>
+            )}
+            {isTradeable(l) && l.tradePreferences && (
+              <section className="item-detail-block">
+                <h2>Open to trading for</h2>
+                <p>{l.tradePreferences}</p>
+              </section>
+            )}
+            <section className="item-detail-block">
+              <h2>Item details</h2>
+              <dl className="listing-specs">
+                <dt>Shelf position</dt>
+                <dd>{l.code}</dd>
+                <dt>Listed</dt>
+                <dd>
+                  {new Date(l.createdAt).toLocaleDateString(undefined, {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </dd>
+                {l.sourceUrl && (
+                  <>
+                    <dt>Source</dt>
+                    <dd>
+                      <a
+                        href={l.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Original Facebook Marketplace listing{" "}
+                        <ArrowUpRight size={14} />
+                      </a>
+                    </dd>
+                  </>
+                )}
+                <dt>Item reference</dt>
+                <dd>{l.id.slice(0, 12)}</dd>
+              </dl>
+            </section>
           </div>
         </section>
       </div>
@@ -1265,7 +1375,7 @@ export function SellerPage({ id }: { id: string }) {
         <div>
           <span className="eyebrow">The seller’s shelf</span>
           <h1>{p.name}</h1>
-          <span className="muted">@{p.username}</span>
+          {!p.isDemo && <span className="muted">@{p.username}</span>}
           {p.bio && <p>{p.bio}</p>}
           <div className="profile-facts">
             {p.location && (

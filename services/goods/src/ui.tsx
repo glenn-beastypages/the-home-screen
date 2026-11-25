@@ -214,8 +214,11 @@ export function Seller({
         <strong>{profile.name || profile.username}</strong>
         {!small && (
           <small>
-            @{profile.username || "member"}
-            {profile.location ? " · " + profile.location : ""}
+            {profile.isDemo
+              ? profile.location || "View seller’s shelf"
+              : "@" +
+                (profile.username || "member") +
+                (profile.location ? " · " + profile.location : "")}
           </small>
         )}
       </span>
@@ -429,14 +432,9 @@ export function ProductCard({
         >
           <Heart size={18} fill={saved ? "currentColor" : "none"} />
         </button>
-        {listing.code && (
-          <span
-            className="shelf-ticket"
-            aria-label={"Seller shelf position " + listing.code}
-          >
-            Shelf {listing.code}
-          </span>
-        )}
+        <strong className="card-price-ticket">
+          {moneyForCard(listing.priceCents)}
+        </strong>
         {listing.status !== "active" && (
           <span className="image-status">{listing.status}</span>
         )}
@@ -445,14 +443,19 @@ export function ProductCard({
         <Link className="product-title" to={"/items/" + listing.id}>
           {listing.title || "Untitled draft"}
         </Link>
-        <strong className="product-price">
-          {moneyForCard(listing.priceCents)}
-        </strong>
       </div>
       <div className="product-facts">
         {listing.tradeEnabled && <span className="trade-mark">↔ Trade</span>}
         <span className="product-condition">{listing.condition}</span>
         {listing.owner.location && <span>{listing.owner.location}</span>}
+        {listing.code && (
+          <span
+            className="shelf-ticket"
+            aria-label={"Seller shelf position " + listing.code}
+          >
+            {listing.code}
+          </span>
+        )}
       </div>
     </article>
   );

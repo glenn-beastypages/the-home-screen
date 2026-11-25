@@ -129,6 +129,8 @@ export function Inventory() {
             <button
               className={mode === "visual" ? "selected" : ""}
               aria-label="Visual inventory"
+              aria-pressed={mode === "visual"}
+              title="Visual inventory"
               onClick={() => setMode("visual")}
             >
               <LayoutGrid size={18} />
@@ -136,6 +138,8 @@ export function Inventory() {
             <button
               className={mode === "grid" ? "selected" : ""}
               aria-label="Coded inventory grid"
+              aria-pressed={mode === "grid"}
+              title="Coded inventory grid"
               onClick={() => setMode("grid")}
             >
               <Grid2X2 size={18} />
@@ -250,11 +254,6 @@ export function Inventory() {
               active: "Published items appear here while they are available.",
             }[tab] || ""
           }
-          action={
-            ["all", "active", "draft"].includes(tab)
-              ? { label: "List an item", to: "/sell/new" }
-              : undefined
-          }
         />
       )}
     </>
@@ -355,6 +354,7 @@ export function ListingEditor({ id }: { id?: string }) {
     [focusRequest, setFocusRequest] = useState<{ id: string; center?: true }>(),
     [busy, setBusy] = useState(false),
     [uploading, setUploading] = useState(false),
+    [dragging, setDragging] = useState(false),
     [failed, setFailed] = useState<{ file: File; error: string }[]>([]),
     [archive, setArchive] = useState(false);
   const input = useRef<HTMLInputElement>(null);
@@ -791,6 +791,7 @@ export function ListingEditor({ id }: { id?: string }) {
                     accept="image/jpeg,image/png,image/webp"
                     multiple
                     className="file-input"
+                    tabIndex={-1}
                     {...field("photos")}
                     aria-label="Listing photographs"
                     onChange={(e) =>
@@ -842,7 +843,28 @@ export function ListingEditor({ id }: { id?: string }) {
                       </div>
                     ))}
                     {form.photos.length < 6 && (
-                      <label htmlFor="listing-photos" className="upload-target">
+                      <button
+                        type="button"
+                        className={
+                          "upload-target" + (dragging ? " dragging" : "")
+                        }
+                        aria-label="Add photos"
+                        disabled={uploading}
+                        onClick={() => input.current?.click()}
+                        onDragOver={(event) => {
+                          if (!event.dataTransfer.types.includes("Files"))
+                            return;
+                          event.preventDefault();
+                          setDragging(true);
+                        }}
+                        onDragLeave={() => setDragging(false)}
+                        onDrop={(event) => {
+                          event.preventDefault();
+                          setDragging(false);
+                          if (!uploading && event.dataTransfer.files.length)
+                            void upload(Array.from(event.dataTransfer.files));
+                        }}
+                      >
                         {uploading ? (
                           <Spinner />
                         ) : (
@@ -851,8 +873,12 @@ export function ListingEditor({ id }: { id?: string }) {
                         <strong>
                           {uploading ? "Uploading…" : "Add photos"}
                         </strong>
-                        <span>{form.photos.length}/6</span>
-                      </label>
+                        <span>
+                          {form.photos.length
+                            ? form.photos.length + " of 6 photos"
+                            : "Choose files or drop them here"}
+                        </span>
+                      </button>
                     )}
                   </div>
                   {fieldErrors.photos && (
@@ -1162,13 +1188,15 @@ export function ListingEditor({ id }: { id?: string }) {
               )}
               {error && <ErrorBox error={error} />}
               <div className="editor-bottom">
-                <button
-                  className="text-button"
-                  disabled={step === 0 || busy}
-                  onClick={() => goToStep(step - 1)}
-                >
-                  <ArrowLeft size={17} /> Back
-                </button>
+                {step > 0 && (
+                  <button
+                    className="text-button"
+                    disabled={busy}
+                    onClick={() => goToStep(step - 1)}
+                  >
+                    <ArrowLeft size={17} /> Back
+                  </button>
+                )}
                 {step < 3 && (
                   <button
                     className="button"

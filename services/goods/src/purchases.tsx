@@ -10,11 +10,17 @@ import {
   Link,
   Loading,
   PageTitle,
+  Photo,
   SignedOut,
   useApp,
   useResource,
 } from "./ui";
-import { AddressInputs, AddressLines, type Address } from "./shipping";
+import {
+  AddressInputs,
+  AddressLines,
+  DeliveryMethodPicker,
+  type Address,
+} from "./shipping";
 
 type OrderState =
   | "pending"
@@ -149,34 +155,36 @@ export function BuyAction({
       {error && !choosing && <ErrorBox error={error} />}
       {choosing && (
         <Dialog
-          title="How do you want to get this item?"
+          title="Review purchase"
           onClose={() => !busy && setChoosing(false)}
         >
           <form
             className="form"
             onSubmit={(event) => {
               event.preventDefault();
+              const fields = new FormData(event.currentTarget);
+              fields.delete("method");
               const address =
                 fulfillment === "shipping"
-                  ? Object.fromEntries(new FormData(event.currentTarget))
+                  ? Object.fromEntries(fields)
                   : undefined;
               void start(fulfillment, address);
             }}
           >
-            <label>
-              Fulfillment
-              <select
-                value={fulfillment}
-                onChange={(event) =>
-                  setFulfillment(
-                    event.target.value === "shipping" ? "shipping" : "pickup",
-                  )
-                }
-              >
-                <option value="pickup">Local pickup</option>
-                <option value="shipping">Ship to me</option>
-              </select>
-            </label>
+            <div className="purchase-line-item">
+              <Photo listing={listing} />
+              <div>
+                <strong>{listing.title}</strong>
+                <small>
+                  {listing.owner.name} · {listing.code}
+                </small>
+              </div>
+              <b>{money(listing.priceCents)}</b>
+            </div>
+            <DeliveryMethodPicker
+              method={fulfillment}
+              onChange={setFulfillment}
+            />
             {fulfillment === "shipping" ? (
               <>
                 <p>

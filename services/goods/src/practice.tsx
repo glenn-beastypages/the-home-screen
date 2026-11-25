@@ -1,14 +1,7 @@
+import { DeliveryMethodPicker } from "./shipping";
 import { ExchangeMark, ExchangeObject } from "./exchange-object";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import {
-  ArrowRight,
-  Check,
-  MapPin,
-  Package,
-  ShoppingBag,
-  Speaker,
-  Truck,
-} from "lucide-react";
+import { ArrowRight, Check, Package, ShoppingBag, Speaker } from "lucide-react";
 import {
   api,
   ApiError,
@@ -110,8 +103,13 @@ function ItemSummary({ item }: { item: Listing }) {
     </Link>
   );
 }
-const disclosure =
-  "This seller is simulated. Messages stay in your account. No payment, shipment or meetup takes place.";
+const disclosures: Record<PracticeKind, string> = {
+  purchase:
+    "This order is simulated. No payment is collected and no handoff takes place.",
+  message: "This seller is simulated. Only you can see this conversation.",
+  trade:
+    "This trade is simulated. Your items stay on your shelf. No shipment or meetup takes place.",
+};
 export function PracticeStart({
   id,
   kind,
@@ -198,7 +196,12 @@ export function PracticeStart({
   return (
     <article
       className={
-        "practice-page" + (kind === "trade" && user ? " practice-trade" : "")
+        "practice-page" +
+        (kind === "purchase"
+          ? " purchase-review"
+          : kind === "trade" && user
+            ? " practice-trade"
+            : "")
       }
     >
       <PageTitle
@@ -230,7 +233,7 @@ export function PracticeStart({
       ) : (
         <ItemSummary item={item} />
       )}
-      <p className="practice-note">{disclosure}</p>
+      <p className="practice-note">{disclosures[kind]}</p>
       {!user ? (
         <button className="button" onClick={() => requireUser()}>
           Sign in to continue
@@ -282,33 +285,12 @@ export function PracticeStart({
                       </optgroup>
                     </select>
                   </label>
-                  <small>
-                    Your offer uses a copy. Your shelf stays available.
-                  </small>
                   {own.error && (
                     <ErrorBox error={own.error} retry={own.reload} />
                   )}
                 </>
               )}
-              <fieldset className="practice-method">
-                <legend>How would you like to get it?</legend>
-                {(["shipping", "pickup"] as const).map((m) => (
-                  <label key={m}>
-                    <input
-                      type="radio"
-                      name="method"
-                      checked={method === m}
-                      onChange={() => setMethod(m)}
-                    />
-                    {m === "shipping" ? (
-                      <Truck size={20} />
-                    ) : (
-                      <MapPin size={20} />
-                    )}{" "}
-                    {m === "shipping" ? "Shipping" : "Local pickup"}
-                  </label>
-                ))}
-              </fieldset>
+              <DeliveryMethodPicker method={method} onChange={setMethod} />
               {kind === "purchase" && (
                 <div className="practice-total">
                   <span>Simulated total</span>
@@ -424,7 +406,7 @@ export function PracticeDetail({ id }: { id: string }) {
       <ItemSummary
         item={{ ...record.data!.listing, priceCents: s.priceCents }}
       />
-      <p className="practice-note">{disclosure}</p>
+      <p className="practice-note">{disclosures[s.kind]}</p>
       {s.kind === "message" ? (
         <>
           <div className="practice-chat" aria-label="Message history">

@@ -435,12 +435,14 @@ export default function App() {
                 </span>
               )}
             </Link>
-            <Link
-              className="button compact header-listing"
-              to={user ? "/sell/new" : "/login?returnTo=%2Fsell%2Fnew"}
-            >
-              <Plus size={16} /> List an item
-            </Link>
+            {active !== "/sell" && !active.startsWith("/sell/") && (
+              <Link
+                className="button compact header-listing"
+                to={user ? "/sell/new" : "/login?returnTo=%2Fsell%2Fnew"}
+              >
+                <Plus size={16} /> List an item
+              </Link>
+            )}
             {user ? (
               <Link
                 to="/profile"
