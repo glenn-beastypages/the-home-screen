@@ -62,12 +62,17 @@ const action = z
 const summary = `SELECT s.id,s.listing_id AS "listingId",l.title,l.code,p.name AS seller,s.kind,s.state,s.method,s.price_cents AS "priceCents",s.offer,s.version
  FROM catalog_practice s JOIN listings l ON l.id=s.listing_id JOIN profiles p ON p.id=l.owner_id`;
 
-async function target(db: DB, listingId: string, actor: string) {
+async function target(
+  db: DB,
+  listingId: string,
+  actor: string,
+  existingActivity = false,
+) {
   const row = (
     await db.query(
       `SELECT l.id,l.title,l.owner_id,l.price_cents,l.condition,l.code FROM listings l JOIN profiles p ON p.id=l.owner_id
-    WHERE l.id=$1 AND l.is_demo AND p.is_demo AND l.status='active' AND p.status='active' AND NOT l.is_hidden AND NOT l.demo_disabled AND l.published_at IS NOT NULL FOR SHARE OF l,p`,
-      [listingId],
+    WHERE l.id=$1 AND l.is_demo AND p.is_demo AND l.status='active' AND p.status='active' AND NOT l.is_hidden AND NOT l.demo_disabled AND ($2 OR NOT l.catalog_retired) AND l.published_at IS NOT NULL FOR SHARE OF l,p`,
+      [listingId, existingActivity],
     )
   ).rows[0];
   if (!row || (await blocked(db, actor, row.owner_id)))
@@ -205,7 +210,7 @@ export function registerCatalogPractice(
           )
         ).rows[0];
         if (!session) fail(404, "Activity not found.", "NOT_FOUND");
-        await target(db, session.listingId, actor);
+        await target(db, session.listingId, actor, true);
         const messages = (
           await db.query(
             "SELECT version,body,reply FROM catalog_practice_messages WHERE practice_id=$1 ORDER BY version",
@@ -235,7 +240,7 @@ export function registerCatalogPractice(
           )
         ).rows[0];
         if (!s) fail(404, "Activity not found.", "NOT_FOUND");
-        const item = await target(db, s.listing_id, actor);
+        const item = await target(db, s.listing_id, actor, true);
         if (s.version !== b.version)
           fail(
             409,

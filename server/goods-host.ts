@@ -29,6 +29,7 @@ export async function createHostedGoods(origin: string, baseSecret: string, clie
     ADMIN_EMAILS: process.env.GOODS_ADMIN_EMAILS || '',
     // Temporary sample catalog explicitly requested for this website preview.
     GOODS_DEMO_CATALOG: process.env.GOODS_DEMO_CATALOG ?? '1',
+    GOODS_CATALOG_EDITION: process.env.GOODS_CATALOG_EDITION ?? 'marketplace',
     BEASTY_IDENTITY_ORIGIN: origin,
     BEASTY_SSO_CLIENT_ID: 'bsty-goods',
     BEASTY_SSO_CLIENT_SECRET: clientSecret,

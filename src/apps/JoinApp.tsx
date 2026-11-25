@@ -64,8 +64,8 @@ function JoinHead({ step, signinOnly = false }: { step: 'details' | 'code'; sign
   )
 }
 
-export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, returnTo = '/account' }: { api: ShellApi; onDone?: (a: Account) => void; standalone?: boolean; hideGoogle?: boolean; returnTo?: string }) {
-  const [entryMode, setEntryMode] = useState<'signin' | 'join'>(standalone ? 'signin' : 'join')
+export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, returnTo = '/account', initialMode }: { api: ShellApi; onDone?: (a: Account) => void; standalone?: boolean; hideGoogle?: boolean; returnTo?: string; initialMode?: 'join' | 'signin' }) {
+  const [entryMode, setEntryMode] = useState<'signin' | 'join'>(initialMode ?? (standalone ? 'signin' : 'join'))
   const signinOnly = standalone && entryMode === 'signin'
   const [signinChannel, setSigninChannel] = useState<'email' | 'sms'>('email')
   const [name, setName] = useState('')

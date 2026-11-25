@@ -182,6 +182,7 @@ export function AuthPage({
               {sharedMode && (
                 <>
                   <SharedSignIn
+                    signup={mode === "signup"}
                     options={identity.data}
                     loading={identity.loading}
                     setupError={identity.error}

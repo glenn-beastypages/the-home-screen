@@ -45,6 +45,7 @@ export interface Photo {
 export type ListingStatus =
   "draft" | "active" | "reserved" | "traded" | "sold" | "archived" | "hidden";
 export interface Listing {
+  sourceUrl?: string;
   id: string;
   isDemo?: boolean;
   owner: Profile;

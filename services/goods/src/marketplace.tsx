@@ -407,6 +407,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
   );
   const [sort, setSort] = useState(search.get("sort") || "newest");
   const [filterOpen, setFilterOpen] = useState(false);
+  const badRange = min !== "" && max !== "" && Number(min) > Number(max);
   const [items, setItems] = useState<Listing[]>([]);
   const [next, setNext] = useState<string | null>(null);
   const [error, setError] = useState(""),
@@ -468,6 +469,10 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
   }, [path, user?.id, version]);
   const apply = (e?: FormEvent) => {
     e?.preventDefault();
+    if (badRange) {
+      setFilterOpen(window.matchMedia("(max-width: 700px)").matches);
+      return;
+    }
     const p = new URLSearchParams();
     if (q) p.set("q", q);
     if (category) p.set("category", category);
@@ -506,6 +511,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
     setMin("");
     setMax("");
     setSort("newest");
+    setFilterOpen(false);
     go("/explore");
   };
   if (favorites && !user) return <SignedOut what="save your favorite finds" />;
@@ -550,12 +556,18 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
             type="number"
             min="0"
             step="0.01"
+            aria-invalid={badRange || undefined}
             value={max}
             onChange={(e) => setMax(e.target.value)}
             placeholder="Any"
           />
         </label>
       </div>
+      {badRange && (
+        <p role="alert" className="form-error">
+          Maximum price must be at least the minimum price.
+        </p>
+      )}
       <label>
         Sort by
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
@@ -622,7 +634,15 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
                   type="button"
                   className="icon-button"
                   aria-label="Clear search"
-                  onClick={() => setQ("")}
+                  onClick={() => {
+                    setQ("");
+                    if (search.has("q")) {
+                      const remaining = new URLSearchParams(search);
+                      remaining.delete("q");
+                      remaining.delete("cursor");
+                      go("/explore" + (remaining.size ? "?" + remaining : ""));
+                    }
+                  }}
                 >
                   <X size={17} />
                 </button>
@@ -726,7 +746,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
         </section>
       </div>
       {filterOpen && (
-        <Dialog title="Find your thing" onClose={() => setFilterOpen(false)}>
+        <Dialog title="Filter listings" onClose={() => setFilterOpen(false)}>
           <form className="form" onSubmit={apply}>
             {fields}
           </form>
@@ -810,9 +830,9 @@ function ListingOptions({
 }
 export function ItemPage({ id }: { id: string }) {
   const { user, requireUser, go, toast } = useApp();
-  const { data, error, loading, reload } = useResource<{ listing: Listing }>(
-    "/listings/" + id,
-  );
+  const { data, error, errorStatus, loading, reload } = useResource<{
+    listing: Listing;
+  }>("/listings/" + id);
   const [index, setIndex] = useState(0),
     [fullscreen, setFullscreen] = useState(false),
     [trade, setTrade] = useState(
@@ -884,6 +904,14 @@ export function ItemPage({ id }: { id: string }) {
     }
   };
   if (loading) return <Loading />;
+  if (errorStatus === 404)
+    return (
+      <Empty
+        title="Listing unavailable"
+        body="This link no longer opens a public listing."
+        action={{ label: "Browse all goods", to: "/explore" }}
+      />
+    );
   if (error) return <ErrorBox error={error} retry={reload} />;
   if (!l) return null;
   const owned = user?.id === l.owner.id;
@@ -1131,6 +1159,16 @@ export function ItemPage({ id }: { id: string }) {
           <div className="item-detail-block">
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
+            {l.sourceUrl && (
+              <a
+                className="text-button"
+                href={l.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Original Facebook Marketplace listing <ArrowUpRight size={14} />
+              </a>
+            )}
           </div>
           {isTradeable(l) && l.tradePreferences && (
             <div className="item-detail-block">

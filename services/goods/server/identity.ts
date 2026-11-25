@@ -212,6 +212,7 @@ export function registerSharedIdentity(
     const body = z
       .object({
         method: z.enum(["beastypages", "google"]).default("beastypages"),
+        screenHint: z.literal("signup").optional(),
         returnTo: z
           .string()
           .max(1000)
@@ -244,7 +245,9 @@ export function registerSharedIdentity(
             disableRedirect: true,
             ...(body.method === "google"
               ? { additionalParams: { connection: "google" } }
-              : {}),
+              : !link && body.screenHint
+                ? { additionalParams: { screen_hint: body.screenHint } }
+                : {}),
           }),
         },
       ),

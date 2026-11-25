@@ -336,7 +336,7 @@ export async function registerIdentity(app: Express, deps: IdentityDeps) {
       if (!member)
         return res.redirect(
           303,
-          '/login?' + new URLSearchParams({ returnTo: continuation }).toString(),
+          '/login?' + new URLSearchParams({ returnTo: continuation, ...(req.query.screen_hint === 'signup' ? { screen_hint: 'signup' } : {}) }).toString(),
         )
       const code = random(),
         now = Date.now()

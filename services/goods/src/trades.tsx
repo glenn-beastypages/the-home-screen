@@ -279,7 +279,16 @@ function TradeWorkspace({ id, userId }: { id: string; userId: string }) {
     )
       ? path + "/shipping"
       : null;
-  const shipping = useResource<ShippingView>(shippingPath);
+  const [returnedFromShipping] = useState(
+    () =>
+      new URLSearchParams(window.location.search).get("shipping") === "return",
+  );
+  const shipping = useResource<ShippingView>(
+    shippingPath && returnedFromShipping
+      ? shippingPath + "/refresh"
+      : shippingPath,
+    returnedFromShipping ? "POST" : "GET",
+  );
   function apply(next: Trade) {
     command.current++;
     setTrade(next);
@@ -318,18 +327,13 @@ function TradeWorkspace({ id, userId }: { id: string; userId: string }) {
   }, [path]);
 
   useEffect(() => {
-    if (!shippingPath) return;
+    if (!returnedFromShipping || !shipping.data) return;
     const url = new URL(window.location.href);
     if (url.searchParams.get("shipping") !== "return") return;
     url.searchParams.delete("shipping");
     window.history.replaceState(window.history.state, "", url);
-    void api<ShippingView>(shippingPath + "/refresh", "POST")
-      .then((view) => {
-        shipping.setData(view);
-        poll.current();
-      })
-      .catch(() => shipping.reload());
-  }, [shippingPath]);
+    poll.current();
+  }, [returnedFromShipping, shipping.data]);
 
   if (loading) return <Loading />;
   if (!trade)

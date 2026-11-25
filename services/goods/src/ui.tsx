@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import {
   api,
+  ApiError,
   listingPhotoUrl,
   withBase,
   withoutBase,
@@ -70,26 +71,34 @@ export function Link({
     </a>
   );
 }
-export function useResource<T>(path: string | null) {
+export function useResource<T>(
+  path: string | null,
+  method: "GET" | "POST" = "GET",
+) {
   const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState("");
+  const [errorStatus, setErrorStatus] = useState<number>();
   const [loading, setLoading] = useState(true);
   const [version, setVersion] = useState(0);
   useEffect(() => {
     let current = true;
     setError("");
+    setErrorStatus(undefined);
     if (!path) {
       setLoading(false);
       setData(null);
       return;
     }
     setLoading(true);
-    api<T>(path)
+    api<T>(path, method)
       .then((v) => {
         if (current) setData(v);
       })
       .catch((e) => {
-        if (current) setError(e.message);
+        if (current) {
+          setError(e.message);
+          setErrorStatus(e instanceof ApiError ? e.status : undefined);
+        }
       })
       .finally(() => {
         if (current) setLoading(false);
@@ -97,11 +106,12 @@ export function useResource<T>(path: string | null) {
     return () => {
       current = false;
     };
-  }, [path, version]);
+  }, [path, method, version]);
   return {
     data,
     setData,
     error,
+    errorStatus,
     loading,
     reload: () => setVersion((v) => v + 1),
   };

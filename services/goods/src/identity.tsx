@@ -200,12 +200,14 @@ export function SharedSignIn({
   loading,
   setupError,
   returnTo,
+  signup = false,
   onRetry,
 }: {
   options: IdentityOptions | null;
   loading: boolean;
   setupError: string;
   returnTo: string;
+  signup?: boolean;
   onRetry: () => void;
 }) {
   const [busy, setBusy] = useState<"beastypages" | "google" | null>(null);
@@ -218,6 +220,7 @@ export function SharedSignIn({
       const response = await api<{ url: string }>("/identity/sign-in", "POST", {
         method,
         returnTo,
+        ...(signup && method === "beastypages" ? { screenHint: "signup" } : {}),
       });
       navigateToIdentity(response.url);
     } catch (cause) {

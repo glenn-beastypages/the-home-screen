@@ -242,7 +242,10 @@ export async function listing(db: DB, listingId: string, viewerId?: string) {
     tradeEnabled: r.trade_enabled,
     shipsPurchases: r.ships_purchases,
     tradePreferences: r.trade_preferences,
-    status: r.status,
+    status:
+      r.is_demo && r.catalog_retired && r.status === "active"
+        ? "archived"
+        : r.status,
     isHidden: r.is_hidden,
     isDemo: r.is_demo === true,
     version: r.version,
@@ -256,6 +259,9 @@ export async function listing(db: DB, listingId: string, viewerId?: string) {
     createdAt: r.created_at.toISOString(),
     updatedAt: r.updated_at.toISOString(),
     isFavorite: favorite,
+    ...(r.is_demo && r.catalog_source_url
+      ? { sourceUrl: r.catalog_source_url }
+      : {}),
   };
 }
 export async function invalidateOffers(

@@ -3,9 +3,10 @@ import sharp from "sharp";
 import type { Pool, PoolClient } from "pg";
 import { codes, transaction } from "./common.js";
 import {
-  developmentCatalogKey,
-  loadDevelopmentSales,
-} from "./development-catalog.js";
+  resaleCatalogKey,
+  loadCatalogSales,
+  usesPublishedSales,
+} from "./resale-catalog.js";
 import type { createStorage } from "./storage.js";
 
 /** Explicitly enabled public samples. This is unrelated to local demo logins. */
@@ -306,9 +307,10 @@ export async function initializeDemoCatalog(
   storage: ReturnType<typeof createStorage>,
   config: NodeJS.ProcessEnv,
 ) {
-  const development = await loadDevelopmentSales(config);
-  const catalogKey = development ? developmentCatalogKey : DEMO_CATALOG_KEY;
-  const sellers = development
+  const sales = await loadCatalogSales(config);
+  const publishedSales = usesPublishedSales(config);
+  const catalogKey = sales ? resaleCatalogKey : DEMO_CATALOG_KEY;
+  const sellers = sales
     ? DEMO_SELLERS.map((_, index) => ({
         id: `bsty_dev_resale_seller_${index + 1}`,
         name: [
@@ -321,9 +323,9 @@ export async function initializeDemoCatalog(
         email: `resale-shelf-${index + 1}@demo.bsty.invalid`,
       }))
     : DEMO_SELLERS;
-  const listings = development
-    ? development.map((sale) => {
-        const prefix = developmentCatalogKey + ":" + sale.sourceId;
+  const listings = sales
+    ? sales.map((sale) => {
+        const prefix = resaleCatalogKey + ":" + sale.sourceId;
         const photoId = fixedUuid(prefix + ":photo");
         return {
           ...sale,
@@ -337,11 +339,11 @@ export async function initializeDemoCatalog(
     : DEMO_ITEMS;
   return transaction(pool, async (db) => {
     await db.query("SELECT pg_advisory_xact_lock(946781239)");
-    const enabled = Boolean(development) || config.GOODS_DEMO_CATALOG === "1";
+    const enabled = Boolean(sales) || config.GOODS_DEMO_CATALOG === "1";
     const hiddenKeys = [];
-    if (development || !enabled) hiddenKeys.push(DEMO_CATALOG_KEY);
-    if (!development && ["development", "test"].includes(config.NODE_ENV || ""))
-      hiddenKeys.push(developmentCatalogKey);
+    if ((sales && !publishedSales) || !enabled)
+      hiddenKeys.push(DEMO_CATALOG_KEY);
+    if (!sales) hiddenKeys.push(resaleCatalogKey);
     if (hiddenKeys.length)
       await db.query(
         `UPDATE listings l SET demo_disabled=true
@@ -357,6 +359,20 @@ export async function initializeDemoCatalog(
           DEMO_SELLERS.map((seller) => seller.id),
         ],
       );
+    if (publishedSales) {
+      await db.query(
+        `UPDATE listings l SET catalog_retired=true, demo_disabled=false
+          WHERE l.is_demo AND l.id=ANY($2::uuid[]) AND l.owner_id=ANY($3::text[])
+          AND EXISTS (SELECT 1 FROM goods_demo_catalog_records r WHERE r.entity_kind='listing'
+            AND r.entity_id=l.id::text AND r.catalog_key=$1)
+          AND (NOT l.catalog_retired OR l.demo_disabled)`,
+        [
+          DEMO_CATALOG_KEY,
+          DEMO_ITEMS.map((item) => item.id),
+          DEMO_SELLERS.map((seller) => seller.id),
+        ],
+      );
+    }
     if (!enabled) return { enabled: false, sellers: 0, listings: 0 };
     const records = (
       await db.query(
@@ -573,8 +589,8 @@ export async function initializeDemoCatalog(
       );
       await record(db, catalogKey, "listing", item.id);
       await db.query(
-        "UPDATE listings SET demo_disabled=false WHERE id=$1 AND is_demo=true",
-        [item.id],
+        "UPDATE listings SET demo_disabled=false,catalog_retired=false,catalog_source_url=$2 WHERE id=$1 AND is_demo=true AND (demo_disabled OR catalog_retired OR catalog_source_url IS DISTINCT FROM $2)",
+        [item.id, "sourceUrl" in item ? item.sourceUrl : null],
       );
     }
     return {

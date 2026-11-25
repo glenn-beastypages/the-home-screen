@@ -196,7 +196,7 @@ export default function AccountLogin() {
             <>
               <GoogleAccountSignIn returnTo={returnTo} codeAvailable={status.codeEnabled} />
               {status.codeEnabled ? (
-                <JoinApp api={shellApi} onDone={onDone} standalone hideGoogle returnTo={returnTo} />
+                <JoinApp api={shellApi} onDone={onDone} standalone hideGoogle returnTo={returnTo} initialMode={params.get('screen_hint') === 'signup' ? 'join' : 'signin'} />
               ) : (
                 <p className="beasty-login-unavailable">
                   Sign-in codes are unavailable right now.
