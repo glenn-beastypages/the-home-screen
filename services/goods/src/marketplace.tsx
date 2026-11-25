@@ -123,6 +123,9 @@ export function Home() {
       .slice(0, 4) || [];
   return (
     <div className="market-home">
+      <Link className="closet-announcement" to="/closets-for-a-cause">
+        Closets for a Cause <span>Meet the concierge <ArrowRight size={14} /></span>
+      </Link>
       <nav className="market-categories" aria-label="Shop by category">
         <Link className="market-all" to="/explore">
           <Grid2X2 size={16} /> All goods

@@ -208,6 +208,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'chinese', heading: 'Chinese', about: 'Chinese restaurants, from Cantonese to Sichuan', wall: wall('dimsum'), test: /\bchinese\b|szechuan|sichuan|cantonese|shanghainese|hunan|peking duck/i, not: /bakery|dessert|pastr|boba|tea shop/i },
   // Glenn, November 19: "San Francisco • Eats / BEASTY • Soul Food / New Category", opened by Minnie Bell’s Soul Movement.
   { kind: 'yemeni', heading: 'Yemeni', about: 'Yemeni restaurants and coffee shops', wall: wall('diner'), test: /\byemeni\b/i },
+  { kind: 'bagels', heading: 'Bagels', about: 'Bagel shops and bakeries', wall: wall('bakery'), test: /\bbagels?\b/i },
   { kind: 'soulfood', heading: 'Soul Food', about: 'Soul food kitchens and Southern home cooking', wall: wall('diner'), test: /soul food/i },
 ]
 

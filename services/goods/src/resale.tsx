@@ -28,12 +28,59 @@ const goalLabel = {
   fundraiser: "Fundraising collection",
 };
 
-export function ManagedResale() {
+function ConciergeIntroduction() {
+  return (
+    <>
+      <h2>Donate a collection</h2>
+      <p>
+        Give fans a chance to own something from your collection and raise money
+        for a charity you choose.
+      </p>
+      <ul>
+        <li>
+          <Boxes size={21} />
+          <span>
+            <strong>Choose what to give</strong>Our concierge helps creators and
+            public figures sort and box clothing and accessories.
+          </span>
+        </li>
+        <li>
+          <ClipboardList size={21} />
+          <span>
+            <strong>Build your collection page</strong>We catalog and photograph
+            each piece, then work with you to promote your collection on BSTY
+            Goods.
+          </span>
+        </li>
+        <li>
+          <HandHeart size={21} />
+          <span>
+            <strong>How the auction is planned</strong>Each collection would run
+            for one week. Fans could place one private bid per item, on as many
+            items as they like. The highest bid for each item would win.
+          </span>
+        </li>
+      </ul>
+      <p>
+        Collection proposals are open. The team will confirm the beneficiary,
+        dates, and handling with you before accepting items.
+      </p>
+    </>
+  );
+}
+
+export function ManagedResale({
+  fundraiser = false,
+}: {
+  fundraiser?: boolean;
+}) {
   const { user } = useApp();
   const requests = useResource<{ items: Inquiry[] }>(
     user ? "/resale/requests" : null,
   );
-  const [goal, setGoal] = useState<Inquiry["goal"]>("consign");
+  const [goal, setGoal] = useState<Inquiry["goal"]>(
+    fundraiser ? "fundraiser" : "consign",
+  );
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [receipt, setReceipt] = useState("");
@@ -90,42 +137,52 @@ export function ManagedResale() {
 
   return (
     <>
-      <PageTitle title="Managed resale" back="/" />
+      <PageTitle
+        title={fundraiser ? "Closets for a Cause" : "Managed resale"}
+        back="/"
+      />
       <div className="resale-layout">
         <section className="resale-intro">
-          <h2>Let us handle your collection.</h2>
-          <p>
-            For creators, public figures, and teams with secondhand clothing or
-            accessories to sell.
-          </p>
-          <ul>
-            <li>
-              <Boxes size={21} />
-              <span>
-                <strong>Intake and storage</strong>Tell us what you have so we
-                can review storage and drop-off options.
-              </span>
-            </li>
-            <li>
-              <ClipboardList size={21} />
-              <span>
-                <strong>Tagging and listings</strong>For accepted collections,
-                we can photograph, tag, and list each piece on BSTY Goods.
-              </span>
-            </li>
-            <li>
-              <HandHeart size={21} />
-              <span>
-                <strong>Consignment or fundraising</strong>Request a resale
-                proposal with a commission, or propose a beneficiary for a
-                fundraising collection.
-              </span>
-            </li>
-          </ul>
-          <p>
-            We’ll review capacity, fees, handling, and any beneficiary with you
-            before you send items.
-          </p>
+          {fundraiser ? (
+            <ConciergeIntroduction />
+          ) : (
+            <>
+              <h2>Let us handle your collection.</h2>
+              <p>
+                For creators, public figures, and teams with secondhand clothing
+                or accessories to sell.
+              </p>
+              <ul>
+                <li>
+                  <Boxes size={21} />
+                  <span>
+                    <strong>Intake and storage</strong>Tell us what you have so
+                    we can review storage and drop-off options.
+                  </span>
+                </li>
+                <li>
+                  <ClipboardList size={21} />
+                  <span>
+                    <strong>Tagging and listings</strong>For accepted
+                    collections, we can photograph, tag, and list each piece on
+                    BSTY Goods.
+                  </span>
+                </li>
+                <li>
+                  <HandHeart size={21} />
+                  <span>
+                    <strong>Consignment or fundraising</strong>Request a resale
+                    proposal with a commission, or propose a beneficiary for a
+                    fundraising collection.
+                  </span>
+                </li>
+              </ul>
+              <p>
+                We’ll review capacity, fees, handling, and any beneficiary with
+                you before you send items.
+              </p>
+            </>
+          )}
         </section>
         <section
           className="panel resale-form"
@@ -137,7 +194,14 @@ export function ManagedResale() {
               <p>
                 Sign in to send your collection details and track the request.
               </p>
-              <Link className="button" to="/login?returnTo=%2Fmanaged-resale">
+              <Link
+                className="button"
+                to={
+                  fundraiser
+                    ? "/login?returnTo=%2Fclosets-for-a-cause"
+                    : "/login?returnTo=%2Fmanaged-resale"
+                }
+              >
                 Sign in to apply <ArrowRight size={17} />
               </Link>
             </>
@@ -177,18 +241,22 @@ export function ManagedResale() {
                       required
                     />
                   </label>
-                  <label>
-                    What are you planning?
-                    <select
-                      value={goal}
-                      onChange={(event) =>
-                        setGoal(event.target.value as Inquiry["goal"])
-                      }
-                    >
-                      <option value="consign">Managed consignment</option>
-                      <option value="fundraiser">Fundraising collection</option>
-                    </select>
-                  </label>
+                  {!fundraiser && (
+                    <label>
+                      What are you planning?
+                      <select
+                        value={goal}
+                        onChange={(event) =>
+                          setGoal(event.target.value as Inquiry["goal"])
+                        }
+                      >
+                        <option value="consign">Managed consignment</option>
+                        <option value="fundraiser">
+                          Fundraising collection
+                        </option>
+                      </select>
+                    </label>
+                  )}
                   {goal === "fundraiser" && (
                     <label>
                       Proposed beneficiary <small>(optional)</small>

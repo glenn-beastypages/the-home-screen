@@ -1376,3 +1376,23 @@ textarea::placeholder {
   font-weight: 650;
   margin-bottom: 0.25rem;
 }
+
+.closet-announcement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: .55rem .85rem;
+  background: #ffda25;
+  color: #191914;
+  font-weight: 750;
+  font-size: .95rem;
+  text-decoration: none;
+}
+.closet-announcement span {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .8rem;
+}
+.closet-announcement:hover span { text-decoration: underline; }

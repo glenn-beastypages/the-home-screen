@@ -135,7 +135,7 @@ try {
       assert.equal(await page.locator('.menu-row').count(), count, id)
     }
     await page.getByRole('button', { name: 'Go to the ' + listing.city + ' More goods page' }).click()
-    const tile = page.locator('.home-page:not([inert]) .home-grid button').filter({ hasText: listing.name }).first()
+    const tile = page.locator('.home-page:not([inert]) .home-grid').getByRole('button', { name: listing.name, exact: true })
     await tile.click()
     await page.getByRole('heading', { name: listing.name, exact: true }).waitFor()
     console.log('Opened city tile', listing.city, listing.name)
@@ -145,11 +145,23 @@ try {
   const logo = page.getByRole('link', { name: 'BSTY Goods home', exact: true }).locator('img')
   await logo.evaluate((img) => img.decode())
   assert.equal(await logo.getAttribute('src'), '/goods/brand/bsty-goods.svg')
+  if (batch.goodsIntroduction) {
+    await page.getByRole('link', { name: /Closets for a Cause/ }).click()
+    await page.getByRole('heading', { name: 'Closets for a Cause', exact: true }).waitFor()
+    await page.reload()
+    await page.getByText('How the auction is planned', { exact: true }).waitFor()
+    const apply = page.getByRole('link', { name: /Sign in to apply/ })
+    assert.equal(await apply.getAttribute('href'), '/goods/login?returnTo=' + encodeURIComponent(batch.goodsIntroduction))
+    if (capture) await page.screenshot({ path: capture + '/closets-for-a-cause.jpg' })
+    await apply.click()
+    assert.equal(new URL(page.url()).searchParams.get('returnTo'), batch.goodsIntroduction)
+    await page.getByRole('link', { name: 'BSTY Goods home', exact: true }).click()
+  }
   await page.locator('.product-title').first().click()
   const description = page.locator('.item-detail-block .preserve-lines')
   await description.waitFor({ state: 'visible' })
   const inspectListing = async () => {
-    assert.equal(await description.evaluate((el) => getComputedStyle(el).fontSize), '16px')
+    assert.equal(await description.evaluate((el) => getComputedStyle(el).fontSize), batch.goodsDescriptionSize ?? '16px')
     const heading = description.locator('..').getByRole('heading', { name: 'Description' })
     assert.equal(await heading.evaluate((el) => getComputedStyle(el).fontSize), '17px')
     assert.equal(await page.locator('.item-facts span').first().evaluate((el) => getComputedStyle(el).fontSize), '14px')
