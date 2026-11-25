@@ -595,7 +595,7 @@ export function Notifications() {
         </div>
       ) : (
         <Empty
-          title="All quiet. All good."
+          title="No notifications yet"
           body="Trade offers, messages and updates about your shelf will appear here."
           action={{ label: "Explore goods", to: "/explore" }}
         />
