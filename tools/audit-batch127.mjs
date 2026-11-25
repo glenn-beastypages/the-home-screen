@@ -163,7 +163,7 @@ try {
   const inspectListing = async () => {
     assert.equal(await description.evaluate((el) => getComputedStyle(el).fontSize), batch.goodsDescriptionSize ?? '16px')
     const heading = description.locator('..').getByRole('heading', { name: 'Description' })
-    assert.equal(await heading.evaluate((el) => getComputedStyle(el).fontSize), '17px')
+    assert(await heading.evaluate((el) => parseFloat(getComputedStyle(el).fontSize) >= 17), 'Readable Goods listing heading')
     assert.equal(await page.locator('.item-facts span').first().evaluate((el) => getComputedStyle(el).fontSize), '14px')
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1))
   }

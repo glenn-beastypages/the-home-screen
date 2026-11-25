@@ -1,0 +1,181 @@
+{
+  "release": "416e44e88343d6a83d03fa945c949648b561bb5d",
+  "renderDeploy": "dep-dc34ak11hdas738cb0p0",
+  "liveAt": "2026-11-25T02:43:23.347891Z",
+  "checkedAt": "2026-11-25T03:19:48.681100+00:00",
+  "health": {
+    "checkedAt": "2026-11-25T03:10:52.966Z",
+    "release": "416e44e88343d6a83d03fa945c949648b561bb5d",
+    "pagesHealthy": true,
+    "goodsHealthy": true,
+    "pagesSignInAvailable": true,
+    "googleSignInAvailable": true,
+    "shippedTradeHoldsEnabled": false,
+    "checkoutEnabled": false,
+    "goodsStylesheet": "/goods/assets/index-QpBkOnFF.css",
+    "goodsStylesheetSha256": "f48c96331dd89d0d09cc01855ad4686e5dbce0525f84f9f1a1cafb4e2feb5070"
+  },
+  "publicBrowsers": {
+    "Chrome": {
+      "played": [
+        "DgGGPXKia9R",
+        "DgFvcAHJ3fh",
+        "C7QGaHRpysq",
+        "C39WCbYr1iq",
+        "DTwNFbPjIWW",
+        "C36VQ19v7dH",
+        "C5XXBVxLVxy",
+        "DbBXlcZxQAX",
+        "C2-V2VKx2q_",
+        "DgGyGTxAG9r",
+        "DgGXobbStSE",
+        "DgGJnNAPoMp",
+        "DZDJ1lrqtyH",
+        "DajYmG5pvtc",
+        "Deh29ngOqVX",
+        "DecT11siMY1",
+        "DeFNLL8hnYO",
+        "DeAwBjePvam",
+        "DdhaB-NyTHY",
+        "DdZyeLDylN-",
+        "Da9pD6CISTg",
+        "DaVT5XkOIA0",
+        "DaMC7Wbv6DH",
+        "Df-eINDSmyk",
+        "Df-dzmIviBU",
+        "Df3EXquB54U",
+        "DbHZ8Japk5S",
+        "DgGskKmR9DV",
+        "Dfpv2bEBM3y",
+        "De9mwbPT5us"
+      ],
+      "loadedArtworkCount": 21,
+      "matchedMediaFiles": 81,
+      "autoPlayingBackgrounds": [
+        "b_zandyrestaurant",
+        "b_cajuncracknmilpitas",
+        "b_nikusteakhousesf",
+        "b_acrekitchenandbar",
+        "b_northbeachpizzasanmateo",
+        "b_nonosdoughnutsberkeley",
+        "b_yoeecheesf",
+        "b_phokimlongsanjose",
+        "b_delageoakland",
+        "b_hedverythaijapantown",
+        "b_slicehousebrentwood",
+        "b_bunappetitdonuts"
+      ],
+      "reopenedFromCityTile": [
+        "San Francisco Niku Steakhouse",
+        "San Francisco Yoeechee",
+        "San Jose Pho Kim Long",
+        "San Francisco The Laundromat",
+        "San Francisco Z & Y Restaurant",
+        "Milpitas Cajun Crack’n — Milpitas",
+        "San Mateo North Beach Pizza — San Mateo"
+      ],
+      "pricedMenus": {
+        "b_nikusteakhousesf": 27,
+        "b_yoeecheesf": 14,
+        "b_thelaundromatsf": 8
+      },
+      "goodsConciergeAndSignInReturn": true,
+      "goodsItemOpened": true
+    },
+    "iPhone WebKit": {
+      "played": [
+        "DgGGPXKia9R",
+        "DgFvcAHJ3fh",
+        "C7QGaHRpysq",
+        "C39WCbYr1iq",
+        "DTwNFbPjIWW",
+        "C36VQ19v7dH",
+        "C5XXBVxLVxy",
+        "DbBXlcZxQAX",
+        "C2-V2VKx2q_",
+        "DgGyGTxAG9r",
+        "DgGXobbStSE",
+        "DgGJnNAPoMp",
+        "DZDJ1lrqtyH",
+        "DajYmG5pvtc",
+        "Deh29ngOqVX",
+        "DecT11siMY1",
+        "DeFNLL8hnYO",
+        "DeAwBjePvam",
+        "DdhaB-NyTHY",
+        "DdZyeLDylN-",
+        "Da9pD6CISTg",
+        "DaVT5XkOIA0",
+        "DaMC7Wbv6DH",
+        "Df-eINDSmyk",
+        "Df-dzmIviBU",
+        "Df3EXquB54U",
+        "DbHZ8Japk5S",
+        "DgGskKmR9DV",
+        "Dfpv2bEBM3y",
+        "De9mwbPT5us"
+      ],
+      "loadedArtworkCount": 21,
+      "matchedMediaFiles": 81,
+      "autoPlayingBackgrounds": [
+        "b_zandyrestaurant",
+        "b_cajuncracknmilpitas",
+        "b_nikusteakhousesf",
+        "b_acrekitchenandbar",
+        "b_northbeachpizzasanmateo",
+        "b_nonosdoughnutsberkeley",
+        "b_yoeecheesf",
+        "b_phokimlongsanjose",
+        "b_delageoakland",
+        "b_hedverythaijapantown",
+        "b_slicehousebrentwood",
+        "b_bunappetitdonuts"
+      ],
+      "reopenedFromCityTile": [
+        "San Francisco Niku Steakhouse",
+        "San Francisco Yoeechee",
+        "San Jose Pho Kim Long",
+        "San Francisco The Laundromat",
+        "San Francisco Z & Y Restaurant",
+        "Milpitas Cajun Crack’n — Milpitas",
+        "San Mateo North Beach Pizza — San Mateo"
+      ],
+      "pricedMenus": {
+        "b_nikusteakhousesf": 27,
+        "b_yoeecheesf": 14,
+        "b_thelaundromatsf": 8
+      },
+      "goodsConciergeAndSignInReturn": true,
+      "goodsItemOpened": true
+    }
+  },
+  "signedOutPages": {
+    "passed": true,
+    "historicalRosterWalk": "skipped"
+  },
+  "localChecks": {
+    "passed": 36,
+    "sharedHostAndBrowserJourneys": [
+      "Watch plays Niku Steakhouse’s credited restaurant film",
+      "Bagels opens The Laundromat",
+      "Steakhouse opens Niku Steakhouse",
+      "Concierge submits an authenticated fundraising request that survives reload",
+      "Synthetic member can withdraw the collection request"
+    ],
+    "realAuctionOrDonation": false,
+    "dataErrors": 0
+  },
+  "visibleChrome": {
+    "checkedAt": "2026-11-25T03:17:11.992067+00:00",
+    "browser": "Chrome, signed-in profile",
+    "directory": "Search > Categories > BEASTY • Bagels > The Laundromat opened the 3725 Balboa Street listing.",
+    "menu": "Opened Menu · 8 items. Single bagel $3, half dozen $16, baker’s dozen $30. Five spreads displayed at $6 to $9.",
+    "goods": "The public Goods homepage’s Closets for a Cause / Meet the concierge link opened /goods/closets-for-a-cause.",
+    "concierge": "Read the proposed one-week period and one private bid per item across any number of items. Request a review displayed Proposed beneficiary and About your collection fields. No public form submitted."
+  },
+  "repeatChecks": {
+    "deployHandoff": "Pages health, Goods health and the new icon returned HTTP 502 at 18:23:55 PST, then HTTP 200 at 18:28:38 PST.",
+    "desktopPlayback": "The initial desktop run timed out opening a creator review. The fresh desktop run played all 30 excerpts.",
+    "categoryThumbnail": "The directory audit initially failed the cat-beasty thumbnail. A separate HTTP GET returned image/webp, and the entire signed-out check passed on rerun."
+  }
+}

@@ -10,3 +10,11 @@ The thread contained 30 reel links and 25 screenshots. Twenty-eight reels are ne
 - The Goods home page links to **Closets for a Cause**. Visitors can read the proposed one-week, one-bid-per-item silent auction format and submit a collection for review through the existing fundraising inquiry. The current service takes proposals. Auction bidding and charitable payments are outside this introduction.
 
 [Glenn’s attachment, clip and artwork ledger](../research/roster/batch130.json) · [Original post credits](../public/clips/CREDITS.md)
+
+## Production verification
+
+Published as `10ecd7a1` and verified on the combined Goods and Pages release `416e44e8`, live on November 24 at 6:43 p.m. Pacific. Desktop Chrome and iPhone-sized WebKit each played all 30 clips, checked 12 autoplay backgrounds, opened 21 logos, reopened seven listings from their city tiles, and matched all 81 media and artwork files to the release. The signed-out Pages checks passed. The historical roster walkthrough was skipped.
+
+In signed-in Chrome, Search → Categories → Bagels opened The Laundromat and its eight-item menu. The Goods homepage opened the concierge introduction and collection review form. The 36 local integration checks included submitting, reloading and withdrawing a synthetic collection inquiry. The live checks stopped at the public form.
+
+During deployment, both health checks temporarily returned 502 and recovered. An initial desktop review-button timeout and a category thumbnail check both passed on rerun. [Production verification record](../research/roster/b130-live-verification.json)
