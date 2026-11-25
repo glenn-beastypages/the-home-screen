@@ -42,3 +42,6 @@ research/menus/raw/
 
 # Blank review PDFs are regenerated from tools/build-affiliate-agreement-review.py.
 /output/pdf/
+
+# Local Goods database fixtures and downloaded development photos.
+/services/goods/var/

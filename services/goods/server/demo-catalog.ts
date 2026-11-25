@@ -2,6 +2,10 @@ import { createHash } from "node:crypto";
 import sharp from "sharp";
 import type { Pool, PoolClient } from "pg";
 import { codes, transaction } from "./common.js";
+import {
+  developmentCatalogKey,
+  loadDevelopmentSales,
+} from "./development-catalog.js";
 import type { createStorage } from "./storage.js";
 
 /** Explicitly enabled public samples. This is unrelated to local demo logins. */
@@ -281,10 +285,15 @@ function collision(kind: string, id: string): never {
     `Demo catalog ${kind} collision (${id}); existing data was not changed.`,
   );
 }
-async function record(db: PoolClient, kind: string, id: string) {
+async function record(
+  db: PoolClient,
+  catalogKey: string,
+  kind: string,
+  id: string,
+) {
   await db.query(
     "INSERT INTO goods_demo_catalog_records(entity_kind,entity_id,catalog_key) VALUES($1,$2,$3) ON CONFLICT DO NOTHING",
-    [kind, id, DEMO_CATALOG_KEY],
+    [kind, id, catalogKey],
   );
 }
 
@@ -297,40 +306,79 @@ export async function initializeDemoCatalog(
   storage: ReturnType<typeof createStorage>,
   config: NodeJS.ProcessEnv,
 ) {
+  const development = await loadDevelopmentSales(config);
+  const catalogKey = development ? developmentCatalogKey : DEMO_CATALOG_KEY;
+  const sellers = development
+    ? DEMO_SELLERS.map((_, index) => ({
+        id: `bsty_dev_resale_seller_${index + 1}`,
+        name: [
+          "Mission Shelf",
+          "Lake Merritt Finds",
+          "Westside Rack",
+          "East Bay Objects",
+        ][index],
+        username: `dev_resale_shelf_${index + 1}`,
+        email: `resale-shelf-${index + 1}@demo.bsty.invalid`,
+      }))
+    : DEMO_SELLERS;
+  const listings = development
+    ? development.map((sale) => {
+        const prefix = developmentCatalogKey + ":" + sale.sourceId;
+        const photoId = fixedUuid(prefix + ":photo");
+        return {
+          ...sale,
+          id: fixedUuid(prefix + ":listing"),
+          photoId,
+          storageKey: photoId + ".webp",
+          thumbnailKey: fixedUuid(prefix + ":thumb") + ".webp",
+          ownerId: sellers[sale.shelf - 1].id,
+        };
+      })
+    : DEMO_ITEMS;
   return transaction(pool, async (db) => {
     await db.query("SELECT pg_advisory_xact_lock(946781239)");
-    const records = (
+    const enabled = Boolean(development) || config.GOODS_DEMO_CATALOG === "1";
+    const hiddenKeys = [];
+    if (development || !enabled) hiddenKeys.push(DEMO_CATALOG_KEY);
+    if (!development && ["development", "test"].includes(config.NODE_ENV || ""))
+      hiddenKeys.push(developmentCatalogKey);
+    if (hiddenKeys.length)
       await db.query(
-        "SELECT * FROM goods_demo_catalog_records WHERE catalog_key=$1",
-        [DEMO_CATALOG_KEY],
-      )
-    ).rows;
-    if (config.GOODS_DEMO_CATALOG !== "1") {
-      await db.query(
-        `UPDATE listings SET demo_disabled=true WHERE is_demo=true AND id=ANY($2::uuid[]) AND owner_id=ANY($3::text[]) AND id::text IN (SELECT entity_id FROM goods_demo_catalog_records WHERE catalog_key=$1 AND entity_kind='listing')`,
+        `UPDATE listings l SET demo_disabled=true
+       FROM goods_demo_catalog_records listing, goods_demo_catalog_records seller
+       WHERE l.is_demo AND NOT l.demo_disabled AND listing.entity_kind='listing' AND listing.entity_id=l.id::text
+       AND listing.catalog_key=ANY($1::text[]) AND seller.entity_kind='seller'
+       AND seller.entity_id=l.owner_id AND seller.catalog_key=listing.catalog_key
+       AND (listing.catalog_key<>$2 OR (l.id=ANY($3::uuid[]) AND l.owner_id=ANY($4::text[])))`,
         [
+          hiddenKeys,
           DEMO_CATALOG_KEY,
           DEMO_ITEMS.map((item) => item.id),
           DEMO_SELLERS.map((seller) => seller.id),
         ],
       );
-      return { enabled: false, sellers: 0, listings: 0 };
-    }
+    if (!enabled) return { enabled: false, sellers: 0, listings: 0 };
+    const records = (
+      await db.query(
+        "SELECT * FROM goods_demo_catalog_records WHERE catalog_key=$1",
+        [catalogKey],
+      )
+    ).rows;
     const expectedIds = [
-      ...DEMO_SELLERS.map((seller) => seller.id),
-      ...DEMO_ITEMS.flatMap((item) => [item.id, item.photoId]),
+      ...sellers.map((seller) => seller.id),
+      ...listings.flatMap((item) => [item.id, item.photoId]),
     ];
     const foreignProvenance = await db.query(
       "SELECT 1 FROM goods_demo_catalog_records WHERE entity_id=ANY($1::text[]) AND catalog_key<>$2",
-      [expectedIds, DEMO_CATALOG_KEY],
+      [expectedIds, catalogKey],
     );
     if (foreignProvenance.rowCount)
-      collision("namespace provenance", DEMO_CATALOG_KEY);
+      collision("namespace provenance", catalogKey);
     const owns = (kind: string, id: string) =>
       records.some((row) => row.entity_kind === kind && row.entity_id === id);
     // Validate the entire namespace before writing any row or object. A matching
     // public ID alone never grants permission to adopt somebody else's record.
-    for (const seller of DEMO_SELLERS) {
+    for (const seller of sellers) {
       const existing = (
         await db.query(
           'SELECT u.*,p.username,p.is_demo FROM "user" u LEFT JOIN profiles p ON p.id=u.id WHERE u.id=$1 FOR UPDATE OF u',
@@ -366,7 +414,7 @@ export async function initializeDemoCatalog(
       )
         collision("seller credentials", seller.id);
     }
-    for (const item of DEMO_ITEMS) {
+    for (const item of listings) {
       const existing = (
         await db.query("SELECT * FROM listings WHERE id=$1 FOR UPDATE", [
           item.id,
@@ -420,7 +468,7 @@ export async function initializeDemoCatalog(
       )
         collision("photo assignment", item.id);
     }
-    for (const seller of DEMO_SELLERS) {
+    for (const seller of sellers) {
       await db.query(
         'INSERT INTO "user"(id,name,email,"emailVerified","createdAt","updatedAt") VALUES($1,$2,$3,false,now(),now()) ON CONFLICT(id) DO NOTHING',
         [seller.id, seller.name, seller.email],
@@ -437,15 +485,22 @@ export async function initializeDemoCatalog(
         "UPDATE profiles SET bio=$2,location=CASE WHEN location='Sample catalog' THEN '' ELSE location END WHERE id=$1 AND is_demo AND bio=$3",
         [seller.id, sellerBio, legacyBio],
       );
-      await record(db, "seller", seller.id);
+      await record(db, catalogKey, "seller", seller.id);
     }
-    for (const [index, item] of DEMO_ITEMS.entries()) {
+    for (const [index, item] of listings.entries()) {
       const description = item.description;
-      const generated = await sharp(illustration(item))
-        .webp({ quality: 88 })
-        .toBuffer();
+      const generated =
+        "photo" in item
+          ? item.photo
+          : await sharp(illustration(item)).webp({ quality: 88 }).toBuffer();
+      const { width, height } = await sharp(generated).metadata();
       const thumb = await sharp(generated)
-        .resize({ width: 480, height: 480 })
+        .resize({
+          width: 480,
+          height: 480,
+          fit: "inside",
+          withoutEnlargement: true,
+        })
         .webp({ quality: 80 })
         .toBuffer();
       const photoExists = !!(
@@ -476,16 +531,18 @@ export async function initializeDemoCatalog(
         if (!existing) await storage.put(key, buffer);
       }
       await db.query(
-        "INSERT INTO photos(id,owner_id,storage_key,width,height,bytes,thumbnail_storage_key) VALUES($1,$2,$3,800,800,$4,$5) ON CONFLICT(id) DO NOTHING",
+        "INSERT INTO photos(id,owner_id,storage_key,width,height,bytes,thumbnail_storage_key) VALUES($1,$2,$3,$4,$5,$6,$7) ON CONFLICT(id) DO NOTHING",
         [
           item.photoId,
           item.ownerId,
           item.storageKey,
+          width,
+          height,
           generated.length,
           item.thumbnailKey,
         ],
       );
-      await record(db, "photo", item.photoId);
+      await record(db, catalogKey, "photo", item.photoId);
       await db.query(
         `INSERT INTO listings(id,owner_id,code,title,description,category,condition,price_cents,trade_enabled,trade_preferences,status,is_demo,published_at,created_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,true,$9,'active',true,now()-($10::integer*interval '38 minutes'),now()-($10::integer*interval '38 minutes')) ON CONFLICT(id) DO NOTHING`,
         [
@@ -514,7 +571,7 @@ export async function initializeDemoCatalog(
           legacyDescription,
         ],
       );
-      await record(db, "listing", item.id);
+      await record(db, catalogKey, "listing", item.id);
       await db.query(
         "UPDATE listings SET demo_disabled=false WHERE id=$1 AND is_demo=true",
         [item.id],
@@ -522,8 +579,8 @@ export async function initializeDemoCatalog(
     }
     return {
       enabled: true,
-      sellers: DEMO_SELLERS.length,
-      listings: DEMO_ITEMS.length,
+      sellers: sellers.length,
+      listings: listings.length,
     };
   });
 }

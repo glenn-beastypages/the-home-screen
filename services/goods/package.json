@@ -18,6 +18,7 @@
     "native:sync": "npm run build && cap sync",
     "native:ios": "cap open ios",
     "setup": "tsx tools/setup-local.ts",
+    "dev:photos": "node dev/facebook-sales/fetch.mjs",
     "seed:demo": "tsx tools/seed-demo.ts",
     "native:icons": "tsx tools/native-icons.ts",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"server/**/*.ts\" \"tools/**/*.ts\" \"tests/**/*.ts\" \"*.ts\"",
