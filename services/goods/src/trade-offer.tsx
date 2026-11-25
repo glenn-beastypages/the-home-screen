@@ -1,5 +1,6 @@
-import { useRef, useState, type FormEvent } from "react";
-import { ArrowUpRight, Check, Plus } from "lucide-react";
+import { ExchangeMark, ExchangeObject } from "./exchange-object";
+import { useRef, useState, type FormEvent, type ReactNode } from "react";
+import { ArrowUpRight, Check, Plus, PackageOpen } from "lucide-react";
 import {
   api,
   ApiError,
@@ -103,12 +104,23 @@ export function SwapSummary({
           <section key={title} className="swap-side" aria-label={title}>
             <SideHeading title={title} items={items} />
             <ul className="swap-items">
-              {items.map((item) => (
+              {items.map((item, index) => (
                 <li key={item.id}>
-                  <Link className="swap-item" to={`/items/${item.id}`}>
-                    <Photo listing={item} />
-                    <ItemText item={item} />
-                    <ArrowUpRight size={13} aria-hidden />
+                  <Link
+                    className={
+                      state && index === 0 ? "trade-receipt-photo" : "swap-item"
+                    }
+                    to={`/items/${item.id}`}
+                  >
+                    {state && index === 0 ? (
+                      <ExchangeObject item={item} photo={item} />
+                    ) : (
+                      <>
+                        <Photo listing={item} />
+                        <ItemText item={item} />
+                        <ArrowUpRight size={13} aria-hidden />
+                      </>
+                    )}
                   </Link>
                   {["accepted", "disputed", "completed"].includes(
                     state ?? "",
@@ -141,13 +153,15 @@ function PickerSide({
   items,
   selected,
   onToggle,
+  codeLookup,
   empty,
 }: {
   title: string;
   items: Listing[];
   selected: Listing[];
   onToggle: (item: Listing) => void;
-  empty?: string;
+  codeLookup: boolean;
+  empty?: ReactNode;
 }) {
   const [code, setCode] = useState("");
   const [notice, setNotice] = useState("");
@@ -185,71 +199,96 @@ function PickerSide({
   ];
   return (
     <section className="swap-side" aria-label={title}>
-      <SideHeading title={title} items={selected} />
+      <SideHeading
+        title={title === "Your items" ? "You give" : "You get"}
+        items={selected}
+      />
       {items.length ? (
         <>
-          <div className="swap-code">
-            <input
-              aria-label={
-                title === "Your items" ? "Your shelf code" : "Their shelf code"
-              }
-              placeholder="Shelf code"
-              maxLength={8}
-              autoCapitalize="characters"
-              autoComplete="off"
-              spellCheck={false}
-              value={code}
-              onChange={(event) => {
-                setCode(event.target.value);
-                setNotice("");
-              }}
-              onKeyDown={(event) => {
-                if (event.key !== "Enter" || event.nativeEvent.isComposing)
-                  return;
-                event.preventDefault();
-                if (code.trim()) addCode();
-              }}
-            />
-            <button
-              type="button"
-              className="text-button"
-              disabled={!code.trim()}
-              onClick={addCode}
-            >
-              Add
-            </button>
-          </div>
-          {notice && (
-            <p className="swap-code-notice" role="status">
-              {notice}
-            </p>
-          )}
           <ul className="swap-items swap-picker-list">
-            {ordered.map((item) => {
+            {ordered.map((item, index) => {
               const active = selected.some((chosen) => chosen.id === item.id);
               return (
                 <li key={item.id}>
                   <button
                     type="button"
-                    className="swap-item swap-choice"
+                    className={
+                      "swap-item swap-choice" +
+                      (index === 0 ? " exchange-lead" : "")
+                    }
                     aria-label={item.title}
                     aria-pressed={active}
                     disabled={selected.length >= 10 && !active}
                     onClick={() => onToggle(item)}
                   >
-                    <Photo listing={item} />
-                    <ItemText item={item} />
-                    <span className="swap-choice-icon">
-                      {active ? <Check size={15} /> : <Plus size={15} />}
-                    </span>
+                    {index === 0 ? (
+                      <ExchangeObject
+                        item={item}
+                        photo={item}
+                        selected={active}
+                      />
+                    ) : (
+                      <>
+                        <Photo listing={item} />
+                        <ItemText item={item} />
+                        <span className="swap-choice-icon">
+                          {active ? <Check size={15} /> : <Plus size={15} />}
+                        </span>
+                      </>
+                    )}
                   </button>
                 </li>
               );
             })}
           </ul>
+          {codeLookup && (
+            <div className="swap-code">
+              <input
+                aria-label={
+                  title === "Your items"
+                    ? "Your shelf code"
+                    : "Their shelf code"
+                }
+                placeholder="Shelf code"
+                maxLength={8}
+                autoCapitalize="characters"
+                autoComplete="off"
+                spellCheck={false}
+                value={code}
+                onChange={(event) => {
+                  setCode(event.target.value);
+                  setNotice("");
+                }}
+                onKeyDown={(event) => {
+                  if (event.key !== "Enter" || event.nativeEvent.isComposing)
+                    return;
+                  event.preventDefault();
+                  if (code.trim()) addCode();
+                }}
+              />
+              <button
+                type="button"
+                className="text-button"
+                disabled={!code.trim()}
+                onClick={addCode}
+              >
+                Add
+              </button>
+            </div>
+          )}
+          {codeLookup && notice && (
+            <p className="swap-code-notice" role="status">
+              {notice}
+            </p>
+          )}
         </>
       ) : (
-        <p className="swap-picker-empty">{empty}</p>
+        <div className="exchange-empty">
+          <span className="empty-slot" aria-hidden="true">
+            <PackageOpen size={36} strokeWidth={1.3} />
+          </span>
+          {empty}
+        </div>
       )}
     </section>
   );
@@ -283,6 +322,8 @@ export function TradeComposer({
       : null,
   );
   const options = useResource<TradeOptions>("/trade-options");
+  const [codeLookup, setCodeLookup] = useState(false);
+  const compareRef = useRef<HTMLDivElement>(null);
   const [ownIds, setOwnIds] = useState<string[]>(
     () =>
       original?.yours.map((item) => item.id) ??
@@ -458,15 +499,36 @@ export function TradeComposer({
                   </button>
                 </div>
               )}
-              <div className="swap-sides">
+              <div className="swap-sides exchange-spread" ref={compareRef}>
                 <PickerSide
+                  codeLookup={codeLookup}
                   title="Your items"
                   items={mine}
                   selected={yours}
                   onToggle={(item) => toggle(item, ownIds, setOwnIds)}
-                  empty="List an item and turn on trades to make an offer."
+                  empty={
+                    <>
+                      <strong>Your trade shelf is empty</strong>
+                      <p>Add an item and turn on trades to offer it.</p>
+                      <Link
+                        className="button secondary"
+                        to={
+                          "/sell/new?returnTo=" +
+                          encodeURIComponent(
+                            trade
+                              ? "/trades/" + trade.id
+                              : withoutBase(location.pathname) + "?offer=1",
+                          )
+                        }
+                      >
+                        <Plus size={16} /> List an item
+                      </Link>
+                    </>
+                  }
                 />
+                <ExchangeMark />
                 <PickerSide
+                  codeLookup={codeLookup}
                   title="Their items"
                   items={partner}
                   selected={theirs}
@@ -474,21 +536,35 @@ export function TradeComposer({
                   empty="This seller has no available trade listings."
                 />
               </div>
-              <p className="swap-value-note">
-                Estimated value from listing prices
-              </p>
-              {!mine.length && (
-                <Link
-                  className="text-button"
-                  to={
-                    "/sell/new?returnTo=" +
-                    encodeURIComponent(
-                      withoutBase(location.pathname) + "?offer=1",
-                    )
-                  }
+              {(codeLookup ||
+                mine.length > yours.length ||
+                partner.length > theirs.length) && (
+                <button
+                  className="code-lookup-toggle text-button"
+                  type="button"
+                  aria-expanded={codeLookup}
+                  onClick={() => {
+                    setCodeLookup(!codeLookup);
+                    if (!codeLookup)
+                      requestAnimationFrame(() =>
+                        compareRef.current
+                          ?.querySelector<HTMLInputElement>(".swap-code input")
+                          ?.focus(),
+                      );
+                  }}
                 >
-                  List an item
-                </Link>
+                  {codeLookup ? "Hide shelf codes" : "Find by shelf code"}
+                </button>
+              )}
+              {yours.length > 0 && theirs.length > 0 && (
+                <p className="swap-value-note">
+                  {ownValue.unpriced || otherValue.unpriced
+                    ? "Some items have no listed value."
+                    : difference
+                      ? "Listed values differ by " + money(difference) + "."
+                      : "Both sides have the same listed value."}{" "}
+                  Values come from the listings.
+                </p>
               )}
               {mine.length > 0 && interestItem && !yours.length && (
                 <button
@@ -599,11 +675,18 @@ export function TradeComposer({
         {readyToPick && (mine.length > 0 || interestItem) && (
           <footer className="swap-composer-footer">
             <span aria-live="polite">
-              {ready
-                ? `${yours.length} to give · ${theirs.length} to get`
-                : yours.length && theirs.length
-                  ? "Review selected items"
-                  : "Select an item on each side"}
+              <strong>
+                {ready
+                  ? `${yours.length} to give · ${theirs.length} to get`
+                  : yours.length && theirs.length
+                    ? "Review selected items"
+                    : !mine.length
+                      ? "Have a question for the seller?"
+                      : !yours.length
+                        ? "Choose what you’ll give."
+                        : "Choose what you’d like to get."}
+              </strong>
+              {ready && <small>They can accept, counter, or decline.</small>}
             </span>
             {!mine.length && interestItem ? (
               <button

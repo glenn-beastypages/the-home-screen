@@ -411,6 +411,7 @@ export function ProductCard({
           <Photo listing={listing} />
         </Link>
         <button
+          aria-pressed={saved}
           className={"favorite " + (saved ? "saved" : "")}
           onClick={toggle}
           disabled={busy}
@@ -418,26 +419,28 @@ export function ProductCard({
         >
           <Heart size={18} fill={saved ? "currentColor" : "none"} />
         </button>
-        {listing.status !== "active" && (
-          <span className="image-status">{listing.status}</span>
-        )}
-      </div>
-      <div className="product-meta">
-        <span>{moneyForCard(listing.priceCents)}</span>
-        {listing.tradeEnabled && <span className="trade-mark">↔ Trade</span>}
-      </div>
-      <Link className="product-title" to={"/items/" + listing.id}>
-        {listing.title || "Untitled draft"}
-      </Link>
-      <div className="product-facts">
         {listing.code && (
           <span
             className="shelf-ticket"
             aria-label={"Seller shelf position " + listing.code}
           >
-            {listing.code}
+            Shelf {listing.code}
           </span>
         )}
+        {listing.status !== "active" && (
+          <span className="image-status">{listing.status}</span>
+        )}
+      </div>
+      <div className="product-meta">
+        <Link className="product-title" to={"/items/" + listing.id}>
+          {listing.title || "Untitled draft"}
+        </Link>
+        <strong className="product-price">
+          {moneyForCard(listing.priceCents)}
+        </strong>
+      </div>
+      <div className="product-facts">
+        {listing.tradeEnabled && <span className="trade-mark">↔ Trade</span>}
         <span className="product-condition">{listing.condition}</span>
         {listing.owner.location && <span>{listing.owner.location}</span>}
       </div>

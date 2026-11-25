@@ -1,5 +1,14 @@
+import { ExchangeMark, ExchangeObject } from "./exchange-object";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, Check, MapPin, Package, Truck } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  MapPin,
+  Package,
+  ShoppingBag,
+  Speaker,
+  Truck,
+} from "lucide-react";
 import {
   api,
   ApiError,
@@ -160,6 +169,8 @@ export function PracticeStart({
         : [],
     ) ?? [];
   const yourChoice = offered || available[0]?.id || "tote";
+  const ownListing = available.find((l) => l.id === yourChoice);
+  const offerItem = ownListing ?? practiceShelf[yourChoice];
   const submit = async () => {
     if (!requireUser() || busy) return;
     setBusy(true);
@@ -185,7 +196,11 @@ export function PracticeStart({
     }
   };
   return (
-    <article className="practice-page">
+    <article
+      className={
+        "practice-page" + (kind === "trade" && user ? " practice-trade" : "")
+      }
+    >
       <PageTitle
         title={
           kind === "message"
@@ -196,7 +211,25 @@ export function PracticeStart({
         }
         back={"/items/" + id}
       />
-      <ItemSummary item={item} />
+      {kind === "trade" && user && offerItem ? (
+        <div className="exchange-spread practice-spread">
+          <section>
+            <h2>You give</h2>
+            <ExchangeObject
+              item={offerItem}
+              photo={ownListing}
+              symbol={yourChoice === "speaker" ? <Speaker /> : <ShoppingBag />}
+            />
+          </section>
+          <ExchangeMark />
+          <section>
+            <h2>You get</h2>
+            <ExchangeObject item={item} photo={item} />
+          </section>
+        </div>
+      ) : (
+        <ItemSummary item={item} />
+      )}
       <p className="practice-note">{disclosure}</p>
       {!user ? (
         <button className="button" onClick={() => requireUser()}>

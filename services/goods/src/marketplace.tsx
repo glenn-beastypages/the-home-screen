@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import {
   ArrowDown,
   ArrowRight,
@@ -9,6 +9,7 @@ import {
   X,
   Heart,
   Share2,
+  MoreHorizontal,
   MessageCircle,
   ChevronLeft,
   ChevronRight,
@@ -168,7 +169,7 @@ export function Home() {
         <div className="section-heading">
           <h2 id="new-listings-title">New listings</h2>
           <Link className="text-button" to="/explore">
-            Browse all <ArrowRight size={18} />
+            Browse all <ArrowUpRight size={18} />
           </Link>
         </div>
         {loading ? (
@@ -735,6 +736,78 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
   );
 }
 
+function ListingOptions({
+  id,
+  share,
+}: {
+  id: string;
+  share: () => Promise<void>;
+}) {
+  const [open, setOpen] = useState(false);
+  const region = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const menuId = useId();
+  useEffect(() => {
+    if (!open) return;
+    const outside = (event: PointerEvent) => {
+      if (
+        event.target instanceof Node &&
+        !region.current?.contains(event.target)
+      )
+        setOpen(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, [open]);
+  function close() {
+    setOpen(false);
+    trigger.current?.focus();
+  }
+  return (
+    <div
+      ref={region}
+      className="listing-options"
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }}
+      onKeyDown={(event) => {
+        if (open && event.key === "Escape") {
+          event.preventDefault();
+          close();
+        }
+      }}
+    >
+      <button
+        ref={trigger}
+        className="icon-button"
+        aria-label="More listing actions"
+        aria-expanded={open}
+        aria-controls={menuId}
+        onClick={() => setOpen(!open)}
+      >
+        <MoreHorizontal size={20} />
+      </button>
+      <div
+        id={menuId}
+        className="listing-options-panel"
+        hidden={!open}
+        onClick={(event) => {
+          if (
+            event.target instanceof Element &&
+            event.currentTarget.contains(event.target) &&
+            event.target.closest("button")
+          )
+            close();
+        }}
+      >
+        <button className="text-button" onClick={share}>
+          <Share2 size={15} /> Share listing
+        </button>
+        <ReportButton targetType="listing" targetId={id} />
+      </div>
+    </div>
+  );
+}
 export function ItemPage({ id }: { id: string }) {
   const { user, requireUser, go, toast } = useApp();
   const { data, error, loading, reload } = useResource<{ listing: Listing }>(
@@ -747,6 +820,15 @@ export function ItemPage({ id }: { id: string }) {
     ),
     [busy, setBusy] = useState(false);
   const l = data?.listing;
+  const shelf = useResource<Page<Listing>>(
+    l && !l.isHidden && ["active", "reserved"].includes(l.status)
+      ? "/listings?seller=" + encodeURIComponent(l.owner.id) + "&limit=5"
+      : null,
+  );
+  const moreFromSeller =
+    shelf.data?.items
+      .filter((item) => item.id !== id && item.status === "active")
+      .slice(0, 4) ?? [];
   const checkoutEligible =
     l?.status === "active" &&
     !l.isHidden &&
@@ -809,6 +891,9 @@ export function ItemPage({ id }: { id: string }) {
   const available = !l.isHidden && l.status === "active";
   const reserved = !l.isHidden && l.status === "reserved";
   const canStartConversation = staffed && (available || reserved);
+  const messageFirst =
+    canStartConversation && !canBuy && !(available && l.tradeEnabled);
+  const demoMessage = !staffed && l.isDemo && available;
   let touchStart: { x: number; y: number } | null = null;
   const gallery = (
     <div
@@ -842,10 +927,12 @@ export function ItemPage({ id }: { id: string }) {
       ) : (
         <Photo listing={l} />
       )}
-      <span className="gallery-counter">
-        {l.photos.length ? index + 1 : 0} / {l.photos.length}
-      </span>
-      {!fullscreen && (
+      {l.photos.length > 1 && (
+        <span className="gallery-counter">
+          {index + 1} / {l.photos.length}
+        </span>
+      )}
+      {!fullscreen && !!l.photos.length && (
         <button
           className="gallery-expand icon-button"
           onClick={() => setFullscreen(true)}
@@ -881,13 +968,15 @@ export function ItemPage({ id }: { id: string }) {
           <ChevronLeft size={18} /> Marketplace
         </Link>
         <div className="actions">
-          <button className="text-button" onClick={share}>
-            <Share2 size={17} /> Share
-          </button>
-          <button className="text-button" onClick={save}>
+          <button
+            className="text-button"
+            aria-pressed={l.isFavorite}
+            onClick={save}
+          >
             <Heart size={17} fill={l.isFavorite ? "currentColor" : "none"} />
             {l.isFavorite ? "Saved" : "Save"}
           </button>
+          <ListingOptions id={l.id} share={share} />
         </div>
       </div>
       <div className="item-layout">
@@ -910,14 +999,19 @@ export function ItemPage({ id }: { id: string }) {
         </div>
         <section className="item-info">
           <div className="item-kicker">
-            <span className="code-pill">{l.code}</span>
+            <span className="code-pill">Shelf {l.code}</span>
             <Status value={l.status} />
           </div>
-          <h1>{l.title || "Untitled draft"}</h1>
           <p className="item-subtitle">
             {l.category} <span>·</span> {l.condition}
           </p>
-          <div className="item-price">{money(l.priceCents)}</div>
+          <h1>{l.title || "Untitled draft"}</h1>
+          <div className="item-price">
+            {money(l.priceCents)}
+            {l.priceCents !== null && staffed && l.tradeEnabled && (
+              <small>Listed value</small>
+            )}
+          </div>
           {!owned && staffed && available && l.priceCents !== null && (
             <p className="muted small-copy">
               {canBuy
@@ -925,7 +1019,7 @@ export function ItemPage({ id }: { id: string }) {
                   ? "Pay online and choose shipping or local pickup."
                   : "Pay online and arrange local pickup with the seller."
                 : l.tradeEnabled
-                  ? "Listed value. Message the seller if you’d like to buy."
+                  ? "Message the seller if you’d like to buy."
                   : "Arrange the purchase directly with the seller."}
             </p>
           )}
@@ -957,23 +1051,14 @@ export function ItemPage({ id }: { id: string }) {
                 >
                   <ArrowLeftRight size={19} /> Make a trade offer
                 </Link>
-                <Link
-                  className="button secondary full"
-                  to={practicePath("message", l.id)}
-                >
-                  <MessageCircle size={19} /> Message seller
-                </Link>
               </div>
             </>
           )}
-          {isTradeable(l) && (
+          {owned && isTradeable(l) && (
             <div className="trade-callout">
               <ArrowLeftRight size={19} />
               <div>
                 <strong>Open to trade</strong>
-                {!owned && (
-                  <p>Offer an item from your shelf to start a trade.</p>
-                )}
               </div>
             </div>
           )}
@@ -1008,25 +1093,41 @@ export function ItemPage({ id }: { id: string }) {
                       <ArrowLeftRight size={19} /> Make a trade offer
                     </button>
                   )}
-                  <button
-                    className={
-                      available && !l.tradeEnabled && !canBuy
-                        ? "button full"
-                        : "button secondary full"
-                    }
-                    disabled={busy}
-                    onClick={message}
-                  >
-                    {busy ? <Spinner /> : <MessageCircle size={19} />}
-                    {isTradeable(l)
-                      ? "Message about trading"
-                      : "Message seller"}
-                  </button>
+                  {messageFirst && (
+                    <button
+                      className="button full"
+                      disabled={busy}
+                      onClick={message}
+                    >
+                      {busy ? <Spinner /> : <MessageCircle size={18} />} Message
+                      seller
+                    </button>
+                  )}
                 </>
               )}
             </div>
           )}
-          <Seller profile={l.owner} />
+          <div className="listing-seller">
+            <Seller profile={l.owner} />
+            {!owned &&
+              (demoMessage ? (
+                <Link
+                  className="seller-message"
+                  to={practicePath("message", l.id)}
+                >
+                  <MessageCircle size={16} /> Message seller
+                </Link>
+              ) : canStartConversation && !messageFirst ? (
+                <button
+                  className="seller-message"
+                  onClick={message}
+                  disabled={busy}
+                >
+                  {busy ? <Spinner /> : <MessageCircle size={16} />}{" "}
+                  {isTradeable(l) ? "Message about trading" : "Message seller"}
+                </button>
+              ) : null)}
+          </div>
           <div className="item-detail-block">
             <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
@@ -1039,14 +1140,6 @@ export function ItemPage({ id }: { id: string }) {
           )}
           <div className="item-detail-block item-facts">
             <div>
-              <span>Inventory position</span>
-              <strong>{l.code}</strong>
-            </div>
-            <div>
-              <span>Condition</span>
-              <strong>{l.condition}</strong>
-            </div>
-            <div>
               <span>Listed</span>
               <strong>{new Date(l.createdAt).toLocaleDateString()}</strong>
             </div>
@@ -1055,9 +1148,19 @@ export function ItemPage({ id }: { id: string }) {
               <small className="monospace">{l.id.slice(0, 12)}</small>
             </div>
           </div>
-          <ReportButton targetType="listing" targetId={l.id} />
         </section>
       </div>
+      {moreFromSeller.length > 0 && (
+        <section className="section related-shelf">
+          <div className="section-heading">
+            <h2>More from this shelf</h2>
+            <Link className="text-button" to={"/sellers/" + l.owner.id}>
+              View shelf <ArrowUpRight size={16} />
+            </Link>
+          </div>
+          <ProductGrid items={moreFromSeller} />
+        </section>
+      )}
       {fullscreen && (
         <Dialog
           title="Listing photos"
