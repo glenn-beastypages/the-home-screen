@@ -1,6 +1,6 @@
 import { publicPath } from "./runtime.js";
 import type { Express, Request, Response } from "express";
-import type { Pool } from "pg";
+import type { Pool, PoolClient } from "pg";
 import multer from "multer";
 import sharp from "sharp";
 import { z } from "zod";
@@ -42,6 +42,26 @@ const catalogSearch = z.object({
 function validatePrices({ minPrice, maxPrice }: z.infer<typeof catalogSearch>) {
   if (minPrice !== undefined && maxPrice !== undefined && minPrice > maxPrice)
     fail(400, "Minimum price must not exceed maximum price.");
+}
+
+// The listing transaction already holds the seller's profile lock.
+async function nextListingCode(db: PoolClient, ownerId: string): Promise<string> {
+  const { rows } = await db.query<{ code: string }>(
+    `SELECT s.code FROM inventory_slots s
+     WHERE s.owner_id=$1 AND NOT EXISTS (
+       SELECT 1 FROM listings l WHERE l.owner_id=s.owner_id AND l.code=s.code
+       AND l.status IN ('draft','active','reserved')
+     )
+     ORDER BY s.code LIMIT 1`,
+    [ownerId],
+  );
+  if (!rows.length)
+    fail(
+      409,
+      "You’ve reached the limit of 78 listings. Remove an available item or a draft from Your listings to make room.",
+      "INVENTORY_FULL",
+    );
+  return rows[0].code;
 }
 
 export function registerMarketplace(
@@ -628,7 +648,10 @@ export function registerMarketplace(
               "LISTING_LOCKED",
             );
         }
-        const code = normalizeCode(body.code ?? current?.code ?? "");
+        const code =
+          body.code !== undefined
+            ? normalizeCode(body.code)
+            : (current?.code ?? (await nextListingCode(db, userId)));
         const title = body.title ?? current?.title ?? "",
           description = body.description ?? current?.description ?? "";
         const category = body.category ?? current?.category ?? "",

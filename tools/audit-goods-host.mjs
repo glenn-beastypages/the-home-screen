@@ -220,9 +220,9 @@ try {
   const uploaded = await member.json('/goods/api/uploads', { method: 'POST', body: form })
   const photo = uploaded.data.photo
   check('actual host processes and persists a synthetic photo', uploaded.status === 201 && photo?.url?.startsWith('/goods/api/photos/'))
-  const draftResponse = await member.json('/goods/api/listings', { method: 'POST', body: { code: 'A-1', status: 'draft', title: 'Synthetic host restart draft', photoIds: [photo.id] } })
+  const draftResponse = await member.json('/goods/api/listings', { method: 'POST', body: { status: 'draft', title: 'Synthetic host restart draft', photoIds: [photo.id] } })
   const draft = draftResponse.data.listing
-  check('draft creation and slot assignment work under /goods', draftResponse.status === 201 && draft?.status === 'draft' && draft.code === 'A-1')
+  check('a new draft receives its item reference automatically under /goods', draftResponse.status === 201 && draft?.status === 'draft' && draft.code === 'A-1')
   check('private draft and photo remain hidden from signed-out visitors', (await guest.request(`/goods/api/listings/${draft.id}`)).status === 404 && (await guest.request(photo.url)).status === 404)
   check('the owner can load the processed private photo', (await member.request(photo.url)).status === 200)
   check('cross-origin profile writes are refused by the mounted app', (await member.json('/goods/api/me', { method: 'PATCH', body: { bio: 'Refused synthetic request' }, originHeader: 'https://untrusted.example' })).status === 403)

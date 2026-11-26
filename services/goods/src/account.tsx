@@ -346,7 +346,7 @@ export function ProfilePage() {
       setLogout(false);
     }
   };
-  if (!user) return <SignedOut what="make your shelf your own" />;
+  if (!user) return <SignedOut what="manage your profile" />;
   return (
     <>
       <PageTitle title="Your profile">
@@ -374,8 +374,8 @@ export function ProfilePage() {
         {[
           {
             to: "/sell",
-            title: "Your shelf",
-            body: "Listings, drafts and shelf positions",
+            title: "Your listings",
+            body: "Manage items and drafts",
             icon: Grid2X2,
           },
           {

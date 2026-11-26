@@ -668,40 +668,6 @@ textarea::placeholder {
   border: 0;
   border-radius: 12px;
 }
-
-.join-shelf {
-  min-height: 390px;
-  background: var(--soft);
-  border-radius: 12px;
-}
-.join-shelf h1 {
-  font-size: clamp(32px, 4vw, 55px);
-}
-.shelf-preview span:nth-child(2) {
-  color: var(--ink);
-  background: var(--accent);
-}
-.inventory-summary {
-  background: var(--soft);
-  border: 0;
-  border-radius: 10px;
-  padding: 16px 20px;
-  gap: 18px;
-}
-.inventory-summary strong {
-  font: 800 34px/1 var(--display);
-}
-.inventory-summary > div:first-child > span,
-.inventory-summary > span {
-  font-size: 12px;
-  color: var(--muted);
-}
-.capacity-track {
-  background: #d2d7d3;
-}
-.capacity-track > span {
-  background: var(--ink);
-}
 .tab-bar,
 .swap-tabs {
   border-color: var(--line);
@@ -711,18 +677,6 @@ textarea::placeholder {
   color: var(--ink);
   background: transparent;
   border-color: var(--ink);
-}
-.view-switch {
-  background: var(--soft);
-}
-.inventory-cell.available {
-  background: var(--soft);
-  color: var(--muted);
-  border-color: #bdc5bf;
-}
-.inventory-cell.available > svg,
-.inventory-cell.available > small {
-  color: var(--muted);
 }
 .editor-steps {
   max-width: 1120px;
@@ -1194,22 +1148,6 @@ textarea::placeholder {
     padding-block: 5px;
     border-bottom: 1px solid var(--line);
   }
-  .join-shelf {
-    min-height: 0;
-    padding: 22px;
-  }
-  .join-shelf .shelf-preview {
-    position: static;
-    transform: none;
-    width: min(100%, 225px);
-    margin-top: 12px;
-  }
-  .join-shelf .shelf-preview span {
-    aspect-ratio: 1.6;
-  }
-  .join-shelf .shelf-preview span:nth-child(2) {
-    transform: none;
-  }
   .item-actions > :only-child,
   .item-actions > .purchase-action {
     grid-column: 1 / -1;
@@ -1222,14 +1160,6 @@ textarea::placeholder {
   }
   .public-shelf {
     gap: 18px 8px;
-  }
-  .inventory-summary {
-    padding: 12px;
-    gap: 9px;
-  }
-  .inventory-summary > span,
-  .inventory-summary > div:first-child > span {
-    font-size: 10px;
   }
   .editor-layout,
   .editor-layout:not(:has(.editor-aside)),
@@ -1468,7 +1398,6 @@ button:focus-visible {
 .swap-page h1,
 .seller-profile h1,
 .auth-form > h1,
-.join-shelf h1,
 .section-heading h2,
 .item-info h1,
 .practice-page .page-heading h1 {
@@ -1556,9 +1485,7 @@ button:focus-visible {
   font-size: 27px;
 }
 .seller-profile,
-.my-profile.panel,
-.inventory-summary,
-.join-shelf {
+.my-profile.panel {
   border-radius: 2px;
   background: #eeede5;
   border-block: 1px solid var(--ink);
@@ -2215,7 +2142,6 @@ button:focus-visible {
 .section-heading h2,
 .page-heading h1,
 .seller-profile h1,
-.join-shelf h1,
 .auth-form > h1,
 .swap-page h1,
 .practice-page .page-heading h1,
@@ -2595,25 +2521,10 @@ button:focus-visible {
   border-color: var(--line);
 }
 .seller-profile,
-.my-profile.panel,
-.inventory-summary,
-.join-shelf {
+.my-profile.panel {
   background: #edf2e9;
   border: 1px solid #d7dfd1;
   border-radius: 9px;
-}
-.inventory-summary {
-  border-left: 5px solid var(--pine);
-}
-.inventory-summary strong {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-}
-.capacity-track {
-  background: #cbd7cc;
-}
-.capacity-track > span {
-  background: var(--pine);
 }
 .editor-aside {
   border-top: 3px solid var(--pine);

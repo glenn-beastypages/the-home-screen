@@ -1311,55 +1311,6 @@ label small {
 .modal > .actions {
   margin-top: 25px;
 }
-.inventory-summary {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  background: var(--accent);
-  border-radius: 5px;
-  padding: 22px 25px;
-  margin: 0 0 22px;
-}
-.inventory-summary > div:first-child {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.inventory-summary strong {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -1px;
-  white-space: nowrap;
-}
-.inventory-summary strong span {
-  font-weight: 450;
-  color: #8b9580;
-  font-size: 19px;
-}
-.inventory-summary > div:first-child > span {
-  font-size: 10px;
-  max-width: 58px;
-  line-height: 1.5;
-  color: #75806b;
-}
-.capacity-track {
-  height: 4px;
-  flex: 1;
-  background: #d3b617;
-  overflow: hidden;
-  border-radius: 5px;
-  max-width: 520px;
-}
-.capacity-track > span {
-  display: block;
-  height: 100%;
-  background: var(--ink);
-}
-.inventory-summary > span {
-  font-size: 10px;
-  color: #5f724f;
-  margin-left: auto;
-}
 .inventory-toolbar {
   display: flex;
   justify-content: space-between;
@@ -1368,128 +1319,6 @@ label small {
 }
 .inventory-toolbar .tab-bar {
   flex: 1;
-}
-.view-switch {
-  display: flex;
-  gap: 2px;
-  background: #eaece4;
-  padding: 3px;
-  border-radius: 5px;
-  margin-top: 4px;
-}
-.view-switch button {
-  display: grid;
-  place-items: center;
-  min-width: 35px;
-  height: 32px;
-  background: transparent;
-  color: var(--muted);
-  border-radius: 3px;
-}
-.view-switch button.selected {
-  background: var(--accent);
-  color: var(--ink);
-  box-shadow: 0 1px 3px #11111110;
-}
-.inventory-grid {
-  padding: 10px 0 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.grid-column-labels {
-  display: grid;
-  grid-template-columns: 35px repeat(3, 1fr);
-  gap: 12px;
-  margin: 0 0 13px;
-}
-.grid-column-labels strong {
-  text-align: center;
-  color: var(--muted);
-  font-size: 11px;
-  font-family: ui-monospace, monospace;
-  font-weight: 450;
-}
-.inventory-row {
-  display: grid;
-  grid-template-columns: 35px repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 12px;
-  align-items: stretch;
-}
-.row-label {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: var(--muted);
-  font-family: ui-monospace, monospace;
-}
-.inventory-cell {
-  min-height: 146px;
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.inventory-cell.available {
-  border: 1px dashed #d7dbcc;
-  color: #89927a;
-  background: #f2f4eb;
-}
-.inventory-cell.available > svg {
-  color: #98a689;
-}
-.inventory-cell.available > small {
-  font-size: 9px;
-  margin-top: 6px;
-  color: #8c957f;
-}
-.empty-cell-code {
-  font-size: 10px;
-  font-family: ui-monospace, monospace;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.inventory-cell.occupied {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  text-align: left;
-}
-.inventory-cell.occupied > .item-photo {
-  height: 100%;
-  aspect-ratio: auto;
-  border-radius: 0;
-}
-.inventory-cell.occupied > div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 13px;
-  min-width: 0;
-}
-.inventory-cell.occupied strong {
-  font-size: 12px;
-  font-family: ui-monospace, monospace;
-}
-.inventory-cell.occupied span:not(.status) {
-  font-size: 10px;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
-}
-.inventory-cell .status {
-  font-size: 8px;
-  align-self: start;
-}
-.inventory-cell:hover {
-  border-color: #8ca16f;
-}
-.inventory-cell.filtered-out {
-  opacity: 0.25;
 }
 .inventory-card {
   border: 1px solid var(--line);
@@ -1529,65 +1358,6 @@ label small {
   font-size: 10px;
   display: flex;
   justify-content: space-between;
-}
-.join-shelf {
-  min-height: 650px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px 6%;
-  overflow: hidden;
-  background: #f8df50;
-  border-radius: 7px;
-}
-.join-shelf h1 {
-  font-size: 62px;
-  letter-spacing: -3px;
-  margin: 20px 0;
-}
-.join-shelf p {
-  font-size: 14px;
-  color: #4f481f;
-  line-height: 1.8;
-}
-.join-shelf > .text-button {
-  margin: 15px 0;
-  z-index: 1;
-}
-.join-shelf > .button {
-  z-index: 1;
-}
-.shelf-preview {
-  position: absolute;
-  right: 6%;
-  width: 34%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  transform: rotate(7deg);
-}
-.shelf-preview span {
-  aspect-ratio: 1;
-  border: 1px solid #b69d24;
-  padding: 12px;
-  color: #786819;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 12px;
-  font-family: ui-monospace, monospace;
-}
-.shelf-preview span:nth-child(2) {
-  background: var(--ink);
-  color: var(--accent);
-  transform: translateY(-15px);
-  border-color: var(--ink);
-}
-.shelf-preview span svg {
-  align-self: center;
-  margin: auto;
 }
 .editor-steps {
   list-style: none;
@@ -1831,39 +1601,6 @@ label small {
 .editor-remove {
   margin-top: 25px;
   font-size: 11px;
-}
-.slot-picker {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-  margin: 24px 0 5px;
-}
-.slot-picker button {
-  min-height: 39px;
-  border: 1px solid var(--line);
-  background: #f6f8ef;
-  border-radius: 4px;
-  font-family: ui-monospace, monospace;
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-}
-.slot-picker button.selected {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--ink);
-}
-.slot-picker button.occupied {
-  background: #e8eae4;
-  color: #aaa;
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-.slot-select-label {
-  max-width: 210px;
-  margin-top: 24px;
 }
 .listing-preview {
   display: grid;
@@ -2711,16 +2448,6 @@ label small {
   .my-profile .button {
     padding: 10px 13px;
   }
-  .join-shelf h1 {
-    font-size: 50px;
-  }
-  .shelf-preview {
-    right: 5%;
-    width: 30%;
-  }
-  .join-shelf {
-    min-height: 560px;
-  }
   .about-page {
     padding: 35px 2%;
   }
@@ -3254,31 +2981,6 @@ label small {
     font-size: 10px;
     padding: 13px 0 14px;
   }
-  .inventory-summary {
-    padding: 17px;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 17px;
-  }
-  .inventory-summary > div:first-child {
-    gap: 9px;
-  }
-  .inventory-summary strong {
-    font-size: 25px;
-  }
-  .inventory-summary strong span {
-    font-size: 17px;
-  }
-  .inventory-summary > div:first-child > span {
-    font-size: 8px;
-    max-width: 45px;
-  }
-  .inventory-summary > span {
-    font-size: 8px;
-  }
-  .capacity-track {
-    min-width: 70px;
-  }
   .inventory-toolbar {
     gap: 12px;
   }
@@ -3288,77 +2990,6 @@ label small {
   }
   .inventory-toolbar .tab-bar button {
     font-size: 9px;
-  }
-  .view-switch {
-    margin-top: 5px;
-  }
-  .view-switch button {
-    min-width: 28px;
-    height: 27px;
-  }
-  .view-switch button svg {
-    width: 15px;
-    height: 15px;
-  }
-  .inventory-row {
-    grid-template-columns: 17px repeat(3, minmax(0, 1fr));
-    gap: 7px;
-    margin-bottom: 7px;
-  }
-  .grid-column-labels {
-    grid-template-columns: 17px repeat(3, 1fr);
-    gap: 7px;
-  }
-  .grid-column-labels strong {
-    font-size: 9px;
-  }
-  .row-label {
-    font-size: 11px;
-  }
-  .inventory-cell {
-    min-height: 116px;
-    border-radius: 3px;
-  }
-  .inventory-cell.occupied {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-  }
-  .inventory-cell.occupied > .item-photo {
-    height: 64px;
-    aspect-ratio: auto;
-    flex-shrink: 0;
-  }
-  .inventory-cell.occupied > div:last-child {
-    padding: 7px 6px;
-    gap: 4px;
-  }
-  .inventory-cell.occupied strong {
-    font-size: 9px;
-  }
-  .inventory-cell.occupied span:not(.status) {
-    font-size: 7px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .inventory-cell .status {
-    font-size: 6px;
-    padding: 3px 4px;
-    align-self: start;
-    line-height: 1;
-  }
-  .inventory-cell.available > svg {
-    width: 18px;
-  }
-  .inventory-cell.available > small {
-    font-size: 7px;
-  }
-  .empty-cell-code {
-    font-size: 8px;
-    left: 7px;
-    top: 8px;
   }
   .inventory-card .code-pill {
     font-size: 8px;
@@ -3391,45 +3022,6 @@ label small {
   }
   .inventory-card-footer .text-button svg {
     width: 12px;
-  }
-  .join-shelf {
-    min-height: 620px;
-    padding: 30px;
-    justify-content: flex-start;
-  }
-  .join-shelf > .eyebrow {
-    font-size: 8px;
-    margin-top: 12px;
-  }
-  .join-shelf h1 {
-    font-size: 41px;
-    letter-spacing: -2px;
-    margin: 14px 0 20px;
-  }
-  .join-shelf p {
-    font-size: 12px;
-  }
-  .join-shelf > .button {
-    font-size: 11px;
-    margin-top: 10px;
-  }
-  .join-shelf > .text-button {
-    font-size: 10px;
-  }
-  .shelf-preview {
-    bottom: 30px;
-    right: 35px;
-    width: 200px;
-    gap: 6px;
-    transform: rotate(6deg);
-  }
-  .shelf-preview span {
-    padding: 8px;
-    font-size: 10px;
-    aspect-ratio: 1.1;
-  }
-  .shelf-preview span svg {
-    width: 14px;
   }
   .editor-steps {
     margin: 0 0 23px;
@@ -3558,18 +3150,6 @@ label small {
   }
   .optional {
     font-size: 10px;
-  }
-  .slot-picker {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 7px;
-  }
-  .slot-picker button {
-    font-size: 10px;
-    min-height: 37px;
-  }
-  .slot-select-label {
-    max-width: none;
-    margin-top: 22px;
   }
   .listing-preview {
     display: flex;
@@ -4081,22 +3661,6 @@ label small {
     margin-left: 0;
     margin-top: 5px;
   }
-  .inventory-summary {
-    gap: 10px;
-    padding: 15px 13px;
-  }
-  .inventory-summary > span {
-    font-size: 7px;
-  }
-  .inventory-summary strong {
-    font-size: 23px;
-  }
-  .inventory-summary > div:first-child > span {
-    font-size: 7px;
-  }
-  .capacity-track {
-    min-width: 45px;
-  }
   .inventory-toolbar .tab-bar {
     gap: 15px;
   }
@@ -4156,8 +3720,6 @@ textarea::placeholder {
 .settings-aside .small-copy,
 .avatar-editor small,
 .upload-target > span,
-.inventory-summary > span,
-.inventory-summary > div:first-child > span,
 .editor-aside > .eyebrow,
 .conversation-start small {
   color: #626c58;
@@ -4460,11 +4022,6 @@ textarea::placeholder {
   background: var(--red);
   color: #fff;
   border-color: var(--red);
-}
-.inventory-summary strong span,
-.inventory-summary > span,
-.inventory-summary > div:first-child > span {
-  color: #4f481f;
 }
 .gallery-thumbs button.selected {
   border-color: var(--accent-edge);

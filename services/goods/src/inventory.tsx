@@ -3,13 +3,8 @@ import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Camera,
   Check,
-  ChevronDown,
-  Grid2X2,
   ImagePlus,
-  LayoutGrid,
-  List,
   Plus,
   Save,
   Trash2,
@@ -39,7 +34,6 @@ import {
   Loading,
   PageTitle,
   Photo,
-  ProductCard,
   Spinner,
   Status,
   useApp,
@@ -52,60 +46,42 @@ export function Inventory() {
     slots: Slot[];
     history: Listing[];
   }>(user ? "/me/inventory" : null);
-  const [mode, setMode] = useState<"visual" | "grid">("visual"),
-    [tab, setTab] = useState("all");
+  const [tab, setTab] = useState("all");
   if (!user)
     return (
-      <div className="join-shelf">
-        <h1>Start your shelf</h1>
-        <p>
-          List goods for sale or trade. Each item gets its own shelf position,
-          from A-1 to Z-3.
-        </p>
-        <Link className="button" to="/signup?returnTo=/sell">
-          Create your shelf <ArrowRight size={18} />
-        </Link>
+      <Empty
+        title="Sell your goods"
+        body="List an item for sale or trade."
+        action={{ label: "Create an account", to: "/signup?returnTo=/sell" }}
+      >
         <Link className="text-button" to="/login?returnTo=/sell">
           Already a member? Sign in
         </Link>
-        <div className="shelf-preview" aria-hidden="true">
-          {["A–1", "A–2", "A–3", "B–1", "B–2", "B–3"].map((c) => (
-            <span key={c}>
-              {c}
-              <Plus size={18} />
-            </span>
-          ))}
-        </div>
-      </div>
+      </Empty>
     );
-  const occupied = data?.slots.filter((s) => s.listing).length || 0;
   const active =
     data?.slots.flatMap((s) => (s.listing ? [s.listing] : [])) || [];
+  const atCapacity = data && active.length === data.slots.length;
   const items =
     tab === "history"
       ? data?.history || []
       : active.filter((l) => tab === "all" || l.status === tab);
   return (
     <>
-      <PageTitle title="Your shelf">
+      <PageTitle title="Your listings">
         <OrdersLink />
-        <Link to="/sell/new" className="button">
-          <Plus size={18} /> List an item
-        </Link>
+        {!atCapacity && (
+          <Link to="/sell/new" className="button">
+            <Plus size={18} /> List an item
+          </Link>
+        )}
       </PageTitle>
-      <div className="inventory-summary">
-        <div>
-          <strong>
-            {occupied}
-            <span>/78</span>
-          </strong>
-          <span>positions in use</span>
-        </div>
-        <div className="capacity-track">
-          <span style={{ width: (occupied / 78) * 100 + "%" }} />
-        </div>
-        <span>{78 - occupied} positions available</span>
-      </div>
+      {atCapacity && (
+        <p>
+          You have {active.length} listings. Remove a draft or an available item
+          to list another.
+        </p>
+      )}
       <div className="inventory-toolbar">
         <div className="tab-bar">
           {[
@@ -124,87 +100,11 @@ export function Inventory() {
             </button>
           ))}
         </div>
-        {tab !== "history" && (
-          <div className="view-switch">
-            <button
-              className={mode === "visual" ? "selected" : ""}
-              aria-label="Visual inventory"
-              aria-pressed={mode === "visual"}
-              title="Visual inventory"
-              onClick={() => setMode("visual")}
-            >
-              <LayoutGrid size={18} />
-            </button>
-            <button
-              className={mode === "grid" ? "selected" : ""}
-              aria-label="Coded inventory grid"
-              aria-pressed={mode === "grid"}
-              title="Coded inventory grid"
-              onClick={() => setMode("grid")}
-            >
-              <Grid2X2 size={18} />
-            </button>
-          </div>
-        )}
       </div>
       {loading ? (
         <Loading cards />
       ) : error ? (
         <ErrorBox error={error} retry={reload} />
-      ) : mode === "grid" && tab !== "history" ? (
-        <div className="inventory-grid">
-          <div className="grid-column-labels">
-            <span />
-            <strong>1</strong>
-            <strong>2</strong>
-            <strong>3</strong>
-          </div>
-          {Array.from({ length: 26 }, (_, i) =>
-            String.fromCharCode(65 + i),
-          ).map((row) => (
-            <div className="inventory-row" key={row}>
-              <span className="row-label">{row}</span>
-              {[1, 2, 3].map((col) => {
-                const s = data?.slots.find((s) => s.code === row + "-" + col),
-                  l = s?.listing;
-                return (
-                  <Link
-                    key={col}
-                    to={
-                      l ? "/sell/" + l.id : "/sell/new?code=" + row + "-" + col
-                    }
-                    className={
-                      "inventory-cell " +
-                      (l ? "occupied" : "available") +
-                      (l && tab !== "all" && l.status !== tab
-                        ? " filtered-out"
-                        : "")
-                    }
-                  >
-                    {l ? (
-                      <>
-                        <Photo listing={l} />
-                        <div>
-                          <strong>{l.code}</strong>
-                          <span>{l.title || "Untitled draft"}</span>
-                          <Status value={l.status} />
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <span className="empty-cell-code">
-                          {row}-{col}
-                        </span>
-                        <Plus size={22} />
-                        <small>Add item</small>
-                      </>
-                    )}
-                  </Link>
-                );
-              })}
-            </div>
-          ))}
-        </div>
       ) : items.length ? (
         <div className="product-grid inventory-visual">
           {items.map((l) => (
@@ -212,7 +112,6 @@ export function Inventory() {
               <Link to={"/sell/" + l.id}>
                 <Photo listing={l} />
                 <div className="inventory-card-heading">
-                  <span className="code-pill">{l.code}</span>
                   <Status value={l.status} />
                 </div>
                 <h3>{l.title || "Untitled draft"}</h3>
@@ -246,11 +145,10 @@ export function Inventory() {
           }
           body={
             {
-              all: "Add a photo and choose a shelf position to list your first item.",
+              all: "Add a photo and a few details to list your first item.",
               draft: "Unpublished listings you save will appear here.",
               reserved: "Items reserved for a trade or order appear here.",
-              history:
-                "Completed and archived listings stay here after their positions reopen.",
+              history: "Find your completed and archived listings here.",
               active: "Published items appear here while they are available.",
             }[tab] || ""
           }
@@ -261,7 +159,6 @@ export function Inventory() {
 }
 
 type EditorData = {
-  code: string;
   title: string;
   description: string;
   category: string;
@@ -273,7 +170,6 @@ type EditorData = {
   photos: PhotoType[];
 };
 const blank: EditorData = {
-  code: "",
   title: "",
   description: "",
   category: "",
@@ -313,19 +209,10 @@ async function compressImage(file: File): Promise<File> {
   }
 }
 type EditorField =
-  | "photos"
-  | "title"
-  | "description"
-  | "category"
-  | "condition"
-  | "price"
-  | "code";
+  "photos" | "title" | "description" | "category" | "condition" | "price";
 type FieldErrors = Partial<Record<EditorField, string>>;
 const INVALID_PRICE =
   "Enter $0.01 to $1,000,000 with up to two decimal places.";
-const OCCUPIED_POSITION =
-  "That position is already in use. Choose another one.";
-
 export function ListingEditor({ id }: { id?: string }) {
   const { user, go, toast, requireUser } = useApp();
   const cacheKey = "bsty-draft:" + user?.id + ":" + (id || "new");
@@ -338,13 +225,7 @@ export function ListingEditor({ id }: { id?: string }) {
       return null;
     }
   };
-  const [form, setForm] = useState<EditorData>(
-    () =>
-      cached() || {
-        ...blank,
-        code: new URLSearchParams(location.search).get("code") || "",
-      },
-  );
+  const [form, setForm] = useState<EditorData>(() => cached() || blank);
   const [step, setStep] = useState(0),
     [listing, setListing] = useState<Listing | null>(null),
     [loading, setLoading] = useState(!!id),
@@ -376,13 +257,6 @@ export function ListingEditor({ id }: { id?: string }) {
     readOperation(),
   );
   const {
-    data: inventory,
-    error: inventoryError,
-    reload: reloadInventory,
-  } = useResource<{
-    slots: Slot[];
-  }>(user ? "/me/inventory" : null);
-  const {
     data: categories,
     error: categoryError,
     reload: reloadCategories,
@@ -399,7 +273,6 @@ export function ListingEditor({ id }: { id?: string }) {
         setListing(l);
         if (!cached())
           setForm({
-            code: l.code,
             title: l.title,
             description: l.description,
             category: l.category,
@@ -425,12 +298,6 @@ export function ListingEditor({ id }: { id?: string }) {
     if (!loading && user && (!id || listing))
       sessionStorage.setItem(cacheKey, JSON.stringify(form));
   }, [form, cacheKey, id, listing, loading, user]);
-  useEffect(() => {
-    if (!form.code && inventory) {
-      const s = inventory.slots.find((s) => !s.listing);
-      if (s) setForm((f) => ({ ...f, code: s.code }));
-    }
-  }, [inventory]);
   useEffect(() => {
     if (!focusRequest) return;
     const target = document.getElementById(focusRequest.id);
@@ -516,10 +383,6 @@ export function ListingEditor({ id }: { id?: string }) {
     (!/^(?:[0-9]+(?:\.[0-9]{0,2})?|\.[0-9]{1,2})$/.test(priceText) ||
       priceCents < 1 ||
       priceCents > 100_000_000);
-  const slotOccupied = inventory?.slots.some(
-    (slot) => slot.code === form.code && slot.listing && slot.listing.id !== id,
-  );
-
   const validate = (stage: number): FieldErrors => {
     const issues: FieldErrors = {};
     if (stage === 0 && !form.photos.length)
@@ -535,11 +398,6 @@ export function ListingEditor({ id }: { id?: string }) {
       if (invalidPrice) issues.price = INVALID_PRICE;
       else if (!form.tradeEnabled && priceCents === null)
         issues.price = "Enter a listed value or turn on Open to trade.";
-    }
-    if (stage === 2) {
-      if (!/^[A-Z]-[123]$/.test(form.code))
-        issues.code = "Choose an available inventory position.";
-      else if (slotOccupied) issues.code = OCCUPIED_POSITION;
     }
     return issues;
   };
@@ -588,15 +446,12 @@ export function ListingEditor({ id }: { id?: string }) {
       return;
     }
     if (status === "active") {
-      for (let stage = 0; stage <= 2; stage++)
+      for (let stage = 0; stage < 2; stage++)
         if (showIssues(stage, validate(stage))) return;
     }
-    if (status === "draft") {
-      if (invalidPrice) {
-        showIssues(1, { price: INVALID_PRICE });
-        return;
-      }
-      if (showIssues(2, validate(2))) return;
+    if (status === "draft" && invalidPrice) {
+      showIssues(1, { price: INVALID_PRICE });
+      return;
     }
     setBusy(true);
     setError("");
@@ -605,7 +460,6 @@ export function ListingEditor({ id }: { id?: string }) {
         status === "archived"
           ? { status }
           : {
-              code: form.code,
               title: form.title,
               description: form.description,
               category: form.category,
@@ -617,18 +471,31 @@ export function ListingEditor({ id }: { id?: string }) {
               photoIds: form.photos.map((p) => p.id),
               status,
             };
-      const fingerprint = JSON.stringify(payload);
-      if (operation.current?.payload !== fingerprint)
-        operation.current = { payload: fingerprint, id: requestId() };
-      sessionStorage.setItem(
-        cacheKey + ":operation",
-        JSON.stringify(operation.current),
-      );
-      const d = await api<{ listing: Listing }>(
-        "/listings" + (id ? "/" + id : ""),
-        id ? "PATCH" : "POST",
-        { ...payload, clientRequestId: operation.current.id },
-      );
+      const send = (body: typeof payload) => {
+        const fingerprint = JSON.stringify(body);
+        if (operation.current?.payload !== fingerprint)
+          operation.current = { payload: fingerprint, id: requestId() };
+        sessionStorage.setItem(
+          cacheKey + ":operation",
+          JSON.stringify(operation.current),
+        );
+        return api<{ listing: Listing }>(
+          "/listings" + (id ? "/" + id : ""),
+          id ? "PATCH" : "POST",
+          { ...body, clientRequestId: operation.current.id },
+        );
+      };
+      // A pre-update tab may already have saved this exact request but lost its response.
+      const legacy = "code" in form ? { code: form.code, ...payload } : null;
+      const replay =
+        legacy && operation.current?.payload === JSON.stringify(legacy);
+      const d = replay
+        ? await send(legacy).catch((e) => {
+            if (e instanceof ApiError && e.code === "CONFLICT")
+              return send(payload);
+            throw e;
+          })
+        : await send(payload);
       operation.current = null;
       sessionStorage.removeItem(cacheKey);
       sessionStorage.removeItem(cacheKey + ":operation");
@@ -637,7 +504,7 @@ export function ListingEditor({ id }: { id?: string }) {
           ? "Your listing is live."
           : status === "archived"
             ? "Listing moved to history."
-            : "Draft saved to your shelf.",
+            : "Draft saved.",
       );
       const returnTo = new URLSearchParams(window.location.search).get(
         "returnTo",
@@ -652,16 +519,7 @@ export function ListingEditor({ id }: { id?: string }) {
       else go("/sell");
     } catch (e) {
       setArchive(false);
-      if (
-        status !== "archived" &&
-        e instanceof ApiError &&
-        e.code === "CONFLICT"
-      ) {
-        showIssues(2, { code: OCCUPIED_POSITION });
-        reloadInventory();
-      } else {
-        setError((e as Error).message);
-      }
+      setError((e as Error).message);
     } finally {
       setBusy(false);
     }
@@ -670,7 +528,7 @@ export function ListingEditor({ id }: { id?: string }) {
     return (
       <Empty
         title="Your next good listing."
-        body="Sign in to add photos, choose a position and publish your item."
+        body="Sign in to add photos and publish your item."
         action={{
           label: "Sign in",
           to:
@@ -700,7 +558,7 @@ export function ListingEditor({ id }: { id?: string }) {
   const preview: Listing = {
     id: listing?.id || "preview",
     owner: user,
-    code: form.code,
+    code: listing?.code ?? "",
     title: form.title,
     description: form.description,
     category: form.category,
@@ -715,7 +573,7 @@ export function ListingEditor({ id }: { id?: string }) {
     updatedAt: new Date().toISOString(),
     isFavorite: false,
   };
-  const steps = ["Photos", "Details", "Position", "Review"];
+  const steps = ["Photos", "Details", "Review"];
   return (
     <>
       <PageTitle title={id ? "Edit listing" : "List an item"} back="/sell">
@@ -744,7 +602,6 @@ export function ListingEditor({ id }: { id?: string }) {
           <div className="editor-preview">
             <Photo listing={listing} />
             <div>
-              <span className="code-pill">{listing.code}</span>
               <h3>{listing.title}</h3>
               <p>{listing.description}</p>
             </div>
@@ -1075,70 +932,6 @@ export function ListingEditor({ id }: { id?: string }) {
               {step === 2 && (
                 <>
                   <h2 id="listing-step-heading" tabIndex={-1}>
-                    Choose a shelf position
-                  </h2>
-                  <p className="muted">
-                    Choose one of your 78 inventory positions. Other sellers can
-                    use this code to refer to your item.
-                  </p>
-                  {inventoryError && (
-                    <ErrorBox
-                      error="Couldn’t load your shelf positions."
-                      retry={reloadInventory}
-                    />
-                  )}
-                  <label className="slot-select-label">
-                    <span id="listing-code-label">Inventory position</span>
-                    <select
-                      {...field("code")}
-                      aria-labelledby="listing-code-label"
-                      required
-                      value={form.code}
-                      onChange={(e) => set("code", e.target.value)}
-                    >
-                      <option value="">Choose a position</option>
-                      {inventory?.slots.map((s) => (
-                        <option
-                          key={s.code}
-                          disabled={!!s.listing && s.listing.id !== id}
-                          value={s.code}
-                        >
-                          {s.code}
-                          {s.listing && s.listing.id !== id ? " · In use" : ""}
-                        </option>
-                      ))}
-                    </select>
-                    {inlineError("code")}
-                  </label>
-                  <div className="slot-picker">
-                    {inventory?.slots.map((s) => (
-                      <button
-                        key={s.code}
-                        type="button"
-                        className={
-                          (form.code === s.code ? "selected " : "") +
-                          (s.listing && s.listing.id !== id ? "occupied" : "")
-                        }
-                        disabled={!!s.listing && s.listing.id !== id}
-                        onClick={() => set("code", s.code)}
-                        aria-label={
-                          "Position " +
-                          s.code +
-                          (s.listing && s.listing.id !== id
-                            ? " occupied"
-                            : " available")
-                        }
-                      >
-                        {s.code}
-                        {form.code === s.code && <Check size={13} />}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-              {step === 3 && (
-                <>
-                  <h2 id="listing-step-heading" tabIndex={-1}>
                     Review your listing
                   </h2>
                   <p className="muted">
@@ -1148,7 +941,6 @@ export function ListingEditor({ id }: { id?: string }) {
                     <Photo listing={preview} />
                     <div>
                       <div className="item-kicker">
-                        <span className="code-pill">{form.code}</span>
                         <span className="status status-active">Preview</span>
                       </div>
                       <h2>{form.title}</h2>
@@ -1197,7 +989,7 @@ export function ListingEditor({ id }: { id?: string }) {
                     <ArrowLeft size={17} /> Back
                   </button>
                 )}
-                {step < 3 && (
+                {step < 2 && (
                   <button
                     className="button"
                     onClick={next}
@@ -1218,14 +1010,11 @@ export function ListingEditor({ id }: { id?: string }) {
                 </button>
               )}
             </section>
-            {step < 3 && (
+            {step < 2 && (
               <aside className="editor-aside" aria-label="Listing preview">
                 <h3>Listing preview</h3>
                 <Photo listing={preview} />
                 <div className="preview-caption">
-                  {form.code && (
-                    <span className="shelf-ticket">{form.code}</span>
-                  )}
                   <strong>{form.title || "Your item"}</strong>
                   {priceCents !== null && <span>{money(priceCents)}</span>}
                   {form.condition && <small>{form.condition}</small>}
@@ -1241,7 +1030,7 @@ export function ListingEditor({ id }: { id?: string }) {
       {archive && (
         <Confirm
           title="Remove this listing?"
-          body="The item will move to history and its position will become available. Pending trade offers for it will close. Past exchanges keep their original record."
+          body="The item will move to history. Pending trade offers for it will close. Past exchanges keep their original record."
           onClose={() => setArchive(false)}
           onConfirm={() => save("archived")}
           busy={busy}

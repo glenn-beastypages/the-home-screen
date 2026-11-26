@@ -388,7 +388,7 @@ export default function App() {
                 to={n.path}
                 key={n.path}
               >
-                {n.name === "Sell" ? "Your shelf" : n.name}
+                {n.name === "Sell" ? "Your listings" : n.name}
               </Link>
             ))}
           </nav>
