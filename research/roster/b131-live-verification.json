@@ -1,0 +1,131 @@
+{
+  "release": "223aa7b797ff40ce1d3eee150224fe2393627fd1",
+  "renderDeploy": "dep-dc4fi2o473hc739hs5qg",
+  "liveAt": "2026-11-27T03:40:57.845476Z",
+  "verifiedAt": "2026-11-27T03:42:44.777067+00:00",
+  "host": {
+    "pagesHealth": true,
+    "goodsHealth": true,
+    "googleSignInAdvertised": true,
+    "beastySignInAdvertised": true,
+    "verifiedAt": "2026-11-27T03:41:03.525Z",
+    "goodsStylesheet": "/goods/assets/index-AmuJyWzE.css",
+    "goodsStylesheetSha256": "ec479237dccf74e15c85895b432e9ec22a91555092ac124ef1cf2e4d3d28a832"
+  },
+  "publicBrowsers": {
+    "Chrome": {
+      "played": [
+        "DgJd7GRsMWE",
+        "DgJiBYWRYW3",
+        "DJA_W4XxYUN",
+        "DIe6aaZThz-",
+        "DgMPzRLNAv7",
+        "DgL3oUwyrHA",
+        "DfpxRH7ALEC",
+        "DgL2Z3yy2F5",
+        "DgMcgwtTVtA"
+      ],
+      "backgrounds": [
+        "b_yamibowl",
+        "b_crumbleandwhisk",
+        "b_bulapies",
+        "b_favoriteindianrestaurant",
+        "b_littleplearnthaikitchen",
+        "b_forkitpasta"
+      ],
+      "cityTiles": [
+        "Oakland Crumble & Whisk",
+        "Gilroy Savvy’s Downtown Sweets"
+      ],
+      "discovery": [
+        "Verified guest sign-in prompt on BEASTY • Bakery",
+        "Discovered Crumble & Whisk through BEASTY • More bakeries on More bakeries",
+        "Discovered Savvy’s Downtown Sweets through BEASTY • Ice Cream on Ice Cream",
+        "Discovered Savvy’s Downtown Sweets through Gilroy on Sweets"
+      ],
+      "enlargedLogosAndPortraits": [
+        "/icons/foodie-sjfoodgram-v131.webp",
+        "/icons/crumble-and-whisk-v131.webp",
+        "/icons/foodie-dionlimtv-v131.webp",
+        "/icons/savvys-downtown-sweets-v131.webp"
+      ],
+      "matchedReleaseFileCount": 22,
+      "openedGoodsListing": true
+    },
+    "iPhone WebKit": {
+      "played": [
+        "DgJd7GRsMWE",
+        "DgJiBYWRYW3",
+        "DJA_W4XxYUN",
+        "DIe6aaZThz-",
+        "DgMPzRLNAv7",
+        "DgL3oUwyrHA",
+        "DfpxRH7ALEC",
+        "DgL2Z3yy2F5",
+        "DgMcgwtTVtA"
+      ],
+      "backgrounds": [
+        "b_yamibowl",
+        "b_crumbleandwhisk",
+        "b_bulapies",
+        "b_favoriteindianrestaurant",
+        "b_littleplearnthaikitchen",
+        "b_forkitpasta"
+      ],
+      "cityTiles": [
+        "Oakland Crumble & Whisk",
+        "Gilroy Savvy’s Downtown Sweets"
+      ],
+      "discovery": [
+        "Verified guest sign-in prompt on BEASTY • Bakery",
+        "Discovered Crumble & Whisk through BEASTY • More bakeries on More bakeries",
+        "Discovered Savvy’s Downtown Sweets through BEASTY • Ice Cream on Ice Cream",
+        "Discovered Savvy’s Downtown Sweets through Gilroy on Sweets"
+      ],
+      "enlargedLogosAndPortraits": [
+        "/icons/foodie-sjfoodgram-v131.webp",
+        "/icons/crumble-and-whisk-v131.webp",
+        "/icons/foodie-dionlimtv-v131.webp",
+        "/icons/savvys-downtown-sweets-v131.webp"
+      ],
+      "matchedReleaseFileCount": 22,
+      "openedGoodsListing": true
+    }
+  },
+  "signedOutPages": {
+    "passed": true,
+    "historicalRosterWalk": "skipped"
+  },
+  "localChecks": {
+    "sharedHostAndMemberJourneys": 35,
+    "memberJourneys": [
+      "Watch plays the credited Yami Bowl Bar & BBQ excerpt",
+      "Watch plays the credited Fork It Pasta To Go excerpt",
+      "Signed-in visitor reaches Crumble & Whisk from BEASTY • Bakery through More bakeries",
+      "Signed-in visitor reaches Crumble & Whisk from Oakland through Sweets"
+    ],
+    "dataErrors": 0,
+    "previousSeatAssignmentsCompared": 2465,
+    "earlierMissingAddedDates": 168,
+    "allThreeNewProfilesDated": true
+  },
+  "latestGlennMessageRow": 254344,
+  "interactiveChrome": {
+    "checkedAt": "2026-11-27T03:42:27.883745+00:00",
+    "gilroy": "In Chrome, selecting Gilroy under Cities opened Gilroy • Sweets with Savvy’s tile. The listing displayed 7357 Monterey Street and its expandable panel linked to the official parlor menu.",
+    "oakland": "Under Categories, More bakeries had one business. The Crumble & Whisk tile opened the MacArthur Boulevard page, showing all three credited reviewers. The catering panel exposed the official bakery shop and catering links."
+  },
+  "rolloutHealthSamples": [
+    "2026-11-27T03:29:41.490Z 200 200 200 false",
+    "2026-11-27T03:36:58.959Z 502 502 502 false",
+    "2026-11-27T03:41:01.664Z 502 200 200 false",
+    "2026-11-27T03:41:17.839Z 200 200 200 true"
+  ],
+  "rolloutSampleColumns": [
+    "UTC",
+    "new icon HTTP status",
+    "Pages health HTTP status",
+    "Goods health HTTP status",
+    "new icon matches release"
+  ]
+}

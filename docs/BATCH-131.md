@@ -9,3 +9,11 @@ Dion Lim follows the twelve existing Heavy Hitters on More influencers. The firs
 The bakery’s website and Instagram give different hours. The parlor’s supplied listings also disagree on hours, and its published menu is labeled “soft opening.” The listings carry the businesses’ contact information and menu or shop links. Glenn’s cheesecake sourcing idea remains a proposal.
 
 [Message, artwork and clip ledger](../research/roster/batch131.json) · [Film credits](../public/clips/CREDITS.md) · [Bakery contact and shop](https://www.crumbleandwhisk.com/contact) · [Ice cream parlor](https://www.savvysdowntownsweets.com/)
+
+## Production verification
+
+Render deployed `223aa7b7` at 7:40 p.m. Pacific on November 26. On the public site, desktop Chrome and iPhone-sized WebKit each played all nine excerpts, verified six autoplay backgrounds, enlarged all four icons, opened the two city Sweets listings and checked all 22 media and artwork files against the release. Both opened a Goods listing. The general signed-out Pages checks passed. The historical roster walkthrough was skipped.
+
+An interactive Chrome visit from Search confirmed both new addresses, all three Oakland review credits and both shops’ official menu or order links. Local member tests also played both overflow films in Watch and opened Crumble & Whisk from the original Bakery page and from Oakland. All 35 local shared-host and member checks passed. The catalog audit found zero errors. A separate catalog-date check still reports the same 168 older profiles as before this release. Both new businesses and Dion Lim have dates.
+
+The sampled Pages and Goods health endpoints briefly returned 502 during deployment. Both recovered by 7:41 p.m. Pacific. [Production verification record](../research/roster/b131-live-verification.json)
