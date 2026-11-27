@@ -134,11 +134,30 @@ try {
       await page.getByRole('button', { name: 'Menu · ' + count + ' items', exact: true }).click()
       assert.equal(await page.locator('.menu-row').count(), count, id)
     }
-    await page.getByRole('button', { name: 'Go to the ' + listing.city + ' More goods page' }).click()
+    await page.getByRole('button', { name: 'Go to the ' + listing.city + ' ' + (listing.cityPage ?? 'More goods') + ' page' }).click()
     const tile = page.locator('.home-page:not([inert]) .home-grid').getByRole('button', { name: listing.name, exact: true })
     await tile.click()
     await page.getByRole('heading', { name: listing.name, exact: true }).waitFor()
     console.log('Opened city tile', listing.city, listing.name)
+  }
+
+  for (const { group, entry, page: sheet, id, expectMembersOnlyNext } of batch.discoveryChecks ?? []) {
+    const city = group === 'Cities' ? entry : 'BEASTY'
+    await navigate(page, base + '/search')
+    await page.getByRole('button', { name: group, exact: true }).click()
+    await page.locator('#search-drop-' + group.toLowerCase()).getByText(entry, { exact: true }).click()
+    await page.locator('.page-dots [aria-current="page"][aria-label$=", ' + city + ', ' + sheet + '"]').waitFor()
+    if (expectMembersOnlyNext) {
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await page.getByRole('dialog', { name: 'Sign in or sign up to continue' }).waitFor()
+      console.log('Verified guest sign-in prompt on', entry)
+      continue
+    }
+    const title = batch.listings[id].name
+    const tile = page.locator('.home-page:not([inert]) .home-grid').getByRole('button', { name: title, exact: true })
+    await tile.click()
+    await page.getByRole('heading', { name: title, exact: true }).waitFor()
+    console.log('Discovered', title, 'through', entry, 'on', sheet)
   }
 
   await navigate(page, base + '/goods/')
@@ -164,7 +183,7 @@ try {
     assert.equal(await description.evaluate((el) => getComputedStyle(el).fontSize), batch.goodsDescriptionSize ?? '16px')
     const heading = description.locator('..').getByRole('heading', { name: 'Description' })
     assert(await heading.evaluate((el) => parseFloat(getComputedStyle(el).fontSize) >= 17), 'Readable Goods listing heading')
-    assert.equal(await page.locator('.item-facts span').first().evaluate((el) => getComputedStyle(el).fontSize), '14px')
+    assert.equal(await page.locator('.item-facts span, .listing-specs dt').first().evaluate((el) => getComputedStyle(el).fontSize), '14px')
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1))
   }
   await inspectListing()

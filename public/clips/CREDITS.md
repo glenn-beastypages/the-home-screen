@@ -1393,3 +1393,14 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-Df3EXquB54U.mp4` | [Original](https://www.instagram.com/reel/Df3EXquB54U/) | Review by @keneats_ at Slice House by Tony Gemignani — Brentwood, Brentwood. The creator disclosed an invitation. 0s-15s |
 | `review-DbHZ8Japk5S.mp4` | [Original](https://www.instagram.com/reel/DbHZ8Japk5S/) | Review by @keyanajoooon at Niku Steakhouse, San Francisco. 0s-15s |
 | `review-DgGskKmR9DV.mp4` | [Original](https://www.instagram.com/reel/DgGskKmR9DV/) | Review by @grubwitmike at Bun Appétit Donuts, Fremont. 0s-15s |
+
+<!-- Batch 131. -->
+| `review-DgJd7GRsMWE.mp4` | [Original](https://www.instagram.com/reel/DgJd7GRsMWE/) | Review by @sjfoodgram at Yami Bowl Bar & BBQ, San Jose. 1s-16s |
+| `review-DgJiBYWRYW3.mp4` | [Original](https://www.instagram.com/reel/DgJiBYWRYW3/) | Review by @bayareamunchies510 at Crumble & Whisk, Oakland. 31s-46s |
+| `review-DJA_W4XxYUN.mp4` | [Original](https://www.instagram.com/reel/DJA_W4XxYUN/) | Review by @_whatarethechances_ at Crumble & Whisk, Oakland. 18s-33s |
+| `review-DIe6aaZThz-.mp4` | [Original](https://www.instagram.com/reel/DIe6aaZThz-/) | Review by @tundemodupee at Crumble & Whisk, Oakland. 1s-16s |
+| `review-DgMPzRLNAv7.mp4` | [Original](https://www.instagram.com/reel/DgMPzRLNAv7/) | Reported by @dionlimtv at Bula Pies Fiji in Vallejo. 19s-34s |
+| `review-DgL3oUwyrHA.mp4` | [Original](https://www.instagram.com/reel/DgL3oUwyrHA/) | Review by @hangrypotato at Favorite Indian Restaurant, Hayward. The creator thanked the restaurant for hosting. 22s-37s |
+| `review-DfpxRH7ALEC.mp4` | [Original](https://www.instagram.com/reel/DfpxRH7ALEC/) | Posted by @favoriteindian_hayward for Favorite Indian Restaurant in Hayward. 0s-12s |
+| `review-DgL2Z3yy2F5.mp4` | [Original](https://www.instagram.com/reel/DgL2Z3yy2F5/) | Review by @foodieberrie at Little Plearn Thai Kitchen, Berkeley. 6s-21s |
+| `review-DgMcgwtTVtA.mp4` | [Original](https://www.instagram.com/reel/DgMcgwtTVtA/) | Review by @dchangshangry at Fork It Pasta To Go, San Mateo. 3s-18s |

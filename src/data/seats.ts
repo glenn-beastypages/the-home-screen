@@ -16,7 +16,7 @@
  */
 import { ALL_PLACEMENTS } from './categorySeats'
 import { CITY_PAGES } from './cities'
-import { ALL_BEASTY_PAGES, SLOT_PAGES } from './slots'
+import { ALL_BEASTY_PAGES, SLOT_PAGES, SWEETS_PAGE } from './slots'
 
 export interface Seat {
   /** The city's name as its page is named, or 'BEASTY' for the flagship sheets. */
@@ -31,7 +31,15 @@ const citySlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-'
 const CITY_BY_SLUG = new Map(CITY_PAGES.map((c, i) => [citySlug(c), { name: c, order: i }]))
 /* BEASTY's sheets have their own headings (its first sheet is Eats since
    2026-09-30), so a city's Goods and BEASTY's Eats are looked up apart. */
-const CITY_HEADING = new Map<string, string>(SLOT_PAGES.map((p) => [p.kind, p.heading]))
+const citiesWithSweets = new Set(Object.keys(ALL_PLACEMENTS)
+  .filter((seat) => seat.includes('-sweets-'))
+  .map((seat) => seat.split('-sweets-')[0]))
+
+export function pagesForCity(name: string) {
+  return citiesWithSweets.has(citySlug(name)) ? [...SLOT_PAGES, SWEETS_PAGE] : SLOT_PAGES
+}
+
+const CITY_HEADING = new Map<string, string>([...SLOT_PAGES, SWEETS_PAGE].map((p) => [p.kind, p.heading]))
 const BEASTY_HEADING = new Map<string, string>(ALL_BEASTY_PAGES.map((p) => [p.kind, p.heading]))
 const KIND_ORDER = new Map<string, number>(ALL_BEASTY_PAGES.map((p, i) => [p.kind, i]))
 

@@ -1707,7 +1707,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "sjfoodgram",
     "name": "@sjfoodgram",
     "label": "sjfoodgram",
-    "icon": "foodie-sjfoodgram-v106"
+    "icon": "foodie-sjfoodgram-v131"
   },
   {
     "handle": "tiensmunchies",
@@ -2159,6 +2159,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "meggyeatz", "name": "Meg", "label": "meggyeatz", "icon": "foodie-meggyeatz-v130"},
   {"handle": "jakinbaycon", "name": "Jakin", "label": "jakinbaycon", "icon": "foodie-jakinbaycon-v130"},
   {"handle": "davefoodeats", "name": "@davefoodeats", "label": "davefoodeats", "icon": "foodie-davefoodeats-v130"},
+  { handle: 'dionlimtv', name: 'Dion Lim', label: 'Dion Lim', instagram: 'dionlimtv', icon: 'foodie-dionlimtv-v131', cuisine: 'Local food reporting' },
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -3175,6 +3176,16 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "keneats_", "place": "Slice House by Tony Gemignani — Brentwood", "city": "Brentwood", "brand": "b_slicehousebrentwood", "reel": "https://www.instagram.com/reel/Df3EXquB54U/", "credit": "Review by @keneats_ at Slice House by Tony Gemignani — Brentwood, Brentwood. The creator disclosed an invitation.", "clip": true},
   {"by": "keyanajoooon", "place": "Niku Steakhouse", "city": "San Francisco", "brand": "b_nikusteakhousesf", "reel": "https://www.instagram.com/reel/DbHZ8Japk5S/", "credit": "Review by @keyanajoooon at Niku Steakhouse, San Francisco.", "clip": "creator"},
   {"by": "grubwitmike", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/DgGskKmR9DV/", "credit": "Review by @grubwitmike at Bun Appétit Donuts, Fremont.", "clip": true},
+
+  // Batch 131 — November 26.
+  {"by": "sjfoodgram", "place": "Yami Bowl Bar & BBQ", "city": "San Jose", "brand": "b_yamibowl", "reel": "https://www.instagram.com/reel/DgJd7GRsMWE/", "credit": "Review by @sjfoodgram at Yami Bowl Bar & BBQ, San Jose.", "clip": "creator"},
+  {"by": "bayareamunchies510", "place": "Crumble & Whisk", "city": "Oakland", "brand": "b_crumbleandwhisk", "reel": "https://www.instagram.com/reel/DgJiBYWRYW3/", "credit": "Review by @bayareamunchies510 at Crumble & Whisk, Oakland.", "clip": true},
+  {"by": "_whatarethechances_", "place": "Crumble & Whisk", "city": "Oakland", "brand": "b_crumbleandwhisk", "reel": "https://www.instagram.com/reel/DJA_W4XxYUN/", "credit": "Review by @_whatarethechances_ at Crumble & Whisk, Oakland.", "clip": true},
+  {"by": "tundemodupee", "place": "Crumble & Whisk", "city": "Oakland", "brand": "b_crumbleandwhisk", "reel": "https://www.instagram.com/reel/DIe6aaZThz-/", "credit": "Review by @tundemodupee at Crumble & Whisk, Oakland.", "clip": true},
+  {"by": "dionlimtv", "place": "Bula Pies Fiji", "city": "Vallejo", "brand": "b_bulapies", "reel": "https://www.instagram.com/reel/DgMPzRLNAv7/", "credit": "Reported by @dionlimtv at Bula Pies Fiji in Vallejo.", "clip": true},
+  {"by": "hangrypotato", "place": "Favorite Indian Restaurant", "city": "Hayward", "brand": "b_favoriteindianrestaurant", "reel": "https://www.instagram.com/reel/DgL3oUwyrHA/", "credit": "Review by @hangrypotato at Favorite Indian Restaurant, Hayward. The creator thanked the restaurant for hosting.", "clip": true},
+  {"by": "foodieberrie", "place": "Little Plearn Thai Kitchen", "city": "Berkeley", "brand": "b_littleplearnthaikitchen", "reel": "https://www.instagram.com/reel/DgL2Z3yy2F5/", "credit": "Review by @foodieberrie at Little Plearn Thai Kitchen, Berkeley.", "clip": true},
+  {"by": "dchangshangry", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DgMcgwtTVtA/", "credit": "Review by @dchangshangry at Fork It Pasta To Go, San Mateo.", "clip": "creator"},
 ]
 
 /*

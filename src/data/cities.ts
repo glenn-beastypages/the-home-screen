@@ -356,4 +356,5 @@ export const CITY_PAGES = [
   // Glenn’s World Wrapps request, November 6. Stanford’s shop address is in Palo Alto.
   'Stanford',
   'Corte Madera',
+  'Gilroy',
 ] as const

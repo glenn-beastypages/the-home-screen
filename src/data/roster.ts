@@ -4302,6 +4302,8 @@ export const ROSTER_SEED: LocalSeed[] = [
      the menu (rosterResearch.ts); BEASTY • AYCE by hand for their buffet. */
   seed('favorite-indian-restaurant', 'Favorite Indian Restaurant', 'Favorite', 'Indian', '#5A3A22', {
     icon: 'favorite-indian-restaurant',
+    instagram: 'favoriteindian_hayward',
+    clip: {"src": "/clips/review-DfpxRH7ALEC.mp4", "poster": "/clips/review-DfpxRH7ALEC-poster.webp", "href": "https://www.instagram.com/reel/DfpxRH7ALEC/", "credit": "Posted by @favoriteindian_hayward for Favorite Indian Restaurant in Hayward.", "platform": "Instagram"},
     logoTemplate: 'wordmark', logoLines: ['FAVORITE'], logoFace: 'slab',
     tagline: 'Where every bite tells a story',
     site: 'https://favoriteindia.com/',

@@ -401,12 +401,17 @@ export const SWEETS_CATEGORIES: SlotCategory[] = [
   { n: 24, name: 'Candy shop', label: 'Candy', test: /candy|chocolat|confection/i, not: /ice cream/i },
 ]
 
+export const SWEETS_PAGE: SlotPage = {
+  kind: 'sweets', heading: 'Sweets', categories: SWEETS_CATEGORIES,
+  wall: '/wallpapers/cat-sweets.webp', about: 'Anything dessert, one shop of each kind',
+}
+
 export const BEASTY_SHEETS: SlotPage[] = [
   /* BEASTY's first sheet is food, one restaurant per cuisine; seats are
      `beasty-eats-N` since 2026-10-05 (they were `goods`, on the city list).
      A city's first page is still Goods. */
   { kind: 'eats', heading: 'Eats', categories: EATS_CATEGORIES },
-  { kind: 'sweets', heading: 'Sweets', categories: SWEETS_CATEGORIES, wall: '/wallpapers/cat-sweets.webp', about: 'Anything dessert, one shop of each kind' },
+  SWEETS_PAGE,
   { kind: 'boutiques', heading: 'Goods', categories: BOUTIQUE_SPOTS },
   SLOT_PAGES[1],
   { kind: 'online', heading: 'Online', categories: ONLINE_CATEGORIES },
@@ -483,6 +488,9 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
 }, {
   kind: 'teas2', parent: 'teas', heading: 'More teas', about: 'More tea, boba and matcha shops', yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Teas/Boba/Matcha', label: 'Available' })),
+}, {
+  kind: 'bakery2', parent: 'bakery', heading: 'More bakeries', about: 'More bakeries and pastry shops', yellow: true,
+  categories: OPEN_SPOTS,
 }, {
   kind: 'sweets2', parent: 'sweets', heading: 'More sweets', about: 'More bakeries and dessert shops', yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Sweets', label: 'Available' })),

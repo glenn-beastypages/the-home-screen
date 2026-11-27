@@ -98920,4 +98920,73 @@ export const LOCAL_SEED: LocalSeed[] = [
   ]
 },
 
+// Batch 131.
+{
+  "slug": "crumble-and-whisk",
+  "name": "Crumble & Whisk",
+  "label": "Crumble & Whisk",
+  "cuisine": "Cheesecake bakery",
+  "tagline": "Small-batch cheesecakes, cinnamon rolls and savory pastries in the Laurel District.",
+  "color": "#9779d1",
+  "icon": "crumble-and-whisk-v131",
+  "prep": 0,
+  "category": "Sweets",
+  "items": [],
+  "address": "4104 MacArthur Blvd, Oakland, CA 94619",
+  "phone": "415-237-3318",
+  "site": "https://www.crumbleandwhisk.com/",
+  "instagram": "crumbleandwhisk",
+  "email": "info@crumbleandwhisk.com",
+  "siteCta": "Visit the bakery",
+  "orderUrl": "https://www.crumbleandwhiskstore.com/",
+  "panels": [
+    {
+      "head": "Cheesecakes and catering",
+      "body": [
+        "Order cheesecakes for pickup at the MacArthur Boulevard bakery."
+      ],
+      "links": [
+        {
+          "label": "Shop the bakery",
+          "href": "https://www.crumbleandwhiskstore.com/"
+        },
+        {
+          "label": "Catering menu",
+          "href": "https://crumbleandwhisk.gethoneycart.com/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "savvys-downtown-sweets",
+  "name": "Savvy’s Downtown Sweets",
+  "label": "Savvy’s",
+  "cuisine": "Ice cream parlor and soda fountain",
+  "tagline": "Ice cream floats, hand-mixed sodas and sundaes on Monterey Street.",
+  "color": "#861d24",
+  "icon": "savvys-downtown-sweets-v131",
+  "prep": 0,
+  "category": "Sweets",
+  "items": [],
+  "address": "7357 Monterey Street, Gilroy, CA 95020",
+  "phone": "408-515-7529",
+  "site": "https://www.savvysdowntownsweets.com/",
+  "instagram": "savvysdowntownsweets",
+  "siteCta": "Visit the ice cream parlor",
+  "panels": [
+    {
+      "head": "At the soda fountain",
+      "body": [
+        "Marianne’s ice cream, floats, malts and sundaes. Call the parlor for the day’s flavors and hours."
+      ],
+      "links": [
+        {
+          "label": "Parlor menu",
+          "href": "https://www.savvysdowntownsweets.com/menu"
+        }
+      ]
+    }
+  ]
+},
 ]

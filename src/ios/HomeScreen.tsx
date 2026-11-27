@@ -7,9 +7,10 @@ import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
-import { ALL_BEASTY_PAGES, CATEGORY_OVERFLOW, CATEGORY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import { ALL_BEASTY_PAGES, CATEGORY_OVERFLOW, CATEGORY_PAGES, HOME_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { SlotPage } from '../data/slots'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
+import { pagesForCity } from '../data/seats'
 import { PAGES_TILES } from '../data/categoryGlyphs'
 import { CategoryIcon, thumbFor } from './CategoryIcon'
 import { SlotIcon } from './SlotIcon'
@@ -629,7 +630,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       business page's place button, asks for them (extraFor, above). With every
       city in, the swipe was eighty-odd pages long.
     */
-    if (extra?.startsWith('city:')) buildCity(extra.slice(5), SLOT_PAGES, true)
+    if (extra?.startsWith('city:')) {
+      const city = extra.slice(5)
+      buildCity(city, pagesForCity(city), true)
+    }
     if (extra?.startsWith('kind:')) {
       const sheet = ALL_BEASTY_PAGES.find((p) => p.kind === extra.slice(5))
       if (sheet) buildCity('BEASTY', [sheet, ...CATEGORY_OVERFLOW.filter((p) => p.parent === sheet.kind)], true)
@@ -760,7 +764,12 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     const anyWithApp = jumpToApp_ && withApp < 0 ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp_)) : -1
     // A home category with an overflow opens in its own visit so Next reaches its overflow.
     const visitingPage = want?.startsWith('kind:') ? pages.findIndex((p) => p.extra && onPage(p)) : -1
-    const i = [withApp, anyWithApp, visitingPage, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
+    // A city can open with a dessert shop before its Goods and Services sheets fill.
+    const hasLocalSweets = pages.some((p) => inCity(p) && p.kind === 'sweets' && p.extra)
+    const firstOccupied = want?.startsWith('city:') && hasLocalSweets && !jumpToApp_ && !jumpToKind_
+      ? pages.findIndex((p) => inCity(p) && p.apps.some((app) => app.kind === 'brand'))
+      : -1
+    const i = [withApp, anyWithApp, visitingPage, firstOccupied, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
     if (i >= 0) {
       if (tileJump && !jumpToCity) goToPage(i)
       else setPage(i)
